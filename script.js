@@ -1,5 +1,5 @@
 // url = "http://localhost:3000"
-url = "https://study-center.onrender.com/"
+url = "https://study-center.onrender.com"
 $(document).ready(function () {
   $("#submit_btn").click(function () {
     let name = $("#name").val();
