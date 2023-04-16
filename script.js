@@ -21,6 +21,9 @@ $(document).ready(function () {
         contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
         success: function (response) {
           alert(response.result);
+          $("#name").val('');
+          $("#phone").val('');
+          $("#address").val('');
         },
         error: function (res) {
           alert("error - " + res.err);
