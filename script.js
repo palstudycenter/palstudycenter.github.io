@@ -1,6 +1,9 @@
 // url = "http://localhost:3000"
 url = "https://study-center.onrender.com"
 $(document).ready(function () {
+  $(document).ajaxSend(function() {
+    $("#overlay").fadeIn(300);　
+  });
   $("#submit_btn").click(function () {
     let name = $("#name").val();
     let phone = $("#phone").val();
@@ -49,11 +52,20 @@ $(document).ready(function () {
             })
           },
           error: function (res) {
-            alert("error - " + res.err);
             Swal.fire({
               title: 'Error',
               text: res.err,
               icon: 'error',
+            })
+            Swal.fire({
+              title: 'Error',
+              text: res.err,
+              icon: 'error',
+              confirmButtonText: 'ok'
+            }).then((result) => {
+              if (result.isConfirmed) {
+                window.location.href = "index.html";
+              }
             })
           }
       }); 
