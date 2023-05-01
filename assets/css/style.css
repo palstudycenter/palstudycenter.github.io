@@ -227,11 +227,6 @@ h6 {
   color: #fff;
 }
 
-.nav-menu a:hover span,
-.nav-menu li:hover>a span {
-  display: block;
-}
-
 /**
 * Mobile Navigation 
 */

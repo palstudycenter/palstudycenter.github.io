@@ -47,7 +47,7 @@ $(document).ready(function () {
               confirmButtonText: 'ok'
             }).then((result) => {
               if (result.isConfirmed) {
-                window.location.href = "index.html";
+                window.location.href = "../index.html";
               }
             })
           },
@@ -68,7 +68,7 @@ $(document).ready(function () {
               }
             })
           }
-      }); 
+        }); 
     }
   });
 });
