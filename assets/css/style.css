@@ -1302,3 +1302,25 @@ section {
   background-color: #f3f7fd;
   border-color: #2874f0;
 }
+.old_st_img {
+  border-radius: 50%;
+  width: 60%;
+  height: 35%;
+  margin: auto;
+}
+.old_st_detail p {
+  margin: 0px;
+}
+.old_st_detail .name {
+  color: #2874f0;
+  font-weight: 700;
+}
+.old_st_detail .work {
+  font-size: 13px;
+  font-weight: 500;
+}
+.old_st_detail .country {
+  font-size: 13px;
+  font-weight: 500;
+  color: #2874f0;
+}
