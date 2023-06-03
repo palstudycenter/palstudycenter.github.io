@@ -179,6 +179,8 @@ h6 {
   overflow: hidden;
   transition: 0.3s;
   font-weight: bold;
+  text-align: left;
+  padding-left: 20px;
 }
 
 
@@ -1349,10 +1351,7 @@ section {
   width: 85%;
 }
 .link_3 {
-  height: 187px !important;
-}
-.link_3 span {
-  padding: 11px;
+  height: 120px !important;
 }
 .section-title .heading {
   font-size: 24px;
