@@ -168,7 +168,7 @@ h6 {
 .nav-menu a:focus {
   align-items: center;
   color: white;
-  padding: 17px 11px;
+  padding-top: 18px;
   margin-bottom: 10px;
   transition: 0.3s;
   font-size: 16px;
@@ -253,7 +253,7 @@ h6 {
   background: url("../img/1.jpg") top right no-repeat;
   background-size: cover;
   position: relative;
-  padding-top: 20px;
+  padding-top: 40px;
 }
 
 @media (min-width: 992px) {
@@ -1211,7 +1211,6 @@ section {
   color: #2874f0;
   margin-top: 11px;
   font-size: 18px;
-  font-weight: 700;
 }
 
 
@@ -1350,7 +1349,10 @@ section {
   width: 85%;
 }
 .link_3 {
-  height: 120px !important;
+  height: 187px !important;
+}
+.link_3 span {
+  padding: 11px;
 }
 .section-title .heading {
   font-size: 24px;
