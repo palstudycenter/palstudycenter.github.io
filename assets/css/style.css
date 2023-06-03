@@ -171,7 +171,7 @@ h6 {
   padding: 17px 11px;
   margin-bottom: 10px;
   transition: 0.3s;
-  font-size: 17px;
+  font-size: 16px;
   border-radius: 10px;
   background: #2874f0;
   height: 56px;
@@ -253,6 +253,7 @@ h6 {
   background: url("../img/1.jpg") top right no-repeat;
   background-size: cover;
   position: relative;
+  padding-top: 20px;
 }
 
 @media (min-width: 992px) {
