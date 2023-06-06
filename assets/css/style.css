@@ -1287,7 +1287,7 @@ section {
 }
 
 .services-img-ph {
-  width: 100%;
+  width: 215%;
   height: 100%;
   border-radius: 4%;
 }
@@ -1304,7 +1304,7 @@ section {
 }
 
 .img-fluid {
-  border-radius: 50%;
+  border-radius: 23px;
 }
 
 .about-title b {
