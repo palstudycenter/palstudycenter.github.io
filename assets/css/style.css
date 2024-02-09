@@ -266,7 +266,7 @@ h6 {
 
 #hero:before {
   content: "";
-  background: rgba(255, 255, 255, 0.8);
+  background: rgb(229 244 255 / 75%);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -1200,17 +1200,17 @@ section {
 
 #submit_btn {
   margin: 10px;
-  padding: 6px 85px;
+  padding: 3px 25px;
   background-color: #2874f0;
   color: white;
   border-radius: 21px;
   border: none;
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 900;
 }
 
 .marquee h5 {
-  color: #2874f0;
+  color: red;
   margin-top: 11px;
   font-size: 18px;
 }
@@ -1343,12 +1343,12 @@ section {
 }
 
 .link_1 a{
-  margin-left: 19px;
-  width: 85%;
+  margin-left: 2px;
+  width: 93%;
 }
 .link_2 a{
-  margin-left: 5px;
-  width: 85%;
+  margin-left: 3px;
+  width: 102%;
 }
 .link_3 {
   height: 120px !important;
