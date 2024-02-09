@@ -1215,6 +1215,11 @@ section {
   font-size: 18px;
 }
 
+.gallery {
+  width: 100% !important;
+  text-align: center !important;
+}
+
 
 #button {
   display: block;
@@ -1348,7 +1353,7 @@ section {
 }
 .link_2 a{
   margin-left: 3px;
-  width: 102%;
+  width: 98%;
 }
 .link_3 {
   height: 120px !important;
