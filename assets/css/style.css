@@ -1198,7 +1198,7 @@ section {
   height: auto; */
 }
 
-#submit_btn {
+#submit_btn, #login_btn {
   margin: 10px;
   padding: 3px 25px;
   background-color: #2874f0;

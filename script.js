@@ -100,8 +100,25 @@ $(document).ready(function () {
           type: 'POST',
           data: data,
           contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
-          success: function (response) {
-            console.log(response);
+          success: function (res) {
+            if (res.status == true) {
+              Swal.fire({
+                title: 'Login Successfull',
+                icon: 'success'
+              })
+              $(document).ajaxComplete(function() {
+                $("#overlay").fadeOut(300);
+              });
+            } else if (res.status == false) {
+              Swal.fire({
+                title: 'Error',
+                text: res.msg,
+                icon: 'error',
+              })
+              $(document).ajaxComplete(function() {
+                $("#overlay").fadeOut(300);
+              });
+            }
           },
           error: function (res) {
             Swal.fire({
