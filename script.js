@@ -1,5 +1,5 @@
-url = "http://localhost:3000"
-// url = "https://study-center.onrender.com"
+// url = "http://localhost:3000"
+url = "https://study-center.onrender.com"
 $(document).ready(function () {
   $(document).ajaxSend(function() {
     $("#overlay").fadeIn(300);　
