@@ -1,5 +1,5 @@
-// url = "http://localhost:3000"
-url = "https://study-center.onrender.com"
+url = "http://localhost:3000"
+// url = "https://study-center.onrender.com"
 $(document).ready(function () {
   $(document).ajaxSend(function() {
     $("#overlay").fadeIn(300);　
@@ -53,12 +53,12 @@ $(document).ready(function () {
             $("#address").val('');
             Swal.fire({
               title: 'Thank you!',
-              text: `Your ${st_class} timing is ${timing}`,
+              text: `You resignation is successfully.`,
               icon: 'success',
               confirmButtonText: 'ok'
             }).then((result) => {
               if (result.isConfirmed) {
-                window.location.href = "../index.html";
+                window.location.href = "../signup_and_login/login_form.html";
               }
             })
           },
@@ -149,5 +149,51 @@ $(document).ready(function () {
           }
         }); 
     }
+  });
+
+
+  $("#request_dashboard").click(function () {
+    let request_class = $("#request_class").val();
+    data = { name: sessionStorage.getItem("name"),
+             email: sessionStorage.getItem("email"),
+             class: request_class
+            };
+    $.ajax({
+      url: `${url}/Dashboard/createDashboard`,
+      type: 'POST',
+      data: data,
+      contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+      success: function (res) {
+        if (res.status == true) {
+          window.location.href = "../signup_and_login/after_login.html";
+        } else if (res.status == false) {
+          Swal.fire({
+            title: 'Error',
+            text: res.msg,
+            icon: 'error',
+          })
+          $(document).ajaxComplete(function() {
+            $("#overlay").fadeOut(300);
+          });
+        }
+      },
+      error: function (res) {
+        Swal.fire({
+          title: 'Error',
+          text: res.err,
+          icon: 'error',
+        })
+        Swal.fire({
+          title: 'Error',
+          text: res.err,
+          icon: 'error',
+          confirmButtonText: 'ok'
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.location.href = "index.html";
+          }
+        })
+      }
+    }); 
   });
 });

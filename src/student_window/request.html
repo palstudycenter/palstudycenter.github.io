@@ -48,50 +48,31 @@
       <div class="d-flex flex-column justify-content-center">
         <div class="navbar nav-menu">
           <h4>Welcome, <span id="user"></span></h4>
-          <br>
-          <!-- <a href="../student_window/home.html" class="nav-link scrollto gallery"
-                style="background-image: linear-gradient(to right, #490808, #bd0f0f); box-shadow: 3px 5px 3px 0px rgb(0 0 0 / 15%)"><i
-                  class='bx bxs-book-reader'></i> <span>Dashboard</span></a> -->
-          
-          <a href="../student_window/request.html" class="nav-link scrollto gallery"
-                style="background-image: linear-gradient(to right, #490808, #bd0f0f); box-shadow: 3px 5px 3px 0px rgb(0 0 0 / 15%)"><i
-                  class='bx bxs-book-reader'></i> <span>Request for Class</span></a>
-        </div>
-      </div>
-      <div class="d-flex flex-column justify-content-center">
-        <div class="navbar nav-menu">
-          <div class="row">
-            <div class="col-6 link_1">
-              <a href="src/about.html" class="nav-link scrollto"
-                style="background-image: linear-gradient(to right, #2d5ba7, #2874f0); box-shadow: 3px 5px 3px 0px rgb(0 0 0 / 15%)"><i
-                  class='bx bxs-edit-alt'></i> <span>About us</span></a>
-              <a href="src/contect_us.html" class="nav-link scrollto"
-                style="background-image: linear-gradient(to right, #c71d1d, #ff0000); box-shadow: 3px 5px 3px 0px rgb(0 0 0 / 15%)"><i
-                  class="bx bxs-user"></i> <span>Contact Us</span></a>
-              <a href="src/services.html" class="nav-link scrollto"
-                style="background-image: linear-gradient(to right, #55851b, #6ebd0f); box-shadow: 3px 5px 3px 0px rgb(0 0 0 / 15%)"><i
-                  class='bx bxs-book-reader'></i> <span>Facilities</span></a>
-              <a href="src/about2.html" class="nav-link scrollto"
-                style="background-image: linear-gradient(to right, #533a8f, #9673EB); box-shadow: 3px 5px 3px 0px rgb(0 0 0 / 15%)"><i
-                  class="bx bx-server"></i> <span>Gallery</span></a>
+          <div class="row mt-1">
+          <div class="col-lg-12 mt-2 mt-lg-0">
+            <div id="form-data">
+              <div class="form-group mt-3">
+                <select class="form-control form-select-sm" aria-label=".form-select-sm example" id="request_class">
+                  <option selected disabled>Select your class</option>
+                  <option value="class 6th">Class 6th</option>
+                  <option value="class 7th">Class 7th</option>
+                  <option value="class 8th">Class 8th</option>
+                  <option value="class 9th">Class 9th</option>
+                  <option value="class 10th">Class 10th</option>
+                  <option value="class 11th">Class 11th</option>
+                  <option value="class 12th">Class 12th</option>
+                  <option value="B.Sc.">B.Sc.</option>
+                </select>
+              </div>
+              
+              <div class="text-center"><button id="request_dashboard">Submit</button></div>
             </div>
-            <div class="col-6 link_2">
-              <a href="src/testimonial.html" class="nav-link scrollto"
-                style="background-image: linear-gradient(to right, #35665e, #48b7a5); box-shadow: 3px 5px 3px 0px rgb(0 0 0 / 15%)"><i class='bx bxs-caret-right-circle'></i> <span>Reviews</span></a>
-              <a href="src/testimonial_2.html" class="nav-link scrollto"
-                style="background-image: linear-gradient(to right, #828962, #cfe17f); box-shadow: 3px 5px 3px 0px rgb(0 0 0 / 15%); padding-top: 24px"><i
-                  class='bx bx-male-female'></i> <span>Star Students</span></a>
-              <a href="src/fees_and_timing.html" class="nav-link scrollto"
-                style="background-image: linear-gradient(to right, #6b8385, #16eeff); box-shadow: 3px 5px 3px 0px rgb(0 0 0 / 15%); padding-top: 24px"><i class='bx bxs-receipt'></i> <span>Courses & Fees</span></a>
-              <a href="src/study_material.html" class="nav-link scrollto"
-                style="background-image: linear-gradient(to right, #893229, #f46c5e); box-shadow: 3px 5px 3px 0px rgb(0 0 0 / 15%)"><i
-                  class='bx bxs-envelope' style="margin-right: 5px;"></i><span>Blogs & Tips</span></a>
-            </div>
-          </div>
-        </div>
 
+          </div>
+
+        </div>
+        </div>
       </div>
-      <button onclick="logout()">Logout</button>
     </div>
   </section><!-- End Hero -->
   <div id="preloader"></div>
