@@ -102,9 +102,19 @@ $(document).ready(function () {
           contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
           success: function (res) {
             if (res.status == true) {
+              $("#email").val('');
+              $("#password").val('');
+              console.log(res);
+              sessionStorage.setItem('name', res.data.name);
+              sessionStorage.setItem('email', res.data.email);
               Swal.fire({
                 title: 'Login Successfull',
-                icon: 'success'
+                icon: 'success',
+                confirmButtonText: 'ok'
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  window.location.href = "../signup_and_login/after_login.html";
+                }
               })
               $(document).ajaxComplete(function() {
                 $("#overlay").fadeOut(300);
