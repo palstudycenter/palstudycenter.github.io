@@ -35,29 +35,22 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center">
     <div class="container mt-3" data-aos="zoom-in" data-aos-delay="100">
-      
-      <div class="container my-5">
-        <h1 class="text-center mb-4">Students</h1>
+      <h1 class="text-center mb-4">Student Profile</h1>
 
-        <div class="d-flex flex-nowrap overflow-auto gap-3 p-2" id="studentContainer">
-          <!-- Cards will be injected here -->
-        </div>
+    <div class="card shadow-sm p-4" style="max-width: 500px; margin: 0 auto;">
+      <div class="mb-3">
+        <input type="hidden" class="form-control" id="studentId" readonly>
       </div>
-
-      <!-- Hidden template card -->
-      <template id="studentTemplate">
-        <div class="card shadow-sm h-100" style="min-width: 250px; max-width: 250px; min-height: 220px;">
-          <div class="card-body text-start d-flex flex-column justify-content-start">
-            <h5 class="card-title student-name fw-bold"></h5>
-            <p class="card-text mb-1"><strong>Father Name:</strong> <span class="student-fathername"></span></p>
-            <p class="card-text mb-1"><strong>Class:</strong> <span class="student-class"></span></p>
-            <p class="card-text mb-1"><strong>Board:</strong> <span class="student-board"></span></p>
-            <p class="card-text mb-1"><strong>Email:</strong> <span class="student-email"></span></p>
-            <p class="card-text mb-1"><strong>Phone:</strong> <span class="student-phone"></span></p>
-            <a href="#" class="btn btn-primary mt-auto profile-btn">Add Profile link</a>
-          </div>
-        </div>
-      </template>
+      <div class="mb-3">
+        <label for="studentName" class="form-label">Student Name</label>
+        <input type="text" class="form-control" id="studentName" readonly>
+      </div>
+      <div class="mb-3">
+        <label for="profileLink" class="form-label">Profile Link</label>
+        <input type="text" class="form-control" id="profileLink" placeholder="Enter profile link">
+      </div>
+      <button type="button" class="btn btn-success" id="submit_profile_link">Submit</button>
+    </div>
 
     </div>
   </section><!-- End Hero -->
@@ -82,6 +75,21 @@
   <!-- Template Main JS File -->
   <script src="../../assets/js/main.js"></script>
   <script src="script.js"></script>
+  <script>
+    // Function to get query parameters
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    // Set student ID
+    const studentNameInput = document.getElementById('studentName');
+    studentNameInput.value = getQueryParam('name');
+    
+    const studentIdInput = document.getElementById('studentId');
+    studentIdInput.value = getQueryParam('studentId');
+
+  </script>
 </body>
 
 </html>

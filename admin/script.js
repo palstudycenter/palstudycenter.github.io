@@ -27,6 +27,9 @@ $(document).ready(function () {
             card.querySelector(".student-board").textContent = student.board;
             card.querySelector(".student-fathername").textContent = student.fathername;
 
+            const profileBtn = card.querySelector(".profile-btn");
+            profileBtn.href = `profile.html?studentId=${student.phone}&name=${encodeURIComponent(student.name)}`; // pass studentId in URL
+
             container.appendChild(card);
           });
         } else {
@@ -50,4 +53,11 @@ $(document).ready(function () {
           </div>
         `;
       }); 
+
+  $("#submit_profile_link").click(function () { 
+    const studentId = document.getElementById('studentId').value;
+    const studentName = document.getElementById('studentName').value;
+    const profileLink = document.getElementById('profileLink').value;
+    alert(studentName);
+  });
 });
