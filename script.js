@@ -113,7 +113,11 @@ $(document).ready(function () {
                 confirmButtonText: 'ok'
               }).then((result) => {
                 if (result.isConfirmed) {
-                  window.location.href = "../signup_and_login/after_login.html";
+                  if (res.data.usertype == "admin"){
+                    window.location.href = "/admin/index.html";
+                  }else {
+                    window.location.href = "../signup_and_login/after_login.html";
+                  }
                 }
               })
               $(document).ajaxComplete(function() {
