@@ -54,7 +54,7 @@
         <div class="navbar nav-menu">
           <h4>Welcome, <span id="user" style="color: #2900ff; font-weight: 700;"></span></h4>
           <br>
-          <a href="../student_window/home.html" class="nav-link scrollto gallery"
+          <a href="../student_window/home.html" class="nav-link scrollto gallery" id="student_window"
                 style="background-image: linear-gradient(to right, #490808, #bd0f0f); box-shadow: 3px 5px 3px 0px rgb(0 0 0 / 15%)"><i
                   class='bx bxs-book-reader'></i> <span>Study Center pass</span></a>
 
@@ -114,13 +114,19 @@
       window.location.href = "../signup_and_login/login_form.html";
     }
     const href = sessionStorage.getItem("profile_link");
+    const disable_profile = sessionStorage.getItem("disable_profile");
     const profile = document.getElementById("s_profile");
+    const student_window = document.getElementById("student_window");
     if (href == 'undefined') {
       profile.style.display = "none";   
     } else {
       profile.style.display = "inline-block";
       profile.setAttribute("href", href);  
     }
+    if (disable_profile == 'true') {
+      student_window.style.display = "none";
+    }
+
   </script>
   <script src="../../assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="../../assets/vendor/aos/aos.js"></script>

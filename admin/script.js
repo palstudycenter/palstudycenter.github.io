@@ -28,17 +28,20 @@ $(document).ready(function () {
             card.querySelector(".student-fathername").textContent = student.fathername;
 
             const profileBtn = card.querySelector("#profile-btn");
-            const disable_profile = card.querySelector("#disable_profile");
+            const disable_profile = card.querySelector(".disable_profile");
             profileBtn.href = `profile.html?studentId=${student.phone}&name=${encodeURIComponent(student.name)}`; // pass studentId in URL
             if (student.profile_link == undefined) {
               profileBtn.style.backgroundColor = 'red'
             } else {
               profileBtn.style.backgroundColor = 'green'
             }
-            disable_profile.value = student.disable_profile
+            disable_profile.value = `${student.phone}_${student.disable_profile}`
             if (student.disable_profile){
+              disable_profile.style.color = 'white'
               disable_profile.style.backgroundColor = 'green'
+              disable_profile.textContent = 'Enable Profile'
             }else{
+              disable_profile.style.color = 'white'
               disable_profile.style.backgroundColor = 'red'
             }
             container.appendChild(card);
@@ -63,5 +66,61 @@ $(document).ready(function () {
             </div>
           </div>
         `;
-      }); 
+      });
+
+  $(document).on("click", ".disable_profile", function() {
+    const [phone, disable] = $(this).val().split("_");
+    let disable_profile = disable === "true";
+    // Toggle value
+    disable_profile = !disable_profile;
+    data = { phone: phone, disable_profile: disable_profile };
+
+    $.ajax({
+      url: `${url}/DisableProfile`,
+      type: 'PATCH',
+      data: data,
+      contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+      success: function (res) {
+        if (res.status == true) {
+          Swal.fire({
+            text: `Profile Updated Sucessfully`,
+            icon: 'success',
+            confirmButtonText: 'ok'
+          }).then((result) => {
+            window.location.href = "students.html";
+          })
+          $(document).ajaxComplete(function() {
+            $("#overlay").fadeOut(300);
+          });
+        } else if (res.status == false) {
+          Swal.fire({
+            title: 'Error',
+            text: res.msg,
+            icon: 'error',
+          })
+          $(document).ajaxComplete(function() {
+            $("#overlay").fadeOut(300);
+          });
+        }
+      },
+      error: function (res) {
+        Swal.fire({
+          title: 'Error',
+          text: res.err,
+          icon: 'error',
+        })
+        Swal.fire({
+          title: 'Error',
+          text: res.err,
+          icon: 'error',
+          confirmButtonText: 'ok'
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.location.href = "index.html";
+          }
+        })
+      }
+    });
+
+  });
 });

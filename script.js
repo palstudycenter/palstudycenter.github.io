@@ -108,6 +108,7 @@ $(document).ready(function () {
               sessionStorage.setItem('name', res.data.name);
               sessionStorage.setItem('email', res.data.email);
               sessionStorage.setItem('profile_link', res.data.profile_link);
+              sessionStorage.setItem('disable_profile', res.data.disable_profile);
               Swal.fire({
                 title: 'Login Successfull',
                 icon: 'success',
