@@ -51,16 +51,30 @@ $(document).ready(function () {
             $("#name").val('');
             $("#phone").val('');
             $("#address").val('');
-            Swal.fire({
-              title: 'Thank you!',
-              text: `You resignation is successfully.`,
-              icon: 'success',
-              confirmButtonText: 'ok'
-            }).then((result) => {
-              if (result.isConfirmed) {
-                window.location.href = "../signup_and_login/login_form.html";
-              }
-            })
+            if (response.status){
+              Swal.fire({
+                title: 'Thank you!',
+                text: `You resignation is successfully.`,
+                icon: 'success',
+                confirmButtonText: 'ok'
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  window.location.href = "../signup_and_login/login_form.html";
+                }
+              })
+            } else {
+              Swal.fire({
+                title: 'Error',
+                text: response.msg,
+                icon: 'error',
+                confirmButtonText: 'ok'
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  window.location.href = "../signup_and_login/signup_form.html";
+                }
+              })  
+            }
+
           },
           error: function (res) {
             Swal.fire({

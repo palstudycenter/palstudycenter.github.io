@@ -29,7 +29,9 @@ $(document).ready(function () {
 
             const profileBtn = card.querySelector("#profile-btn");
             const disable_profile = card.querySelector(".disable_profile");
+            const delete_profile = card.querySelector("#delete_student");
             profileBtn.href = `profile.html?studentId=${student.phone}&name=${encodeURIComponent(student.name)}`; // pass studentId in URL
+            delete_profile.id = student._id;
             if (student.profile_link == undefined) {
               profileBtn.style.backgroundColor = 'red'
             } else {
@@ -122,5 +124,58 @@ $(document).ready(function () {
       }
     });
 
+  });
+
+  $(document).on("click", ".delete_student", function() {
+    data = { id: this.id };
+    Swal.fire({
+      title: "Do you want to delete the Student",
+      showCancelButton: true,
+      confirmButtonText: "Yes",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        $.ajax({
+          url: `${url}/DeleteStudent`,
+          type: 'DELETE',
+          data: data,
+          contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+          success: function (res) {
+            if (res.status == true) {
+              Swal.fire({
+                text: res.msg,
+                icon: 'success',
+                confirmButtonText: 'ok'
+              }).then((result) => {
+                window.location.href = "students.html";
+              })
+              $(document).ajaxComplete(function() {
+                $("#overlay").fadeOut(300);
+              });
+            } else if (res.status == false) {
+              Swal.fire({
+                title: 'Error',
+                text: res.msg,
+                icon: 'error',
+              })
+              $(document).ajaxComplete(function() {
+                $("#overlay").fadeOut(300);
+              });
+            }
+          },
+          error: function (res) {
+            Swal.fire({
+              title: 'Error',
+              text: res.msg,
+              icon: 'error',
+              confirmButtonText: 'ok'
+            }).then((result) => {
+              if (result.isConfirmed) {
+                window.location.href = "students.html";
+              }
+            })
+          }
+        }); 
+      }
+    });
   });
 });
