@@ -1,99 +1,296 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="hi">
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Study Center</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-  <meta property="og:image" content="https://raw.githubusercontent.com/nayanpal777/study-center/main/main-img.jpeg" />
-  <!-- Favicons -->
-  <link href="../assets/img/favicon.jpg" rel="icon">
-  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+<title>पाल स्टडी सेंटर गैलरी</title>
 
-  <!-- Vendor CSS Files -->
-  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  background:#f5f7ff;
+  overflow-x:hidden;
+}
 
-  <!-- Template Main CSS File -->
-  <link href="../assets/css/style.css" rel="stylesheet">
+/* 🌈 ANIMATED HEADER */
+.header{
+  height:260px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:#fff;
+  position:relative;
+  background:linear-gradient(-45deg,#1f4db8,#6a11cb,#2575fc,#00c6ff);
+  background-size:400% 400%;
+  animation: gradientMove 8s ease infinite;
+  overflow:hidden;
+}
 
+@keyframes gradientMove{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+/* floating circles */
+.header::before,
+.header::after{
+  content:"";
+  position:absolute;
+  border-radius:50%;
+  background:rgba(255,255,255,0.15);
+  animation: float 6s infinite ease-in-out;
+}
+
+.header::before{
+  width:120px;
+  height:120px;
+  top:20px;
+  left:10%;
+}
+
+.header::after{
+  width:180px;
+  height:180px;
+  bottom:10px;
+  right:10%;
+  animation-delay:2s;
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-25px);}
+}
+
+/* TEXT */
+.header h1{
+  font-size:40px;
+  margin:0;
+  text-shadow:0 0 15px rgba(255,255,255,0.7);
+}
+
+.header p{
+  margin-top:10px;
+  font-size:18px;
+  opacity:0.95;
+}
+
+/* FILTER */
+.filters{
+  text-align:center;
+  margin:15px;
+}
+
+.filters button{
+  margin:5px;
+  padding:8px 15px;
+  border-radius:6px;
+  border:1px solid #1f4db8;
+  background:#fff;
+  color:#1f4db8;
+  cursor:pointer;
+}
+
+/* GALLERY */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:15px;
+  padding:20px;
+}
+
+.card{
+  border-radius:12px;
+  overflow:hidden;
+  background:#fff;
+  cursor:pointer;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+}
+
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  transition:0.3s;
+}
+
+.card img:hover{
+  transform:scale(1.05);
+}
+
+/* MODAL */
+.modal{
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.92);
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+}
+
+.modal img{
+  max-width:90%;
+  max-height:75%;
+  border-radius:10px;
+}
+
+/* BUTTONS */
+.btns{
+  margin-top:15px;
+}
+
+button{
+  margin:5px;
+  padding:10px 14px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  background:#1f4db8;
+  color:#fff;
+}
+</style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+<div class="header">
+  <h1>📸 पाल स्टडी सेंटर</h1>
+  <p>हमारी यादें • हमारी पहचान • हमारी गैलरी</p>
+</div>
 
-  <section id="about" class="about">
-    <div class="container" data-aos="fade-up">
-      <a href="../index.html">Back</a>
-      <!-- <div class="section-title">
-        <h2>संचालक</h2>
-      </div> -->
-      <div class="about-card">
-        <div class="col-lg-4">
-          <img src="../assets/img/gallery/1.png" class="img-fluid" alt="">
-          <hr>
-          <img src="../assets/img/gallery/2.png" class="img-fluid" alt="">
-          <hr>
-          <img src="../assets/img/gallery/3.png" class="img-fluid" alt="">
-          <hr>
-          <img src="../assets/img/gallery/4.png" class="img-fluid" alt="">
-          <hr>
-          <img src="../assets/img/banner/ser_img1.jpeg" class="services-img" alt="img">
-          <hr>
-          <img src="../assets/img/banner/ser_img2.jpeg" class="services-img" alt="img">
-          <hr>
-          <img src="../assets/img/banner/ser_img3.jpeg" class="services-img" alt="img">
-          <hr>
-          <img src="../assets/img/banner/ser_img4.jpeg" class="services-img" alt="img">
-          <hr>
-          <img src="../assets/img/banner/ser_img5.jpeg" class="services-img" alt="img">
-          <hr>
-          <img src="../assets/img/banner/ser_img6.jpeg" class="services-img" alt="img">
-          <hr>
-          <img src="../assets/img/banner/ser_img7.jpeg" class="services-img" alt="img">
-          <hr>
-          <img src="../assets/img/banner/banner_1.jpeg" class="img-fluid" alt="">
-          <hr>
-          <img src="../assets/img/banner/banner_2.jpeg" class="img-fluid" alt="">
-          <hr>
-          <img src="../assets/img/banner/banner_3.jpeg" class="img-fluid" alt="">
-          <hr>
-          <img src="../assets/img/banner/banner_4.jpeg" class="img-fluid" alt="">
-          <hr>
-          <img src="../assets/img/banner/banner_5.jpeg" class="img-fluid" alt="">
-          <hr>
-          <img src="../assets/img/banner/banner_6.jpeg" class="img-fluid" alt="">
-        </div>
-      </div>
-  
-    </div>
-  </section>
-  <!-- </main>End #main -->
+<!-- FILTER -->
+<div class="filters">
+  <button onclick="filter('All')">All</button>
+  <button onclick="filter('Classroom')">Classroom</button>
+  <button onclick="filter('Events')">Events</button>
+  <button onclick="filter('Other')">Other</button>
+</div>
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+<!-- GALLERY -->
+<div class="gallery" id="gallery"></div>
 
-  <!-- Vendor JS Files -->
-  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="../assets/vendor/aos/aos.js"></script>
-  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="../assets/vendor/typed.js/typed.min.js"></script>
-  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="../assets/vendor/php-email-form/validate.js"></script>
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <img id="modalImg">
 
-  <!-- Template Main JS File -->
-  <script src="../assets/js/main.js"></script>
+  <div class="btns">
+    <button onclick="prev()">⬅ Prev</button>
+    <button onclick="next()">Next ➡</button>
+    <button onclick="zoomIn()">➕ Zoom</button>
+    <button onclick="zoomOut()">➖ Zoom</button>
+    <button onclick="download()">⬇ Download</button>
+    <button onclick="startSlide()">▶ Slideshow</button>
+    <button onclick="stopSlide()">⏸ Stop</button>
+    <button onclick="closeModal()">Close ❌</button>
+  </div>
+</div>
+
+<script>
+
+let images = [
+  {src:"../assets/img/gallery/1.png", cat:"Classroom"},
+    {src:"../assets/img/gallery/3.png", cat:"Classroom"},
+        {src:"../assets/img/gallery/4.png", cat:"Classroom"},
+  {src:"https://picsum.photos/500/400?2", cat:"Events"},
+  {src:"https://picsum.photos/500/400?3", cat:"Other"},
+  {src:"../assets/img/gallery/2.png", cat:"Classroom"},
+  {src:"https://picsum.photos/500/400?5", cat:"Events"},
+  {src:"https://picsum.photos/500/400?6", cat:"Other"}
+];
+
+let current=0;
+let scale=1;
+let slide;
+
+// LOAD
+function load(data=images){
+  let html="";
+  data.forEach((img,i)=>{
+    html+=`<div class="card" onclick="openImg(${i})">
+      <img src="${img.src}">
+    </div>`;
+  });
+  document.getElementById("gallery").innerHTML=html;
+}
+load();
+
+// FILTER
+function filter(cat){
+  if(cat==="All") return load();
+  load(images.filter(i=>i.cat===cat));
+}
+
+// OPEN
+function openImg(i){
+  current=i;
+  scale=1;
+  document.getElementById("modal").style.display="flex";
+  document.getElementById("modalImg").src=images[i].src;
+  document.getElementById("modalImg").style.transform="scale(1)";
+}
+
+// CLOSE
+function closeModal(){
+  document.getElementById("modal").style.display="none";
+  stopSlide();
+}
+
+// NEXT
+function next(){
+  current=(current+1)%images.length;
+  openImg(current);
+}
+
+// PREV
+function prev(){
+  current=(current-1+images.length)%images.length;
+  openImg(current);
+}
+
+// ZOOM
+function zoomIn(){
+  scale+=0.2;
+  document.getElementById("modalImg").style.transform=`scale(${scale})`;
+}
+
+function zoomOut(){
+  scale=Math.max(0.5,scale-0.2);
+  document.getElementById("modalImg").style.transform=`scale(${scale})`;
+}
+
+// DOWNLOAD
+function download(){
+  let a=document.createElement("a");
+  a.href=images[current].src;
+  a.download="pal-study-center.jpg";
+  a.click();
+}
+
+// SLIDESHOW
+function startSlide(){
+  stopSlide();
+  slide=setInterval(next,2000);
+}
+
+function stopSlide(){
+  clearInterval(slide);
+}
+
+</script>
+
 </body>
-
 </html>

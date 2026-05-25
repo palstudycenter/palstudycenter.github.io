@@ -5,19 +5,15 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Contact Us | Pal Study Center</title>
+  <title>Contact Us | पाल स्टडी सेंटर </title>
 
   <meta property="og:image"
     content="https://raw.githubusercontent.com/nayanpal777/study-center/main/main-img.jpeg" />
 
-  <!-- Favicons -->
   <link href="../assets/img/favicon.jpg" rel="icon">
 
-  <!-- Vendor CSS -->
   <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-
-  <!-- Main CSS -->
   <link href="../assets/css/style.css" rel="stylesheet">
 
   <style>
@@ -26,7 +22,77 @@
       background:#f4f7fb;
       font-family:Arial,sans-serif;
       color:#1f2937;
+      overflow-x:hidden;
     }
+
+    /* ================= HOME SECTION (SMALL SIZE) ================= */
+    .home-section{
+      height:55vh;   /* 👈 छोटा कर दिया */
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      background:linear-gradient(135deg,#1f4db8,#4f8cff);
+      color:#fff;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .home-section::before{
+      content:"";
+      position:absolute;
+      width:200%;
+      height:200%;
+      background:rgba(255,255,255,0.08);
+      transform:rotate(25deg);
+      animation:moveBg 8s linear infinite;
+    }
+
+    @keyframes moveBg{
+      0%{transform:translateX(-50%) rotate(25deg);}
+      100%{transform:translateX(50%) rotate(25deg);}
+    }
+
+    .home-content{
+      position:relative;
+      z-index:2;
+      animation:fadeUp 1.2s ease-in-out;
+    }
+
+    @keyframes fadeUp{
+      from{opacity:0; transform:translateY(40px);}
+      to{opacity:1; transform:translateY(0);}
+    }
+
+    .home-content h1{
+      font-size:42px;
+      font-weight:800;
+      margin-bottom:10px;
+    }
+
+    .home-content p{
+      font-size:18px;
+      opacity:0.9;
+    }
+
+    .home-btn{
+      margin-top:20px;
+      display:inline-block;
+      padding:10px 22px;
+      background:#fff;
+      color:#1f4db8;
+      font-weight:700;
+      border-radius:12px;
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    .home-btn:hover{
+      transform:scale(1.05);
+      background:#eaeaea;
+    }
+
+    /* ================= CONTACT SECTION (YOUR ORIGINAL) ================= */
 
     .contact-section{
       padding:60px 15px;
@@ -102,17 +168,9 @@
       transform:translateY(-3px);
     }
 
-    .facebook{
-      background:#1877f2;
-    }
-
-    .instagram{
-      background:#e1306c;
-    }
-
-    .whatsapp{
-      background:#25d366;
-    }
+    .facebook{background:#1877f2;}
+    .instagram{background:#e1306c;}
+    .whatsapp{background:#25d366;}
 
     .map-btn{
       display:inline-block;
@@ -128,7 +186,6 @@
 
     .map-btn:hover{
       background:#163b91;
-      color:#fff;
     }
 
     .back-btn{
@@ -141,15 +198,9 @@
     }
 
     @media(max-width:768px){
-
-      .main-title h1{
-        font-size:32px;
-      }
-
-      .contact-card{
-        padding:30px 20px;
-      }
-
+      .home-content h1{font-size:30px;}
+      .main-title h1{font-size:32px;}
+      .contact-card{padding:30px 20px;}
     }
 
   </style>
@@ -158,7 +209,20 @@
 
 <body>
 
-<section class="contact-section">
+<!-- ================= HOME SECTION (SMALL + ANIMATED) ================= -->
+<section class="home-section">
+
+  <div class="home-content">
+    <h1>पाल स्टडी सेंटर</h1>
+    <p>आपके उज्ज्वल भविष्य को बनाने में मदद</p>
+    <a href="#contact" class="home-btn">Contact Us</a>
+  </div>
+
+</section>
+
+
+<!-- ================= CONTACT SECTION (UNCHANGED YOUR CONTENT) ================= -->
+<section class="contact-section" id="contact">
 
 <div class="container">
 
@@ -178,7 +242,6 @@
 
 <div class="row g-4">
 
-<!-- Contact Info -->
 <div class="col-lg-6">
 
 <div class="contact-card">
@@ -187,7 +250,7 @@
 <i class="bi bi-building"></i>
 </div>
 
-<h3>Pal Study Center</h3>
+<h3>पाल स्टडी सेंटर </h3>
 
 <p>
 “हम आपके उज्ज्वल भविष्य के निर्माण के लिए सदैव तत्पर हैं।”
@@ -240,7 +303,6 @@ class="map-btn">
 
 </div>
 
-<!-- Social Media -->
 <div class="col-lg-6">
 
 <div class="contact-card">
@@ -262,7 +324,7 @@ target="_blank"
 class="facebook">
 
 <i class="bi bi-facebook"></i>
- Facebook
+Facebook
 
 </a>
 
@@ -271,7 +333,7 @@ target="_blank"
 class="instagram">
 
 <i class="bi bi-instagram"></i>
- Instagram
+Instagram
 
 </a>
 
@@ -280,7 +342,7 @@ target="_blank"
 class="whatsapp">
 
 <i class="bi bi-whatsapp"></i>
- WhatsApp
+WhatsApp
 
 </a>
 
@@ -308,9 +370,7 @@ class="whatsapp">
 
 </section>
 
-<!-- Vendor JS -->
 <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
-
 </html>
