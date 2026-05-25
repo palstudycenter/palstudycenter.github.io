@@ -1,968 +1,1907 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Study Center</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-  <meta property="og:image" content="https://raw.githubusercontent.com/nayanpal777/study-center/main/main-img.jpeg" />
-  <!-- Favicons -->
-  <link href="../assets/img/favicon.jpg" rel="icon">
-  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <title>पाल स्टडी सेंटर Achievers</title>
 
-  <!-- Vendor CSS Files -->
-  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
-  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#f5f7fb;
+      overflow-x:hidden;
+    }
+
+    /* NAVBAR */
+    .navbar{
+      background:rgba(8,15,44,0.95);
+      backdrop-filter:blur(10px);
+      padding:16px 0;
+    }
+
+    .navbar-brand{
+      color:#fff !important;
+      font-size:30px;
+      font-weight:800;
+    }
+
+    /* HERO */
+    .hero{
+      min-height:100vh;
+      background:
+      linear-gradient(rgba(5,15,50,0.82), rgba(5,15,50,0.88)),
+      url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center;
+      text-align:center;
+      color:white;
+    }
+
+    .hero h1{
+      font-size:70px;
+      font-weight:800;
+    }
+
+    .hero h1 span{
+      color:#4da3ff;
+    }
+
+    .hero p{
+      font-size:20px;
+      color:#dce7ff;
+      max-width:800px;
+      margin:auto;
+    }
+
+    .hero-btn{
+      margin-top:35px;
+      display:inline-block;
+      padding:14px 38px;
+      border-radius:50px;
+      background:linear-gradient(135deg,#0d6efd,#00bfff);
+      color:#fff;
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    /* NEW SECTION (MESSAGE / QUOTE) */
+    .message-section{
+      padding:90px 0;
+      background:#ffffff;
+      text-align:center;
+    }
+
+    .message-box{
+      max-width:900px;
+      margin:auto;
+      background:linear-gradient(135deg,#f0f6ff,#ffffff);
+      padding:50px;
+      border-radius:25px;
+      box-shadow:0 15px 40px rgba(0,0,0,0.08);
+      border:1px solid #e6efff;
+    }
+
+    .message-box h2{
+      font-size:36px;
+      font-weight:800;
+      margin-bottom:25px;
+      color:#08152c;
+    }
+
+    .message-box p{
+      font-size:20px;
+      line-height:1.9;
+      color:#444;
+      font-style:italic;
+    }
+
+    .message-box .highlight{
+      color:#0d6efd;
+      font-weight:700;
+    }
+
+    /* ACHIEVERS */
+    .achievers{
+      padding:110px 0;
+    }
+
+    .section-title h2{
+      font-size:48px;
+      font-weight:800;
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .filter-box{
+      text-align:center;
+      margin-bottom:40px;
+    }
+
+    .filter-btn{
+      border:2px solid #0d6efd;
+      background:white;
+      color:#0d6efd;
+      padding:10px 22px;
+      border-radius:40px;
+      margin:6px;
+      font-weight:600;
+      cursor:pointer;
+    }
+
+    .filter-btn.active{
+      background:#0d6efd;
+      color:white;
+    }
+
+    .achiever-card{
+      background:white;
+      border-radius:25px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+      transition:0.4s;
+      height:100%;
+    }
+
+    .achiever-card:hover{
+      transform:translateY(-10px);
+    }
+
+    .achiever-img{
+      width:120px;
+      height:120px;
+      border-radius:50%;
+      object-fit:cover;
+      border:6px solid #edf4ff;
+    }
+
+    .achiever-content{
+      text-align:center;
+      padding:20px;
+    }
+
+    .profession{
+      color:#0d6efd;
+      font-weight:600;
+    }
+
+    .location{
+      display:inline-block;
+      margin-top:10px;
+      background:#eef5ff;
+      padding:6px 16px;
+      border-radius:40px;
+      color:#0d6efd;
+      font-weight:600;
+    }
+
+  </style>
 </head>
 
 <body>
 
-  <section id="testimonial" class="testimonial">
-    <div class="container" data-aos="fade-up">
-      <a href="../index.html">Back</a>
-      <!-- <div class="section-title">
-        <h2 class="heading">स्टडी सेंटर से पढ़कर अपना कॅरिअर बनाने वाले छात्र</h2>
-      </div> -->
-      <div class="row">
-        <div class="col-md-6 col-12 mb-3">
-          <div class="card-heading text-center">
-            <h2>"कोचिंग से सीखा, सफलता से जीता"</h2>
-          </div>
-          <div class="card">
-            <div class="card-body text-center">
-              <div class="row">
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/ashish_ojha.png" class="old_st_img" alt="pratima">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">आशीष ओझा</p>
-                    <p class="work">Software Engineer</p>
-                    <p class="country">U.S.A</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/ragini_soni.png" class="old_st_img" alt="pratima">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">रागिनी सोनी</p>
-                    <p class="work">Software Engineer</p>
-                    <p class="country">Australia</p>
-                  </div> 
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/nidhi_jain.png" class="old_st_img" alt="pratima">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">निधि जैन</p>
-                    <p class="work">Coaching Teacher</p>
-                    <p class="country">Ujjain</p>
-                  </div>
-                </div>
-              </div>
-              <hr class="mt-4">
-              <div class="row">
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/abhishek_sharama.png" class="old_st_img" alt="pratima">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">अभिषेक शर्मा</p>
-                    <p class="work">Assistant Manager Macawber Beekay Pvt.</p>
-                    <p class="country">Surat</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/rajat_jain.png" class="old_st_img" alt="pratima">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">रजत जैन</p>
-                    <p class="work">Assistant Manager at L&T Construction</p>
-                    <p class="country">Bhopal</p>
-                  </div> 
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/vivek.png" class="old_st_img" alt="pratima">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">विवेक आगर</p>
-                    <p class="work">Software Engineer at Synqua Games Pvt.</p>
-                    <p class="country">Mumbai</p>
-                  </div>
-                </div>
-              </div>
-              <hr class="mt-4">
-              <div class="row">
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/ankita.png" class="old_st_img" alt="pratima">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">अंकिता शर्मा</p>
-                    <p class="work">Software Engineer at Impetrosys</p>
-                    <p class="country">U.S.A</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/nikhilesh.png" class="old_st_img" alt="pratima">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">निखिलेश अग्रवाल</p>
-                    <p class="work">Software Engineer at Google</p>
-                    <p class="country">U.S.A</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/yash_pogra.png" class="old_st_img" alt="pratima">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">यश पोगरा</p>
-                    <p class="work">Software Engineer</p>
-                    <p class="country">Indore</p>
-                  </div> 
-                </div>
-              </div>
-              <hr class="mt-4">
-              <div class="row">
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/kiran.png" class="old_st_img" alt="pratima">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">किरण धनोतिया</p>
-                    <p class="work">Chartered Accountant</p>
-                    <p class="country">Mumbai</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/varsha_soni.png" class="old_st_img" alt="pratima">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">वर्षा सोनी</p>
-                    <p class="work">Software Engineer at Reliance Pvt.</p>
-                    <p class="country">Pune</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/nidhi.png" class="old_st_img" alt="pratima">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">निधि पाल</p>
-                    <p class="work">Software Engineer at Valtech</p>
-                    <p class="country">Ahmedabad</p>
-                  </div> 
-                </div>
-              </div>
-              <hr class="mt-4">
-              <div class="row">
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/manas.png" class="old_st_img" alt="pratima">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">मानस वाधवा</p>
-                    <p class="work">Software Engineer</p>
-                    <p class="country">Indore</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/mohit_hada.png" class="old_st_img" alt="pratima">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">मोहित हाड़ा</p>
-                    <p class="work">Sales Manager at HDFC Bank</p>
-                    <p class="country">Mandsaur</p>
-                  </div> 
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/kamlesh_chandel.png" class="old_st_img" alt="pratima">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">कमलेश चंदेल</p>
-                    <p class="work">Doctor</p>
-                    <p class="country">Neemuch</p>
-                  </div>
-                </div>
-              </div>
-              <hr>
-              <div class="row">
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/vijay_garasiya.png" class="old_st_img" alt="pratima">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">विजय गरासिया</p>
-                    <p class="work">Software Engineer</p>
-                    <p class="country">Singapore</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/mohnish_gehlod.png" class="old_st_img" alt="pratima">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">मोहनीश गहलोद</p>
-                    <p class="work">Manager</p>
-                    <p class="country">Dubai</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/vivek_farkya.png" class="old_st_img" alt="pratima">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">विवेक फरक्या</p>
-                    <p class="work">Design Engineer at TUV India Pvt.</p>
-                    <p class="country">Vadodara</p>
-                  </div>
-                </div>
-              </div>
-              <hr>
-              <div class="row">
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/tinku.png" class="old_st_img" alt="pratima">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">टिंकू छाबड़ा</p>
-                    <p class="work">Software Engineer at BatchMaster Software Pvt.</p>
-                    <p class="country">Indore</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/manoj_soni.png" class="old_st_img" alt="pratima">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">मनोज सोनी</p>
-                    <p class="work">Structural Engineer at Govindashish Connsultancy</p>
-                    <p class="country">Manasa</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/dashrath_tiwari.png" class="old_st_img" alt="gaurav soni">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">दशरथ तिवारी</p>
-                    <p class="work">Lab technician at aurobindo hospital</p>
-                    <p class="country">Indore</p>
-                  </div>
-                </div>
-              </div>
-              <hr>
-              <div class="row">
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/naveen_farkya.png" class="old_st_img" alt="pratima">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">नवीन फरक्या</p>
-                    <p class="work">Software Engineer</p>
-                    <p class="country">U.S.A.</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/lakhan.png" class="old_st_img" alt="pratima">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">लाखन झाला</p>
-                    <p class="work">Coaching Teacher</p>
-                    <p class="country">Indore</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/arpit_bhandari.png" class="old_st_img" alt="pratima">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">अर्पित भंडारी</p>
-                    <p class="work">Software Engineer at capgemini</p>
-                    <p class="country">Mumbai</p>
-                  </div> 
-                </div>
-              </div>
-              <hr>
-              <div class="row">
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/nayan_pal.png" class="old_st_img" alt="pratima">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">नयन पाल</p>
-                    <p class="work">Software Engineer at Valulabs</p>
-                    <p class="country">Hyderabad</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/harshit.png" class="old_st_img" alt="pratima">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">हर्षित सिंधवानी</p>
-                    <p class="work">T.V. Actor</p>
-                    <p class="country">Mumbai</p>
-                  </div> 
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/dinesh_pal.png" class="old_st_img" alt="jugnu">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">दिनेश पाल</p>
-                    <p class="work">Social worker and Bussiness man</p>
-                    <p class="country">Manasa</p>
-                  </div>
-                </div>
-              </div>
-              <hr class="mt-4">
-              <div class="row">
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/gourav_dhanotiya.png" class="old_st_img" alt="pratima">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">गौरव धनोतिया</p>
-                    <p class="work">Assistant Manager at NBCC India Limited</p>
-                    <p class="country">New Delhi</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/suryaprakash_mandwariya.png" class="old_st_img" alt="pratima">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">सूर्यप्रकाश मंडवारिया</p>
-                    <p class="work">Bank Manager at akshay credit co. Bank</p>
-                    <p class="country">Manasa</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/vikas_purohit.png" class="old_st_img" alt="pratima">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">विकास पुरोहित</p>
-                    <p class="work">Director of Malwa Academy</p>
-                    <p class="country">Neemuch</p>
-                  </div>
-                </div>
-              </div>
-              <hr class="mt-5">
-              <div class="row">
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/paras_gandhi.png" class="old_st_img" alt="pratima">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">पारस गांधी</p>
-                    <p class="work">SALES MANAGER at Chesa Dental Care</p>
-                    <p class="country">Udaipur</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/ruchir_toshniwal.png" class="old_st_img" alt="pratima">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">रुचिर तोषनीवाल</p>
-                    <p class="work">Manager at Hyundai Motor India</p>
-                    <p class="country">Indore</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/anil_purohit.png" class="old_st_img" alt="pratima">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">अनिल पुरोहित</p>
-                    <p class="work">Software Engineer at Informatica</p>
-                    <p class="country">Bangalore</p>
-                  </div>
-                </div>
-              </div>
-              <hr>
-              <div class="row">
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/abhay.png" class="old_st_img" alt="abhay">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">अभय गहलोद</p>
-                    <p class="work">Software Engineer at Wipro Pvt.</p>
-                    <p class="country">Pune</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/kabir.png" class="old_st_img" alt="kabir">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">कबीर परिहार</p>
-                    <p class="work">Singer Songwriter at The Kabira Studio</p>
-                    <p class="country">Indore</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/ayush_rekwar.png" class="old_st_img" alt="ayush rekwar">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">आयुष रेकवार</p>
-                    <p class="work">Civil Engineer</p>
-                    <p class="country">Indore</p>
-                  </div>
-                </div>
-              </div>
-              <hr>
-              <div class="row">
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/ragini_dangi.png" class="old_st_img" alt="abhay">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">रागिनी दांगी</p>
-                    <p class="work">Chartered Accountant</p>
-                    <p class="country">Indore</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/aditya_sharma.png" class="old_st_img" alt="Aditya">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">आदित्य शर्मा</p>
-                    <p class="work">Bussiness Man</p>
-                    <p class="country">Indore</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/ritu_soni.png" class="old_st_img" alt="Aditya">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">रितु सोनी</p>
-                    <p class="work">Deputy Manager at HDFC Bank</p>
-                    <p class="country">Ratlam</p>
-                  </div>
-                </div>
-              </div>
-              <hr>
-              <div class="row">
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/gunjan.png" class="old_st_img" alt="gunjan">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">गुंजन मुंदडा</p>
-                    <p class="work">Software Engineer</p>
-                    <p class="country">Pune</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/virendra_pratap.png" class="old_st_img" alt="virendra_pratap">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">वीरेंद्र सिंह</p>
-                    <p class="work">Branch Manager at smriti nagrik sahkari bank maryadit</p>
-                    <p class="country">Neemuch</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/vinod_rathor.png" class="old_st_img" alt="vinod_rathor">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">विनोद राठौर</p>
-                    <p class="work">T.V. Actor</p>
-                    <p class="country">Mumbai</p>
-                  </div>
-                </div>
-              </div>
-              <hr>
-              <div class="row">
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/mahesh_tikadar.png" class="old_st_img" alt="mahesh_tikadar">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">महेश टिकादार</p>
-                    <p class="work">Medical doctor at Hospital</p>
-                    <p class="country">Manasa</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/deepak_patidar.png" class="old_st_img" alt="deepak_patidar">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">दीपक पाटीदार</p>
-                    <p class="work">Verification Engineer at SiliConch Systems</p>
-                    <p class="country">Bangalore</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/nikhil_metta.png" class="old_st_img" alt="vinod_rathor">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">निखिल माठा</p>
-                    <p class="work">Technical Service Specialist at IBM</p>
-                    <p class="country">Bangalore</p>
-                  </div>
-                </div>
-              </div>
-              <hr class="mt-4">
-              <div class="row">
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/gaurav_soni.png" class="old_st_img" alt="gaurav soni">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">गौरव सोनी</p>
-                    <p class="work">Consultant at Capgemini India</p>
-                    <p class="country">Mumbai</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/jugnu.png" class="old_st_img" alt="jugnu">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">जुगनू छाबड़ा</p>
-                    <p class="work">Software Engineer</p>
-                    <p class="country">U.S.A.</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/ashish.png" class="old_st_img" alt="gaurav soni">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">आशीष उपाध्याय</p>
-                    <p class="work">Senior Manager in BP Wealth Pvt.</p>
-                    <p class="country">Mumbai</p>
-                  </div>
-                </div>
-              </div>
-              <hr class="mt-4">
-              <div class="row">
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/kamal_rekwar.png" class="old_st_img" alt="jugnu">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">कमल रेकवार</p>
-                    <p class="work">Supply chain manager and cluster lead at Reliance JIO</p>
-                    <p class="country">Jabalpur</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/manish_nagar.png" class="old_st_img" alt="vinod_rathor">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">मनीष नागर</p>
-                    <p class="work">DevOps Engineer at Netcracker Technology</p>
-                    <p class="country">Pune</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/akash_sharma.png" class="old_st_img" alt="vinod_rathor">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">आकाश शर्मा</p>
-                    <p class="work">Web Developer at Redvision Technologies</p>
-                    <p class="country">Indore</p>
-                  </div>
-                </div>
-              </div>
-              <hr class="mt-4">
-              <div class="row">
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/arpit_kabra.png" class="old_st_img" alt="gaurav soni">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">अर्पित काबरा</p>
-                    <p class="work">Software Engineer</p>
-                    <p class="country">Bhopal</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/preksha_gandhi.png" class="old_st_img" alt="jugnu">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">प्रेक्षा गांधी</p>
-                    <p class="work">Software Engineer at Accenture</p>
-                    <p class="country">Mumbai</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/ronak_jain.png" class="old_st_img" alt="vinod_rathor">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">रौनक जैन</p>
-                    <p class="work">CEO at Netspace Software Solutions</p>
-                    <p class="country">Ratlam</p>
-                  </div>
-                </div>
-              </div>
-              <hr class="mt-4">
-              <div class="row">
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/rohan_sodani.png" class="old_st_img" alt="gaurav soni">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">रोहन सोडानी</p>
-                    <p class="work">Former SSE at Accenture</p>
-                    <p class="country">Mumbai</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/mahendra_singh_chandel.png" class="old_st_img" alt="jugnu">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">महेंद्र सिंह चंदेल</p>
-                    <p class="work">Software Engineer</p>
-                    <p class="country">Manasa</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/akshay_patidar.png" class="old_st_img" alt="vinod_rathor">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">अक्षय पाटीदार</p>
-                    <p class="work">civil engineering student at Barkatullah </p>
-                    <p class="country">Bhopal</p>
-                  </div>
-                </div>
-              </div>
-              <hr class="mt-4">
-              <div class="row">
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/yogendra_monu.png" class="old_st_img" alt="gaurav soni">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">योगेंद्र चौधरी</p>
-                    <p class="work">मण्डल अध्यक्ष भारतीय जनता युवा मोर्चा मनासा</p>
-                    <p class="country">Manasa</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/abhishek_jangalwa.png" class="old_st_img" alt="gaurav soni">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">अभिषेक जंगलवा</p>
-                    <p class="work">Data Scientist at Oracle Advertising</p>
-                    <p class="country">Denvar</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/abhishek_gehlod.png" class="old_st_img" alt="gaurav soni">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">अभिषेक गहलोद</p>
-                    <p class="work">Software Engineer</p>
-                    <p class="country">Pune</p>
-                  </div>
-                </div>
-              </div>
-              <hr class="mt-4">
-              <div class="row">
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/ashutosh_sharma.png" class="old_st_img" alt="gaurav soni">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">आशुतोष शर्मा</p>
-                    <p class="work">Bussiness man in pharma</p>
-                    <p class="country">Manasa</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/vijay_malani.png" class="old_st_img" alt="gaurav soni">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">विजय मालानी</p>
-                    <p class="work">Software Engineer</p>
-                    <p class="country">Pune</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/abhishek_soni.png" class="old_st_img" alt="gaurav soni">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">अभिषेक सोनी</p>
-                    <p class="work">Interior designer</p>
-                    <p class="country">Indore</p>
-                  </div>
-                </div>
-              </div>
-              <hr class="mt-4">
-              <div class="row">
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/chandrabhan_singh.png" class="old_st_img" alt="jugnu">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">चंद्रभान सिंह राठौर</p>
-                    <p class="work">Engineer at Desein Indure Pvt. Ltd</p>
-                    <p class="country">Gujarat</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/naveen_rekwar.png" class="old_st_img" alt="jugnu">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">नवीन रेकवार</p>
-                    <p class="work">Sr. Quality engineer at glassco laboratories pvt LTD</p>
-                    <p class="country">Vapi, Gujarat</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/anil_rekwar.png" class="old_st_img" alt="jugnu">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">अनिल रेकवार</p>
-                    <p class="work">Works at Zydus Cadila Healthcare Limited</p>
-                    <p class="country">Ahmedabad</p>
-                  </div>
-                </div>
-              </div>
-              <hr class="mt-4">
-              <div class="row">
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/aditya_farkya.png" class="old_st_img" alt="jugnu">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">आदित्य फरक्या</p>
-                    <p class="work">QA Engineer at Webgility, Inc</p>
-                    <p class="country">Indore</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/rohit_bhatt.png" class="old_st_img" alt="jugnu">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">रोहित भट्ट</p>
-                    <p class="work">Former Sales Engineer at United Gensets pvt</p>
-                    <p class="country">Indore</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/kamlesh_prajapati.png" class="old_st_img" alt="jugnu">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">कमलेश प्रजापति</p>
-                    <p class="work">Advocate</p>
-                    <p class="country">Manasa</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <hr class="m-3">
-          <div class="card-heading text-center">
-            <h2>Govt. Sector</h2>
-          </div>
-          <div class="card">
-            <div class="card-body text-center">
-              <div class="row">
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/bharmal_dayama.png" class="old_st_img" alt="pratima">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">भारमल दायमा</p>
-                    <p class="work">पटवारी राजस्व विभाग</p>
-                    <p class="country">Manasa</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/subhash_pal.png" class="old_st_img" alt="pratima">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">सुभाष पाल</p>
-                    <p class="work">Indian Army</p>
-                    <p class="country">Leh ladakh</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/ravikand_choudary.png" class="old_st_img" alt="renuka soni">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">रविकांत चौधरी</p>
-                    <p class="work">Flying cadet at Indian Air force</p>
-                    <p class="country">Hyderabad</p>
-                  </div>
-                </div>
-              </div>
-              <hr>
-              <div class="row">
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/dilip_mehta.png" class="old_st_img" alt="pratima">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">दिलीप मेहता</p>
-                    <p class="work">A.V.F.O at Animal Husbandry Department</p>
-                    <p class="country">Ujjain</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/rajmal_dayama.png" class="old_st_img" alt="pratima">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">राजमल दायमा</p>
-                    <p class="work">M.P. Police</p>
-                    <p class="country">Mandsaur</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/dheeraj.png" class="old_st_img" alt="dheeraj">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">धीरज रावत</p>
-                    <p class="work">Branch Manager at State Bank of India</p>
-                    <p class="country">Vadodara</p>
-                  </div>
-                </div>
-              </div>
-              <hr>
-              <div class="row">
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/rupchand.png" class="old_st_img" alt="dheeraj">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">रूपचंद सीवल </p>
-                    <p class="work">Officer scale first at punjab & sind bank</p>
-                    <p class="country">Faridabad</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/gudiya_parihar.png" class="old_st_img" alt="gudiya_parihar">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">गुड़िया परिहार</p>
-                    <p class="work">Nursing staff at Medicare Hospital</p>
-                    <p class="country">Indore</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/anand_shrivastava.png" class="old_st_img" alt="gaurav soni">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">आनंद श्रीवास्तव</p>
-                    <p class="work">सरपंच संघ जिला अध्यक्ष, सरपंच ग्राम पंचायत अल्हेड</p>
-                    <p class="country">Manasa</p>
-                  </div>
-                </div>
-              </div>
-              <hr class="mt-4">
-              <div class="row">
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/bhupendra_singh.png" class="old_st_img" alt="jugnu">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">भूपेंद्र सिंह अखावत</p>
-                    <p class="work">Works at Panchayat, Rural Area</p>
-                    <p class="country">Manasa</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/jitendra_pal.png" class="old_st_img" alt="gaurav soni">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">जितेंद्र पाल</p>
-                    <p class="work">Works at Indian Railways</p>
-                    <p class="country">Mandsaur</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/rajnish_jatav.png" class="old_st_img" alt="gaurav soni">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">रजनीश जाटव</p>
-                    <p class="work">Assistant Professor at Department of Higher Education, M.P</p>
-                    <p class="country">Seoni Malwa</p>
-                  </div>
-                </div>
-              </div>
-              <hr class="mt-4">
-              <div class="row">
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/sanjay_singh.png" class="old_st_img" alt="jugnu">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">संजय सिंह चंद्रावत</p>
-                    <p class="work">Works at M.P.FOREST DEPARTMENT</p>
-                    <p class="country">Neemuch</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/narendra_singh.png" class="old_st_img" alt="gaurav soni">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">नरेंद्र सिंह चंद्रावत</p>
-                    <p class="work">M.P. Police</p>
-                    <p class="country">Mandsaur</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/dayashankar_rathore.png" class="old_st_img" alt="gaurav soni">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">दयाशंकर राठौर</p>
-                    <p class="work">पटवारी राजस्व विभाग</p>
-                    <p class="country">Manasa</p>
-                  </div>
-                </div>
-              </div>
-              <hr class="mt-4">
-              <div class="row">
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/narendra_singh.png" class="old_st_img" alt="gaurav soni">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">नरेंद्र सिंह चंद्रावत</p>
-                    <p class="work">M.P. Police</p>
-                    <p class="country">Mandsaur</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/dayashankar_rathore.png" class="old_st_img" alt="gaurav soni">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">दयाशंकर राठौर</p>
-                    <p class="work">पटवारी राजस्व विभाग</p>
-                    <p class="country">Manasa</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/bharat_gurjar.png" class="old_st_img" alt="gaurav soni">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">भारत गुर्जर</p>
-                    <p class="work">2nd officers at Marchent navy job</p>
-                    <p class="country">Dubai</p>
-                  </div>
-                </div>
-              </div>
-              <hr class="mt-4">
-              <div class="row">
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/ritesh_rawat.png" class="old_st_img" alt="gaurav soni">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">रितेश रावत</p>
-                    <p class="work">Assistant Manager at Baroda Rajsthan Grameen Bank</p>
-                    <p class="country">Ratlam</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/aakil_shaikh.png" class="old_st_img" alt="gaurav soni">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">अकील शेख</p>
-                    <p class="work">Sub Civil Engineer</p>
-                    <p class="country">Mandsaur</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/vinod_purohit.png" class="old_st_img" alt="gaurav soni">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">विनोद पुरोहित</p>
-                    <p class="work">Worked at ADGPI - Indian Army</p>
-                    <p class="country">Jammu & kashmir</p>
-                  </div>
-                </div>
-              </div>
-              <hr class="mt-4">
-              <div class="row">
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/renuka_soni.png" class="old_st_img" alt="renuka soni">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">रेणुका सोनी</p>
-                    <p class="work">Teacher at government of M.P.</p>
-                    <p class="country">Manasa</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/prahalad_grasiya.png" class="old_st_img" alt="renuka soni">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">प्रहलाद गरासिया</p>
-                    <p class="work">Works at M.P. police</p>
-                    <p class="country">Mandsaur</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/mukesh_chandel.png" class="old_st_img" alt="gaurav soni">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">मुकेश चंदेल</p>
-                    <p class="work">Works at M.P. police</p>
-                    <p class="country">Neemuch</p>
-                  </div>
-                </div>  
-              </div>
-              <hr class="mt-4">
-              <div class="row">
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/harish_kachawa.png" class="old_st_img" alt="renuka soni">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">हरीश कछवा</p>
-                    <p class="work">Works at Indian Railways</p>
-                    <p class="country">Gandhidham</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/vaibhav.png" class="old_st_img" alt="gaurav soni">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">वैभव द्विवेदी</p>
-                    <p class="work">Computer Operator at Govt.R.V. Collage</p>
-                    <p class="country">Neemuch</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/ravindra_singh.png" class="old_st_img" alt="gaurav soni">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">रवींद्र सिंह चंद्रावत</p>
-                    <p class="work">Computer Operator at Ravenu Dipartment</p>
-                    <p class="country">Manasa</p>
-                  </div>
-                </div>
-              </div>
-              <hr class="mt-4">
-              <div class="row">
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/kanhnaiya_gurjar.png" class="old_st_img" alt="pratima">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">कन्हैया गुर्जर</p>
-                    <p class="work">M.P. Police</p>
-                    <p class="country">Mandsaur</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/ishwar_dayama.png" class="old_st_img" alt="gaurav soni">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">ईश्वर दायमा</p>
-                    <p class="work">National health mission department</p>
-                    <p class="country">Neemuch</p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="../assets/img/testimonials/old_students/rahul_vyas.png" class="old_st_img" alt="gaurav soni">
-                  <div class="old_st_detail mt-3">
-                    <p class="name">राहुल व्यास</p>
-                    <p class="work">Govt. Teacher</p>
-                    <p class="country">Baloda</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand">पाल स्टडी सेंटर</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1>पाल <span>स्टडी सेंटर</span></h1>
+    <p>Achieve your dreams with guidance, discipline and hard work.</p>
+    <a href="#message" class="hero-btn">Read Message</a>
+  </div>
+</section>
+
+<!-- NEW MESSAGE SECTION (OLD CONTENT MOVED HERE) -->
+
+<!-- PREMIUM MATCHING MESSAGE SECTION -->
+<section class="shine-message">
+
+  <div class="shine-box">
+
+    <h3 class="shine-text">
+      हमारे विद्यार्थी आज 
+      <span>Corporate</span> एवं 
+      <span>Public Sector</span> में 
+      प्रतिष्ठित पदों पर कार्यरत हैं
+    </h3>
+
+  </div>
+
+</section>
+
+<style>
+
+.shine-message{
+  padding:55px 20px;
+  background:#f5f7fb;
+  display:flex;
+  justify-content:center;
+}
+
+.shine-box{
+
+  position:relative;
+  overflow:hidden;
+
+  /* HOME PAGE MATCHING PREMIUM GRADIENT */
+
+  background:linear-gradient(
+    135deg,
+    #08152c,
+    #0d3b66,
+    #145da0,
+    #1d70b8
+  );
+
+  background-size:300% 300%;
+
+  padding:48px 45px;
+
+  border-radius:30px;
+
+  text-align:center;
+
+  max-width:980px;
+  width:100%;
+
+  box-shadow:
+    0 18px 45px rgba(8,21,44,0.18),
+    0 8px 25px rgba(13,110,253,0.15);
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  animation:
+    gradientMove 10s ease infinite,
+    floatBox 4s ease-in-out infinite;
+}
+
+/* MOVING GRADIENT */
+
+@keyframes gradientMove{
+
+  0%{
+    background-position:0% 50%;
+  }
+
+  50%{
+    background-position:100% 50%;
+  }
+
+  100%{
+    background-position:0% 50%;
+  }
+
+}
+
+/* SHINE EFFECT */
+
+.shine-box::before{
+
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:-130%;
+
+  width:45%;
+  height:100%;
+
+  background:linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.55),
+    transparent
+  );
+
+  transform:skewX(-25deg);
+
+  animation:shine 4.5s infinite;
+}
+
+@keyframes shine{
+
+  0%{
+    left:-130%;
+  }
+
+  100%{
+    left:130%;
+  }
+
+}
+
+/* FLOAT EFFECT */
+
+@keyframes floatBox{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-6px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+
+}
+
+.shine-text{
+
+  position:relative;
+  z-index:2;
+
+  color:#ffffff;
+
+  font-size:26px;
+  font-weight:700;
+
+  line-height:1.9;
+
+  margin:0;
+
+  letter-spacing:0.5px;
+
+  text-shadow:
+    0 3px 12px rgba(0,0,0,0.25);
+}
+
+.shine-text span{
+
+  color:#7fd8ff;
+
+  font-weight:800;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .shine-message{
+    padding:40px 15px;
+  }
+
+  .shine-box{
+    padding:32px 22px;
+    border-radius:22px;
+  }
+
+  .shine-text{
+    font-size:18px;
+    line-height:1.7;
+  }
+
+}
+
+</style>
+
+<!-- ACHIEVERS -->
+<section class="achievers" id="achievers">
+
+  <div class="section-title">
+    <h2>Achievers</h2>
+  </div>
+
+  <div class="filter-box">
+    <button class="filter-btn active" onclick="filterData('all', this)">All</button>
+    <button class="filter-btn" onclick="filterData('corporate', this)">Corporate Jobs</button>
+    <button class="filter-btn" onclick="filterData('public', this)">Public Sector</button>
+  </div>
+
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- ACHIEVERS (same as before, repeat removed already) -->
+
+      <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+        <div class="achiever-card text-center p-3">
+          <img src="../assets/img/testimonials/old_students/ashish_ojha.png" class="achiever-img">
+          <div class="achiever-content">
+            <h4>आशीष ओझा</h4>
+            <p class="profession">Software Engineer</p>
+            <span class="location">U.S.A</span>
           </div>
         </div>
       </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+        <div class="achiever-card text-center p-3">
+          <img src="../assets/img/testimonials/old_students/ragini_soni.png" class="achiever-img">
+          <div class="achiever-content">
+            <h4>रागिनी सोनी</h4>
+            <p class="profession">Software Engineer</p>
+            <span class="location">Australia</span>
+          </div>
+        </div>
+      </div><div class="row g-4">
+
+  <!-- 1 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/nidhi_jain.png" class="achiever-img" alt="nidhi jain">
+      </div>
+
+      <div class="achiever-content">
+        <h4>निधि जैन</h4>
+        <p class="profession">Coaching Teacher</p>
+        <span class="location">Ujjain</span>
+      </div>
+
     </div>
-  </section>
-  <!-- </main>End #main -->
+  </div>
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+  <!-- 2 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
 
-  <!-- Vendor JS Files -->
-  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="../assets/vendor/aos/aos.js"></script>
-  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="../assets/vendor/typed.js/typed.min.js"></script>
-  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="../assets/vendor/php-email-form/validate.js"></script>
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/abhishek_sharama.png" class="achiever-img" alt="abhishek sharma">
+      </div>
 
-  <!-- Template Main JS File -->
-  <script src="../assets/js/main.js"></script>
+      <div class="achiever-content">
+        <h4>अभिषेक शर्मा</h4>
+        <p class="profession">Assistant Manager Macawber Beekay Pvt.</p>
+        <span class="location">Surat</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/rajat_jain.png" class="achiever-img" alt="rajat jain">
+      </div>
+
+      <div class="achiever-content">
+        <h4>रजत जैन</h4>
+        <p class="profession">Assistant Manager at L&T Construction</p>
+        <span class="location">Bhopal</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/vivek.png" class="achiever-img" alt="vivek">
+      </div>
+
+      <div class="achiever-content">
+        <h4>विवेक आगर</h4>
+        <p class="profession">Software Engineer at Synqua Games Pvt.</p>
+        <span class="location">Mumbai</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/ankita.png" class="achiever-img" alt="ankita sharma">
+      </div>
+
+      <div class="achiever-content">
+        <h4>अंकिता शर्मा</h4>
+        <p class="profession">Software Engineer at Impetrosys</p>
+        <span class="location">U.S.A</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/nikhilesh.png" class="achiever-img" alt="nikhilesh">
+      </div>
+
+      <div class="achiever-content">
+        <h4>निखिलेश अग्रवाल</h4>
+        <p class="profession">Software Engineer at Google</p>
+        <span class="location">U.S.A</span>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="row g-4">
+
+  <!-- 7 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/kiran.png" class="achiever-img" alt="kiran dhanotiya">
+      </div>
+
+      <div class="achiever-content">
+        <h4>किरण धनोतिया</h4>
+        <p class="profession">Chartered Accountant</p>
+        <span class="location">Mumbai</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 8 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/varsha_soni.png" class="achiever-img" alt="varsha soni">
+      </div>
+
+      <div class="achiever-content">
+        <h4>वर्षा सोनी</h4>
+        <p class="profession">Software Engineer at Reliance Pvt.</p>
+        <span class="location">Pune</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 9 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/nidhi.png" class="achiever-img" alt="nidhi pal">
+      </div>
+
+      <div class="achiever-content">
+        <h4>निधि पाल</h4>
+        <p class="profession">Software Engineer at Valtech</p>
+        <span class="location">Ahmedabad</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 10 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/manas.png" class="achiever-img" alt="manas wadhwa">
+      </div>
+
+      <div class="achiever-content">
+        <h4>मानस वाधवा</h4>
+        <p class="profession">Software Engineer</p>
+        <span class="location">Indore</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 11 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/mohit_hada.png" class="achiever-img" alt="mohit hada">
+      </div>
+
+      <div class="achiever-content">
+        <h4>मोहित हाड़ा</h4>
+        <p class="profession">Sales Manager at HDFC Bank</p>
+        <span class="location">Mandsaur</span>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+    </div>
+  </div><div class="row g-4">
+
+  <!-- 12 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/kamlesh_chandel.png" class="achiever-img" alt="kamlesh chandel">
+      </div>
+
+      <div class="achiever-content">
+        <h4>कमलेश चंदेल</h4>
+        <p class="profession">Doctor</p>
+        <span class="location">Neemuch</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 13 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/vijay_garasiya.png" class="achiever-img" alt="vijay garasiya">
+      </div>
+
+      <div class="achiever-content">
+        <h4>विजय गरासिया</h4>
+        <p class="profession">Software Engineer</p>
+        <span class="location">Singapore</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 14 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/mohnish_gehlod.png" class="achiever-img" alt="mohnish gehlod">
+      </div>
+
+      <div class="achiever-content">
+        <h4>मोहनीश गहलोद</h4>
+        <p class="profession">Manager</p>
+        <span class="location">Dubai</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 15 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/vivek_farkya.png" class="achiever-img" alt="vivek farkya">
+      </div>
+
+      <div class="achiever-content">
+        <h4>विवेक फरक्या</h4>
+        <p class="profession">Design Engineer at TUV India Pvt.</p>
+        <span class="location">Vadodara</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 16 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/tinku.png" class="achiever-img" alt="tinku chhabra">
+      </div>
+
+      <div class="achiever-content">
+        <h4>टिंकू छाबड़ा</h4>
+        <p class="profession">Software Engineer at BatchMaster Software Pvt.</p>
+        <span class="location">Indore</span>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<div class="row g-4">
+
+  <!-- 17 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/manoj_soni.png" class="achiever-img" alt="manoj soni">
+      </div>
+
+      <div class="achiever-content">
+        <h4>मनोज सोनी</h4>
+        <p class="profession">Structural Engineer at Govindashish Consultancy</p>
+        <span class="location">Manasa</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 18 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/dashrath_tiwari.png" class="achiever-img" alt="dashrath tiwari">
+      </div>
+
+      <div class="achiever-content">
+        <h4>दशरथ तिवारी</h4>
+        <p class="profession">Lab Technician at Aurobindo Hospital</p>
+        <span class="location">Indore</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 19 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/naveen_farkya.png" class="achiever-img" alt="naveen farkya">
+      </div>
+
+      <div class="achiever-content">
+        <h4>नवीन फरक्या</h4>
+        <p class="profession">Software Engineer</p>
+        <span class="location">U.S.A</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 20 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/lakhan.png" class="achiever-img" alt="lakhan jhala">
+      </div>
+
+      <div class="achiever-content">
+        <h4>लाखन झाला</h4>
+        <p class="profession">Coaching Teacher</p>
+        <span class="location">Indore</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 21 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/arpit_bhandari.png" class="achiever-img" alt="arpit bhandari">
+      </div>
+
+      <div class="achiever-content">
+        <h4>अर्पित भंडारी</h4>
+        <p class="profession">Software Engineer at Capgemini</p>
+        <span class="location">Mumbai</span>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<div class="row g-4">
+
+  <!-- 22 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/nayan_pal.png" class="achiever-img" alt="nayan pal">
+      </div>
+
+      <div class="achiever-content">
+        <h4>नयन पाल</h4>
+        <p class="profession">Software Engineer at Valulabs</p>
+        <span class="location">Hyderabad</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 23 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/harshit.png" class="achiever-img" alt="harshit sindhwani">
+      </div>
+
+      <div class="achiever-content">
+        <h4>हर्षित सिंधवानी</h4>
+        <p class="profession">T.V. Actor</p>
+        <span class="location">Mumbai</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 24 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/dinesh_pal.png" class="achiever-img" alt="dinesh pal">
+      </div>
+
+      <div class="achiever-content">
+        <h4>दिनेश पाल</h4>
+        <p class="profession">Social Worker & Business Man</p>
+        <span class="location">Manasa</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 25 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/gourav_dhanotiya.png" class="achiever-img" alt="gourav dhanotiya">
+      </div>
+
+      <div class="achiever-content">
+        <h4>गौरव धनोतिया</h4>
+        <p class="profession">Assistant Manager at NBCC India Limited</p>
+        <span class="location">New Delhi</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 26 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/suryaprakash_mandwariya.png" class="achiever-img" alt="suryaprakash mandwariya">
+      </div>
+
+      <div class="achiever-content">
+        <h4>सूर्यप्रकाश मंडवारिया</h4>
+        <p class="profession">Bank Manager at Akshay Credit Co. Bank</p>
+        <span class="location">Manasa</span>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<div class="row g-4">
+
+  <!-- 27 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/vikas_purohit.png" class="achiever-img" alt="vikas purohit">
+      </div>
+
+      <div class="achiever-content">
+        <h4>विकास पुरोहित</h4>
+        <p class="profession">Director of Malwa Academy</p>
+        <span class="location">Neemuch</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 28 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/paras_gandhi.png" class="achiever-img" alt="paras gandhi">
+      </div>
+
+      <div class="achiever-content">
+        <h4>पारस गांधी</h4>
+        <p class="profession">Sales Manager at Chesa Dental Care</p>
+        <span class="location">Udaipur</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 29 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/ruchir_toshniwal.png" class="achiever-img" alt="ruchir toshniwal">
+      </div>
+
+      <div class="achiever-content">
+        <h4>रुचिर तोषनीवाल</h4>
+        <p class="profession">Manager at Hyundai Motor India</p>
+        <span class="location">Indore</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 30 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/anil_purohit.png" class="achiever-img" alt="anil purohit">
+      </div>
+
+      <div class="achiever-content">
+        <h4>अनिल पुरोहित</h4>
+        <p class="profession">Software Engineer at Informatica</p>
+        <span class="location">Bangalore</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 31 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/abhay.png" class="achiever-img" alt="abhay gehlod">
+      </div>
+
+      <div class="achiever-content">
+        <h4>अभय गहलोद</h4>
+        <p class="profession">Software Engineer at Wipro Pvt.</p>
+        <span class="location">Pune</span>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<div class="row g-4">
+
+  <!-- 32 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/kabir.png" class="achiever-img" alt="kabir parihar">
+      </div>
+
+      <div class="achiever-content">
+        <h4>कबीर परिहार</h4>
+        <p class="profession">Singer Songwriter at The Kabira Studio</p>
+        <span class="location">Indore</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 33 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/ayush_rekwar.png" class="achiever-img" alt="ayush rekwar">
+      </div>
+
+      <div class="achiever-content">
+        <h4>आयुष रेकवार</h4>
+        <p class="profession">Civil Engineer</p>
+        <span class="location">Indore</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 34 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/ragini_dangi.png" class="achiever-img" alt="ragini dangi">
+      </div>
+
+      <div class="achiever-content">
+        <h4>रागिनी दांगी</h4>
+        <p class="profession">Chartered Accountant</p>
+        <span class="location">Indore</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 35 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/aditya_sharma.png" class="achiever-img" alt="aditya sharma">
+      </div>
+
+      <div class="achiever-content">
+        <h4>आदित्य शर्मा</h4>
+        <p class="profession">Business Man</p>
+        <span class="location">Indore</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 36 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/ritu_soni.png" class="achiever-img" alt="ritu soni">
+      </div>
+
+      <div class="achiever-content">
+        <h4>रितु सोनी</h4>
+        <p class="profession">Deputy Manager at HDFC Bank</p>
+        <span class="location">Ratlam</span>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<div class="row g-4">
+
+  <!-- 37 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/gunjan.png" class="achiever-img" alt="gunjan mundada">
+      </div>
+
+      <div class="achiever-content">
+        <h4>गुंजन मुंदड़ा</h4>
+        <p class="profession">Software Engineer</p>
+        <span class="location">Pune</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 38 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/virendra_pratap.png" class="achiever-img" alt="virendra singh">
+      </div>
+
+      <div class="achiever-content">
+        <h4>वीरेंद्र सिंह</h4>
+        <p class="profession">Branch Manager at Smriti Nagrik Sahkari Bank</p>
+        <span class="location">Manasa</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 39 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/tinku.png" class="achiever-img" alt="tinku chhabra">
+      </div>
+
+      <div class="achiever-content">
+        <h4>टिंकू छाबड़ा</h4>
+        <p class="profession">Software Engineer at BatchMaster Software Pvt.</p>
+        <span class="location">Indore</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 40 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/manoj_soni.png" class="achiever-img" alt="manoj soni">
+      </div>
+
+      <div class="achiever-content">
+        <h4>मनोज सोनी</h4>
+        <p class="profession">Structural Engineer at Govindashish Consultancy</p>
+        <span class="location">Manasa</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 41 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/dashrath_tiwari.png" class="achiever-img" alt="dashrath tiwari">
+      </div>
+
+      <div class="achiever-content">
+        <h4>दशरथ तिवारी</h4>
+        <p class="profession">Lab Technician at Aurobindo Hospital</p>
+        <span class="location">Indore</span>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<div class="row g-4">
+
+
+
+  <!-- 3 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/abhishek_jangalwa.png" class="achiever-img" alt="abhishek jangalwa">
+      </div>
+
+      <div class="achiever-content">
+        <h4>अभिषेक जंगलवा</h4>
+        <p class="profession">Data Scientist at Oracle Advertising</p>
+        <span class="location">Denver</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/abhishek_gehlod.png" class="achiever-img" alt="abhishek gehlod">
+      </div>
+
+      <div class="achiever-content">
+        <h4>अभिषेक गहलोद</h4>
+        <p class="profession">Software Engineer</p>
+        <span class="location">Pune</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/ashutosh_sharma.png" class="achiever-img" alt="ashutosh sharma">
+      </div>
+
+      <div class="achiever-content">
+        <h4>आशुतोष शर्मा</h4>
+        <p class="profession">Business Man in Pharma</p>
+        <span class="location">Manasa</span>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<div class="row g-4">
+
+  <!-- 1 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/vijay_malani.png" class="achiever-img" alt="vijay malani">
+      </div>
+
+      <div class="achiever-content">
+        <h4>विजय मालानी</h4>
+        <p class="profession">Software Engineer</p>
+        <span class="location">Pune</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/abhishek_soni.png" class="achiever-img" alt="abhishek soni">
+      </div>
+
+      <div class="achiever-content">
+        <h4>अभिषेक सोनी</h4>
+        <p class="profession">Interior Designer</p>
+        <span class="location">Indore</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/chandrabhan_singh.png" class="achiever-img" alt="chandrabhan singh rathore">
+      </div>
+
+      <div class="achiever-content">
+        <h4>चंद्रभान सिंह राठौर</h4>
+        <p class="profession">Engineer at Desein Indure Pvt. Ltd</p>
+        <span class="location">Gujarat</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/naveen_rekwar.png" class="achiever-img" alt="naveen rekwar">
+      </div>
+
+      <div class="achiever-content">
+        <h4>नवीन रेकवार</h4>
+        <p class="profession">Sr. Quality Engineer at Glassco Laboratories</p>
+        <span class="location">Vapi, Gujarat</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/anil_rekwar.png" class="achiever-img" alt="anil rekwar">
+      </div>
+
+      <div class="achiever-content">
+        <h4>अनिल रेकवार</h4>
+        <p class="profession">Works at Zydus Cadila Healthcare</p>
+        <span class="location">Ahmedabad</span>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<div class="row g-4">
+
+  <!-- 1 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/aditya_farkya.png" class="achiever-img" alt="aditya farkya">
+      </div>
+
+      <div class="achiever-content">
+        <h4>आदित्य फरक्या</h4>
+        <p class="profession">QA Engineer at Webgility Inc</p>
+        <span class="location">Indore</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/rohit_bhatt.png" class="achiever-img" alt="rohit bhatt">
+      </div>
+
+      <div class="achiever-content">
+        <h4>रोहित भट्ट</h4>
+        <p class="profession">Former Sales Engineer at United Gensets Pvt.</p>
+        <span class="location">Indore</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/kamlesh_prajapati.png" class="achiever-img" alt="kamlesh prajapati">
+      </div>
+
+      <div class="achiever-content">
+        <h4>कमलेश प्रजापति</h4>
+        <p class="profession">Advocate</p>
+        <span class="location">Manasa</span>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<div class="row g-4">
+
+  <!-- 1 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/kamlesh_prajapati.png" class="achiever-img" alt="kamlesh prajapati">
+      </div>
+
+      <div class="achiever-content">
+        <h4>कमलेश प्रजापति</h4>
+        <p class="profession">Advocate</p>
+        <span class="location">Manasa</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/aditya_farkya.png" class="achiever-img" alt="aditya farkya">
+      </div>
+
+      <div class="achiever-content">
+        <h4>आदित्य फरक्या</h4>
+        <p class="profession">QA Engineer at Webgility Inc</p>
+        <span class="location">Indore</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="corporate">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/rohit_bhatt.png" class="achiever-img" alt="rohit bhatt">
+      </div>
+
+      <div class="achiever-content">
+        <h4>रोहित भट्ट</h4>
+        <p class="profession">Former Sales Engineer at United Gensets Pvt.</p>
+        <span class="location">Indore</span>
+      </div>
+
+    </div>
+  </div>
+
+</div> 
+<div class="row g-4">
+
+  <!-- 1 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="public">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/bharmal_dayama.png" class="achiever-img" alt="bharmal dayama">
+      </div>
+
+      <div class="achiever-content">
+        <h4>भारमल दायमा</h4>
+        <p class="profession">पटवारी राजस्व विभाग</p>
+        <span class="location">Manasa</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="public">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/subhash_pal.png" class="achiever-img" alt="subhash pal">
+      </div>
+
+      <div class="achiever-content">
+        <h4>सुभाष पाल</h4>
+        <p class="profession">Indian Army</p>
+        <span class="location">Leh Ladakh</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="public">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/ravikand_choudary.png" class="achiever-img" alt="ravikant choudhary">
+      </div>
+
+      <div class="achiever-content">
+        <h4>रविकांत चौधरी</h4>
+        <p class="profession">Flying Cadet at Indian Air Force</p>
+        <span class="location">Hyderabad</span>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<div class="row g-4">
+
+  <!-- 1 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="public">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/dilip_mehta.png" class="achiever-img" alt="dilip mehta">
+      </div>
+
+      <div class="achiever-content">
+        <h4>दिलीप मेहता</h4>
+        <p class="profession">A.V.F.O Animal Husbandry Department</p>
+        <span class="location">Ujjain</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="public">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/rajmal_dayama.png" class="achiever-img" alt="rajmal dayama">
+      </div>
+
+      <div class="achiever-content">
+        <h4>राजमल दायमा</h4>
+        <p class="profession">M.P. Police</p>
+        <span class="location">Mandsaur</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="public">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/dheeraj.png" class="achiever-img" alt="dheeraj rawat">
+      </div>
+
+      <div class="achiever-content">
+        <h4>धीरज रावत</h4>
+        <p class="profession">Branch Manager SBI</p>
+        <span class="location">Vadodara</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="public">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/rupchand.png" class="achiever-img" alt="rupchand seval">
+      </div>
+
+      <div class="achiever-content">
+        <h4>रूपचंद सीवल</h4>
+        <p class="profession">Officer Scale I - Punjab & Sind Bank</p>
+        <span class="location">Faridabad</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="public">
+    <div class="achiever-card">
+
+      <div class="text-center pt-4">
+        <img src="../assets/img/testimonials/old_students/gudiya_parihar.png" class="achiever-img" alt="gudiya parihar">
+      </div>
+
+      <div class="achiever-content">
+        <h4>गुड़िया परिहार</h4>
+        <p class="profession">Nursing Staff at Medicare Hospital</p>
+        <span class="location">Indore</span>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<!-- 1 -->
+<div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="public">
+  <div class="achiever-card">
+
+    <div class="text-center pt-4">
+      <img src="../assets/img/testimonials/old_students/anand_shrivastava.png" class="achiever-img" alt="anand shrivastava">
+    </div>
+
+    <div class="achiever-content">
+      <h4>आनंद श्रीवास्तव</h4>
+      <p class="profession">सरपंच संघ जिला अध्यक्ष, सरपंच ग्राम पंचायत अल्हेड</p>
+      <span class="location">Manasa</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- 2 -->
+<div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="public">
+  <div class="achiever-card">
+
+    <div class="text-center pt-4">
+      <img src="../assets/img/testimonials/old_students/bhupendra_singh.png" class="achiever-img" alt="bhupendra singh">
+    </div>
+
+    <div class="achiever-content">
+      <h4>भूपेंद्र सिंह अखावत</h4>
+      <p class="profession">Works at Panchayat, Rural Area</p>
+      <span class="location">Manasa</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- 3 -->
+<div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="public">
+  <div class="achiever-card">
+
+    <div class="text-center pt-4">
+      <img src="../assets/img/testimonials/old_students/jitendra_pal.png" class="achiever-img" alt="jitendra pal">
+    </div>
+
+    <div class="achiever-content">
+      <h4>जितेंद्र पाल</h4>
+      <p class="profession">Works at Indian Railways</p>
+      <span class="location">Mandsaur</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- 4 -->
+<div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="public">
+  <div class="achiever-card">
+
+    <div class="text-center pt-4">
+      <img src="../assets/img/testimonials/old_students/rajnish_jatav.png" class="achiever-img" alt="rajnish jatav">
+    </div>
+
+    <div class="achiever-content">
+      <h4>रजनीश जाटव</h4>
+      <p class="profession">Assistant Professor at Department of Higher Education, M.P.</p>
+      <span class="location">Seoni Malwa</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- 5 -->
+<div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="public">
+  <div class="achiever-card">
+
+    <div class="text-center pt-4">
+      <img src="../assets/img/testimonials/old_students/sanjay_singh.png" class="achiever-img" alt="sanjay singh">
+    </div>
+
+    <div class="achiever-content">
+      <h4>संजय सिंह चंद्रावत</h4>
+      <p class="profession">Works at M.P. Forest Department</p>
+      <span class="location">Neemuch</span>
+    </div>
+
+  </div>
+</div>
+<!-- 6 -->
+<div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="public">
+  <div class="achiever-card">
+
+    <div class="text-center pt-4">
+      <img src="../assets/img/testimonials/old_students/narendra_singh.png" class="achiever-img" alt="narendra singh">
+    </div>
+
+    <div class="achiever-content">
+      <h4>नरेंद्र सिंह चंद्रावत</h4>
+      <p class="profession">M.P. Police</p>
+      <span class="location">Mandsaur</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- 7 -->
+<div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="public">
+  <div class="achiever-card">
+
+    <div class="text-center pt-4">
+      <img src="../assets/img/testimonials/old_students/dayashankar_rathore.png" class="achiever-img" alt="dayashankar rathore">
+    </div>
+
+    <div class="achiever-content">
+      <h4>दयाशंकर राठौर</h4>
+      <p class="profession">पटवारी राजस्व विभाग</p>
+      <span class="location">Manasa</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- 8 -->
+<div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="public">
+  <div class="achiever-card">
+
+    <div class="text-center pt-4">
+      <img src="../assets/img/testimonials/old_students/bharat_gurjar.png" class="achiever-img" alt="bharat gurjar">
+    </div>
+
+    <div class="achiever-content">
+      <h4>भारत गुर्जर</h4>
+      <p class="profession">2nd Officer at Merchant Navy</p>
+      <span class="location">Dubai</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- 9 -->
+<div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="public">
+  <div class="achiever-card">
+
+    <div class="text-center pt-4">
+      <img src="../assets/img/testimonials/old_students/ritesh_rawat.png" class="achiever-img" alt="ritesh rawat">
+    </div>
+
+    <div class="achiever-content">
+      <h4>रितेश रावत</h4>
+      <p class="profession">Assistant Manager at Baroda Rajasthan Grameen Bank</p>
+      <span class="location">Ratlam</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- 10 -->
+<div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="public">
+  <div class="achiever-card">
+
+    <div class="text-center pt-4">
+      <img src="../assets/img/testimonials/old_students/aakil_shaikh.png" class="achiever-img" alt="aakil shaikh">
+    </div>
+
+    <div class="achiever-content">
+      <h4>अकील शेख</h4>
+      <p class="profession">Sub Civil Engineer</p>
+      <span class="location">Mandsaur</span>
+    </div>
+
+  </div>
+</div>
+<!-- 1 -->
+<div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="public">
+  <div class="achiever-card">
+
+    <div class="text-center pt-4">
+      <img src="../assets/img/testimonials/old_students/renuka_soni.png" class="achiever-img" alt="renuka soni">
+    </div>
+
+    <div class="achiever-content">
+      <h4>रेणुका सोनी</h4>
+      <p class="profession">Teacher at Government of M.P.</p>
+      <span class="location">Manasa</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- 2 -->
+<div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="public">
+  <div class="achiever-card">
+
+    <div class="text-center pt-4">
+      <img src="../assets/img/testimonials/old_students/prahalad_grasiya.png" class="achiever-img" alt="prahalad garasiya">
+    </div>
+
+    <div class="achiever-content">
+      <h4>प्रहलाद गरासिया</h4>
+      <p class="profession">Works at M.P. Police</p>
+      <span class="location">Mandsaur</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- 3 -->
+<div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="public">
+  <div class="achiever-card">
+
+    <div class="text-center pt-4">
+      <img src="../assets/img/testimonials/old_students/mukesh_chandel.png" class="achiever-img" alt="mukesh chandel">
+    </div>
+
+    <div class="achiever-content">
+      <h4>मुकेश चंदेल</h4>
+      <p class="profession">Works at M.P. Police</p>
+      <span class="location">Neemuch</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- 4 -->
+<div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="public">
+  <div class="achiever-card">
+
+    <div class="text-center pt-4">
+      <img src="../assets/img/testimonials/old_students/harish_kachawa.png" class="achiever-img" alt="harish kachawa">
+    </div>
+
+    <div class="achiever-content">
+      <h4>हरीश कछवा</h4>
+      <p class="profession">Works at Indian Railways</p>
+      <span class="location">Gandhidham</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- 5 -->
+<div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="public">
+  <div class="achiever-card">
+
+    <div class="text-center pt-4">
+      <img src="../assets/img/testimonials/old_students/vaibhav.png" class="achiever-img" alt="vaibhav dwivedi">
+    </div>
+
+    <div class="achiever-content">
+      <h4>वैभव द्विवेदी</h4>
+      <p class="profession">Computer Operator at Govt. R.V. College</p>
+      <span class="location">Neemuch</span>
+    </div>
+
+  </div>
+</div>
+<!-- 1 -->
+<div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="public">
+  <div class="achiever-card">
+
+    <div class="text-center pt-4">
+      <img src="../assets/img/testimonials/old_students/ravindra_singh.png" class="achiever-img" alt="ravindra singh">
+    </div>
+
+    <div class="achiever-content">
+      <h4>रवींद्र सिंह चंद्रावत</h4>
+      <p class="profession">Computer Operator at Revenue Department</p>
+      <span class="location">Manasa</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- 2 -->
+<div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="public">
+  <div class="achiever-card">
+
+    <div class="text-center pt-4">
+      <img src="../assets/img/testimonials/old_students/kanhnaiya_gurjar.png" class="achiever-img" alt="kanhaiya gurjar">
+    </div>
+
+    <div class="achiever-content">
+      <h4>कन्हैया गुर्जर</h4>
+      <p class="profession">M.P. Police</p>
+      <span class="location">Mandsaur</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- 3 -->
+<div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="public">
+  <div class="achiever-card">
+
+    <div class="text-center pt-4">
+      <img src="../assets/img/testimonials/old_students/ishwar_dayama.png" class="achiever-img" alt="ishwar dayama">
+    </div>
+
+    <div class="achiever-content">
+      <h4>ईश्वर दायमा</h4>
+      <p class="profession">National Health Mission Department</p>
+      <span class="location">Neemuch</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- 4 -->
+<div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-category="public">
+  <div class="achiever-card">
+
+    <div class="text-center pt-4">
+      <img src="../assets/img/testimonials/old_students/rahul_vyas.png" class="achiever-img" alt="rahul vyas">
+    </div>
+
+    <div class="achiever-content">
+      <h4>राहुल व्यास</h4>
+      <p class="profession">Govt. Teacher</p>
+      <span class="location">Baloda</span>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+</section>
+
+<script>
+function filterData(type, btn){
+  let items = document.querySelectorAll('.achiever-item');
+  let buttons = document.querySelectorAll('.filter-btn');
+
+  buttons.forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  items.forEach(item => {
+    let cat = item.getAttribute('data-category');
+    item.style.display = (type === 'all' || cat === type) ? "block" : "none";
+  });
+}
+</script>
+
 </body>
-
 </html>

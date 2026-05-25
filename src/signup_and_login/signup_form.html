@@ -51,7 +51,7 @@
                 </div>
                 <div class="form-group mt-3">
                   <select class="form-control form-select-sm" aria-label=".form-select-sm example" id="user_type">
-                    <option selected disabled>Select User type</option>
+<option value="">Select User type</option>
                     <option value="student">Student</option>
                     <option value="parent">Parent</option>
                   </select>
@@ -59,14 +59,14 @@
               </div>
               <div class="form-group mt-3">
                 <select class="form-control form-select-sm" aria-label=".form-select-sm example" id="st_board">
-                  <option selected disabled>Select your Board</option>
+                 <option value="">Select your Board</option>
                   <option value="mpboard-hindi">MP Board</option>
                   <option value="cbse">CBSE</option>
                 </select>
               </div>
               <div Class="form-group mt-3">
                 <select Class="form-control form-select-sm" aria-label=".form-select-sm example" id="st_Class">
-                  <option selected disabled>Select your Class</option>
+<option value="">Select your Class</option>
                   <option value="Class 6th">Class 6th</option>
                   <option value="class 7th">Class 7th</option>
                   <option value="class 8th">Class 8th</option>
@@ -83,8 +83,9 @@
               </div>
               <div class="col-md-6 form-group mt-3 mt-md-0">
                   <input type="password" class="form-control" name="password" id="password" placeholder="Set Password" required>
-                </div>
-              <button type="submit" onclick="saveStudentData()">
+                  </div>
+                
+<button type="button" onclick="saveStudentData()">
   Signup
 </button>
             </div>
@@ -120,13 +121,31 @@
   <!-- Template Main JS File -->
   <script src="../../assets/js/main.js"></script>
   <script src="../../script.js"></script>
-  <script>
+<script>
 
-function saveStudentData() {
+function saveStudentData(){
 
-  let studentClass = document.getElementById("student_class").value;
+  let studentClass =
+  document.getElementById("st_Class").value;
+
+  let mobile =
+  document.getElementById("phone").value;
+
+  let email =
+  document.getElementById("email").value;
+
+  let password =
+  document.getElementById("password").value;
 
   localStorage.setItem("student_class", studentClass);
+
+  localStorage.setItem("mobile", mobile);
+
+  localStorage.setItem("email", email);
+
+  localStorage.setItem("password", password);
+
+  alert("Signup Successful");
 
 }
 
