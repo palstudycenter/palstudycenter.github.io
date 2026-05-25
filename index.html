@@ -1,88 +1,416 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 
 <head>
 
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Study Center</title>
+  <title>पाल स्टडी सेंटर</title>
 
-  <meta property="og:image"
-    content="https://raw.githubusercontent.com/nayanpal777/study-center/main/main-img.jpeg" />
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.jpg" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
-  <!-- Vendor CSS -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
 
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
     body{
+      font-family:'Poppins',sans-serif;
       overflow-x:hidden;
+      background:#f4f7fb;
     }
 
-    /* =========================
-       BUTTON GRID
-    ========================== */
-
-    .nav-menu .row{
-      row-gap:6px;
+    a{
+      text-decoration:none;
     }
 
-    .nav-menu .col-6{
-      padding-left:5px;
-      padding-right:5px;
+    /* ======================
+       NAVBAR
+    ====================== */
+
+    .navbar{
+
+      background:rgba(15,23,42,0.45);
+
+      backdrop-filter:blur(10px);
+
+      box-shadow:0 4px 18px rgba(0,0,0,.18);
+
+      padding:10px 0;
+
+      transition:.3s;
+
     }
 
-    /* =========================
-       PREMIUM BUTTON STYLE
-    ========================== */
+    .navbar-brand{
 
-    .nav-menu a,
-    .center-block a{
+      font-size:28px;
+
+      font-weight:700;
+
+      color:white !important;
+
+    }
+
+    .navbar-brand span{
+      color:#60a5fa;
+    }
+
+    .nav-link{
+
+      color:white !important;
+
+      font-weight:500;
+
+      margin-left:16px;
+
+      transition:.3s;
+
+      position:relative;
+
+      font-size:15px;
+
+    }
+
+    .nav-link:hover{
+      color:#60a5fa !important;
+    }
+
+    .nav-link::after{
+
+      content:"";
+
+      position:absolute;
+
+      width:0;
+
+      height:2px;
+
+      left:0;
+      bottom:-4px;
+
+      background:#60a5fa;
+
+      transition:.3s;
+
+    }
+
+    .nav-link:hover::after{
+      width:100%;
+    }
+
+    /* ======================
+       BUTTONS
+    ====================== */
+
+    .btn-signup,
+    .btn-login{
+
+      display:inline-flex;
+
+      align-items:center;
+
+      gap:6px;
+
+      padding:7px 18px;
+
+      border-radius:30px;
+
+      font-weight:600;
+
+      margin-left:10px;
+
+      transition:.3s;
+
+      font-size:14px;
+
+    }
+
+    .btn-signup{
+
+      background:#2563eb;
+
+      color:white;
+
+      box-shadow:0 4px 12px rgba(37,99,235,.35);
+
+    }
+
+    .btn-signup:hover{
+
+      background:#1d4ed8;
+
+      color:white;
+
+      transform:translateY(-2px);
+
+    }
+
+    .btn-login{
+
+      border:1px solid rgba(255,255,255,.7);
+
+      color:white;
+
+      background:rgba(255,255,255,.08);
+
+    }
+
+    .btn-login:hover{
+
+      background:white;
+
+      color:#0f172a;
+
+      transform:translateY(-2px);
+
+    }
+
+    /* ======================
+       HERO SECTION
+    ====================== */
+
+    .hero{
+
+      min-height:78vh;
+
+      display:flex;
+
+      align-items:center;
+
+      justify-content:center;
+
+      text-align:center;
+
+      color:white;
+
+      background:
+      linear-gradient(rgba(15,23,42,.45),rgba(15,23,42,.45)),
+      url('assets/img/classroom-bg.jpg');
+
+      background-size:cover;
+
+      background-position:center;
+
+      background-attachment:fixed;
+
+      padding:95px 0 55px;
+
+    }
+
+    .hero h1{
+
+      font-size:58px;
+
+      font-weight:700;
+
+      margin-bottom:14px;
+
+      text-shadow:0 4px 18px rgba(0,0,0,.45);
+
+    }
+
+    .hero-line{
+
+      width:100px;
+
+      height:4px;
+
+      background:#60a5fa;
+
+      margin:14px auto 18px;
+
+      border-radius:10px;
+
+    }
+
+    .hero-subtitle{
+
+      font-size:24px;
+
+      color:#e2e8f0;
+
+      margin-bottom:16px;
+
+      font-weight:500;
+
+    }
+
+    .hero p{
+
+      font-size:17px;
+
+      color:#f8fafc;
+
+      max-width:720px;
+
+      margin:auto;
+
+      line-height:1.8;
+
+      text-shadow:0 2px 8px rgba(0,0,0,.35);
+
+    }
+
+    /* ======================
+       SCROLLING TEXT
+    ====================== */
+
+    .hero-marquee{
+
+      width:100%;
+
+      overflow:hidden;
+
+      margin-top:28px;
+
+    }
+
+    .hero-marquee span{
+
+      display:inline-block;
+
+      white-space:nowrap;
+
+      animation:scrollText 22s linear infinite;
+
+      background:rgba(255,255,255,0.18);
+
+      border:1px solid rgba(255,255,255,0.28);
+
+      padding:13px 26px;
+
+      border-radius:50px;
+
+      backdrop-filter:blur(10px);
+
+      font-weight:600;
+
+      color:#ffffff;
+
+      font-size:16px;
+
+      box-shadow:0 8px 20px rgba(0,0,0,.22);
+
+    }
+
+    @keyframes scrollText{
+
+      0%{
+        transform:translateX(120%);
+      }
+
+      100%{
+        transform:translateX(-120%);
+      }
+
+    }
+
+    /* ======================
+       QUICK ACCESS
+    ====================== */
+
+    .button-section{
+
+      padding:90px 0;
+
+      background:#f8fafc;
+
+    }
+
+    .section-title{
+
+      text-align:center;
+
+      margin-bottom:55px;
+
+    }
+
+    .section-title h2{
+
+      font-size:44px;
+
+      font-weight:700;
+
+      color:#0f172a;
+
+    }
+
+    .section-title p{
+
+      color:#64748b;
+
+      margin-top:12px;
+
+      font-size:17px;
+
+    }
+
+    .menu-card{
 
       position:relative;
 
       overflow:hidden;
 
-      min-height:46px;
+      border-radius:22px;
 
-      padding:5px 8px !important;
-
-      border-radius:10px;
+      min-height:130px;
 
       display:flex;
-      align-items:center;
+
+      flex-direction:column;
+
       justify-content:center;
 
-      gap:6px;
+      align-items:center;
 
       text-align:center;
 
-      transition:0.32s ease;
+      color:white;
 
-      box-shadow:
-      0 3px 10px rgba(0,0,0,0.15);
+      transition:.35s;
 
-      backdrop-filter:blur(5px);
+      box-shadow:0 8px 22px rgba(0,0,0,.12);
 
     }
 
-    /* MOVING SHINE EFFECT */
+    .menu-card:hover{
 
-    .nav-menu a::before,
-    .center-block a::before{
+      transform:translateY(-8px) scale(1.03);
+
+    }
+
+    .menu-card i{
+
+      font-size:34px;
+
+      margin-bottom:12px;
+
+    }
+
+    .menu-card h5{
+
+      font-size:18px;
+
+      font-weight:600;
+
+      margin:0;
+
+    }
+
+    .menu-card::before{
 
       content:"";
 
@@ -91,28 +419,24 @@
       top:0;
       left:-120%;
 
-      width:55%;
+      width:60%;
       height:100%;
 
       background:
       linear-gradient(
       120deg,
-      rgba(255,255,255,0) 0%,
-      rgba(255,255,255,0.55) 50%,
-      rgba(255,255,255,0) 100%
+      rgba(255,255,255,0),
+      rgba(255,255,255,.5),
+      rgba(255,255,255,0)
       );
 
       transform:skewX(-25deg);
 
-      animation:shine 3.5s infinite;
+      animation:shine 3s infinite;
 
     }
 
     @keyframes shine{
-
-      0%{
-        left:-120%;
-      }
 
       100%{
         left:160%;
@@ -120,214 +444,131 @@
 
     }
 
-    /* GLOW BORDER */
+    /* ======================
+       ABOUT
+    ====================== */
 
-    .nav-menu a::after,
-    .center-block a::after{
+    .about{
 
-      content:"";
+      padding:90px 0;
 
-      position:absolute;
-
-      inset:0;
-
-      border-radius:10px;
-
-      padding:1px;
-
-      background:
-      linear-gradient(
-      135deg,
-      rgba(255,255,255,0.5),
-      rgba(255,255,255,0)
-      );
-
-      -webkit-mask:
-      linear-gradient(#fff 0 0) content-box,
-      linear-gradient(#fff 0 0);
-
-      -webkit-mask-composite:xor;
-
-      opacity:0.7;
-
-      pointer-events:none;
+      background:white;
 
     }
 
-    /* HOVER EFFECT */
+    .about-box{
 
-    .nav-menu a:hover,
-    .center-block a:hover{
+      background:#f8fafc;
 
-      transform:
-      translateY(-2px)
-      scale(1.02);
+      border-radius:28px;
 
-      box-shadow:
-      0 7px 16px rgba(0,0,0,0.22);
+      padding:55px;
+
+      box-shadow:0 8px 30px rgba(0,0,0,.06);
 
     }
 
-    /* ICON */
+    .about-box h2{
 
-    .nav-menu a i,
-    .center-block a i{
+      font-size:42px;
 
-      font-size:15px;
+      font-weight:700;
+
+      margin-bottom:20px;
+
+      color:#0f172a;
+
+    }
+
+    .about-box p{
+
+      line-height:2;
+
+      color:#475569;
+
+      font-size:17px;
+
+    }
+
+    /* ======================
+       FOOTER
+    ====================== */
+
+    footer{
+
+      background:#0f172a;
 
       color:white;
 
-      z-index:2;
-
-      flex-shrink:0;
+      padding:70px 0 25px;
 
     }
 
-    /* BUTTON TEXT */
+    .footer-title{
 
-    .nav-menu a span,
-    .center-block a span{
-
-      font-size:12px;
-
-      font-weight:600;
-
-      line-height:1.2;
-
-      color:white;
-
-      letter-spacing:0.2px;
-
-      z-index:2;
-
-    }
-
-    /* CENTER BLOCK */
-
-    .center-block{
-
-      width:100%;
-
-      display:flex;
-      flex-direction:column;
-
-      align-items:center;
-
-      gap:5px;
-
-      margin-top:2px;
-
-    }
-
-    .center-block a{
-
-      width:100%;
-      max-width:355px;
-
-      min-height:45px;
-
-    }
-
-    /* =========================
-       TITLE SECTION
-    ========================== */
-
-    /* NAVY BLUE COLOR ADDED */
-
-    .main-title{
-
-      color:#000080;
-
-      font-size:36px;
+      font-size:32px;
 
       font-weight:700;
 
-      letter-spacing:0.3px;
+      margin-bottom:14px;
 
     }
 
-    .main-subtitle{
+    .footer-text{
 
-      color:#2f3e46;
+      color:#cbd5e1;
 
-      font-size:18px;
-
-      font-weight:700;
-
-      margin-top:10px;
+      line-height:1.8;
 
     }
 
-    /* EXCELLENCE TEXT */
+    .footer-bottom{
 
-    .main-text{
+      border-top:1px solid rgba(255,255,255,.12);
 
-      color:#374151;
+      margin-top:30px;
 
-      font-size:13px;
+      padding-top:20px;
 
-      font-weight:600;
+      text-align:center;
 
-      margin-top:5px;
-
-    }
-
-    .main-text span{
-
-      color:#0d6efd;
-
-      font-size:13px;
-
-      font-weight:700;
+      color:#94a3b8;
 
     }
 
-    /* ADMISSION SCROLL */
-
-    marquee h5{
-
-      color:#0d6efd;
-
-      font-size:13px;
-
-      font-weight:700;
-
-      margin-top:3px;
-
-      letter-spacing:0.2px;
-
-    }
-
-    /* WHATSAPP */
+    /* ======================
+       WHATSAPP
+    ====================== */
 
     .whatsapp-button{
 
       position:fixed;
 
-      width:52px;
-      height:52px;
-
-      bottom:18px;
       right:18px;
+      bottom:18px;
 
-      background:#25d366;
-
-      color:white;
+      width:58px;
+      height:58px;
 
       border-radius:50%;
 
+      background:#25d366;
+
       display:flex;
+
       align-items:center;
+
       justify-content:center;
 
-      font-size:26px;
+      color:white;
+
+      font-size:28px;
 
       z-index:999;
 
-      box-shadow:
-      0 4px 12px rgba(0,0,0,0.25);
+      box-shadow:0 6px 18px rgba(0,0,0,.25);
 
-      transition:0.3s;
+      transition:.3s;
 
     }
 
@@ -339,54 +580,56 @@
 
     }
 
-    /* =========================
-       MOBILE RESPONSIVE
-    ========================== */
+    /* ======================
+       RESPONSIVE
+    ====================== */
 
-    @media (max-width:576px){
+    @media(max-width:768px){
 
-      .container{
-
-        padding-left:10px;
-        padding-right:10px;
-
+      .hero{
+        background-attachment:scroll;
+        min-height:70vh;
+        padding:85px 0 45px;
       }
 
-      .nav-menu .col-6{
-
-        padding-left:4px;
-        padding-right:4px;
-
+      .hero h1{
+        font-size:38px;
       }
 
-      .nav-menu a,
-      .center-block a{
-
-        min-height:43px;
-
-        padding:5px 6px !important;
-
+      .hero-subtitle{
+        font-size:20px;
       }
 
-      .nav-menu a span,
-      .center-block a span{
-
-        font-size:11.4px;
-
+      .hero p{
+        font-size:15px;
       }
 
-      .main-text,
-      .main-text span,
-      marquee h5{
-
-        font-size:12px;
-
+      .hero-marquee span{
+        font-size:14px;
+        padding:12px 20px;
       }
 
-      .main-title{
+      .section-title h2{
+        font-size:34px;
+      }
 
-        font-size:40px;
-        color: #2d5ba7 !important;
+      .about-box{
+        padding:30px;
+      }
+
+      .navbar-brand{
+        font-size:24px;
+      }
+
+      .btn-signup,
+      .btn-login{
+
+        margin-top:10px;
+
+        width:100%;
+
+        justify-content:center;
+
       }
 
     }
@@ -397,177 +640,295 @@
 
 <body>
 
-<!-- HERO SECTION -->
+<!-- ======================
+     NAVBAR
+====================== -->
 
-<section id="hero"
-  class="d-flex flex-column justify-content-center">
+<nav class="navbar navbar-expand-lg fixed-top">
 
-  <div class="container mt-3"
-    data-aos="zoom-in"
-    data-aos-delay="100">
+  <div class="container">
 
-    <!-- TITLE -->
+    <a class="navbar-brand" href="#">
+      पाल <span>स्टडी सेंटर</span>
+    </a>
 
-    <h1 class="main-title">
+    <button class="navbar-toggler bg-light"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+
+        <!-- SIGNUP -->
+
+        <li class="nav-item">
+
+          <a href="src/signup_and_login/signup_form.html"
+            class="btn-signup">
+
+            <i class="bi bi-person-plus-fill"></i>
+            Sign Up
+
+          </a>
+
+        </li>
+
+        <!-- LOGIN -->
+
+        <li class="nav-item">
+
+          <a href="src/signup_and_login/login_form.html"
+            class="btn-login">
+
+            <i class="bi bi-box-arrow-in-right"></i>
+            Login
+
+          </a>
+
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</nav>
+
+<!-- ======================
+     HERO SECTION
+====================== -->
+
+<section class="hero">
+
+  <div class="container">
+
+    <h1>
       पाल स्टडी सेंटर
     </h1>
 
-    <!-- SUBTITLE -->
+    <div class="hero-line"></div>
 
-    <h2 class="main-subtitle">
-      📚 "Learn. Grow. Succeed."
-    </h2>
+    <div class="hero-subtitle">
+      Learn • Grow • Succeed
+    </div>
 
-    <!-- EXCELLENCE -->
+    <p>
 
-    <p class="main-text">
-
-      Excellence -
-
-      <span class="typed"
-        data-typed-items="Physics, Chemistry, Mathematics, Biology, English">
-      </span>
+      Smart Classrooms, Expert Teachers,
+      Daily Practice Tests, Premium Study Notes
+      और Complete Guidance के साथ
+      अपने भविष्य को नई दिशा दें।
 
     </p>
 
-    <!-- MARQUEE -->
+    <!-- SCROLLING TEXT -->
 
-    <marquee>
+    <div class="hero-marquee">
 
-      <h5>
-        Admission Open 2026 | 9th, 10th, 11th, 12th, B.Sc.
-      </h5>
+      <span>
 
-    </marquee>
+        📚 Admission Open 2026 ||
+        9th • 10th • 11th • 12th • B.Sc. ||
+        पाल स्टडी सेंटर RLB Marg Manasa
 
-    <!-- BUTTON SECTION -->
+      </span>
 
-    <div class="d-flex flex-column justify-content-center">
+    </div>
 
-      <div class="navbar nav-menu">
+  </div>
 
-        <div class="row">
+</section>
 
-          <!-- LEFT -->
+<!-- ======================
+     QUICK ACCESS
+====================== -->
 
-          <div class="col-6 link_1">
+<section class="button-section">
 
-            <a href="src/about.html"
-              class="nav-link scrollto"
-              style="background-image:linear-gradient(to right,#2d5ba7,#2874f0);">
+  <div class="container">
 
-              <i class='bx bxs-edit-alt'></i>
-              <span>About Us</span>
+    <div class="section-title">
 
-            </a>
+      <h2>Quick Access</h2>
 
-            <a href="src/why_pal.html"
-              class="nav-link scrollto"
-              style="background-image:linear-gradient(to right,#55851b,#6ebd0f);">
+      <p>
+        सभी महत्वपूर्ण सेक्शन यहाँ उपलब्ध हैं
+      </p>
 
-              <i class='bx bxs-book-reader'></i>
-              <span>Why Choose Us</span>
+    </div>
 
-            </a>
+    <div class="row g-4">
 
-            <a href="src/fees_and_timing.html"
-              target="_blank"
-              class="nav-link scrollto"
-              style="background-image:linear-gradient(to right,#6b8385,#16eeff);">
+      <div class="col-lg-3 col-md-4 col-6">
 
-              <i class='bx bxs-receipt'></i>
-              <span>Our Courses</span>
+        <a href="src/about.html"
+          class="menu-card"
+          style="background:linear-gradient(to right,#2d5ba7,#2874f0);">
 
-            </a>
+          <i class="bi bi-info-circle-fill"></i>
 
-            <a href="src/contect_us.html"
-              class="nav-link scrollto"
-              style="background-image:linear-gradient(to right,#c71d1d,#ff0000);">
+          <h5>About Us</h5>
 
-              <i class='bx bxs-user'></i>
-              <span>Contact Us</span>
+        </a>
 
-            </a>
+      </div>
 
-          </div>
+      <div class="col-lg-3 col-md-4 col-6">
 
-          <!-- RIGHT -->
+        <a href="src/why_pal.html"
+          class="menu-card"
+          style="background:linear-gradient(to right,#55851b,#6ebd0f);">
 
-          <div class="col-6 link_2">
+          <i class="bi bi-stars"></i>
 
-            <a href="src/daily_update.html"
-              target="_blank"
-              class="nav-link scrollto"
-              style="background-image:linear-gradient(to right,#893229,#f46c5e);">
+          <h5>Why Choose Us</h5>
 
-              <i class='bx bxs-envelope'></i>
-              <span>Updates</span>
+        </a>
 
-            </a>
+      </div>
 
-            <a href="src/about2.html"
-              class="nav-link scrollto"
-              style="background-image:linear-gradient(to right,#533a8f,#9673EB);">
+      <div class="col-lg-3 col-md-4 col-6">
 
-              <i class='bx bx-server'></i>
-              <span>Gallery</span>
+        <a href="src/fees_and_timing.html"
+          class="menu-card"
+          style="background:linear-gradient(to right,#0f766e,#14b8a6);">
 
-            </a>
+          <i class="bi bi-book-fill"></i>
 
-            <a href="src/testimonial_2.html"
-              class="nav-link scrollto"
-              style="background-image:linear-gradient(to right,#8a9a5b,#c7d95c);">
+          <h5>Our Courses</h5>
 
-              <i class='bx bx-male-female'></i>
-              <span>Our Achievers</span>
+        </a>
 
-            </a>
+      </div>
 
-            <a href="src/reviews.html"
-              class="nav-link scrollto"
-              style="background-image:linear-gradient(to right,#1f7a6b,#00c9b7);">
+      <div class="col-lg-3 col-md-4 col-6">
 
-              <i class='bx bxs-caret-right-circle'></i>
-              <span>Reviews</span>
+        <a href="src/contect_us.html"
+          class="menu-card"
+          style="background:linear-gradient(to right,#c71d1d,#ff0000);">
 
-            </a>
+          <i class="bi bi-telephone-fill"></i>
 
-          </div>
+          <h5>Contact Us</h5>
 
-        </div>
+        </a>
 
-        <!-- CENTER BUTTONS -->
+      </div>
 
-        <div class="center-block">
+      <div class="col-lg-3 col-md-4 col-6">
 
-          <a href="src/pal_study_notes.html"
-            class="nav-link scrollto"
-            style="background-image:linear-gradient(to right,#8b0000,#d40000);">
+        <a href="src/daily_update.html"
+          class="menu-card"
+          style="background:linear-gradient(to right,#893229,#f46c5e);">
 
-            <i class='bx bxs-book-reader'></i>
-            <span>Pal Study Materials</span>
+          <i class="bi bi-bell-fill"></i>
 
-          </a>
+          <h5>Updates</h5>
 
-          <a href="https://palstudycenter.github.io/src/signup_and_login/signup_form.html"
-            class="nav-link scrollto"
-            style="background-image:linear-gradient(to right,#8b0000,#d40000);">
+        </a>
 
-            <i class='bx bxs-book-reader'></i>
-            <span>Apply Now</span>
+      </div>
 
-          </a>
+      <div class="col-lg-3 col-md-4 col-6">
 
-          <a href="./src/signup_and_login/login_form.html"
-            class="nav-link scrollto"
-            style="background-image:linear-gradient(to right,#8b0000,#d40000);">
+        <a href="src/about2.html"
+          class="menu-card"
+          style="background:linear-gradient(to right,#533a8f,#9673EB);">
 
-            <i class='bx bxs-book-reader'></i>
-            <span>Login Portal</span>
+          <i class="bi bi-images"></i>
 
-          </a>
+          <h5>Gallery</h5>
 
-        </div>
+        </a>
+
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-6">
+
+        <a href="src/testimonial_2.html"
+          class="menu-card"
+          style="background:linear-gradient(to right,#8a9a5b,#c7d95c);">
+
+          <i class="bi bi-trophy-fill"></i>
+
+          <h5>Our Achievers</h5>
+
+        </a>
+
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-6">
+
+        <a href="src/reviews.html"
+          class="menu-card"
+          style="background:linear-gradient(to right,#1f7a6b,#00c9b7);">
+
+          <i class="bi bi-chat-left-text-fill"></i>
+
+          <h5>Reviews</h5>
+
+        </a>
+
+      </div>
+
+      <div class="col-lg-6 col-md-6">
+
+        <a href="src/pal_study_notes.html"
+          class="menu-card"
+          style="background:linear-gradient(to right,#8b0000,#d40000);">
+
+          <i class="bi bi-journal-bookmark-fill"></i>
+
+          <h5>Pal Study Notes</h5>
+
+        </a>
+
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+
+        <a href="src/signup_and_login/signup_form.html"
+          class="menu-card"
+          style="background:linear-gradient(to right,#7c3aed,#9333ea);">
+
+          <i class="bi bi-pencil-square"></i>
+
+          <h5>Apply Now</h5>
+
+        </a>
+
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+
+        <a href="src/signup_and_login/login_form.html"
+          class="menu-card"
+          style="background:linear-gradient(to right,#0f172a,#334155);">
+
+          <i class="bi bi-person-circle"></i>
+
+          <h5>Student Corner</h5>
+
+        </a>
 
       </div>
 
@@ -577,18 +938,83 @@
 
 </section>
 
-<!-- PRELOADER -->
+<!-- ======================
+     ABOUT
+====================== -->
 
-<div id="preloader"></div>
+<section class="about" id="about">
 
-<!-- BACK TO TOP -->
+  <div class="container">
 
-<a href="#"
-  class="back-to-top d-flex align-items-center justify-content-center">
+    <div class="about-box">
 
-  <i class="bi bi-arrow-up-short"></i>
+      <h2>About Pal Study Center</h2>
 
-</a>
+      <p>
+
+        पाल स्टडी सेंटर छात्रों को बेहतर शिक्षा,
+        अनुभवी शिक्षक, नियमित टेस्ट और
+        उच्च गुणवत्ता वाले नोट्स प्रदान करता है।
+
+        हमारा उद्देश्य प्रत्येक छात्र को
+        सफल बनाना और उनके भविष्य को
+        उज्ज्वल दिशा देना है।
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ======================
+     FOOTER
+====================== -->
+
+<footer id="contact">
+
+  <div class="container text-center">
+
+    <h3 class="footer-title">
+      पाल स्टडी सेंटर
+    </h3>
+
+    <p class="footer-text">
+
+      Learn • Grow • Succeed
+
+    </p>
+
+    <div class="footer-bottom">
+
+      © 2026 Pal Study Center
+      <br>
+      Designed With ❤️ For Modern Education
+
+    </div>
+
+  </div>
+
+</footer>
+<!-- ======================
+     COPYRIGHT SECTION
+====================== -->
+
+<div style="
+background:#020617;
+color:#cbd5e1;
+text-align:center;
+padding:14px 10px;
+font-size:14px;
+border-top:1px solid rgba(255,255,255,0.08);
+">
+
+  © 2026 Pal Study Center | All Rights Reserved
+  <br>
+  Developed By ❤️ Pal Study Center Team
+
+</div>
 
 <!-- WHATSAPP -->
 
@@ -600,25 +1026,9 @@
 
 </a>
 
-<!-- JS FILES -->
+<!-- Bootstrap JS -->
 
-<script src="https://code.jquery.com/jquery-3.6.4.js"></script>
-
-<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-<script src="assets/vendor/aos/aos.js"></script>
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="assets/vendor/typed.js/typed.min.js"></script>
-<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-<script src="assets/vendor/php-email-form/validate.js"></script>
-
-<!-- MAIN JS -->
-
-<script src="assets/js/main.js"></script>
-<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
-
 </html>
