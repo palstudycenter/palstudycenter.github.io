@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pal Study Notes</title>
+
+<style>
+
+body{
+  background:#f4f7fb;
+  font-family:Arial,sans-serif;
+}
+
+.site-logo{
+  text-align:center;
+  font-size:42px;
+  font-weight:800;
+  margin-bottom:30px;
+  color:#222;
+}
+
+.top-bar{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  margin-bottom:30px;
+  flex-wrap:wrap;
+}
+
+.back-btn{
+  border:none;
+  background:#111;
+  color:white;
+  padding:10px 18px;
+  border-radius:10px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+.section-title{
+  flex:1;
+  color:white;
+  padding:15px;
+  border-radius:15px;
+  font-size:24px;
+  font-weight:bold;
+  text-align:center;
+  background:linear-gradient(135deg,#396afc,#2948ff,#00c6ff);
+}
+
+.grid-box{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.main-btn{
+  border:none;
+  padding:20px;
+  border-radius:18px;
+  color:white;
+  font-size:20px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.3s;
+  width:100%;
+  box-shadow:0 6px 18px rgba(0,0,0,0.18);
+}
+
+.main-btn:hover{
+  transform:translateY(-5px);
+}
+
+.page{ display:none; }
+
+</style>
+</head>
+
+<body>
+
+<section class="py-5">
+<div class="container">
+
+<!-- ================= BOARD ================= -->
+<div id="boardPage">
+  <h1 class="site-logo">📘 Pal Study Notes</h1>
+
+  <div class="top-bar">
+    <div class="section-title">Select Board</div>
+  </div>
+
+  <div class="grid-box" id="boardBox"></div>
+</div>
+
+<!-- ================= CLASS ================= -->
+<div class="page" id="classPage">
+  <h1 class="site-logo">📘 Pal Study Notes</h1>
+
+  <div class="top-bar">
+    <button class="back-btn" onclick="goBack('boardPage','classPage')">← Back</button>
+    <div class="section-title">Select Class</div>
+  </div>
+
+  <div class="grid-box" id="classBox"></div>
+</div>
+
+<!-- ================= SUBJECT ================= -->
+<div class="page" id="subjectPage">
+  <h1 class="site-logo">📘 Pal Study Notes</h1>
+
+  <div class="top-bar">
+    <button class="back-btn" onclick="goBack('classPage','subjectPage')">← Back</button>
+    <div class="section-title">Select Subject</div>
+  </div>
+
+  <div class="grid-box" id="subjectBox"></div>
+</div>
+
+<!-- ================= UNIT ================= -->
+<div class="page" id="unitPage">
+  <h1 class="site-logo">📘 Pal Study Notes</h1>
+
+  <div class="top-bar">
+    <button class="back-btn" onclick="goBack('subjectPage','unitPage')">← Back</button>
+    <div class="section-title">Select Unit</div>
+  </div>
+
+  <div class="grid-box" id="unitBox"></div>
+</div>
+
+</div>
+</section>
+
+<script>
+
+/* ================= FULL DATA ================= */
+
+const data = {
+
+  "MP Board Hindi Medium": {
+
+    "Class 12": {
+
+      "भौतिकी": [
+        "यूनिट 1 विद्युत आवेश एवं क्षेत्र",
+        "यूनिट 2 स्थिर विद्युत विभव एवं धारिता",
+        "यूनिट 3 विद्युत धारा",
+        "यूनिट 4 गतिमान आवेश एवं चुंबकत्व",
+        "यूनिट 5 चुंबकत्व एवं पदार्थ",
+        "यूनिट 6 विद्युत चुंबकीय प्रेरण",
+        "यूनिट 7 प्रत्यावर्ती धारा",
+        "यूनिट 8 विद्युत चुंबकीय तरंगें",
+        "यूनिट 9 प्रकाशिकी",
+        "यूनिट 10 तरंग प्रकाशिकी",
+        "यूनिट 11 पदार्थ की द्वैत प्रकृति",
+        "यूनिट 12 परमाणु",
+        "यूनिट 13 नाभिक",
+        "यूनिट 14 अर्धचालक इलेक्ट्रॉनिक्स"
+      ],
+
+      "रसायन शास्त्र ": [
+        "यूनिट 1 विलयन",
+        "यूनिट 2 विद्युत रसायन",
+        "यूनिट 3 रासायनिक गतिकी",
+        "यूनिट 4 d और f ब्लॉक के तत्व",
+        "यूनिट 5 समन्वय यौगिक",
+        "यूनिट 6 हैलोएल्केन और हैलोएरीन",
+        "यूनिट 7 अल्कोहल",
+        "यूनिट 8 फिनोल",
+        "यूनिट 9 ईथर",
+        "यूनिट 10 एल्डिहाइड एवं कीटोन",
+        "यूनिट 11 कार्बोक्सिलिक अम्ल",
+        "यूनिट 12 अमीन",
+        "यूनिट 13 जैव-अणु"
+      ],
+
+      "जीवविज्ञान": [
+        "यूनिट 1 (A) पुष्पीय पौधों में लैंगिक जनन",
+        "यूनिट 1 (B) मानव जनन",
+        "यूनिट 1 (C) जनन स्वास्थ्य",
+
+        "यूनिट 2 (A) वंशागति के सिद्धांत",
+        "यूनिट 2 (B) वंशागति का आणविक आधार",
+        "यूनिट 2 (C) विकास",
+
+        "यूनिट 3 (A) मानव कल्याण में जीवविज्ञान",
+        "यूनिट 3 (B) मानव स्वास्थ्य एवं रोग",
+        "यूनिट 3 (C) मानव कल्याण में सूक्ष्मजीव",
+
+        "यूनिट 4 (A) जैव प्रौद्योगिकी: सिद्धांत एवं प्रक्रियाएँ",
+        "यूनिट 4 (B) जैव प्रौद्योगिकी एवं उसके उपयोग",
+
+        "यूनिट 5 (A) पारिस्थितिकी",
+        "यूनिट 5 (B) जीव और समष्टियाँ",
+        "पारितंत्र",
+        "यूनिट 5 (C) जैव विविधता एवं संरक्षण"
+      ],
+
+      "गणित": [
+        "यूनिट 1 संबंध एवं फलन",
+        "यूनिट 2 प्रतिलोम त्रिकोणमितीय फलन",
+        "यूनिट 3 आव्यूह",
+        "यूनिट 4 सारणिक",
+        "यूनिट 5 सततता एवं अवकलनीयता",
+        "यूनिट 6 अवकलज के अनुप्रयोग",
+        "यूनिट 7 समाकलन",
+        "यूनिट 8 समाकलन के अनुप्रयोग",
+        "यूनिट 9 अवकल समीकरण",
+        "यूनिट 10 सदिश बीजगणित",
+        "यूनिट 11 त्रिविमीय ज्यामिति",
+        "यूनिट 12 रैखिक प्रोग्रामन",
+        "यूनिट 13 प्रायिकता"
+      ],
+
+      "अग्रेजी": [
+        "Flamingo Unit 1 The Last Lesson",
+        "Unit 2 Lost Spring",
+        "Unit 3 Deep Water",
+        "Unit 4 The Rattrap",
+        "Unit 5 Indigo",
+        "Unit 6 Poets and Pancakes",
+        "Unit 7 The Interview",
+        "Unit 8 Going Places",
+
+        "Vistas Unit 1 The Third Level",
+        "Unit 2 The Tiger King",
+        "Unit 3 Journey to the End of the Earth",
+        "Unit 4 The Enemy",
+        "Unit 5 Should Wizard Hit Mommy",
+        "Unit 6 On the Face of It",
+        "Unit 7 Evans Tries an O-Level",
+        "Unit 8 Memories of Childhood"
+      ],
+
+      "हिंदी": [
+        "यूनिट 1 काव्य खंड (पद्य भाग)",
+        "यूनिट 2 गद्य खंड (निबंध एवं कहानी)",
+        "यूनिट 3 अपठित गद्यांश एवं पद्यांश",
+        "यूनिट 4 व्याकरण भाग",
+        "यूनिट 5 लेखन कौशल",
+        "यूनिट 6 सृजनात्मक लेखन",
+        "यूनिट 7 पाठ्य पुस्तक अध्ययन",
+        "यूनिट 8 सप्लीमेंट्री रीडर"
+      ]
+
+    },
+
+    "Class 11": {
+      "भौतिकी": [],
+      "रासायन शास्त्र ": [],
+      "गणित": [],
+      "जीवविज्ञान": [],
+      "अग्रेजी": [],
+      "हिंदी": []
+    },
+
+    "Class 10": {
+      "विज्ञान": [],
+      "गणित": [],
+      "सामाजिक विज्ञान": [],
+      "अंग्रेजी": [],
+      "हिंदी": []
+    },
+
+    "Class 9": {
+      "विज्ञान": [],
+      "गणित": [],
+      "सामाजिक विज्ञान": [],
+      "अंग्रेजी": [],
+      "हिंदी": []
+    }
+  },
+
+  "MP Board English Medium": {
+    "Class 12": {
+      "Physics": ["Unit 1 Electrostatics"],
+      "Chemistry": [],
+      "Mathematics": [],
+      "Biology": [],
+      "English": [],
+      "Hindi": []
+    }
+  },
+
+  "CBSE": {
+    "Class 12": {
+      "Physics": [],
+      "Chemistry": [],
+      "Mathematics": [],
+      "Biology": [],
+      "English": [],
+      "Hindi": []
+    }
+  }
+};
+
+/* ================= CODE ================= */
+
+let currentBoard = "";
+let currentClass = "";
+let currentSubject = "";
+
+function initBoards(){
+  const box = document.getElementById("boardBox");
+  Object.keys(data).forEach(board=>{
+    box.appendChild(createBtn(board,"#ff512f",()=>{
+      currentBoard = board;
+      loadClasses();
+      showPage("classPage");
+    }));
+  });
+}
+
+function loadClasses(){
+  const box = document.getElementById("classBox");
+  box.innerHTML = "";
+  Object.keys(data[currentBoard]).forEach(cls=>{
+    box.appendChild(createBtn(cls,"#11998e",()=>{
+      currentClass = cls;
+      loadSubjects();
+      showPage("subjectPage");
+    }));
+  });
+}
+
+function loadSubjects(){
+  const box = document.getElementById("subjectBox");
+  box.innerHTML = "";
+  const subjects = Object.keys(data[currentBoard][currentClass]);
+  subjects.forEach(sub=>{
+    box.appendChild(createBtn(sub,"#396afc",()=>{
+      currentSubject = sub;
+      loadUnits();
+      showPage("unitPage");
+    }));
+  });
+}
+
+function loadUnits(){
+  const box = document.getElementById("unitBox");
+  box.innerHTML = "";
+
+  const units = data[currentBoard]?.[currentClass]?.[currentSubject] || [];
+
+  if(units.length === 0){
+    box.innerHTML = "<p>No Units Available</p>";
+    return;
+  }
+
+  units.forEach(u=>{
+    box.appendChild(createBtn(u,"#6a11cb",()=>{
+
+      alert("Access Restricted: यह स्टडी नोट्स केवल PAL Study Center के नामांकित विद्यार्थियों के लिए उपलब्ध हैं।");
+
+    }));
+  });
+}
+
+function createBtn(text,color,fn){
+  const b = document.createElement("button");
+  b.className = "main-btn";
+  b.innerText = text;
+  b.style.background = "linear-gradient(135deg,"+color+",#2575fc)";
+  b.onclick = fn;
+  return b;
+}
+
+function showPage(page){
+  document.querySelectorAll("#boardPage,#classPage,#subjectPage,#unitPage")
+  .forEach(p=>p.style.display="none");
+  document.getElementById(page).style.display="block";
+}
+
+function goBack(show,hide){
+  document.getElementById(hide).style.display="none";
+  document.getElementById(show).style.display="block";
+}
+
+showPage("boardPage");
+initBoards();
+
+</script>
+
+</body>
+</html>
