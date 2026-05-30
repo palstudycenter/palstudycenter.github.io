@@ -1,968 +1,1339 @@
- 
 <!DOCTYPE html>
 <html lang="hi">
 
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Pal Study Center ERP Dashboard</title>
-
-<!-- Bootstrap -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Bootstrap Icons -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-}
-
-body{
-
-font-family:'Poppins',sans-serif;
-
-background:
-linear-gradient(135deg,#eff6ff,#dbeafe,#f8fafc);
-
-overflow-x:hidden;
-
-}
-
-/* =========================
-NAVBAR
-========================= */
-
-.navbar{
-
-background:rgba(15,23,42,.70);
-
-backdrop-filter:blur(12px);
-
-padding:12px 0;
-
-box-shadow:0 4px 18px rgba(0,0,0,.15);
-
-}
-
-.navbar-brand{
-
-font-size:28px;
-
-font-weight:700;
-
-color:white !important;
-
-}
-
-.navbar-brand span{
-color:#60a5fa;
-}
-
-.navbar-toggler{
-
-background:white;
-
-border:none;
-
-}
-
-.nav-link{
-
-color:white !important;
-
-font-weight:500;
-
-margin-left:10px;
-
-padding:10px 16px !important;
-
-border-radius:12px;
-
-transition:.3s;
-
-}
-
-.nav-link:hover{
-
-background:rgba(255,255,255,.12);
-
-color:#60a5fa !important;
-
-transform:translateY(-2px);
-
-}
-
-/* =========================
-HERO
-========================= */
-
-.hero{
-
-padding:110px 20px 40px;
-
-text-align:center;
-
-}
-
-.hero h1{
-
-font-size:46px;
-
-font-weight:700;
-
-color:#0f172a;
-
-}
-
-.hero p{
-
-font-size:18px;
-
-color:#475569;
-
-margin-top:10px;
-
-}
-
-/* =========================
-MAIN
-========================= */
-
-.main{
-
-padding:20px;
-
-max-width:1200px;
-
-margin:auto;
-
-}
-
-/* =========================
-GLASS CARD
-========================= */
-
-.glass{
-
-background:rgba(255,255,255,.65);
-
-backdrop-filter:blur(12px);
-
-border-radius:28px;
-
-padding:25px;
-
-box-shadow:0 10px 30px rgba(0,0,0,.08);
-
-animation:fade .4s ease;
-
-}
-
-@keyframes fade{
-
-from{
-opacity:0;
-transform:translateY(20px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
-
-}
-
-/* =========================
-CLASS GRID
-========================= */
-
-.class-grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-
-gap:20px;
-
-margin-top:25px;
-
-}
-
-.class-btn{
-
-border:none;
-
-padding:24px;
-
-border-radius:22px;
-
-background:
-linear-gradient(135deg,#2563eb,#60a5fa);
-
-color:white;
-
-font-size:18px;
-
-font-weight:600;
-
-transition:.3s;
-
-box-shadow:0 10px 22px rgba(37,99,235,.25);
-
-}
-
-.class-btn:hover{
-
-transform:translateY(-6px) scale(1.03);
-
-}
-
-/* =========================
-SUBJECT CARD
-========================= */
-
-.subject-card{
-
-background:#f8fafc;
-
-padding:18px;
-
-border-radius:18px;
-
-margin-bottom:14px;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-transition:.3s;
-
-}
-
-.subject-card:hover{
-
-background:#eff6ff;
-
-transform:translateX(5px);
-
-}
-
-.toggle-btn{
-
-border:none;
-
-padding:10px 18px;
-
-border-radius:12px;
-
-font-weight:600;
-
-color:white;
-
-}
-
-.enable{
-background:#16a34a;
-}
-
-.disable{
-background:#dc2626;
-}
-
-/* =========================
-STUDENT LIST
-========================= */
-
-.student-card{
-
-background:#f8fafc;
-
-padding:18px;
-
-border-radius:18px;
-
-margin-bottom:12px;
-
-cursor:pointer;
-
-transition:.3s;
-
-font-weight:600;
-
-}
-
-.student-card:hover{
-
-background:#2563eb;
-
-color:white;
-
-transform:translateX(5px);
-
-}
-
-/* =========================
-PROFILE
-========================= */
-
-.profile{
-
-background:#f8fafc;
-
-padding:25px;
-
-border-radius:24px;
-
-}
-
-.month-grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
-
-gap:12px;
-
-margin-top:20px;
-
-}
-
-.month-card{
-
-background:white;
-
-padding:12px;
-
-border-radius:14px;
-
-box-shadow:0 4px 10px rgba(0,0,0,.05);
-
-}
-
-.month-card select{
-
-width:100%;
-
-padding:8px;
-
-margin-top:8px;
-
-border-radius:10px;
-
-border:1px solid #cbd5e1;
-
-}
-
-/* =========================
-ACCESS BOX
-========================= */
-
-.access{
-
-padding:16px;
-
-border-radius:16px;
-
-font-weight:600;
-
-margin:20px 0;
-
-text-align:center;
-
-}
-
-.green{
-
-background:#dcfce7;
-
-color:#166534;
-
-}
-
-.red{
-
-background:#fee2e2;
-
-color:#991b1b;
-
-}
-
-/* =========================
-BACK BTN
-========================= */
-
-.back-btn{
-
-border:none;
-
-padding:12px 22px;
-
-border-radius:14px;
-
-background:#2563eb;
-
-color:white;
-
-font-weight:600;
-
-margin-top:20px;
-
-}
-
-/* =========================
-HIDE
-========================= */
-
-.hidden{
-display:none;
-}
-
-/* =========================
-RESPONSIVE
-========================= */
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:34px;
-}
-
-.hero p{
-font-size:15px;
-}
-
-.class-btn{
-font-size:16px;
-padding:18px;
-}
-
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pal Study Center - Professional ERP Dashboard</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #4f46e5;       /* Modern Indigo */
+            --primary-hover: #4338ca;
+            --primary-light: #eeebff;
+            --secondary-color: #0ea5e9;     /* Sky */
+            --success-color: #10b981;       /* Emerald */
+            --success-light: #ecfdf5;
+            --danger-color: #f43f5e;        /* Rose */
+            --danger-light: #fff1f2;
+            --warning-color: #f59e0b;       /* Amber */
+            --warning-light: #fef3c7;
+            --dark-sidebar: #0f172a;        /* Slate 900 */
+            --dark-sidebar-hover: #1e293b;  /* Slate 800 */
+            --bg-light: #f8fafc;            /* Slate 50 */
+            --card-border: rgba(226, 232, 240, 0.8);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-family: 'Plus Jakarta Sans', 'Poppins', sans-serif;
+            --sidebar-width: 280px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: var(--font-family);
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: #1e293b;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* =========================
+           SIDEBAR STYLE (DESKTOP)
+           ========================= */
+        .sidebar {
+            width: var(--sidebar-width);
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: var(--dark-sidebar);
+            color: #94a3b8;
+            z-index: 1040;
+            padding: 24px 16px;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+            border-right: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .sidebar-brand {
+            font-size: 24px;
+            font-weight: 800;
+            color: #ffffff !important;
+            padding: 0 12px 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .sidebar-brand span {
+            color: #38bdf8;
+            font-size: 14px;
+            background: rgba(56, 189, 248, 0.15);
+            padding: 3px 10px;
+            border-radius: 50px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .sidebar .nav-link {
+            color: #94a3b8 !important;
+            font-weight: 600;
+            font-size: 15px;
+            padding: 12px 16px !important;
+            border-radius: 12px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: var(--transition);
+        }
+
+        .sidebar .nav-link i {
+            font-size: 18px;
+            transition: var(--transition);
+        }
+
+        .sidebar .nav-link:hover {
+            color: #ffffff !important;
+            background: var(--dark-sidebar-hover);
+            transform: translateX(4px);
+        }
+
+        .sidebar .nav-link.active {
+            color: #ffffff !important;
+            background: var(--primary-color);
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+        }
+
+        .sidebar .nav-link.active i {
+            color: #ffffff;
+        }
+
+        .sidebar-footer {
+            margin-top: auto;
+            padding: 16px 12px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 13px;
+        }
+
+        /* =========================
+           TOP NAV & MOBILE HEADER
+           ========================= */
+        .mobile-header {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 70px;
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            z-index: 1030;
+            padding: 0 20px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .mobile-toggle-btn {
+            background: none;
+            border: none;
+            font-size: 26px;
+            color: #0f172a;
+            cursor: pointer;
+        }
+
+        .mobile-brand {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--dark-sidebar);
+            text-decoration: none;
+        }
+
+        .mobile-brand span {
+            color: var(--primary-color);
+        }
+
+        /* =========================
+           MAIN CONTENT CONTAINER
+           ========================= */
+        .main-content {
+            margin-left: var(--sidebar-width);
+            min-height: 100vh;
+            padding: 40px;
+            transition: var(--transition);
+        }
+
+        /* =========================
+           GLASS CARD & PREMIUM WIDGETS
+           ========================= */
+        .glass-card {
+            background: #ffffff;
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.03);
+            margin-bottom: 30px;
+            transition: var(--transition);
+        }
+
+        .glass-card:hover {
+            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.05);
+        }
+
+        .glass-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* =========================
+           DASHBOARD STATS
+           ========================= */
+        .stat-card {
+            background: #ffffff;
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 24px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            height: 100%;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(79, 70, 229, 0.08);
+            border-color: rgba(79, 70, 229, 0.2);
+        }
+
+        .stat-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .stat-icon.students {
+            background-color: #e0e7ff;
+            color: var(--primary-color);
+        }
+
+        .stat-icon.active-notes {
+            background-color: var(--success-light);
+            color: var(--success-color);
+        }
+
+        .stat-icon.unpaid-fees {
+            background-color: var(--danger-light);
+            color: var(--danger-color);
+        }
+
+        .stat-info .stat-value {
+            font-size: 26px;
+            font-weight: 800;
+            color: #0f172a;
+            line-height: 1.2;
+        }
+
+        .stat-info .stat-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        /* =========================
+           CLASS CARD & BUTTON GRID
+           ========================= */
+        .class-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .class-btn {
+            border: 1px solid var(--card-border);
+            padding: 24px 20px;
+            border-radius: 18px;
+            background: #ffffff;
+            color: #1e293b;
+            font-size: 16px;
+            font-weight: 700;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: var(--transition);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+            cursor: pointer;
+        }
+
+        .class-btn i {
+            font-size: 20px;
+            color: var(--primary-color);
+            background: var(--primary-light);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .class-btn:hover {
+            border-color: var(--primary-color);
+            background: var(--primary-light);
+            color: var(--primary-color);
+            transform: translateY(-4px);
+        }
+
+        .class-btn:hover i {
+            background: var(--primary-color);
+            color: #ffffff;
+        }
+
+        /* =========================
+           SUBJECT CARDS & ON/OFF TOGGLE
+           ========================= */
+        .subject-card {
+            background: #f8fafc;
+            border: 1px solid #f1f5f9;
+            padding: 20px;
+            border-radius: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .subject-card:hover {
+            background: #ffffff;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+            border-color: #e2e8f0;
+        }
+
+        .subject-title {
+            font-weight: 700;
+            font-size: 16px;
+            color: #1e293b;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* =========================
+           ON & OFF TOGGLES (MODERN PILLS)
+           ========================= */
+        .btn-toggle-switch {
+            border: none;
+            padding: 8px 24px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .btn-toggle-switch.on {
+            background-color: var(--success-color);
+            color: white;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+        }
+
+        .btn-toggle-switch.on:hover {
+            background-color: #059669;
+            transform: scale(1.04);
+        }
+
+        .btn-toggle-switch.off {
+            background-color: #64748b;
+            color: white;
+            box-shadow: 0 4px 12px rgba(100, 116, 139, 0.25);
+        }
+
+        .btn-toggle-switch.off:hover {
+            background-color: #475569;
+            transform: scale(1.04);
+        }
+
+        /* =========================
+           STUDENT LIST STYLING
+           ========================= */
+        .student-list-container {
+            margin-top: 15px;
+        }
+
+        .search-container {
+            margin-bottom: 25px;
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #94a3b8;
+            font-size: 18px;
+        }
+
+        .search-box input {
+            padding-left: 52px;
+            height: 54px;
+            border-radius: 16px;
+            border: 1px solid var(--card-border);
+            font-size: 15px;
+            font-weight: 500;
+            transition: var(--transition);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.01);
+        }
+
+        .search-box input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+        }
+
+        .student-row-card {
+            background: #ffffff;
+            border: 1px solid var(--card-border);
+            padding: 18px 24px;
+            border-radius: 16px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .student-row-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--primary-color);
+            box-shadow: 0 8px 22px rgba(79, 70, 229, 0.05);
+        }
+
+        .student-row-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .student-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--primary-light);
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .student-details h5 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .student-details p {
+            margin: 2px 0 0;
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        .badge-class {
+            background: #f1f5f9;
+            color: #334155;
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        /* =========================
+           STUDENT PROFILE (ERP MODE)
+           ========================= */
+        .profile-header-card {
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            border-radius: 24px;
+            padding: 35px;
+            color: #ffffff;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-header-card::after {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: rgba(79, 70, 229, 0.15);
+            border-radius: 50%;
+            filter: blur(40px);
+        }
+
+        .profile-header-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .profile-info-block {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .profile-big-avatar {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #38bdf8;
+            font-size: 32px;
+            font-weight: 700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .profile-text-details h2 {
+            margin: 0;
+            font-weight: 800;
+            font-size: 26px;
+        }
+
+        .profile-text-details p {
+            margin: 6px 0 0;
+            color: #94a3b8;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Fee Months Grid */
+        .month-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .month-card {
+            background: #ffffff;
+            border: 1px solid var(--card-border);
+            padding: 16px;
+            border-radius: 16px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .month-card:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.02);
+        }
+
+        .month-card b {
+            display: block;
+            font-size: 14px;
+            color: #64748b;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .month-card select {
+            width: 100%;
+            padding: 10px;
+            font-size: 13px;
+            font-weight: 700;
+            border-radius: 10px;
+            border: 1px solid #cbd5e1;
+            background-color: #f8fafc;
+            outline: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        /* Fee Colors Custom Badges */
+        .fee-Paid {
+            border-color: #86efac !important;
+            background-color: #f0fdf4 !important;
+            color: #166534 !important;
+        }
+
+        .fee-Unpaid {
+            border-color: #fca5a5 !important;
+            background-color: #fef2f2 !important;
+            color: #991b1b !important;
+        }
+
+        .fee-Leave {
+            border-color: #fde047 !important;
+            background-color: #fefce8 !important;
+            color: #854d0e !important;
+        }
+
+        /* Access Banners */
+        .access-banner {
+            padding: 16px 24px;
+            border-radius: 14px;
+            font-weight: 700;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .access-banner.enabled {
+            background: var(--success-light);
+            color: var(--success-color);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .access-banner.disabled {
+            background: var(--danger-light);
+            color: var(--danger-color);
+            border: 1px solid rgba(244, 63, 94, 0.2);
+        }
+
+        /* Buttons & Back */
+        .back-btn {
+            border: none;
+            padding: 12px 24px;
+            border-radius: 12px;
+            background: #f1f5f9;
+            color: #334155;
+            font-weight: 700;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+            margin-top: 10px;
+        }
+
+        .back-btn:hover {
+            background: #e2e8f0;
+            color: #0f172a;
+            transform: translateX(-4px);
+        }
+
+        /* Quick shortcuts */
+        .shortcut-card {
+            background: #ffffff;
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .shortcut-card:hover {
+            border-color: var(--primary-color);
+            background-color: var(--primary-light);
+        }
+
+        .shortcut-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f1f5f9;
+            font-size: 18px;
+            color: #475569;
+        }
+
+        .shortcut-card:hover .shortcut-icon {
+            background: var(--primary-color);
+            color: #ffffff;
+        }
+
+        .shortcut-text {
+            font-weight: 700;
+            font-size: 15px;
+            color: #1e293b;
+        }
+
+        /* Hidden Class Utility */
+        .hidden {
+            display: none !important;
+        }
+
+        /* Mobile Sidebar Drawer Overlay */
+        .sidebar-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(15, 23, 42, 0.4);
+            backdrop-filter: blur(4px);
+            z-index: 1035;
+        }
+
+        /* =========================
+           RESPONSIVE MEDIA QUERIES
+           ========================= */
+        @media(max-width: 991.98px) {
+            .sidebar {
+                transform: translateX(-100%);
+            }
+
+            .sidebar.show {
+                transform: translateX(0);
+            }
+
+            .sidebar-overlay.show {
+                display: block;
+            }
+
+            .main-content {
+                margin-left: 0;
+                padding: 24px 16px;
+                padding-top: 94px;
+            }
+
+            .mobile-header {
+                display: flex;
+            }
+
+            .glass-card {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- =========================
-NAVBAR
-========================= -->
-
-<nav class="navbar navbar-expand-lg fixed-top">
-
-<div class="container">
-
-<a class="navbar-brand" href="#">
-पाल <span>ERP</span>
-</a>
-
-<button class="navbar-toggler"
-type="button"
-data-bs-toggle="collapse"
-data-bs-target="#navMenu">
-
-<span class="navbar-toggler-icon"></span>
-
-</button>
-
-<div class="collapse navbar-collapse" id="navMenu">
-
-<ul class="navbar-nav ms-auto">
-
-<li class="nav-item">
-<a class="nav-link"
-href="#"
-onclick="showDashboard()">
-
-<i class="bi bi-grid-fill"></i>
-Dashboard
-
-</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link"
-href="#"
-onclick="showClasses()">
-
-<i class="bi bi-book-fill"></i>
-Classes
-
-</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link"
-href="#"
-onclick="showStudentsSection()">
-
-<i class="bi bi-people-fill"></i>
-Students
-
-</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link"
-href="#">
-
-<i class="bi bi-box-arrow-right"></i>
-Logout
-
-</a>
-</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</nav>
-
-<!-- =========================
-HERO
-========================= -->
-
-<section class="hero">
-
-<h1>
-📚 Pal Study Center ERP
-</h1>
-
-<p>
-Professional Coaching Management Dashboard
-</p>
-
-</section>
-
-<!-- =========================
-MAIN
-========================= -->
-
-<div class="main">
-
-<!-- =========================
-DASHBOARD
-========================= -->
-
-<div id="dashboardSection" class="glass">
-
-<h2>
-Welcome Admin 👨‍🏫
-</h2>
-
-<br>
-
-<p>
-यहाँ से आप Classes, Students, Notes Access और Fees System manage कर सकते हैं।
-</p>
-
-</div>
-
-<!-- =========================
-CLASSES
-========================= -->
-
-<div id="classesSection" class="glass hidden">
-
-<h2>
-📘 Class Control
-</h2>
-
-<div class="class-grid" id="classGrid">
-
-<button class="class-btn"
-onclick="openClass('Class 12th')">
-
-Class 12th
-
-</button>
-
-<button class="class-btn"
-onclick="openClass('Class 11th')">
-
-Class 11th
-
-</button>
-
-<button class="class-btn"
-onclick="openClass('Class 10th')">
-
-Class 10th
-
-</button>
-
-<button class="class-btn"
-onclick="openClass('Class 9th')">
-
-Class 9th
-
-</button>
-
-</div>
-
-<br>
-
-<div id="subjectsArea"></div>
-
-</div>
-
-<!-- =========================
-STUDENTS
-========================= -->
-
-<div id="studentsSection" class="glass hidden">
-
-<h2>
-👨‍🎓 Students List
-</h2>
-
-<br>
-
-<div id="studentList"></div>
-
-</div>
-
-<!-- =========================
-PROFILE
-========================= -->
-
-<div id="profileSection"
-class="glass hidden">
-
-<div id="profileContent"></div>
-
-</div>
-
-</div>
-
-<script>
-
-/* =========================
-SUBJECTS
-========================= */
-
-let subjects = {
-"Class 12th":["Physics","Chemistry","Mathematics","Biology","English","Hindi"],
-"Class 11th":["Physics","Chemistry","Mathematics","Biology","English","Hindi"],
-"Class 10th":["Science","Social Science","Mathematics","English","Hindi"],
-"Class 9th":["Science","Social Science","Mathematics","English","Hindi"]
-};
-
-/* =========================
-SUBJECT CONTROL
-========================= */
-
-let enabled = JSON.parse(localStorage.getItem("enabled")) || {};
-
-/* =========================
-STUDENTS
-========================= */
-
-let students = JSON.parse(localStorage.getItem("users")) || [];
-students.forEach(s=>{
-
-if(s.studentAccess === undefined){
-s.studentAccess = true;
-}
-
-});
-/* =========================
-UTIL: CHECK ACCESS
-========================= */
-
-function hasAccess(student){
-
-return student.access !== false;
-
-}
-/* =========================
-UI CONTROL
-========================= */
-
-function hideAll(){
-dashboardSection.classList.add("hidden");
-classesSection.classList.add("hidden");
-studentsSection.classList.add("hidden");
-profileSection.classList.add("hidden");
-}
-
-function showDashboard(){
-hideAll();
-dashboardSection.classList.remove("hidden");
-}
-
-function showClasses(){
-hideAll();
-classesSection.classList.remove("hidden");
-}
-
-function showStudentsSection(){
-hideAll();
-studentsSection.classList.remove("hidden");
-loadStudents();
-}
-
-/* =========================
-CLASS CONTROL
-========================= */
-
-function openClass(cls){subjectsArea.innerHTML = "";
-  document.getElementById("classGrid").style.display="none";
-
-let html = `<h3>${cls}</h3><br>`;
-
-subjects[cls].forEach(sub=>{
-
-let key = cls + "_" + sub;
-
-if(enabled[key] === undefined){
-enabled[key] = true;
-}
-
-html += `
-<div class="subject-card">
-<div>${sub}</div>
-
-<button class="toggle-btn ${enabled[key] ? 'enable':'disable'}"
-onclick="toggleSubject('${cls}','${sub}')">
-
-${enabled[key] ? 'Enabled' : 'Disabled'}
-
-</button>
-</div>
-`;
-});
-
-html += `<button class="back-btn" onclick="backClasses()">⬅ Back</button>`;
-
-subjectsArea.innerHTML = html;
-localStorage.setItem("enabled", JSON.stringify(enabled));
-}
-
-function toggleSubject(cls,sub){
-
-let key = cls + "_" + sub;
-enabled[key] = !enabled[key];
-
-localStorage.setItem("enabled", JSON.stringify(enabled));
-openClass(cls);
-}
-function backClasses(){
-document.getElementById("classGrid").style.display="grid";
-subjectsArea.innerHTML = "";
-}
-
-/* =========================
-STUDENTS LIST
-========================= */
-
-function loadStudents(){
-
-let html = "";
-
-// सिर्फ class buttons (Class Control जैसा)
-for(let cls in subjects){
-
-html += `
-<div class="class-grid" style="margin-bottom:10px;">
-<button class="class-btn" onclick="openStudentClass('${cls}')">
-📘 ${cls}
-</button>
-</div>
-`;
-
-}
-
-studentList.innerHTML = html;
-}
-function openStudentClass(cls){
-
-let html = `<h3>📘 ${cls}</h3><br>`;
-
-// original students filter (NO CHANGE IN DATA)
-students.forEach((s,index)=>{
-
-if(s.class.toLowerCase() === cls.toLowerCase()){
-
-html += `
-<div class="student-card" onclick="openProfile(${index})">
-👨‍🎓 ${s.name}<br>
-<small>${s.phone}</small>
-</div>
-`;
-
-}
-
-});
-
-html += `<br><button class="back-btn" onclick="loadStudents()">⬅ Back</button>`;
-
-studentList.innerHTML = html;
-}
-
-/* =========================
-PROFILE (MAIN LOGIC FIX)
-========================= */
-
-function openProfile(index){
-
-hideAll();
-profileSection.classList.remove("hidden");
-
-let s = students[index];
-
-if(!s.fees){
-s.fees = {
-April:"Paid",
-May:"Paid",
-June:"Paid",
-July:"Paid"
-};
-}
-
-let access = hasAccess(s);
-
-// Fee UI
-let feeHTML = "";
-
-for(let m in s.fees){
-
-feeHTML += `
-<div class="month-card">
-<b>${m}</b>
-
-<select onchange="changeFee(${index},'${m}',this.value)">
-<option ${s.fees[m]=='Paid'?'selected':''}>Paid</option>
-<option ${s.fees[m]=='Unpaid'?'selected':''}>Unpaid</option>
-<option ${s.fees[m]=='Leave'?'selected':''}>Leave</option>
-</select>
-</div>
-`;
-}
-
-// SUBJECTS
-let subjectHTML = "";
-
-if(access){
-
-let cls = s.class.toLowerCase();
-
-for(let key in subjects){
-
-if(key.toLowerCase() === cls){
-
-subjects[key].forEach(sub=>{
-
-let k = key + "_" + sub;
-
-if(enabled[k] !== false){
-
-subjectHTML += `
-<div class="subject-card">
-<div>📘 ${sub}</div>
-</div>
-`;
-
-}
-
-});
-
-}
-
-}
-
-}
-
-profileContent.innerHTML = `
-<div class="profile">
-
-<h2>${s.name}</h2>
-
-<p>📚 ${s.class}</p>
-
-<p>📞 ${s.phone}</p>
-<div style="margin-top:15px;">
-
-<button class="toggle-btn ${s.access !== false ? 'enable':'disable'}"
-onclick="toggleStudentAccess(${index})">
-
-${s.access !== false ? 'Access Enabled' : 'Access Disabled'}
-
-</button>
-
-</div>
-
-<div class="access ${access ? 'green':'red'}">
-${access ? '✅ Notes Access Enabled' : '❌ Study Material Access Disabled'}
-</div>
-
-<h4 style="margin-top:20px;">💰 Monthly Fee Record</h4>
-
-<div class="month-grid">${feeHTML}</div>
-
-<h4 style="margin-top:20px;">📘 Subjects</h4>
-
-${access ? subjectHTML : '<div class="access red">Subjects Disabled</div>'}
-
-<button class="back-btn" onclick="showStudentsSection()">
-⬅ Back
-</button>
-
-</div>
-`;
-}
-
-function toggleStudentAccess(index){
-
-if(students[index].access === undefined){
-students[index].access = true;
-}
-
-students[index].access = !students[index].access;
-
-localStorage.setItem("users", JSON.stringify(students));
-
-openProfile(index);
-}
-/* =========================
-CHANGE FEE
-========================= */
-
-function changeFee(index,month,value){
-students[index].fees[month] = value;
-openProfile(index);
-}
-
-function toggleStudentAccess(index){
-
-students[index].access = !students[index].access;
-
-localStorage.setItem("users", JSON.stringify(students));
-
-openProfile(index);
-}
-
-/* init */
-showDashboard();
-/* init */
-showDashboard();
-
-</script>
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Sidebar Overlay for mobile -->
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleMobileSidebar()"></div>
+
+    <!-- =========================
+       MOBILE TOP HEADER
+       ========================= -->
+    <header class="mobile-header">
+        <button class="mobile-toggle-btn" onclick="toggleMobileSidebar()">
+            <i class="bi bi-list"></i>
+        </button>
+        <a class="mobile-brand" href="#">
+            पाल <span>ERP</span>
+        </a>
+        <div style="width: 26px;"></div> <!-- Spacer -->
+    </header>
+
+    <!-- =========================
+       SIDEBAR NAVIGATION
+       ========================= -->
+    <aside class="sidebar" id="sidebar">
+        <a class="sidebar-brand" href="#">
+            <i class="bi bi-award-fill" style="color: #6366f1;"></i> पाल <span>ERP</span>
+        </a>
+
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link active" id="navDashboard" href="#" onclick="showDashboard()">
+                    <i class="bi bi-grid-1x2-fill"></i> Dashboard
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="navClasses" href="#" onclick="showClasses()">
+                    <i class="bi bi-journal-bookmark-fill"></i> Classes Control
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="navStudents" href="#" onclick="showStudentsSection()">
+                    <i class="bi bi-people-fill"></i> Student Database
+                </a>
+            </li>
+            <li class="nav-item mt-3">
+                <a class="nav-link text-danger" href="../student.html">
+                    <i class="bi bi-box-arrow-right"></i> Exit ERP
+                </a>
+            </li>
+        </ul>
+
+        <div class="sidebar-footer">
+            <p class="m-0 text-muted" style="font-size: 11px;">Powered by</p>
+            <p class="m-0 font-weight-bold" style="color: #e2e8f0; font-size: 13px;">Pal Study Center</p>
+        </div>
+    </aside>
+
+    <!-- =========================
+       MAIN CONTENT CONTAINER
+       ========================= */ -->
+    <main class="main-content">
+
+        <!-- =========================
+           DASHBOARD OVERVIEW SECTION
+           ========================= -->
+        <section id="dashboardSection">
+            <div class="glass-card">
+                <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-2">
+                    <div>
+                        <h2 class="m-0 fw-extrabold" style="color:#0f172a; font-weight:800;">👨‍🏫 Welcome, Admin Console!</h2>
+                        <p class="text-muted m-0 mt-1">यहाँ से आप Classes, Students Access, Notes और Monthly Fees को आसानी से कण्ट्रोल कर सकते हैं।</p>
+                    </div>
+                    <span class="badge bg-primary-light text-primary fw-bold px-3 py-2 rounded-pill" style="font-size:13px;">
+                        <i class="bi bi-shield-check"></i> System Secure
+                    </span>
+                </div>
+            </div>
+
+            <!-- ERP Stats Counter Grid -->
+            <div class="row g-4 mb-4">
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="stat-card">
+                        <div class="stat-icon students">
+                            <i class="bi bi-people-fill"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-value" id="statTotalStudents">0</div>
+                            <div class="stat-label">Total Students</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="stat-card">
+                        <div class="stat-icon active-notes">
+                            <i class="bi bi-shield-lock-fill"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-value" id="statActiveAccess">0</div>
+                            <div class="stat-label">Notes Access ON</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="stat-card">
+                        <div class="stat-icon unpaid-fees">
+                            <i class="bi bi-wallet2"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-value" id="statUnpaidFees">0</div>
+                            <div class="stat-label">Unpaid Fee Profiles</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Shortcuts Area -->
+            <div class="glass-card">
+                <h4 class="mb-3 fw-bold" style="font-size: 16px; color: #475569;">🚀 Quick Operations</h4>
+                <div class="row g-3">
+                    <div class="col-12 col-md-4">
+                        <div class="shortcut-card" onclick="showClasses()">
+                            <div class="shortcut-icon"><i class="bi bi-book"></i></div>
+                            <div class="shortcut-text">Manage Class Feeds</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="shortcut-card" onclick="showStudentsSection()">
+                            <div class="shortcut-icon"><i class="bi bi-person-badge"></i></div>
+                            <div class="shortcut-text">Students Status & Profile</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="shortcut-card" onclick="openClass('Class 12th')">
+                            <div class="shortcut-icon"><i class="bi bi-sliders"></i></div>
+                            <div class="shortcut-text">Class 12th Controls</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+           CLASSES MANAGEMENT SECTION
+           ========================= -->
+        <section id="classesSection" class="hidden">
+            <div class="glass-card">
+                <div class="glass-title">
+                    <i class="bi bi-journal-bookmark-fill text-primary"></i> 📘 Class Access Control
+                </div>
+                <p class="text-muted">किसी भी कक्षा के विषयों के Access को ऑन (ON) या ऑफ़ (OFF) करने के लिए क्लास चुनें:</p>
+
+                <!-- Class Selection Cards Grid -->
+                <div class="class-grid" id="classGrid">
+                    <button class="class-btn" onclick="openClass('Class 12th')">
+                        Class 12th <span><i class="bi bi-arrow-right-short"></i></span>
+                    </button>
+                    <button class="class-btn" onclick="openClass('Class 11th')">
+                        Class 11th <span><i class="bi bi-arrow-right-short"></i></span>
+                    </button>
+                    <button class="class-btn" onclick="openClass('Class 10th')">
+                        Class 10th <span><i class="bi bi-arrow-right-short"></i></span>
+                    </button>
+                    <button class="class-btn" onclick="openClass('Class 9th')">
+                        Class 9th <span><i class="bi bi-arrow-right-short"></i></span>
+                    </button>
+                </div>
+
+                <!-- Subjects Display area after Class is chosen -->
+                <div id="subjectsArea" class="mt-4"></div>
+            </div>
+        </section>
+
+        <!-- =========================
+           STUDENT DATABASE SECTION
+           ========================= -->
+        <section id="studentsSection" class="hidden">
+            <div class="glass-card">
+                <div class="glass-title">
+                    <i class="bi bi-people text-primary"></i> Student Database Directory
+                </div>
+                
+                <p class="text-muted">कक्षा अनुसार छात्रों की सूची देखने तथा उनकी फीस स्टेटस अपडेट करने के लिए क्लास का चयन करें:</p>
+
+                <!-- Selection List -->
+                <div id="studentList"></div>
+            </div>
+        </section>
+
+        <!-- =========================
+           STUDENT INDIVIDUAL PROFILE SECTION
+           ========================= -->
+        <section id="profileSection" class="hidden">
+            <!-- Dynamically Loaded via JavaScript -->
+            <div id="profileContent"></div>
+        </section>
+
+    </main>
+
+    <!-- =========================
+       ERP FUNCTIONAL SCRIPTS
+       ========================= -->
+    <script>
+        /* Database Config */
+        let subjects = {
+            "Class 12th": ["Physics", "Chemistry", "Mathematics", "Biology", "English", "Hindi"],
+            "Class 11th": ["Physics", "Chemistry", "Mathematics", "Biology", "English", "Hindi"],
+            "Class 10th": ["Science", "Social Science", "Mathematics", "English", "Hindi"],
+            "Class 9th": ["Science", "Social Science", "Mathematics", "English", "Hindi"]
+        };
+
+        let enabled = JSON.parse(localStorage.getItem("enabled")) || {};
+        let students = JSON.parse(localStorage.getItem("users")) || [];
+
+        // Correct student default settings
+        students.forEach(s => {
+            if (s.studentAccess === undefined) {
+                s.studentAccess = true;
+            }
+            if (s.access === undefined) {
+                s.access = true;
+            }
+        });
+
+        /* Calculate Dashboard Stats on Fly */
+        function computeERPStats() {
+            let total = students.length;
+            let activeNotes = students.filter(s => s.access !== false).length;
+            
+            // Check if student has unpaid months
+            let unpaidCount = 0;
+            students.forEach(s => {
+                if (s.fees) {
+                    let values = Object.values(s.fees);
+                    if (values.includes("Unpaid")) {
+                        unpaidCount++;
+                    }
+                }
+            });
+
+            document.getElementById("statTotalStudents").innerText = total;
+            document.getElementById("statActiveAccess").innerText = activeNotes;
+            document.getElementById("statUnpaidFees").innerText = unpaidCount;
+        }
+
+        /* Access Validation Check */
+        function hasAccess(student) {
+            return student.access !== false;
+        }
+
+        /* Toggle Sidebar on Mobile */
+        function toggleMobileSidebar() {
+            const side = document.getElementById("sidebar");
+            const over = document.getElementById("sidebarOverlay");
+            side.classList.toggle("show");
+            over.classList.toggle("show");
+        }
+
+        /* Page Switching & Navigation Highlight */
+        function selectNav(activeId) {
+            document.querySelectorAll(".sidebar .nav-link").forEach(el => {
+                el.classList.remove("active");
+            });
+            document.getElementById(activeId).classList.add("active");
+            
+            // Auto close mobile drawer if open
+            document.getElementById("sidebar").classList.remove("show");
+            document.getElementById("sidebarOverlay").classList.remove("show");
+        }
+
+        function hideAllSections() {
+            document.getElementById("dashboardSection").classList.add("hidden");
+            document.getElementById("classesSection").classList.add("hidden");
+            document.getElementById("studentsSection").classList.add("hidden");
+            document.getElementById("profileSection").classList.add("hidden");
+        }
+
+        function showDashboard() {
+            hideAllSections();
+            selectNav("navDashboard");
+            document.getElementById("dashboardSection").classList.remove("hidden");
+            computeERPStats();
+        }
+
+        function showClasses() {
+            hideAllSections();
+            selectNav("navClasses");
+            document.getElementById("classesSection").classList.remove("hidden");
+            document.getElementById("classGrid").style.display = "grid";
+            document.getElementById("subjectsArea").innerHTML = "";
+        }
+
+        function showStudentsSection() {
+            hideAllSections();
+            selectNav("navStudents");
+            document.getElementById("studentsSection").classList.remove("hidden");
+            loadStudentsClasses();
+        }
+
+        /* Class Controls (Subjects ON / OFF) */
+        function openClass(cls) {
+            document.getElementById("classGrid").style.display = "none";
+
+            let html = `
+                <div class="d-flex align-items-center justify-content-between mb-4">
+                    <h3 class="fw-extrabold m-0" style="font-weight: 800; color: #0f172a;">📚 ${cls} Submissions</h3>
+                    <button class="back-btn m-0" onclick="backClasses()">
+                        <i class="bi bi-arrow-left"></i> All Classes
+                    </button>
+                </div>
+                <div class="row">
+            `;
+
+            subjects[cls].forEach(sub => {
+                let key = cls + "_" + sub;
+                if (enabled[key] === undefined) {
+                    enabled[key] = true;
+                }
+
+                html += `
+                    <div class="col-12 col-md-6">
+                        <div class="subject-card">
+                            <div class="subject-title">
+                                <i class="bi bi-book-half text-primary"></i> ${sub}
+                            </div>
+                            <button class="btn-toggle-switch ${enabled[key] ? 'on' : 'off'}"
+                                onclick="toggleSubject('${cls}','${sub}')">
+                                ${enabled[key] ? '<i class="bi bi-check-circle-fill"></i> ON' : '<i class="bi bi-dash-circle-fill"></i> OFF'}
+                            </button>
+                        </div>
+                    </div>
+                `;
+            });
+
+            html += `</div>`;
+            document.getElementById("subjectsArea").innerHTML = html;
+            localStorage.setItem("enabled", JSON.stringify(enabled));
+        }
+
+        function toggleSubject(cls, sub) {
+            let key = cls + "_" + sub;
+            enabled[key] = !enabled[key];
+            localStorage.setItem("enabled", JSON.stringify(enabled));
+            openClass(cls);
+        }
+
+        function backClasses() {
+            document.getElementById("classGrid").style.display = "grid";
+            document.getElementById("subjectsArea").innerHTML = "";
+        }
+
+        /* Students Selector Layout */
+        function loadStudentsClasses() {
+            let html = `<div class="class-grid">`;
+            for (let cls in subjects) {
+                html += `
+                    <button class="class-btn" onclick="openStudentClass('${cls}')">
+                        <span>📘 ${cls} Database</span> <i class="bi bi-chevron-right"></i>
+                    </button>
+                `;
+            }
+            html += `</div>`;
+            document.getElementById("studentList").innerHTML = html;
+        }
+
+        function openStudentClass(cls) {
+            let matchedStudents = students.filter(s => s.class.toLowerCase() === cls.toLowerCase());
+            
+            let html = `
+                <div class="d-flex align-items-center justify-content-between mb-4">
+                    <h3 class="fw-bold m-0 text-dark">👨‍🎓 ${cls} Students</h3>
+                    <button class="back-btn m-0" onclick="loadStudentsClasses()">
+                        <i class="bi bi-arrow-left"></i> Classes List
+                    </button>
+                </div>
+
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="bi bi-search"></i>
+                        <input type="text" id="studentSearchInput" class="form-control" 
+                               placeholder="Search student by name, mobile number..." 
+                               onkeyup="filterStudentsInClass('${cls}')">
+                    </div>
+                </div>
+
+                <div class="student-list-container" id="studentCardsContainer">
+            `;
+
+            if (matchedStudents.length === 0) {
+                html += `
+                    <div class="text-center py-5">
+                        <i class="bi bi-people text-muted" style="font-size: 48px;"></i>
+                        <p class="text-muted mt-3">इस क्लास में कोई छात्र पंजीकृत नहीं है।</p>
+                    </div>
+                `;
+            } else {
+                matchedStudents.forEach((s) => {
+                    let originalIndex = students.indexOf(s);
+                    html += generateStudentRowHTML(s, originalIndex);
+                });
+            }
+
+            html += `</div>`;
+            document.getElementById("studentList").innerHTML = html;
+        }
+
+        function generateStudentRowHTML(s, index) {
+            let firstLetter = s.name ? s.name.charAt(0).toUpperCase() : 'S';
+            let isAccessOn = s.access !== false;
+            return `
+                <div class="student-row-card" onclick="openProfile(${index})">
+                    <div class="student-row-left">
+                        <div class="student-avatar">${firstLetter}</div>
+                        <div class="student-details">
+                            <h5>${s.name}</h5>
+                            <p><i class="bi bi-telephone-fill" style="font-size:11px;"></i> ${s.phone}</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                        <span class="badge-class">${s.class}</span>
+                        <span class="badge ${isAccessOn ? 'bg-success' : 'bg-secondary'} rounded-pill" style="font-size: 11px; padding: 6px 12px;">
+                            Notes: ${isAccessOn ? 'ON' : 'OFF'}
+                        </span>
+                    </div>
+                </div>
+            `;
+        }
+
+        function filterStudentsInClass(cls) {
+            let q = document.getElementById("studentSearchInput").value.toLowerCase();
+            let container = document.getElementById("studentCardsContainer");
+            container.innerHTML = "";
+
+            let matchedStudents = students.filter(s => 
+                s.class.toLowerCase() === cls.toLowerCase() && 
+                (s.name.toLowerCase().includes(q) || s.phone.includes(q))
+            );
+
+            if (matchedStudents.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-5">
+                        <p class="text-muted">कोई मेल खाता छात्र नहीं मिला।</p>
+                    </div>
+                `;
+            } else {
+                matchedStudents.forEach(s => {
+                    let idx = students.indexOf(s);
+                    container.innerHTML += generateStudentRowHTML(s, idx);
+                });
+            }
+        }
+
+        /* Open & Manage Student Profile (ERP Fee System + Notes switch) */
+        function openProfile(index) {
+            hideAllSections();
+            document.getElementById("profileSection").classList.remove("hidden");
+
+            let s = students[index];
+
+            // If fee structure isn't initialized, setup default
+            if (!s.fees) {
+                s.fees = {
+                    April: "Paid",
+                    May: "Paid",
+                    June: "Paid",
+                    July: "Paid"
+                };
+            }
+
+            let access = hasAccess(s);
+            let firstLetter = s.name ? s.name.charAt(0).toUpperCase() : 'S';
+
+            // Months Fee Record Builder
+            let feeHTML = "";
+            for (let m in s.fees) {
+                let status = s.fees[m] || "Unpaid";
+                feeHTML += `
+                    <div class="month-card fee-${status}">
+                        <b>${m}</b>
+                        <select class="form-select text-center" onchange="changeFee(${index},'${m}',this.value)">
+                            <option value="Paid" ${status === 'Paid' ? 'selected' : ''}>Paid</option>
+                            <option value="Unpaid" ${status === 'Unpaid' ? 'selected' : ''}>Unpaid</option>
+                            <option value="Leave" ${status === 'Leave' ? 'selected' : ''}>Leave</option>
+                        </select>
+                    </div>
+                `;
+            }
+
+            // Subject Access Feeds Builder
+            let subjectHTML = "";
+            if (access) {
+                let clsKey = Object.keys(subjects).find(k => k.toLowerCase() === s.class.toLowerCase());
+                if (clsKey) {
+                    subjects[clsKey].forEach(sub => {
+                        let k = clsKey + "_" + sub;
+                        // Display subject if class subject is globally enabled
+                        if (enabled[k] !== false) {
+                            subjectHTML += `
+                                <div class="col-6 col-md-4">
+                                    <div class="bg-light border rounded-3 p-3 text-center mb-3">
+                                        <b class="text-dark"><i class="bi bi-book text-primary"></i> ${sub}</b>
+                                    </div>
+                                </div>
+                            `;
+                        }
+                    });
+                }
+            }
+
+            // Bind profile layout
+            document.getElementById("profileContent").innerHTML = `
+                <div class="profile-header-card">
+                    <div class="profile-header-flex">
+                        <div class="profile-info-block">
+                            <div class="profile-big-avatar">${firstLetter}</div>
+                            <div class="profile-text-details">
+                                <h2>${s.name}</h2>
+                                <p>
+                                    <span><i class="bi bi-mortarboard-fill"></i> ${s.class}</span> | 
+                                    <span><i class="bi bi-telephone-fill"></i> +91 ${s.phone}</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Notes Access Controller -->
+                        <div class="d-flex align-items-center gap-3">
+                            <span class="fw-bold" style="color: #94a3b8;">Study Access:</span>
+                            <button class="btn-toggle-switch ${access ? 'on' : 'off'}" onclick="toggleStudentAccess(${index})">
+                                ${access ? '<i class="bi bi-check-lg"></i> ON' : '<i class="bi bi-x-lg"></i> OFF'}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Access Alert Banner -->
+                <div class="access-banner ${access ? 'enabled' : 'disabled'} mb-4">
+                    ${access ? '<i class="bi bi-check-circle-fill"></i> ✅ Notes & Study Material Access is Active for this student' : '<i class="bi bi-exclamation-triangle-fill"></i> ❌ Access is suspended. Student cannot read study notes.'}
+                </div>
+
+                <!-- Monthly Fee system block -->
+                <div class="glass-card mb-4">
+                    <h4 class="fw-bold text-dark mb-3"><i class="bi bi-currency-rupee text-primary"></i> 💰 Monthly Fee Record</h4>
+                    <p class="text-muted small">फ़ीस बदलने पर फ़ीस स्टेटस ऑटोमेटिकली स्टूडेंट पोर्टल पर अपडेट हो जाएगी।</p>
+                    <div class="month-grid">${feeHTML}</div>
+                </div>
+
+                <!-- Display Course Feeds -->
+                <div class="glass-card mb-4">
+                    <h4 class="fw-bold text-dark mb-3"><i class="bi bi-journal-check text-primary"></i> 📘 Active Courses</h4>
+                    <div class="row">
+                        ${access && subjectHTML !== "" ? subjectHTML : (access ? '<p class="text-muted">कोई सक्रिय कोर्स फ़ीड उपलब्ध नहीं है।</p>' : '<p class="text-danger fw-bold">Note access is currently suspended. Enable Study Access to see active courses.</p>')}
+                    </div>
+                </div>
+
+                <button class="back-btn mb-4" onclick="showStudentsSection()">
+                    <i class="bi bi-arrow-left"></i> Back to Student Directory
+                </button>
+            `;
+        }
+
+        /* Database State Changers */
+        function toggleStudentAccess(index) {
+            students[index].access = !students[index].access;
+            localStorage.setItem("users", JSON.stringify(students));
+            openProfile(index);
+        }
+
+        function changeFee(index, month, value) {
+            students[index].fees[month] = value;
+            localStorage.setItem("users", JSON.stringify(students));
+            openProfile(index); // Refresh layout
+        }
+
+        /* Initial Setup Page load */
+        document.addEventListener("DOMContentLoaded", () => {
+            showDashboard();
+        });
+    </script>
+
+    <!-- Bootstrap Bundle with Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
