@@ -582,7 +582,7 @@ CLASSES
 📘 Class Control
 </h2>
 
-<div class="class-grid">
+<div class="class-grid" id="classGrid">
 
 <button class="class-btn"
 onclick="openClass('Class 12th')">
@@ -720,7 +720,8 @@ loadStudents();
 CLASS CONTROL
 ========================= */
 
-function openClass(cls){
+function openClass(cls){subjectsArea.innerHTML = "";
+  document.getElementById("classGrid").style.display="none";
 
 let html = `<h3>${cls}</h3><br>`;
 
@@ -746,7 +747,7 @@ ${enabled[key] ? 'Enabled' : 'Disabled'}
 `;
 });
 
-html += `<button class="back-btn" onclick="showClasses()">⬅ Back</button>`;
+html += `<button class="back-btn" onclick="backClasses()">⬅ Back</button>`;
 
 subjectsArea.innerHTML = html;
 localStorage.setItem("enabled", JSON.stringify(enabled));
@@ -759,6 +760,10 @@ enabled[key] = !enabled[key];
 
 localStorage.setItem("enabled", JSON.stringify(enabled));
 openClass(cls);
+}
+function backClasses(){
+document.getElementById("classGrid").style.display="grid";
+subjectsArea.innerHTML = "";
 }
 
 /* =========================
