@@ -964,18 +964,57 @@
             "Class 9th": ["Science", "Social Science", "Mathematics", "English", "Hindi"]
         };
 
+        const STUDENT_API_URL = 'http://localhost:3000/students';
         let enabled = JSON.parse(localStorage.getItem("enabled")) || {};
-        let students = JSON.parse(localStorage.getItem("users")) || [];
+        let students = [];
+        let cachedLocalStudents = JSON.parse(localStorage.getItem("users")) || [];
 
-        // Correct student default settings
-        students.forEach(s => {
-            if (s.studentAccess === undefined) {
-                s.studentAccess = true;
+        function filterStudentRecords(records) {
+            return (records || []).filter(s => s && s.usertype === 'student');
+        }
+
+        function normalizeStudents(records) {
+            let filtered = filterStudentRecords(records);
+            filtered.forEach(s => {
+                if (s.studentAccess === undefined) {
+                    s.studentAccess = true;
+                }
+                if (s.access === undefined) {
+                    s.access = true;
+                }
+                if (!s.fees) {
+                    s.fees = {
+                        April: "Paid",
+                        May: "Paid",
+                        June: "Paid",
+                        July: "Paid"
+                    };
+                }
+            });
+            return filtered;
+        }
+
+        function saveStudentsToLocalStorage() {
+            localStorage.setItem("users", JSON.stringify(students));
+        }
+
+        async function loadStudentsData() {
+            try {
+                const response = await fetch(STUDENT_API_URL);
+                const json = await response.json();
+                if (json.status && Array.isArray(json.res)) {
+                    students = normalizeStudents(json.res);
+                    saveStudentsToLocalStorage();
+                    return;
+                }
+            } catch (err) {
+                console.warn('Unable to load students from backend:', err);
             }
-            if (s.access === undefined) {
-                s.access = true;
-            }
-        });
+            students = normalizeStudents(cachedLocalStudents);
+        }
+
+        // Correct student default settings for any fallback data
+        cachedLocalStudents = normalizeStudents(cachedLocalStudents);
 
         /* Calculate Dashboard Stats on Fly */
         function computeERPStats() {
@@ -1119,7 +1158,10 @@
         }
 
         function openStudentClass(cls) {
-            let matchedStudents = students.filter(s => s.class.toLowerCase() === cls.toLowerCase());
+            let matchedStudents = students.filter(s => 
+                s.usertype === 'student' &&
+                s.class && s.class.toLowerCase() === cls.toLowerCase()
+            );
             
             let html = `
                 <div class="d-flex align-items-center justify-content-between mb-4">
@@ -1187,7 +1229,8 @@
             container.innerHTML = "";
 
             let matchedStudents = students.filter(s => 
-                s.class.toLowerCase() === cls.toLowerCase() && 
+                s.usertype === 'student' &&
+                s.class && s.class.toLowerCase() === cls.toLowerCase() && 
                 (s.name.toLowerCase().includes(q) || s.phone.includes(q))
             );
 
@@ -1327,7 +1370,8 @@
         }
 
         /* Initial Setup Page load */
-        document.addEventListener("DOMContentLoaded", () => {
+        document.addEventListener("DOMContentLoaded", async () => {
+            await loadStudentsData();
             showDashboard();
         });
     </script>
