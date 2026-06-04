@@ -1,4 +1,4 @@
-url = "https://study-center.onrender.com"
+url = "http://localhost:3000"
 $(document).ready(function () {
   var students;
   $.ajax({

@@ -59,7 +59,7 @@ $(document).ready(function () {
                 confirmButtonText: 'ok'
               }).then((result) => {
                 if (result.isConfirmed) {
-                  window.location.href = "../signup_and_login/login_form.html";
+                  window.location.href = "src/pal_study_center/login.html";
                 }
               })
             } else {
@@ -70,7 +70,7 @@ $(document).ready(function () {
                 confirmButtonText: 'ok'
               }).then((result) => {
                 if (result.isConfirmed) {
-                  window.location.href = "../signup_and_login/signup_form.html";
+                  window.location.href = "src/pal_study_center/signup.html";
                 }
               })  
             }
@@ -132,7 +132,7 @@ $(document).ready(function () {
                   if (res.data.usertype == "admin"){
                     window.location.href = "/admin/index.html";
                   }else {
-                    window.location.href = "../signup_and_login/after_login.html";
+                    window.location.href = "src/pal_study_center/dashboard.html";
                   }
                 }
               })
@@ -185,7 +185,7 @@ $(document).ready(function () {
       contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
       success: function (res) {
         if (res.status == true) {
-          window.location.href = "../signup_and_login/after_login.html";
+          window.location.href = "src/pal_study_center/dashboard.html";
         } else if (res.status == false) {
           Swal.fire({
             title: 'Error',
