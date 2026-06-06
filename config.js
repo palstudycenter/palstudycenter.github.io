@@ -5,7 +5,7 @@
 
 const CONFIG = {
   // API Base URL - Change this single line to switch between environments
-  BASE_URL: 'http://localhost:3000',
+  BASE_URL: 'https://study-center.onrender.com',
   
   // Uncomment the line below to use local development server
   // BASE_URL: 'http://localhost:3000',
