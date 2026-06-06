@@ -23,8 +23,7 @@
 <ul class="navbar-nav ms-auto">
 <li class="nav-item"><a class="nav-link" href="#students">Students</a></li>
 <li class="nav-item"><a class="nav-link" href="#materials">Material</a></li>
-<li class="nav-item"><a class="nav-link" href="#" onclick="openTestSeriesPopup(event)">Test Series</a></li>
-<li class="nav-item"><a class="nav-link" href="#" onclick="openNoticesPopup(event)">Notice</a></li>
+<li class="nav-item"><a class="nav-link" href="#" onclick="openTestSeriesPopup(event)">Test Series</a></li><li class="nav-item"><a class="nav-link" href="#" onclick="openReviewsPopup(event)">Reviews</a></li><li class="nav-item"><a class="nav-link" href="#" onclick="openNoticesPopup(event)">Notice</a></li>
 <li class="nav-item"><a class="nav-link text-danger" href="login.html">Logout</a></li>
 </ul>
 </div>
@@ -159,327 +158,28 @@
   </div>
 </div>
 
+<!-- Reviews Modal -->
+<div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="reviewModalLabel">Student Reviews</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div id="reviewModalContent">Loading reviews...</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</div>
+
 <script src="../../config.js"></script>
 <script src="admin.js"></script>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        loadStudents();
-            document.getElementById("dashboardSection").classList.add("hidden");
-            document.getElementById("classesSection").classList.add("hidden");
-            document.getElementById("studentsSection").classList.add("hidden");
-            document.getElementById("profileSection").classList.add("hidden");
-        }
-
-        function showDashboard() {
-            hideAllSections();
-            selectNav("navDashboard");
-            document.getElementById("dashboardSection").classList.remove("hidden");
-            computeERPStats();
-        }
-
-        function showClasses() {
-            hideAllSections();
-            selectNav("navClasses");
-            document.getElementById("classesSection").classList.remove("hidden");
-            document.getElementById("classGrid").style.display = "grid";
-            document.getElementById("subjectsArea").innerHTML = "";
-        }
-
-        function showStudentsSection() {
-            hideAllSections();
-            selectNav("navStudents");
-            document.getElementById("studentsSection").classList.remove("hidden");
-            loadStudentsClasses();
-        }
-
-        /* Class Controls (Subjects ON / OFF) */
-        function openClass(cls) {
-            document.getElementById("classGrid").style.display = "none";
-
-            let html = `
-                <div class="d-flex align-items-center justify-content-between mb-4">
-                    <h3 class="fw-extrabold m-0" style="font-weight: 800; color: #0f172a;">📚 ${cls} Submissions</h3>
-                    <button class="back-btn m-0" onclick="backClasses()">
-                        <i class="bi bi-arrow-left"></i> All Classes
-                    </button>
-                </div>
-                <div class="row">
-            `;
-
-            subjects[cls].forEach(sub => {
-                let key = cls + "_" + sub;
-                if (enabled[key] === undefined) {
-                    enabled[key] = true;
-                }
-
-                html += `
-                    <div class="col-12 col-md-6">
-                        <div class="subject-card">
-                            <div class="subject-title">
-                                <i class="bi bi-book-half text-primary"></i> ${sub}
-                            </div>
-                            <button class="btn-toggle-switch ${enabled[key] ? 'on' : 'off'}"
-                                onclick="toggleSubject('${cls}','${sub}')">
-                                ${enabled[key] ? '<i class="bi bi-check-circle-fill"></i> ON' : '<i class="bi bi-dash-circle-fill"></i> OFF'}
-                            </button>
-                        </div>
-                    </div>
-                `;
-            });
-
-            html += `</div>`;
-            document.getElementById("subjectsArea").innerHTML = html;
-            localStorage.setItem("enabled", JSON.stringify(enabled));
-        }
-
-        function toggleSubject(cls, sub) {
-            let key = cls + "_" + sub;
-            enabled[key] = !enabled[key];
-            localStorage.setItem("enabled", JSON.stringify(enabled));
-            openClass(cls);
-        }
-
-        function backClasses() {
-            document.getElementById("classGrid").style.display = "grid";
-            document.getElementById("subjectsArea").innerHTML = "";
-        }
-
-        /* Students Selector Layout */
-        function loadStudentsClasses() {
-            let html = `<div class="class-grid">`;
-            for (let cls in subjects) {
-                html += `
-                    <button class="class-btn" onclick="openStudentClass('${cls}')">
-                        <span>📘 ${cls} Database</span> <i class="bi bi-chevron-right"></i>
-                    </button>
-                `;
-            }
-            html += `</div>`;
-            document.getElementById("studentList").innerHTML = html;
-        }
-
-        function openStudentClass(cls) {
-            let matchedStudents = students.filter(s => 
-                s.usertype === 'student' &&
-                s.class && s.class.toLowerCase() === cls.toLowerCase()
-            );
-            
-            let html = `
-                <div class="d-flex align-items-center justify-content-between mb-4">
-                    <h3 class="fw-bold m-0 text-dark">👨‍🎓 ${cls} Students</h3>
-                    <button class="back-btn m-0" onclick="loadStudentsClasses()">
-                        <i class="bi bi-arrow-left"></i> Classes List
-                    </button>
-                </div>
-
-                <div class="search-container">
-                    <div class="search-box">
-                        <i class="bi bi-search"></i>
-                        <input type="text" id="studentSearchInput" class="form-control" 
-                               placeholder="Search student by name, mobile number..." 
-                               onkeyup="filterStudentsInClass('${cls}')">
-                    </div>
-                </div>
-
-                <div class="student-list-container" id="studentCardsContainer">
-            `;
-
-            if (matchedStudents.length === 0) {
-                html += `
-                    <div class="text-center py-5">
-                        <i class="bi bi-people text-muted" style="font-size: 48px;"></i>
-                        <p class="text-muted mt-3">इस क्लास में कोई छात्र पंजीकृत नहीं है।</p>
-                    </div>
-                `;
-            } else {
-                matchedStudents.forEach((s) => {
-                    let originalIndex = students.indexOf(s);
-                    html += generateStudentRowHTML(s, originalIndex);
-                });
-            }
-
-            html += `</div>`;
-            document.getElementById("studentList").innerHTML = html;
-        }
-
-        function generateStudentRowHTML(s, index) {
-            let firstLetter = s.name ? s.name.charAt(0).toUpperCase() : 'S';
-            let isAccessOn = s.access !== false;
-            return `
-                <div class="student-row-card" onclick="openProfile(${index})">
-                    <div class="student-row-left">
-                        <div class="student-avatar">${firstLetter}</div>
-                        <div class="student-details">
-                            <h5>${s.name}</h5>
-                            <p><i class="bi bi-telephone-fill" style="font-size:11px;"></i> ${s.phone}</p>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-center gap-3">
-                        <span class="badge-class">${s.class}</span>
-                        <span class="badge ${isAccessOn ? 'bg-success' : 'bg-secondary'} rounded-pill" style="font-size: 11px; padding: 6px 12px;">
-                            Notes: ${isAccessOn ? 'ON' : 'OFF'}
-                        </span>
-                    </div>
-                </div>
-            `;
-        }
-
-        function filterStudentsInClass(cls) {
-            let q = document.getElementById("studentSearchInput").value.toLowerCase();
-            let container = document.getElementById("studentCardsContainer");
-            container.innerHTML = "";
-
-            let matchedStudents = students.filter(s => 
-                s.usertype === 'student' &&
-                s.class && s.class.toLowerCase() === cls.toLowerCase() && 
-                (s.name.toLowerCase().includes(q) || s.phone.includes(q))
-            );
-
-            if (matchedStudents.length === 0) {
-                container.innerHTML = `
-                    <div class="text-center py-5">
-                        <p class="text-muted">कोई मेल खाता छात्र नहीं मिला।</p>
-                    </div>
-                `;
-            } else {
-                matchedStudents.forEach(s => {
-                    let idx = students.indexOf(s);
-                    container.innerHTML += generateStudentRowHTML(s, idx);
-                });
-            }
-        }
-
-        /* Open & Manage Student Profile (ERP Fee System + Notes switch) */
-        function openProfile(index) {
-            hideAllSections();
-            document.getElementById("profileSection").classList.remove("hidden");
-
-            let s = students[index];
-
-            // If fee structure isn't initialized, setup default
-            if (!s.fees) {
-                s.fees = {
-                    April: "Paid",
-                    May: "Paid",
-                    June: "Paid",
-                    July: "Paid"
-                };
-            }
-
-            let access = hasAccess(s);
-            let firstLetter = s.name ? s.name.charAt(0).toUpperCase() : 'S';
-
-            // Months Fee Record Builder
-            let feeHTML = "";
-            for (let m in s.fees) {
-                let status = s.fees[m] || "Unpaid";
-                feeHTML += `
-                    <div class="month-card fee-${status}">
-                        <b>${m}</b>
-                        <select class="form-select text-center" onchange="changeFee(${index},'${m}',this.value)">
-                            <option value="Paid" ${status === 'Paid' ? 'selected' : ''}>Paid</option>
-                            <option value="Unpaid" ${status === 'Unpaid' ? 'selected' : ''}>Unpaid</option>
-                            <option value="Leave" ${status === 'Leave' ? 'selected' : ''}>Leave</option>
-                        </select>
-                    </div>
-                `;
-            }
-
-            // Subject Access Feeds Builder
-            let subjectHTML = "";
-            if (access) {
-                let clsKey = Object.keys(subjects).find(k => k.toLowerCase() === s.class.toLowerCase());
-                if (clsKey) {
-                    subjects[clsKey].forEach(sub => {
-                        let k = clsKey + "_" + sub;
-                        // Display subject if class subject is globally enabled
-                        if (enabled[k] !== false) {
-                            subjectHTML += `
-                                <div class="col-6 col-md-4">
-                                    <div class="bg-light border rounded-3 p-3 text-center mb-3">
-                                        <b class="text-dark"><i class="bi bi-book text-primary"></i> ${sub}</b>
-                                    </div>
-                                </div>
-                            `;
-                        }
-                    });
-                }
-            }
-
-            // Bind profile layout
-            document.getElementById("profileContent").innerHTML = `
-                <div class="profile-header-card">
-                    <div class="profile-header-flex">
-                        <div class="profile-info-block">
-                            <div class="profile-big-avatar">${firstLetter}</div>
-                            <div class="profile-text-details">
-                                <h2>${s.name}</h2>
-                                <p>
-                                    <span><i class="bi bi-mortarboard-fill"></i> ${s.class}</span> | 
-                                    <span><i class="bi bi-telephone-fill"></i> +91 ${s.phone}</span>
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Notes Access Controller -->
-                        <div class="d-flex align-items-center gap-3">
-                            <span class="fw-bold" style="color: #94a3b8;">Study Access:</span>
-                            <button class="btn-toggle-switch ${access ? 'on' : 'off'}" onclick="toggleStudentAccess(${index})">
-                                ${access ? '<i class="bi bi-check-lg"></i> ON' : '<i class="bi bi-x-lg"></i> OFF'}
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Access Alert Banner -->
-                <div class="access-banner ${access ? 'enabled' : 'disabled'} mb-4">
-                    ${access ? '<i class="bi bi-check-circle-fill"></i> ✅ Notes & Study Material Access is Active for this student' : '<i class="bi bi-exclamation-triangle-fill"></i> ❌ Access is suspended. Student cannot read study notes.'}
-                </div>
-
-                <!-- Monthly Fee system block -->
-                <div class="glass-card mb-4">
-                    <h4 class="fw-bold text-dark mb-3"><i class="bi bi-currency-rupee text-primary"></i> 💰 Monthly Fee Record</h4>
-                    <p class="text-muted small">फ़ीस बदलने पर फ़ीस स्टेटस ऑटोमेटिकली स्टूडेंट पोर्टल पर अपडेट हो जाएगी।</p>
-                    <div class="month-grid">${feeHTML}</div>
-                </div>
-
-                <!-- Display Course Feeds -->
-                <div class="glass-card mb-4">
-                    <h4 class="fw-bold text-dark mb-3"><i class="bi bi-journal-check text-primary"></i> 📘 Active Courses</h4>
-                    <div class="row">
-                        ${access && subjectHTML !== "" ? subjectHTML : (access ? '<p class="text-muted">कोई सक्रिय कोर्स फ़ीड उपलब्ध नहीं है।</p>' : '<p class="text-danger fw-bold">Note access is currently suspended. Enable Study Access to see active courses.</p>')}
-                    </div>
-                </div>
-
-                <button class="back-btn mb-4" onclick="showStudentsSection()">
-                    <i class="bi bi-arrow-left"></i> Back to Student Directory
-                </button>
-            `;
-        }
-
-        /* Database State Changers */
-        function toggleStudentAccess(index) {
-            students[index].access = !students[index].access;
-            localStorage.setItem("users", JSON.stringify(students));
-            openProfile(index);
-        }
-
-        function changeFee(index, month, value) {
-            students[index].fees[month] = value;
-            localStorage.setItem("users", JSON.stringify(students));
-            openProfile(index); // Refresh layout
-        }
-
-        /* Initial Setup Page load */
-        document.addEventListener("DOMContentLoaded", async () => {
-            await loadStudentsData();
-            showDashboard();
-        });
-    </script>
 
     <!-- Bootstrap Bundle with Popper JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

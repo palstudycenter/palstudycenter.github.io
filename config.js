@@ -18,6 +18,7 @@ const CONFIG = {
     GET_STUDENTS: '/students',
     GET_STUDENT_NOTICES: '/students/:id/notices',
     NOTICES: '/notices',
+    REVIEWS: '/reviews',
     DELETE_STUDENT: '/DeleteStudent',
     DISABLE_PROFILE: '/DisableProfile',
     UPDATE_PROFILE_LINK: '/UpdateProfileLink',

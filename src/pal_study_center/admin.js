@@ -192,7 +192,189 @@ async function deleteNotice(id) {
     alert('Unable to delete notice. Please try again later.');
   }
 }
+function createStars(rating) {
+  const count = Number(rating) || 0;
+  return '★'.repeat(Math.min(Math.max(count, 0), 5)) + '☆'.repeat(Math.max(5 - Math.min(Math.max(count, 0), 5), 0));
+}
 
+function renderReviewCard(review) {
+  return `
+    <div class="card mb-3 review-admin-card" id="review-card-${review.id}">
+      <div class="card-body">
+        <div class="d-flex flex-column flex-sm-row justify-content-between gap-3">
+          <div>
+            <h5 class="mb-1">${escapeHtml(review.student_name)} <small class="text-muted">${escapeHtml(review.board)} | ${escapeHtml(review.class)}</small></h5>
+            <div class="text-muted small mb-2">Created: ${new Date(review.created_at).toLocaleString()}</div>
+            <div class="mb-2"><strong>Rating:</strong> ${createStars(Number(review.rating))}</div>
+            <div><span class="badge bg-warning text-dark">Status: ${review.approved ? 'Approved' : 'Pending'}</span></div>
+          </div>
+          <div class="btn-group align-self-start">
+            <button class="btn btn-sm btn-outline-primary" onclick="enableReviewEdit(${review.id})">Edit</button>
+            <button class="btn btn-sm btn-outline-success" onclick="approveReview(${review.id})">Approve</button>
+            <button class="btn btn-sm btn-outline-danger" onclick="unapproveReview(${review.id})">Unapprove</button>
+          </div>
+        </div>
+
+        <div class="mt-3">
+          <label class="form-label mb-1">Review Text</label>
+          <p class="border rounded-2 p-3" id="review-text-${review.id}">${escapeHtml(review.review_text)}</p>
+          <textarea class="form-control d-none" id="review-edit-${review.id}" rows="4">${escapeHtml(review.review_text)}</textarea>
+        </div>
+
+        <div class="mt-2" id="review-actions-${review.id}"></div>
+      </div>
+    </div>
+  `;
+}
+
+async function loadReviewsForAdmin() {
+  const content = document.getElementById('reviewModalContent');
+  if (!content) return 0;
+  content.innerHTML = '<div class="text-center py-4">Loading reviews...</div>';
+
+  try {
+    const response = await fetch(getApiUrl(`${CONFIG.API.REVIEWS}?approved=0`));
+    const json = await response.json();
+
+    if (!json.status || !Array.isArray(json.res)) {
+      throw new Error(json.msg || 'Unable to load reviews');
+    }
+
+    const reviews = json.res;
+    if (reviews.length === 0) {
+      content.innerHTML = '<div class="text-center py-4 text-muted">No pending reviews found.</div>';
+      return 0;
+    }
+
+    content.innerHTML = reviews.map(renderReviewCard).join('');
+    return reviews.length;
+  } catch (error) {
+    console.error('Error loading reviews:', error);
+    content.innerHTML = '<div class="text-danger py-4">Unable to load reviews at this time.</div>';
+    return 0;
+  }
+}
+
+function enableReviewEdit(reviewId) {
+  const textEl = document.getElementById(`review-text-${reviewId}`);
+  const editEl = document.getElementById(`review-edit-${reviewId}`);
+  const actionEl = document.getElementById(`review-actions-${reviewId}`);
+  if (!textEl || !editEl || !actionEl) return;
+
+  textEl.classList.add('d-none');
+  editEl.classList.remove('d-none');
+  actionEl.innerHTML = `
+    <button class="btn btn-sm btn-success me-2" onclick="saveReviewEdit(${reviewId})">Save</button>
+    <button class="btn btn-sm btn-secondary" onclick="cancelReviewEdit(${reviewId})">Cancel</button>
+  `;
+}
+
+function cancelReviewEdit(reviewId) {
+  const textEl = document.getElementById(`review-text-${reviewId}`);
+  const editEl = document.getElementById(`review-edit-${reviewId}`);
+  const actionEl = document.getElementById(`review-actions-${reviewId}`);
+  if (!textEl || !editEl || !actionEl) return;
+
+  editEl.classList.add('d-none');
+  textEl.classList.remove('d-none');
+  actionEl.innerHTML = '';
+}
+
+async function saveReviewEdit(reviewId) {
+  const editEl = document.getElementById(`review-edit-${reviewId}`);
+  const textEl = document.getElementById(`review-text-${reviewId}`);
+  const actionEl = document.getElementById(`review-actions-${reviewId}`);
+  if (!editEl || !textEl || !actionEl) return;
+
+  const review_text = editEl.value.trim();
+  if (!review_text) {
+    alert('Review text cannot be empty.');
+    return;
+  }
+
+  try {
+    const response = await fetch(getApiUrl(`${CONFIG.API.REVIEWS}/${reviewId}`), {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ review_text })
+    });
+
+    const json = await response.json();
+    if (!json.status) {
+      throw new Error(json.msg || 'Unable to update review');
+    }
+
+    textEl.textContent = review_text;
+    cancelReviewEdit(reviewId);
+    alert('Review updated successfully.');
+  } catch (error) {
+    console.error('Error saving review edit:', error);
+    alert('Unable to update review. Please try again later.');
+  }
+}
+
+async function unapproveReview(reviewId) {
+  if (!confirm('Unapprove this review and delete it from the database?')) {
+    return;
+  }
+
+  try {
+    const response = await fetch(getApiUrl(`${CONFIG.API.REVIEWS}/${reviewId}`), {
+      method: 'DELETE'
+    });
+    const json = await response.json();
+
+    if (!json.status) {
+      throw new Error(json.msg || 'Unable to delete review');
+    }
+
+    const card = document.getElementById(`review-card-${reviewId}`);
+    if (card) card.remove();
+    alert('Review deleted successfully.');
+  } catch (error) {
+    console.error('Error deleting review:', error);
+    alert('Unable to delete review. Please try again later.');
+  }
+}
+
+async function approveReview(reviewId) {
+  try {
+    const response = await fetch(getApiUrl(`${CONFIG.API.REVIEWS}/${reviewId}`), {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ approved: true })
+    });
+
+    const json = await response.json();
+    if (!json.status) {
+      throw new Error(json.msg || 'Unable to approve review');
+    }
+
+    const card = document.getElementById(`review-card-${reviewId}`);
+    if (card) {
+      card.remove();
+    }
+    alert('Review approved and hidden from admin view.');
+  } catch (error) {
+    console.error('Error approving review:', error);
+    alert('Unable to approve review. Please try again later.');
+  }
+}
+
+async function openReviewsPopup(event) {
+  if (event) event.preventDefault();
+  await loadReviewsForAdmin();
+  const modal = new bootstrap.Modal(document.getElementById('reviewModal'));
+  modal.show();
+}
+
+window.addEventListener('DOMContentLoaded', async () => {
+  const pendingCount = await loadReviewsForAdmin();
+  if (pendingCount > 0) {
+    const modal = new bootstrap.Modal(document.getElementById('reviewModal'));
+    modal.show();
+  }
+});
 function escapeHtml(text) {
   return String(text)
     .replace(/&/g, '&amp;')
