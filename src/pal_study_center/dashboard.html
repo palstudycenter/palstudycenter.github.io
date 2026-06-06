@@ -23,7 +23,7 @@
 <ul class="navbar-nav ms-auto">
 <li class="nav-item"><a class="nav-link" href="#students">Students</a></li>
 <li class="nav-item"><a class="nav-link" href="#materials">Material</a></li>
-<li class="nav-item"><a class="nav-link" href="#notice">Notice</a></li>
+<li class="nav-item"><a class="nav-link" href="#" onclick="openNoticesPopup(event)">Notice</a></li>
 <li class="nav-item"><a class="nav-link text-danger" href="login.html">Logout</a></li>
 </ul>
 </div>
@@ -98,58 +98,6 @@
 
 <hr>
 
-const STUDENT_API_URL = 'https://study-center.onrender.com/students';
-        let enabled = JSON.parse(localStorage.getItem("enabled")) || {};
-        let students = [];
-        let cachedLocalStudents = JSON.parse(localStorage.getItem("users")) || [];
-
-        function filterStudentRecords(records) {
-            return (records || []).filter(s => s && s.usertype === 'student');
-        }
-
-        function normalizeStudents(records) {
-            let filtered = filterStudentRecords(records);
-            filtered.forEach(s => {
-                if (s.studentAccess === undefined) {
-                    s.studentAccess = true;
-                }
-                if (s.access === undefined) {
-                    s.access = true;
-                }
-                if (!s.fees) {
-                    s.fees = {
-                        April: "Paid",
-                        May: "Paid",
-                        June: "Paid",
-                        July: "Paid"
-                    };
-                }
-            });
-            return filtered;
-        }
-
-        function saveStudentsToLocalStorage() {
-            localStorage.setItem("users", JSON.stringify(students));
-        }
-
-        async function loadStudentsData() {
-            try {
-                const response = await fetch(STUDENT_API_URL);
-                const json = await response.json();
-                if (json.status && Array.isArray(json.res)) {
-                    students = normalizeStudents(json.res);
-                    saveStudentsToLocalStorage();
-                    return;
-                }
-            } catch (err) {
-                console.warn('Unable to load students from backend:', err);
-            }
-            students = normalizeStudents(cachedLocalStudents);
-        }
-
-        // Correct student default settings for any fallback data
-        cachedLocalStudents = normalizeStudents(cachedLocalStudents);
-
 </div>
 </div>
 
@@ -166,10 +114,31 @@ const STUDENT_API_URL = 'https://study-center.onrender.com/students';
 <section id="notice">
 <div class="card-box mt-4 mb-5">
 <h4>📢 Notice</h4>
-<textarea class="form-control" rows="4"></textarea>
-<button class="btn btn-warning mt-2">Publish</button>
+<div class="mb-3">
+  <label for="noticeMessage" class="form-label">Message for filtered students</label>
+  <textarea id="noticeMessage" class="form-control" rows="4" placeholder="Write notice for selected board/class"></textarea>
+</div>
+<button id="publishNoticeButton" class="btn btn-warning mt-2" onclick="publishNotice()">Publish</button>
 </div>
 </section>
+
+<!-- Notice List Modal -->
+<div class="modal fade" id="noticeModal" tabindex="-1" aria-labelledby="noticeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="noticeModalLabel">Published Notices</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div id="noticeModalContent">Loading notices...</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 </div>
 

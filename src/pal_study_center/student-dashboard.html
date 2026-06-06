@@ -26,6 +26,14 @@ padding:110px 15px 40px;
 .subject-card{border-radius:20px;min-height:140px;display:flex;flex-direction:column;justify-content:center;align-items:center;color:#fff;text-decoration:none;box-shadow:0 8px 22px rgba(0,0,0,.12);transition:.3s}
 .subject-card:hover{transform:translateY(-6px)}
 .subject-card i{font-size:32px;margin-bottom:10px}
+.notice-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.notice-card{background:#ffffff;border:1px solid rgba(148,163,184,.18);border-radius:18px;padding:20px;box-shadow:0 12px 30px rgba(15,23,42,.06)}
+.notice-card p{margin:0;color:#334155;line-height:1.7;font-size:.95rem}
+.notice-card.notice-empty{text-align:center;color:#475569;background:#f8fafc}
+.notice-card.notice-loading{display:flex;align-items:center;gap:12px;color:#475569;justify-content:center}
+.notice-header{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:12px}
+.notice-header strong{font-size:1rem;color:#0f172a}
+.notice-header small{color:#64748b;font-size:.82rem}
 </style>
 </head>
 <body>
@@ -88,6 +96,21 @@ padding:110px 15px 40px;
 <div class="hero-marquee">
 <span>📢Your Dashboard is active | 📚 All academic modules are enabled | 🎓 Wishing you a productive learning experience</span>
 </div>
+</section>
+
+<section class="container pb-4">
+  <div class="notice-section">
+    <div class="section-title">
+      <h2>Important Notices</h2>
+      <p>आपके क्लास और बोर्ड के लिए प्रकाशित नोटिस</p>
+    </div>
+    <div id="noticeContainer" class="notice-grid">
+      <div class="notice-card notice-loading">
+        <div class="spinner-border text-primary" role="status"></div>
+        <span>Loading notices...</span>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="container pb-5">

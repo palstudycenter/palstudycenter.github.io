@@ -62,6 +62,63 @@ async function loadSubjects() {
 }
 
 loadSubjects();
+loadNotices();
+
+async function loadNotices() {
+    const noticeContainer = document.getElementById('noticeContainer');
+    if (!noticeContainer) return;
+
+    noticeContainer.innerHTML = `
+        <div class="notice-card notice-loading">
+            <div class="spinner-border text-primary" role="status"></div>
+            <span>Loading notices...</span>
+        </div>
+    `;
+
+    if (!user.id || typeof CONFIG === 'undefined') {
+        noticeContainer.innerHTML = `
+            <div class="notice-card notice-empty">
+                <p>No notices available.</p>
+            </div>
+        `;
+        return;
+    }
+
+    try {
+        const response = await fetch(`${CONFIG.BASE_URL}/students/${user.id}/notices`);
+        const data = await response.json();
+
+        if (!response.ok || !data.status || !Array.isArray(data.res)) {
+            throw new Error(data.msg || 'Unable to load notices');
+        }
+
+        const notices = data.res;
+        if (!notices.length) {
+            noticeContainer.innerHTML = `
+                <div class="notice-card notice-empty">
+                    <p>आपके लिए कोई नया नोटिस नहीं है।</p>
+                </div>
+            `;
+            return;
+        }
+
+        noticeContainer.innerHTML = notices.map(notice => `
+            <div class="notice-card">
+                <div class="notice-header">
+                    <strong>Notice</strong>
+                </div>
+                <p>${notice.message}</p>
+            </div>
+        `).join('');
+    } catch (error) {
+        console.warn('Error loading notices:', error);
+        noticeContainer.innerHTML = `
+            <div class="notice-card notice-empty">
+                <p>Unable to load notices at this time.</p>
+            </div>
+        `;
+    }
+}
 
 async function openFeesModal(event) {
     event.preventDefault();

@@ -49,6 +49,139 @@ function filterStudents() {
   displayStudents();
 }
 
+/* NOTICE PUBLISH */
+async function publishNotice() {
+  const board = document.getElementById('filterBoard')?.value || '';
+  const cls = document.getElementById('filterClass')?.value || '';
+  const message = document.getElementById('noticeMessage')?.value.trim() || '';
+
+  if (!message) {
+    return alert('Please enter a notice message first.');
+  }
+
+  try {
+    const response = await fetch(getApiUrl(CONFIG.API.NOTICES), {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message, board: board || null, class: cls || null })
+    });
+
+    const json = await response.json();
+    if (json.status) {
+      document.getElementById('noticeMessage').value = '';
+      alert('Notice published successfully.');
+      displayStudents();
+    } else {
+      console.error('Publish notice failed:', json);
+      alert(json.msg || 'Unable to publish notice.');
+    }
+  } catch (error) {
+    console.error('Error publishing notice:', error);
+    alert('Unable to publish notice. Please try again later.');
+  }
+}
+
+/* NOTICE LIST AND DELETE */
+async function openNoticesPopup(event) {
+  if (event) event.preventDefault();
+  await loadNoticesForAdmin();
+  const noticeModal = new bootstrap.Modal(document.getElementById('noticeModal'));
+  noticeModal.show();
+}
+
+async function loadNoticesForAdmin() {
+  const content = document.getElementById('noticeModalContent');
+  content.innerHTML = 'Loading notices...';
+
+  try {
+    const response = await fetch(getApiUrl(CONFIG.API.NOTICES));
+    const json = await response.json();
+
+    if (json.status && Array.isArray(json.res)) {
+      if (json.res.length === 0) {
+        content.innerHTML = '<p class="text-muted">No notices have been published yet.</p>';
+        return;
+      }
+
+      const rows = json.res.map(notice => {
+        const boardText = notice.board ? notice.board : 'All Boards';
+        const classText = notice.class ? notice.class : 'All Classes';
+        return `
+          <tr>
+            <td>${notice.id}</td>
+            <td>${escapeHtml(notice.message)}</td>
+            <td>${escapeHtml(boardText)}</td>
+            <td>${escapeHtml(classText)}</td>
+            <td>${new Date(notice.created_at).toLocaleString()}</td>
+            <td>
+              <button class="btn btn-sm btn-danger" onclick="deleteNotice(${notice.id})">
+                Delete
+              </button>
+            </td>
+          </tr>
+        `;
+      }).join('');
+
+      content.innerHTML = `
+        <div class="table-responsive">
+          <table class="table table-striped table-hover align-middle">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Message</th>
+                <th>Board</th>
+                <th>Class</th>
+                <th>Created At</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>${rows}</tbody>
+          </table>
+        </div>
+      `;
+    } else {
+      content.innerHTML = '<p class="text-danger">Unable to load notices.</p>';
+    }
+  } catch (error) {
+    console.error('Error loading notices:', error);
+    content.innerHTML = '<p class="text-danger">Failed to load notices. Please try again later.</p>';
+  }
+}
+
+async function deleteNotice(id) {
+  if (!confirm('Delete this notice permanently?')) {
+    return;
+  }
+
+  try {
+    const response = await fetch(getApiUrl(`${CONFIG.API.NOTICES}/${id}`), {
+      method: 'DELETE'
+    });
+    const json = await response.json();
+
+    if (json.status) {
+      await loadNoticesForAdmin();
+      displayStudents();
+      alert('Notice deleted successfully.');
+    } else {
+      console.error('Delete notice failed:', json);
+      alert(json.msg || 'Unable to delete notice.');
+    }
+  } catch (error) {
+    console.error('Error deleting notice:', error);
+    alert('Unable to delete notice. Please try again later.');
+  }
+}
+
+function escapeHtml(text) {
+  return String(text)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 /* OPEN PROFILE */
 function openProfile(i) {
   currentIndex = i;
