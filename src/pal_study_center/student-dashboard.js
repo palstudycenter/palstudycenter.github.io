@@ -62,3 +62,104 @@ async function loadSubjects() {
 }
 
 loadSubjects();
+
+async function openFeesModal(event) {
+    event.preventDefault();
+    const feesModal = new bootstrap.Modal(document.getElementById('feesModal'));
+    feesModal.show();
+    await loadFeesData();
+}
+
+async function loadFeesData() {
+    const feesContent = document.getElementById('feesContent');
+    feesContent.innerHTML = `
+        <div class="text-center text-muted">
+            <div class="spinner-border" role="status"></div>
+            <p>Loading fees...</p>
+        </div>
+    `;
+
+    let fees = [];
+
+    if (user.id && typeof CONFIG !== 'undefined') {
+        try {
+            const response = await fetch(`${CONFIG.BASE_URL}/students/${user.id}/fees`);
+            const data = await response.json();
+
+            if (response.ok && data.status && Array.isArray(data.res)) {
+                fees = data.res;
+            } else {
+                console.warn('Unable to load fees from server:', data.msg || data.err);
+            }
+        } catch (error) {
+            console.warn('Error fetching fees:', error);
+        }
+    }
+
+    if (!fees.length) {
+        feesContent.innerHTML = `
+            <div class="text-center py-4 text-muted">
+                No fees data available.
+            </div>
+        `;
+        return;
+    }
+
+    // Group fees by status
+    const groupedFees = {
+        'Paid': [],
+        'Unpaid': []
+    };
+
+    fees.forEach(fee => {
+        if (fee.status === 'Paid') {
+            groupedFees['Paid'].push(fee.month);
+        } else if (fee.status === 'Unpaid') {
+            groupedFees['Unpaid'].push(fee.month);
+        }
+    });
+
+    let html = '';
+
+    // Render Paid section
+    if (groupedFees['Paid'].length > 0) {
+        html += `
+            <div class="fees-status-group">
+                <div class="fees-status-header fees-status-paid">
+                    <i class="bi bi-check-circle-fill"></i>
+                    Paid (${groupedFees['Paid'].length})
+                </div>
+                <div class="fees-month-grid">
+                    ${groupedFees['Paid'].map(month => `
+                        <div class="fees-month-item">
+                            <span class="fees-month-label">Month</span>
+                            <span class="fees-month-name">${month.substring(0, 3)}</span>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+    }
+
+    // Render Unpaid section
+    if (groupedFees['Unpaid'].length > 0) {
+        html += `
+            <div class="fees-status-group">
+                <div class="fees-status-header fees-status-unpaid">
+                    <i class="bi bi-exclamation-circle-fill"></i>
+                    Unpaid (${groupedFees['Unpaid'].length})
+                </div>
+                <div class="fees-month-grid">
+                    ${groupedFees['Unpaid'].map(month => `
+                        <div class="fees-month-item">
+                            <span class="fees-month-label">Month</span>
+                            <span class="fees-month-name">${month.substring(0, 3)}</span>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+    }
+
+    feesContent.innerHTML = html;
+}

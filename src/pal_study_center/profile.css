@@ -216,14 +216,14 @@ body {
    =========================== */
 .month-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
 }
 
 .month-card {
     border: 1px solid #f1f5f9;
-    border-radius: 16px;
-    padding: 20px;
+    border-radius: 12px;
+    padding: 14px 10px;
     text-align: center;
     background: #f8fafc;
     transition: var(--transition);
@@ -237,20 +237,20 @@ body {
 
 .month-card b {
     display: block;
-    font-size: 13px;
+    font-size: 11px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     color: #64748b;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     font-weight: 700;
 }
 
 .month-card select {
     width: 100%;
-    padding: 10px;
+    padding: 8px 6px;
     border: 1px solid #e2e8f0;
-    border-radius: 10px;
-    font-size: 14px;
+    border-radius: 8px;
+    font-size: 12px;
     font-weight: 600;
     background: #ffffff;
     cursor: pointer;
@@ -276,9 +276,10 @@ body {
     border-color: rgba(244, 63, 94, 0.2) !important;
 }
 
-.fee-Leave {
-    background: linear-gradient(135deg, #fef3c7, #fffbeb);
-    border-color: rgba(245, 158, 11, 0.2) !important;
+.fee-Not\ applicable {
+    background: linear-gradient(135deg, #f3f4f6, #f9fafb);
+    border-color: rgba(107, 114, 128, 0.2) !important;
+    color: #6b7280;
 }
 
 /* ===========================
@@ -406,6 +407,18 @@ body {
 /* ===========================
    RESPONSIVE DESIGN
    =========================== */
+@media (max-width: 1024px) {
+    .month-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .month-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 @media (max-width: 576px) {
     .profile-header-card {
         padding: 24px;
@@ -429,7 +442,22 @@ body {
     }
 
     .month-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .month-card {
+        padding: 12px 8px;
+    }
+
+    .month-card b {
+        font-size: 10px;
+        margin-bottom: 6px;
+    }
+
+    .month-card select {
+        padding: 6px 4px;
+        font-size: 11px;
     }
 
     .mobile-header {

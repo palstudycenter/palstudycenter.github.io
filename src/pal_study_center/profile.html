@@ -115,14 +115,13 @@
             document.getElementById("profileBoard").innerText = currentStudent.board || "N/A";
             document.getElementById("profilePhone").innerText = "+91 " + (currentStudent.phone || "XXXX");
 
-            // Initialize fees if not present
+            // Initialize fees with all 12 months as Unpaid
             if (!currentStudent.fees) {
-                currentStudent.fees = {
-                    April: "Paid",
-                    May: "Paid",
-                    June: "Paid",
-                    July: "Paid"
-                };
+                const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                currentStudent.fees = {};
+                months.forEach(month => {
+                    currentStudent.fees[month] = "Unpaid";
+                });
             }
 
             // Set access status
@@ -134,6 +133,9 @@
 
             // Load course access data from server if possible, otherwise use local course state
             await loadCourseData();
+
+            // Load fee data from server
+            await loadFeeData();
         }
 
         async function loadCourseData() {
@@ -163,6 +165,24 @@
             renderCourses();
         }
 
+        async function loadFeeData() {
+            if (currentStudent.id) {
+                try {
+                    const response = await fetch(`${CONFIG.BASE_URL}/students/${currentStudent.id}/fees`);
+                    const data = await response.json();
+                    if (response.ok && data.status && Array.isArray(data.res)) {
+                        currentStudent.fees = {};
+                        data.res.forEach(item => {
+                            currentStudent.fees[item.month] = item.status;
+                        });
+                        renderFeeGrid();
+                    }
+                } catch (err) {
+                    console.warn('Unable to load fee data from server:', err.message);
+                }
+            }
+        }
+
         function updateAccessUI(hasAccess) {
             const toggle = document.getElementById("accessToggle");
             const banner = document.getElementById("accessBanner");
@@ -189,16 +209,16 @@
             const feeGrid = document.getElementById("feeGrid");
             feeGrid.innerHTML = "";
 
-            const months = ["April", "May", "June", "July"];
+            const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
             months.forEach(month => {
                 const status = currentStudent.fees[month] || "Unpaid";
                 feeGrid.innerHTML += `
                     <div class="month-card fee-${status}">
-                        <b>${month.toUpperCase()}</b>
+                        <b>${month.substring(0, 3).toUpperCase()}</b>
                         <select onchange="changeFee('${month}', this.value)">
                             <option value="Paid" ${status === 'Paid' ? 'selected' : ''}>Paid</option>
                             <option value="Unpaid" ${status === 'Unpaid' ? 'selected' : ''}>Unpaid</option>
-                            <option value="Leave" ${status === 'Leave' ? 'selected' : ''}>Leave</option>
+                            <option value="Not applicable" ${status === 'Not applicable' ? 'selected' : ''}>Not applicable</option>
                         </select>
                     </div>
                 `;
@@ -310,6 +330,29 @@
             currentStudent.fees[month] = value;
             renderFeeGrid();
             saveStudentData();
+            updateFeeOnServer(month, value);
+        }
+
+        async function updateFeeOnServer(month, status) {
+            if (!currentStudent.id) {
+                return;
+            }
+
+            try {
+                const response = await fetch(`${CONFIG.BASE_URL}/students/${currentStudent.id}/fees`, {
+                    method: 'PATCH',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ month, status })
+                });
+                const data = await response.json();
+                if (!response.ok || !data.status) {
+                    console.warn('Failed to update fee status on server:', data.msg || data.err);
+                }
+            } catch (err) {
+                console.warn('Unable to update fee status to server:', err.message);
+            }
         }
 
         function saveStudentData() {

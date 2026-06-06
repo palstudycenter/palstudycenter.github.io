@@ -44,7 +44,7 @@ padding:110px 15px 40px;
 <ul class="navbar-nav ms-auto">
 <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
 <li class="nav-item"><a class="nav-link" href="#">Test Record</a></li>
-<li class="nav-item"><a class="nav-link" href="#">Fees Record</a></li>
+<li class="nav-item"><a class="nav-link" href="#" onclick="openFeesModal(event)">Fees Record</a></li>
 <li class="nav-item"><a class="nav-link" href="#">Notice</a></li>
 </ul>
 </div>
@@ -98,6 +98,136 @@ padding:110px 15px 40px;
 
 <div class="row g-4" id="subjectsContainer"></div>
 </section>
+
+<!-- Fees Record Modal -->
+<div class="modal fade" id="feesModal" tabindex="-1" aria-hidden="true">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title">
+            <i class="bi bi-currency-rupee"></i> Monthly Fee Record
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+    </div>
+    <div class="modal-body">
+        <div id="feesContent" style="max-height: 500px; overflow-y: auto;">
+            <div class="text-center text-muted">
+                <div class="spinner-border" role="status"></div>
+                <p>Loading fees...</p>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    </div>
+</div>
+</div>
+
+<style>
+#feesModal .modal-content {
+    border-radius: 16px;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+}
+
+#feesModal .modal-header {
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    color: white;
+    border-radius: 16px 16px 0 0;
+    border: none;
+}
+
+#feesModal .modal-title {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.fees-status-group {
+    margin-bottom: 24px;
+}
+
+.fees-status-header {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.fees-status-paid {
+    background: #ecfdf5;
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.fees-status-unpaid {
+    background: #fff1f2;
+    color: #f43f5e;
+    border: 1px solid rgba(244, 63, 94, 0.2);
+}
+
+.fees-status-notapplicable {
+    background: #f9fafb;
+    color: #6b7280;
+    border: 1px solid rgba(107, 114, 128, 0.2);
+}
+
+.fees-month-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+}
+
+.fees-month-item {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 14px 10px;
+    text-align: center;
+    background: #f8fafc;
+    transition: all 0.3s ease;
+}
+
+.fees-month-item:hover {
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.fees-month-label {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #64748b;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.fees-month-name {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+@media (max-width: 768px) {
+    .fees-month-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .fees-month-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+</style>
 
 <script>
 function loadImage(event){
