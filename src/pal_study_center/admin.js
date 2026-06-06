@@ -53,22 +53,16 @@ function filterStudents() {
 function openProfile(i) {
   currentIndex = i;
   let u = students[i];
-
-  document.getElementById("profileOverlay").classList.remove("hidden");
-  document.getElementById("pName").innerText = u.name;
-  document.getElementById("pPhone").innerText = u.phone;
-  document.getElementById("pBoard").innerText = u.board ? u.board : "Board not set";
-  document.getElementById("pClass").innerText = u.class;
-
-  document.getElementById("pImg").src =
-    u.profile_link || "https://cdn-icons-png.flaticon.com/512/3135/3135715.png";
-
-  renderSubjects();
+  
+  // Store student data and redirect to profile.html
+  localStorage.setItem("viewingStudent", JSON.stringify(u));
+  localStorage.setItem("viewingStudentIndex", i);
+  window.location.href = "profile.html";
 }
 
 /* CLOSE PROFILE */
 function closeProfile() {
-  document.getElementById("profileOverlay").classList.add("hidden");
+  window.location.href = "dashboard.html";
 }
 
 /* SUBJECTS */

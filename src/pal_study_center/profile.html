@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile - Pal Study Center</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Profile CSS -->
+    <link href="profile.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Mobile Header with Back Button -->
+    <div class="mobile-header">
+        <button class="back-to-dash" onclick="goBack()">
+            <i class="bi bi-arrow-left"></i>
+        </button>
+        <div class="mobile-header-title">पाल <span>ERP</span></div>
+        <div style="width: 24px;"></div>
+    </div>
+
+    <!-- Profile Container -->
+    <div class="profile-container">
+        <!-- Profile Header Card -->
+        <div class="profile-header-card">
+            <div class="profile-header-flex">
+                <div class="profile-info-block">
+                    <div class="profile-big-avatar" id="profileAvatar">N</div>
+                    <div class="profile-text-details">
+                        <h2 id="profileName">Student Name</h2>
+                        <p>
+                            <i class="bi bi-mortarboard-fill"></i>
+                            <span id="profileClass">Class</span> | <span id="profileBoard">Board</span>
+                        </p>
+                        <p>
+                            <i class="bi bi-telephone-fill"></i>
+                            <span id="profilePhone">+91 XXXX</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Study Access Control -->
+                <div class="access-control">
+                    <span class="access-label">Study Access:</span>
+                    <button class="btn-toggle-switch on" id="accessToggle" onclick="toggleStudentAccess()">
+                        <i class="bi bi-check-lg"></i> ON
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Access Banner -->
+        <div class="access-banner enabled" id="accessBanner">
+            <i class="bi bi-check-circle-fill"></i>
+            <span id="bannerText">✅ Notes & Study Material Access is Active for this student</span>
+        </div>
+
+        <!-- Monthly Fee Record Section -->
+        <div class="glass-card">
+            <h4>
+                <i class="bi bi-currency-rupee" style="color: var(--primary-color);"></i>
+                💰 Monthly Fee Record
+            </h4>
+            <p style="color: #94a3b8; font-size: 13px; margin-bottom: 20px;">फ़ीस बदलने पर फ़ीस स्टेटस ऑटोमेटिकली स्टूडेंट पोर्टल पर अपडेट हो जाएगी।</p>
+            <div class="month-grid" id="feeGrid"></div>
+        </div>
+
+        <!-- Active Courses Section -->
+        <div class="glass-card">
+            <h4>
+                <i class="bi bi-journal-check" style="color: var(--primary-color);"></i>
+                📘 Active Courses
+            </h4>
+            <div class="courses-grid" id="coursesGrid"></div>
+        </div>
+
+        <!-- Back Button -->
+        <button class="back-btn" onclick="goBack()">
+            <i class="bi bi-arrow-left"></i> Back to Student Directory
+        </button>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="../../config.js"></script>
+    <script>
+        let currentStudent = null;
+        let currentStudentIndex = null;
+
+        // Load student data on page load
+        async function loadProfileData() {
+            const studentData = localStorage.getItem("viewingStudent");
+            if (!studentData) {
+                alert("No student data found. Redirecting...");
+                window.location.href = "dashboard.html";
+                return;
+            }
+
+            currentStudent = JSON.parse(studentData);
+            currentStudentIndex = localStorage.getItem("viewingStudentIndex");
+
+            // Set student info
+            const firstLetter = currentStudent.name ? currentStudent.name.charAt(0).toUpperCase() : 'S';
+            document.getElementById("profileAvatar").innerText = firstLetter;
+            document.getElementById("profileName").innerText = currentStudent.name;
+            document.getElementById("profileClass").innerText = currentStudent.class || "N/A";
+            document.getElementById("profileBoard").innerText = currentStudent.board || "N/A";
+            document.getElementById("profilePhone").innerText = "+91 " + (currentStudent.phone || "XXXX");
+
+            // Initialize fees if not present
+            if (!currentStudent.fees) {
+                currentStudent.fees = {
+                    April: "Paid",
+                    May: "Paid",
+                    June: "Paid",
+                    July: "Paid"
+                };
+            }
+
+            // Set access status
+            const hasAccess = currentStudent.access !== false;
+            updateAccessUI(hasAccess);
+
+            // Render fee grid
+            renderFeeGrid();
+
+            // Load course access data from server if possible, otherwise use local course state
+            await loadCourseData();
+        }
+
+        async function loadCourseData() {
+            if (currentStudent.id) {
+                try {
+                    const response = await fetch(`${CONFIG.BASE_URL}/students/${currentStudent.id}/subjects`);
+                    const data = await response.json();
+                    if (response.ok && data.status && Array.isArray(data.res)) {
+                        currentStudent.courses = {};
+                        data.res.forEach(item => {
+                            currentStudent.courses[item.subject] = item.enabled === 1 || item.enabled === true;
+                        });
+                    }
+                } catch (err) {
+                    console.warn('Unable to load course data from server:', err.message);
+                }
+            }
+
+            if (!currentStudent.courses) {
+                const subjects = getSubjects(currentStudent.class);
+                currentStudent.courses = {};
+                subjects.forEach(subject => {
+                    currentStudent.courses[subject] = true;
+                });
+            }
+
+            renderCourses();
+        }
+
+        function updateAccessUI(hasAccess) {
+            const toggle = document.getElementById("accessToggle");
+            const banner = document.getElementById("accessBanner");
+            const bannerText = document.getElementById("bannerText");
+
+            if (hasAccess) {
+                toggle.classList.remove("off");
+                toggle.classList.add("on");
+                toggle.innerHTML = '<i class="bi bi-check-lg"></i> ON';
+                banner.classList.remove("disabled");
+                banner.classList.add("enabled");
+                bannerText.innerText = "✅ Notes & Study Material Access is Active for this student";
+            } else {
+                toggle.classList.remove("on");
+                toggle.classList.add("off");
+                toggle.innerHTML = '<i class="bi bi-x-lg"></i> OFF';
+                banner.classList.remove("enabled");
+                banner.classList.add("disabled");
+                bannerText.innerText = "❌ Access is suspended. Student cannot read study notes.";
+            }
+        }
+
+        function renderFeeGrid() {
+            const feeGrid = document.getElementById("feeGrid");
+            feeGrid.innerHTML = "";
+
+            const months = ["April", "May", "June", "July"];
+            months.forEach(month => {
+                const status = currentStudent.fees[month] || "Unpaid";
+                feeGrid.innerHTML += `
+                    <div class="month-card fee-${status}">
+                        <b>${month.toUpperCase()}</b>
+                        <select onchange="changeFee('${month}', this.value)">
+                            <option value="Paid" ${status === 'Paid' ? 'selected' : ''}>Paid</option>
+                            <option value="Unpaid" ${status === 'Unpaid' ? 'selected' : ''}>Unpaid</option>
+                            <option value="Leave" ${status === 'Leave' ? 'selected' : ''}>Leave</option>
+                        </select>
+                    </div>
+                `;
+            });
+        }
+
+        function renderCourses() {
+            const coursesGrid = document.getElementById("coursesGrid");
+            coursesGrid.innerHTML = "";
+
+            // Initialize courses data if not present
+            if (!currentStudent.courses) {
+                const subjects = getSubjects(currentStudent.class);
+                currentStudent.courses = {};
+                subjects.forEach(subject => {
+                    currentStudent.courses[subject] = currentStudent.access !== false; // Default based on access state
+                });
+            }
+
+            if (currentStudent.access === false) {
+                coursesGrid.innerHTML = `
+                    <div class="access-suspended-message">
+                        Note access is currently suspended. Enable Study Access to see active courses.
+                    </div>
+                `;
+                return;
+            }
+
+            const subjects = getSubjects(currentStudent.class);
+            subjects.forEach(subject => {
+                const isEnabled = currentStudent.courses[subject] !== false;
+                coursesGrid.innerHTML += `
+                    <div class="course-card">
+                        <div class="course-info">
+                            <i class="bi bi-book"></i>
+                            <span class="course-name">${subject}</span>
+                        </div>
+                        <button class="btn-toggle-switch ${isEnabled ? 'on' : 'off'}" onclick="toggleCourseAccess('${subject}')">
+                            <i class="bi bi-${isEnabled ? 'check-lg' : 'x-lg'}"></i> ${isEnabled ? 'ON' : 'OFF'}
+                        </button>
+                    </div>
+                `;
+            });
+        }
+
+        async function toggleCourseAccess(subject) {
+            if (!currentStudent.courses) {
+                currentStudent.courses = {};
+            }
+            const currentStatus = currentStudent.courses[subject] !== false;
+            const nextStatus = !currentStatus;
+            currentStudent.courses[subject] = nextStatus;
+            renderCourses();
+            saveStudentData();
+            await updateCourseStatusOnServer(subject, nextStatus);
+        }
+
+        async function updateCourseStatusOnServer(subject, enabled) {
+            if (!currentStudent.id) {
+                return;
+            }
+
+            try {
+                const response = await fetch(`${CONFIG.BASE_URL}/students/${currentStudent.id}/subjects`, {
+                    method: 'PATCH',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ subject, enabled })
+                });
+                const data = await response.json();
+                if (!response.ok || !data.status) {
+                    console.warn('Failed to update subject status on server:', data.msg || data.err);
+                }
+            } catch (err) {
+                console.warn('Unable to update subject status to server:', err.message);
+            }
+        }
+
+        function getSubjects(cls) {
+            if (cls && (cls.includes('11') || cls.includes('12'))) {
+                return ["Physics", "Chemistry", "Mathematics", "Biology", "English", "Hindi"];
+            }
+            return ["Science", "Social Science", "Mathematics", "English", "Hindi"];
+        }
+
+        async function toggleStudentAccess() {
+            currentStudent.access = currentStudent.access === false ? true : false;
+            updateAccessUI(currentStudent.access);
+
+            const subjects = getSubjects(currentStudent.class);
+            if (!currentStudent.courses) {
+                currentStudent.courses = {};
+            }
+
+            subjects.forEach(subject => {
+                currentStudent.courses[subject] = currentStudent.access;
+            });
+
+            renderCourses();
+            saveStudentData();
+
+            if (currentStudent.id) {
+                await Promise.all(subjects.map(subject => updateCourseStatusOnServer(subject, currentStudent.access)));
+            }
+        }
+
+        function changeFee(month, value) {
+            currentStudent.fees[month] = value;
+            renderFeeGrid();
+            saveStudentData();
+        }
+
+        function saveStudentData() {
+            localStorage.setItem("viewingStudent", JSON.stringify(currentStudent));
+        }
+
+        function goBack() {
+            window.location.href = "dashboard.html";
+        }
+
+        // Initialize on page load
+        document.addEventListener("DOMContentLoaded", loadProfileData);
+    </script>
+
+    <!-- Bootstrap Bundle with Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
