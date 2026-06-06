@@ -18,6 +18,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
+  html{
+  font-size:18px;
+}
 
     *{
       margin:0;
@@ -189,14 +192,16 @@
   justify-content:center;
   text-align:center;
   color:white;
+
   background:
   linear-gradient(rgba(15,23,42,.55),rgba(15,23,42,.55)),
   url(https://images.unsplash.com/photo-1503676260728-1c00da094a0b);
+
   background-size:cover;
   background-position:center;
+
   padding:100px 0 40px;
-}
-.hero{
+
   position:relative;
   overflow:hidden;
 }
@@ -464,6 +469,57 @@
 
     }
 
+/* ======================
+   ADMISSION CTA
+====================== */
+
+.cta{
+  background:linear-gradient(135deg,#2563eb,#1d4ed8);
+  color:white;
+  text-align:center;
+  padding:80px 20px;
+}
+
+.cta h2{
+  font-size:42px;
+  font-weight:700;
+  margin-bottom:15px;
+}
+
+.cta p{
+  font-size:18px;
+  max-width:700px;
+  margin:auto;
+  margin-bottom:25px;
+}
+
+.cta-btn{
+  display:inline-block;
+  background:white;
+  color:#2563eb;
+  padding:14px 32px;
+  border-radius:50px;
+  font-weight:600;
+  transition:.3s;
+}
+
+.cta-btn:hover{
+  transform:translateY(-3px);
+  color:#2563eb;
+  box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+@media(max-width:768px){
+
+  .cta h2{
+    font-size:30px;
+  }
+
+  .cta p{
+    font-size:16px;
+  }
+
+}
     /* ======================
        FOOTER
     ====================== */
@@ -638,7 +694,7 @@
       <ul class="navbar-nav ms-auto align-items-lg-center">
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
+          <a class="nav-link" href="#Quick Access">Quick Access</a>
         </li>
 
         <li class="nav-item">
@@ -702,26 +758,22 @@
       Learn • Grow • Succeed
     </div>
 
-    <p>
+<p>
+कक्षा 9वीं, 10वीं, 11वीं, 12वीं एवं B.Sc. विद्यार्थियों के लिए
+अनुभवी शिक्षकों, नियमित टेस्ट सीरीज़, गुणवत्तापूर्ण स्टडी नोट्स
+और व्यक्तिगत मार्गदर्शन के साथ सफलता की ओर एक मजबूत कदम।
+</p>
 
-      Smart Classrooms, Expert Teachers,
-      Daily Practice Tests, Premium Study Notes
-      और Complete Guidance के साथ
-      अपने भविष्य को नई दिशा दें।
-
-    </p>
 
     <!-- SCROLLING TEXT -->
 
     <div class="hero-marquee">
 
-      <span>
-
-        📚 Admission Open 2026 ||
-        9th • 10th • 11th • 12th • B.Sc. ||
-        पाल स्टडी सेंटर RLB Marg Manasa
-
-      </span>
+<span>
+🎓 Admissions Open for Session 2026-27 |
+📚 Classes 9th, 10th, 11th, 12th & B.Sc. |
+🏆 Expert Faculty • Regular Tests • Quality Study Material
+</span>
 
     </div>
 
@@ -733,185 +785,144 @@
      QUICK ACCESS
 ====================== -->
 
-<section class="button-section">
+<!-- ======================
+     QUICK ACCESS (REDESIGNED)
+====================== -->
 
+<!-- ======================
+     QUICK ACCESS (FINAL CLEAN STRUCTURE)
+====================== -->
+
+<section class="button-section">
   <div class="container">
 
     <div class="section-title">
-
       <h2>Quick Access</h2>
-
-      <p>
-        सभी महत्वपूर्ण सेक्शन यहाँ उपलब्ध हैं
-      </p>
-
+      <p>सभी महत्वपूर्ण सेवाएँ और छात्र सुविधाएँ एक ही जगह</p>
     </div>
 
     <div class="row g-4">
 
-      <div class="col-lg-3 col-md-4 col-6">
+      <!-- ================= INSTITUTE ================= -->
+      <div class="col-12">
+        <h5 class="mb-3 fw-bold text-secondary">🏫 Institute</h5>
+      </div>
 
-        <a href="src/about.html"
-          class="menu-card"
+      <div class="col-lg-3 col-md-4 col-6">
+        <a href="src/about.html" class="menu-card"
           style="background:linear-gradient(to right,#2d5ba7,#2874f0);">
-
           <i class="bi bi-info-circle-fill"></i>
-
           <h5>About Us</h5>
-
         </a>
-
       </div>
 
       <div class="col-lg-3 col-md-4 col-6">
-
-        <a href="src/why_pal.html"
-          class="menu-card"
+        <a href="src/why_pal.html" class="menu-card"
           style="background:linear-gradient(to right,#55851b,#6ebd0f);">
-
           <i class="bi bi-stars"></i>
-
-          <h5>Why Choose Us</h5>
-
+          <h5>Why Us</h5>
         </a>
-
       </div>
 
       <div class="col-lg-3 col-md-4 col-6">
-
-        <a href="src/fees_and_timing.html"
-          class="menu-card"
-          style="background:linear-gradient(to right,#0f766e,#14b8a6);">
-
-          <i class="bi bi-book-fill"></i>
-
-          <h5>Our Courses</h5>
-
-        </a>
-
-      </div>
-
-      <div class="col-lg-3 col-md-4 col-6">
-
-        <a href="src/contect_us.html"
-          class="menu-card"
-          style="background:linear-gradient(to right,#c71d1d,#ff0000);">
-
-          <i class="bi bi-telephone-fill"></i>
-
-          <h5>Contact Us</h5>
-
-        </a>
-
-      </div>
-
-      <div class="col-lg-3 col-md-4 col-6">
-
-        <a href="src/daily_update.html"
-          class="menu-card"
-          style="background:linear-gradient(to right,#893229,#f46c5e);">
-
-          <i class="bi bi-bell-fill"></i>
-
-          <h5>Updates</h5>
-
-        </a>
-
-      </div>
-
-      <div class="col-lg-3 col-md-4 col-6">
-
-        <a href="src/about2.html"
-          class="menu-card"
+        <a href="src/about2.html" class="menu-card"
           style="background:linear-gradient(to right,#533a8f,#9673EB);">
-
           <i class="bi bi-images"></i>
-
-          <h5>Gallery</h5>
-
+          <h5>Campus Gallery</h5>
         </a>
-
       </div>
 
       <div class="col-lg-3 col-md-4 col-6">
-
-        <a href="src/testimonial_2.html"
-          class="menu-card"
-          style="background:linear-gradient(to right,#8a9a5b,#c7d95c);">
-
-          <i class="bi bi-trophy-fill"></i>
-
-          <h5>Our Achievers</h5>
-
+        <a href="src/contact_us.html" class="menu-card"
+          style="background:linear-gradient(to right,#c71d1d,#ff0000);">
+          <i class="bi bi-telephone-fill"></i>
+          <h5>Contact</h5>
         </a>
+      </div>
 
+      <!-- ================= ACADEMICS ================= -->
+      <div class="col-12 mt-4">
+        <h5 class="mb-3 fw-bold text-secondary">📘 Academics</h5>
       </div>
 
       <div class="col-lg-3 col-md-4 col-6">
-
-        <a href="src/reviews.html"
-          class="menu-card"
-          style="background:linear-gradient(to right,#1f7a6b,#00c9b7);">
-
-          <i class="bi bi-chat-left-text-fill"></i>
-
-          <h5>Reviews</h5>
-
+        <a href="src/fees_and_timing.html" class="menu-card"
+          style="background:linear-gradient(to right,#0f766e,#14b8a6);">
+          <i class="bi bi-book-fill"></i>
+          <h5>Fees & Schedule</h5>
         </a>
-
       </div>
+      
+<div class="col-lg-3 col-md-4 col-6">
+  <a href="src/syllabus.html" class="menu-card"
+    style="background:linear-gradient(to right,#f59e0b,#fbbf24);">
 
-      <div class="col-lg-6 col-md-6">
+    <i class="bi bi-diagram-3-fill"></i>
+    <h5>Syllabus</h5>
 
-        <a href="src/pal_study_notes.html"
-          class="menu-card"
+  </a>
+</div>
+
+      <div class="col-lg-3 col-md-4 col-6">
+        <a href="src/pal_study_notes.html" class="menu-card"
           style="background:linear-gradient(to right,#8b0000,#d40000);">
-
           <i class="bi bi-journal-bookmark-fill"></i>
-
-          <h5>Pal Study Notes</h5>
-
+          <h5>Study Notes</h5>
         </a>
-
       </div>
 
-      <div class="col-lg-3 col-md-6">
+      <div class="col-lg-3 col-md-4 col-6">
+        <a href="src/daily_update.html" class="menu-card"
+          style="background:linear-gradient(to right,#893229,#f46c5e);">
+          <i class="bi bi-bell-fill"></i>
+          <h5>Updates</h5>
+        </a>
+      </div>
 
-        <a href="src/pal_study_center/signup.html"
-          class="menu-card"
+      <!-- ================= STUDENT ZONE ================= -->
+      <div class="col-12 mt-4">
+        <h5 class="mb-3 fw-bold text-secondary">👨‍🎓 Student Zone</h5>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <a href="src/pal_study_center/signup.html" class="menu-card"
           style="background:linear-gradient(to right,#7c3aed,#9333ea);">
-
           <i class="bi bi-pencil-square"></i>
-
           <h5>Apply Now</h5>
-
         </a>
-
       </div>
 
-      <div class="col-lg-3 col-md-6">
-
-        <a href="src/pal_study_center/login.html"
-          class="menu-card"
+      <div class="col-lg-4 col-md-6">
+        <a href="src/pal_study_center/login.html" class="menu-card"
           style="background:linear-gradient(to right,#0f172a,#334155);">
-
           <i class="bi bi-person-circle"></i>
-
-          <h5>Student Corner</h5>
-
+          <h5>Student Login</h5>
         </a>
+      </div>
 
+      <!-- ================= SUCCESS ================= -->
+      <div class="col-12 mt-4">
+        <h5 class="mb-3 fw-bold text-secondary">🏆 Success & Feedback</h5>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <a href="src/testimonial_2.html" class="menu-card"
+          style="background:linear-gradient(to right,#8a9a5b,#c7d95c);">
+          <i class="bi bi-trophy-fill"></i>
+          <h5>🏆 Results & Achievers</h5>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <a href="src/reviews.html" class="menu-card"
+          style="background:linear-gradient(to right,#1f7a6b,#00c9b7);">
+          <i class="bi bi-chat-left-text-fill"></i>
+          <h5>⭐ Student Reviews</h5>
+        </a>
       </div>
 
     </div>
-
-
   </div>
-
-    </div>
-
-  </div>
-
 </section>
 
 <!-- ======================
@@ -924,23 +935,33 @@
 
     <div class="about-box">
 
-      <h2>About Pal Study Center</h2>
+<h2>हमारे बारे में</h2>
 
-      <p>
+<p>
+पाल स्टडी सेंटर विद्यार्थियों को गुणवत्तापूर्ण शिक्षा, अनुभवी मार्गदर्शन एवं उत्कृष्ट शैक्षणिक वातावरण प्रदान करने के लिए समर्पित है। नियमित टेस्ट, अध्ययन सामग्री और व्यक्तिगत सहयोग के माध्यम से हम प्रत्येक विद्यार्थी को सफलता की ओर अग्रसर करने का प्रयास करते हैं।
+</p>
 
-        पाल स्टडी सेंटर छात्रों को बेहतर शिक्षा,
-        अनुभवी शिक्षक, नियमित टेस्ट और
-        उच्च गुणवत्ता वाले नोट्स प्रदान करता है।
-in
-        हमारा उद्देश्य प्रत्येक छात्र को
-        सफल बनाना और उनके भविष्य को
-        उज्ज्वल दिशा देना है।
-
-      </p>
+<a href="src/about.html" class="btn btn-primary mt-3">
+Know More
+</a>
 
     </div>
 
   </div>
+
+</section>
+<section class="cta">
+
+<h2>Admission Open 2026-27</h2>
+
+<p>
+सीमित सीटें उपलब्ध हैं। आज ही प्रवेश के लिए आवेदन करें।
+</p>
+
+<a href="src/pal_study_center/signup.html"
+class="cta-btn">
+Apply Now
+</a>
 
 </section>
 
@@ -950,27 +971,37 @@ in
 
 <footer id="contact">
 
-  <div class="container text-center">
+<div class="container">
 
-    <h3 class="footer-title">
-      पाल स्टडी सेंटर
-    </h3>
+<div class="row">
 
-    <p class="footer-text">
+<div class="col-lg-4">
+<h3>पाल स्टडी सेंटर</h3>
+<p>Learn • Grow • Succeed</p>
+</div>
 
-      Learn • Grow • Succeed
+<div class="col-lg-4">
+<h5>Contact</h5>
+<p>📍 RLB Marg, Manasa</p>
+<p>📞 +91 9425123350</p>
+</div>
 
-    </p>
+<div class="col-lg-4">
+<h5>Follow Us</h5>
+<p>
+<i class="bi bi-facebook"></i>
+<i class="bi bi-instagram ms-3"></i>
+<i class="bi bi-youtube ms-3"></i>
+</p>
+</div>
 
-    <div class="footer-bottom">
+</div>
 
-      © 2026 Pal Study Center
-      <br>
-      Designed With ❤️ For Modern Education
+<div class="footer-bottom">
+© 2026 Pal Study Center | All Rights Reserved
+</div>
 
-    </div>
-
-  </div>
+</div>
 
 </footer>
 

@@ -1,5 +1,5 @@
-  // url = "http://localhost:3000"
-url = "https://study-center.onrender.com"
+  
+
 $(document).ready(function () {
   $(document).ajaxSend(function() {
     $("#overlay").fadeIn(300);
@@ -20,7 +20,7 @@ $(document).ready(function () {
     } else {
         data = { phone: phone_number, profile_link: profile_link };
         $.ajax({
-          url: `${url}/UpdateProfileLink`,
+          url: getApiUrl(CONFIG.API.UPDATE_PROFILE_LINK),
           type: 'PATCH',
           data: data,
           contentType: 'application/x-www-form-urlencoded; charset=UTF-8',

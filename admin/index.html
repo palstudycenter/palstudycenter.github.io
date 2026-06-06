@@ -27,7 +27,7 @@
     // Check if user is logged in
     const username = sessionStorage.getItem("name");
     if (!username) {
-      window.location.href = "../src/signup_and_login/login_form.html";
+      window.location.href = "../../src/pal_study_center/login.html";
     }
   </script>
 </head>
@@ -80,7 +80,7 @@
     document.getElementById("user").textContent = username;
     function logout() {
       sessionStorage.clear();
-      window.location.href = "../src/signup_and_login/login_form.html";
+      window.location.href = "../../src/pal_study_center/login.html";
     }
   </script>
   <script src="../../assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -95,6 +95,7 @@
 
   <!-- Template Main JS File -->
   <script src="../../assets/js/main.js"></script>
+  <script src="../../config.js"></script>
   <script src="../../script.js"></script>
 </body>
 

@@ -1,8 +1,8 @@
-url = "https://study-center.onrender.com"
+
 $(document).ready(function () {
   var students;
   $.ajax({
-    url: `${url}/students`,
+    url: getApiUrl(CONFIG.API.GET_STUDENTS),
     type: 'GET',
     contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
     success: function (response) {

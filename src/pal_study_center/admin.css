@@ -1,0 +1,221 @@
+/* =========================
+   GLOBAL STYLE
+========================= */
+body{
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg,#f5f7fb,#eef3ff);
+  margin:0;
+  padding-top:70px;
+  color:#1f2d3d;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.glass-nav{
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(10px);
+  box-shadow:0 4px 20px rgba(0,0,0,0.08);
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:1000;
+  padding:12px 20px;
+}
+
+/* =========================
+   CARDS
+========================= */
+.card-box{
+  background:white;
+  border-radius:18px;
+  padding:22px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.06);
+  margin-bottom:20px;
+  transition:0.25s;
+}
+
+.card-box:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 35px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   STUDENT LIST
+========================= */
+.student-card{
+  padding:14px;
+  border:1px solid #eee;
+  border-radius:14px;
+  cursor:pointer;
+  margin-bottom:10px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  transition:0.2s;
+}
+
+.student-card:hover{
+  background:#f0f6ff;
+  border-color:#cfe2ff;
+}
+
+/* =========================
+   FULL SCREEN MODAL
+========================= */
+.profile-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.55);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+  padding:20px;
+  backdrop-filter: blur(6px);
+}
+
+.profile-modal{
+  width:100%;
+  max-width:540px;
+  max-height:90vh;
+  overflow-y:auto;
+  background:white;
+  border-radius:20px;
+  padding:25px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.25);
+  animation:fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn{
+  from{transform:scale(0.9);opacity:0;}
+  to{transform:scale(1);opacity:1;}
+}
+
+.profile-img{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-bottom:10px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+button{
+  border:none;
+  padding:10px 14px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:600;
+  transition:0.2s;
+}
+
+button.primary{
+  background:#2563eb;
+  color:white;
+}
+
+button.primary:hover{
+  background:#1e4ed8;
+}
+
+button.danger{
+  background:#ef4444;
+  color:white;
+}
+
+button:hover{
+  transform:scale(1.03);
+}
+
+/* =========================
+   SWITCH UI
+========================= */
+.subject-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 0;
+  border-bottom:1px solid #eee;
+}
+
+.switch{
+  position:relative;
+  display:inline-block;
+  width:44px;
+  height:24px;
+}
+
+.switch input{
+  opacity:0;
+  width:0;
+  height:0;
+}
+
+.slider{
+  position:absolute;
+  cursor:pointer;
+  top:0;left:0;right:0;bottom:0;
+  background:#ccc;
+  transition:.4s;
+  border-radius:24px;
+}
+
+.slider:before{
+  position:absolute;
+  content:"";
+  height:18px;
+  width:18px;
+  left:3px;
+  bottom:3px;
+  background:white;
+  transition:.4s;
+  border-radius:50%;
+}
+
+input:checked + .slider{
+  background:#28a745;
+}
+
+input:checked + .slider:before{
+  transform:translateX(20px);
+}
+
+.switch-text{
+  font-size:13px;
+  font-weight:600;
+  margin-left:10px;
+}
+
+input:checked ~ .switch-text{
+  color:green;
+}
+
+/* =========================
+   MASTER CONTROL
+========================= */
+.master-control{
+  margin:15px 0;
+  padding:14px;
+  border:1px solid #eee;
+  border-radius:14px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#fafafa;
+}
+
+/* =========================
+   UTILITIES
+========================= */
+.hidden{
+  display:none;
+}
+
+#dashStatus{
+  font-size:13px;
+  font-weight:600;
+}

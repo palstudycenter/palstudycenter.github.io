@@ -28,7 +28,7 @@
     const username = sessionStorage.getItem("name");
 
     if (!username) {
-      window.location.href = "../signup_and_login/login_form.html";
+      window.location.href = "../pal_study_center/login.html";
     }
   </script>
   <style>
@@ -113,7 +113,7 @@
     document.getElementById("user").textContent = username;
     function logout() {
       sessionStorage.clear();
-      window.location.href = "../signup_and_login/login_form.html";
+      window.location.href = "../pal_study_center/login.html";
     }
     const href = sessionStorage.getItem("profile_link");
     const disable_profile = sessionStorage.getItem("disable_profile");
@@ -142,6 +142,7 @@
 
   <!-- Template Main JS File -->
   <script src="../../assets/js/main.js"></script>
+  <script src="../../config.js"></script>
   <script src="../../script.js"></script>
 
   <a href="https://wa.me/919425123350" target="_blank" class="whatsapp-button">
