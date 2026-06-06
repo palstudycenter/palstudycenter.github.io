@@ -18,6 +18,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
+  html{
+  font-size:18px;
+}
 
     *{
       margin:0;
@@ -189,14 +192,16 @@
   justify-content:center;
   text-align:center;
   color:white;
+
   background:
   linear-gradient(rgba(15,23,42,.55),rgba(15,23,42,.55)),
   url(https://images.unsplash.com/photo-1503676260728-1c00da094a0b);
+
   background-size:cover;
   background-position:center;
+
   padding:100px 0 40px;
-}
-.hero{
+
   position:relative;
   overflow:hidden;
 }
@@ -689,7 +694,7 @@
       <ul class="navbar-nav ms-auto align-items-lg-center">
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
+          <a class="nav-link" href="#Quick Access">Quick Access</a>
         </li>
 
         <li class="nav-item">
@@ -780,177 +785,144 @@
      QUICK ACCESS
 ====================== -->
 
-<section class="button-section">
+<!-- ======================
+     QUICK ACCESS (REDESIGNED)
+====================== -->
 
+<!-- ======================
+     QUICK ACCESS (FINAL CLEAN STRUCTURE)
+====================== -->
+
+<section class="button-section">
   <div class="container">
 
     <div class="section-title">
-
       <h2>Quick Access</h2>
-
-<p>
-पाल स्टडी सेंटर की सभी महत्वपूर्ण सेवाओं, पाठ्यक्रमों, उपलब्धियों एवं छात्र सुविधाओं तक त्वरित पहुँच प्राप्त करें।
-</p>
-
+      <p>सभी महत्वपूर्ण सेवाएँ और छात्र सुविधाएँ एक ही जगह</p>
     </div>
 
     <div class="row g-4">
 
-      <div class="col-lg-3 col-md-4 col-6">
+      <!-- ================= INSTITUTE ================= -->
+      <div class="col-12">
+        <h5 class="mb-3 fw-bold text-secondary">🏫 Institute</h5>
+      </div>
 
-        <a href="src/about.html"
-          class="menu-card"
+      <div class="col-lg-3 col-md-4 col-6">
+        <a href="src/about.html" class="menu-card"
           style="background:linear-gradient(to right,#2d5ba7,#2874f0);">
-
           <i class="bi bi-info-circle-fill"></i>
-
           <h5>About Us</h5>
-
         </a>
-
       </div>
 
       <div class="col-lg-3 col-md-4 col-6">
-
-        <a href="src/why_pal.html"
-          class="menu-card"
+        <a href="src/why_pal.html" class="menu-card"
           style="background:linear-gradient(to right,#55851b,#6ebd0f);">
-
           <i class="bi bi-stars"></i>
-
-          <h5>Why Choose Us</h5>
-
+          <h5>Why Us</h5>
         </a>
-
       </div>
 
       <div class="col-lg-3 col-md-4 col-6">
-
-        <a href="src/fees_and_timing.html"
-          class="menu-card"
-          style="background:linear-gradient(to right,#0f766e,#14b8a6);">
-
-          <i class="bi bi-book-fill"></i>
-
-          <h5>Our Courses</h5>
-
-        </a>
-
-      </div>
-
-      <div class="col-lg-3 col-md-4 col-6">
-
-        <a href="src/contact_us.html"
-          class="menu-card"
-          style="background:linear-gradient(to right,#c71d1d,#ff0000);">
-
-          <i class="bi bi-telephone-fill"></i>
-
-          <h5>Contact Us</h5>
-
-        </a>
-
-      </div>
-
-      <div class="col-lg-3 col-md-4 col-6">
-
-        <a href="src/daily_update.html"
-          class="menu-card"
-          style="background:linear-gradient(to right,#893229,#f46c5e);">
-
-          <i class="bi bi-bell-fill"></i>
-
-          <h5>Updates</h5>
-
-        </a>
-
-      </div>
-
-      <div class="col-lg-3 col-md-4 col-6">
-
-        <a href="src/about2.html"
-          class="menu-card"
+        <a href="src/about2.html" class="menu-card"
           style="background:linear-gradient(to right,#533a8f,#9673EB);">
-
           <i class="bi bi-images"></i>
-
-          <h5>Gallery</h5>
-
+          <h5>Campus Gallery</h5>
         </a>
-
       </div>
 
       <div class="col-lg-3 col-md-4 col-6">
-
-        <a href="src/testimonial_2.html"
-          class="menu-card"
-          style="background:linear-gradient(to right,#8a9a5b,#c7d95c);">
-
-          <i class="bi bi-trophy-fill"></i>
-
-          <h5>Our Achievers</h5>
-
+        <a href="src/contact_us.html" class="menu-card"
+          style="background:linear-gradient(to right,#c71d1d,#ff0000);">
+          <i class="bi bi-telephone-fill"></i>
+          <h5>Contact</h5>
         </a>
+      </div>
 
+      <!-- ================= ACADEMICS ================= -->
+      <div class="col-12 mt-4">
+        <h5 class="mb-3 fw-bold text-secondary">📘 Academics</h5>
       </div>
 
       <div class="col-lg-3 col-md-4 col-6">
-
-        <a href="src/reviews.html"
-          class="menu-card"
-          style="background:linear-gradient(to right,#1f7a6b,#00c9b7);">
-
-          <i class="bi bi-chat-left-text-fill"></i>
-
-          <h5>Reviews</h5>
-
+        <a href="src/fees_and_timing.html" class="menu-card"
+          style="background:linear-gradient(to right,#0f766e,#14b8a6);">
+          <i class="bi bi-book-fill"></i>
+          <h5>Fees & Schedule</h5>
         </a>
-
       </div>
+      
+<div class="col-lg-3 col-md-4 col-6">
+  <a href="src/syllabus.html" class="menu-card"
+    style="background:linear-gradient(to right,#f59e0b,#fbbf24);">
 
-      <div class="col-lg-6 col-md-6">
+    <i class="bi bi-diagram-3-fill"></i>
+    <h5>Syllabus</h5>
 
-        <a href="src/pal_study_notes.html"
-          class="menu-card"
+  </a>
+</div>
+
+      <div class="col-lg-3 col-md-4 col-6">
+        <a href="src/pal_study_notes.html" class="menu-card"
           style="background:linear-gradient(to right,#8b0000,#d40000);">
-
           <i class="bi bi-journal-bookmark-fill"></i>
-
-          <h5>Pal Study Notes</h5>
-
+          <h5>Study Notes</h5>
         </a>
-
       </div>
 
-      <div class="col-lg-3 col-md-6">
+      <div class="col-lg-3 col-md-4 col-6">
+        <a href="src/daily_update.html" class="menu-card"
+          style="background:linear-gradient(to right,#893229,#f46c5e);">
+          <i class="bi bi-bell-fill"></i>
+          <h5>Updates</h5>
+        </a>
+      </div>
 
-        <a href="src/pal_study_center/signup.html"
-          class="menu-card"
+      <!-- ================= STUDENT ZONE ================= -->
+      <div class="col-12 mt-4">
+        <h5 class="mb-3 fw-bold text-secondary">👨‍🎓 Student Zone</h5>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <a href="src/pal_study_center/signup.html" class="menu-card"
           style="background:linear-gradient(to right,#7c3aed,#9333ea);">
-
           <i class="bi bi-pencil-square"></i>
-
           <h5>Apply Now</h5>
-
         </a>
-
       </div>
 
-      <div class="col-lg-3 col-md-6">
-
-        <a href="src/pal_study_center/login.html"
-          class="menu-card"
+      <div class="col-lg-4 col-md-6">
+        <a href="src/pal_study_center/login.html" class="menu-card"
           style="background:linear-gradient(to right,#0f172a,#334155);">
-
           <i class="bi bi-person-circle"></i>
-
-          <h5>Student Corner</h5>
-
+          <h5>Student Login</h5>
         </a>
+      </div>
 
+      <!-- ================= SUCCESS ================= -->
+      <div class="col-12 mt-4">
+        <h5 class="mb-3 fw-bold text-secondary">🏆 Success & Feedback</h5>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <a href="src/testimonial_2.html" class="menu-card"
+          style="background:linear-gradient(to right,#8a9a5b,#c7d95c);">
+          <i class="bi bi-trophy-fill"></i>
+          <h5>🏆 Results & Achievers</h5>
+        </a>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <a href="src/reviews.html" class="menu-card"
+          style="background:linear-gradient(to right,#1f7a6b,#00c9b7);">
+          <i class="bi bi-chat-left-text-fill"></i>
+          <h5>⭐ Student Reviews</h5>
+        </a>
       </div>
 
     </div>
+  </div>
 </section>
 
 <!-- ======================

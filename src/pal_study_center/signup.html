@@ -97,7 +97,7 @@
 
             max-width: 500px;
 
-            margin: auto;
+            margin: 0 auto;
 
             position: relative;
 
@@ -321,6 +321,24 @@
 
         }
 
+        .status-text {
+            margin-top: 14px;
+            font-size: 14px;
+            color: #bfdbfe;
+            min-height: 20px;
+            text-align: center;
+        }
+
+        .login-link {
+            color: #93c5fd;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .login-link:hover {
+            text-decoration: underline;
+        }
+
         /* FOOTER */
 
         .footer {
@@ -494,6 +512,12 @@
                 Create Account
 
             </button>
+
+            <div id="signupStatus" class="status-text" style="display:none;"></div>
+
+            <div class="text-center mt-3">
+                Already have an account? <a class="login-link" href="login.html">Login</a>
+            </div>
 
             <!-- FOOTER -->
 
