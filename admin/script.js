@@ -1,5 +1,5 @@
-// url = "http://localhost:3000"
-url = "https://study-center.onrender.com"
+
+
 $(document).ready(function () {
   $(document).ajaxSend(function() {
     $("#overlay").fadeIn(300);　
@@ -11,7 +11,7 @@ $(document).ready(function () {
 
     // Fetch students JSON
     // fetch(`http://127.0.0.1:/5500/json_data/students.json`)
-    fetch(`${url}/students`)
+    fetch(getApiUrl(CONFIG.API.GET_STUDENTS))
       .then(response => response.json())
       .then(data => {
         const students = data.res || [];
@@ -49,7 +49,7 @@ $(document).ready(function () {
     data = { phone: phone, disable_profile: disable_profile };
 
     $.ajax({
-      url: `${url}/DisableProfile`,
+      url: getApiUrl(CONFIG.API.DISABLE_PROFILE),
       type: 'PATCH',
       data: data,
       contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
@@ -106,7 +106,7 @@ $(document).ready(function () {
     }).then((result) => {
       if (result.isConfirmed) {
         $.ajax({
-          url: `${url}/DeleteStudent`,
+          url: getApiUrl(CONFIG.API.DELETE_STUDENT),
           type: 'DELETE',
           data: data,
           contentType: 'application/x-www-form-urlencoded; charset=UTF-8',

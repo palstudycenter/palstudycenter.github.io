@@ -1,11 +1,11 @@
-const STUDENT_API_URL = 'http://localhost:3000/students';
+// Import from config.js
 let students = [];
 let currentIndex = null;
 
 /* LOAD STUDENTS FROM API */
 async function loadStudents() {
   try {
-    const response = await fetch(STUDENT_API_URL);
+    const response = await fetch(getApiUrl(CONFIG.API.GET_STUDENTS));
     const json = await response.json();
     
     if (json.status && Array.isArray(json.res)) {
@@ -31,12 +31,13 @@ function displayStudents() {
 
   students.forEach((u, i) => {
     let okClass = cls === "" || u.class === cls;
+    let okBoard = board === "" || u.board === board;
 
-    if (okClass) {
+    if (okClass && okBoard) {
       list.innerHTML += `
         <div class="student-card" onclick="openProfile(${i})">
           <b>${u.name}</b><br>
-          <small>${u.class}</small>
+          <small>${u.class} ${u.board ? '| ' + u.board : ''}</small>
         </div>
       `;
     }
@@ -56,6 +57,7 @@ function openProfile(i) {
   document.getElementById("profileOverlay").classList.remove("hidden");
   document.getElementById("pName").innerText = u.name;
   document.getElementById("pPhone").innerText = u.phone;
+  document.getElementById("pBoard").innerText = u.board ? u.board : "Board not set";
   document.getElementById("pClass").innerText = u.class;
 
   document.getElementById("pImg").src =

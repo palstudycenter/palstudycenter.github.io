@@ -1,5 +1,3 @@
-// url = "http://localhost:3000"
-url = "https://study-center.onrender.com"
 $(document).ready(function () {
   $(document).ajaxSend(function() {
     $("#overlay").fadeIn(300);　
@@ -43,7 +41,7 @@ $(document).ready(function () {
      else {
         data = { name: name, phone: phone, usertype: user_type, email: email, fathername: f_name, class: st_class, address: address, board: st_board, password: password };
         $.ajax({
-          url: `${url}/createStudent`,
+          url: getApiUrl(CONFIG.API.CREATE_STUDENT),
           type: 'POST',
           data: data,
           contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
@@ -110,7 +108,7 @@ $(document).ready(function () {
     } else {
         data = { email: email, password: password };
         $.ajax({
-          url: `${url}/StudentLogin`,
+          url: getApiUrl(CONFIG.API.STUDENT_LOGIN),
           type: 'POST',
           data: data,
           contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
@@ -179,7 +177,7 @@ $(document).ready(function () {
              class: request_class
             };
     $.ajax({
-      url: `${url}/Dashboard/createDashboard`,
+      url: getApiUrl(CONFIG.API.CREATE_DASHBOARD),
       type: 'POST',
       data: data,
       contentType: 'application/x-www-form-urlencoded; charset=UTF-8',

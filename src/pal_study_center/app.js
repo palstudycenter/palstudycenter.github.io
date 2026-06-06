@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:3000';
+// Import BASE_URL from config.js
 
 //
 // ==========================
@@ -12,15 +12,16 @@ async function signup(){
     phone: document.getElementById("phone").value.trim(),
     password: document.getElementById("password").value,
     "class": document.getElementById("class").value,
+    board: document.getElementById("board").value,
   };
 
-  if (!student.name || !student.phone || !student.password || !student.class) {
+  if (!student.name || !student.phone || !student.password || !student.class || !student.board) {
     alert("Please fill in all fields.");
     return;
   }
 
   try {
-    const response = await fetch(`${BASE_URL}/createStudent`, {
+    const response = await fetch(getApiUrl(CONFIG.API.CREATE_STUDENT), {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -64,7 +65,7 @@ async function login(){
   }
 
   try {
-    const response = await fetch(`${BASE_URL}/StudentLogin`, {
+    const response = await fetch(getApiUrl(CONFIG.API.STUDENT_LOGIN), {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
