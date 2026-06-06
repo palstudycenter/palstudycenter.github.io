@@ -1,3 +1,8 @@
+const TEST_RECORD_LINKS = {
+  'Class 12th': 'https://docs.google.com/spreadsheets/d/13NXpZ63gQ3iGfL9JmVlhVTlUgeLJP-IRt7f1D_hO2c4/edit?gid=1510681143#gid=1510681143',
+  'Class 11th': 'https://docs.google.com/spreadsheets/d/1vcGUNyIZ5n_lQXFWmsbfyGN-S9U8rGOQ/edit?gid=1827286670#gid=1827286670'
+};
+
 const user = JSON.parse(localStorage.getItem("currentUser"));
 
 if (!user) {
@@ -125,6 +130,19 @@ async function openFeesModal(event) {
     const feesModal = new bootstrap.Modal(document.getElementById('feesModal'));
     feesModal.show();
     await loadFeesData();
+}
+
+function openTestRecord(event) {
+    if (event) event.preventDefault();
+    const className = user.class || '';
+    const url = TEST_RECORD_LINKS[className];
+
+    if (url) {
+        window.open(url, '_blank');
+        return;
+    }
+
+    alert('Test record link is not available for your class.');
 }
 
 async function loadFeesData() {

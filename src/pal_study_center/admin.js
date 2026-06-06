@@ -50,6 +50,11 @@ function filterStudents() {
 }
 
 /* NOTICE PUBLISH */
+const TEST_SERIES_LINKS = {
+  'Class 12th': 'https://docs.google.com/spreadsheets/d/13NXpZ63gQ3iGfL9JmVlhVTlUgeLJP-IRt7f1D_hO2c4/edit?gid=1510681143#gid=1510681143',
+  'Class 11th': 'https://docs.google.com/spreadsheets/d/1vcGUNyIZ5n_lQXFWmsbfyGN-S9U8rGOQ/edit?gid=1827286670#gid=1827286670'
+};
+
 async function publishNotice() {
   const board = document.getElementById('filterBoard')?.value || '';
   const cls = document.getElementById('filterClass')?.value || '';
@@ -79,6 +84,21 @@ async function publishNotice() {
     console.error('Error publishing notice:', error);
     alert('Unable to publish notice. Please try again later.');
   }
+}
+
+function openTestSeriesPopup(event) {
+  if (event) event.preventDefault();
+  const content = document.getElementById('testSeriesModalContent');
+  const rows = Object.entries(TEST_SERIES_LINKS).map(([cls, url]) => `
+    <div class="mb-3">
+      <h6 class="mb-1">${cls}</h6>
+      <a href="${url}" target="_blank" rel="noreferrer" class="link-primary">Open Link</a>
+    </div>
+  `).join('');
+
+  content.innerHTML = rows || '<p class="text-muted">No test series links available.</p>';
+  const modal = new bootstrap.Modal(document.getElementById('testSeriesModal'));
+  modal.show();
 }
 
 /* NOTICE LIST AND DELETE */

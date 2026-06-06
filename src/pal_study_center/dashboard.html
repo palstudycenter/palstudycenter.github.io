@@ -23,6 +23,7 @@
 <ul class="navbar-nav ms-auto">
 <li class="nav-item"><a class="nav-link" href="#students">Students</a></li>
 <li class="nav-item"><a class="nav-link" href="#materials">Material</a></li>
+<li class="nav-item"><a class="nav-link" href="#" onclick="openTestSeriesPopup(event)">Test Series</a></li>
 <li class="nav-item"><a class="nav-link" href="#" onclick="openNoticesPopup(event)">Notice</a></li>
 <li class="nav-item"><a class="nav-link text-danger" href="login.html">Logout</a></li>
 </ul>
@@ -132,6 +133,24 @@
       </div>
       <div class="modal-body">
         <div id="noticeModalContent">Loading notices...</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Test Series Modal -->
+<div class="modal fade" id="testSeriesModal" tabindex="-1" aria-labelledby="testSeriesModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="testSeriesModalLabel">Test Series Links</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div id="testSeriesModalContent">Loading links...</div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
