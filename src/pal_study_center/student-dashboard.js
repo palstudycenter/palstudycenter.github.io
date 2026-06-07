@@ -16,10 +16,41 @@ const container = document.getElementById("subjectsContainer");
 studentName.innerText = `Welcome ${user.name || 'Student'}`;
 studentInfo.innerText = `${user.board || 'Unknown Board'} | ${user.class || 'Unknown Class'}`;
 
+/* ── Subject card visual config ─────────────────────────────────────── */
+const SUBJECT_CONFIG = {
+    'physics':     { icon: 'bi-lightning-charge-fill', gradient: 'linear-gradient(135deg,#1e3a8a,#2563eb)' },
+    'chemistry':   { icon: 'bi-eyedropper',            gradient: 'linear-gradient(135deg,#4f46e5,#7c3aed)' },
+    'mathematics': { icon: 'bi-calculator-fill',       gradient: 'linear-gradient(135deg,#0f172a,#1e3a8a)' },
+    'maths':       { icon: 'bi-calculator-fill',       gradient: 'linear-gradient(135deg,#0f172a,#1e3a8a)' },
+    'biology':     { icon: 'bi-flower1',               gradient: 'linear-gradient(135deg,#065f46,#059669)' },
+    'english':     { icon: 'bi-translate',             gradient: 'linear-gradient(135deg,#1e40af,#3b82f6)' },
+    'hindi':       { icon: 'bi-journal-text',          gradient: 'linear-gradient(135deg,#7c2d12,#dc2626)' },
+    'history':     { icon: 'bi-hourglass-split',       gradient: 'linear-gradient(135deg,#78350f,#d97706)' },
+    'geography':   { icon: 'bi-globe2',                gradient: 'linear-gradient(135deg,#134e4a,#0d9488)' },
+    'economics':   { icon: 'bi-graph-up-arrow',        gradient: 'linear-gradient(135deg,#1e3a8a,#0891b2)' },
+    'accountancy': { icon: 'bi-cash-coin',             gradient: 'linear-gradient(135deg,#14532d,#16a34a)' },
+    'accounts':    { icon: 'bi-cash-coin',             gradient: 'linear-gradient(135deg,#14532d,#16a34a)' },
+    'computer':    { icon: 'bi-pc-display-horizontal', gradient: 'linear-gradient(135deg,#312e81,#4f46e5)' },
+    'science':     { icon: 'bi-cpu-fill',              gradient: 'linear-gradient(135deg,#0c4a6e,#0369a1)' },
+    'social':      { icon: 'bi-people-fill',           gradient: 'linear-gradient(135deg,#831843,#db2777)' },
+    'political':   { icon: 'bi-bank2',                 gradient: 'linear-gradient(135deg,#1e3a8a,#6366f1)' },
+    'business':    { icon: 'bi-briefcase-fill',        gradient: 'linear-gradient(135deg,#0f172a,#374151)' },
+    'default':     { icon: 'bi-book-fill',             gradient: 'linear-gradient(135deg,#1e3a8a,#2563eb)' }
+};
+
+function getSubjectConfig(name) {
+    const key = name.toLowerCase();
+    for (const [k, v] of Object.entries(SUBJECT_CONFIG)) {
+        if (k !== 'default' && key.includes(k)) return v;
+    }
+    return SUBJECT_CONFIG['default'];
+}
+
 async function loadSubjects() {
     container.innerHTML = `
-        <div class="col-12 text-center py-4 text-muted">
-            Loading subjects...
+        <div class="subjects-empty">
+            <i class="bi bi-hourglass-split"></i>
+            Loading subjects…
         </div>
     `;
 
@@ -44,26 +75,37 @@ async function loadSubjects() {
 
     if (!enabledSubjects.length) {
         container.innerHTML = `
-            <div class="col-12 text-center py-4 text-muted">
-                Access Restricted: Please contact your teacher or administrator to enable subjects for your account.
+            <div class="subjects-empty">
+                <i class="bi bi-lock-fill"></i>
+                <strong>Access Restricted</strong><br>
+                <span style="font-size:.85rem;">Please contact your teacher or administrator to enable subjects for your account.</span>
             </div>
         `;
+
+        const marquee = document.getElementById('marqueeText');
+        if (marquee) {
+            marquee.innerHTML = '⚠️ <b>Student Access Suspended</b> &nbsp;|&nbsp; Your account is currently Inactive (OFF). Please contact the administration for further assistance. &nbsp;|&nbsp; <b>Contact: 91-9425123350</b>';
+        }
+
+        const navTestRecord = document.getElementById('navTestRecord');
+        if (navTestRecord) navTestRecord.style.display = 'none';
+
         return;
     }
 
-    container.innerHTML = '';
-    enabledSubjects.forEach(subject => {
+    container.innerHTML = enabledSubjects.map(subject => {
         const subjectSlug = subject.toLowerCase().replace(/\s+/g, '-') + '.html';
-        container.innerHTML += `
-            <div class="col-md-4 col-6">
-                <a href="${subjectSlug}" class="subject-card" style="background:linear-gradient(to right,#2563eb,#4f46e5)">
-                    <i class="bi bi-book-fill"></i>
+        const cfg = getSubjectConfig(subject);
+        return `
+            <a href="${subjectSlug}" class="subject-card" style="background:${cfg.gradient}">
+                <i class="bi ${cfg.icon} subject-card-icon"></i>
+                <div class="subject-card-body">
                     <h5>${subject}</h5>
-                    <small>Enabled Subject</small>
-                </a>
-            </div>
+                    <small>Open Subject</small>
+                </div>
+            </a>
         `;
-    });
+    }).join('');
 }
 
 loadSubjects();
