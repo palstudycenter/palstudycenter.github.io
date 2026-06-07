@@ -7,33 +7,272 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Poppins,Arial,sans-serif;background:#f4f7fb}
-.navbar{background:rgba(15,23,42,.8);backdrop-filter:blur(10px)}
-.hero{
-min-height:60vh;color:#fff;text-align:center;
-background:linear-gradient(rgba(15,23,42,.6),rgba(15,23,42,.6)),
-url(https://images.unsplash.com/photo-1516321318423-f06f85e504b3);
-background-size:cover;background-position:center;
-padding:110px 15px 40px;
+/* =========================
+   RESET + BASE
+========================= */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
-.profile{width:110px;height:110px;border-radius:50%;border:3px solid #fff;object-fit:cover}
-.upload-btn{background:#2563eb;color:#fff;padding:8px 16px;border-radius:25px;display:inline-block;cursor:pointer;margin-top:10px}
-.hero-marquee{overflow:hidden;white-space:nowrap;margin-top:20px}
-.hero-marquee span{display:inline-block;background:rgba(255,255,255,.15);padding:10px 20px;border-radius:25px;animation:scroll 10s linear infinite}
-@keyframes scroll{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
-.section-title{text-align:center;padding:50px 0 20px}
-.subject-card{border-radius:20px;min-height:140px;display:flex;flex-direction:column;justify-content:center;align-items:center;color:#fff;text-decoration:none;box-shadow:0 8px 22px rgba(0,0,0,.12);transition:.3s}
-.subject-card:hover{transform:translateY(-6px)}
-.subject-card i{font-size:32px;margin-bottom:10px}
-.notice-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
-.notice-card{background:#ffffff;border:1px solid rgba(148,163,184,.18);border-radius:18px;padding:20px;box-shadow:0 12px 30px rgba(15,23,42,.06)}
-.notice-card p{margin:0;color:#334155;line-height:1.7;font-size:.95rem}
-.notice-card.notice-empty{text-align:center;color:#475569;background:#f8fafc}
-.notice-card.notice-loading{display:flex;align-items:center;gap:12px;color:#475569;justify-content:center}
-.notice-header{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:12px}
-.notice-header strong{font-size:1rem;color:#0f172a}
-.notice-header small{color:#64748b;font-size:.82rem}
+
+html,body{
+width:100%;
+overflow-x:hidden;
+font-family:'Poppins',sans-serif;
+background:#f4f7ff;
+color:#0f172a;
+}
+
+/* =========================
+   APP STYLE NAVBAR
+========================= */
+.navbar{
+background:linear-gradient(135deg,#0f172a,#1e3a8a);
+box-shadow:0 4px 20px rgba(0,0,0,.15);
+padding:10px 0;
+}
+
+.navbar-brand span{
+color:#fff;
+font-weight:700;
+}
+
+.nav-link{
+color:#e2e8f0!important;
+font-weight:600;
+border-radius:10px;
+padding:8px 14px!important;
+transition:.3s;
+}
+
+.nav-link:hover{
+background:rgba(255,255,255,.12);
+}
+
+/* =========================
+   HERO (APP HEADER STYLE)
+========================= */
+.hero{
+min-height:320px;
+padding:110px 15px 70px;
+text-align:center;
+color:#fff;
+position:relative;
+
+background:
+linear-gradient(135deg,
+rgba(2,6,23,.92),
+rgba(30,58,138,.85)),
+url("https://images.unsplash.com/photo-1523240795612-9a054b0db644");
+
+background-size:cover;
+background-position:center;
+}
+
+.hero h3{
+font-size:1.9rem;
+font-weight:800;
+}
+
+.hero p{
+opacity:.9;
+}
+
+/* MARQUEE */
+.hero-marquee span{
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(10px);
+padding:10px 18px;
+border-radius:30px;
+display:inline-block;
+animation:scroll 18s linear infinite;
+}
+
+@keyframes scroll{
+0%{transform:translateX(100%);}
+100%{transform:translateX(-100%);}
+}
+
+/* =========================
+   NOTICE CARD (APP STYLE)
+========================= */
+.container.py-4{
+margin-top:-50px;
+position:relative;
+z-index:5;
+}
+
+.notice-wrapper{
+background:#fff;
+border-radius:24px;
+padding:20px;
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+border:1px solid #e2e8f0;
+position:relative;
+overflow:hidden;
+}
+
+.notice-wrapper::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:5px;
+background:linear-gradient(90deg,#2563eb,#1d4ed8,#60a5fa);
+}
+
+.notice-label{
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:6px 14px;
+border-radius:20px;
+background:#eff6ff;
+color:#1d4ed8;
+font-size:.75rem;
+font-weight:700;
+}
+
+.notice-header h2{
+font-size:1.6rem;
+font-weight:800;
+margin-top:10px;
+}
+
+.notice-header p{
+color:#64748b;
+font-size:.9rem;
+}
+
+/* NOTICE GRID (CARD APP STYLE) */
+.notice-grid{
+display:grid;
+grid-template-columns:1fr;
+gap:15px;
+margin-top:15px;
+}
+
+@media(min-width:600px){
+.notice-grid{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media(min-width:992px){
+.notice-grid{
+grid-template-columns:repeat(3,1fr);
+}
+}
+
+.notice-card{
+background:#fff;
+border-radius:16px;
+padding:16px;
+border-left:4px solid #2563eb;
+box-shadow:0 8px 20px rgba(0,0,0,.06);
+transition:.25s;
+}
+
+.notice-card:hover{
+transform:translateY(-5px);
+box-shadow:0 15px 35px rgba(0,0,0,.12);
+}
+
+.notice-card p{
+margin:0;
+color:#475569;
+line-height:1.5;
+font-size:.9rem;
+}
+
+/* =========================
+   SUBJECT GRID (MOBILE APP TILES)
+========================= */
+.container.pb-5{
+margin-top:30px;
+}
+
+.section-title{
+text-align:center;
+padding:30px 10px;
+}
+
+.section-title h2{
+font-size:1.8rem;
+font-weight:900;
+}
+
+.section-title p{
+color:#64748b;
+font-size:.9rem;
+max-width:600px;
+margin:auto;
+}
+
+/* MOBILE APP STYLE TILES */
+.subject-card{
+background:#fff;
+border-radius:20px;
+min-height:150px;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+text-decoration:none;
+color:#0f172a!important;
+
+border:1px solid #e2e8f0;
+
+box-shadow:0 8px 20px rgba(0,0,0,.06);
+transition:.25s;
+}
+
+.subject-card:hover{
+transform:translateY(-8px);
+box-shadow:0 18px 40px rgba(37,99,235,.18);
+border-color:#2563eb;
+}
+
+.subject-card i{
+font-size:40px;
+color:#2563eb;
+margin-bottom:10px;
+}
+
+/* =========================
+   MODAL (MOBILE CLEAN)
+========================= */
+#feesModal .modal-content{
+border-radius:18px;
+overflow:hidden;
+border:none;
+}
+
+#feesModal .modal-header{
+background:linear-gradient(135deg,#0f172a,#1e3a8a);
+color:#fff;
+}
+
+/* =========================
+   MOBILE FIXES
+========================= */
+img{
+max-width:100%;
+height:auto;
+}
+
+::-webkit-scrollbar{
+width:6px;
+}
+
+::-webkit-scrollbar-thumb{
+background:#2563eb;
+border-radius:10px;
+}
 </style>
 </head>
 <body>
@@ -41,8 +280,8 @@ padding:110px 15px 40px;
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
 <div class="container">
 <a class="navbar-brand" href="#">
-    <span style="font-size:40px;font-weight:700;">पाल स्टडी सेंटर  </span>
-    <span style="font-size:32px;font-weight:700;color:#2874f0;"> ERP</span>
+    <span style="font-size:30px;font-weight:700;">पाल </span>
+    <span style="font-size:30px;font-weight:700;color:#2874f0;"> स्टडी सेंटर </span>
 
 </a>
 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
@@ -61,35 +300,6 @@ padding:110px 15px 40px;
 
 <section class="hero">
 
-<div style="display:flex;justify-content:center;align-items:center;flex-direction:column;">
-
-  <div onclick="document.querySelector('#file').click()"
-       style="
-       width:110px;
-       height:110px;
-       border-radius:50%;
-       padding:4px;
-       background:linear-gradient(135deg,#60a5fa,#8b5cf6);
-       box-shadow:0 10px 25px rgba(0,0,0,0.25);
-       cursor:pointer;
-       transition:0.3s;
-       ">
-
-    <img id="profileImg"
-      src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
-      style="
-        width:100%;
-        height:100%;
-        border-radius:50%;
-        object-fit:cover;
-        border:3px solid rgba(255,255,255,0.9);
-      ">
-
-  </div>
-
-  <input id="file" type="file" hidden accept="image/*" onchange="loadImage(event)">
-
-</div>
 <h3 id="studentName"></h3>
 <p id="studentInfo"></p>
 
@@ -98,25 +308,40 @@ padding:110px 15px 40px;
 </div>
 </section>
 
-<section class="container pb-4">
-  <div class="notice-section">
-    <div class="section-title">
-      <h2>Important Notices</h2>
-      <p>आपके क्लास और बोर्ड के लिए प्रकाशित नोटिस</p>
+<section class="container py-4">
+
+<div class="notice-wrapper">
+
+    <div class="notice-header">
+        <div>
+            <span class="notice-label">
+                <i class="bi bi-megaphone-fill"></i>
+                NOTICE BOARD
+            </span>
+
+            <h2>Important Notices</h2>
+
+            <p>
+                Stay updated with the latest announcements and academic updates.
+            </p>
+        </div>
     </div>
+
     <div id="noticeContainer" class="notice-grid">
-      <div class="notice-card notice-loading">
-        <div class="spinner-border text-primary" role="status"></div>
-        <span>Loading notices...</span>
-      </div>
+        <div class="notice-card notice-loading">
+            <div class="spinner-border text-primary" role="status"></div>
+            <span>Loading notices...</span>
+        </div>
     </div>
-  </div>
+
+</div>
+
 </section>
 
 <section class="container pb-5">
 <div class="section-title">
-<h2>Quick Subjects</h2>
-<p>सभी विषय यहाँ उपलब्ध हैं</p>
+<h2>Academic Subjects</h2>
+<p>Access all subjects and learning resources for your class in one place.</p>
 </div>
 
 <div class="row g-4" id="subjectsContainer"></div>
@@ -252,11 +477,6 @@ padding:110px 15px 40px;
 }
 </style>
 
-<script>
-function loadImage(event){
-    document.getElementById('profileImg').src=URL.createObjectURL(event.target.files[0]);
-}
-</script>
 <script src="../../config.js"></script>
 <script src="student-dashboard.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
