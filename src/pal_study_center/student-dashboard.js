@@ -61,10 +61,11 @@ async function loadSubjects() {
             const response = await fetch(`${CONFIG.BASE_URL}/students/${user.id}/subjects`);
             const data = await response.json();
 
-            if (response.ok && data.status && Array.isArray(data.res)) {
-                enabledSubjects = data.res
-                    .filter(item => item.enabled === 1 || item.enabled === true)
-                    .map(item => item.subject);
+            if (response.ok && data.status && data.res && typeof data.res === 'object' && !Array.isArray(data.res)) {
+                // data.res is a hash: { "Science": 1, "Mathematics": 0, ... }
+                enabledSubjects = Object.entries(data.res)
+                    .filter(([, value]) => value === 1)
+                    .map(([subject]) => subject);
             } else {
                 console.warn('Unable to load subjects from server:', data.msg || data.err);
             }
@@ -196,15 +197,16 @@ async function loadFeesData() {
         </div>
     `;
 
-    let fees = [];
+    // fees hash: { "January": "paid", "February": "unpaid", "March": "not_applicable", ... }
+    let feesHash = null;
 
     if (user.id && typeof CONFIG !== 'undefined') {
         try {
             const response = await fetch(`${CONFIG.BASE_URL}/students/${user.id}/fees`);
             const data = await response.json();
 
-            if (response.ok && data.status && Array.isArray(data.res)) {
-                fees = data.res;
+            if (response.ok && data.status && data.res && typeof data.res === 'object' && !Array.isArray(data.res)) {
+                feesHash = data.res;
             } else {
                 console.warn('Unable to load fees from server:', data.msg || data.err);
             }
@@ -213,7 +215,7 @@ async function loadFeesData() {
         }
     }
 
-    if (!fees.length) {
+    if (!feesHash || !Object.keys(feesHash).length) {
         feesContent.innerHTML = `
             <div class="text-center py-4 text-muted">
                 No fees data available.
@@ -222,32 +224,33 @@ async function loadFeesData() {
         return;
     }
 
-    // Group fees by status
+    // Group fees by status (lowercase keys from hash)
     const groupedFees = {
-        'Paid': [],
-        'Unpaid': []
+        'paid': [],
+        'unpaid': []
     };
 
-    fees.forEach(fee => {
-        if (fee.status === 'Paid') {
-            groupedFees['Paid'].push(fee.month);
-        } else if (fee.status === 'Unpaid') {
-            groupedFees['Unpaid'].push(fee.month);
+    Object.entries(feesHash).forEach(([month, status]) => {
+        if (status === 'paid') {
+            groupedFees['paid'].push(month);
+        } else if (status === 'unpaid') {
+            groupedFees['unpaid'].push(month);
         }
+        // 'not_applicable' months are intentionally skipped in display
     });
 
     let html = '';
 
     // Render Paid section
-    if (groupedFees['Paid'].length > 0) {
+    if (groupedFees['paid'].length > 0) {
         html += `
             <div class="fees-status-group">
                 <div class="fees-status-header fees-status-paid">
                     <i class="bi bi-check-circle-fill"></i>
-                    Paid (${groupedFees['Paid'].length})
+                    Paid (${groupedFees['paid'].length})
                 </div>
                 <div class="fees-month-grid">
-                    ${groupedFees['Paid'].map(month => `
+                    ${groupedFees['paid'].map(month => `
                         <div class="fees-month-item">
                             <span class="fees-month-label">Month</span>
                             <span class="fees-month-name">${month.substring(0, 3)}</span>
@@ -259,15 +262,15 @@ async function loadFeesData() {
     }
 
     // Render Unpaid section
-    if (groupedFees['Unpaid'].length > 0) {
+    if (groupedFees['unpaid'].length > 0) {
         html += `
             <div class="fees-status-group">
                 <div class="fees-status-header fees-status-unpaid">
                     <i class="bi bi-exclamation-circle-fill"></i>
-                    Unpaid (${groupedFees['Unpaid'].length})
+                    Unpaid (${groupedFees['unpaid'].length})
                 </div>
                 <div class="fees-month-grid">
-                    ${groupedFees['Unpaid'].map(month => `
+                    ${groupedFees['unpaid'].map(month => `
                         <div class="fees-month-item">
                             <span class="fees-month-label">Month</span>
                             <span class="fees-month-name">${month.substring(0, 3)}</span>
