@@ -61,6 +61,7 @@ async function signup(){
     password: document.getElementById("password").value,
     "class": document.getElementById("class").value,
     board: document.getElementById("board").value,
+    study_access: false,
   };
 
   const validationError = validateSignupData(student);

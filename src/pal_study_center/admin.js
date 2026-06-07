@@ -420,7 +420,9 @@ function renderSubjects() {
   let subs = getSubjects(u.class);
 
   subs.forEach(s => {
-    let checked = u.subjects[s] ? "checked" : "";
+    // subjects hash stores 1 (enabled) or 0 (disabled)
+    let isEnabled = u.subjects[s] === 1;
+    let checked = isEnabled ? "checked" : "";
 
     box.innerHTML += `
       <div class="subject-row">
@@ -429,7 +431,7 @@ function renderSubjects() {
         <label class="switch">
           <input type="checkbox" ${checked} onchange="toggleSub('${s}', this.checked)">
           <span class="slider"></span>
-          <span class="switch-text">${checked ? "ON" : "OFF"}</span>
+          <span class="switch-text">${isEnabled ? "ON" : "OFF"}</span>
         </label>
       </div>
     `;
@@ -438,7 +440,8 @@ function renderSubjects() {
 
 /* TOGGLE */
 function toggleSub(sub, status) {
-  students[currentIndex].subjects[sub] = status;
+  // Store 1 for enabled, 0 for disabled
+  students[currentIndex].subjects[sub] = status ? 1 : 0;
 }
 
 /* TOGGLE DASHBOARD LOCK */

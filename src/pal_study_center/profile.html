@@ -115,12 +115,12 @@
             document.getElementById("profileBoard").innerText = currentStudent.board || "N/A";
             document.getElementById("profilePhone").innerText = "+91 " + (currentStudent.phone || "XXXX");
 
-            // Initialize fees with all 12 months as Unpaid
+            // Initialize fees with all 12 months as "unpaid" (hash format)
             if (!currentStudent.fees) {
                 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
                 currentStudent.fees = {};
                 months.forEach(month => {
-                    currentStudent.fees[month] = "Unpaid";
+                    currentStudent.fees[month] = "unpaid";
                 });
             }
 
@@ -143,11 +143,19 @@
                 try {
                     const response = await fetch(`${CONFIG.BASE_URL}/students/${currentStudent.id}/subjects`);
                     const data = await response.json();
-                    if (response.ok && data.status && Array.isArray(data.res)) {
-                        currentStudent.courses = {};
-                        data.res.forEach(item => {
-                            currentStudent.courses[item.subject] = item.enabled === 1 || item.enabled === true;
-                        });
+                    if (response.ok && data.status && data.res && typeof data.res === 'object' && !Array.isArray(data.res)) {
+                        // data.res is a hash: { "Science": 1, "Mathematics": 0, ... }
+                        // If res is empty {}, no subjects assigned → turn study access OFF
+                        if (Object.keys(data.res).length === 0) {
+                            currentStudent.access = false;
+                            currentStudent.courses = {};
+                            updateAccessUI(false);
+                        } else {
+                            currentStudent.courses = {};
+                            Object.entries(data.res).forEach(([subject, value]) => {
+                                currentStudent.courses[subject] = value === 1;
+                            });
+                        }
                     }
                 } catch (err) {
                     console.warn('Unable to load course data from server:', err.message);
@@ -170,11 +178,9 @@
                 try {
                     const response = await fetch(`${CONFIG.BASE_URL}/students/${currentStudent.id}/fees`);
                     const data = await response.json();
-                    if (response.ok && data.status && Array.isArray(data.res)) {
-                        currentStudent.fees = {};
-                        data.res.forEach(item => {
-                            currentStudent.fees[item.month] = item.status;
-                        });
+                    if (response.ok && data.status && data.res && typeof data.res === 'object' && !Array.isArray(data.res)) {
+                        // data.res is a hash: { "January": "paid", "February": "unpaid", ... }
+                        currentStudent.fees = data.res;
                         renderFeeGrid();
                     }
                 } catch (err) {
@@ -211,14 +217,15 @@
 
             const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
             months.forEach(month => {
-                const status = currentStudent.fees[month] || "Unpaid";
+                // Hash uses lowercase: "paid", "unpaid", "not_applicable"
+                const status = currentStudent.fees[month] || "unpaid";
                 feeGrid.innerHTML += `
                     <div class="month-card fee-${status}">
                         <b>${month.substring(0, 3).toUpperCase()}</b>
                         <select onchange="changeFee('${month}', this.value)">
-                            <option value="Paid" ${status === 'Paid' ? 'selected' : ''}>Paid</option>
-                            <option value="Unpaid" ${status === 'Unpaid' ? 'selected' : ''}>Unpaid</option>
-                            <option value="Not applicable" ${status === 'Not applicable' ? 'selected' : ''}>Not applicable</option>
+                            <option value="paid" ${status === 'paid' ? 'selected' : ''}>Paid</option>
+                            <option value="unpaid" ${status === 'unpaid' ? 'selected' : ''}>Unpaid</option>
+                            <option value="not_applicable" ${status === 'not_applicable' ? 'selected' : ''}>Not applicable</option>
                         </select>
                     </div>
                 `;
@@ -273,10 +280,15 @@
             currentStudent.courses[subject] = nextStatus;
             renderCourses();
             saveStudentData();
-            await updateCourseStatusOnServer(subject, nextStatus);
+            // Build full hash with 1/0 values
+            const subjectsHash = {};
+            Object.entries(currentStudent.courses).forEach(([s, enabled]) => {
+                subjectsHash[s] = enabled ? 1 : 0;
+            });
+            await updateCourseStatusOnServer(subjectsHash);
         }
 
-        async function updateCourseStatusOnServer(subject, enabled) {
+        async function updateCourseStatusOnServer(subjectsHash) {
             if (!currentStudent.id) {
                 return;
             }
@@ -287,7 +299,8 @@
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({ subject, enabled })
+                    // Send the full hash: { "Science": 1, "Mathematics": 0, ... }
+                    body: JSON.stringify({ subjects: subjectsHash })
                 });
                 const data = await response.json();
                 if (!response.ok || !data.status) {
@@ -322,11 +335,17 @@
             saveStudentData();
 
             if (currentStudent.id) {
-                await Promise.all(subjects.map(subject => updateCourseStatusOnServer(subject, currentStudent.access)));
+                // Build full hash with 1/0 values for all subjects
+                const subjectsHash = {};
+                subjects.forEach(subject => {
+                    subjectsHash[subject] = currentStudent.access ? 1 : 0;
+                });
+                await updateCourseStatusOnServer(subjectsHash);
             }
         }
 
         function changeFee(month, value) {
+            // value is lowercase: "paid", "unpaid", "not_applicable"
             currentStudent.fees[month] = value;
             renderFeeGrid();
             saveStudentData();
@@ -344,7 +363,8 @@
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({ month, status })
+                    // API expects hash with month as key: { "May": "paid" }
+                    body: JSON.stringify({ [month]: status })
                 });
                 const data = await response.json();
                 if (!response.ok || !data.status) {
