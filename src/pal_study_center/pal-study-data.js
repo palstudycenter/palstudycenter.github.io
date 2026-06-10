@@ -152,3 +152,27 @@ const PAL_STUDY_DATA = {
     }
   }
 };
+
+// Maps unit names to their file paths (board -> class -> subject -> unit -> path)
+const UNIT_FILE_PATHS = {
+  "MP Board (Hindi Medium)": {
+    "Class 12th": {
+      "भौतिकी": {
+        "यूनिट 1 विद्युत आवेश एवं क्षेत्र": "../units/mp_board_hindi/class_12/physics/unit1/MP_Hindi_12th_Physics_unit1.html",
+        "यूनिट 2 स्थिर विद्युत विभव एवं धारिता": "../units/mp_board_hindi/class_12/physics/unit2/MP_Hindi_12th_Physics_unit2.html",
+        "यूनिट 3 विद्युत धारा": "../units/mp_board_hindi/class_12/physics/unit3/MP_Hindi_12th_Physics_unit3.html",
+        "यूनिट 4 गतिमान आवेश एवं चुंबकत्व": "../units/mp_board_hindi/class_12/physics/unit4/MP_Hindi_12th_Physics_unit4.html",
+        "यूनिट 5 चुंबकत्व एवं पदार्थ": "../units/mp_board_hindi/class_12/physics/unit5/MP_Hindi_12th_Physics_unit5.html",
+        "यूनिट 6 विद्युत चुंबकीय प्रेरण": "../units/mp_board_hindi/class_12/physics/unit6/MP_Hindi_12th_Physics_unit6.html",
+        "यूनिट 7 प्रत्यावर्ती धारा": "../units/mp_board_hindi/class_12/physics/unit7/MP_Hindi_12th_Physics_unit7.html",
+        "यूनिट 8 विद्युत चुंबकीय तरंगें": "../units/mp_board_hindi/class_12/physics/unit8/MP_Hindi_12th_Physics_unit8.html",
+        "यूनिट 9 प्रकाशिकी": "../units/mp_board_hindi/class_12/physics/unit9/MP_Hindi_12th_Physics_unit9.html",
+        "यूनिट 10 तरंग प्रकाशिकी": "../units/mp_board_hindi/class_12/physics/unit10/MP_Hindi_12th_Physics_unit10.html",
+        "यूनिट 11 पदार्थ की द्वैत प्रकृति": "../units/mp_board_hindi/class_12/physics/unit11/MP_Hindi_12th_Physics_unit11.html",
+        "यूनिट 12 परमाणु": "../units/mp_board_hindi/class_12/physics/unit12/MP_Hindi_12th_Physics_unit12.html",
+        "यूनिट 13 नाभिक": "../units/mp_board_hindi/class_12/physics/unit13/MP_Hindi_12th_Physics_unit13.html",
+        "यूनिट 14 अर्धचालक इलेक्ट्रॉनिक्स": "../units/mp_board_hindi/class_12/physics/unit14/MP_Hindi_12th_Physics_unit14.html"
+      }
+    }
+  }
+};

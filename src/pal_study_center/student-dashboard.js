@@ -59,20 +59,58 @@ async function loadUnits(subjectName) {
     // Display units in a list
     const unitsHtml = `
         <div class="units-list">
-            ${units.map((unit, index) => `
-                <div class="unit-item" style="padding: 12px; border-bottom: 1px solid #e2e8f0; display: flex; align-items: flex-start;">
-                    <span style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #dbeafe; color: #1e40af; border-radius: 50%; flex-shrink: 0; margin-right: 12px; font-weight: 600; font-size: 0.9rem;">
-                        ${index + 1}
-                    </span>
-                    <span style="flex: 1; color: #334155; font-size: 0.95rem; line-height: 1.4;">
-                        ${unit}
-                    </span>
-                </div>
-            `).join('')}
+            ${units.map((unit, index) => {
+                // Get the file path for this unit
+                const filePath = getUnitFilePath(hiSubjectName || subjectName, unit);
+                const clickHandler = filePath ? `onclick="openUnit('${filePath}')"` : '';
+                const cursorStyle = filePath ? 'cursor: pointer;' : '';
+                const hoverStyle = filePath ? 'transition: background-color 0.2s; ' : '';
+                const onMouseEnter = filePath ? 'this.style.backgroundColor = "#f1f5f9";' : '';
+                const onMouseLeave = filePath ? 'this.style.backgroundColor = "transparent";' : '';
+                
+                return `
+                    <div class="unit-item" style="padding: 12px; border-bottom: 1px solid #e2e8f0; display: flex; align-items: flex-start; ${cursorStyle}${hoverStyle}" 
+                         ${clickHandler} 
+                         onmouseenter="${onMouseEnter}" 
+                         onmouseleave="${onMouseLeave}">
+                        <span style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #dbeafe; color: #1e40af; border-radius: 50%; flex-shrink: 0; margin-right: 12px; font-weight: 600; font-size: 0.9rem;">
+                            ${index + 1}
+                        </span>
+                        <span style="flex: 1; color: #334155; font-size: 0.95rem; line-height: 1.4;">
+                            ${unit}
+                        </span>
+                        ${filePath ? '<i class="bi bi-arrow-right" style="color: #64748b; margin-left: 8px;"></i>' : ''}
+                    </div>
+                `;
+            }).join('')}
         </div>
     `;
     
     unitsContent.innerHTML = unitsHtml;
+}
+
+/* Helper function to get unit file path */
+function getUnitFilePath(subjectName, unitName) {
+    try {
+        const boardPaths = UNIT_FILE_PATHS[user.board];
+        if (boardPaths) {
+            const classPaths = boardPaths[user.class];
+            if (classPaths) {
+                const subjectPaths = classPaths[subjectName];
+                if (subjectPaths && subjectPaths[unitName]) {
+                    return subjectPaths[unitName];
+                }
+            }
+        }
+    } catch (error) {
+        console.warn('Error getting unit file path:', error);
+    }
+    return null;
+}
+
+/* Open unit file */
+function openUnit(filePath) {
+    window.location.href = filePath;
 }
 
 /* ── Subject card visual config ─────────────────────────────────────── */
