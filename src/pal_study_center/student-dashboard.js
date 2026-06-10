@@ -16,6 +16,65 @@ const container = document.getElementById("subjectsContainer");
 studentName.innerText = `Welcome ${user.name || 'Student'}`;
 studentInfo.innerText = `${user.board || 'Unknown Board'} | ${user.class || 'Unknown Class'}`;
 
+/* Helper function to show units modal */
+function showUnitsModal(subjectName) {
+    const unitsModal = new bootstrap.Modal(document.getElementById('unitsModal'));
+    document.getElementById('unitsSubjectName').textContent = subjectName;
+    loadUnits(subjectName);
+    unitsModal.show();
+}
+
+/* Load and display units for a subject */
+async function loadUnits(subjectName) {
+    const unitsContent = document.getElementById('unitsContent');
+    
+    // Get the Hindi name of the subject if it's in English
+    const hiSubjectName = SUBJECT_NAME_MAP[subjectName] || subjectName;
+    
+    // Try to get units from PAL_STUDY_DATA
+    let units = [];
+    
+    try {
+        const boardData = PAL_STUDY_DATA[user.board];
+        if (boardData) {
+            const classData = boardData[user.class];
+            if (classData) {
+                units = classData[hiSubjectName] || classData[subjectName] || [];
+            }
+        }
+    } catch (error) {
+        console.warn('Error accessing study data:', error);
+    }
+    
+    if (!units || units.length === 0) {
+        unitsContent.innerHTML = `
+            <div class="text-center py-4 text-muted">
+                <i class="bi bi-info-circle" style="font-size: 2rem; margin-bottom: 10px; display: block;"></i>
+                <p>No units available for this subject yet.</p>
+            </div>
+        `;
+        return;
+    }
+    
+    // Display units in a list
+    const unitsHtml = `
+        <div class="units-list">
+            ${units.map((unit, index) => `
+                <div class="unit-item" style="padding: 12px; border-bottom: 1px solid #e2e8f0; display: flex; align-items: flex-start;">
+                    <span style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: #dbeafe; color: #1e40af; border-radius: 50%; flex-shrink: 0; margin-right: 12px; font-weight: 600; font-size: 0.9rem;">
+                        ${index + 1}
+                    </span>
+                    <span style="flex: 1; color: #334155; font-size: 0.95rem; line-height: 1.4;">
+                        ${unit}
+                    </span>
+                </div>
+            `).join('')}
+        </div>
+    `;
+    
+    unitsContent.innerHTML = unitsHtml;
+}
+
 /* ── Subject card visual config ─────────────────────────────────────── */
 const SUBJECT_CONFIG = {
     'physics':     { icon: 'bi-lightning-charge-fill', gradient: 'linear-gradient(135deg,#1e3a8a,#2563eb)' },
@@ -95,16 +154,15 @@ async function loadSubjects() {
     }
 
     container.innerHTML = enabledSubjects.map(subject => {
-        const subjectSlug = subject.toLowerCase().replace(/\s+/g, '-') + '.html';
         const cfg = getSubjectConfig(subject);
         return `
-            <a href="${subjectSlug}" class="subject-card" style="background:${cfg.gradient}">
+            <div class="subject-card" style="background:${cfg.gradient}; cursor: pointer;" onclick="showUnitsModal('${subject}')">
                 <i class="bi ${cfg.icon} subject-card-icon"></i>
                 <div class="subject-card-body">
                     <h5>${subject}</h5>
-                    <small>Open Subject</small>
+                    <small>View Units</small>
                 </div>
-            </a>
+            </div>
         `;
     }).join('');
 }
