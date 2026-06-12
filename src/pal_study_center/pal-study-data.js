@@ -176,9 +176,12 @@ const UNIT_FILE_PATHS = {
         "यूनिट 13 नाभिक": "../units/mp_board_hindi/class_12/physics/unit13/MP_Hindi_12th_Physics_unit13.html",
         "यूनिट 14 अर्धचालक इलेक्ट्रॉनिक्स": "../units/mp_board_hindi/class_12/physics/unit14/MP_Hindi_12th_Physics_unit14.html"
       },
-"रसायन शास्त्र ":{
-    "यूनिट 1 विलयन": "../units/mp_board_hindi/class_12/chemistry/unit1/mphc1.html"
-}
+      "रसायन शास्त्र ":{
+          "यूनिट 1 विलयन": "../units/mp_board_hindi/class_12/chemistry/unit1/mphc1.html"
+      },
+      "जीवविज्ञान": {
+        "यूनिट 1 (B) मानव जनन": "../units/mp_board_hindi/class_12/biology/unit1/mphb-1.html"
+      }
     }
   }
 };

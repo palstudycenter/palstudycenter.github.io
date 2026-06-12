@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 1 - स्थिर विद्युत | पाल स्टडी सेंटर</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#ffffff;
+    color:#333;
+    line-height:1.8;
+}
+
+/* ===== NAVBAR ===== */
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:12px 16px;
+
+    background:rgba(21,101,192,0.88);
+    backdrop-filter: blur(8px);
+    color:white;
+
+    box-shadow:0 2px 10px rgba(0,0,0,0.15);
+}
+
+/* LOGO TEXT */
+.logo{
+    display:flex;
+    flex-direction:column;
+    line-height:1.2;
+}
+
+.logo .main{
+    font-size:18px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+.logo .sub{
+    font-size:12px;
+    opacity:0.9;
+}
+
+/* MENU BUTTON */
+.menu-btn{
+    font-size:26px;
+    cursor:pointer;
+    user-select:none;
+}
+
+/* DROPDOWN */
+.menu{
+    position:absolute;
+    top:60px;
+    right:12px;
+
+    background:white;
+    color:#333;
+
+    width:200px;
+    border-radius:10px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+
+    display:none;
+    overflow:hidden;
+}
+
+.menu a{
+    display:block;
+    padding:12px;
+    text-decoration:none;
+    color:#333;
+    border-bottom:1px solid #eee;
+}
+
+.menu a:hover{
+    background:#f2f2f2;
+}
+
+.menu.show{
+    display:block;
+}
+
+/* ===== CONTENT ===== */
+.container{
+    max-width:900px;
+    margin:100px auto 20px auto;
+    padding:20px;
+}
+
+.notes-title{
+    background:#E3F2FD;
+    color:#1565C0;
+    padding:12px;
+    border-left:5px solid #1565C0;
+    border-radius:6px;
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.qa-box{
+    background:#F8F9FA;
+    padding:18px;
+    margin-bottom:15px;
+    border-radius:10px;
+    border:1px solid #E0E0E0;
+}
+
+.question{
+    font-weight:bold;
+    color:#2C3E50;
+    margin-bottom:8px;
+}
+
+.answer{
+    color:#2C3E50;
+    text-align:justify;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+    .logo .main{
+        font-size:16px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+
+    <!-- LOGO TEXT -->
+    <div class="logo">
+        <div class="main">PAL STUDY CENTER</div>
+        <div class="sub">MP Board Notes</div>
+    </div>
+
+    <!-- MENU -->
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+    <div class="menu" id="menu">
+        <a href="#">स्थिर विद्युत I</a>
+    </div>
+
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+    <div class="notes-title">Unit 1 - स्थिर विद्युत</div>
+
+<div class="question">
+Q. विभव किसे कहते हैं? इसका मात्रक लिखिए।
+</div>
+
+<div class="answer">
+इकाई धन आवेश को अनन्त से विद्युत क्षेत्र के अंदर किसी बिंदु पर लाने में जो कार्य किया जाता है, उसे उस बिंदु का विद्युत विभव कहते हैं। इसे \(V\) से प्रदर्शित करते हैं।
+</div>
+
+<div class="answer">
+अर्थात्
+</div>
+
+<div class="formula">
+$$
+V = \frac{W}{q}
+$$
+</div>
+
+<div class="answer">
+यह एक अदिश राशि है।
+</div>
+
+<div class="answer">
+इसका SI मात्रक जूल/कूलॉम होता है, जिसे वोल्ट कहते हैं।
+</div>
+
+<div class="question">
+Q. वोल्ट किसे कहते हैं?
+</div>
+
+<div class="answer">
+वोल्ट विद्युत विभव का SI मात्रक है।
+</div>
+
+<div class="formula">
+$$
+1 \text{ वोल्ट} = 1 \frac{\text{जूल}}{\text{कूलॉम}}
+$$
+</div>
+
+<div class="answer">
+परिभाषा — यदि इकाई धन आवेश को अनन्त से विद्युत क्षेत्र के किसी बिंदु तक लाने में 1 जूल कार्य करना पड़े, तो उस बिंदु का विद्युत विभव 1 वोल्ट कहलाता है।
+</div>
+<div class="question">
+Q. विद्युत विभव तथा विभवान्तर में अंतर लिखिए।
+</div>
+
+<table>
+<tr>
+<th>विद्युत विभव (Potential)</th>
+<th>विभवान्तर (Potential Difference)</th>
+</tr>
+
+<tr>
+<td>किसी बिंदु पर इकाई धन आवेश को अनन्त से उस बिंदु तक लाने में किए गए कार्य को उस बिंदु का विद्युत विभव कहते हैं।</td>
+<td>किसी विद्युत क्षेत्र के दो बिंदुओं के बीच इकाई धन आवेश को एक बिंदु से दूसरे बिंदु तक ले जाने में किए गए कार्य को विभवान्तर कहते हैं।</td>
+</tr>
+
+<tr>
+<td>यह किसी एक बिंदु से संबंधित राशि है।</td>
+<td>यह दो बिंदुओं से संबंधित राशि है।</td>
+</tr>
+
+<tr>
+<td>इसे \(V\) से प्रदर्शित करते हैं।</td>
+<td>इसे \(\Delta V\) या \(V_{AB}\) से प्रदर्शित करते हैं।</td>
+</tr>
+
+<tr>
+<td>इसका SI मात्रक वोल्ट (V) है।</td>
+<td>इसका SI मात्रक भी वोल्ट (V) है।</td>
+</tr>
+
+<tr>
+<td>
+$$
+V=\frac{W}{q}
+$$
+</td>
+
+<td>
+$$
+\Delta V=\frac{W}{q}
+$$
+</td>
+</tr>
+
+</table>
+
+<div class="question">
+Q. बिंदु आवेश के कारण उत्पन्न विद्युत विभव का व्यंजक स्थापित कीजिए।
+</div>
+
+<div class="answer">
+माना एक बिंदु आवेश \((+Q)\) बिंदु \(O\) पर रखा है। हमें \((+Q)\) से \(r\) दूरी पर स्थित बिंदु \(P\) पर विद्युत विभव ज्ञात करना है।
+</div>
+
+<div class="answer">
+विद्युत क्षेत्र के भीतर बिंदु \(A\), बिंदु \(O\) से \(x\) दूरी पर स्थित है। यहाँ एकांक धन परीक्षण आवेश रखा गया है। \((+Q)\) के कारण इस एकांक आवेश पर लगने वाला बल होगा—
+</div>
+
+<div class="formula">
+$$
+F=\frac{1}{4\pi\varepsilon_0}\times\frac{Q\times1}{x^2}
+$$
+</div>
+
+<div class="answer">
+एकांक धन परीक्षण आवेश को बिंदु \(A\) से \(B\) तक अल्प विस्थापन \(dx\) द्वारा ले जाने के लिए प्रतिकर्षण बल के विरुद्ध कार्य करना पड़ता है।
+</div>
+
+<div class="formula">
+$$
+dW=F\times(-dx)
+$$
+</div>
+
+<div class="formula">
+$$
+dW=\frac{1}{4\pi\varepsilon_0}\times\frac{Q\times1}{x^2}(-dx)
+$$
+</div>
+
+<div class="answer">
+एकांक धन परीक्षण आवेश को अनन्त से बिंदु \(P\) तक लाने में किया गया कुल कार्य दोनों पक्षों का उचित सीमाओं में समाकलन करने पर प्राप्त होगा—
+</div>
+
+<div class="formula">
+$$
+V=\int_{\infty}^{r} dW
+$$
+</div>
+
+<div class="formula">
+$$
+V=\int_{\infty}^{r}
+\frac{1}{4\pi\varepsilon_0}
+\times
+\frac{Q\times1}{x^2}
+(-dx)
+$$
+</div>
+
+<div class="formula">
+$$
+V=
+-\frac{Q}{4\pi\varepsilon_0}
+\int_{\infty}^{r}
+\frac{dx}{x^2}
+$$
+</div>
+
+<div class="formula">
+$$
+V=
+-\frac{Q}{4\pi\varepsilon_0}
+\left[
+-\frac{1}{x}
+\right]_{\infty}^{r}
+$$
+</div>
+
+<div class="formula">
+$$
+V=
+\frac{Q}{4\pi\varepsilon_0}
+\left[
+\frac{1}{x}
+\right]_{\infty}^{r}
+$$
+</div>
+
+<div class="formula">
+$$
+V=
+\frac{Q}{4\pi\varepsilon_0}
+\left[
+\frac{1}{r}
+-\frac{1}{\infty}
+\right]
+$$
+</div>
+
+<div class="formula">
+$$
+V=
+\frac{Q}{4\pi\varepsilon_0}
+\left[
+\frac{1}{r}
+-0
+\right]
+$$
+</div>
+
+<div class="formula">
+$$
+V=
+\frac{1}{4\pi\varepsilon_0}
+\times
+\frac{Q}{r}
+\qquad
+(\text{वायु अथवा निर्वात में})
+$$
+</div>
+
+<div class="formula">
+$$
+V=
+\frac{1}{4\pi\varepsilon_0K}
+\times
+\frac{Q}{r}
+\qquad
+(\text{K परावैद्युतांक वाले माध्यम में})
+$$
+</div>
+
+<div class="question">
+Q. चालक के विभव को प्रभावित करने वाले कारकों के नाम लिखिए तथा बताइए कि वे उसे किस प्रकार प्रभावित करते हैं?
+</div>
+<div class="answer">
+किसी चालक का विभव निम्न सूत्र द्वारा व्यक्त किया जाता है। है—
+</div>
+
+<div class="formula">
+$$
+V=\frac{1}{4\pi\varepsilon_0 K}\cdot\frac{Q}{R}
+$$
+</div>
+
+<div class="answer">
+इस प्रकार चालक का विभव निम्नलिखित कारकों पर निर्भर करता है—
+</div>
+
+<div class="answer">
+<b>1. चालक पर स्थित आवेश (Q):</b><br>
+चालक का विभव उसके आवेश के समानुपाती होता है। अतः आवेश बढ़ने पर विभव बढ़ता है।
+</div>
+
+<div class="answer">
+<b>2. चालक की त्रिज्या या आकार (R):</b><br>
+चालक का विभव उसकी त्रिज्या के व्युत्क्रमानुपाती होता है। अतः त्रिज्या बढ़ने पर विभव घटता है।
+</div>
+
+<div class="answer">
+<b>3. आसपास के माध्यम का परावैद्युतांक (K):</b><br>
+चालक का विभव माध्यम के परावैद्युतांक के व्युत्क्रमानुपाती होता है। अतः परावैद्युतांक बढ़ने पर विभव घटता है।
+</div>
+<div class="question">
+Q. समविभव पृष्ठ से क्या अभिप्राय है? इसके गुण लिखिए।
+</div>
+
+<div class="answer">
+वह पृष्ठ जिसके प्रत्येक बिंदु पर विद्युत विभव का मान समान होता है, समविभव पृष्ठ कहलाता है।
+</div>
+
+<div class="answer">
+<b>समविभव पृष्ठ के गुण :</b>
+</div>
+
+<div class="answer">
+1. समविभव पृष्ठ पर किसी आवेश को एक बिंदु से दूसरे बिंदु तक ले जाने में कोई कार्य नहीं करना पड़ता है।
+</div>
+
+<div class="answer">
+2. समविभव पृष्ठ पर सभी बिंदुओं का विद्युत विभव समान होता है।
+</div>
+
+<div class="answer">
+3. विद्युत बल रेखाएँ समविभव पृष्ठ पर सदैव लंबवत होती हैं।
+</div>
+
+<div class="answer">
+4. दो समविभव पृष्ठ कभी एक-दूसरे को नहीं काटते हैं।
+</div>
+
+<div class="answer">
+5. जहाँ विद्युत क्षेत्र अधिक प्रबल होता है, वहाँ समविभव पृष्ठ एक-दूसरे के अधिक निकट होते हैं।
+</div>
+
+<div class="answer">
+6. किसी चालक का पृष्ठ सदैव एक समविभव पृष्ठ होता है।
+</div>
+<div class="question">
+Q. दो समविभव पृष्ठ कभी एक-दूसरे को क्यों नहीं काटते हैं?
+</div>
+
+<div class="answer">
+यदि दो समविभव पृष्ठ एक-दूसरे को काटें, तो उनके प्रतिच्छेदन बिंदु पर दो भिन्न विभव मान प्राप्त होंगे, जो संभव नहीं है। किसी भी बिंदु पर विद्युत विभव का केवल एक ही निश्चित मान होता है। अतः दो समविभव पृष्ठ कभी एक-दूसरे को नहीं काटते हैं।
+</div>
+<div class="question">
+Q. विद्युत द्विध्रुव के कारण अक्षीय (End-on) स्थिति में किसी बिंदु पर विद्युत विभव का व्यंजक स्थापित कीजिए।
+</div>
+
+<div class="answer">
+माना एक विद्युत द्विध्रुव AB है, जिसमें –Q तथा +Q आवेश 2l दूरी पर स्थित हैं। द्विध्रुव के अक्ष पर केंद्र O से r दूरी पर बिंदु P स्थित है।
+</div>
+
+<div class="answer">
+चित्रानुसार,
+</div>
+
+<div class="formula">
+$$
+AP = r + l
+$$
+</div>
+
+<div class="formula">
+$$
+BP = r - l
+$$
+</div>
+
+<div class="answer">
+अब +Q आवेश के कारण बिंदु P पर विभव
+</div>
+
+<div class="formula">
+$$
+V_1=\frac{1}{4\pi\varepsilon_0}\times\frac{Q}{BP}
+$$
+</div>
+
+<div class="formula">
+$$
+V_1=\frac{1}{4\pi\varepsilon_0}\times\frac{Q}{(r-l)}
+$$
+</div>
+
+<div class="answer">
+पुनः, –Q आवेश के कारण बिंदु P पर विभव
+</div>
+
+<div class="formula">
+$$
+V_2=\frac{1}{4\pi\varepsilon_0}\times\frac{-Q}{AP}
+$$
+</div>
+
+<div class="formula">
+$$
+V_2=\frac{1}{4\pi\varepsilon_0}\times\frac{-Q}{(r+l)}
+$$
+</div>
+
+<div class="answer">
+∴ द्विध्रुव के कारण बिंदु P पर कुल विभव
+</div>
+
+<div class="formula">
+$$
+V=V_1+V_2
+$$
+</div>
+
+<div class="formula">
+$$
+V=\left[\frac{1}{4\pi\varepsilon_0}\times\frac{Q}{(r-l)}\right]
++
+\left[\frac{1}{4\pi\varepsilon_0}\times\frac{-Q}{(r+l)}\right]
+$$
+</div>
+
+<div class="formula">
+$$
+V=\frac{Q}{4\pi\varepsilon_0}
+\left[
+\frac{1}{(r-l)}-\frac{1}{(r+l)}
+\right]
+$$
+</div>
+
+<div class="formula">
+$$
+V=\frac{Q}{4\pi\varepsilon_0}
+\left[
+\frac{(r+l)-(r-l)}
+{(r-l)(r+l)}
+\right]
+$$
+</div>
+
+<div class="formula">
+$$
+V=\frac{Q}{4\pi\varepsilon_0}
+\times
+\frac{2l}{(r^2-l^2)}
+$$
+</div>
+
+<div class="formula">
+$$
+V=\frac{1}{4\pi\varepsilon_0}
+\times
+\frac{P}{(r^2-l^2)}
+$$
+</div>
+
+<div class="answer">
+[ विद्युत द्विध्रुव आघूर्ण, \(P=Q\times2l\) ]
+</div>
+
+<div class="formula">
+$$
+V=\frac{1}{4\pi\varepsilon_0}
+\times
+\frac{P}{r^2}
+\qquad [\text{यदि } l\ll r]
+$$
+</div>
+
+<div class="answer">
+यही अभीष्ट व्यंजक है।
+</div>
+<div class="question">
+Q. सिद्ध कीजिए कि विद्युत द्विध्रुव की निरक्षीय (Equatorial) स्थिति में किसी बिंदु पर विद्युत विभव शून्य होता है।
+</div>
+
+<div class="answer">
+माना एक विद्युत द्विध्रुव AB है, जिसमें –Q तथा +Q आवेश 2l दूरी पर स्थित हैं। द्विध्रुव की निरक्षीय रेखा पर केंद्र O से r दूरी पर बिंदु P स्थित है। बिंदु P पर द्विध्रुव के कारण विभव ज्ञात करना है।
+</div>
+
+<div class="answer">
+अब समकोण त्रिभुज \( \triangle AOP \) में पाइथागोरस प्रमेय से,
+</div>
+
+<div class="formula">
+$$
+AP^2 = OP^2 + OA^2
+$$
+</div>
+
+<div class="formula">
+$$
+AP^2 = r^2 + l^2
+$$
+</div>
+
+<div class="formula">
+$$
+AP = \sqrt{r^2+l^2}
+= BP
+\qquad [\text{स्पष्टतः}]
+$$
+</div>
+
+<div class="answer">
+अब +Q आवेश के कारण बिंदु P पर विभव
+</div>
+
+<div class="formula">
+$$
+V_1=\frac{1}{4\pi\varepsilon_0}\times\frac{Q}{BP}
+$$
+</div>
+
+<div class="formula">
+$$
+V_1=\frac{1}{4\pi\varepsilon_0}\times\frac{Q}{\sqrt{r^2+l^2}}
+$$
+</div>
+
+<div class="answer">
+पुनः, –Q आवेश के कारण बिंदु P पर विभव
+</div>
+
+<div class="formula">
+$$
+V_2=\frac{1}{4\pi\varepsilon_0}\times\frac{-Q}{AP}
+$$
+</div>
+
+<div class="formula">
+$$
+V_2=\frac{1}{4\pi\varepsilon_0}\times\frac{-Q}{\sqrt{r^2+l^2}}
+$$
+</div>
+
+<div class="answer">
+चूँकि विभव एक अदिश राशि है, अतः बिंदु P पर द्विध्रुव के कारण कुल विभव
+</div>
+
+<div class="formula">
+$$
+V=V_1+V_2
+$$
+</div>
+
+<div class="formula">
+$$
+V=
+\left[
+\frac{1}{4\pi\varepsilon_0}
+\times
+\frac{Q}{\sqrt{r^2+l^2}}
+\right]
++
+\left[
+\frac{1}{4\pi\varepsilon_0}
+\times
+\frac{-Q}{\sqrt{r^2+l^2}}
+\right]
+$$
+</div>
+
+<div class="formula">
+$$
+V=
+\left[
+\frac{1}{4\pi\varepsilon_0}
+\times
+\frac{Q}{\sqrt{r^2+l^2}}
+\right]
+-
+\left[
+\frac{1}{4\pi\varepsilon_0}
+\times
+\frac{Q}{\sqrt{r^2+l^2}}
+\right]
+$$
+</div>
+
+<div class="formula">
+$$
+V=0
+$$
+</div>
+
+<div class="answer">
+अतः सिद्ध हुआ कि विद्युत द्विध्रुव की निरक्षीय रेखा पर किसी भी बिंदु पर विद्युत विभव शून्य होता है।
+</div>
+<div class="question">
+Q. विद्युत स्थितिज ऊर्जा क्या है? बिंदु आवेश के कारण विद्युत स्थितिज ऊर्जा का व्यंजक स्थापित कीजिए।
+</div>
+
+<div class="answer">
+<b>विद्युत स्थितिज ऊर्जा (Potential Energy) –</b>
+अनन्त से किसी धन आवेश को किसी बिंदु तक लाने में किया गया कार्य उस बिंदु पर उस आवेश की विद्युत स्थितिज ऊर्जा कहलाता है। इसे U से प्रदर्शित करते हैं।
+</div>
+
+<div class="answer">
+<b>व्युत्पत्ति (Derivation) –</b>
+</div>
+
+<div class="answer">
+माना एक बिंदु आवेश (+Q) बिंदु O पर स्थित है। हमें (+Q) से r दूरी पर स्थित बिंदु P पर विद्युत स्थितिज ऊर्जा ज्ञात करनी है।
+</div>
+
+<div class="answer">
+विद्युत क्षेत्र के भीतर बिंदु O से x दूरी पर स्थित बिंदु A पर एक आवेश q रखा गया है।
+</div>
+
+<div class="answer">
+(+Q) के कारण q पर लगने वाला बल
+</div>
+
+<div class="formula">
+$$
+F=\frac{1}{4\pi\varepsilon_0}\times\frac{Qq}{x^2}
+$$
+</div>
+
+<div class="answer">
+आवेश q को A से B तक dx दूरी विस्थापित करने के लिए प्रतिकर्षण बल के विरुद्ध कार्य करना होगा।
+</div>
+
+<div class="formula">
+$$
+dW=F\times(-dx)
+$$
+</div>
+
+<div class="formula">
+$$
+dW=
+\frac{1}{4\pi\varepsilon_0}
+\times
+\frac{Qq}{x^2}
+(-dx)
+$$
+</div>
+
+<div class="answer">
+अनन्त से बिंदु P तक धन आवेश q को लाने में किया गया कुल कार्य दोनों पक्षों का समाकलन करने पर प्राप्त होगा।
+</div>
+
+<div class="formula">
+$$
+U=\int dW
+$$
+</div>
+
+<div class="formula">
+$$
+U=
+\int_{\infty}^{r}
+\frac{1}{4\pi\varepsilon_0}
+\times
+\frac{Qq}{x^2}
+(-dx)
+$$
+</div>
+
+<div class="formula">
+$$
+U=
+-\frac{Qq}{4\pi\varepsilon_0}
+\int_{\infty}^{r}
+\frac{dx}{x^2}
+$$
+</div>
+
+<div class="formula">
+$$
+U=
+-\frac{Qq}{4\pi\varepsilon_0}
+\left[
+-\frac{1}{x}
+\right]_{\infty}^{r}
+$$
+</div>
+
+<div class="formula">
+$$
+U=
+\frac{Qq}{4\pi\varepsilon_0}
+\left[
+\frac{1}{x}
+\right]_{\infty}^{r}
+$$
+</div>
+
+<div class="formula">
+$$
+U=
+\frac{Qq}{4\pi\varepsilon_0}
+\left[
+\frac{1}{r}
+-\frac{1}{\infty}
+\right]
+$$
+</div>
+
+<div class="formula">
+$$
+U=
+\frac{Qq}{4\pi\varepsilon_0}
+\left[
+\frac{1}{r}
+-0
+\right]
+$$
+</div>
+
+<div class="formula">
+$$
+U=
+\frac{1}{4\pi\varepsilon_0}
+\times
+\frac{Qq}{r}
+\qquad
+[\text{वायु अथवा निर्वात में}]
+$$
+</div>
+
+<div class="formula">
+$$
+U=
+\frac{1}{4\pi\varepsilon_0 K}
+\times
+\frac{Qq}{r}
+\qquad
+[\text K \text{}]
+$$
+</div>
+<div class="question">
+Q. विभव प्रवणता (Potential Gradient) को परिभाषित कीजिए।
+</div>
+
+<div class="answer">
+विद्युत क्षेत्र में किसी बिंदु पर दूरी के साथ विद्युत विभव में होने वाले परिवर्तन की दर को उस बिंदु की विभव प्रवणता (Potential Gradient) कहते हैं।
+</div>
+
+<div class="formula">
+$$
+\text{Potential Gradient} = \frac{dV}{dr}
+$$
+</div>
+
+<div class="question">
+Q. सिद्ध कीजिए कि विद्युत क्षेत्र की तीव्रता विभव प्रवणता के बराबर होती है।
+</div>
+
+<div class="answer">
+माना विद्युत क्षेत्र में दो बिंदु A तथा B, dx दूरी पर स्थित हैं तथा उनके विभव क्रमशः V तथा (V-dV) हैं।
+</div>
+
+<div class="answer">
+यदि एकांक धन आवेश को A से B तक ले जाया जाए, तो किया गया कार्य
+</div>
+
+<div class="formula">
+$$
+dW=dV
+$$
+</div>
+
+<div class="answer">
+परंतु कार्य = बल × विस्थापन
+</div>
+
+<div class="formula">
+$$
+dW=F \, dx
+$$
+</div>
+
+<div class="formula">
+$$
+dV=F \, dx
+$$
+</div>
+
+<div class="answer">
+एकांक धन आवेश के लिए
+</div>
+
+<div class="formula">
+$$
+F=E
+$$
+</div>
+
+<div class="formula">
+$$
+dV=E\,dx
+$$
+</div>
+
+<div class="formula">
+$$
+E=\frac{dV}{dx}
+$$
+</div>
+
+<div class="answer">
+चूँकि विद्युत क्षेत्र की दिशा में विभव घटता है, अतः
+</div>
+
+<div class="formula">
+$$
+E=-\frac{dV}{dx}
+$$
+</div>
+
+<div class="answer">
+अतः सिद्ध हुआ कि विद्युत क्षेत्र की तीव्रता विभव प्रवणता के बराबर होती है तथा ऋण चिह्न यह दर्शाता है कि विद्युत क्षेत्र की दिशा में विभव घटता है।
+</div>
+
+
+
+
+<!-- SCRIPT -->
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("show");
+}
+
+document.addEventListener("click", function(e){
+    if(!e.target.closest(".navbar")){
+        document.getElementById("menu").classList.remove("show");
+    }
+});
+</script>
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<!-- Content Protection Scripts -->
+<script>
+// Disable right-click context menu
+document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+
+// Disable text selection
+document.addEventListener("selectstart", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+
+// Disable copy keyboard shortcut (Ctrl+C, Cmd+C)
+document.addEventListener("keydown", function(e) {
+    // Disable PrintScreen and related screenshot keys
+    if (e.key === "PrintScreen" || 
+        e.keyCode === 44 ||  // PrintScreen
+        (e.ctrlKey && e.shiftKey && e.key === "S") ||  // Windows Snipping Tool
+        (e.keyCode === 91 && e.shiftKey && e.key === "5")) {  // Mac Screenshot
+        e.preventDefault();
+        return false;
+    }
+    
+    // Disable Ctrl+C and Cmd+C (copy)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "c" || e.keyCode === 67)) {
+        e.preventDefault();
+        alert("Copying content is not allowed on this page.");
+        return false;
+    }
+    
+    // Disable Ctrl+A (select all)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "a" || e.keyCode === 65)) {
+        e.preventDefault();
+        return false;
+    }
+    
+    // Disable Ctrl+X (cut)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "x" || e.keyCode === 88)) {
+        e.preventDefault();
+        return false;
+    }
+    
+    // Disable F12 (Developer Tools)
+    if (e.keyCode === 123) {
+        e.preventDefault();
+        return false;
+    }
+    
+    // Disable Ctrl+Shift+I (Developer Tools)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "i" || e.keyCode === 73)) {
+        e.preventDefault();
+        return false;
+    }
+    
+    // Disable Ctrl+Shift+J (Console)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "j" || e.keyCode === 74)) {
+        e.preventDefault();
+        return false;
+    }
+}, false);
+
+// Prevent copy on mouse up
+document.addEventListener("mouseup", function() {
+    document.selection.empty ? document.selection.empty() : window.getSelection().removeAllRanges();
+}, false);
+
+// Disable paste
+document.addEventListener("paste", function(e) {
+    e.preventDefault();
+    alert("Pasting content is not allowed on this page.");
+    return false;
+}, false);
+
+// Add user-select: none CSS dynamically
+document.addEventListener("DOMContentLoaded", function() {
+    document.body.style.userSelect = "none";
+    document.body.style.webkitUserSelect = "none";
+    document.body.style.msUserSelect = "none";
+    document.body.style.mozUserSelect = "none";
+});
+
+// Prevent image download
+document.addEventListener("dragstart", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PAL STUDY CENTER | Notes</title>
+
+<!-- MathJax -->
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    color:#333;
+    line-height:1.7;
+}
+
+/* ===== NAVBAR (BRAND STYLE) ===== */
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:10px 0;
+
+    background:linear-gradient(135deg,#0D47A1,#1565C0);
+    box-shadow:0 6px 20px rgba(0,0,0,0.25);
+}
+
+/* BRAND */
+.logo{
+    text-align:center;
+}
+
+.logo .main{
+    font-size:36px;
+    font-weight:900;
+    letter-spacing:3px;
+    color:white;
+    text-transform:uppercase;
+}
+
+.logo .sub{
+    display:none;
+}
+
+/* ===== CONTENT ===== */
+.container{
+    max-width:900px;
+    margin:120px auto 30px;
+    padding:15px;
+}
+
+/* TITLE */
+.notes-title{
+    background:#E3F2FD;
+    color:#1565C0;
+    padding:14px;
+    border-left:5px solid #1565C0;
+    border-radius:10px;
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+/* QA BOX */
+.qa-box{
+    background:#fff;
+    padding:22px;
+    margin-bottom:18px;
+    border-radius:14px;
+
+    border-left:6px solid #1565C0;
+
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+
+    transition:0.25s ease;
+
+    position:relative;
+    overflow:hidden;
+}
+
+.qa-box::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:4px;
+    background:linear-gradient(90deg,#1565C0,#42A5F5);
+}
+
+.qa-box:hover{
+    transform:translateY(-4px) scale(1.01);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.question{
+    font-weight:bold;
+    color:#1b3a57;
+    margin-bottom:8px;
+}
+
+.answer{
+    color:#2c3e50;
+    text-align:justify;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+    .logo .main{
+        font-size:24px;
+        letter-spacing:2px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <img src="../../../../img/main_logo.png"
+         class="hero-logo"
+         alt="PAL STUDY CENTER">
+</div>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+    <div class="notes-title">📘 Unit 1 - स्थिर विद्युत</div>
+
+    <div class="qa-box">
+        <div class="question">प्रश्न: कूलॉम का नियम क्या है?</div>
+        <div class="answer">
+            दो आवेशों के बीच बल उनके गुणनफल के समानुपाती और दूरी के वर्ग के व्युत्क्रमानुपाती होता है।
+            <br><br>
+            $$ F = k \frac{q_1 q_2}{r^2} $$
+        </div>
+    </div>
+
+    <div class="qa-box">
+        <div class="question">प्रश्न: विद्युत क्षेत्र क्या है?</div>
+        <div class="answer">
+            किसी आवेश के चारों ओर वह क्षेत्र जहाँ वह अन्य आवेश पर बल लगाता है, विद्युत क्षेत्र कहलाता है।
+        </div>
+    </div>
+
+</div>
+<!-- SCRIPT -->
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("show");
+}
+
+document.addEventListener("click", function(e){
+    if(!e.target.closest(".navbar")){
+        document.getElementById("menu").classList.remove("show");
+    }
+});
+</script>
+
+<!-- Content Protection Scripts -->
+<script>
+// Disable right-click context menu
+document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+
+// Disable text selection
+document.addEventListener("selectstart", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+
+// Disable copy keyboard shortcut (Ctrl+C, Cmd+C)
+document.addEventListener("keydown", function(e) {
+    // Disable PrintScreen and related screenshot keys
+    if (e.key === "PrintScreen" || 
+        e.keyCode === 44 ||  // PrintScreen
+        (e.ctrlKey && e.shiftKey && e.key === "S") ||  // Windows Snipping Tool
+        (e.keyCode === 91 && e.shiftKey && e.key === "5")) {  // Mac Screenshot
+        e.preventDefault();
+        return false;
+    }
+    
+    // Disable Ctrl+C and Cmd+C (copy)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "c" || e.keyCode === 67)) {
+        e.preventDefault();
+        alert("Copying content is not allowed on this page.");
+        return false;
+    }
+    
+    // Disable Ctrl+A (select all)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "a" || e.keyCode === 65)) {
+        e.preventDefault();
+        return false;
+    }
+    
+    // Disable Ctrl+X (cut)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "x" || e.keyCode === 88)) {
+        e.preventDefault();
+        return false;
+    }
+    
+    // Disable F12 (Developer Tools)
+    if (e.keyCode === 123) {
+        e.preventDefault();
+        return false;
+    }
+    
+    // Disable Ctrl+Shift+I (Developer Tools)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "i" || e.keyCode === 73)) {
+        e.preventDefault();
+        return false;
+    }
+    
+    // Disable Ctrl+Shift+J (Console)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "j" || e.keyCode === 74)) {
+        e.preventDefault();
+        return false;
+    }
+}, false);
+
+// Prevent copy on mouse up
+document.addEventListener("mouseup", function() {
+    document.selection.empty ? document.selection.empty() : window.getSelection().removeAllRanges();
+}, false);
+
+// Disable paste
+document.addEventListener("paste", function(e) {
+    e.preventDefault();
+    alert("Pasting content is not allowed on this page.");
+    return false;
+}, false);
+
+// Add user-select: none CSS dynamically
+document.addEventListener("DOMContentLoaded", function() {
+    document.body.style.userSelect = "none";
+    document.body.style.webkitUserSelect = "none";
+    document.body.style.msUserSelect = "none";
+    document.body.style.mozUserSelect = "none";
+});
+
+// Prevent image download
+document.addEventListener("dragstart", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+</script>
+
+</body>
+</html>

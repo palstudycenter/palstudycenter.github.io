@@ -1,0 +1,2816 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PAL STUDY CENTER | Notes</title>
+
+<!-- MathJax -->
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$']],
+    processEscapes: true
+  },
+  svg: { fontCache: 'global' }
+};
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    color:#333;
+    line-height:1.7;
+}
+
+/* ===== NAVBAR (BRAND STYLE) ===== */
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:16px;
+
+    background:linear-gradient(135deg,#0D47A1,#1565C0);
+    box-shadow:0 6px 20px rgba(0,0,0,0.25);
+}
+
+/* BRAND */
+.logo{
+    text-align:center;
+}
+
+.logo .main{
+    font-size:36px;
+    font-weight:900;
+    letter-spacing:3px;
+    color:white;
+    text-transform:uppercase;
+}
+
+.logo .sub{
+    display:none;
+}
+
+/* ===== CONTENT ===== */
+.container{
+    max-width:900px;
+    margin:120px auto 30px;
+    padding:15px;
+}
+
+/* TITLE */
+.notes-title{
+    background:#E3F2FD;
+    color:#1565C0;
+    padding:14px;
+    border-left:5px solid #1565C0;
+    border-radius:10px;
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+/* QA BOX */
+.qa-box{
+    background:#fff;
+    padding:22px;
+    margin-bottom:18px;
+    border-radius:14px;
+
+    border-left:6px solid #1565C0;
+
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+
+    transition:0.25s ease;
+
+    position:relative;
+    overflow:hidden;
+}
+
+.qa-box::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:4px;
+    background:linear-gradient(90deg,#1565C0,#42A5F5);
+}
+
+.qa-box:hover{
+    transform:translateY(-4px) scale(1.01);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.question{
+    font-weight:bold;
+    color:#1b3a57;
+    margin-bottom:8px;
+}
+
+.answer{
+    color:#2c3e50;
+    text-align:justify;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+    .logo .main{
+        font-size:24px;
+        letter-spacing:2px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">
+        <div class="main">PAL STUDY CENTER</div>
+    </div>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+    <div class="notes-title">📘 Unit 1 - विलियन </div>
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न : विलयन किसे कहते हैं? (2023)
+</div>
+
+<div class="answer">
+दो या दो से अधिक पदार्थों के समांगी (homogeneous) मिश्रण को विलयन कहते हैं।
+</div>
+
+<div class="answer">
+उदाहरण के लिए नमक और जल का विलयन।
+</div>
+
+<div class="answer">
+विलयन में जिस पदार्थ की मात्रा अधिक होती है उसे विलायक (Solvent) कहते हैं और जिसकी मात्रा कम होती है उसे विलेय (Solute) कहते हैं।
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न : सान्द्रता के आधार पर विलयन का वर्गीकरण कीजिए।
+</div>
+
+<div class="answer">
+सान्द्रता के आधार पर विलयन पाँच प्रकार के होते हैं—
+</div>
+
+<div class="answer">
+1. सान्द्र विलयन  
+2. तनु विलयन  
+3. संतृप्त विलयन  
+4. असंतृप्त विलयन  
+5. अतिसंतृप्त विलयन  
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न : विलयन की सांद्रता को व्यक्त करने की कौन-कौन सी इकाइयाँ हैं?
+</div>
+
+<div class="answer">
+विलयन की सांद्रता को व्यक्त करने की निम्न इकाइयाँ हैं—
+</div>
+
+<div class="answer">
+1. मोलरता  
+2. मोललता  
+3. नॉर्मलता  
+4. फॉर्मलता  
+5. मोल भिन्न  
+6. प्रतिशतता  
+7. ppm सांद्रता  
+</div>
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न : पदार्थ को मापने की कौन-कौन सी इकाइयाँ हैं?
+</div>
+
+<div class="answer">
+पदार्थ को मापने की निम्न तीन इकाइयाँ हैं—
+</div>
+
+<div class="answer">
+
+1. ग्राम मोल  
+</div>
+
+<div class="formula">
+$$
+\text{ग्राम मोल} = \frac{\text{भार}}{\text{अणुभार}}
+$$
+</div>
+
+<div class="answer">
+
+2. ग्राम तुल्यांक भार  
+</div>
+
+<div class="formula">
+$$
+\text{ग्राम तुल्यांक भार} = \frac{\text{भार}}{\text{तुल्यांक भार}}
+$$
+</div>
+
+<div class="answer">
+
+3. ग्राम सूत्र भार  
+</div>
+
+<div class="formula">
+$$
+\text{ग्राम सूत्र भार} = \frac{\text{भार}}{\text{सूत्र भार}}
+$$
+</div>
+
+</div>
+<div class="qa-box">
+<div class="question">
+प्रश्न: मोलरता (Molarity) क्या है?
+</div>
+
+<div class="answer">
+किसी विलयन के 1 लीटर में उपस्थित विलेय के ग्राम मोलों की संख्या को मोलरता (Molarity) कहते हैं। इसे M द्वारा दर्शाते हैं।
+</div>
+
+<div class="math">
+$$
+M= \frac{n}{V}
+$$
+</div>
+<div class="math">
+$$
+M = \frac{W}{M_m \times V( L)}
+$$
+</div>
+
+<div class="math">
+$$
+M = \frac{W \times 1000}{M_m \times V(ml)}
+$$
+</div>
+
+<div class="hindi">
+जहाँ n = विलेय के ग्राम मोल </div>
+
+<div class="hindi">
+V = विलयन का आयतन </div>
+
+<div class="hindi">
+m = विलेय का भार </div>
+<div class="hindi">
+W = विलेय का अणुभार </div>
+
+<div class="hindi">
+  मोललता की इकाई ग्राम मोल प्रति लीटर होती
+  है।</div>
+</div>
+
+<div class="qa-box">
+<div class="question">
+प्रश्न: मोललता (Molality) क्या है?
+</div>
+
+<div class="answer">
+1 किलोग्राम विलायक में घुले विलेय के ग्राम मोलों की संख्या को मोललता (Molality) कहते हैं। इसे m द्वारा दर्शाते हैं।
+</div>
+
+<div class="math">
+$$
+m=\frac{n}{W_s}
+$$
+</div>
+
+<div class="math">
+$$
+m=\frac{W}{M_m \times W_s(kg)}
+$$
+</div>
+
+<div class="math">
+$$
+m=\frac{W \times 1000}{M_m \times W_s(g)}
+$$
+</div>
+
+<div class="hindi">
+जहाँ n = विलेय के ग्राम मोल
+</div>
+
+<div class="hindi">
+W = विलेय का भार
+</div>
+
+<div class="hindi">
+M<sub>m</sub> = विलेय का अणुभार
+</div>
+
+<div class="hindi">
+W<sub>s</sub> = विलायक का भार
+</div>
+
+<div class="hindi">
+मोललता की इकाई ग्राम मोल प्रति किलोग्राम होती है।
+</div>
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न: मोलरता एवं मोललता में अंतर लिखिए।
+</div>
+
+<div class="answer">
+
+<table style="width:100%; border-collapse:collapse; margin-top:10px;">
+
+<tr style="background:#E3F2FD;">
+<th style="border:1px solid #ccc; padding:10px;">मोलरता (Molarity)</th>
+<th style="border:1px solid #ccc; padding:10px;">मोललता (Molality)</th>
+</tr>
+
+<tr>
+<td style="border:1px solid #ccc; padding:10px;">
+एक लीटर विलयन में उपस्थित विलेय के मोलों की संख्या मोलरता कहलाती है।
+</td>
+<td style="border:1px solid #ccc; padding:10px;">
+एक किलोग्राम विलायक में उपस्थित विलेय के मोलों की संख्या मोललता कहलाती है।
+</td>
+</tr>
+
+<tr>
+<td style="border:1px solid #ccc; padding:10px;">
+इसे आयतन में व्यक्त करते हैं।
+</td>
+<td style="border:1px solid #ccc; padding:10px;">
+इसे भार में व्यक्त करते हैं।
+</td>
+</tr>
+
+<tr>
+<td style="border:1px solid #ccc; padding:10px;">
+इसका मात्रक ग्राम मोल/लीटर है।
+</td>
+<td style="border:1px solid #ccc; padding:10px;">
+इसका मात्रक ग्राम मोल/किलोग्राम है।
+</td>
+</tr>
+
+<tr>
+<td style="border:1px solid #ccc; padding:10px;">
+इसमें आयतन की प्रधानता होती है।
+</td>
+<td style="border:1px solid #ccc; padding:10px;">
+इसमें भार की प्रधानता होती है।
+</td>
+</tr>
+
+<tr>
+<td style="border:1px solid #ccc; padding:10px;">
+यह तापमान से प्रभावित होती है।
+</td>
+<td style="border:1px solid #ccc; padding:10px;">
+यह तापमान से प्रभावित नहीं होती।
+</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<<div class="qa-box">
+<div class="question">
+प्रश्न: नार्मलता (Normality) क्या है?
+</div>
+
+<div class="answer">
+किसी विलयन के 1 लीटर में उपस्थित विलेय के ग्राम तुल्यांकों की संख्या को नार्मलता (Normality) कहते हैं। इसे N द्वारा दर्शाते हैं।
+</div>
+
+<div class="math">
+$$
+N=\frac{\text{ग्राम तुल्यांक}}{V}
+$$
+</div>
+
+<div class="math">
+$$
+N=\frac{W}{E \times V(L)}
+$$
+</div>
+
+<div class="math">
+$$
+N=\frac{W \times 1000}{E \times V(ml)}
+$$
+</div>
+
+<div class="hindi">
+जहाँ W = विलेय का भार
+</div>
+
+<div class="hindi">
+E = तुल्यांक भार
+</div>
+
+<div class="hindi">
+V = विलयन का आयतन
+</div>
+
+<div class="hindi">
+नार्मलता की इकाई ग्राम तुल्यांक प्रति लीटर होती है।
+</div>
+</div>
+
+
+<div class="qa-box">
+<div class="question">
+प्रश्न: फार्मलता (Formality) क्या है?
+</div>
+
+<div class="answer">
+किसी विलयन के 1 लीटर में उपस्थित विलेय के ग्राम सूत्र भारों की संख्या को फार्मलता (Formality) कहते हैं। इसे F द्वारा दर्शाते हैं।
+</div>
+
+<div class="math">
+$$
+F=\frac{\text{ग्राम सूत्र भार}}{V}
+$$
+</div>
+
+<div class="math">
+$$
+F=\frac{W}{F_m \times V(L)}
+$$
+</div>
+
+<div class="math">
+$$
+F=\frac{W \times 1000}{F_m \times V(ml)}
+$$
+</div>
+
+<div class="hindi">
+जहाँ W = विलेय का भार
+</div>
+
+<div class="hindi">
+F<sub>m</sub> = सूत्र भार
+</div>
+
+<div class="hindi">
+V = विलयन का आयतन
+</div>
+
+<div class="hindi">
+फार्मलता की इकाई ग्राम सूत्र भार प्रति लीटर होती है।
+</div>
+</div>
+
+<div class="qa-box">
+<div class="question">
+प्रश्न: मोल भिन्न (Mole Fraction) क्या है?
+</div>
+
+<div class="answer">
+किसी विलयन में उपस्थित विलेय अथवा विलायक के मोलों की संख्या तथा विलयन में उपस्थित कुल मोलों की संख्या के अनुपात को मोल भिन्न (Mole Fraction) कहते हैं।
+</div>
+
+<div class="answer">
+यदि किसी विलयन में विलेय के n₁ मोल तथा विलायक के n₂ मोल उपस्थित हों, तो विलयन में कुल मोलों की संख्या (n₁ + n₂) होगी।
+</div>
+
+<div class="math">
+$$
+X_1=\frac{n_1}{n_1+n_2}
+$$
+</div>
+
+<div class="math">
+$$
+X_2=\frac{n_2}{n_1+n_2}
+$$
+</div>
+
+<div class="hindi">
+जहाँ X₁ = विलेय का मोल भिन्न
+</div>
+
+<div class="hindi">
+X₂ = विलायक का मोल भिन्न
+</div>
+
+<div class="hindi">
+n₁ = विलेय के मोलों की संख्या
+</div>
+
+<div class="hindi">
+n₂ = विलायक के मोलों की संख्या
+</div>
+
+<div class="hindi">
+मोल भिन्न की कोई इकाई नहीं होती, क्योंकि यह दो समान राशियों का अनुपात है।
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न: प्रतिशतता (Percentage Concentration) क्या है?
+</div>
+
+<div class="answer">
+100 ग्राम या 100 mL विलयन में उपस्थित विलेय की मात्रा को प्रतिशतता कहते हैं।
+</div>
+
+<div class="math">
+$$
+\% = \frac{W_{solute}}{W_{solution}} \times 100
+$$
+</div>
+
+<div class="math">
+$$
+\% (w/v) = \frac{W}{V} \times 100
+$$
+</div>
+
+<div class="hindi">W = विलेय का भार</div>
+<div class="hindi">V = विलयन का आयतन</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न: ppm (Parts per million) सांद्रता क्या है?
+</div>
+
+<div class="answer">
+बहुत कम सांद्रता वाले विलयनों के लिए ppm का उपयोग किया जाता है।
+</div>
+
+<div class="math">
+$$
+ppm = \frac{W_{solute}}{W_{solution}} \times 10^6
+$$
+</div>
+
+<div class="math">
+$$
+ppm = \frac{mg}{L}
+$$
+</div>
+
+<div class="hindi">ppm = प्रति दस लाख भाग में विलेय की मात्रा</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+प्र. अणुसंख्यक गुण क्या हैं? इसके उदाहरण लिखिए।
+</div>
+
+<div class="answer">
+विलयन के वे गुण जो विलेय की प्रकृति पर निर्भर न होकर केवल विलेय कणों की संख्या पर निर्भर करते हैं, अणुसंख्यक गुण (Colligative Properties) कहलाते हैं।
+</div>
+
+<div class="answer">
+<b>उदाहरण —</b>
+</div>
+
+<div class="answer">
+1. वाष्प दाब का आपेक्षिक अवनमन
+</div>
+
+<div class="answer">
+2. परासरण दाब
+</div>
+
+<div class="answer">
+3. क्वथनांक का उन्नयन
+</div>
+
+<div class="answer">
+4. हिमांक का अवनमन
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+प्र. वाष्प दाब, वाष्प दाब अवनमन तथा वाष्प दाब का आपेक्षिक अवनमन से क्या अभिप्राय है?
+</div>
+
+<div class="answer">
+<b>1. वाष्प दाब (Vapour Pressure)</b>
+</div>
+
+<div class="answer">
+जब कोई द्रव अपनी वाष्प के साथ साम्यावस्था (Equilibrium) में होता है, तब वाष्प द्वारा द्रव की सतह पर लगाए गए दाब को वाष्प दाब कहते हैं।
+</div>
+
+<div class="hindi">
+शुद्ध विलायक के वाष्प दाब को P<sub>o</sub> द्वारा व्यक्त करते हैं।
+</div>
+
+<br>
+
+<div class="answer">
+<b>2. वाष्प दाब में अवनमन (Lowering of Vapour Pressure)</b>
+</div>
+
+<div class="answer">
+जब किसी शुद्ध विलायक में कोई अवाष्पशील विलेय पदार्थ मिलाया जाता है, तो प्राप्त विलयन के वाष्प दाब में कमी आ जाती है। इस कमी को वाष्प दाब में अवनमन कहते हैं।
+</div>
+
+<div class="math">
+$$
+\text{वाष्प दाब में अवनमन}
+=
+P_o - P
+$$
+</div>
+
+<div class="hindi">
+जहाँ —
+</div>
+
+<div class="hindi">
+P<sub>o</sub> = शुद्ध विलायक का वाष्प दाब
+</div>
+
+<div class="hindi">
+P = विलयन का वाष्प दाब
+</div>
+
+<br>
+
+<div class="answer">
+<b>3. वाष्प दाब का आपेक्षिक अवनमन (Relative Lowering of Vapour Pressure)</b>
+</div>
+
+<div class="answer">
+किसी विलयन के वाष्प दाब में अवनमन तथा शुद्ध विलायक के वाष्प दाब के अनुपात को वाष्प दाब का आपेक्षिक अवनमन कहते हैं।
+</div>
+
+<div class="math">
+$$
+\text{वाष्प दाब का आपेक्षिक अवनमन}
+=
+\frac{P_o-P}{P_o}
+$$
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न : अवाष्पशील विलेय को किसी विलायक में मिलाने से उसका वाष्प दाब कम क्यों हो जाता है?
+</div>
+
+<div class="answer">
+अवाष्पशील विलेय के कण स्वयं वाष्प में परिवर्तित नहीं होते हैं।
+</div>
+
+<div class="answer">
+जब ऐसे विलेय को किसी विलायक में मिलाया जाता है, तो उसके कण विलायक के कणों के बीच स्थान ग्रहण कर लेते हैं।
+</div>
+
+<div class="answer">
+फलस्वरूप विलायक की सतह पर उपस्थित कणों की संख्या कम हो जाती है तथा विलायक के कणों का वाष्प अवस्था में परिवर्तित होना कठिन हो जाता है।
+</div>
+
+<div class="answer">
+इस कारण विलयन से निकलने वाले वाष्प कणों की संख्या घट जाती है और विलयन का वाष्प दाब शुद्ध विलायक की अपेक्षा कम हो जाता है।
+</div>
+
+<div class="hindi">
+अतः अवाष्पशील विलेय मिलाने पर विलयन का वाष्प दाब घट जाता है।
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न : राउल्ट का नियम लिखिए तथा इसे सिद्ध कीजिए।
+</div>
+
+<div class="answer">
+<b>राउल्ट का नियम :</b><br>
+राउल्ट के नियम के अनुसार, स्थिर ताप पर किसी विलयन के वाष्पदाब में आपेक्षिक अवनमन, विलेय के मोल प्रभाज के बराबर होता है।
+</div>
+
+<div class="math">
+$$
+\frac{P_0-P_s}{P_0}
+=
+\frac{n_1}{n_1+n_2}
+$$
+</div>
+
+<div class="hindi">
+जहाँ —
+</div>
+
+<div class="hindi">
+P<sub>0</sub> = शुद्ध विलायक का वाष्पदाब
+</div>
+
+<div class="hindi">
+P<sub>s</sub> = विलयन का वाष्पदाब
+</div>
+
+<div class="hindi">
+n<sub>1</sub> = विलेय के मोलों की संख्या
+</div>
+
+<div class="hindi">
+n<sub>2</sub> = विलायक के मोलों की संख्या
+</div>
+
+<br>
+
+<div class="answer">
+<b>सिद्धांत :</b><br>
+किसी विलयन का वाष्पदाब विलायक के मोल भिन्न के समानुपाती होता है।
+</div>
+
+<div class="math">
+$$
+P_s \propto
+\frac{n_2}{n_1+n_2}
+$$
+</div>
+
+<div class="math">
+$$
+P_s = K
+\left(
+\frac{n_2}{n_1+n_2}
+\right)
+\qquad ...(1)
+$$
+</div>
+
+<div class="answer">
+शुद्ध विलायक के लिए
+</div>
+
+<div class="math">
+$$
+P_s=P_0
+\quad \text{तथा} \quad
+n_1=0
+$$
+</div>
+
+<div class="answer">
+समीकरण (1) से,
+</div>
+
+<div class="math">
+$$
+P_0=
+K\left(
+\frac{n_2}{0+n_2}
+\right)
+$$
+</div>
+
+<div class="math">
+$$
+P_0=K
+$$
+</div>
+
+<div class="answer">
+अतः,
+</div>
+
+<div class="math">
+$$
+K=P_0
+$$
+</div>
+
+<div class="answer">
+K का मान समीकरण (1) में रखने पर,
+</div>
+
+<div class="math">
+$$
+P_s=
+P_0
+\left(
+\frac{n_2}{n_1+n_2}
+\right)
+$$
+</div>
+
+<div class="math">
+$$
+\frac{P_s}{P_0}
+=
+\frac{n_2}{n_1+n_2}
+$$
+</div>
+
+<div class="answer">
+दोनों पक्षों को 1 से घटाने पर,
+</div>
+
+<div class="math">
+$$
+1-\frac{P_s}{P_0}
+=
+1-
+\frac{n_2}{n_1+n_2}
+$$
+</div>
+
+<div class="math">
+$$
+\frac{P_0-P_s}{P_0}
+=
+\frac{n_1+n_2-n_2}{n_1+n_2}
+$$
+</div>
+
+<div class="math">
+$$
+\frac{P_0-P_s}{P_0}
+=
+\frac{n_1}{n_1+n_2}
+$$
+</div>
+
+<div class="answer">
+अतः सिद्ध हुआ कि
+</div>
+
+<div class="math">
+$$
+\frac{P_0-P_s}{P_0}
+=
+\frac{n_1}{n_1+n_2}
+$$
+</div>
+
+<div class="answer">
+यही राउल्ट का नियम है।
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+तनु विलयन के लिए राउल्ट का नियम
+</div>
+
+<div class="answer">
+तनु विलयन में विलेय के मोल (n) का मान विलायक के मोल (N) की तुलना में बहुत कम होता है।
+</div>
+
+<div class="math">
+$$
+N+n \approx N
+$$
+</div>
+
+<div class="answer">
+अतः
+</div>
+
+<div class="math">
+$$
+\frac{P_o-P}{P_o}
+=
+\frac{n}{N}
+$$
+</div>
+
+<div class="answer">
+अर्थात् तनु विलयन के लिए वाष्पदाब का आपेक्षिक अवनमन, विलेय एवं विलायक के मोलों की संख्या के अनुपात के बराबर होता है।
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न : राउल्ट के नियम द्वारा विलेय के आण्विक द्रव्यमान की गणना कीजिए।
+</div>
+
+<div class="answer">
+राउल्ट के नियम के अनुसार —
+</div>
+
+<div class="math">
+$$
+\frac{P_o-P_s}{P_o}
+=
+\frac{n}{N}
+$$
+</div>
+
+<div class="answer">
+यदि विलेय का भार W ग्राम तथा उसका आण्विक द्रव्यमान M हो, तब
+</div>
+
+<div class="math">
+$$
+n=\frac{W}{M}
+$$
+</div>
+
+<div class="answer">
+यदि विलायक का भार w ग्राम तथा उसका आण्विक द्रव्यमान m हो, तब
+</div>
+
+<div class="math">
+$$
+N=\frac{w}{m}
+$$
+</div>
+
+<div class="answer">
+मान रखने पर —
+</div>
+
+<div class="math">
+$$
+\frac{P_o-P_s}{P_o}
+=
+\frac{\frac{W}{M}}{\frac{w}{m}}
+$$
+</div>
+
+<div class="math">
+$$
+\frac{P_o-P_s}{P_o}
+=
+\frac{Wm}{Mw}
+$$
+</div>
+
+<div class="math">
+$$
+M=
+\frac{WmP_o}{w(P_o-P_s)}
+$$
+</div>
+
+<div class="answer">
+यही विलेय के आण्विक द्रव्यमान का व्यंजक है।
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न : आदर्श तथा अनादर्श विलयन किसे कहते हैं?
+</div>
+
+<div class="answer">
+<b>आदर्श विलयन (Ideal Solution)</b>
+</div>
+
+<div class="answer">
+वे विलयन जो सांद्रण एवं ताप की सभी परिस्थितियों में राउल्ट के नियम का पूर्णतः पालन करते हैं, आदर्श विलयन कहलाते हैं।
+</div>
+
+<div class="hindi">
+उदाहरण : बेंजीन + टॉल्यून
+</div>
+
+<div class="answer">
+<b>गुण —</b>
+</div>
+
+<div class="answer">
+1. राउल्ट के नियम का पूर्णतः पालन करते हैं।
+</div>
+
+<div class="answer">
+2. मिश्रण के समय आयतन परिवर्तन शून्य होता है।
+</div>
+
+<div class="math">
+$$
+\Delta V_{mixing}=0
+$$
+</div>
+
+<div class="answer">
+3. मिश्रण के समय एन्थैल्पी परिवर्तन शून्य होता है।
+</div>
+
+<div class="math">
+$$
+\Delta H_{mixing}=0
+$$
+</div>
+
+<br>
+
+<div class="answer">
+<b>अनादर्श विलयन (Non-Ideal Solution)</b>
+</div>
+
+<div class="answer">
+वे विलयन जो सांद्रण एवं ताप की सभी परिस्थितियों में राउल्ट के नियम का पूर्णतः पालन नहीं करते हैं, अनादर्श विलयन कहलाते हैं।
+</div>
+
+<div class="hindi">
+उदाहरण : ऐसीटोन + बेंजीन
+</div>
+
+<div class="answer">
+<b>गुण —</b>
+</div>
+
+<div class="answer">
+1. राउल्ट के नियम का पूर्णतः पालन नहीं करते।
+</div>
+
+<div class="answer">
+2. मिश्रण के समय आयतन परिवर्तन शून्य नहीं होता।
+</div>
+
+<div class="math">
+$$
+\Delta V_{mixing}\neq0
+$$
+</div>
+
+<div class="answer">
+3. मिश्रण के समय एन्थैल्पी परिवर्तन शून्य नहीं होता।
+</div>
+
+<div class="math">
+$$
+\Delta H_{mixing}\neq0
+$$
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न : आदर्श एवं अनादर्श विलयन में अंतर लिखिए।
+</div>
+
+<div class="answer">
+
+<table style="width:100%; border-collapse:collapse; margin-top:10px;">
+<tr>
+<th style="border:1px solid #ccc; padding:8px;">आदर्श विलयन</th>
+<th style="border:1px solid #ccc; padding:8px;">अनादर्श विलयन</th>
+</tr>
+
+<tr>
+<td style="border:1px solid #ccc; padding:8px;">
+राउल्ट के नियम का पूर्णतः पालन करते हैं।
+</td>
+<td style="border:1px solid #ccc; padding:8px;">
+राउल्ट के नियम का पूर्णतः पालन नहीं करते।
+</td>
+</tr>
+
+<tr>
+<td style="border:1px solid #ccc; padding:8px;">
+ΔV<sub>mixing</sub> = 0
+</td>
+<td style="border:1px solid #ccc; padding:8px;">
+ΔV<sub>mixing</sub> ≠ 0
+</td>
+</tr>
+
+<tr>
+<td style="border:1px solid #ccc; padding:8px;">
+ΔH<sub>mixing</sub> = 0
+</td>
+<td style="border:1px solid #ccc; padding:8px;">
+ΔH<sub>mixing</sub> ≠ 0
+</td>
+</tr>
+
+<tr>
+<td style="border:1px solid #ccc; padding:8px;">
+उदाहरण : बेंजीन + टॉल्यून
+</td>
+<td style="border:1px solid #ccc; padding:8px;">
+उदाहरण : ऐसीटोन + बेंजीन
+</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न : अनादर्श विलयन कितने प्रकार के होते हैं?
+</div>
+
+<div class="answer">
+अनादर्श विलयनों को उनके व्यवहार के आधार पर दो प्रकारों में विभाजित किया जाता है—
+</div>
+
+<div class="answer">
+1. धन विचलन प्रदर्शित करने वाले अनादर्श विलयन<br>
+2. ऋण विचलन प्रदर्शित करने वाले अनादर्श विलयन
+</div>
+
+</div>
+
+<!-- धन विचलन -->
+<div class="qa-box">
+
+<div class="question">
+धन विचलन प्रदर्शित करने वाले अनादर्श विलयन
+</div>
+
+<div class="answer">
+वे अनादर्श विलयन जिनका वाष्पदाब राउल्ट के नियम द्वारा प्राप्त मान से अधिक होता है, धन विचलन प्रदर्शित करने वाले अनादर्श विलयन कहलाते हैं।
+</div>
+
+<div class="answer">
+इनमें भिन्न-भिन्न अणुओं के मध्य आकर्षण बल अपेक्षाकृत कम होता है, इसलिए अणु आसानी से वाष्प अवस्था में चले जाते हैं।
+</div>
+
+<div class="hindi">
+उदाहरण :
+</div>
+
+<div class="answer">
+• ऐसीटोन + कार्बन डाइसल्फाइड (CS₂)<br>
+• ऐसीटोन + एथिल अल्कोहल<br>
+• ऐसीटोन + बेंजीन
+</div>
+
+</div>
+
+<!-- ऋण विचलन -->
+<div class="qa-box">
+
+<div class="question">
+ऋण विचलन प्रदर्शित करने वाले अनादर्श विलयन
+</div>
+
+<div class="answer">
+वे अनादर्श विलयन जिनका वाष्पदाब राउल्ट के नियम द्वारा प्राप्त मान से कम होता है, ऋण विचलन प्रदर्शित करने वाले अनादर्श विलयन कहलाते हैं।
+</div>
+
+<div class="answer">
+इनमें भिन्न-भिन्न अणुओं के मध्य आकर्षण बल अधिक होता है, इसलिए अणु आसानी से वाष्प अवस्था में नहीं जा पाते।
+</div>
+
+<div class="hindi">
+उदाहरण :
+</div>
+
+<div class="answer">
+• क्लोरोफॉर्म + बेंजीन<br>
+• ऐसीटोन + ऐनीलीन<br>
+• क्लोरोफॉर्म + डाइएथिल ईथर
+</div>
+
+</div>
+
+<!-- अंतर -->
+<div class="qa-box">
+
+<div class="question">
+प्रश्न : धन विचलन एवं ऋण विचलन प्रदर्शित करने वाले अनादर्श विलयनों में अंतर लिखिए।
+</div>
+
+<table style="width:100%; border-collapse:collapse; margin-top:10px;">
+<tr style="background:#E3F2FD;">
+<th style="border:1px solid #ccc;padding:8px;">धन विचलन</th>
+<th style="border:1px solid #ccc;padding:8px;">ऋण विचलन</th>
+</tr>
+
+<tr>
+<td style="border:1px solid #ccc;padding:8px;">
+वाष्पदाब राउल्ट के नियम से प्राप्त मान से अधिक होता है।
+</td>
+<td style="border:1px solid #ccc;padding:8px;">
+वाष्पदाब राउल्ट के नियम से प्राप्त मान से कम होता है।
+</td>
+</tr>
+
+<tr>
+<td style="border:1px solid #ccc;padding:8px;">
+अणुओं के बीच आकर्षण बल कम होता है।
+</td>
+<td style="border:1px solid #ccc;padding:8px;">
+अणुओं के बीच आकर्षण बल अधिक होता है।
+</td>
+</tr>
+
+<tr>
+<td style="border:1px solid #ccc;padding:8px;">
+वाष्पीकरण की प्रवृत्ति अधिक होती है।
+</td>
+<td style="border:1px solid #ccc;padding:8px;">
+वाष्पीकरण की प्रवृत्ति कम होती है।
+</td>
+</tr>
+
+<tr>
+<td style="border:1px solid #ccc;padding:8px;">
+उदाहरण – ऐसीटोन + बेंजीन
+</td>
+<td style="border:1px solid #ccc;padding:8px;">
+उदाहरण – क्लोरोफॉर्म + बेंजीन
+</td>
+</tr>
+
+</table>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न : स्थिर क्वाथी मिश्रण किसे कहते हैं? (2011, 2014, 2018)
+</div>
+
+<div class="answer">
+ऐसा द्रव मिश्रण जो निश्चित ताप पर उबलता है तथा बिना संघटन बदले उसी ताप पर आसवित होता है, स्थिर क्वाथी मिश्रण (Azeotropic Mixture) कहलाता है।
+</div>
+
+<div class="answer">
+स्थिर क्वाथी मिश्रण दो प्रकार के होते हैं—
+</div>
+
+<div class="answer">
+1. निम्न क्वथन स्थिर क्वाथी मिश्रण<br>
+2. उच्च क्वथन स्थिर क्वाथी मिश्रण
+</div>
+
+</div>
+
+<!-- निम्न क्वथन स्थिर क्वाथी मिश्रण -->
+
+<div class="qa-box">
+
+<div class="question">
+निम्न क्वथन स्थिर क्वाथी मिश्रण
+</div>
+
+<div class="answer">
+वे विलयन जो राउल्ट के नियम से धनात्मक विचलन प्रदर्शित करते हैं तथा जिनका वाष्पदाब अधिक होता है, निम्न क्वथन स्थिर क्वाथी मिश्रण कहलाते हैं।
+</div>
+
+<div class="answer">
+इनका क्वथनांक शुद्ध अवयवों के क्वथनांक से कम होता है।
+</div>
+
+<div class="hindi">
+उदाहरण :
+</div>
+
+<div class="answer">
+• ऐसीटोन + कार्बन डाइसल्फाइड (CS₂)
+</div>
+
+</div>
+
+<!-- उच्च क्वथन स्थिर क्वाथी मिश्रण -->
+
+<div class="qa-box">
+
+<div class="question">
+उच्च क्वथन स्थिर क्वाथी मिश्रण
+</div>
+
+<div class="answer">
+वे विलयन जो राउल्ट के नियम से ऋणात्मक विचलन प्रदर्शित करते हैं तथा जिनका वाष्पदाब कम होता है, उच्च क्वथन स्थिर क्वाथी मिश्रण कहलाते हैं।
+</div>
+
+<div class="answer">
+इनका क्वथनांक शुद्ध अवयवों के क्वथनांक से अधिक होता है।
+</div>
+
+<div class="hindi">
+उदाहरण :
+</div>
+
+<div class="answer">
+• ऐसीटोन + क्लोरोफॉर्म
+</div>
+
+</div>
+
+<!-- आसवन द्वारा पृथक्करण -->
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न : क्या स्थिर क्वाथी मिश्रण के अवयवों को आसवन द्वारा पृथक किया जा सकता है?
+</div>
+
+<div class="answer">
+नहीं, स्थिर क्वाथी मिश्रण के अवयवों को साधारण आसवन (Simple Distillation) द्वारा पृथक नहीं किया जा सकता है।
+</div>
+
+<div class="answer">
+क्योंकि यह मिश्रण एक निश्चित ताप पर उबलता है तथा बिना संघटन में परिवर्तन किए उसी ताप पर आसवित होता है।
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+प्र. परासरण किसे कहते हैं?
+</div>
+
+<div class="answer">
+विलयनों का वह गुण जिसमें विलायक के कण अर्धपारगम्य झिल्ली के माध्यम से कम सांद्र विलयन से अधिक सांद्र विलयन की ओर स्वतः प्रवाहित होते हैं, परासरण (Osmosis) कहलाता है।
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+प्र. अर्धपारगम्य झिल्ली किसे कहते हैं?
+</div>
+
+<div class="answer">
+ऐसी झिल्ली जो केवल विलायक के अणुओं को अपने में से आने-जाने देती है तथा विलेय के अणुओं को रोक देती है, अर्धपारगम्य झिल्ली (Semi-permeable Membrane) कहलाती है।
+</div>
+
+<div class="hindi">
+उदाहरण :
+</div>
+
+<div class="answer">
+• अण्डे की झिल्ली<br>
+• बकरे के अमाशय की झिल्ली<br>
+• अन्य जैविक झिल्लियाँ
+</div>
+
+<div class="answer">
+रासायनिक अर्धपारगम्य झिल्ली का प्रमुख उदाहरण कॉपर फेरोसायनाइड है।
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न : कृत्रिम अर्धपारगम्य झिल्ली का नाम लिखिए।
+</div>
+
+<div class="answer">
+कृत्रिम अर्धपारगम्य झिल्ली का नाम <b>कॉपर फेरोसायनाइड (Copper Ferrocyanide)</b> है।
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न : क्या कारण है कि किशमिश जल में फूल जाती है, जबकि अंगूर को चीनी के गाढ़े घोल में डालने पर वह सिकुड़ जाता है?
+</div>
+
+<div class="answer">
+<b>किशमिश का फूलना :</b>
+</div>
+
+<div class="answer">
+किशमिश को जल में डालने पर बाहर का माध्यम कम सांद्र होता है। इसलिए जल के अणु अर्धपारगम्य झिल्ली के माध्यम से किशमिश के अंदर प्रवेश करते हैं। इस प्रक्रिया को <b>अंतःपरासरण (Endosmosis)</b> कहते हैं।
+</div>
+
+<div class="answer">
+फलस्वरूप किशमिश जल को अवशोषित करके फूल जाती है।
+</div>
+
+<br>
+
+<div class="answer">
+<b>अंगूर का सिकुड़ना :</b>
+</div>
+
+<div class="answer">
+जब अंगूर को चीनी के गाढ़े घोल में रखा जाता है, तब बाहर का घोल अधिक सांद्र होता है। इसलिए अंगूर के अंदर का जल अर्धपारगम्य झिल्ली के माध्यम से बाहर निकलने लगता है। इस प्रक्रिया को <b>बहिर्परासरण (Exosmosis)</b> कहते हैं।
+</div>
+
+<div class="answer">
+फलस्वरूप अंगूर सिकुड़ जाता है।
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+प्र. परासरण तथा विसरण में अन्तर बताइए।
+</div>
+
+<div class="answer">
+
+<table style="width:100%; border-collapse:collapse; margin-top:10px;">
+
+<tr style="background:#E3F2FD;">
+<th style="border:1px solid #ccc; padding:8px;">
+परासरण (Osmosis)
+</th>
+
+<th style="border:1px solid #ccc; padding:8px;">
+विसरण (Diffusion)
+</th>
+</tr>
+
+<tr>
+<td style="border:1px solid #ccc; padding:8px;">
+1. परासरण में केवल विलायक अणुओं की गति होती है।
+</td>
+
+<td style="border:1px solid #ccc; padding:8px;">
+1. विसरण में विलायक तथा विलेय दोनों के अणुओं की गति होती है।
+</td>
+</tr>
+
+<tr>
+<td style="border:1px solid #ccc; padding:8px;">
+2. परासरण के लिए अर्धपारगम्य झिल्ली आवश्यक होती है।
+</td>
+
+<td style="border:1px solid #ccc; padding:8px;">
+2. विसरण के लिए किसी झिल्ली की आवश्यकता नहीं होती।
+</td>
+</tr>
+
+<tr>
+<td style="border:1px solid #ccc; padding:8px;">
+3. परासरण केवल द्रवों में होता है।
+</td>
+
+<td style="border:1px solid #ccc; padding:8px;">
+3. विसरण ठोस, द्रव तथा गैस तीनों अवस्थाओं में हो सकता है।
+</td>
+</tr>
+
+<tr>
+<td style="border:1px solid #ccc; padding:8px;">
+4. परासरण एक विशेष जैविक प्रक्रिया है।
+</td>
+
+<td style="border:1px solid #ccc; padding:8px;">
+4. विसरण एक सामान्य भौतिक प्रक्रिया है।
+</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न : परासरण की घटना को प्रदर्शित करने वाला प्रयोग का वर्णन कीजिए।
+</div>
+
+<div class="answer">
+परासरण की घटना को प्रदर्शित करने के लिए थिसिल कीप का प्रयोग किया जाता है।
+</div>
+
+<div class="answer">
+एक थिसिल कीप के चौड़े मुँह पर जन्तु झिल्ली (अर्धपारगम्य झिल्ली) बाँध दी जाती है। इसके बाद थिसिल कीप में कुछ ऊँचाई तक चीनी का सान्द्र विलयन भर दिया जाता है।
+</div>
+
+<div class="answer">
+अब थिसिल कीप को शुद्ध जल से भरे बीकर में इस प्रकार रखा जाता है कि उसकी झिल्ली जल में डूबी रहे।
+</div>
+
+<div class="answer">
+कुछ समय पश्चात् देखा जाता है कि थिसिल कीप की नली में विलयन का स्तर ऊपर उठने लगता है।
+</div>
+
+<div class="answer">
+ऐसा इसलिए होता है क्योंकि जल के अणु अर्धपारगम्य झिल्ली से होकर कम सान्द्रता वाले क्षेत्र (शुद्ध जल) से अधिक सान्द्रता वाले क्षेत्र (चीनी के विलयन) की ओर प्रवेश करते हैं।
+</div>
+
+<div class="answer">
+यह घटना परासरण (Osmosis) कहलाती है।
+</div>
+
+<div class="hindi">
+<b>निष्कर्ष :</b> अर्धपारगम्य झिल्ली के माध्यम से विलायक के अणुओं का कम सान्द्रता वाले विलयन से अधिक सान्द्रता वाले विलयन की ओर गमन परासरण कहलाता है।
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+प्र. परासरण का जैविक महत्व बताइए।
+</div>
+
+<div class="answer">
+परासरण का जैविक क्रियाओं में अत्यन्त महत्वपूर्ण योगदान है। इसके प्रमुख जैविक महत्व निम्नलिखित हैं —
+</div>
+
+<div class="answer">
+1. परासरण की क्रिया द्वारा ही पेड़-पौधों की जड़ें भूमि से जल का अवशोषण करती हैं।
+</div>
+
+<div class="answer">
+2. परासरण दाब के कारण अवशोषित जल पौधों के विभिन्न ऊपरी भागों तक पहुँचता है।
+</div>
+
+<div class="answer">
+3. मनुष्य की शिराओं एवं धमनियों में रक्त का प्रवाह परासरण दाब से प्रभावित होता है।
+</div>
+
+<div class="answer">
+4. रोगियों को चढ़ाया जाने वाला ग्लूकोज़ तथा अन्य पोषक तत्व परासरण प्रक्रिया द्वारा रक्त में पहुँचते हैं तथा कोशिकाओं द्वारा अवशोषित किए जाते हैं।
+</div>
+
+<div class="answer">
+5. परासरण कोशिकाओं के भीतर जल का संतुलन बनाए रखता है तथा कोशिका स्फीति (Turgidity) को बनाए रखने में सहायता करता है।
+</div>
+
+<div class="answer">
+6. पौधों की कोशिकाओं की दृढ़ता तथा संरचना को बनाए रखने में परासरण महत्वपूर्ण भूमिका निभाता है।
+</div>
+
+<div class="answer">
+7. परासरण गुर्दों (Kidneys) में यूरिया तथा अन्य अपशिष्ट पदार्थों के उत्सर्जन को प्रभावित करता है।
+</div>
+
+<div class="answer">
+8. जीवित कोशिकाओं में पोषक पदार्थों एवं जल के आदान-प्रदान में परासरण महत्वपूर्ण भूमिका निभाता है।
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न : परासरण दाब किसे कहते हैं?
+</div>
+
+<div class="answer">
+परासरण दाब वह न्यूनतम दाब है, जिसे किसी विलयन पर इस प्रकार लगाया जाए कि अर्धपारगम्य झिल्ली के माध्यम से होने वाला परासरण रुक जाए।
+</div>
+
+<div class="hindi">
+इसे π (पाई) द्वारा प्रदर्शित किया जाता है।
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न : विपरीत या उत्क्रम या प्रतिलोम परासरण को परिभाषित कीजिए। (म.प्र. 2018)
+</div>
+
+<div class="answer">
+यदि किसी विलयन पर उसके परासरण दाब से अधिक दाब आरोपित कर दिया जाए, तब विलायक के कण विलयन से निकलकर शुद्ध विलायक की ओर जाने लगते हैं।
+</div>
+
+<div class="answer">
+इस प्रक्रिया को विपरीत परासरण (Reverse Osmosis), उत्क्रम परासरण अथवा प्रतिलोम परासरण कहते हैं।
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न : समपरासरी, अतिपरासरी तथा अधःपरासरी विलयन से क्या अभिप्राय है?
+</div>
+
+<div class="answer">
+<b>1. समपरासरी विलयन (Isotonic Solution)</b>
+</div>
+
+<div class="answer">
+दो ऐसे विलयन जिनका परासरण दाब समान होता है, समपरासरी विलयन कहलाते हैं।
+</div>
+
+<div class="answer">
+इनके बीच जल का कोई प्रवाह नहीं होता है।
+</div>
+
+<div class="hindi">
+उदाहरण : 0.91% NaCl का विलयन रक्त के साथ समपरासरी होता है।
+</div>
+
+<br>
+
+<div class="answer">
+<b>2. अतिपरासरी विलयन (Hypertonic Solution)</b>
+</div>
+
+<div class="answer">
+यदि किसी विलयन का परासरण दाब दूसरे विलयन की अपेक्षा अधिक हो, तो वह अतिपरासरी विलयन कहलाता है।
+</div>
+
+<div class="answer">
+ऐसे विलयन में कोशिकाएँ सिकुड़ जाती हैं क्योंकि जल कोशिका से बाहर निकल जाता है।
+</div>
+
+<div class="hindi">
+उदाहरण : सांद्र NaCl का विलयन रक्त की अपेक्षा अतिपरासरी होता है।
+</div>
+
+<br>
+
+<div class="answer">
+<b>3. अधःपरासरी विलयन (Hypotonic Solution)</b>
+</div>
+
+<div class="answer">
+यदि किसी विलयन का परासरण दाब दूसरे विलयन की अपेक्षा कम हो, तो वह अधःपरासरी विलयन कहलाता है।
+</div>
+
+<div class="answer">
+ऐसे विलयन में कोशिकाएँ फूल जाती हैं क्योंकि जल कोशिका के भीतर प्रवेश करता है।
+</div>
+
+<div class="hindi">
+उदाहरण : शुद्ध जल रक्त की अपेक्षा अधःपरासरी होता है।
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न : ग्लूकोज का 5% विलयन एक कार्बनिक पदार्थ X के 2% विलयन का समपरासरी है। X का अणुभार ज्ञात कीजिए।
+</div>
+
+<div class="answer">
+<b>दिया है —</b>
+</div>
+
+<div class="hindi">
+ग्लूकोज का प्रतिशत = 5%
+</div>
+
+<div class="hindi">
+ग्लूकोज का अणुभार = 180
+</div>
+
+<div class="hindi">
+X का प्रतिशत = 2%
+</div>
+
+<div class="answer">
+समपरासरी विलयनों के लिए —
+</div>
+
+<div class="math">
+$$
+\frac{W_1}{M_1}=\frac{W_2}{M_2}
+$$
+</div>
+
+<div class="math">
+$$
+\frac{5}{180}=\frac{2}{M}
+$$
+</div>
+
+<div class="math">
+$$
+M=\frac{2\times180}{5}
+$$
+</div>
+
+<div class="math">
+$$
+M=72
+$$
+</div>
+
+<div class="answer">
+<b>अतः X का अणुभार = 72</b>
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न : ग्लूकोज के 5% विलयन का 25°C पर परासरण दाब ज्ञात कीजिए।<br>
+(ग्लूकोज का अणुभार = 180, R = 0.0821 L atm mol⁻¹ K⁻¹)
+</div>
+
+<div class="answer">
+<b>दिया है —</b>
+</div>
+
+<div class="hindi">
+W = 5 g
+</div>
+
+<div class="hindi">
+M = 180 g mol⁻¹
+</div>
+
+<div class="hindi">
+V = 100 mL = 0.1 L
+</div>
+
+<div class="hindi">
+T = 25 + 273 = 298 K
+</div>
+
+<div class="hindi">
+R = 0.0821 L atm mol⁻¹ K⁻¹
+</div>
+
+<div class="answer">
+परासरण दाब का सूत्र —
+</div>
+
+<div class="math">
+$$
+\pi=\frac{WRT}{MV}
+$$
+</div>
+
+<div class="math">
+$$
+\pi=\frac{5\times0.0821\times298}{180\times0.1}
+$$
+</div>
+
+<div class="math">
+$$
+\pi=\frac{122.329}{18}
+$$
+</div>
+
+<div class="math">
+$$
+\pi=6.80\;atm
+$$
+</div>
+
+<div class="answer">
+<b>अतः परासरण दाब = 6.8 atm</b>
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्र. तनु विलयन के लिए वाण्ट हॉफ का नियम लिखिए।
+</div>
+
+<div class="answer">
+वाण्ट हॉफ के नियम के अनुसार, तनु विलयन का परासरण दाब गैस के दाब के समान व्यवहार करता है।
+</div>
+
+<div class="answer">
+गणितीय रूप में —
+</div>
+
+<div class="math">
+$$
+\pi V = nRT
+$$
+</div>
+
+<div class="math">
+$$
+\pi = \frac{n}{V}RT
+$$
+</div>
+
+<div class="math">
+$$
+\pi = CRT
+$$
+</div>
+
+<div class="hindi">
+( क्योंकि \( \frac{n}{V}=C \) अर्थात मोलर सांद्रता )
+</div>
+
+<div class="hindi">
+जहाँ —
+</div>
+
+<div class="hindi">
+π = परासरण दाब
+</div>
+
+<div class="hindi">
+V = विलयन का आयतन
+</div>
+
+<div class="hindi">
+n = विलेय के मोल
+</div>
+
+<div class="hindi">
+R = गैस नियतांक
+</div>
+
+<div class="hindi">
+T = परम ताप
+</div>
+
+<div class="hindi">
+C = मोलर सांद्रता
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न : सिद्ध कीजिए कि परासरण दाब एक अणुसंख्यक गुण है।
+</div>
+
+<div class="answer">
+तनु विलयन के लिए वाण्ट हॉफ का नियम लागू होता है, जिसके अनुसार —
+</div>
+
+<div class="math">
+$$
+\pi V = nRT
+$$
+</div>
+
+<div class="math">
+$$
+\pi = \frac{nRT}{V}
+$$
+</div>
+
+<div class="math">
+$$
+\pi \propto n
+$$
+</div>
+
+<div class="answer">
+अर्थात परासरण दाब विलेय कणों (अणुओं) की संख्या पर निर्भर करता है तथा उनकी प्रकृति पर निर्भर नहीं करता।
+</div>
+
+<div class="answer">
+अतः परासरण दाब एक अणुसंख्यक गुण (Colligative Property) है।
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न : परासरण दाब के आधार पर विलेय के अणुभार का निर्धारण कीजिए।
+</div>
+
+<div class="answer">
+वाण्ट हॉफ के नियम के अनुसार —
+</div>
+
+<div class="math">
+$$
+\pi V = nRT
+$$
+</div>
+
+<div class="answer">
+यदि विलेय का भार W ग्राम तथा उसका अणुभार M हो, तब
+</div>
+
+<div class="math">
+$$
+n=\frac{W}{M}
+$$
+</div>
+
+<div class="answer">
+यह मान उपरोक्त समीकरण में रखने पर —
+</div>
+
+<div class="math">
+$$
+\pi V=\frac{W}{M}RT
+$$
+</div>
+
+<div class="math">
+$$
+M=\frac{WRT}{\pi V}
+$$
+</div>
+
+<div class="answer">
+यही विलेय के अणुभार का व्यंजक है।
+</div>
+
+<div class="hindi">
+जहाँ —
+</div>
+
+<div class="hindi">
+M = विलेय का अणुभार
+</div>
+
+<div class="hindi">
+W = विलेय का भार
+</div>
+
+<div class="hindi">
+π = परासरण दाब
+</div>
+
+<div class="hindi">
+V = विलयन का आयतन
+</div>
+
+<div class="hindi">
+R = गैस नियतांक
+</div>
+
+<div class="hindi">
+T = परम ताप
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न : 300 K पर यूरिया के उस विलयन का परासरण दाब ज्ञात कीजिए जिसके 1 लीटर में 6 ग्राम यूरिया मिले हैं। (R = 0.0821 L atm mol⁻¹ K⁻¹)
+</div>
+
+<div class="answer">
+<b>दिया है —</b>
+</div>
+
+<div class="hindi">
+यूरिया का भार (W) = 6 g
+</div>
+
+<div class="hindi">
+यूरिया का अणुभार (M) = 60 g mol⁻¹
+</div>
+
+<div class="hindi">
+विलयन का आयतन (V) = 1 L
+</div>
+
+<div class="hindi">
+ताप (T) = 300 K
+</div>
+
+<div class="hindi">
+R = 0.0821 L atm mol⁻¹ K⁻¹
+</div>
+
+<div class="answer">
+वाण्ट हॉफ समीकरण —
+</div>
+
+<div class="math">
+$$
+\pi V=nRT
+$$
+</div>
+
+<div class="math">
+$$
+n=\frac{W}{M}
+=\frac{6}{60}
+=0.1 \; mol
+$$
+</div>
+
+<div class="math">
+$$
+\pi=\frac{nRT}{V}
+$$
+</div>
+
+<div class="math">
+$$
+\pi=\frac{0.1\times0.0821\times300}{1}
+$$
+</div>
+
+<div class="math">
+$$
+\pi=2.463\; atm
+$$
+</div>
+
+<div class="answer">
+<b>अतः परासरण दाब = 2.46 atm</b>
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्र. क्वथनांक, क्वथनांक उन्नयन तथा मोलल क्वथनांक उन्नयन स्थिरांक से क्या अभिप्राय है?
+</div>
+
+<div class="answer">
+<b>क्वथनांक (Boiling Point)</b> – किसी द्रव का क्वथनांक वह ताप होता है जिस पर उसका वाष्प दाब वायुमण्डलीय दाब के बराबर हो जाता है तथा द्रव उबलना प्रारम्भ कर देता है।
+</div>
+
+<div class="answer">
+उदाहरण के लिए, शुद्ध जल का क्वथनांक 100°C होता है।
+</div>
+
+<div class="answer">
+<b>क्वथनांक उन्नयन (Elevation in Boiling Point)</b> – जब किसी शुद्ध विलायक में कोई अवाष्पशील विलेय पदार्थ मिलाया जाता है, तब प्राप्त विलयन का क्वथनांक शुद्ध विलायक के क्वथनांक की अपेक्षा बढ़ जाता है। क्वथनांक में हुई इस वृद्धि को क्वथनांक उन्नयन कहते हैं। इसे ΔT<sub>b</sub> से व्यक्त करते हैं।
+</div>
+
+<div class="math">
+$$
+\Delta T_b = T - T_0
+$$
+</div>
+
+<div class="hindi">
+जहाँ,
+</div>
+
+<div class="hindi">
+T₀ = शुद्ध विलायक का क्वथनांक
+</div>
+
+<div class="hindi">
+T = विलयन का क्वथनांक
+</div>
+
+<div class="answer">
+<b>मोलल क्वथनांक उन्नयन स्थिरांक (Molal Elevation Constant)</b> – हम जानते हैं कि क्वथनांक उन्नयन विलयन की मोललता के समानुपाती होता है।
+</div>
+
+<div class="math">
+$$
+\Delta T_b \propto m
+$$
+</div>
+
+<div class="math">
+$$
+\Delta T_b = K_b m
+$$
+</div>
+
+<div class="hindi">
+जहाँ K<sub>b</sub> एक स्थिरांक है जिसे मोलल क्वथनांक उन्नयन स्थिरांक कहते हैं।
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न : मोलल क्वथनांक उन्नयन स्थिरांक किसे कहते हैं?
+</div>
+
+<div class="answer">
+जब 1 मोल अवाष्पशील विलेय को 1 किलोग्राम विलायक में घोला जाता है, तब विलयन के क्वथनांक में होने वाली वृद्धि को मोलल क्वथनांक उन्नयन स्थिरांक कहते हैं।
+</div>
+
+<div class="hindi">
+इसे K<sub>b</sub> द्वारा व्यक्त करते हैं।
+</div>
+
+<div class="math">
+$$
+K_b=\frac{\Delta T_b}{m}
+$$
+</div>
+
+<div class="hindi">
+इसकी इकाई K kg mol<sup>-1</sup> होती है।
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न : ग्राम अणुक (या ग्राम-अणु) क्वथनांक उन्नयन स्थिरांक किसे कहते हैं?
+</div>
+
+<div class="answer">
+जब 1 ग्राम-अणु विलेय को 100 ग्राम विलायक में घोला जाता है, तब विलयन के क्वथनांक में होने वाली वृद्धि को ग्राम अणुक क्वथनांक उन्नयन स्थिरांक कहते हैं।
+</div>
+
+<div class="hindi">
+इसे K<sub>100</sub> द्वारा व्यक्त करते हैं।
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न : अवाष्पशील विलेय का विलयन शुद्ध विलायक की अपेक्षा अधिक क्वथनांक क्यों रखता है?
+</div>
+
+<div class="answer">
+<b>अथवा</b>
+</div>
+
+<div class="question">
+क्वथनांक उन्नयन का क्या कारण है?
+</div>
+
+<div class="answer">
+जब किसी शुद्ध विलायक में अवाष्पशील विलेय मिलाया जाता है, तो विलयन का वाष्प दाब कम हो जाता है।
+</div>
+
+<div class="answer">
+किसी द्रव का क्वथन तब होता है जब उसका वाष्प दाब वायुमण्डलीय दाब के बराबर हो जाए। चूँकि विलयन का वाष्प दाब कम हो जाता है, इसलिए उसे वायुमण्डलीय दाब के बराबर करने के लिए अधिक ताप प्रदान करना पड़ता है।
+</div>
+
+<div class="answer">
+अतः अवाष्पशील विलेय युक्त विलयन का क्वथनांक शुद्ध विलायक की अपेक्षा अधिक होता है। इसी घटना को क्वथनांक उन्नयन कहते हैं।
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न : क्वथनांक उन्नयन द्वारा विलेय के आण्विक द्रव्यमान की गणना कीजिए।
+</div>
+
+<div class="answer">
+हम जानते हैं कि क्वथनांक उन्नयन तथा मोललता के मध्य निम्न सम्बन्ध होता है—
+</div>
+
+<div class="math">
+$$
+\Delta T_b = K_b m
+$$
+</div>
+
+<div class="hindi">
+जहाँ,
+</div>
+
+<div class="hindi">
+ΔT<sub>b</sub> = क्वथनांक उन्नयन
+</div>
+
+<div class="hindi">
+K<sub>b</sub> = मोलल क्वथनांक उन्नयन स्थिरांक
+</div>
+
+<div class="hindi">
+m = विलयन की मोललता
+</div>
+
+<div class="answer">
+मोललता का सूत्र है—
+</div>
+
+<div class="math">
+$$
+m=\frac{W_2 \times 1000}{M_2 \times W_1}
+$$
+</div>
+
+<div class="hindi">
+जहाँ,
+</div>
+
+<div class="hindi">
+W₁ = विलायक का भार (ग्राम में)
+</div>
+
+<div class="hindi">
+W₂ = विलेय का भार (ग्राम में)
+</div>
+
+<div class="hindi">
+M₂ = विलेय का आण्विक द्रव्यमान
+</div>
+
+<div class="answer">
+m का मान ΔT<sub>b</sub> = K<sub>b</sub>m में रखने पर—
+</div>
+
+<div class="math">
+$$
+\Delta T_b
+=
+K_b
+\left(
+\frac{W_2 \times 1000}
+{M_2 \times W_1}
+\right)
+$$
+</div>
+
+<div class="answer">
+पुनर्व्यवस्थित करने पर—
+</div>
+
+<div class="math">
+$$
+M_2
+=
+\frac{K_b \times W_2 \times 1000}
+{\Delta T_b \times W_1}
+$$
+</div>
+
+<div class="answer">
+अतः विलेय का आण्विक द्रव्यमान ज्ञात करने का सूत्र होगा—
+</div>
+
+<div class="math">
+$$
+\boxed{
+M_2
+=
+\frac{K_b \times W_2 \times 1000}
+{\Delta T_b \times W_1}
+}
+$$
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्र. हिमांक, हिमांक अवनमन तथा मोलल हिमांक अवनमन स्थिरांक से क्या अभिप्राय है?
+</div>
+
+<div class="answer">
+<b>हिमांक (Freezing Point)</b> – हिमांक वह ताप है जिस पर किसी पदार्थ की ठोस अवस्था तथा द्रव अवस्था साम्यावस्था में होती हैं। अर्थात वह ताप जिस पर द्रव जमना प्रारम्भ करता है। शुद्ध विलायक का हिमांक <b>T<sub>0</sub></b> से व्यक्त किया जाता है।
+</div>
+
+<div class="answer">
+<b>हिमांक अवनमन (Depression in Freezing Point)</b> – जब किसी शुद्ध विलायक में कोई अवाष्पशील विलेय पदार्थ मिलाया जाता है, तब प्राप्त विलयन का हिमांक शुद्ध विलायक के हिमांक से कम हो जाता है। हिमांक में होने वाली इस कमी को हिमांक अवनमन कहते हैं। इसे <b>ΔT<sub>f</sub></b> से व्यक्त करते हैं।
+</div>
+
+<div class="math">
+$$
+\Delta T_f = T_0 - T
+$$
+</div>
+
+<div class="hindi">
+जहाँ,
+</div>
+
+<div class="hindi">
+T₀ = शुद्ध विलायक का हिमांक
+</div>
+
+<div class="hindi">
+T = विलयन का हिमांक
+</div>
+
+<div class="answer">
+<b>मोलल हिमांक अवनमन स्थिरांक (Molal Depression Constant)</b> – हम जानते हैं कि हिमांक अवनमन विलयन की मोललता के समानुपाती होता है।
+</div>
+
+<div class="math">
+$$
+\Delta T_f \propto m
+$$
+</div>
+
+<div class="math">
+$$
+\Delta T_f = K_f m
+$$
+</div>
+
+<div class="hindi">
+जहाँ K<sub>f</sub> एक स्थिरांक है जिसे मोलल हिमांक अवनमन स्थिरांक कहते हैं।
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न : मोलल हिमांक अवनमन स्थिरांक किसे कहते हैं?
+</div>
+
+<div class="answer">
+जब 1 मोल अवाष्पशील विलेय को 1 किलोग्राम विलायक में घोला जाता है, तब विलयन के हिमांक में होने वाले अवनमन को मोलल हिमांक अवनमन स्थिरांक कहते हैं। इसे K<sub>f</sub> द्वारा व्यक्त करते हैं।
+</div>
+
+<div class="math">
+$$
+K_f = \frac{\Delta T_f}{m}
+$$
+</div>
+
+<div class="hindi">
+इसकी SI इकाई K kg mol<sup>-1</sup> होती है।
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न : ग्राम अणुक (या ग्राम-अणु) हिमांक अवनमन स्थिरांक किसे कहते हैं?
+</div>
+
+<div class="answer">
+जब 1 ग्राम-अणु विलेय को 100 ग्राम विलायक में घोला जाता है, तब विलयन के हिमांक में होने वाले अवनमन को ग्राम अणुक हिमांक अवनमन स्थिरांक कहते हैं। इसे K<sub>100</sub> द्वारा व्यक्त करते हैं।
+</div>
+
+<div class="math">
+$$
+K_{100} = \frac{\Delta T_f}{\text{ग्राम-अणु विलेय}}
+$$
+</div>
+
+<div class="hindi">
+यह स्थिरांक 100 ग्राम विलायक के लिए परिभाषित किया जाता है।
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न : हिमांक अवनमन द्वारा विलेय के आण्विक द्रव्यमान की गणना कीजिए।
+</div>
+<div class="answer">
+हम जानते हैं कि हिमांक अवनमन का मान विलेय की मोललता के समानुपाती होता है।
+</div>
+
+<div class="math">
+$$
+\Delta T_f = K_f \times m
+$$
+</div>
+
+<div class="answer">
+जहाँ,
+</div>
+
+<div class="hindi">
+ΔT<sub>f</sub> = हिमांक अवनमन
+</div>
+
+<div class="hindi">
+K<sub>f</sub> = क्रायोस्कोपिक स्थिरांक
+</div>
+
+<div class="hindi">
+m = विलयन की मोललता
+</div>
+
+<div class="answer">
+मोललता का सूत्र है —
+</div>
+
+<div class="math">
+$$
+m=\frac{W_2 \times 1000}{M_2 \times W_1}
+$$
+</div>
+
+<div class="answer">
+जहाँ,
+</div>
+
+<div class="hindi">
+W<sub>2</sub> = विलेय का भार (g)
+</div>
+
+<div class="hindi">
+M<sub>2</sub> = विलेय का आण्विक द्रव्यमान
+</div>
+
+<div class="hindi">
+W<sub>1</sub> = विलायक का भार (g)
+</div>
+
+<div class="answer">
+मोललता का मान हिमांक अवनमन के सूत्र में रखने पर —
+</div>
+
+<div class="math">
+$$
+\Delta T_f
+=
+K_f
+\left(
+\frac{W_2 \times 1000}
+{M_2 \times W_1}
+\right)
+$$
+</div>
+
+<div class="answer">
+अतः,
+</div>
+
+<div class="math">
+$$
+M_2=
+\frac{K_f \times W_2 \times 1000}
+{\Delta T_f \times W_1}
+$$
+</div>
+
+<div class="answer">
+<b>यही विलेय के आण्विक द्रव्यमान का व्यंजक है।</b>
+</div>
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न : 4 ग्राम यूरिया को 100 ग्राम जल में घोलने पर विलयन का हिमांक अवनमन 1.24°C पाया गया। यूरिया का अणु द्रव्यमान ज्ञात कीजिए।<br>
+(दिया है : K<sub>f</sub> = 1.86 K kg mol<sup>-1</sup>)
+</div>
+
+<div class="answer">
+<b>दिया गया :</b>
+</div>
+
+<div class="hindi">
+विलेय (यूरिया) का भार, W = 4 g
+</div>
+
+<div class="hindi">
+विलायक (जल) का भार, w = 100 g
+</div>
+
+<div class="hindi">
+हिमांक अवनमन, ΔT<sub>f</sub> = 1.24°C
+</div>
+
+<div class="hindi">
+क्रायोस्कोपिक स्थिरांक, K<sub>f</sub> = 1.86 K kg mol<sup>-1</sup>
+</div>
+
+<div class="answer">
+<b>सूत्र :</b>
+</div>
+
+<div class="math">
+$$
+\Delta T_f = \frac{K_f \times W \times 1000}{M \times w}
+$$
+</div>
+
+<div class="answer">
+जहाँ M = यूरिया का अणु द्रव्यमान
+</div>
+
+<div class="answer">
+सूत्र में मान रखने पर,
+</div>
+
+<div class="math">
+$$
+1.24=\frac{1.86 \times 4 \times 1000}{M \times 100}
+$$
+</div>
+
+<div class="math">
+$$
+1.24=\frac{74.4}{M}
+$$
+</div>
+
+<div class="math">
+$$
+M=\frac{74.4}{1.24}
+$$
+</div>
+
+<div class="math">
+$$
+M=60
+$$
+</div>
+
+<div class="answer">
+<b>अतः यूरिया का अणु द्रव्यमान = 60 g mol<sup>-1</sup></b>
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न: गैसों की द्रवों में विलेयता को समझाइए।
+</div>
+
+<div class="answer">
+किसी द्रव में किसी गैस के घुलने की क्षमता को गैसों की द्रवों में विलेयता कहते हैं।
+</div>
+
+<div class="answer">
+गैसों की द्रवों में विलेयता मुख्य रूप से दाब तथा ताप पर निर्भर करती है।
+</div>
+
+<div class="answer">
+<b>दाब का प्रभाव :</b> दाब बढ़ाने पर गैसों की द्रवों में विलेयता बढ़ जाती है।
+</div>
+
+<div class="answer">
+(इसी कारण ठंडे पेय पदार्थों में CO₂ को अधिक दाब पर घोलकर रखा जाता है।)
+</div>
+
+<div class="answer">
+<b>ताप का प्रभाव :</b> ताप बढ़ाने पर गैसों की द्रवों में विलेयता कम हो जाती है, क्योंकि गैस के अणु द्रव से बाहर निकलने लगते हैं।
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न: हेनरी के नियम को उदाहरण सहित समझाइए।
+</div>
+
+<div class="answer">
+हेनरी के नियम के अनुसार, नियत ताप पर किसी द्रव में घुली हुई गैस की मात्रा उस गैस के आंशिक दाब के समानुपाती होती है।
+</div>
+
+<div class="math">
+$$
+p \propto x
+$$
+</div>
+
+<div class="math">
+$$
+p = K_h \times x
+$$
+</div>
+
+<div class="answer">
+जहाँ —
+</div>
+
+<div class="hindi">
+p = गैस का आंशिक दाब
+</div>
+
+<div class="hindi">
+x = द्रव में घुली गैस का मोल अंश
+</div>
+
+<div class="hindi">
+K<sub>h</sub> = हेनरी स्थिरांक
+</div>
+
+<div class="answer">
+<b>उदाहरण :</b>
+</div>
+
+<div class="answer">
+CO₂ युक्त सोडा की बोतल बंद रहने पर उसमें CO₂ का दाब अधिक होता है, इसलिए CO₂ गैस जल में घुली रहती है।
+</div>
+
+<div class="answer">
+बोतल खोलने पर दाब कम हो जाता है, जिससे CO₂ की विलेयता कम हो जाती है और CO₂ गैस बुलबुलों के रूप में बाहर निकलने लगती है।
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न: वाण्ट हॉफ गुणांक से आप क्या समझते हैं? इसके अनुप्रयोग लिखिए।
+</div>
+
+<div class="answer">
+अणुसंख्यक गुण के प्रेक्षित मान तथा अणुसंख्यक गुण के सैद्धांतिक मान के अनुपात को वाण्ट हॉफ गुणांक (Van't Hoff Factor) कहते हैं। इसे <b>i</b> द्वारा प्रदर्शित करते हैं।
+</div>
+
+<div class="math">
+$$
+i=\frac{\text{अणुसंख्यक गुण का प्रेक्षित मान}}{\text{अणुसंख्यक गुण का सैद्धांतिक मान}}
+$$
+</div>
+
+<div class="answer">
+<b>वाण्ट हॉफ गुणांक के अनुप्रयोग —</b>
+</div>
+
+<div class="answer">
+1. वाण्ट हॉफ गुणांक की सहायता से वियोजन (Dissociation) की मात्रा ज्ञात की जा सकती है।
+</div>
+
+<div class="answer">
+2. वाण्ट हॉफ गुणांक की सहायता से संगुणन (Association) की कोटि ज्ञात की जा सकती है।
+</div>
+
+<div class="answer">
+<b>वाण्ट हॉफ गुणांक का महत्व —</b>
+</div>
+
+<div class="answer">
+1. यदि <b>i = 1</b> हो, तो अणुओं का न तो संगुणन होता है और न ही वियोजन।
+</div>
+
+<div class="answer">
+2. यदि <b>i < 1</b> हो, तो अणुओं का संगुणन (Association) होता है।
+</div>
+
+<div class="answer">
+3. यदि <b>i > 1</b> हो, तो अणुओं का वियोजन (Dissociation) होता है।
+</div>
+
+</div>
+
+
+
+
+
+
+<!-- SCRIPT -->
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("show");
+}
+
+document.addEventListener("click", function(e){
+    if(!e.target.closest(".navbar")){
+        document.getElementById("menu").classList.remove("show");
+    }
+});
+</script>
+
+<!-- Content Protection Scripts -->
+<script>
+// Disable right-click context menu
+document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+
+// Disable text selection
+document.addEventListener("selectstart", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+
+// Disable copy keyboard shortcut (Ctrl+C, Cmd+C)
+document.addEventListener("keydown", function(e) {
+    // Disable PrintScreen and related screenshot keys
+    if (e.key === "PrintScreen" || 
+        e.keyCode === 44 ||  // PrintScreen
+        (e.ctrlKey && e.shiftKey && e.key === "S") ||  // Windows Snipping Tool
+        (e.keyCode === 91 && e.shiftKey && e.key === "5")) {  // Mac Screenshot
+        e.preventDefault();
+        return false;
+    }
+    
+    // Disable Ctrl+C and Cmd+C (copy)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "c" || e.keyCode === 67)) {
+        e.preventDefault();
+        alert("Copying content is not allowed on this page.");
+        return false;
+    }
+    
+    // Disable Ctrl+A (select all)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "a" || e.keyCode === 65)) {
+        e.preventDefault();
+        return false;
+    }
+    
+    // Disable Ctrl+X (cut)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "x" || e.keyCode === 88)) {
+        e.preventDefault();
+        return false;
+    }
+    
+    // Disable F12 (Developer Tools)
+    if (e.keyCode === 123) {
+        e.preventDefault();
+        return false;
+    }
+    
+    // Disable Ctrl+Shift+I (Developer Tools)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "i" || e.keyCode === 73)) {
+        e.preventDefault();
+        return false;
+    }
+    
+    // Disable Ctrl+Shift+J (Console)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "j" || e.keyCode === 74)) {
+        e.preventDefault();
+        return false;
+    }
+}, false);
+
+// Prevent copy on mouse up
+document.addEventListener("mouseup", function() {
+    document.selection.empty ? document.selection.empty() : window.getSelection().removeAllRanges();
+}, false);
+
+// Disable paste
+document.addEventListener("paste", function(e) {
+    e.preventDefault();
+    alert("Pasting content is not allowed on this page.");
+    return false;
+}, false);
+
+// Add user-select: none CSS dynamically
+document.addEventListener("DOMContentLoaded", function() {
+    document.body.style.userSelect = "none";
+    document.body.style.webkitUserSelect = "none";
+    document.body.style.msUserSelect = "none";
+    document.body.style.mozUserSelect = "none";
+});
+
+// Prevent image download
+document.addEventListener("dragstart", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+</script>
+
+</body>
+</html>

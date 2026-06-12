@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PAL STUDY CENTER | Student Notes</title>
+
+<!-- MathJax -->
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== BODY (Student Friendly Soft Look) ===== */
+body{
+    background:#f8fafc;
+    color:#2d3748;
+    line-height:1.8;
+}
+
+/* ===== NAVBAR (Simple + Calm Branding) ===== */
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+
+    background:#2b6cb0;
+    color:white;
+
+    padding:14px;
+    text-align:center;
+
+    box-shadow:0 2px 8px rgba(0,0,0,0.15);
+}
+
+.logo .main{
+    font-size:26px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.logo .sub{
+    font-size:12px;
+    opacity:0.8;
+}
+
+/* ===== CONTAINER ===== */
+.container{
+    max-width:900px;
+    margin:100px auto 30px;
+    padding:12px;
+}
+
+/* ===== TITLE ===== */
+.notes-title{
+    background:#eef5ff;
+    color:#2b6cb0;
+
+    padding:12px;
+    border-radius:8px;
+
+    font-size:18px;
+    font-weight:bold;
+
+    margin-bottom:18px;
+}
+
+/* ===== QA BOX (Notebook Style) ===== */
+.qa-box{
+    background:#ffffff;
+
+    padding:18px;
+    margin-bottom:15px;
+
+    border-radius:10px;
+
+    border-left:4px solid #4f8cff;
+
+    box-shadow:0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Question */
+.question{
+    font-weight:bold;
+    margin-bottom:8px;
+    color:#1a365d;
+    font-size:16px;
+}
+
+/* Answer */
+.answer{
+    font-size:16px;
+    line-height:1.9;
+    color:#2d3748;
+    text-align:justify;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:600px){
+    .logo .main{
+        font-size:20px;
+    }
+
+    .container{
+        padding:10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">
+        <div class="main">PAL STUDY CENTER</div>
+        <div class="sub">Student Notes Platform</div>
+    </div>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+    <div class="notes-title">📘 Unit 1(C) -धारिता</div>
+    <div class="qa-box">
+
+<div class="question">
+Q. चालक की धारिता (Capacity of a Conductor) से आप क्या समझते हैं?
+</div>
+
+<div class="answer">
+किसी चालक को दिया गया आवेश उसके विभव के समानुपाती होता है।
+</div>
+
+<div class="answer">
+यदि किसी चालक को आवेश Q देने पर उसका विभव V हो जाए, तो—
+</div>
+
+<div class="formula">
+$$
+Q \propto V
+$$
+</div>
+
+<div class="formula">
+$$
+Q = CV
+$$
+</div>
+
+<div class="answer">
+जहाँ C एक नियतांक है, जिसे चालक की धारिता (Capacity of the Conductor) कहते हैं।
+</div>
+
+<div class="answer">
+यदि V = 1 हो, तो—
+</div>
+
+<div class="formula">
+$$
+C = Q
+$$
+</div>
+
+<div class="answer">
+अर्थात् चालक की धारिता संख्यात्मक रूप से उस आवेश के बराबर होती है जो उसके विभव को इकाई (1 volt) तक बढ़ा दे।
+</div>
+
+<div class="answer">
+SI मात्रक—
+</div>
+
+<div class="formula">
+$$
+\text{Unit of Capacitance} = \frac{\text{Coulomb}}{\text{Volt}} = \text{Farad (F)}
+$$
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q. एक फैराड (One Farad) से आप क्या समझते हैं?
+</div>
+
+<div class="answer">
+फैराड धारिता (Capacity) की SI इकाई है।
+</div>
+
+<div class="answer">
+यदि किसी चालक को 1 कूलॉम आवेश देने पर उसका विभव 1 वोल्ट बढ़ जाए, तो उस चालक की धारिता 1 फैराड कहलाती है।
+</div>
+
+<div class="formula">
+$$
+1 \, F = \frac{1 \, C}{1 \, V}
+$$
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q. चालक की धारिता को प्रभावित करने वाले कारक कौन-कौन से हैं? तथा वे कैसे प्रभावित करते हैं?
+</div>
+
+<div class="answer">
+चालक की धारिता निम्नलिखित कारकों पर निर्भर करती है—
+</div>
+
+<div class="answer">
+1. चालक के आकार पर निर्भरता –  
+</div>
+
+<div class="answer">
+यदि चालक का आकार बढ़ाया जाए, तो उसका विभव कम हो जाता है और इसलिए उसकी धारिता बढ़ जाती है।
+</div>
+
+<div class="answer">
+2. अन्य चालकों की उपस्थिति पर निर्भरता –  
+</div>
+
+<div class="answer">
+जब किसी आवेशित चालक के पास एक अनावेशित चालक लाया जाता है, तो उसका विभव कम हो जाता है और उसकी धारिता बढ़ जाती है।
+</div>
+
+<div class="answer">
+3. माध्यम की प्रकृति पर निर्भरता –  
+</div>
+
+<div class="answer">
+यदि चालक के चारों ओर परावैद्युत (dielectric) माध्यम उपस्थित हो, तो उसका विभव कम हो जाता है, जिससे उसकी धारिता बढ़ जाती है।
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q. सिद्ध कीजिए कि किसी पृथक गोलाकार चालक की धारिता उसके त्रिज्या के समानुपाती होती है। अथवा गोलाकार चालक की धारिता का व्यंजक स्थापित कीजिए।
+</div>
+
+<div class="answer">
+माना एक गोलाकार चालक जिसकी त्रिज्या r है। इसे +Q आवेश दिया जाता है। यह आवेश चालक की सतह पर समान रूप से वितरित हो जाता है, इसलिए पूरी सतह समविभव (equipotential) होती है।
+</div>
+
+<div class="answer">
+इस स्थिति में हम मान सकते हैं कि पूरा आवेश गोले के केंद्र पर स्थित है।
+</div>
+
+<div class="answer">
+अतः गोले की सतह पर विभव होगा—
+</div>
+
+<div class="formula">
+$$
+V = \frac{1}{4 \pi \varepsilon_0} \cdot \frac{Q}{r}
+$$
+</div>
+
+<div class="answer">
+चालक की धारिता—
+</div>
+
+<div class="formula">
+$$
+C = \frac{Q}{V}
+$$
+</div>
+
+<div class="formula">
+$$
+C = \frac{Q}{\frac{1}{4 \pi \varepsilon_0} \cdot \frac{Q}{r}}
+$$
+</div>
+
+<div class="formula">
+$$
+C = 4 \pi \varepsilon_0 r
+$$
+</div>
+
+<div class="answer">
+अतः स्पष्ट है कि—
+</div>
+
+<div class="formula">
+$$
+C \propto r
+$$
+</div>
+
+<div class="answer">
+अर्थात किसी पृथक गोलाकार चालक की धारिता उसकी त्रिज्या के समानुपाती होती है।
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q. क्या 1 फैराड धारिता वाला गोलाकार चालक संभव है?
+</div>
+
+<div class="answer">
+नहीं, 1 फैराड धारिता वाला पृथक गोलाकार चालक व्यावहारिक रूप से संभव नहीं है।
+</div>
+
+<div class="answer">
+क्योंकि गोलाकार चालक की धारिता का व्यंजक होता है—
+</div>
+
+<div class="formula">
+$$
+C = 4 \pi \varepsilon_0 R
+$$
+</div>
+
+<div class="answer">
+अतः त्रिज्या—
+</div>
+
+<div class="formula">
+$$
+R = \frac{C}{4 \pi \varepsilon_0}
+$$
+</div>
+
+<div class="answer">
+यदि C = 1 F रखा जाए, तो—
+</div>
+
+<div class="formula">
+$$
+R = \frac{1}{4 \pi \varepsilon_0}
+$$
+</div>
+
+<div class="answer">
+चूंकि  
+</div>
+
+<div class="formula">
+$$
+\frac{1}{4 \pi \varepsilon_0} = 9 \times 10^9
+$$
+</div>
+
+<div class="answer">
+अतः—
+</div>
+
+<div class="formula">
+$$
+R = 9 \times 10^9 \, m
+$$
+</div>
+
+<div class="answer">
+यह त्रिज्या अत्यधिक बड़ी (लगभग पृथ्वी के आकार से भी बहुत अधिक) है, इसलिए 1 फैराड धारिता वाला पृथक गोलाकार चालक व्यावहारिक रूप से संभव नहीं है।
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q. कंडेंसर (Condenser) क्या होता है? इसके सिद्धांत को समझाइए।
+</div>
+
+<div class="answer">
+कंडेंसर (संधारित्र) एक ऐसा उपकरण है जिसमें विद्युत आवेश को संचित (store) किया जाता है।
+</div>
+
+<div class="answer">
+यह दो चालकों से बना होता है जो एक-दूसरे से थोड़ी दूरी पर रखे जाते हैं और उनके बीच वायु या कोई परावैद्युत (dielectric) माध्यम होता है।
+</div>
+
+<div class="answer">
+जब एक चालक को आवेश दिया जाता है और दूसरा चालक पृथ्वी से जोड़ दिया जाता है, तो प्रेरण (induction) के कारण आवेश संचय की क्षमता बढ़ जाती है।
+</div>
+
+<div class="answer">
+</div>
+
+<div class="question">
+सिद्धांत (Principle):
+</div>
+
+<div class="answer">
+कंडेंसर का सिद्धांत यह है कि किसी चालक की धारिता (capacitance) अन्य पृथ्वी या निकटवर्ती चालकों की उपस्थिति से बढ़ जाती है, क्योंकि विभव कम हो जाता है जबकि आवेश अधिक रखा जा सकता है।
+</div>
+
+<div class="answer">
+अर्थात—
+</div>
+
+<div class="formula">
+$$
+Q \propto V \quad \Rightarrow \quad Q = CV
+$$
+</div>
+
+<div class="answer">
+जहाँ C एक नियतांक है जिसे धारिता कहते हैं।
+</div>
+
+</div>
+
+
+
+<div class="qa-box">
+    <div class="question">
+        ❓ समांतर प्लेट संधारित्र की रचना लिखकर इसकी धारिता के लिए व्यंजक स्थापित कीजिए।
+    </div>
+
+    <div class="answer">
+
+        <b>रचना (Construction) —</b><br>
+        इसमें धातु की दो समतल प्लेटें X और Y एक-दूसरे के समांतर रखी होती हैं। दोनों प्लेटों के बीच वायु अथवा कोई परावैद्युत माध्यम भरा होता है। प्लेट X को आवेश दिया जाता है जबकि प्लेट Y को पृथ्वी से जोड़ दिया जाता है।
+
+        <br><br>
+
+        <b>धारिता का व्यंजक —</b><br>
+        माना एक समांतर प्लेट संधारित्र की प्लेटों का क्षेत्रफल A तथा उनके बीच की दूरी d है। प्लेटों के बीच K परावैद्युतांक का माध्यम भरा है। प्लेट X को Q आवेश दिया जाता है तथा प्लेट Y को पृथ्वी से जोड़ दिया जाता है।
+
+        <br><br>
+
+        प्रेरण के कारण प्लेट Y की अंदर वाली सतह पर −Q आवेश उत्पन्न होता है तथा बाहर वाली सतह पर +Q आवेश पृथ्वी में चला जाता है। अतः प्रत्येक प्लेट पर आवेश घनत्व
+
+        $$ \sigma = \frac{Q}{A} $$
+
+        <br>
+
+        प्लेट X के कारण बिंदु P पर विद्युत क्षेत्र की तीव्रता
+
+        $$ E_x = \frac{\sigma}{2\varepsilon_0 K} $$
+
+        (प्लेट X से Y की ओर)
+
+        <br><br>
+
+        इसी प्रकार प्लेट Y के कारण
+
+        $$ E_y = \frac{\sigma}{2\varepsilon_0 K} $$
+
+        (प्लेट X से Y की ओर)
+
+        <br><br>
+
+        चूँकि दोनों क्षेत्रों की दिशा समान है, अतः परिणामी विद्युत क्षेत्र
+
+        $$ E = E_x + E_y $$
+
+        $$ E = \frac{\sigma}{2\varepsilon_0 K} + \frac{\sigma}{2\varepsilon_0 K} $$
+
+        $$ E = \frac{2\sigma}{2\varepsilon_0 K} $$
+
+        $$ E = \frac{\sigma}{\varepsilon_0 K} $$
+
+        <br><br>
+
+        अतः दोनों प्लेटों के बीच विभवांतर
+
+        $$ V = E \times d $$
+
+        $$ V = \frac{\sigma}{\varepsilon_0 K} \times d $$
+
+        $$ V = \frac{Q}{\varepsilon_0 K A} \times d $$
+
+        <br><br>
+
+        अतः धारिता
+
+        $$ C = \frac{Q}{V} $$
+
+        $$ C = \frac{Q}{\left(\frac{Q}{\varepsilon_0 K A} \times d\right)} $$
+
+        $$ C = \frac{\varepsilon_0 K A}{d} $$
+
+        <br><br>
+
+    </div>
+    
+</div>
+<div class="qa-box">
+    <div class="question">
+        ❓ समांतर प्लेट संधारित्र की धारिता किस प्रकार बढ़ाई जा सकती है?
+    </div>
+
+    <div class="answer">
+
+        समांतर प्लेट संधारित्र की धारिता का व्यंजक
+
+        $$ C = \frac{\varepsilon_0 K A}{d} $$
+
+        होता है। अतः इसकी धारिता निम्न कारकों पर निर्भर करती है —
+
+        <br><br>
+
+        <b>1. प्लेटों के क्षेत्रफल पर —</b><br>
+        चूँकि C ∝ A, इसलिए यदि प्लेटों का क्षेत्रफल बढ़ाया जाए तो धारिता बढ़ जाती है।
+
+        <br><br>
+
+        <b>2. माध्यम के परावैद्युतांक पर —</b><br>
+        चूँकि C ∝ K, इसलिए यदि प्लेटों के बीच उच्च परावैद्युतांक वाला माध्यम रखा जाए तो धारिता बढ़ जाती है।
+
+        <br><br>
+
+        <b>3. प्लेटों के बीच दूरी पर —</b><br>
+        चूँकि C ∝ 1/d, इसलिए यदि प्लेटों के बीच दूरी कम की जाए तो धारिता बढ़ जाती है।
+
+    </div>
+</div>
+<div class="qa-box">
+    <div class="question">
+        ❓ आंशिक रूप से परावैद्युत माध्यम रखे हुए समांतर प्लेट संधारित्र की धारिता के लिए व्यंजक स्थापित कीजिए।
+    </div>
+
+    <div class="answer">
+
+        माना एक समांतर प्लेट संधारित्र की प्लेटों का क्षेत्रफल A तथा उनके बीच की दूरी d है। इसके बीच t मोटाई का परावैद्युत माध्यम रखा गया है, जिसका परावैद्युतांक K है। प्लेट X को Q आवेश दिया गया है तथा प्लेट Y को पृथ्वी से जोड़ दिया गया है।
+
+        <br><br>
+
+        प्रेरण के कारण प्लेट Y की अंदर वाली सतह पर −Q आवेश उत्पन्न होता है तथा बाहर वाली सतह का आवेश पृथ्वी में चला जाता है।
+
+        अतः प्रत्येक प्लेट पर आवेश घनत्व
+
+        $$ \sigma = \frac{Q}{A} \quad (1) $$
+
+        <br>
+
+        वायु (air) भाग में विद्युत क्षेत्र की तीव्रता
+
+        $$ E_a = \frac{\sigma}{\varepsilon_0} $$
+
+        <br>
+
+        परावैद्युत माध्यम में विद्युत क्षेत्र की तीव्रता
+
+        $$ E_m = \frac{\sigma}{\varepsilon_0 K} $$
+
+        <br><br>
+
+        अतः दोनों प्लेटों के बीच विभवांतर
+
+        $$ V = E_a (d - t) + E_m (t) $$
+
+        $$ V = \frac{\sigma}{\varepsilon_0}(d - t) + \frac{\sigma}{\varepsilon_0 K}(t) $$
+
+        $$ V = \frac{\sigma}{\varepsilon_0} \left( d - t + \frac{t}{K} \right) $$
+
+        $$ V = \frac{Q}{\varepsilon_0 A} \left( d - t + \frac{t}{K} \right) $$
+
+        <br><br>
+
+        अतः संधारित्र की धारिता
+
+        $$ C = \frac{Q}{V} $$
+
+        $$ C = \frac{Q}{\frac{Q}{\varepsilon_0 A} \left( d - t + \frac{t}{K} \right)} $$
+
+        $$ C = \frac{\varepsilon_0 A}{\left( d - t + \frac{t}{K} \right)} $$
+
+    </div>
+</div>
+<div class="qa-box">
+    <div class="question">
+        ❓ गोलाकार संधारित्र की रचना लिखकर इसकी धारिता का व्यंजक स्थापित कीजिए।
+    </div>
+
+    <div class="answer">
+
+        <b>रचना —</b><br>
+        इसमें धातु के दो समकेन्द्रीय खोखले गोले X और Y होते हैं जो परस्पर स्पर्श नहीं करते हैं। दोनों गोलों के बीच वायु अथवा कोई परावैद्युत माध्यम भरा होता है। बाहरी गोला Y पृथ्वी से जुड़ा होता है जबकि भीतरी गोला X धातु की छड़ H से जुड़ा होता है।
+
+        <br><br>
+
+        <b>माना —</b>  
+        भीतरी गोले X की त्रिज्या a तथा बाहरी गोले Y की त्रिज्या b है। दोनों गोलों के बीच K परावैद्युतांक का माध्यम भरा है।
+
+        भीतरी गोले X को Q आवेश दिया जाता है तथा बाहरी गोला Y को पृथ्वी से जोड़ दिया जाता है।
+
+        <br><br>
+
+        प्रेरण के कारण बाहरी गोले Y की अंदर वाली सतह पर −Q आवेश उत्पन्न होता है तथा बाहर वाली सतह का आवेश पृथ्वी में चला जाता है।
+
+        <br><br>
+
+        अब भीतरी गोले X की सतह पर विभव
+
+        $$ V_1 = \frac{1}{4\pi\varepsilon_0 K} \cdot \frac{Q}{a} - \frac{1}{4\pi\varepsilon_0 K} \cdot \frac{Q}{b} $$
+
+        $$ V_1 = \frac{1}{4\pi\varepsilon_0 K} \left( \frac{Q}{a} - \frac{Q}{b} \right) $$
+
+        $$ V_1 = \frac{Q}{4\pi\varepsilon_0 K} \left( \frac{b - a}{ab} \right) $$
+
+        <br>
+
+        चूँकि बाहरी गोला Y पृथ्वी से जुड़ा है, अतः उसका विभव
+
+        $$ V_2 = 0 $$
+
+        <br>
+
+        अतः विभवांतर
+
+        $$ V = V_1 - V_2 $$
+
+        $$ V = \frac{Q}{4\pi\varepsilon_0 K} \left( \frac{b - a}{ab} \right) $$
+
+        <br><br>
+
+        अतः गोलाकार संधारित्र की धारिता
+
+        $$ C = \frac{Q}{V} $$
+
+        $$ C = 4\pi\varepsilon_0 K \left( \frac{ab}{b - a} \right) $$
+
+    </div>
+</div>
+<div class="qa-box">
+    <div class="question">
+        ❓ गोलाकार संधारित्र की धारिता को प्रभावित करने वाले कारक बताइए तथा इसकी धारिता कैसे बढ़ाई जा सकती है?
+    </div>
+
+    <div class="answer">
+
+        गोलाकार संधारित्र की धारिता का व्यंजक
+
+        $$ C = 4\pi\varepsilon_0 K \left( \frac{ab}{b - a} \right) $$
+
+        होता है। अतः इसकी धारिता निम्नलिखित कारकों पर निर्भर करती है —
+
+        <br><br>
+
+        <b>1. दोनों गोलों की त्रिज्या पर —</b><br>
+        जितनी अधिक दोनों गोलों की त्रिज्या a और b होगी, संधारित्र की धारिता उतनी ही अधिक होगी।
+
+        <br><br>
+
+        <b>2. त्रिज्याओं के अंतर पर —</b><br>
+        जितना कम दोनों गोलों की त्रिज्या का अंतर (b − a) होगा, धारिता उतनी ही अधिक होगी।
+
+        <br><br>
+
+        <b>3. परावैद्युत माध्यम पर —</b><br>
+        जितना अधिक परावैद्युतांक K का माध्यम गोलों के बीच भरा होगा, संधारित्र की धारिता उतनी ही अधिक होगी।
+
+    </div>
+</div><div class="qa-box">
+
+<div class="question">
+Q. बेलनाकार संधारित्र (Cylindrical Condenser) की धारिता का व्यंजक स्थापित कीजिए।
+</div>
+
+<div class="answer">
+बेलनाकार संधारित्र की संरचना चित्र में दर्शाई गई है। X और Y दो समाक्षीय बेलन हैं जो आपस में स्पर्श नहीं करते हैं। दोनों बेलनों के बीच में वायु या कोई परावैद्युत माध्यम भरा होता है। X को धन आवेश दिया जाता है जबकि Y को पृथ्वी से जोड़ दिया जाता है।
+</div>
+
+<div class="answer">
+धारिता के लिए व्यंजक — मान लीजिए बेलन X पर रेखीय आवेश घनत्व 𝜆 है तथा बेलनों X और Y की त्रिज्याएँ क्रमशः a और b हैं, जहाँ 𝑏 &gt; 𝑎 है।
+</div>
+
+<div class="answer">
+∴ बेलन X के कारण r दूरी पर विद्युत क्षेत्र की तीव्रता बीच के माध्यम में होगी—
+</div>
+
+<div class="formula">
+$$
+E =
+\frac{1}{2\pi\varepsilon_0K}
+\times
+\frac{\lambda}{r}
+$$
+</div>
+
+<div class="answer">
+∴ दोनों बेलनों के बीच विभवान्तर होगा—
+</div>
+
+<div class="formula">
+$$
+V = \int_a^b E \, dx
+$$
+</div>
+
+<div class="formula">
+$$
+V = \int_a^b
+\frac{1}{2\pi\varepsilon_0K}
+\times
+\frac{\lambda}{x}
+\, dx
+$$
+</div>
+
+<div class="formula">
+$$
+V =
+\frac{\lambda}{2\pi\varepsilon_0K}
+\int_a^b \frac{1}{x} dx
+$$
+</div>
+
+<div class="formula">
+$$
+V =
+\frac{\lambda}{2\pi\varepsilon_0K}
+[\log x]_a^b
+$$
+</div>
+
+<div class="formula">
+$$
+V =
+\frac{\lambda}{2\pi\varepsilon_0K}
+[\log b - \log a]
+$$
+</div>
+
+<div class="formula">
+$$
+V =
+\frac{\lambda}{2\pi\varepsilon_0K}
+\log\left(\frac{b}{a}\right)
+$$
+</div>
+
+<div class="answer">
+∴ बेलनाकार संधारित्र की धारिता प्रति इकाई लंबाई होगी—
+</div>
+
+<div class="formula">
+$$
+C = \frac{\lambda}{V}
+$$
+</div>
+
+<div class="formula">
+$$
+C =
+\frac{\lambda}
+{\frac{\lambda}{2\pi\varepsilon_0K}
+\log\left(\frac{b}{a}\right)}
+$$
+</div>
+
+<div class="formula">
+$$
+C =
+\frac{2\pi\varepsilon_0K}{\log\left(\frac{b}{a}\right)}
+$$
+</div>
+
+<div class="answer">
+अतः यही बेलनाकार संधारित्र की धारिता का अंतिम व्यंजक है।
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q. बेलनाकार संधारित्र (Cylindrical Condenser) की धारिता कैसे बढ़ाई जा सकती है?
+</div>
+
+<div class="answer">
+बेलनाकार संधारित्र की धारिता का व्यंजक है—
+</div>
+
+<div class="formula">
+$$
+C =
+\frac{2\pi \varepsilon_0 K}{\log\left(\frac{b}{a}\right)}
+$$
+</div>
+
+<div class="answer">
+अतः स्पष्ट है कि बेलनाकार संधारित्र की धारिता बढ़ाने के लिए निम्न बातों का ध्यान रखना चाहिए—
+</div>
+
+<div class="answer">
+1. दोनों बेलनों की लंबाई अधिक होनी चाहिए।<br><br>
+2. b/a का मान कम होना चाहिए अर्थात दोनों बेलनों की त्रिज्या लगभग समान होनी चाहिए।<br><br>
+3. दोनों बेलनों के बीच का माध्यम उच्च परावैद्युतांक (dielectric constant) वाला होना चाहिए।
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q. संधारित्रों का श्रेणी संयोजन (Series Combination of Condensers) से आप क्या समझते हैं? श्रेणी संयोजन में तुल्य धारिता का व्यंजक स्थापित कीजिए।
+</div>
+
+<div class="answer">
+इस संयोजन में प्रथम संधारित्र की दूसरी प्लेट को दूसरे संधारित्र की पहली प्लेट से जोड़ा जाता है; दूसरे संधारित्र की दूसरी प्लेट को तीसरे संधारित्र की पहली प्लेट से जोड़ा जाता है और इसी प्रकार आगे भी। प्रथम संधारित्र की पहली प्लेट को आवेशित किया जाता है तथा अंतिम संधारित्र की दूसरी प्लेट को पृथ्वी से जोड़ दिया जाता है। इस स्थिति में प्रत्येक संधारित्र पर आवेश समान होता है।
+</div>
+
+<div class="answer">
+व्युत्पत्ति (Derivation) — मान लीजिए कि धारिता 𝐶1, 𝐶2 और 𝐶3 वाले तीन संधारित्रों को विभवांतर V के स्रोत से श्रेणीक्रम में जोड़ा गया है। प्रथम संधारित्र की पहली प्लेट को आवेश +Q दिया जाता है तथा अंतिम संधारित्र की दूसरी प्लेट को पृथ्वी से जोड़ दिया जाता है। अतः प्रत्येक संधारित्र की प्लेटों पर +Q और -Q आवेश उत्पन्न हो जाता है।
+</div>
+
+<div class="answer">
+मान लीजिए तीनों संधारित्रों के बीच विभवांतर क्रमशः 𝑉1, 𝑉2 और 𝑉3 हैं, तो—
+</div>
+
+<div class="formula">
+$$
+V = V_1 + V_2 + V_3 \quad ...(1)
+$$
+</div>
+
+<div class="answer">
+अब सूत्र 𝑉 = Q/C से—
+</div>
+
+<div class="formula">
+$$
+V_1 = \frac{Q}{C_1}, \quad V_2 = \frac{Q}{C_2}, \quad V_3 = \frac{Q}{C_3}
+$$
+</div>
+
+<div class="answer">
+यदि तुल्य धारिता C हो, तो कुल विभवांतर होगा—
+</div>
+
+<div class="formula">
+$$
+V = \frac{Q}{C}
+$$
+</div>
+
+<div class="answer">
+समीकरण (1) में मान रखने पर—
+</div>
+
+<div class="formula">
+$$
+\frac{Q}{C} = \frac{Q}{C_1} + \frac{Q}{C_2} + \frac{Q}{C_3}
+$$
+</div>
+
+<div class="formula">
+$$
+\frac{1}{C} = \frac{1}{C_1} + \frac{1}{C_2} + \frac{1}{C_3}
+$$
+</div>
+
+<div class="answer">
+अतः स्पष्ट है कि श्रेणी संयोजन में तुल्य धारिता का व्युत्क्रम प्रत्येक धारिता के व्युत्क्रमों के योग के बराबर होता है।
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q. संधारित्रों का समानांतर संयोजन (Parallel Combination of Condensers) से आप क्या समझते हैं? समानांतर संयोजन में तुल्य धारिता का व्यंजक स्थापित कीजिए।
+</div>
+
+<div class="answer">
+इस संयोजन में प्रत्येक संधारित्र की एक प्लेट को बिंदु A से जोड़कर आवेशित किया जाता है तथा दूसरी प्लेट को बिंदु B से जोड़कर पृथ्वी से जोड़ दिया जाता है। इस प्रकार प्रत्येक संधारित्र के बीच समान विभवांतर होता है।
+</div>
+
+<div class="answer">
+व्युत्पत्ति (Derivation) — मान लीजिए कि धारिता 𝐶1, 𝐶2 और 𝐶3 वाले तीन संधारित्रों को विभवांतर V के स्रोत से समानांतर क्रम में जोड़ा गया है। अतः प्रत्येक संधारित्र के बीच विभवांतर समान V होगा।
+</div>
+
+<div class="answer">
+यदि बिंदु A को कुल आवेश +Q दिया जाए, तो यह तीन भागों 𝑄1, 𝑄2 और 𝑄3 में विभाजित हो जाता है। अतः—
+</div>
+
+<div class="formula">
+$$
+Q = Q_1 + Q_2 + Q_3 \quad ...(1)
+$$
+</div>
+
+<div class="answer">
+अब सूत्र Q = CV से—
+</div>
+
+<div class="formula">
+$$
+Q_1 = C_1 V, \quad Q_2 = C_2 V, \quad Q_3 = C_3 V
+$$
+</div>
+
+<div class="answer">
+यदि तुल्य धारिता C हो, तो—
+</div>
+
+<div class="formula">
+$$
+Q = CV
+$$
+</div>
+
+<div class="answer">
+समीकरण (1) में मान रखने पर—
+</div>
+
+<div class="formula">
+$$
+CV = C_1V + C_2V + C_3V
+$$
+</div>
+
+<div class="formula">
+$$
+C = C_1 + C_2 + C_3
+$$
+</div>
+
+<div class="answer">
+अतः स्पष्ट है कि समानांतर संयोजन में तुल्य धारिता प्रत्येक संधारित्र की धारिताओं के योग के बराबर होती है।
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q. किसी चालक की स्थितिज ऊर्जा (Potential Energy of a Conductor) से आप क्या समझते हैं? इसका व्यंजक स्थापित कीजिए।
+</div>
+
+<div class="answer">
+किसी चालक को आवेशित करने में किया गया कार्य ही उस चालक की स्थितिज ऊर्जा (Potential Energy) कहलाता है। इसे U से प्रदर्शित किया जाता है।
+</div>
+
+<div class="answer">
+व्युत्पत्ति (Derivation) — मान लीजिए किसी चालक को कुल आवेश Q दिया जाना है। प्रारंभ में जब चालक पर कोई आवेश नहीं होता, तो उसका विभव शून्य होता है। जैसे-जैसे आवेश दिया जाता है, उसका विभव बढ़कर V हो जाता है।
+</div>
+
+<div class="answer">
+अतः चालक का औसत विभव होगा—
+</div>
+
+<div class="formula">
+$$
+\text{Mean Potential} = \frac{0 + V}{2} = \frac{V}{2}
+$$
+</div>
+
+<div class="answer">
+अतः चालक को आवेश Q देने में किया गया कार्य होगा—
+</div>
+
+<div class="formula">
+$$
+U = \text{Charge} \times \text{Mean Potential}
+$$
+</div>
+
+<div class="formula">
+$$
+U = Q \times \frac{V}{2}
+$$
+</div>
+
+<div class="formula">
+$$
+U = \frac{1}{2} QV \quad ...(1)
+$$
+</div>
+
+<div class="answer">
+चूँकि Q = CV, इसलिए—
+</div>
+
+<div class="formula">
+$$
+U = \frac{1}{2} CV \cdot V
+$$
+</div>
+
+<div class="formula">
+$$
+U = \frac{1}{2} CV^2 \quad ...(2)
+$$
+</div>
+
+<div class="answer">
+पुनः V = Q/C रखने पर—
+</div>
+
+<div class="formula">
+$$
+U = \frac{1}{2} Q \cdot \frac{Q}{C}
+$$
+</div>
+
+<div class="formula">
+$$
+U = \frac{Q^2}{2C} \quad ...(3)
+$$
+</div>
+
+<div class="answer">
+अतः स्थितिज ऊर्जा के तीनों रूप प्राप्त होते हैं—
+</div>
+
+<div class="formula">
+$$
+U = \frac{1}{2} QV = \frac{1}{2} CV^2 = \frac{Q^2}{2C}
+$$
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q. सिद्ध कीजिए कि दो आवेशित संधारित्रों को जोड़ने पर आवेश उनके धारिताओं के अनुपात में वितरित होता है।
+</div>
+
+<div class="answer">
+माना A और B दो चालक हैं जिनकी धारिताएँ क्रमशः 𝐶1 और 𝐶2 हैं। जब इन्हें अलग-अलग आवेश 𝑄1 और 𝑄2 दिए जाते हैं, तो उनके विभव क्रमशः 𝑉1 और 𝑉2 हो जाते हैं।
+</div>
+
+<div class="answer">
+अब यदि इन दोनों चालकों को एक पतले तार द्वारा जोड़ दिया जाए जिसकी धारिता नगण्य हो, तो आवेश उच्च विभव से निम्न विभव की ओर प्रवाहित होता है, जब तक कि दोनों का विभव समान न हो जाए। मान लीजिए यह सामान्य विभव V है।
+</div>
+
+<div class="answer">
+जोड़ने के बाद—
+</div>
+
+<div class="formula">
+$$
+Q_1' = C_1 V \quad ...(1)
+$$
+</div>
+
+<div class="formula">
+$$
+Q_2' = C_2 V \quad ...(2)
+$$
+</div>
+
+<div class="answer">
+समीकरण (1) को (2) से भाग देने पर—
+</div>
+
+<div class="formula">
+$$
+\frac{Q_1'}{Q_2'} = \frac{C_1 V}{C_2 V}
+$$
+</div>
+
+<div class="formula">
+$$
+\frac{Q_1'}{Q_2'} = \frac{C_1}{C_2}
+$$
+</div>
+
+<div class="answer">
+अतः स्पष्ट है कि जब दो संधारित्रों को जोड़ा जाता है, तो आवेश उनके धारिताओं के अनुपात में वितरित होता है।
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q. सिद्ध कीजिए कि दो आवेशित चालकों को जोड़ने पर ऊर्जा का ह्रास (Loss of Energy) होता है।
+</div>
+
+<div class="answer">
+माना A और B दो चालक हैं जिनकी धारिताएँ क्रमशः 𝐶1 और 𝐶2 हैं। जब इन्हें अलग-अलग आवेश दिए जाते हैं तो उनके विभव क्रमशः 𝑉1 और 𝑉2 हो जाते हैं।
+</div>
+
+<div class="answer">
+प्रारंभ में—
+</div>
+
+<div class="formula">
+$$
+Q_1 = C_1 V_1, \quad Q_2 = C_2 V_2
+$$
+</div>
+
+<div class="answer">
+अतः दोनों चालकों की प्रारंभिक स्थितिज ऊर्जा होगी—
+</div>
+
+<div class="formula">
+$$
+U_1 = \frac{1}{2} C_1 V_1^2, \quad U_2 = \frac{1}{2} C_2 V_2^2
+$$
+</div>
+
+<div class="formula">
+$$
+U_{\text{initial}} = \frac{1}{2} (C_1 V_1^2 + C_2 V_2^2)
+$$
+</div>
+
+<div class="answer">
+अब यदि दोनों चालकों को एक पतले तार से जोड़ दिया जाए, तो आवेश उच्च विभव से निम्न विभव की ओर प्रवाहित होकर एक सामान्य विभव V प्राप्त करते हैं।
+</div>
+
+<div class="answer">
+समान विभव होगा—
+</div>
+
+<div class="formula">
+$$
+V = \frac{C_1 V_1 + C_2 V_2}{C_1 + C_2}
+$$
+</div>
+
+<div class="answer">
+जोड़ने के बाद कुल धारिता—
+</div>
+
+<div class="formula">
+$$
+C = C_1 + C_2
+$$
+</div>
+
+<div class="answer">
+अतः अंतिम ऊर्जा होगी—
+</div>
+
+<div class="formula">
+$$
+U_{\text{final}} = \frac{1}{2} (C_1 + C_2) V^2
+$$
+</div>
+
+<div class="formula">
+$$
+U_{\text{final}} = \frac{1}{2} (C_1 + C_2)\left(\frac{C_1 V_1 + C_2 V_2}{C_1 + C_2}\right)^2
+$$
+</div>
+
+<div class="formula">
+$$
+U_{\text{final}} = \frac{(C_1 V_1 + C_2 V_2)^2}{2(C_1 + C_2)}
+$$
+</div>
+
+<div class="answer">
+ऊर्जा का ह्रास (Loss of energy)—
+</div>
+
+<div class="formula">
+$$
+\Delta U = U_{\text{initial}} - U_{\text{final}}
+$$
+</div>
+
+<div class="formula">
+$$
+\Delta U = \frac{1}{2}(C_1 V_1^2 + C_2 V_2^2) - \frac{(C_1 V_1 + C_2 V_2)^2}{2(C_1 + C_2)}
+$$
+</div>
+
+<div class="answer">
+सरलीकरण करने पर—
+</div>
+
+<div class="formula">
+$$
+\Delta U = \frac{C_1 C_2 (V_1 - V_2)^2}{2(C_1 + C_2)}
+$$
+</div>
+
+<div class="answer">
+चूँकि सभी राशियाँ धनात्मक हैं, इसलिए ΔU > 0 होता है। अतः स्पष्ट है कि दो आवेशित चालकों को जोड़ने पर ऊर्जा का ह्रास होता है।
+</div>
+
+</div>
+
+<!-- SCRIPT -->
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("show");
+}
+
+document.addEventListener("click", function(e){
+    if(!e.target.closest(".navbar")){
+        document.getElementById("menu").classList.remove("show");
+    }
+});
+</script>
+
+<!-- Content Protection Scripts -->
+<script>
+// Disable right-click context menu
+document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+
+// Disable text selection
+document.addEventListener("selectstart", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+
+// Disable copy keyboard shortcut (Ctrl+C, Cmd+C)
+document.addEventListener("keydown", function(e) {
+    // Disable PrintScreen and related screenshot keys
+    if (e.key === "PrintScreen" || 
+        e.keyCode === 44 ||  // PrintScreen
+        (e.ctrlKey && e.shiftKey && e.key === "S") ||  // Windows Snipping Tool
+        (e.keyCode === 91 && e.shiftKey && e.key === "5")) {  // Mac Screenshot
+        e.preventDefault();
+        return false;
+    }
+    
+    // Disable Ctrl+C and Cmd+C (copy)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "c" || e.keyCode === 67)) {
+        e.preventDefault();
+        alert("Copying content is not allowed on this page.");
+        return false;
+    }
+    
+    // Disable Ctrl+A (select all)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "a" || e.keyCode === 65)) {
+        e.preventDefault();
+        return false;
+    }
+    
+    // Disable Ctrl+X (cut)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "x" || e.keyCode === 88)) {
+        e.preventDefault();
+        return false;
+    }
+    
+    // Disable F12 (Developer Tools)
+    if (e.keyCode === 123) {
+        e.preventDefault();
+        return false;
+    }
+    
+    // Disable Ctrl+Shift+I (Developer Tools)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "i" || e.keyCode === 73)) {
+        e.preventDefault();
+        return false;
+    }
+    
+    // Disable Ctrl+Shift+J (Console)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "j" || e.keyCode === 74)) {
+        e.preventDefault();
+        return false;
+    }
+}, false);
+
+// Prevent copy on mouse up
+document.addEventListener("mouseup", function() {
+    document.selection.empty ? document.selection.empty() : window.getSelection().removeAllRanges();
+}, false);
+
+// Disable paste
+document.addEventListener("paste", function(e) {
+    e.preventDefault();
+    alert("Pasting content is not allowed on this page.");
+    return false;
+}, false);
+
+// Add user-select: none CSS dynamically
+document.addEventListener("DOMContentLoaded", function() {
+    document.body.style.userSelect = "none";
+    document.body.style.webkitUserSelect = "none";
+    document.body.style.msUserSelect = "none";
+    document.body.style.mozUserSelect = "none";
+});
+
+// Prevent image download
+document.addEventListener("dragstart", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+</script>
+
+
+</body>
+</html>
