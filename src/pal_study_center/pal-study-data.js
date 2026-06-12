@@ -18,6 +18,7 @@ const PAL_STUDY_DATA = {
     "Class 12th": {
       "भौतिकी": [
         "यूनिट 1 विद्युत आवेश एवं क्षेत्र",
+       "यूनिट 1 (B ) विद्युत विभव", "यूनिट 1 (C ) धारिता", 
         "यूनिट 2 स्थिर विद्युत विभव एवं धारिता",
         "यूनिट 3 विद्युत धारा",
         "यूनिट 4 गतिमान आवेश एवं चुंबकत्व",
@@ -159,6 +160,8 @@ const UNIT_FILE_PATHS = {
     "Class 12th": {
       "भौतिकी": {
         "यूनिट 1 विद्युत आवेश एवं क्षेत्र": "../units/mp_board_hindi/class_12/physics/unit1/MP_Hindi_12th_Physics_unit1.html",
+         "यूनिट 1 (B ) विद्युत विभव": "../units/mp_board_hindi/class_12/physics/unit1/mphp-1b.html",
+           "यूनिट 1 (C ) धारिता": "../units/mp_board_hindi/class_12/physics/unit1/mphp-1c.html",
         "यूनिट 2 स्थिर विद्युत विभव एवं धारिता": "../units/mp_board_hindi/class_12/physics/unit2/MP_Hindi_12th_Physics_unit2.html",
         "यूनिट 3 विद्युत धारा": "../units/mp_board_hindi/class_12/physics/unit3/MP_Hindi_12th_Physics_unit3.html",
         "यूनिट 4 गतिमान आवेश एवं चुंबकत्व": "../units/mp_board_hindi/class_12/physics/unit4/MP_Hindi_12th_Physics_unit4.html",
@@ -172,7 +175,10 @@ const UNIT_FILE_PATHS = {
         "यूनिट 12 परमाणु": "../units/mp_board_hindi/class_12/physics/unit12/MP_Hindi_12th_Physics_unit12.html",
         "यूनिट 13 नाभिक": "../units/mp_board_hindi/class_12/physics/unit13/MP_Hindi_12th_Physics_unit13.html",
         "यूनिट 14 अर्धचालक इलेक्ट्रॉनिक्स": "../units/mp_board_hindi/class_12/physics/unit14/MP_Hindi_12th_Physics_unit14.html"
-      }
+      },
+"रसायन शास्त्र ":{
+    "यूनिट 1 विलयन": "../units/mp_board_hindi/class_12/chemistry/unit1/mphc1.html"
+}
     }
   }
 };
