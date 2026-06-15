@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PAL STUDY CENTER | Notes</title>
+
+<!-- MathJax -->
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    color:#333;
+    line-height:1.7;
+}
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:16px;
+    background:linear-gradient(135deg,#0D47A1,#1565C0);
+    box-shadow:0 6px 20px rgba(0,0,0,0.25);
+}
+
+.logo{ text-align:center; }
+.logo .main{
+    font-size:36px;
+    font-weight:900;
+    letter-spacing:3px;
+    color:white;
+    text-transform:uppercase;
+}
+.logo .sub{ display:none; }
+
+.container{
+    max-width:900px;
+    margin:120px auto 30px;
+    padding:15px;
+}
+
+.notes-title{
+    background:#E3F2FD;
+    color:#1565C0;
+    padding:14px;
+    border-left:5px solid #1565C0;
+    border-radius:10px;
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.qa-box{
+    background:#fff;
+    padding:22px;
+    margin-bottom:18px;
+    border-radius:14px;
+    border-left:6px solid #1565C0;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    transition:0.25s ease;
+    position:relative;
+    overflow:hidden;
+}
+
+.qa-box::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:4px;
+    background:linear-gradient(90deg,#1565C0,#42A5F5);
+}
+
+.qa-box:hover{
+    transform:translateY(-4px) scale(1.01);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.question{
+    font-weight:bold;
+    color:#1b3a57;
+    margin-bottom:8px;
+}
+
+.answer{
+    color:#2c3e50;
+    text-align:justify;
+}
+
+.answer img{
+    max-width:100%;
+    height:auto;
+    margin:10px 0;
+    border-radius:8px;
+}
+
+.answer table{
+    width:100%;
+    border-collapse:collapse;
+    margin:10px 0;
+}
+
+.answer table td, .answer table th{
+    border:1px solid #ddd;
+    padding:10px;
+    text-align:left;
+}
+
+.answer table th{
+    background:#f0f0f0;
+    font-weight:bold;
+}
+
+.answer ol, .answer ul{
+    margin-left:20px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.answer li{ margin-bottom:8px; }
+
+@media(max-width:600px){
+    .logo .main{ font-size:24px; letter-spacing:2px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <div class="logo">
+        <div class="main">PAL STUDY CENTER</div>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="notes-title">📘 Unit 5</div>
+
+    <div class="qa-box">
+        <div class="question">योगात्मक यौगिक किसे कहते हैं?</div>
+        <div class="answer">
+            <p>जब दो या अधिक सामान्य लवणों को एक निश्चित अनुपात में मिलाकर जल में घोलकर पुनः क्रिस्टलन किया जाता है तो प्राप्त  यौगिक को योगात्मक यौगिक कहते हैं। </p>
+<p>ये निम्न दो प्रकार के होते हैं।</p>
+<ol>
+<li>द्विक् लवण।</li>
+<li>संकुल लवण या उपसहसंयोजी यौगिक।</li>
+</ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">द्विक लवण किन्हें कहते हैं?</div>
+        <div class="answer">
+            <p>ऐसे योगात्मक लवण जो जल में विलेय करने पर अपने सभी अवयवी घटकों में विभक्त हो जाते हैं। इन यौगिकों के जलीय विलयन में सभी घटक आयनों का परीक्षण किया जा सकता है।</p>
+<p>K2SO4.Cr2(SO4)3.24H2O→ 2K2+ + 2Cr3+ + 4SO42-  + 24H2O</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">संकुल या संकर यौगिक क्या हैं?</div>
+        <div class="answer">
+            <p>उत्तर- ऐसे योगात्मक यौगिक जो जलीय विलयन में अपने सभी घटकों का परीक्षण नहीं देते हैं, संकुल यौगिक या संकर यौगिक कहलाते हैं।</p>
+<p>उदाहरण - </p>
+<p>[Cu(NH₃)₄]SO₄ →[Cu(NH₃)₄]2+ + SO42 </p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">द्विक् लवण तथा संकुल (कॉम्प्लेक्स) लवण में अंतर लिखिए।</div>
+        <div class="answer">
+            <table><tr><td><p>द्विक् लवण </p></td><td><p>संकुल लवण </p></td></tr><tr><td><p>ये दो साधारण लवणों के मिश्रण से बनते हैं।</p></td><td><p>ये केन्द्रीय धातु आयन तथा लिगैण्ड से बनते हैं।</p></td></tr><tr><td><p>घोल में पूर्णतः आयनित होकर अपने-अपने आयन देते हैं।</p></td><td><p>घोल में जटिल आयन के रूप में रहते हैं, पूर्ण आयनित नहीं होते।</p></td></tr><tr><td><p>इनके गुण इनके अवयव आयनों के समान होते हैं।</p></td><td><p>इनके गुण मूल आयनों से भिन्न होते हैं।</p></td></tr></table>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">संकुल या संकर यौगिक कितने प्रकार के होते है?</div>
+        <div class="answer">
+            <ol>
+<li>होमोलेप्टिक संकुल</li>
+<li>हेटरोलेप्टिक संकुल</li>
+</ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">होमोलेप्टिक संकुल को एक उदाहरण सहित लिखिए। (2025)</div>
+        <div class="answer">
+            <p>उत्तर - ऐसे संकुल जिनमें धातु परमाणु केवल एक ही प्रकार के दाता समूह से जुड़े रहते हैं, होमोलेप्टिक संकुल कहलाते हैं। </p>
+<p>उदाहरण- </p>
+<p>[Cu(NH₃)₄]SO₄</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">हेटरोलेप्टिक संकुल को एक उदाहरण सहित लिखिए। (2025)</div>
+        <div class="answer">
+            <p>उत्तर - ऐसे संकुल जिनमें धातु परमाणु एक से अधिक प्रकार के दाता समूहों से जुड़े रहते हैं, हेटरोलेप्टिक संकुल कहलाते हैं।</p>
+<p>उदाहरण - </p>
+<p>[ Co(NH3)5Cl ]Cl₂</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">उपसहसंयोजी यौगिकों के कोई दो अनुप्रयोग लिखिए। (2023)</div>
+        <div class="answer">
+            <ol>
+<li>उपसहसंयोजी यौगिकों का उपयोग गुणात्मक विश्लेषण में आयनों की पहचान करने, भास्मिक मूलकों के समूह परीक्षण तथा परिणात्मक आंकलन में किया जाता है।</li>
+<li>इनका उपयोग धातुओं के निष्कर्षण तथा शोधन में किया जाता है।</li>
+</ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">केन्द्रीय धातु परमाणु किसे कहते है?</div>
+        <div class="answer">
+            <p>उत्तर - उप-सहसंयोजक यौगिकों में जो धातु परमाणु विभिन्न लिगेण्ड से जुड़ा होता है, केन्द्रीय धातु परमाणु कहलाता है।</p>
+<p>जैसे [Cu(NH₃)₄]SO₄ उप-सहसंयोजक यौगिक मे Cu केन्द्रीय धातु परमाणु कहलाता है।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">लिगैंड से आप क्या समझते हैं?</div>
+        <div class="answer">
+            <p>उत्तर - कोई भी परमाणु, अणु या आयन जो केन्द्रीय धातु आयन को इलेक्ट्रॉन युग्म दे सकता है लिगेण्ड (संलग्नी) कहलाता है। ये लिगेण्ड केन्द्रीय आयन को घेरे रहते हैं।</p>
+<p>जैसे [Cu(NH₃)₄]SO₄ उप-सहसंयोजक यौगिक मे NH₃ लिगेण्ड है।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">समन्वयन संख्या या उप-सहसंयोजी संख्या को समझाइए।</div>
+        <div class="answer">
+            <p>उप-सहसंयोजी यौगिक में केन्द्रीय धातु आयन से सीधे जुड़े हुए लिगेण्डो की संख्या को समन्वयन संख्या या उप-सहसंयोजी संख्या कहते हैं।</p>
+<p>जैसे [Cu(NH₃)₄]SO₄ उप-सहसंयोजक यौगिक मे Cu केन्द्रीय धातु की समन्वयन संख्या या उप-सहसंयोजी संख्या 4 है।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">उप-सहसंयोजन मण्डल को समझाइए। अथवा</div>
+        <div class="answer">
+            <p>समन्वयन मण्डल किसे कहते हैं?</p>
+<p>उत्तर - केन्द्रीय धातु परमाणु तथा उससे सीधे जुड़े लिगेण्ड को बड़े कोष्ठक में लिखा जाता हैं। इसे उपसहसंयोजन मण्डल या समन्वयन मण्डल कहते हैं।</p>
+<p>जैसे [Cu(NH₃)₄]SO₄ उप-सहसंयोजक यौगिक मे [Cu(NH₃)₄] उपसहसंयोजन मण्डल या समन्वयन मण्डल है।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">आयनन मण्डल कहते हैं?</div>
+        <div class="answer">
+            <p>उपसहसंयोजन मण्डल के बाहर स्थित वे आयन, जो केन्द्रीय धातु से ढीले जुड़े रहते हैं और घोल में आयनन पर अलग हो जाते हैं, आयनन मण्डल कहलाते हैं।</p>
+<p>जैसे [Cu(NH₃)₄]SO₄ उप-सहसंयोजक यौगिक मे SO₄ आयनन मण्डल है।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">लिगैंड से आप क्या समझते हैं? इसके प्रकार बताइए और समझाइए। (2023/25)</div>
+        <div class="answer">
+            <p>लिगैंड के प्रकार</p>
+<ol>
+<li>मोनोडेंटेट – वह लिगेण्ड जिसमे केवल एक डोनर परमाणु होता है।</li>
+</ol>
+<p> उदाहरण: अमोनिया </p>
+<p>:NH₃</p>
+<ol>
+<li>बाइडेंटेट – वह लिगेण्ड जिसमे दो एक डोनर परमाणु होते है।</li>
+</ol>
+<p>उदाहरण: एथिलीनडायमीन (en)</p>
+<p>:NH2-CH2-CH2- H2N:</p>
+<ol>
+<li>पॉलीडेंटेट – वह लिगेण्ड जिसमे अनेक डोनर परमाणु होते है।</li>
+</ol>
+<p>उदाहरण: EDTA</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">EDTAका पूरा नाम का संरचनात्मक सूत्र तथा उपयोग लिखिए।</div>
+        <div class="answer">
+            <p>उत्तर:<br>पूरा नाम: एथिलीन डाई एमीन टेट्रा एसिटेटो <br>स्वभाव: हेक्साडेंटेट लिगैंड<br>संरचनात्मक सूत्र:</p>
+<img src="images/image6.png" alt="चित्र" style="max-width:400px; height:auto; margin:10px 0;">
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">एम्बिडेंटेट लिगेण्ड किसे कहते हैं?</div>
+        <div class="answer">
+            <p>वे लिगैण्ड जो दो विभिन्न दाता परमाणुओं के माध्यम से केंद्रीय धातु आयन से जुड़ सकते हैं, एम्बिडेंटेट लिगैण्ड कहलाते हैं।</p>
+<p>उदाहरण - NO₂⁻ (नाइट्राइट) </p>
+<p>यह N अथवा O से केंद्रीय धातु आयन से जुड़ सकता हैं अतः NO₂⁻ एक एम्बिडेंटेट लिगैण्ड हैं।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">किलेट क्या हैं? उदाहरण दीजिए।</div>
+        <div class="answer">
+            <p>उत्तर- धातु अथवा धातु आयन के साथ संयोग कर जब कोई बहुदन्तुर लिगैण्ड चक्रीय संरचना वाला अणु बनाता है तो इस यौगिक को कीलेट कहते हैं। </p>
+<p>उदाहरण- निकेल डाईमेथिल ग्लाइ ऑक्सम </p>
+<img src="images/image2.png" alt="चित्र" style="max-width:400px; height:auto; margin:10px 0;">
+<p>उपयोग- </p>
+<ol>
+<li>धातु अनुमान।</li>
+<li>जैविक अभिक्रियाएँ।</li>
+<li>लेड विषाक्तता का उपचार (EDTA द्वारा)।</li>
+<li>जल शोधन।</li>
+</ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">कीलेटीकारक किसे कहते है?</div>
+        <div class="answer">
+            <p>वे लिगैण्ड जो किसी धातु आयन को दो या अधिक दाँतों से पकड़कर किलेट बनाते हैं तो उसे कीलेटीकारक कहलाते हैं।</p>
+<p>उदाहरण:<br>EDTA, ऑक्सैलिक अम्ल, एथिलीन डायमीन (en) आदि।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">कीलेट का महत्व लिखिए। (2010/13)</div>
+        <div class="answer">
+            <p>कीलेट का महत्व :</p>
+<ol>
+<li>जल की कठोरता निर्धारण: EDTA कीलेट बनाकर Ca²⁺ व Mg²⁺ आयनों की मात्रा बताता है।<br></li>
+<li>विश्लेषण में उपयोग: धात्विक आयनों (Ca, Mg) के आकलन में कीलेटिंग एजेंट प्रयोग होते हैं।<br></li>
+<li>जैव रसायन में: हीमोग्लोबिन में Fe कीलेट स्वरूप में गैसों का परिवहन करता है; कई एंजाइम धातु–कीलेट रूप में कार्य करते हैं।<br></li>
+<li>चिकित्सा में: सिस-प्लैटिन जैसे कीलेट यौगिक कैंसर उपचार में उपयोगी हैं।</li>
+</ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">केन्द्रीय ऑक्सीकरण संख्या किसे कहते हैं? (2023)</div>
+        <div class="answer">
+            <p>उत्तर -किसी उप-सहसंयोजी यौगिक में केन्द्रीय धातु आयन पर उपस्थित वास्तविक आवेश को ऑक्सीकरण संख्या कहते हैं। यह लिगैण्डों के आवेश को ध्यान में रखकर निर्धारित की जाती है।</p>
+<p>उदाहरण [Fe(CN)6]4- में —<br></p>
+<p>Fe + [ 6 × (−1)] = − 4</p>
+<p>Fe −6 = − 4</p>
+<p>Fe = + 6 − 4</p>
+<p>Fe = + 2</p>
+<p>Fe की ऑक्सीकरण संख्या = +2.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">प्रभावी परमाणु संख्या (EAN) क्या है? सूत्र लिखिए।</div>
+        <div class="answer">
+            <p>उत्तर - उप-सहसंयोजक यौगिक के केन्द्रीय धातु परमाणु में उपस्थित इलेक्ट्रॉनों की संख्या तथा बन्ध के बनने से प्राप्त इलेक्ट्रॉनों की संख्या के योग को प्रभावी (प्रभावकारी) परमाणु संख्या क्रमांक (E.A.N.) कहते हैं।</p>
+<p>EAN = केन्द्रीय धातु की परमाणु संख्या  −  आयनीकरण में खोए इलेक्ट्रॉन + लिगैंड से प्राप्त इलेक्ट्रॉन</p>
+<p>उदाहरण: </p>
+<p>[Fe(CN)₆]⁴⁻ → 36, </p>
+<p>[Fe(CN)₆]³⁻ → 35, </p>
+<p>[Co(NH₃)₆]³⁺ → 36</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">निम्न उपसहसंयोजी योगिकों का आईयूपीएसी नामकरण दीजिए।</div>
+        <div class="answer">
+            <p>1. K₂[Cu(CN)₄] → पोटैशियम टेट्रासायनो क्यूप्रेट (II)</p>
+<p>2. K₃[Fe(CN)₆] → पोटैशियम हेक्सासायनो फेर्रेट (III)</p>
+<p>3. K₂[Ni(CN)₄] → पोटैशियम टेट्रासायनो निकेलेट (II)</p>
+<p>4. K₄[Fe(CN)₆] → पोटैशियम हेक्सासायनो फेर्रेट (II)</p>
+<p>5. K₃[Ag(CN)₄] → पोटैशियम टेट्रासायनो आर्जेंटेट (I)</p>
+<p>6. K[Ag(CN)₂] → पोटैशियम डायसायनो आर्जेंटेट (I)</p>
+<p>7. K[BF₄] → पोटैशियम टेट्राफ्लोरोबोरेट</p>
+<p>8. K₄[Ni(CN)₄] → पोटैशियम टेट्रासायनो निकेलेट (0)</p>
+<p>9. Na₄[Ni(EDTA)] → सोडियम एथिलीनडायमीन टेट्राएसीटेटो निकेलेट (II)</p>
+<p>10. K₂[PtCl₆] → पोटैशियम हेक्साक्लोरो प्लेटिनेट (IV)</p>
+<p>11. K[Pt(NH₃)Cl₅] → पोटैशियम ऐमीन पेंटाक्लोरो प्लेटिनेट (IV)</p>
+<p>12. Na[Co(CO)₄] → सोडियम टेट्राकार्बोनाइल कोबाल्टेट (−I)</p>
+<p>13. Na[Au(CN)₂] → सोडियम डायसायनो ऑरेट (I)</p>
+<p>14. Na₄[Ni(CN)₄] → सोडियम टेट्रासायनो निकेलेट (0)</p>
+<p>15. K₂[Zn(OH)₄] → पोटैशियम टेट्राहाइड्रॉक्सो जिंक्टेट (II)</p>
+<p>16. K₂[HgI₄] → पोटैशियम टेट्रायोडो मर्क्यूरेट (II)</p>
+<p>17. [Cu(NH₃)₄]SO₄ → टेट्राऐमीन कॉपर (II) सल्फेट</p>
+<p>18. [Ag(NH₃)₂]Cl₂ → डायऐमीन सिल्वर (I) क्लोराइड</p>
+<p>19. [Co(NH₃)₆]Cl₃ → हेक्साऐमीन कोबाल्ट (III) क्लोराइड</p>
+<p>20. [Cr(H₂O)₆]Cl₃ → हेक्साएक्वा क्रोमियम (III) क्लोराइड</p>
+<p>21. [Co(NH₃)₅Cl]Cl₂ → पेंटाऐमीन क्लोरो कोबाल्ट (III) क्लोराइड</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">वर्नर के उप-सहसंयोजी सिद्धान्त को उदाहरण सहित समझाइए।</div>
+        <div class="answer">
+            <p>अल्फ्रेड वर्नर ने समन्वय यौगिकों की संरचना को समझाने के लिए यह सिद्धांत दिया। जिसके मुख्य अधिग्रहीत निम्न है।</p>
+<ol>
+<li>धातु आयन में दो प्रकार की संयोजकताएँ एक साथ पाई जाती हैं।</li>
+<li>प्राथमिक संयोजकता (आयननशील) धातु की ऑक्सीकरण अवस्था को दर्शाती है। यह ऋणायनों द्वारा पूरी होती है, बिंदीदार रेखा (…..) से दिखाई जाती है और विलयन में आयनित हो जाती है।</li>
+<li>द्वितीयक संयोजकता (गैर-आयननशील) धातु की समन्वय संख्या को दर्शाती है। यह उदासीन अणुओं या ऋणायनों द्वारा पूरी होती है, ठोस रेखा (—) से दिखाई जाती है और विलयन में आयनित नहीं होती।</li>
+<li>प्रत्येक धातु आयन अपनी प्राथमिक और द्वितीयक दोनों संयोजकताएँ पूर्ण करता है।</li>
+<li>प्रत्येक धातु आयन की द्वितीयक संयोजकता निश्चित होती है, और यही उसकी समन्वय संख्या होती है।</li>
+<li>द्वितीयक संयोजकताएँ स्थानिक रूप से व्यवस्थित होती हैं, जिससे निश्चित ज्यामितीय संरचना बनती है।</li>
+</ol>
+<p>C.N. 4 → चतुष्फलकीय।</p>
+<p>C.N. 6 → अष्टफलकीय।</p>
+<p>उदाहरण:</p>
+<p>1. [Co(NH₃)₆]Cl₃ में Co³⁺ की</p>
+<p>प्राथमिक संयोजकता = 3 </p>
+<p>द्वितीयक संयोजकता = 6</p>
+<p>संरचना: अष्टफलकीय।</p>
+<p>विलयन में:</p>
+<p>[Co(NH₃)₆]Cl₃ → [Co(NH₃)₆]³⁺ + 3Cl⁻</p>
+<p>2. [Co(NH₃)₅Cl]Cl₂ में Co³⁺ की</p>
+<p>[Co(NH₃)₅Cl]Cl₂ → [Co(NH₃)₅Cl]²⁺ + 2Cl⁻</p>
+<p>3. [Co(NH₃)₄Cl₂]Cl में Co³⁺ की</p>
+<p>द्वितीयक संयोजकता = 6 </p>
+<p>[Co(NH₃)₄Cl₂]Cl → [Co(NH₃)₄Cl₂]⁺ + Cl⁻</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">समन्वय यौगिकों का संयोजक बंध सिद्धांत (VBT) समझाइए।</div>
+        <div class="answer">
+            <p>उत्तर: Linus Pauling द्वारा प्रस्तुत VBT के अनुसार समन्वय यौगिकों की संरचना व चुंबकीय गुण समझाए जाते हैं।</p>
+<p>इसके मुख्य अधिग्रहीत निम्न है।</p>
+<ol>
+<li>केंद्रीय धातु आयन अपने लगभग समान ऊर्जा वाले खाली कक्ष उपलब्ध कराता है।</li>
+<li>ये कक्ष संकरण करते हैं।</li>
+<li>प्रत्येक लिगैंड अपने अकेले इलेक्ट्रॉन युग्म से इन कक्षों को भरता है और सहसंयोजक बनता है।</li>
+<li>बने हुए बंध दिशात्मक होते हैं और यौगिक की ज्यामिति निर्धारित करते हैं।</li>
+</ol>
+<p>संकरण और संरचना</p>
+<p>sp³ → चतुष्फलकीय</p>
+<p>dsp² → वर्गाकार समतलीय</p>
+<p>d²sp³ या sp³d² → अष्टफलकीय </p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">समावयवता क्या है? इसके प्रकार उदाहरण सहित लिखिए।</div>
+        <div class="answer">
+            <p>उत्तर: एक ही आणविक सूत्र वाले यौगिक जब भिन्न व्यवस्था प्रदर्शित करते हैं तो उन्हें समावयवी और इस गुण को समावयवता कहते हैं।</p>
+<p>समावयवता दो प्रकार की होती है।</p>
+<p>(A) संरचनात्मक समावयवता - संरचना या बंधन की स्थिति में भिन्नता के कारण उत्पन समावयवता को संरचनात्मक समावयवता कहते है। </p>
+<p>यह निम्न प्रकार की होती है।</p>
+<ol>
+<li>आयनन समावयवता - जब आयनन क्षेत्र में उपस्थित समूह का उपसहसंयोजन क्षेत्र में उपस्थित समूह से विनिमय होता है तो इसे आयनन समावयवता कहते हैं।</li>
+</ol>
+<p>उदाहरण:</p>
+<p>[Co(NH₃)₅Br]SO₄</p>
+<p>[Co(NH₃)₅SO₄]Br</p>
+<ol>
+<li>हाइड्रेट समावयवता - जब जल के अणु किसी संकुल में उपसहसंयोजन मण्डल के भीतर और बाहर विभित्र प्रकार से उपस्थित रहते है तब इसे हाइड्रेट समावयवता कहते है।</li>
+</ol>
+<p>उदाहरण: </p>
+<p>CrCl₃·6H₂O के तीन रूप </p>
+<p>[Cr(H₂O)₆]Cl₃ (बैंगनी)</p>
+<p>[Cr(H₂O)₅Cl]Cl₂·H₂O (हरा)</p>
+<p>[Cr(H₂O)₄Cl₂]Cl·2H₂O (गहरा हरा)</p>
+<ol>
+<li>लिंकज समावयवता - जब एक ही लिगण्ड केन्द्रीय आयन से दो भिन्न प्रकारों से जुड़ सकता है तब यह समावयवता प्रदर्शित होती है।</li>
+</ol>
+<p>[Co(NH₃)₅(SCN)]Cl</p>
+<p>[Co(NH₃)₅(NCS)]Cl</p>
+<ol>
+<li>समन्वय समावयवता - जब कैटायनिक और एनायनिक भागों के बीच लिगैंड का अदला-बदली होती है तो इसे समन्वय समावयवता कहते है।</li>
+</ol>
+<p>[Co(NH₃)₆][Cr(CN)₆]</p>
+<p>[Cr(NH₃)₆][Co(CN)₆]</p>
+<p>(B) त्रिविम समावयवता - अणु में केन्द्रीय आयन के चारों ओर लिगैण्डों की आकाशीय व्यवस्था में भिन्नता से उत्पन्न समावयवता हो त्रिविम समावयवता कहते हैं। </p>
+<p>यह दो प्रकार की होती है।</p>
+<ol>
+<li>ज्यामितीय समावयवता - केन्द्रीय आयन के चारों ओर आकाशीय व्यवस्था मे लिगैण्ड की स्थिति में अन्तर के कारण उत्पन समावयवता को ज्यामितीय समावयवता कहते है।</li>
+</ol>
+<p>यदि समान प्रकार के लिगैण्ड एक-दूसरे के निकटवर्ती स्थान घेरते हैं तो इसे समपक्ष रूप (cis form) कहते हैं। और यदि वे एक-दूसरे के विपरीत स्थान पर होते हैं तो उसे विषम पक्ष रूप (trans form) कहते हैं।</p>
+<p>उदाहरण: [Pt(NH₃)₂Cl₂] → cis और trans रूप।</p>
+<img src="images/image5.png" alt="चित्र" style="max-width:400px; height:auto; margin:10px 0;">
+<ol>
+<li>प्रकाशीय समावयवता - जब एक यौगिक के ऐसे दो समावयवी जो एक-दूसरे के दर्पण प्रतिबिंब होते हैं और एक-दूसरे पर अधिरोपित नहीं हो सकते, तो इसे प्रकाशीय समावयवता कहते हैं।</li>
+</ol>
+<p>ये समावयवी ध्रुवीकृत प्रकाश को दाएँ घुमाता है उसे d- समावयवी तथा जो समावयवी बाएँ घुमाता हैं उसे l समावयवी कहते हैं।</p>
+<p>उदाहरण - </p>
+<img src="images/image3.png" alt="चित्र" style="max-width:400px; height:auto; margin:10px 0;">
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">समन्वय यौगिकों का महत्व लिखिए।</div>
+        <div class="answer">
+            <p>उत्तर: समन्वय यौगिक उद्योग, औषधि और विश्लेषण में महत्वपूर्ण हैं।</p>
+<p>उपयोग:</p>
+<ol>
+<li>धातु निष्कर्षण में (Au, Ag को NaCN द्वारा)।</li>
+<li>फोटोग्राफी में (AgBr का विलयन हाइपो में)।</li>
+<li>जल की कठोरता ज्ञात करने में (EDTA द्वारा)।</li>
+<li>औषधियों में (EDTA – लेड विष का उपचार, सिसप्लैटिन – कैंसर उपचार)।</li>
+<li>इलेक्ट्रोप्लेटिंग में K[Ag(CN)₂] द्वारा ।</li>
+<li>अघुलनशील पदार्थों को घुलाने में।</li>
+</ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">कार्ब धात्विक या ऑर्गेनोमेटालिक यौगिक क्या हैं? उदाहरण व उपयोग लिखिए।</div>
+        <div class="answer">
+            <p>उत्तर: वे यौगिक जिनमें धातु परमाणु सीधे कार्बन परमाणु से जुड़ा होते है उन्हें ऑर्गेनोमेटालिक यौगिक  कहते हैं।</p>
+<p>C₂H₅Na</p>
+<p>CH₃MgI</p>
+<p>(C₂H₅)₂Zn</p>
+<p>Fe(η⁵–C₅H₅)₂ (फेरोसीन)</p>
+<p>उपयोग:</p>
+<ol>
+<li>ईंधन योजक: Pb(C₂H₅)₄ पेट्रोल में एंटी-नॉक यौगिक।</li>
+<li>कार्बनिक संश्लेषण: ग्रिग्नार्ड अभिकर्मक (RMgX) द्वारा।</li>
+<li>उत्प्रेरक: Ziegler–Natta उत्प्रेरक (Ti/Al यौगिक) द्वारा पॉलिमर संश्लेषण।</li>
+<li>औषधियाँ: कुछ औषधियों में।</li>
+</ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">5. फेरोसीन की संरचना समझाइए।</div>
+        <div class="answer">
+            <p>उत्तर: फेरोसीन एक ऑर्गेनोमेटालिक यौगिक है।</p>
+<p>सूत्र: Fe(η⁵–C₅H₅)₂</p>
+<img src="images/image7.jpg" alt="चित्र" style="max-width:400px; height:auto; margin:10px 0;">
+<p>इसकी संरचना सैंडविच संरचना है जिसमें</p>
+<ol>
+<li>Fe दो चक्रीय C₅H₅⁻ रिंगों के बीच स्थित होता है।</li>
+<li>प्रत्येक रिंग Fe को 5 π-इलेक्ट्रॉन प्रदान करती है।</li>
+<li>कुल 10 इलेक्ट्रॉन Fe के साथ समन्वय करते हैं।</li>
+<li>यह संरचना अत्यंत स्थिर और एरोमैटिक गुणधर्म वाली होती है।</li>
+</ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">जिप्से लवण क्या है? सूत्र व संरचना लिखिए।</div>
+        <div class="answer">
+            <p>उत्तर: जिप्से लवण Pt–ethylene कॉम्प्लेक्स है।</p>
+<p>सूत्र: K[PtCl₃(η²–C₂H₄)]·H₂O</p>
+<img src="images/image4.png" alt="चित्र" style="max-width:400px; height:auto; margin:10px 0;">
+<p>संरचना:</p>
+<ol>
+<li>Pt +2 ऑक्सीकरण अवस्था में है।</li>
+<li>C₂H₄ लिगैंड Pt से अपने π-बंध (C=C) द्वारा जुड़ता है।</li>
+<li>एथिलीन side-on (η²) प्रकार से Pt से समन्वय करता है।</li>
+<li>Pt → C=C π-back bonding द्वारा स्थिरता बढ़ाता है।</li>
+<li>Pt का ज्यामिति वर्गाकार समतलीय होती है।</li>
+</ol>
+        </div>
+    </div>
+
+</div>
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("show");
+}
+document.addEventListener("click", function(e){
+    if(!e.target.closest(".navbar")){
+        var menu = document.getElementById("menu");
+        if(menu) menu.classList.remove("show");
+    }
+});
+</script>
+<script>
+document.addEventListener("contextmenu", function(e) { e.preventDefault(); return false; }, false);
+document.addEventListener("selectstart", function(e) { e.preventDefault(); return false; }, false);
+document.addEventListener("keydown", function(e) {
+    if (e.key === "PrintScreen" || e.keyCode === 44 ||
+        (e.ctrlKey && e.shiftKey && e.key === "S") ||
+        (e.keyCode === 91 && e.shiftKey && e.key === "5")) { e.preventDefault(); return false; }
+    if ((e.ctrlKey || e.metaKey) && (e.key === "c" || e.keyCode === 67)) {
+        e.preventDefault(); alert("Copying content is not allowed on this page."); return false;
+    }
+    if ((e.ctrlKey || e.metaKey) && (e.key === "a" || e.keyCode === 65)) { e.preventDefault(); return false; }
+    if ((e.ctrlKey || e.metaKey) && (e.key === "x" || e.keyCode === 88)) { e.preventDefault(); return false; }
+    if (e.keyCode === 123) { e.preventDefault(); return false; }
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "i" || e.keyCode === 73)) { e.preventDefault(); return false; }
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "j" || e.keyCode === 74)) { e.preventDefault(); return false; }
+}, false);
+document.addEventListener("mouseup", function() {
+    document.selection && document.selection.empty ? document.selection.empty() : window.getSelection().removeAllRanges();
+}, false);
+document.addEventListener("paste", function(e) {
+    e.preventDefault(); alert("Pasting content is not allowed on this page."); return false;
+}, false);
+document.addEventListener("DOMContentLoaded", function() {
+    document.body.style.userSelect = "none";
+    document.body.style.webkitUserSelect = "none";
+    document.body.style.msUserSelect = "none";
+    document.body.style.mozUserSelect = "none";
+});
+document.addEventListener("dragstart", function(e) { e.preventDefault(); return false; }, false);
+</script>
+
+</body>
+</html>
