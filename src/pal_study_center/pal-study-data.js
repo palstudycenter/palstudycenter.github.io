@@ -177,10 +177,36 @@ const UNIT_FILE_PATHS = {
         "यूनिट 14 अर्धचालक इलेक्ट्रॉनिक्स": "../units/mp_board_hindi/class_12/physics/unit14/MP_Hindi_12th_Physics_unit14.html"
       },
       "रसायन शास्त्र ":{
-          "यूनिट 1 विलयन": "../units/mp_board_hindi/class_12/chemistry/unit1/mphc1.html"
+          "यूनिट 1 विलयन": "../units/mp_board_hindi/class_12/chemistry/unit1/c1/1_formatted.html",
+          "यूनिट 2 विद्युत रसायन": "../units/mp_board_hindi/class_12/chemistry/unit1/c2/2_formatted.html",
+          "यूनिट 3 रासायनिक गतिकी": "../units/mp_board_hindi/class_12/chemistry/unit1/c3/3_formatted.html",
+          "यूनिट 4 d और f ब्लॉक के तत्व": "../units/mp_board_hindi/class_12/chemistry/unit1/c4/4_formatted.html",
+          "यूनिट 5 समन्वय यौगिक": "../units/mp_board_hindi/class_12/chemistry/unit1/c5/5_formatted.html",
+          "यूनिट 6 हैलोएल्केन और हैलोएरीन": "../units/mp_board_hindi/class_12/chemistry/unit1/c6/6_formatted.html",
+          "यूनिट 7 अल्कोहल": "../units/mp_board_hindi/class_12/chemistry/unit1/c7/7_formatted.html",
+          "यूनिट 8 फिनोल": "../units/mp_board_hindi/class_12/chemistry/unit1/c8/8_formatted.html",
+          "यूनिट 9 ईथर": "../units/mp_board_hindi/class_12/chemistry/unit1/c9/9_formatted.html",
+          "यूनिट 10 एल्डिहाइड एवं कीटोन": "../units/mp_board_hindi/class_12/chemistry/unit1/c10/10_formatted.html",
+          "यूनिट 11 कार्बोक्सिलिक अम्ल": "../units/mp_board_hindi/class_12/chemistry/unit1/c11/11_formatted.html",
+          "यूनिट 12 अमीन": "../units/mp_board_hindi/class_12/chemistry/unit1/c12/12_formatted.html",
+          "यूनिट 13 जैव-अणु": "../units/mp_board_hindi/class_12/chemistry/unit1/c13/13_formatted.html"
       },
       "जीवविज्ञान": {
-        "यूनिट 1 (B) मानव जनन": "../units/mp_board_hindi/class_12/biology/unit1/mphb-1.html"
+        "यूनिट 1 (A) पुष्पीय पौधों में लैंगिक जनन" : "../units/mp_board_hindi/class_12/biology/unit1/b1/1_formatted.html",
+        "यूनिट 1 (B) मानव जनन": "../units/mp_board_hindi/class_12/biology/unit1/b2/2_formatted.html",
+        "यूनिट 1 (C) जनन स्वास्थ्य" : "../units/mp_board_hindi/class_12/biology/unit1/b3/3_formatted.html",
+        "यूनिट 2 (A) वंशागति के सिद्धांत" : "",
+        "यूनिट 2 (B) वंशागति का आणविक आधार" : "",
+        "यूनिट 2 (C) विकास" : "",
+        "यूनिट 3 (A) मानव कल्याण में जीवविज्ञान" : "",
+        "यूनिट 3 (B) मानव स्वास्थ्य एवं रोग" : "",
+        "यूनिट 3 (C) मानव कल्याण में सूक्ष्मजीव" : "",
+        "यूनिट 4 (A) जैव प्रौद्योगिकी: सिद्धांत एवं प्रक्रियाएँ" : "",
+        "यूनिट 4 (B) जैव प्रौद्योगिकी एवं उसके उपयोग" : "",
+        "यूनिट 5 (A) पारिस्थितिकी" : "",
+        "यूनिट 5 (B) जीव और समष्टियाँ" : "",
+        "पारितंत्र" : "",
+        "यूनिट 5 (C) जैव विविधता एवं संरक्षण" : ""
       }
     }
   }
