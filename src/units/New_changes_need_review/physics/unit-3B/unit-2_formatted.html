@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PAL STUDY CENTER | Notes</title>
+
+<!-- MathJax -->
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    color:#333;
+    line-height:1.7;
+}
+
+/* ===== NAVBAR (BRAND STYLE) ===== */
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:16px;
+
+    background:linear-gradient(135deg,#0D47A1,#1565C0);
+    box-shadow:0 6px 20px rgba(0,0,0,0.25);
+}
+
+/* BRAND */
+.logo{
+    text-align:center;
+}
+
+.logo .main{
+    font-size:36px;
+    font-weight:900;
+    letter-spacing:3px;
+    color:white;
+    text-transform:uppercase;
+}
+
+.logo .sub{
+    display:none;
+}
+
+/* ===== CONTENT ===== */
+.container{
+    max-width:900px;
+    margin:120px auto 30px;
+    padding:15px;
+}
+
+/* TITLE */
+.notes-title{
+    background:#E3F2FD;
+    color:#1565C0;
+    padding:14px;
+    border-left:5px solid #1565C0;
+    border-radius:10px;
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+/* QA BOX */
+.qa-box{
+    background:#fff;
+    padding:22px;
+    margin-bottom:18px;
+    border-radius:14px;
+
+    border-left:6px solid #1565C0;
+
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+
+    transition:0.25s ease;
+
+    position:relative;
+    overflow:hidden;
+}
+
+.qa-box::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:4px;
+    background:linear-gradient(90deg,#1565C0,#42A5F5);
+}
+
+.qa-box:hover{
+    transform:translateY(-4px) scale(1.01);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.question{
+    font-weight:bold;
+    color:#1b3a57;
+    margin-bottom:8px;
+}
+
+.answer{
+    color:#2c3e50;
+    text-align:justify;
+}
+
+.answer img{
+    max-width:100%;
+    height:auto;
+    margin:10px 0;
+    border-radius:8px;
+}
+
+.answer table{
+    width:100%;
+    border-collapse:collapse;
+    margin:10px 0;
+}
+
+.answer table td, .answer table th{
+    border:1px solid #ddd;
+    padding:10px;
+    text-align:left;
+}
+
+.answer table th{
+    background:#f0f0f0;
+    font-weight:bold;
+}
+
+.answer ol, .answer ul{
+    margin-left:20px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.answer li{
+    margin-bottom:8px;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+    .logo .main{
+        font-size:24px;
+        letter-spacing:2px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">
+        <div class="main">PAL STUDY CENTER</div>
+    </div>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+    <div class="notes-title">📘 Unit 2 - चुंबकत्व</div>
+
+    <div class="qa-box">
+        <div class="question">प्रश्न 1: चुंबकत्व किसे कहते हैं?</div>
+        <div class="answer">
+            चुंबक द्वारा चुंबकीय पदार्थों को आकर्षित करने के गुण को चुंबकत्व कहते हैं।
+        </div>
+    </div>
+
+    <div class="qa-box">
+        <div class="question">प्रश्न 2: प्राकृतिक चुंबक एवं कृत्रिम चुंबक किसे कहते हैं?</div>
+        <div class="answer">
+            <strong>उत्तर:</strong>
+            <ol>
+                <li><strong>प्राकृतिक चुंबक</strong> - प्रकृति द्वारा प्राप्त चुंबक को प्राकृतिक चुंबक कहते हैं। इनकी आकृति अनिश्चित होती है तथा ये कम शक्तिशाली होते हैं।</li>
+                <li><strong>कृत्रिम चुंबक</strong> - मानव द्वारा निर्मित चुंबक को कृत्रिम चुंबक कहते हैं। इनकी इच्छा अनुसार आकार दिया जा सकता है तथा ये अधिक शक्तिशाली होते हैं।</li>
+            </ol>
+            <strong>उदाहरण:</strong> लोडस्टोन
+            <img src="images/image5.jpg" alt="चुंबक उदाहरण" style="max-width:400px; height:auto; margin:10px 0;">
+        </div>
+    </div>
+
+    <div class="qa-box">
+        <div class="question">प्रश्न 3: कृत्रिम चुंबक कितने प्रकार के होते हैं?</div>
+        <div class="answer">
+            कृत्रिम चुंबक भी दो प्रकार के होते हैं:
+            <ol>
+                <li><strong>अस्थायी चुंबक</strong> - जिस चुंबक का चुंबकत्व स्थायी नहीं होता है उन्हें अस्थायी चुंबक कहते हैं। अस्थायी चुंबक नरम लोहे के बनाये जाते हैं। अस्थायी चुंबक का चुंबकत्व शीघ्र नष्ट किया जा सकता है।</li>
+                <li><strong>स्थायी चुंबक</strong> - जिस चुंबक का चुंबकत्व स्थायी होता है उन्हें स्थायी चुंबक कहते हैं। स्थायी चुंबक निकेल, कोबाल्ट, कठोर स्टील आदि के बनाये जाते हैं। स्थायी चुंबक का चुंबकत्व शीघ्र नष्ट नहीं होता है।</li>
+            </ol>
+            <img src="images/image6.png" alt="चुंबक प्रकार" style="max-width:400px; height:auto; margin:10px 0;">
+        </div>
+    </div>
+
+    <div class="qa-box">
+        <div class="question">प्रश्न: स्थायी चुंबक स्टील के बनाये जाते हैं तथा ट्रांसफॉर्मर की कोर कच्चे लोहे की बनाई जाती है, क्यों?</div>
+        <div class="answer">
+            स्थायी चुंबक स्टील के बनाये जाते हैं क्योंकि स्टील में चुंबकत्व के बने रहने पर लंबे समय तक बना रहता है।
+            <br><br>
+            ट्रांसफॉर्मर के क्रोर नरम (कच्चे) लोहे के बनाये जाते हैं क्योंकि उनमें चुंबकत्व के केवल धारा रहने तक रहता है और धारा बंद होते ही समाप्त हो जाता है।
+        </div>
+    </div>
+
+    <div class="qa-box">
+        <div class="question">प्रश्न 4: चुंबक के ध्रुव किसे कहते हैं?</div>
+        <div class="answer">
+            <strong>उत्तर:</strong>
+            <p>चुंबक के सिरों पर चुंबकीय आकर्षण सर्वाधिक होता है। इन्हें चुंबकीय ध्रुव कहते हैं।</p>
+            <p>चुंबक के दो ध्रुव होते हैं:</p>
+            <ol>
+                <li>उत्तरी ध्रुव</li>
+                <li>दक्षिणी ध्रुव</li>
+            </ol>
+            <img src="images/image11.png" alt="चुंबक के ध्रुव" style="max-width:400px; height:auto; margin:10px 0;">
+        </div>
+    </div>
+
+    <div class="qa-box">
+        <div class="question">प्रश्न 5: चुंबक के गुण व विशेषताएं लिखिए।</div>
+        <div class="answer">
+            <strong>उत्तर:</strong>
+            <ol>
+                <li>चुंबक चुंबकीय पदार्थों को अपनी ओर आकर्षित करता है।</li>
+                <li>स्वतंत्र रूप से लटकाने पर यह उत्तर–पश्चिम दिशा में सीधर हो जाता है।</li>
+                <li>चुंबक के ध्रुव को किसी भी प्रकार अलग नहीं किया जा सकता।</li>
+                <li>किसी भी लोहे की वस्तु को रगड़कर उसे चुंबकीय बनाया जा सकता है।</li>
+                <li>चुंबक यदि गिर जाये, गरम कर दिया जाये या ठोका जाये तो उसका चुंबकत्व नष्ट हो सकता है।</li>
+            </ol>
+            <img src="images/image2.png" alt="चुंबक की विशेषताएं" style="max-width:400px; height:auto; margin:10px 0;">
+        </div>
+    </div>
+
+    <div class="qa-box">
+        <div class="question">प्रश्न 6: चुंबकत्व के आंगुल सिद्धांत को लिखिए।</div>
+        <div class="answer">
+            <strong>उत्तर:</strong>
+            <p>चुंबकत्व का अणु सिद्धांत निम्न है:</p>
+            <ol>
+                <li>प्रत्येक चुंबकीय पदार्थों से मिलकर बना होता है जिसे मूल चुंबक कहते हैं।</li>
+                <li>प्रत्येक मूल चुंबक में दो ध्रुव उपस्थित होते हैं।</li>
+                <li>मूल चुंबक में उत्तरी एवं दक्षिणी ध्रुव कभी भी अलग नहीं किए जा सकते।</li>
+                <li>समान अवस्था में ये चुंबक अनियमित होते हैं, परंतु चुंबकीय क्षेत्र में आने पर यह सभी एक दिशा में व्यवस्थित हो जाते हैं।</li>
+            </ol>
+            <img src="images/image8.png" alt="आंगुल सिद्धांत" style="max-width:400px; height:auto; margin:10px 0;">
+        </div>
+    </div>
+
+    <div class="qa-box">
+        <div class="question">प्रश्न 7: चुंबक का विनाश से क्यों अभिप्राय है?</div>
+        <div class="answer">
+            <strong>उत्तर:</strong>
+            <p>चुंबक को गिराने, गरम करने या ठोकने पर उसका चुंबकत्व नष्ट हो जाता है। इसे चुंबकीय विनाश कहते हैं।</p>
+        </div>
+    </div>
+
+    <div class="qa-box">
+        <div class="question">प्रश्न 8: चुंबकीय प्रेरण किसे कहते हैं?</div>
+        <div class="answer">
+            <strong>उत्तर:</strong>
+            <p>जब कोई चुंबकीय पदार्थ किसी चुंबक के संपर्क में आता है और इसमें भी चुंबकत्व उत्पन्न हो जाता है, तो इस प्रक्रिया को चुंबकीय प्रेरण कहते हैं।</p>
+        </div>
+    </div>
+
+    <div class="qa-box">
+        <div class="question">प्रश्न 9: ध्रुव प्रबलन किसे कहते हैं?</div>
+        <div class="answer">
+            <strong>उत्तर:</strong>
+            <p>किसी चुंबक के ध्रुव द्वारा चुंबकीय पदार्थों को अपनी ओर आकर्षित करने की क्षमता को इस ध्रुव की ध्रुव प्रबलन कहते हैं।</p>
+            <p>यह एक अदिश राशि है।</p>
+            <p>इसे m से प्रदर्शित करते हैं।</p>
+            <p>इसका SI मात्रक एम्पियर × मीटर है।</p>
+            <p><strong>प्रश्न</strong> कूलंब का व्युत्क्रम वर्ग नियम लिखिए।</p>
+            <p>इस नियम के अनुसार, दो चुंबकीय ध्रुवों के बीच लगने वाला आकर्षण या प्रतिकर्षण बल:</p>
+            <ol>
+                <li>दोनों ध्रुवों की ध्रुव प्रबलता के गुणनफल के समानुपाती होता है। <em>अर्थात</em><br>
+                    F ∝ m₁m₂</li>
+                <li>उनके बीच की दूरी के वर्ग के व्युत्क्रमानुपाती होता है। <em>अर्थात</em><br>
+                    F ∝ 1/r²</li>
+            </ol>
+            <p>उपरोक्त नियमों को मिलाने पर</p>
+            <p>F ∝ m₁m₂/r²</p>
+        </div>
+    </div>
+
+    <div class="qa-box">
+        <div class="question">प्रश्न 10: चुंबकीय आघूर्ण किसे कहते हैं?</div>
+        <div class="answer">
+            <strong>उत्तर:</strong>
+            <p>चुंबक के ध्रुव प्रबलन एवं उसके बीच की दूरी का गुणनफल चुंबकीय आघूर्ण कहलाता है।</p>
+            <img src="images/image10.png" alt="चुंबकीय आघूर्ण" style="max-width:400px; height:auto; margin:10px 0;">
+            <p>मानो NS एक पंड चुंबक हो जिसकी ध्रुवों की प्रबलता m तथा प्रभावी लंबाई 2d है तब चुंबकीय आघूर्ण निम्न होगा।</p>
+            <p>M = m × 2d</p>
+            <p>जहाँ,</p>
+            <p>m = ध्रुव प्रबलन</p>
+            <p>2d = ध्रुवों के बीच की दूरी</p>
+        </div>
+    </div>
+
+    <div class="qa-box">
+        <div class="question">प्रश्न: चुंबकीय क्षेत्र किसे कहते हैं?</div>
+        <div class="answer">
+            <strong>उत्तर</strong>
+            <p>वह क्षेत्र है जहाँ तक किसी चुंबक के बल का प्रभाव महसूस किया जा सकता है चुंबकीय क्षेत्र कहलाता है।</p>
+            <img src="images/image3.png" alt="चुंबकीय क्षेत्र" style="max-width:400px; height:auto; margin:10px 0;">
+            <p><strong>प्रश्न -</strong> चुंबकीय क्षेत्र की तीव्रता से आप क्या समझते हैं? इसका S. I. मात्रक लिखिये।</p>
+            <p><strong>(म. प्र. 2008/12/25)</strong></p>
+            <p><strong>उत्तर -</strong></p>
+            <p>चुंबक की क्षेत्र में किसी बिंदु पर रखे एकांक उत्तरी ध्रुव पर लगने वाले बल को इस बिंदु पर चुंबकीय क्षेत्र की तीव्रता कहते हैं। इसे B से प्रदर्शित करते हैं।</p>
+            <p>मानो m ध्रुव प्रबलन पर F बल का कार्य करता है तो चुंबकीय क्षेत्र की तीव्रता</p>
+            <p>B = F/m</p>
+            <p>यह सदिश राशि है।</p>
+            <p>S. I. प्रणाली में इसका मात्रक न्यूटन एम्पियर मीटर होता है।</p>
+            <p><strong>प्रश्न</strong> किसी पंड चुंबक की अक्षीय सीधिति में चुंबकीय क्षेत्र की तीव्रता के लिए सूत्र निगमित कीजिए।</p>
+            <p><strong>प्रश्न</strong> किसी पंड चुंबक की निरक्षीय सीधिति में चुंबकीय क्षेत्र की तीव्रता के लिए सूत्र निगमित कीजिए।</p>
+        </div>
+    </div>
+
+    <div class="qa-box">
+        <div class="question">प्रश्न 1. चुंबकीय बल रेखा किसे कहते हैं? उनके गुण लिखिए।</div>
+        <div class="answer">
+            <strong>उत्तर:</strong>
+            <p>चुंबकीय बल रेखाओं की कल्पनीय रेखाएं होती हैं जिनपर किसी भी बिंदु पर रखे उत्तरी ध्रुव को कोई पथ प्रदर्शक होता है।</p>
+            <img src="images/image9.png" alt="बल रेखाएं" style="max-width:280px; height:auto; margin:10px 0;">
+            <p><strong>गुणें</strong></p>
+            <ol>
+                <li>ये कल्पनीय उत्तरी ध्रुव की गति का पथ प्रदर्शक होती है।</li>
+                <li>ये चुंबक के बाहर उत्तरी से दक्षिणी और भीतर दक्षिणी से उत्तरी की ओर जाती हैं, इस प्रकार बंद वक्र बनाती हैं।</li>
+                <li>किसी भी बिंदु पर खींची गई स्पर्शरेखा वहाँ चुंबकीय क्षेत्र की दिशा बताती है।</li>
+                <li>दो चुंबकीय बल रेखाएं कभी एक-दूसरे को नहीं काटती।</li>
+                <li>चुंबकीय बल रेखाओं की संख्या क्षेत्र की तीव्रता को प्रदर्शित करती है।</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="qa-box">
+        <div class="question">प्रश्न - चुंबकीय क्षेत्र रेखाओं के प्रारंभिक तथा अंतिम सिरे नहीं होते हैं, क्यों? (म. प्र. 2023)</div>
+        <div class="answer">
+            <strong>उत्तर -</strong>
+            <p>चुंबकीय क्षेत्र रेखाएं चुंबक के बाहर उत्तरी ध्रुव से दक्षिणी ध्रुव की ओर जाती हैं और चुंबक के अंदर दक्षिणी ध्रुव से उत्तरी ध्रुव की ओर जाती हैं। इस प्रकार वे बंद वक्र बनाती हैं जिससे चुंबकीय क्षेत्र रेखाओं के प्रारंभिक तथा अंतिम सिरे नहीं होते हैं।</p>
+        </div>
+    </div>
+
+    <div class="qa-box">
+        <div class="question">प्रश्न . समान ध्रुव एक-दूसरे को क्यों प्रतिकर्षित करते हैं?</div>
+        <div class="answer">
+            <strong>उत्तर</strong>
+            <p>समान ध्रुवों के बीच बल रेखाएं मिलकर उत्तरी से दक्षिणी ध्रुव की ओर जाती हैं और इलिये वे प्रतिकर्षण बल उत्पन्न करती हैं।</p>
+        </div>
+    </div>
+
+    <div class="qa-box">
+        <div class="question">प्रश्न . विपरीत ध्रुव एक-दूसरे को क्यों आकर्षित करते हैं?</div>
+        <div class="answer">
+            <strong>उत्तर</strong>
+            <p>विपरीत ध्रुवों के बीच बल रेखाएं मिलकर उत्तरी से दक्षिणी ध्रुव की ओर जाती हैं, इसीलिये वे आकर्षण बल उत्पन्न करती हैं।</p>
+        </div>
+    </div>
+
+    <div class="qa-box">
+        <div class="question">प्रश्न - यदि किसी स्थान पर चुंबकीय क्षेत्र रेखाएं परस्पर समानांतर तथा समदूरस्थ हों, तो इससे चुंबकीय क्षेत्र के बारे में क्या सूचना मिलती है?</div>
+        <div class="answer">
+            <strong>उत्तर -</strong>
+            <p>यदि किसी स्थान पर चुंबकीय क्षेत्र रेखाएं परस्पर समानांतर तथा समदूरस्थ हों तो यह प्रदर्शन करता है कि उस क्षेत्र में एकसमान चुंबकीय क्षेत्र है अर्थात चुंबकीय क्षेत्र की शक्ति सर्वत्र समान है।</p>
+        </div>
+    </div>
+
+    <div class="qa-box">
+        <div class="question">प्रश्न . धारावाहिक परिनालिका किसे कहते हैं? नामांकित चित्र बनाकर समझाइए।</div>
+        <div class="answer">
+            <strong>उत्तर:</strong>
+            <p>धारावाहिक परिनालिका (Solenoid) एक लंबा बेलनाकार कुंडली होता है जिसके तारों के इंसुलेटेड तार से बहुत सारी कुंडलियों में लपेटा जाता है। जब इसमें विद्युत धारा प्रवाहित की जाती है तो यह चुंबक के समान होता है।</p>
+            <img src="images/image12.png" alt="परिनालिका" style="max-width:400px; height:auto; margin:10px 0;">
+            <p><strong>प्रश्न . चुंबक और धारावाहिक परिनालिका में अंतर।</strong></p>
+            <table>
+                <tr>
+                    <th>चुंबक</th>
+                    <th>धारावाहिक परिनालिका</th>
+                </tr>
+                <tr>
+                    <td>यह प्राकृतिक या कृत्रिम रूप से निर्मित हाथु का ठोकरा होता है जिसमें स्थायी उत्तरी और दक्षिणी ध्रुव होते हैं।</td>
+                    <td>यह तारों के की तार से लिपटा हुआ बेलनाकार कुंडली होता है जिसमें विद्युत धारा प्रवाहित करने पर चुंबकीय गुण उत्पन्न होते हैं।</td>
+                </tr>
+                <tr>
+                    <td>चुंबकीय ध्रुव स्थायी होते हैं।</td>
+                    <td>ध्रुव केवल धारा प्रवाहित करने पर बनते हैं।</td>
+                </tr>
+                <tr>
+                    <td>इसके ध्रुव को किसी भी प्रकार अलग नहीं किया जा सकता।</td>
+                    <td>धारा बंद करने पर ध्रुव समाप्त हो जाते हैं।</td>
+                </tr>
+                <tr>
+                    <td>इसकी शक्ति निश्चित होती है।</td>
+                    <td>इसकी शक्ति धारा के मात्रा पर निर्भर करती है।</td>
+                </tr>
+                <tr>
+                    <td>यह आवेशों पर तथा विद्युत् धारा पर असर डाल सकता है।</td>
+                    <td>यह तारों के इंसुलेटेड तार से बनाया जाता है।</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</div>
+<!-- SCRIPT -->
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("show");
+}
+
+document.addEventListener("click", function(e){
+    if(!e.target.closest(".navbar")){
+        document.getElementById("menu").classList.remove("show");
+    }
+});
+</script>
+
+<!-- Content Protection Scripts -->
+<script>
+// Disable right-click context menu
+document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+
+// Disable text selection
+document.addEventListener("selectstart", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+
+// Disable copy keyboard shortcut (Ctrl+C, Cmd+C)
+document.addEventListener("keydown", function(e) {
+    // Disable PrintScreen and related screenshot keys
+    if (e.key === "PrintScreen" ||
+        e.keyCode === 44 ||  // PrintScreen
+        (e.ctrlKey && e.shiftKey && e.key === "S") ||  // Windows Snipping Tool
+        (e.keyCode === 91 && e.shiftKey && e.key === "5")) {  // Mac Screenshot
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+C and Cmd+C (copy)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "c" || e.keyCode === 67)) {
+        e.preventDefault();
+        alert("Copying content is not allowed on this page.");
+        return false;
+    }
+
+    // Disable Ctrl+A (select all)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "a" || e.keyCode === 65)) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+X (cut)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "x" || e.keyCode === 88)) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable F12 (Developer Tools)
+    if (e.keyCode === 123) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+Shift+I (Developer Tools)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "i" || e.keyCode === 73)) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+Shift+J (Console)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "j" || e.keyCode === 74)) {
+        e.preventDefault();
+        return false;
+    }
+}, false);
+
+// Prevent copy on mouse up
+document.addEventListener("mouseup", function() {
+    document.selection.empty ? document.selection.empty() : window.getSelection().removeAllRanges();
+}, false);
+
+// Disable paste
+document.addEventListener("paste", function(e) {
+    e.preventDefault();
+    alert("Pasting content is not allowed on this page.");
+    return false;
+}, false);
+
+// Add user-select: none CSS dynamically
+document.addEventListener("DOMContentLoaded", function() {
+    document.body.style.userSelect = "none";
+    document.body.style.webkitUserSelect = "none";
+    document.body.style.msUserSelect = "none";
+    document.body.style.mozUserSelect = "none";
+});
+
+// Prevent image download
+document.addEventListener("dragstart", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+</script>
+
+</body>
+</html>

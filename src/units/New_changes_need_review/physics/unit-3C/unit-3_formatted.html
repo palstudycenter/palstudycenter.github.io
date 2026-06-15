@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PAL STUDY CENTER | Notes</title>
+
+<!-- MathJax -->
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    color:#333;
+    line-height:1.7;
+}
+
+/* ===== NAVBAR (BRAND STYLE) ===== */
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:16px;
+
+    background:linear-gradient(135deg,#0D47A1,#1565C0);
+    box-shadow:0 6px 20px rgba(0,0,0,0.25);
+}
+
+/* BRAND */
+.logo{
+    text-align:center;
+}
+
+.logo .main{
+    font-size:36px;
+    font-weight:900;
+    letter-spacing:3px;
+    color:white;
+    text-transform:uppercase;
+}
+
+.logo .sub{
+    display:none;
+}
+
+/* ===== CONTENT ===== */
+.container{
+    max-width:900px;
+    margin:120px auto 30px;
+    padding:15px;
+}
+
+/* TITLE */
+.notes-title{
+    background:#E3F2FD;
+    color:#1565C0;
+    padding:14px;
+    border-left:5px solid #1565C0;
+    border-radius:10px;
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+/* QA BOX */
+.qa-box{
+    background:#fff;
+    padding:22px;
+    margin-bottom:18px;
+    border-radius:14px;
+
+    border-left:6px solid #1565C0;
+
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+
+    transition:0.25s ease;
+
+    position:relative;
+    overflow:hidden;
+}
+
+.qa-box::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:4px;
+    background:linear-gradient(90deg,#1565C0,#42A5F5);
+}
+
+.qa-box:hover{
+    transform:translateY(-4px) scale(1.01);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.question{
+    font-weight:bold;
+    color:#1b3a57;
+    margin-bottom:8px;
+}
+
+.answer{
+    color:#2c3e50;
+    text-align:justify;
+}
+
+.answer img{
+    max-width:100%;
+    height:auto;
+    margin:10px 0;
+    border-radius:8px;
+}
+
+.answer table{
+    width:100%;
+    border-collapse:collapse;
+    margin:10px 0;
+}
+
+.answer table td, .answer table th{
+    border:1px solid #ddd;
+    padding:10px;
+    text-align:left;
+}
+
+.answer table th{
+    background:#f0f0f0;
+    font-weight:bold;
+}
+
+.answer ol, .answer ul{
+    margin-left:20px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.answer li{
+    margin-bottom:8px;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+    .logo .main{
+        font-size:24px;
+        letter-spacing:2px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">
+        <div class="main">PAL STUDY CENTER</div>
+    </div>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+    <div class="notes-title">📘 Unit 2 (c) - चुंबकीय पदार्थ</div>
+
+    <div class="qa-box">
+        <div class="question">प्रश्न 1: चुंबकीय क्षेत्र के आधार पर पदार्थ कितने प्रकार के होते हैं?</div>
+        <div class="answer">
+            चुंबकीय क्षेत्र के आधार पर पदार्थ तीन प्रकार के होते हैं –
+            <ol>
+                <li>अनुचुंबकीय पदार्थ</li>
+                <li>लोहचुंबकीय पदार्थ</li>
+                <li>प्रति-चुंबकीय पदार्थ</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="qa-box">
+        <div class="question">प्रश्न 2: अनुचुंबकीय पदार्थ किसे कहते हैं? उनके गुण लिखिए।</div>
+        <div class="answer">
+            वे पदार्थ जो चुंबकीय क्षेत्र में हल्के आकर्षित होते हैं उन्हें अनुचुंबकीय पदार्थ कहते हैं।
+            <br><br>
+            <strong>उदाहरण:</strong> एल्युमिनियम (Al), क्रोमियम (Cr), प्लेटिनम (Pt), मैग्नीशियम (Mg)।
+            <br><br>
+            <strong>गुण:</strong>
+            <ol>
+                <li>इनका चुंबकीय आघूर्ण धनात्मक परन्तु बहुत छोटा होता है।</li>
+                <li>चुंबकीय क्षेत्र हटाने पर इनका चुंबकीय प्रभाव समाप्त हो जाता है।</li>
+                <li>इनकी चुंबकीय आपेक्षिक पारगम्यता (μ<sub>r</sub>) थोड़ी अधिक होती है (&gt;1)।</li>
+                <li>इनकी चुंबकीय संवेदनशीलता (χ) धनात्मक और छोटी होती है।</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="qa-box">
+        <div class="question">प्रश्न 3: लोहचुंबकीय पदार्थ किसे कहते हैं? उनके गुण लिखिए।</div>
+        <div class="answer">
+            वे पदार्थ जो चुंबकीय क्षेत्र में अत्यधिक आकर्षित होते हैं और जिनमें स्थायी चुंबकत्व आ जाता है उन्हें लोहचुंबकीय पदार्थ कहते हैं।
+            <br><br>
+            <strong>उदाहरण:</strong> लोहा (Fe), कोबाल्ट (Co), निकेल (Ni)।
+            <br><br>
+            <strong>गुण:</strong>
+            <ol>
+                <li>इनका चुंबकीय आघूर्ण बहुत बड़ा होता है।</li>
+                <li>चुंबकीय क्षेत्र हटाने पर भी इनमें चुंबकत्व बना रहता है (हिस्टैरिसिस गुण)।</li>
+                <li>इनकी चुंबकीय आपेक्षिक पारगम्यता (μ<sub>r</sub>) बहुत बड़ी होती है (&gt;1)।</li>
+                <li>इनकी चुंबकीय संवेदनशीलता (χ) धनात्मक तथा बहुत अधिक होती है।</li>
+                <li>इनका प्रयोग स्थायी चुंबक बनाने में किया जाता है।</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="qa-box">
+        <div class="question">प्रश्न 4: प्रति-चुंबकीय पदार्थ किसे कहते हैं? उनके गुण लिखिए।</div>
+        <div class="answer">
+            वे पदार्थ जो चुंबकीय क्षेत्र में हल्के विकर्षित होते हैं उन्हें प्रति-चुंबकीय पदार्थ कहते हैं।
+            <br><br>
+            <strong>उदाहरण:</strong> तांबा (Cu), चाँदी (Ag), सोना (Au), बिस्मथ (Bi)।
+            <br><br>
+            <strong>गुण:</strong>
+            <ol>
+                <li>इनका चुंबकीय आघूर्ण ऋणात्मक और बहुत छोटा होता है।</li>
+                <li>चुंबकीय क्षेत्र हटाने पर इनका प्रभाव पूरी तरह समाप्त हो जाता है।</li>
+                <li>इनकी चुंबकीय आपेक्षिक पारगम्यता (μ<sub>r</sub>) थोड़ी कम होती है (&lt;1)।</li>
+                <li>इनकी चुंबकीय संवेदनशीलता (χ) ऋणात्मक और छोटी होती है।</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="qa-box">
+        <div class="question">प्रश्न 5: अनुचुंबकीय, लोहचुंबकीय तथा प्रति-चुंबकीय पदार्थ में अंतर बताइए।</div>
+        <div class="answer">
+            <table>
+                <tr>
+                    <th>क्रमांक</th>
+                    <th>अनुचुंबकीय पदार्थ</th>
+                    <th>लोहचुंबकीय पदार्थ</th>
+                    <th>प्रति-चुंबकीय पदार्थ</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>इनकी चुंबकीय पारगम्यता एक से थोड़ी अधिक होती है।</td>
+                    <td>इनकी चुंबकीय पारगम्यता एक से बहुत अधिक होती है।</td>
+                    <td>इनकी चुंबकीय पारगम्यता एक से थोड़ी कम होती है।</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>इनकी चुंबकीय संवेदनशीलता (χ) धनात्मक और छोटी होती है।</td>
+                    <td>इनकी चुंबकीय संवेदनशीलता (χ) धनात्मक और बहुत अधिक होती है।</td>
+                    <td>इनकी चुंबकीय संवेदनशीलता (χ) ऋणात्मक और छोटी होती है।</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>ये बाहरी चुंबकीय क्षेत्र को अल्प आकर्षित करते हैं।</td>
+                    <td>ये बाहरी चुंबकीय क्षेत्र को प्रबल रूप से आकर्षित करते हैं।</td>
+                    <td>ये बाहरी चुंबकीय क्षेत्र को प्रतिकर्षित करते हैं।</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>उदाहरण: प्लैटिनम, मैंगनीज।</td>
+                    <td>उदाहरण: लोहा, कोबाल्ट, निकेल।</td>
+                    <td>उदाहरण: तांबा, सोना, चाँदी, जस्ता।</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="qa-box">
+        <div class="question">प्रश्न: नरम लोहा और स्टील में अंतर लिखिए।</div>
+        <div class="answer">
+            <table>
+                <tr>
+                    <th>क्रमांक</th>
+                    <th>नरम लोहा</th>
+                    <th>स्टील</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>इसे आसानी से चुंबकीय बनाया जा सकता है।</td>
+                    <td>इसे चुंबकीय बनाने में कठिनाई होती है।</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>यह अस्थायी चुंबक के लिए उपयुक्त है।</td>
+                    <td>यह स्थायी चुंबक के लिए उपयुक्त है।</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>चुंबकीयता शीघ्र उत्पन्न होती है और शीघ्र नष्ट हो जाती है।</td>
+                    <td>चुंबकीयता धीरे-धीरे उत्पन्न होती है और लंबे समय तक बनी रहती है।</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>ह्रास बहुत कम होता है।</td>
+                    <td>ह्रास अधिक होता है।</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>उपयोग: विद्युत चुंबक, ट्रांसफार्मर की कोर, रिले आदि।</td>
+                    <td>उपयोग: स्थायी चुंबक, कम्पास सुई, मोटर आदि।</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="qa-box">
+        <div class="question">प्रश्न: क्यूरी ताप किसे कहते हैं?</div>
+        <div class="answer">
+            वह तापमान जिस पर लोहचुंबकीय पदार्थ अपनी लोहचुंबकत्व की गुण खो देता है और अनुचुंबकीय बन जाता है, क्यूरी ताप कहलाता है।
+            <br><br>
+            <strong>उदाहरण:</strong>
+            <p>लोहा → 770°C</p>
+            <p>निकेल → 360°C</p>
+            <p>कोबाल्ट → 1150°C</p>
+        </div>
+    </div>
+
+    <div class="qa-box">
+        <div class="question">प्रश्न: अवशिष्ट चुंबकत्व, धारणशीलता, निष्क्रिय हानि तथा शेषीय हानि से क्या अभिप्राय है?</div>
+        <div class="answer">
+            <ol>
+                <li><strong>अवशिष्ट चुंबकत्व :-</strong> चुंबकीय क्षेत्र हटाने के बाद पदार्थ में शेष बचा चुंबकत्व अवशिष्ट चुंबकत्व कहलाता है।</li>
+                <li><strong>धारणशीलता :-</strong> वह गुण जिसके कारण कोई पदार्थ चुंबकीय क्षेत्र हटने पर भी कुछ मात्रा में चुंबकत्व बनाए रखता है धारणशीलता कहलाता है।</li>
+                <li><strong>निष्क्रिय हानि :-</strong> चुंबकत्व को बार-बार बदलते समय चुंबकीय पदार्थ द्वारा उष्मा के रूप में खोई गई ऊर्जा को निष्क्रिय हानि कहते हैं।</li>
+                <li><strong>शैथिल्य हानि :-</strong> बदलते चुंबकीय क्षेत्र में चालक के भीतर उत्पन्न धारा (एडी करंट) के कारण उत्पन्न ऊष्मा से हुई ऊर्जा हानि को शैथिल्य हानि कहते हैं।</li>
+            </ol>
+            <br>
+            <strong>प्रश्न: निम्न को परिभाषित करो</strong>
+            <img src="images/image2.jpg" alt="चुंबकीय अक्ष चित्र" style="max-width:400px; height:auto; margin:10px 0;">
+            <ol>
+                <li><strong>चुंबकीय अक्ष -</strong> पृथ्वी के चुंबकीय उत्तर एवं दक्षिण ध्रुवों को मिलाने वाली काल्पनिक रेखा को चुंबकीय अक्ष कहते हैं।</li>
+                <li><strong>चुंबकीय याम्योत्तर -</strong> पृथ्वी की सतह पर वह काल्पनिक तल, जिसमें चुंबकीय अक्ष एवं ऊर्ध्वाधर रेखा स्थित होती है, उसे चुंबकीय याम्योत्तर कहते हैं।</li>
+                <li><strong>चुंबकीय निरक्ष -</strong> पृथ्वी की सतह पर वह रेखा, जहाँ चुंबकीय सुई क्षैतिज स्थिति में रहती है और झुकाव शून्य होता है, चुंबकीय निरक्ष कहलाती है।</li>
+                <li><strong>चुंबकीय ध्रुव -</strong> पृथ्वी की सतह पर वे स्थान, जहाँ चुंबकीय सुई का झुकाव 90° होता है, उन्हें चुंबकीय ध्रुव कहते हैं।</li>
+                <li><strong>भौगोलिक अक्ष -</strong> पृथ्वी के उत्तर एवं दक्षिण ध्रुवों को मिलाने वाली काल्पनिक रेखा को भौगोलिक अक्ष कहते हैं। यही पृथ्वी की घूर्णन धुरी है।</li>
+                <li><strong>भौगोलिक याम्योत्तर -</strong> पृथ्वी की सतह पर वह काल्पनिक तल, जिसमें भौगोलिक अक्ष एवं ऊर्ध्वाधर रेखा स्थित होती है, उसे भौगोलिक याम्योत्तर कहते हैं।</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="qa-box">
+        <div class="question">प्रश्न: नमन कोण तथा दिक्पात का कोण किसे कहते हैं?</div>
+        <div class="answer">
+            <ol>
+                <li><strong>नमन कोण :-</strong> किसी स्थान पर पृथ्वी के चुम्बकीय क्षेत्र की परिणामी तीव्रता क्षैतिज के साथ जो कोण बनाती है, उसे नमन कोण कहते हैं। इसे θ द्वारा दर्शाते हैं।</li>
+                <li><strong>दिक्पात का कोण :-</strong> किसी स्थान पर चुम्बकीय याम्योत्तर और भौगोलिक याम्योत्तर के बीच के कोण को दिक्पात का कोण कहते हैं।</li>
+            </ol>
+            <p>भूमध्य रेखा पर यह 0 होता है।</p>
+            <p>चुंबकीय ध्रुवों पर यह 90° होता है।</p>
+            <img src="images/image5.jpg" alt="नमन कोण और दिक्पात" style="max-width:400px; height:auto; margin:10px 0;">
+        </div>
+    </div>
+
+    <div class="qa-box">
+        <div class="question">प्रश्न: पृथ्वी के भू चुंबकीय तत्वों में संबंध स्थापित कीजिए।</div>
+        <div class="answer">
+            <img src="images/image3.png" alt="भू चुंबकीय तत्व" style="max-width:400px; height:auto; margin:10px 0;">
+            <p>मान लीजिए कि किसी स्थान पर पृथ्वी का कुल चुंबकीय क्षेत्र I है। यह चुंबकीय क्षेत्र क्षैतिज तल के साथ θ कोण बनाता है तब</p>
+            <p><strong>क्षैतिज घटक</strong></p>
+            <p>H = I cosθ ……. (1)</p>
+            <p><strong>ऊर्ध्वाधर घटक</strong></p>
+            <p>V = I sinθ ……. (2)</p>
+            <p>समी. (2) में (1) का भाग देने पर-</p>
+            <img src="images/image4.jpg" alt="भू चुंबकीय संबंध" style="max-width:400px; height:auto; margin:10px 0;">
+        </div>
+    </div>
+
+    <div class="qa-box">
+        <div class="question">प्रश्न: निम्न को समझाइए।</div>
+        <div class="answer">
+            <ol>
+                <li><strong>सम दिक्पाती रेखाएँ :-</strong> ऐसे स्थानों को मिलाने वाली रेखाएँ, जहाँ दिक्पात कोण का मान समान होता है, समदिक्पाती रेखाएँ कहलाती हैं।</li>
+                <li><strong>शून्य दिक्पाती रेखाएँ :-</strong> शून्य दिक्पात कोण वाले स्थानों को मिलाने वाली रेखाएँ शून्य दिक्पाती रेखाएँ कहलाती हैं।</li>
+                <li><strong>सम नमन रेखाएँ :-</strong> समान नमन कोण वाले स्थानों को मिलाने वाली रेखाएँ सम नमन रेखाएँ कहलाती हैं।</li>
+                <li><strong>अनत या चुम्बकीय निरक्ष रेखाएँ :-</strong> शून्य नमन कोण वाले स्थानों को मिलाने वाली रेखाएँ अनत या चुम्बकीय निरक्ष रेखाएँ कहलाती हैं।</li>
+                <li><strong>सम बल रेखाएँ :-</strong> ऐसे स्थानों को मिलाने वाली रेखाएँ, जहाँ चुम्बकीय क्षेत्र के क्षैतिज घटक H का मान समान होता है, सम बल रेखाएँ कहलाती हैं।</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="qa-box">
+        <div class="question">बहुविकल्पीय प्रश्न</div>
+        <div class="answer">
+            <p><strong>1.</strong> पृथ्वी के चुंबकीय क्षेत्र का कारण है – <strong>उत्तर:</strong> पृथ्वी के भीतर विद्युत धाराएँ</p>
+            <p><strong>2.</strong> पृथ्वी के चुंबकीय क्षेत्र की तीव्रता लगभग होती है – <strong>उत्तर:</strong> 10⁻⁴ T</p>
+            <p><strong>3.</strong> पृथ्वी का चुंबकीय विषुवत वृत्त कहलाता है – <strong>उत्तर:</strong> चुंबकीय विषुवत वृत्त</p>
+            <p><strong>4.</strong> चुंबकीय द्विध्रुव आघूर्ण का मात्रक है – <strong>उत्तर:</strong> A·m²</p>
+            <p><strong>5.</strong> बार मैग्नेट के समान होता है – <strong>उत्तर:</strong> धारा वलय</p>
+            <p><strong>6.</strong> चुंबकीय आघूर्ण M और क्षेत्र तीव्रता B पर लगने वाला बलाघूर्ण है – <strong>उत्तर:</strong> MB sinθ</p>
+            <p><strong>7.</strong> चुंबकीय फ्लक्स का SI मात्रक है – <strong>उत्तर:</strong> वेबर (Wb)</p>
+            <p><strong>8.</strong> 1 Tesla = – <strong>उत्तर:</strong> 1 Wb/m²</p>
+            <p><strong>9.</strong> पृथ्वी का चुंबकीय विक्षेप कोण किसके बीच का कोण है? – <strong>उत्तर:</strong> भौगोलिक उत्तर व चुंबकीय उत्तर</p>
+            <p><strong>10.</strong> मुक्त चुंबकीय ध्रुव प्रकृति में – <strong>उत्तर:</strong> नहीं पाए जाते</p>
+            <p><strong>11.</strong> चुंबकीय रेखाएँ आपस में – <strong>उत्तर:</strong> कभी नहीं काटतीं</p>
+            <p><strong>12.</strong> चुंबकीय आघूर्ण निर्भर करता है – <strong>उत्तर:</strong> धारा वलय का क्षेत्रफल, धारा, कुंडली की संख्या</p>
+            <p><strong>13.</strong> चुंबकीय उपग्रह का उपयोग किया जाता है – <strong>उत्तर:</strong> पृथ्वी का चुंबकीय क्षेत्र मापने हेतु</p>
+            <p><strong>14.</strong> चुंबकीय ध्रुवीयता का नियम है – <strong>उत्तर:</strong> ध्रुव अकेले नहीं होते</p>
+            <p><strong>15.</strong> एक आदर्श चुंबक में उत्तरी व दक्षिणी ध्रुव – <strong>उत्तर:</strong> हमेशा युग्म में पाए जाते हैं।</p>
+        </div>
+    </div>
+
+    <div class="qa-box">
+        <div class="question">रिक्त स्थान भरें</div>
+        <div class="answer">
+            <ol>
+                <li>चुंबकीय आघूर्ण = धारा × क्षेत्रफल</li>
+                <li>पृथ्वी के चुंबकीय क्षेत्र की तीव्रता लगभग 10⁻⁴ T होती है।</li>
+                <li>चुंबकीय फ्लक्स का मात्रक वेबर (Wb) होता है।</li>
+                <li>ध्रुवों पर नमन कोण शून्य होता है।</li>
+                <li>भूमध्यरेखा पर नमन कोण 90° होता है।</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="qa-box">
+        <div class="question">सही / गलत</div>
+        <div class="answer">
+            <ol>
+                <li>चुंबकीय बल रेखाएँ एक-दूसरे को काटती हैं – <strong>गलत</strong></li>
+                <li>पृथ्वी का चुंबकीय क्षेत्र केवल घूर्णन के कारण है – <strong>गलत</strong></li>
+                <li>बार मैग्नेट को धारा वलय के तुल्य माना जा सकता है – <strong>सही</strong></li>
+                <li>चुंबकीय ध्रुव सदैव युग्म में पाए जाते हैं – <strong>सही</strong></li>
+                <li>चुंबकीय फ्लक्स का मात्रक टेस्ला है – <strong>गलत</strong> (सही वेबर है)</li>
+            </ol>
+        </div>
+    </div>
+
+</div>
+<!-- SCRIPT -->
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("show");
+}
+
+document.addEventListener("click", function(e){
+    if(!e.target.closest(".navbar")){
+        document.getElementById("menu").classList.remove("show");
+    }
+});
+</script>
+
+<!-- Content Protection Scripts -->
+<script>
+// Disable right-click context menu
+document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+
+// Disable text selection
+document.addEventListener("selectstart", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+
+// Disable copy keyboard shortcut (Ctrl+C, Cmd+C)
+document.addEventListener("keydown", function(e) {
+    // Disable PrintScreen and related screenshot keys
+    if (e.key === "PrintScreen" ||
+        e.keyCode === 44 ||  // PrintScreen
+        (e.ctrlKey && e.shiftKey && e.key === "S") ||  // Windows Snipping Tool
+        (e.keyCode === 91 && e.shiftKey && e.key === "5")) {  // Mac Screenshot
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+C and Cmd+C (copy)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "c" || e.keyCode === 67)) {
+        e.preventDefault();
+        alert("Copying content is not allowed on this page.");
+        return false;
+    }
+
+    // Disable Ctrl+A (select all)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "a" || e.keyCode === 65)) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+X (cut)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "x" || e.keyCode === 88)) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable F12 (Developer Tools)
+    if (e.keyCode === 123) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+Shift+I (Developer Tools)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "i" || e.keyCode === 73)) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+Shift+J (Console)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "j" || e.keyCode === 74)) {
+        e.preventDefault();
+        return false;
+    }
+}, false);
+
+// Prevent copy on mouse up
+document.addEventListener("mouseup", function() {
+    document.selection.empty ? document.selection.empty() : window.getSelection().removeAllRanges();
+}, false);
+
+// Disable paste
+document.addEventListener("paste", function(e) {
+    e.preventDefault();
+    alert("Pasting content is not allowed on this page.");
+    return false;
+}, false);
+
+// Add user-select: none CSS dynamically
+document.addEventListener("DOMContentLoaded", function() {
+    document.body.style.userSelect = "none";
+    document.body.style.webkitUserSelect = "none";
+    document.body.style.msUserSelect = "none";
+    document.body.style.mozUserSelect = "none";
+});
+
+// Prevent image download
+document.addEventListener("dragstart", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+</script>
+
+</body>
+</html>
