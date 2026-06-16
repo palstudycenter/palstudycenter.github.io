@@ -30,6 +30,9 @@
 </nav>
 
 <section class="hero">
+  <img src="../../main_logo.png"
+     alt="Pal Study Center"
+     class="hero-logo">
 
 <h3 id="studentName"></h3>
 <p id="studentInfo"></p>
@@ -37,6 +40,10 @@
 <div class="hero-marquee">
 <span id="marqueeText">📢Your Dashboard is active | 📚 All academic modules are enabled | 🎓 Wishing you a productive learning experience</span>
 </div>
+<a href="#mySubjects" class="hero-subject-btn">
+    <i class="bi bi-book-fill"></i>
+    My Subjects
+</a>
 </section>
 
 <section class="container py-4">
@@ -49,12 +56,6 @@
                 <i class="bi bi-megaphone-fill"></i>
                 NOTICE BOARD
             </span>
-
-            <h2>Important Notices</h2>
-
-            <p>
-                Stay updated with the latest announcements and academic updates.
-            </p>
         </div>
     </div>
 
@@ -71,15 +72,13 @@
 
 <section class="container pb-5">
 
-<div class="subjects-wrapper">
+<div class="subjects-wrapper" id="mySubjects">
 
     <div class="notice-header">
         <span class="subjects-section-label">
             <i class="bi bi-mortarboard-fill"></i>
-            ACADEMIC SUBJECTS
         </span>
         <h2 style="font-size:1.6rem;font-weight:800;margin-top:6px;">My Subjects</h2>
-        <p style="color:#64748b;font-size:.9rem;">Access all subjects and learning resources for your class in one place.</p>
     </div>
 
     <div id="subjectsContainer" class="subjects-grid"></div>
