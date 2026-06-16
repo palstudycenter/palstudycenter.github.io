@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PAL STUDY CENTER | Notes</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- MathJax -->
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    color:#333;
+    line-height:1.7;
+}
+
+/* ===== NAVBAR ===== */
+.navbar{
+    background:rgba(15,23,42,0.45);
+    backdrop-filter:blur(10px);
+    box-shadow:0 4px 18px rgba(0,0,0,.18);
+    padding:6px 12px;
+    transition:.3s;
+}
+
+.navbar-brand{
+    padding:0;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    position:relative;
+}
+
+.navbar-logo{
+    width:auto;
+    display:block;
+    max-height:44px;
+    position:relative;
+    z-index:2;
+}
+
+.navbar-watermark{
+    position:relative;
+    display:inline-block;
+    margin-left:6px;
+    font-size:18px;
+    font-weight:700;
+    color:rgba(255,255,255,0.95);
+    pointer-events:none;
+    user-select:none;
+    white-space:nowrap;
+    z-index:2;
+}
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+
+.nav-link{
+    color:white !important;
+    font-weight:500;
+    margin-left:16px;
+    transition:.3s;
+    position:relative;
+    font-size:15px;
+}
+
+.nav-link:hover{
+    color:#60a5fa !important;
+}
+
+.nav-link::after{
+    content:"";
+    position:absolute;
+    width:0;
+    height:2px;
+    left:0;
+    bottom:-4px;
+    background:#60a5fa;
+    transition:.3s;
+}
+
+.nav-link:hover::after{
+    width:100%;
+}
+
+.btn-signup,
+.btn-login{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    padding:7px 18px;
+    border-radius:30px;
+    font-weight:600;
+    margin-left:10px;
+    transition:.3s;
+    font-size:14px;
+}
+
+.btn-signup{
+    background:#2563eb;
+    color:white;
+    box-shadow:0 4px 12px rgba(37,99,235,.35);
+}
+
+.btn-signup:hover{
+    background:#1d4ed8;
+    color:white;
+    transform:translateY(-2px);
+}
+
+.btn-login{
+    border:1px solid rgba(255,255,255,.7);
+    color:white;
+    background:rgba(255,255,255,.08);
+}
+
+.btn-login:hover{
+    background:white;
+    color:#0f172a;
+    transform:translateY(-2px);
+}
+
+/* ===== CONTENT ===== */
+.container{
+    max-width:900px;
+    margin:80px auto 30px;
+    padding:15px;
+}
+
+/* TITLE */
+.notes-title{
+    background:#E3F2FD;
+    color:#1565C0;
+    padding:14px;
+    border-left:5px solid #1565C0;
+    border-radius:10px;
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+/* QA BOX */
+.qa-box{
+    background:#fff;
+    padding:22px;
+    margin-bottom:18px;
+    border-radius:14px;
+
+    border-left:6px solid #1565C0;
+
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+
+    transition:0.25s ease;
+
+    position:relative;
+    overflow:hidden;
+}
+
+.qa-box::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:4px;
+    background:linear-gradient(90deg,#1565C0,#42A5F5);
+}
+
+.qa-box:hover{
+    transform:translateY(-4px) scale(1.01);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.question{
+    font-weight:bold;
+    color:#1b3a57;
+    margin-bottom:8px;
+}
+
+.answer{
+    color:#2c3e50;
+    text-align:justify;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+    .logo .main{
+        font-size:24px;
+        letter-spacing:2px;
+    }
+}
+@media (max-width:768px) {
+    .container{ margin:72px auto 20px; }
+    .navbar-logo{ max-height:40px; }
+    .navbar{ padding:6px 10px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-dark fixed-top">
+    <div class="container-fluid d-flex align-items-center">
+        <a class="navbar-brand" href="../../../../../../../index.html">
+            <img src="../../../../../../../assets/img/main_logo.png"
+                     alt="Pal Study Center Logo"
+                     class="navbar-logo">
+            <span class="navbar-watermark">पाल स्टडी सेंटर</span>
+        </a>
+    </div>
+</nav>
+
+<!-- CONTENT -->
+<div class="container">
+
+    <div class="notes-title">📘 Unit 1 - स्थिर विद्युत</div>
+
+    <div class="qa-box">
+        <div class="question">प्रश्न: कूलॉम का नियम क्या है?</div>
+        <div class="answer">
+            दो आवेशों के बीच बल उनके गुणनफल के समानुपाती और दूरी के वर्ग के व्युत्क्रमानुपाती होता है।
+            <br><br>
+            $$ F = k \frac{q_1 q_2}{r^2} $$
+        </div>
+    </div>
+
+    <div class="qa-box">
+        <div class="question">प्रश्न: विद्युत क्षेत्र क्या है?</div>
+        <div class="answer">
+            किसी आवेश के चारों ओर वह क्षेत्र जहाँ वह अन्य आवेश पर बल लगाता है, विद्युत क्षेत्र कहलाता है।
+        </div>
+    </div>
+<div class="qa-box">
+
+<div class="question">
+रासायनिक बल गतिकी किसे कहते हैं?
+</div>
+
+<div class="answer">
+
+<p>
+रसायन विज्ञान की वह शाखा जिसके अंतर्गत विभिन्न रासायनिक अभिक्रियाओं के वेग का अध्ययन किया जाता है,
+उसे <strong>रासायनिक बल गतिकी</strong> कहते हैं।
+</p>
+
+
+<p><strong>अभिक्रिया की दर या वेग से क्या अभिप्राय है?</strong></p>
+
+<p>
+इकाई समय में अभिकारक अथवा उत्पाद की सांद्रता में होने वाले परिवर्तन को
+अभिक्रिया का वेग या दर कहते हैं।
+</p>
+
+
+<p><strong>अभिक्रिया की दर का सूत्र:</strong></p>
+
+<p>
+अभिक्रिया की दर =
+<br>
+अभिकारक या उत्पाद की सांद्रता में परिवर्तन / समय अंतराल
+</p>
+
+
+<p>
+माना एक सामान्य अभिक्रिया है -
+</p>
+
+<p>
+A + B → C + D
+</p>
+
+
+<p>
+समय के साथ अभिकारक A तथा B की सांद्रता कम होती है तथा उत्पाद C और D की सांद्रता बढ़ती है।
+</p>
+
+
+<p><strong>अभिक्रिया की दर को प्रभावित करने वाले कारक:</strong></p>
+
+<ol>
+
+<li>
+<strong>अभिकारकों की सांद्रता:</strong>
+अभिकारकों की सांद्रता बढ़ाने पर अभिक्रिया का वेग बढ़ जाता है।
+</li>
+
+<li>
+<strong>ताप का प्रभाव:</strong>
+ताप बढ़ाने पर अभिक्रिया की दर बढ़ जाती है।
+</li>
+
+<li>
+<strong>उत्प्रेरक की उपस्थिति:</strong>
+धनात्मक उत्प्रेरक अभिक्रिया की दर बढ़ाते हैं।
+</li>
+
+<li>
+<strong>अभिकारकों की प्रकृति:</strong>
+सरल अणुओं में बंध आसानी से टूटते हैं इसलिए अभिक्रिया तेज होती है।
+</li>
+
+<li>
+<strong>विकिरण का प्रभाव:</strong>
+कुछ अभिक्रियाओं की दर विशिष्ट विकिरणों के अवशोषण से बढ़ जाती है।
+</li>
+
+</ol>
+
+
+<p><strong>दर नियम या दर समीकरण:</strong></p>
+
+<p>
+किसी अभिक्रिया का वेग उसके अभिकारकों के सक्रिय द्रव्यमान के गुणनफल के समानुपाती होता है।
+</p>
+
+
+<p>
+यदि अभिक्रिया -
+</p>
+
+<p>
+aA + bB → उत्पाद
+</p>
+
+
+<p>
+तो,
+</p>
+
+<p>
+दर = k[A]ᵃ[B]ᵇ
+</p>
+
+
+<p>
+जहाँ k को <strong>वेग स्थिरांक या दर स्थिरांक</strong> कहते हैं।
+</p>
+
+
+</div>
+</div>
+<div class="qa-box">
+
+<div class="question">
+रासायनिक बल गतिकी किसे कहते हैं?
+</div>
+
+<div class="answer">
+
+<p>
+रसायन विज्ञान की वह शाखा जिसके अंतर्गत विभिन्न रासायनिक अभिक्रियाओं के वेग का अध्ययन किया जाता है,
+उसे <strong>रासायनिक बल गतिकी</strong> कहते हैं।
+</p>
+
+
+<p><strong>अभिक्रिया की दर या वेग:</strong></p>
+
+<p>
+इकाई समय में अभिकारक अथवा उत्पाद की सांद्रता में होने वाले परिवर्तन को
+<strong>अभिक्रिया की दर</strong> कहते हैं।
+</p>
+
+
+<p><strong>अभिक्रिया की दर का गणितीय रूप:</strong></p>
+
+<p>
+\[
+\text{अभिक्रिया की दर}=
+\frac{\text{सांद्रता में परिवर्तन}}{\text{समय अंतराल}}
+\]
+</p>
+
+
+<p>
+माना सामान्य अभिक्रिया -
+</p>
+
+<p>
+\[
+A + B \rightarrow C + D
+\]
+</p>
+
+
+<p>
+अतः,
+</p>
+
+<p>
+\[
+\text{अभिक्रिया की दर}
+=
+-\frac{\Delta[A]}{\Delta t}
+=
+-\frac{\Delta[B]}{\Delta t}
+=
+\frac{\Delta[C]}{\Delta t}
+=
+\frac{\Delta[D]}{\Delta t}
+\]
+</p>
+
+
+<p><strong>दर नियम (Rate Law):</strong></p>
+
+<p>
+यदि अभिक्रिया -
+</p>
+
+<p>
+\[
+aA+bB \rightarrow उत्पाद
+\]
+</p>
+
+<p>
+तो अभिक्रिया की दर -
+</p>
+
+<p>
+\[
+r=k[A]^a[B]^b
+\]
+</p>
+
+
+<p>
+जहाँ,
+</p>
+
+<ul>
+<li><strong>r</strong> = अभिक्रिया का वेग</li>
+<li><strong>k</strong> = वेग स्थिरांक</li>
+<li><strong>[A], [B]</strong> = अभिकारकों की मोलर सांद्रता</li>
+<li><strong>a, b</strong> = अभिक्रिया की कोटि</li>
+</ul>
+
+
+<p><strong>इकाई:</strong></p>
+
+<p>
+\[
+mol\,L^{-1}\,s^{-1}
+\]
+</p>
+
+
+</div>
+</div>
+<div class="qa-box">
+
+<div class="question">
+अभिक्रिया की कोटि (Order of Reaction) से क्या अभिप्राय है?
+</div>
+
+<div class="answer">
+
+<p>
+अभिक्रिया की दर समीकरण में उपस्थित अभिकारकों की सांद्रताओं के घातों के योग को 
+<strong>अभिक्रिया की कोटि</strong> कहते हैं।
+</p>
+
+
+<p>
+यदि अभिक्रिया -
+</p>
+
+<p>
+\[
+aA+bB \rightarrow उत्पाद
+\]
+</p>
+
+
+<p>
+तो दर समीकरण -
+</p>
+
+<p>
+\[
+r=k[A]^a[B]^b
+\]
+</p>
+
+
+<p>
+अतः अभिक्रिया की कोटि -
+</p>
+
+<p>
+\[
+\text{कोटि}=a+b
+\]
+</p>
+
+
+<p>
+अभिक्रिया की कोटि पूर्णांक, भिन्नात्मक या शून्य हो सकती है।
+यह प्रयोगों द्वारा ज्ञात की जाती है।
+</p>
+
+</div>
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+अणुसंख्यता (Molecularity) क्या है?
+</div>
+
+<div class="answer">
+
+<p>
+किसी प्राथमिक अभिक्रिया में भाग लेने वाले अभिकारक अणुओं या परमाणुओं की संख्या को
+<strong>अणुसंख्यता</strong> कहते हैं।
+</p>
+
+
+<p><strong>उदाहरण:</strong></p>
+
+<p>
+एक अणुक अभिक्रिया -
+</p>
+
+<p>
+\[
+O_2F_2 \rightarrow O_2+F_2
+\]
+</p>
+
+
+<p>
+द्वि-अणुक अभिक्रिया -
+</p>
+
+<p>
+\[
+2HI \rightarrow H_2+I_2
+\]
+</p>
+
+
+<p>
+त्रि-अणुक अभिक्रिया -
+</p>
+
+<p>
+\[
+2NO+O_2 \rightarrow 2NO_2
+\]
+</p>
+
+
+<ul>
+<li>अणुसंख्यता सदैव पूर्णांक होती है।</li>
+<li>यह शून्य या भिन्नात्मक नहीं हो सकती।</li>
+<li>यह केवल प्राथमिक अभिक्रिया के लिए लागू होती है।</li>
+</ul>
+
+
+</div>
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+अणुसंख्यता तथा अभिक्रिया की कोटि में अंतर लिखिए।
+</div>
+
+<div class="answer">
+
+<table>
+
+<tr>
+<th>अणुसंख्यता</th>
+<th>अभिक्रिया की कोटि</th>
+</tr>
+
+<tr>
+<td>
+अभिक्रिया में भाग लेने वाले अणुओं की संख्या।
+</td>
+
+<td>
+दर समीकरण में सांद्रता के घातों का योग।
+</td>
+</tr>
+
+
+<tr>
+<td>
+यह सैद्धांतिक मान होता है।
+</td>
+
+<td>
+यह प्रयोग द्वारा ज्ञात की जाती है।
+</td>
+</tr>
+
+
+<tr>
+<td>
+सदैव पूर्णांक होती है।
+</td>
+
+<td>
+पूर्णांक, भिन्नात्मक या शून्य हो सकती है।
+</td>
+</tr>
+
+
+<tr>
+<td>
+प्राथमिक अभिक्रिया से संबंधित होती है।
+</td>
+
+<td>
+सम्पूर्ण अभिक्रिया से संबंधित होती है।
+</td>
+</tr>
+
+</table>
+
+</div>
+</div>
+</div>
+<!-- SCRIPT -->
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("show");
+}
+
+document.addEventListener("click", function(e){
+    if(!e.target.closest(".navbar")){
+        document.getElementById("menu").classList.remove("show");
+    }
+});
+</script>
+
+<!-- Content Protection Scripts -->
+<script>
+// Disable right-click context menu
+document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+
+// Disable text selection
+document.addEventListener("selectstart", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+
+// Disable copy keyboard shortcut (Ctrl+C, Cmd+C)
+document.addEventListener("keydown", function(e) {
+    // Disable PrintScreen and related screenshot keys
+    if (e.key === "PrintScreen" || 
+        e.keyCode === 44 ||  // PrintScreen
+        (e.ctrlKey && e.shiftKey && e.key === "S") ||  // Windows Snipping Tool
+        (e.keyCode === 91 && e.shiftKey && e.key === "5")) {  // Mac Screenshot
+        e.preventDefault();
+        return false;
+    }
+    
+    // Disable Ctrl+C and Cmd+C (copy)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "c" || e.keyCode === 67)) {
+        e.preventDefault();
+        alert("Copying content is not allowed on this page.");
+        return false;
+    }
+    
+    // Disable Ctrl+A (select all)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "a" || e.keyCode === 65)) {
+        e.preventDefault();
+        return false;
+    }
+    
+    // Disable Ctrl+X (cut)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "x" || e.keyCode === 88)) {
+        e.preventDefault();
+        return false;
+    }
+    
+    // Disable F12 (Developer Tools)
+    if (e.keyCode === 123) {
+        e.preventDefault();
+        return false;
+    }
+    
+    // Disable Ctrl+Shift+I (Developer Tools)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "i" || e.keyCode === 73)) {
+        e.preventDefault();
+        return false;
+    }
+    
+    // Disable Ctrl+Shift+J (Console)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "j" || e.keyCode === 74)) {
+        e.preventDefault();
+        return false;
+    }
+}, false);
+
+// Prevent copy on mouse up
+document.addEventListener("mouseup", function() {
+    document.selection.empty ? document.selection.empty() : window.getSelection().removeAllRanges();
+}, false);
+
+// Disable paste
+document.addEventListener("paste", function(e) {
+    e.preventDefault();
+    alert("Pasting content is not allowed on this page.");
+    return false;
+}, false);
+
+// Add user-select: none CSS dynamically
+document.addEventListener("DOMContentLoaded", function() {
+    document.body.style.userSelect = "none";
+    document.body.style.webkitUserSelect = "none";
+    document.body.style.msUserSelect = "none";
+    document.body.style.mozUserSelect = "none";
+});
+
+// Prevent image download
+document.addEventListener("dragstart", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
