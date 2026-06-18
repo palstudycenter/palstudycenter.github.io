@@ -1,113 +1,178 @@
+
 <!DOCTYPE html>
 <html lang="hi">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>PAL STUDY CENTER | Notes</title>
 
-<!-- MathJax -->
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
 <script>
-window.MathJax = {
-  tex: {
-    inlineMath: [['$', '$'], ['\\(', '\\)']]
-  }
+window.MathJax={
+ tex:{
+ inlineMath:[
+ ['$','$'],
+ ['\\(','\\)']
+ ]
+}
 };
 </script>
+
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
+
 <style>
+
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
+
 
 body{
-    background:#f5f7fb;
-    color:#333;
-    line-height:1.7;
+background:#f5f7fb;
+line-height:1.7;
 }
 
-.navbar{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:1000;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:16px;
-    background:linear-gradient(135deg,#0D47A1,#1565C0);
-    box-shadow:0 6px 20px rgba(0,0,0,0.25);
-}
 
-.logo{ text-align:center; }
-.logo .main{
-    font-size:36px;
-    font-weight:900;
-    letter-spacing:3px;
-    color:white;
-    text-transform:uppercase;
-}
-.logo .sub{ display:none; }
+/* NAVBAR */
 
-.container{
-    max-width:900px;
-    margin:120px auto 30px;
-    padding:15px;
+    .navbar{
+
+      background:rgba(15,23,42,0.45);
+
+      backdrop-filter:blur(10px);
+
+      box-shadow:0 4px 18px rgba(0,0,0,.18);
+
+      padding:10px 0;
+
+      transition:.3s;
+
+    }
+
+    .navbar-brand{
+
+      font-size:28px;
+
+      font-weight:700;
+
+      color:white !important;
+
+    }
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+      .navbar-brand{
+        font-size:40px;
+      }
+/* CONTENT */
+
+.notes-container{
+
+max-width:900px;
+
+margin:100px auto 50px;
+
+padding:20px;
+
 }
 
 .notes-title{
-    background:#E3F2FD;
-    color:#1565C0;
-    padding:14px;
-    border-left:5px solid #1565C0;
-    border-radius:10px;
-    font-size:20px;
-    font-weight:bold;
-    margin-bottom:20px;
+
+background:#e3f2fd;
+
+color:#1565c0;
+
+padding:10px;
+
+border-left:5px solid #1565c0;
+
+border-radius:50px;
+
+font-size:30px;
+
+font-weight:bold;
+margin-top:100px;
+
+margin-bottom:50px;
+
 }
+
+
 
 .qa-box{
-    background:#fff;
-    padding:22px;
-    margin-bottom:18px;
-    border-radius:14px;
-    border-left:6px solid #1565C0;
-    box-shadow:0 4px 12px rgba(0,0,0,0.08);
-    transition:0.25s ease;
-    position:relative;
-    overflow:hidden;
+
+background:white;
+
+padding:22px;
+
+margin-bottom:18px;
+
+border-radius:14px;
+
+border-left:6px solid #1565c0;
+
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+transition:.25s;
+
 }
 
-.qa-box::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:4px;
-    background:linear-gradient(90deg,#1565C0,#42A5F5);
-}
 
 .qa-box:hover{
-    transform:translateY(-4px) scale(1.01);
-    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+
+transform:translateY(-4px);
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
 }
+
+
 
 .question{
-    font-weight:bold;
-    color:#1b3a57;
-    margin-bottom:8px;
+
+font-weight:bold;
+
+color:#1b3a57;
+
+margin-bottom:8px;
+
 }
+.question-image{
+    text-align:center;
+    margin:15px 0;
+    overflow-x:auto;
+}
+
+.question-image img{
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:8px;
+}
+
 
 .answer{
-    color:#2c3e50;
-    text-align:justify;
-}
 
+color:#2c3e50;
+
+text-align:justify;
+
+}
 .answer img{
     max-width:100%;
     height:auto;
@@ -118,18 +183,27 @@ body{
 .answer table{
     width:100%;
     border-collapse:collapse;
-    margin:10px 0;
+    margin:12px 0;
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    display:block;
+    overflow-x:auto;
+    box-shadow:0 2px 8px rgba(0,0,0,0.06);
 }
 
 .answer table td, .answer table th{
     border:1px solid #ddd;
-    padding:10px;
+    padding:10px 12px;
     text-align:left;
+    vertical-align:top;
+    white-space:normal;
 }
 
 .answer table th{
-    background:#f0f0f0;
+    background:#eaf2fb;
     font-weight:bold;
+    color:#1b3a57;
 }
 
 .answer ol, .answer ul{
@@ -140,23 +214,66 @@ body{
 
 .answer li{ margin-bottom:8px; }
 
-@media(max-width:600px){
-    .logo .main{ font-size:24px; letter-spacing:2px; }
+
+
+@media(max-width:768px){
+
+.notes-container{
+
+margin-top:80px;
+
 }
+
+
+}
+.formula{
+    overflow-x:auto;
+    overflow-y:hidden;
+    margin:10px 0;
+}
+
+
 </style>
+
+
 </head>
+
 
 <body>
 
-<div class="navbar">
-    <div class="logo">
-        <div class="main">PAL STUDY CENTER</div>
-    </div>
-</div>
+
+
+<!-- NAVBAR -->
+
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
 
 <div class="container">
 
-    <div class="notes-title">📘 Unit 1 - पुष्पीय पादपों में लैंगिक जनन</div>
+<a class="navbar-brand" href="../index.html">
+
+पाल <span>स्टडी सेंटर</span>
+
+</a>
+    <button class="navbar-toggler bg-light"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+</div>
+
+</nav>
+
+
+
+<div class="container">
+
+    <div class="notes-title">📘 Unit 1(A) - पुष्पीय पादपों में लैंगिक जनन</div>
 
     <div class="qa-box">
         <div class="question">एक प्रारूपिक पुष्प की अनुप्रस्थ काट का नामांकित चित्र बनाइए तथा इसके विभिन्न भागों को समझाइए</div>
@@ -168,9 +285,10 @@ body{
 <li>पुंकेसर – नर जननांग, इसमें परागकोष और तंतु होते हैं।</li>
 <li>अंडप – मादा जननांग, इसमें अंडाशय, वर्तिकाग्र और वर्तिकाएँ होती हैं।</li>
 </ol>
-<img src="images/image13.png" alt="चित्र" style="max-width:400px; height:auto; margin:10px 0;">
-        </div>
+<img src="images/image13.png" alt="चित्र" style="max-width:350px; height:auto; margin:10px 0;">
     </div>
+        </div>
+    
     <div class="qa-box">
         <div class="question">पुष्पी पादपो में लैंगिक जनन किस प्रकार होता है?</div>
         <div class="answer">
@@ -231,7 +349,7 @@ body{
 <li>तंतु – पतला डंठल जो परागकोष को सहारा देता है।</li>
 <li>परागकोष – तंतु के शीर्ष पर स्थित, द्विखंडी संरचना, जिसमें परागकण बनते हैं।</li>
 </ol>
-<img src="images/image2.png" alt="चित्र" style="max-width:400px; height:auto; margin:10px 0;">
+<img src="images/image2.png" alt="चित्र" style="max-width:350px; height:auto; margin:10px 0;">
         </div>
     </div>
     <div class="qa-box">
@@ -240,7 +358,7 @@ body{
             <p>नर पुष्प का वह भाग जो परागकण उत्पन्न करता है, उसे परागकोष कहते हैं।</p>
 <p>उदाहरण —गेहूँ, मटर, कपास आदि के पुष्पों में परागकोष पाए जाते हैं।</p>
 <p>संरचना </p>
-<img src="images/image9.png" alt="चित्र" style="max-width:400px; height:auto; margin:10px 0;">
+<img src="images/image9.png" alt="चित्र" style="max-width:350px; height:auto; margin:10px 0;">
 <p>परागकोष एक द्विखंडी संरचना है, प्रत्येक खंड में दो दो अर्थात कुल चार परागकोषिकाएँ पाई जाती हैं।</p>
 <ol>
 <li>उपत्वचा</li>
@@ -248,7 +366,7 @@ body{
 <li>मध्य परतें</li>
 <li>अंतस्त्वचा / टैपेटम</li>
 </ol>
-<img src="images/image4.png" alt="चित्र" style="max-width:400px; height:auto; margin:10px 0;">
+<img src="images/image4.png" alt="चित्र" style="max-width:350px; height:auto; margin:10px 0;">
         </div>
     </div>
     <div class="qa-box">
@@ -279,7 +397,7 @@ body{
         <div class="question">परागकोष का स्फूटन समझाइए।</div>
         <div class="answer">
             <p>परागकोष का स्फूटन वह प्रक्रिया है, जिसमें परागकोष परिपक्व होने पर फट जाता है और उसके अंदर बने परागकण बाहर निकल आते हैं।</p>
-<img src="images/image14.png" alt="चित्र" style="max-width:400px; height:auto; margin:10px 0;">
+<img src="images/image14.png" alt="चित्र" style="max-width:350px; height:auto; margin:10px 0;">
         </div>
     </div>
     <div class="qa-box">
@@ -291,7 +409,7 @@ body{
 <li>बाह्य चोल- बाह्य चोल एक अत्यधिक प्रतिरोधक वसीय पदार्थ स्पोरोपालेनिन से मिलकर बना होता है। स्पोरोपालेनिन पर किसी भी ताप, अम्ल, क्षार आदि का प्रभाव नहीं पड़ता। यही कारण है कि परागकणों का जैविक अपघटन नहीं होता।</li>
 <li>अन्तः चोल- अन्तः चोल पेक्टोसेलुलोज से मिलकर बनी होती है। अन्तः चोल से ही परागनलिका का निर्माण होता है।</li>
 </ol>
-<img src="images/image7.png" alt="चित्र" style="max-width:400px; height:auto; margin:10px 0;">
+<img src="images/image7.png" alt="चित्र" style="max-width:350px; height:auto; margin:10px 0;">
         </div>
     </div>
     <div class="qa-box">
@@ -311,7 +429,7 @@ body{
         <div class="answer">
             <p>यह पुष्प के अंडाशय के अंदर स्थित एक बीज के आकार की संरचना होती है जिसके अंदर गुरुबीजाणु बनते हैं।</p>
 <p>बीजाण्ड - </p>
-<img src="images/image10.png" alt="चित्र" style="max-width:400px; height:auto; margin:10px 0;">
+<img src="images/image10.png" alt="चित्र" style="max-width:350px; height:auto; margin:10px 0;">
 <p>प्रत्येक बीजाण्ड एक पतली संरचना द्वारा अण्डाशय से जुडा होता है जिसे बीजाण्डवृन्त (Funicle) कहते हैं।</p>
 <p>बीजाण्ड एक या दो आवरणों द्वारा घिरा होता है बाहरी आवरण को बाह्य अध्यावरण तथा आन्तरिक आवरण को अन्तः अध्यावरण कहते हैं।</p>
 <p>अध्यावरण बीजाण्ड के एक स्थान पर अपूर्ण होता होता है, बीजाण्डद्वार कहते है।</p>
@@ -330,7 +448,7 @@ body{
 <p>बीजाणुजनन कोशिका बिना विभाजन किए ही गुरुबीजाणु मातृ कोशिका की तरह कार्य करने लगता है।</p>
 <p>गुरुबीजाणुमातृ कोशिका मे अर्द्धसूत्री विभाजन होता है, जिससे चार अगुणित गुरु बीजाणुओ का निर्माण होता है। इनमें से तीन अगुणित गुरुबीजाणु जल्दी ही नष्ट हो जाते हैं।</p>
 <p>एक गुरुबीजाणु क्रियाशील होता है, क्रियाशील गुरुबीजाणु ही भ्रूणकोष या मादा युग्मको‌द्भिद में परिवर्धित होता है।</p>
-<img src="images/image5.png" alt="चित्र" style="max-width:400px; height:auto; margin:10px 0;">
+<img src="images/image5.png" alt="चित्र" style="max-width:350px; height:auto; margin:10px 0;">
         </div>
     </div>
     <div class="qa-box">
@@ -346,14 +464,14 @@ body{
 <p>3 केन्द्रक जो बीजाण्डद्वार की ओर स्थित होते हैं कोशिका दुव्य का विभाजन करके मध्य की कोशिका अण्ड कोशिका या मादा युग्मक कहलाती है तथा अगल-बगल की कोशिका सहायक कोशिका कहलाती है।</p>
 <p>ध्रुवीय केन्द्रक संयुक्त होकर द्वितीयक केन्द्रक कहलाते हैं।</p>
 <p>परिपक्व भूणकोष 7 कोशिकीय व 8 केन्द्रकीय होता है।</p>
-<img src="images/image11.png" alt="चित्र" style="max-width:400px; height:auto; margin:10px 0;">
+<img src="images/image11.png" alt="चित्र" style="max-width:350px; height:auto; margin:10px 0;">
         </div>
     </div>
     <div class="qa-box">
         <div class="question">प्रश्न भ्रूणकोष किसे कहते है? भ्रूणकोष का नामांकित रेखाचित्र तथा संरचना दीजिए।</div>
         <div class="answer">
             <p>उत्तर —बीजाण्डकाय के मध्य में एक थैली नुमा संरचना जिसमे भ्रूण बनता है उसे जिसे भ्रूणकोष कहते हैं।</p>
-<img src="images/image3.png" alt="चित्र" style="max-width:400px; height:auto; margin:10px 0;">
+<img src="images/image3.png" alt="चित्र" style="max-width:350px; height:auto; margin:10px 0;">
 <p>संरचना - पुष्पी पौधों में परिपक्व मादा युग्मकोद्भिद (भ्रूणकोष) की संरचना 7 कोशिकीय तथा 8 केन्द्रकीय होती है। इसे निम्न प्रकार से समझा जा सकता है—</p>
 <ol>
 <li>बीजाण्डद्वार पर एक अंड कोशिका तथा दो सहाय कोशिकाएँ होती है तथा प्रत्येक में एक-एक केन्द्रक होता है। ये तीनों मिलकर अंड उपकरण बनाती हैं।</li>
@@ -642,7 +760,7 @@ body{
 </ol>
 <p>हाइपोबेसल भाग → मूलांकुर → जड़</p>
 <p>एपिबेसल भाग → बीजपत्र और प्राकुर प्राकुर से आगे तना और पत्तियाँ बनती हैं।</p>
-<img src="images/image6.png" alt="चित्र" style="max-width:400px; height:auto; margin:10px 0;">
+<img src="images/image6.png" alt="चित्र" style="max-width:350px; height:auto; margin:10px 0;">
 <p>(Note) द्विबीजपत्री की तरह ही एक बीलपत्ती पादपों में भी भ्रूण का विकास होता है, परन्तु एकबीजपत्री पाद‌पो में केवल एक बीज पत्री का निर्माण होता है।</p>
         </div>
     </div>

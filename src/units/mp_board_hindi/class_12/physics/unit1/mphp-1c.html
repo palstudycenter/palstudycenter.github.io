@@ -1,136 +1,273 @@
 <!DOCTYPE html>
 <html lang="hi">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PAL STUDY CENTER | Student Notes</title>
 
-<!-- MathJax -->
+<title>PAL STUDY CENTER | Notes</title>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
 <script>
-window.MathJax = {
-  tex: {
-    inlineMath: [['$', '$'], ['\\(', '\\)']]
-  }
+window.MathJax={
+ tex:{
+ inlineMath:[
+ ['$','$'],
+ ['\\(','\\)']
+ ]
+}
 };
 </script>
+
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
+
 <style>
+
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
-/* ===== BODY (Student Friendly Soft Look) ===== */
+
 body{
-    background:#f8fafc;
-    color:#2d3748;
-    line-height:1.8;
+background:#f5f7fb;
+line-height:1.7;
 }
 
-/* ===== NAVBAR (Simple + Calm Branding) ===== */
-.navbar{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:1000;
 
-    background:#2b6cb0;
-    color:white;
+/* NAVBAR */
 
-    padding:14px;
-    text-align:center;
+    .navbar{
 
-    box-shadow:0 2px 8px rgba(0,0,0,0.15);
+      background:rgba(15,23,42,0.45);
+
+      backdrop-filter:blur(10px);
+
+      box-shadow:0 4px 18px rgba(0,0,0,.18);
+
+      padding:10px 0;
+
+      transition:.3s;
+
+    }
+
+    .navbar-brand{
+
+      font-size:28px;
+
+      font-weight:700;
+
+      color:white !important;
+
+    }
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+      .navbar-brand{
+        font-size:40px;
+      }
+/* CONTENT */
+
+.notes-container{
+
+max-width:900px;
+
+margin:100px auto 50px;
+
+padding:20px;
+
 }
 
-.logo .main{
-    font-size:26px;
-    font-weight:800;
-    letter-spacing:2px;
-}
-
-.logo .sub{
-    font-size:12px;
-    opacity:0.8;
-}
-
-/* ===== CONTAINER ===== */
-.container{
-    max-width:900px;
-    margin:100px auto 30px;
-    padding:12px;
-}
-
-/* ===== TITLE ===== */
 .notes-title{
-    background:#eef5ff;
-    color:#2b6cb0;
 
-    padding:12px;
-    border-radius:8px;
+background:#e3f2fd;
 
-    font-size:18px;
-    font-weight:bold;
+color:#1565c0;
 
-    margin-bottom:18px;
+padding:10px;
+
+border-left:5px solid #1565c0;
+
+border-radius:50px;
+
+font-size:30px;
+
+font-weight:bold;
+margin-top:100px;
+
+margin-bottom:50px;
+
 }
 
-/* ===== QA BOX (Notebook Style) ===== */
+
+
 .qa-box{
-    background:#ffffff;
 
-    padding:18px;
-    margin-bottom:15px;
+background:white;
 
-    border-radius:10px;
+padding:22px;
 
-    border-left:4px solid #4f8cff;
+margin-bottom:18px;
 
-    box-shadow:0 2px 6px rgba(0,0,0,0.05);
+border-radius:14px;
+
+border-left:6px solid #1565c0;
+
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+transition:.25s;
+
 }
 
-/* Question */
+
+.qa-box:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+
 .question{
-    font-weight:bold;
-    margin-bottom:8px;
-    color:#1a365d;
-    font-size:16px;
+
+font-weight:bold;
+
+color:#1b3a57;
+
+margin-bottom:8px;
+
+}
+.question-image{
+    text-align:center;
+    margin:15px 0;
+    overflow-x:auto;
 }
 
-/* Answer */
+.question-image img{
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:8px;
+}
+
+
+
 .answer{
-    font-size:16px;
-    line-height:1.9;
-    color:#2d3748;
-    text-align:justify;
+
+color:#2c3e50;
+
+text-align:justify;
+
+}
+.answer img{
+    max-width:100%;
+    height:auto;
+    margin:10px 0;
+    border-radius:8px;
 }
 
-/* ===== MOBILE ===== */
-@media(max-width:600px){
-    .logo .main{
-        font-size:20px;
-    }
-
-    .container{
-        padding:10px;
-    }
+.answer table{
+    width:100%;
+    border-collapse:collapse;
+    margin:12px 0;
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    display:block;
+    overflow-x:auto;
+    box-shadow:0 2px 8px rgba(0,0,0,0.06);
 }
+
+.answer table td, .answer table th{
+    border:1px solid #ddd;
+    padding:10px 12px;
+    text-align:left;
+    vertical-align:top;
+    white-space:normal;
+}
+
+.answer table th{
+    background:#eaf2fb;
+    font-weight:bold;
+    color:#1b3a57;
+}
+
+.answer ol, .answer ul{
+    margin-left:20px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.answer li{ margin-bottom:8px; }
+
+
+
+@media(max-width:768px){
+
+.notes-container{
+
+margin-top:80px;
+
+}
+
+
+}
+.formula{
+    overflow-x:auto;
+    overflow-y:hidden;
+    margin:10px 0;
+}
+
+
 </style>
+
+
 </head>
+
 
 <body>
 
+
+
 <!-- NAVBAR -->
-<div class="navbar">
-    <div class="logo">
-        <div class="main">PAL STUDY CENTER</div>
-        <div class="sub">Student Notes Platform</div>
-    </div>
+
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+
+पाल <span>स्टडी सेंटर</span>
+
+</a>
+    <button class="navbar-toggler bg-light"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
 </div>
+
+</nav>
 
 <!-- CONTENT -->
 <div class="container">
@@ -163,33 +300,10 @@ $$
 </div>
 
 <div class="answer">
-जहाँ C एक नियतांक है, जिसे चालक की धारिता (Capacity of the Conductor) कहते हैं।
+जहाँ C एक नियतांक है, जिसे चालक की धारिता कहते हैं।
+</div><div class="answer">
+धारिता का SI मात्रक कुलाम्ब/वोल्ट होता है जिसे फेरड कहते हैं।
 </div>
-
-<div class="answer">
-यदि V = 1 हो, तो—
-</div>
-
-<div class="formula">
-$$
-C = Q
-$$
-</div>
-
-<div class="answer">
-अर्थात् चालक की धारिता संख्यात्मक रूप से उस आवेश के बराबर होती है जो उसके विभव को इकाई (1 volt) तक बढ़ा दे।
-</div>
-
-<div class="answer">
-SI मात्रक—
-</div>
-
-<div class="formula">
-$$
-\text{Unit of Capacitance} = \frac{\text{Coulomb}}{\text{Volt}} = \text{Farad (F)}
-$$
-</div>
-
 </div>
 <div class="qa-box">
 
@@ -214,37 +328,37 @@ $$
 </div>
 <div class="qa-box">
 
-<div class="question">
-Q. चालक की धारिता को प्रभावित करने वाले कारक कौन-कौन से हैं? तथा वे कैसे प्रभावित करते हैं?
-</div>
+    <div class="question">
+        Q. चालक की धारिता को प्रभावित करने वाले कारक कौन-कौन से हैं? तथा वे कैसे प्रभावित करते हैं?
+    </div>
 
-<div class="answer">
-चालक की धारिता निम्नलिखित कारकों पर निर्भर करती है—
-</div>
+    <div class="answer">
+        चालक की धारिता निम्नलिखित कारकों पर निर्भर करती है—
+    </div>
 
-<div class="answer">
-1. चालक के आकार पर निर्भरता –  
-</div>
+    <div class="answer">
+        <b>1. चालक के आकार पर निर्भरता –</b>
+    </div>
 
-<div class="answer">
-यदि चालक का आकार बढ़ाया जाए, तो उसका विभव कम हो जाता है और इसलिए उसकी धारिता बढ़ जाती है।
-</div>
+    <div class="answer">
+        यदि चालक का आकार बढ़ाया जाए, तो उसका विभव कम हो जाता है और इसलिए उसकी धारिता बढ़ जाती है।
+    </div>
 
-<div class="answer">
-2. अन्य चालकों की उपस्थिति पर निर्भरता –  
-</div>
+    <div class="answer">
+        <b>2. अन्य चालकों की उपस्थिति पर निर्भरता –</b>
+    </div>
 
-<div class="answer">
-जब किसी आवेशित चालक के पास एक अनावेशित चालक लाया जाता है, तो उसका विभव कम हो जाता है और उसकी धारिता बढ़ जाती है।
-</div>
+    <div class="answer">
+        जब किसी आवेशित चालक के पास एक अनावेशित चालक लाया जाता है, तो उसका विभव कम हो जाता है और उसकी धारिता बढ़ जाती है।
+    </div>
 
-<div class="answer">
-3. माध्यम की प्रकृति पर निर्भरता –  
-</div>
+    <div class="answer">
+        <b>3. माध्यम की प्रकृति पर निर्भरता –</b>
+    </div>
 
-<div class="answer">
-यदि चालक के चारों ओर परावैद्युत (dielectric) माध्यम उपस्थित हो, तो उसका विभव कम हो जाता है, जिससे उसकी धारिता बढ़ जाती है।
-</div>
+    <div class="answer">
+        यदि चालक के चारों ओर परावैद्युत (Dielectric) माध्यम उपस्थित हो, तो उसका विभव कम हो जाता है, जिससे उसकी धारिता बढ़ जाती है।
+    </div>
 
 </div>
 <div class="qa-box">
@@ -252,6 +366,9 @@ Q. चालक की धारिता को प्रभावित कर
 <div class="question">
 Q. सिद्ध कीजिए कि किसी पृथक गोलाकार चालक की धारिता उसके त्रिज्या के समानुपाती होती है। अथवा गोलाकार चालक की धारिता का व्यंजक स्थापित कीजिए।
 </div>
+<div class="question-image">
+        <img src="image6.png" alt="Question Image">
+    </div>
 
 <div class="answer">
 माना एक गोलाकार चालक जिसकी त्रिज्या r है। इसे +Q आवेश दिया जाता है। यह आवेश चालक की सतह पर समान रूप से वितरित हो जाता है, इसलिए पूरी सतह समविभव (equipotential) होती है।
@@ -339,27 +456,7 @@ $$
 </div>
 
 <div class="answer">
-यदि C = 1 F रखा जाए, तो—
-</div>
-
-<div class="formula">
-$$
-R = \frac{1}{4 \pi \varepsilon_0}
-$$
-</div>
-
-<div class="answer">
-चूंकि  
-</div>
-
-<div class="formula">
-$$
-\frac{1}{4 \pi \varepsilon_0} = 9 \times 10^9
-$$
-</div>
-
-<div class="answer">
-अतः—
+यदि \(C = 1\,F\) तथा \(\frac{1}{4\pi\varepsilon_0}=9\times10^9\) रखा जाए, तो—
 </div>
 
 <div class="formula">
@@ -422,9 +519,11 @@ $$
 
 <div class="qa-box">
     <div class="question">
-        ❓ समांतर प्लेट संधारित्र की रचना लिखकर इसकी धारिता के लिए व्यंजक स्थापित कीजिए।
+         समांतर प्लेट संधारित्र की रचना लिखकर इसकी धारिता के लिए व्यंजक स्थापित कीजिए।
     </div>
-
+<div class="question-image">
+        <img src="4.png" alt="Question Image">
+    </div>
     <div class="answer">
 
         <b>रचना (Construction) —</b><br>
@@ -526,9 +625,11 @@ $$
 </div>
 <div class="qa-box">
     <div class="question">
-        ❓ आंशिक रूप से परावैद्युत माध्यम रखे हुए समांतर प्लेट संधारित्र की धारिता के लिए व्यंजक स्थापित कीजिए।
+        आंशिक रूप से परावैद्युत माध्यम रखे हुए समांतर प्लेट संधारित्र की धारिता के लिए व्यंजक स्थापित कीजिए।
     </div>
-
+<div class="question-image">
+        <img src="6.png" alt="Question Image">
+            </div>
     <div class="answer">
 
         माना एक समांतर प्लेट संधारित्र की प्लेटों का क्षेत्रफल A तथा उनके बीच की दूरी d है। इसके बीच t मोटाई का परावैद्युत माध्यम रखा गया है, जिसका परावैद्युतांक K है। प्लेट X को Q आवेश दिया गया है तथा प्लेट Y को पृथ्वी से जोड़ दिया गया है।
@@ -539,7 +640,7 @@ $$
 
         अतः प्रत्येक प्लेट पर आवेश घनत्व
 
-        $$ \sigma = \frac{Q}{A} \quad (1) $$
+        $$ \sigma = \frac{Q}{A} \quad $$
 
         <br>
 
@@ -579,8 +680,11 @@ $$
 </div>
 <div class="qa-box">
     <div class="question">
-        ❓ गोलाकार संधारित्र की रचना लिखकर इसकी धारिता का व्यंजक स्थापित कीजिए।
+        गोलाकार संधारित्र की रचना लिखकर इसकी धारिता का व्यंजक स्थापित कीजिए।
     </div>
+    <div class="question-image">
+        <img src="12.png" alt="Question Image">
+            </div>
 
     <div class="answer">
 
@@ -634,7 +738,7 @@ $$
 </div>
 <div class="qa-box">
     <div class="question">
-        ❓ गोलाकार संधारित्र की धारिता को प्रभावित करने वाले कारक बताइए तथा इसकी धारिता कैसे बढ़ाई जा सकती है?
+         गोलाकार संधारित्र की धारिता को प्रभावित करने वाले कारक बताइए तथा इसकी धारिता कैसे बढ़ाई जा सकती है?
     </div>
 
     <div class="answer">
@@ -666,7 +770,9 @@ $$
 <div class="question">
 Q. बेलनाकार संधारित्र (Cylindrical Condenser) की धारिता का व्यंजक स्थापित कीजिए।
 </div>
-
+<div class="question-image">
+        <img src="5.png" alt="Question Image">
+    </div>
 <div class="answer">
 बेलनाकार संधारित्र की संरचना चित्र में दर्शाई गई है। X और Y दो समाक्षीय बेलन हैं जो आपस में स्पर्श नहीं करते हैं। दोनों बेलनों के बीच में वायु या कोई परावैद्युत माध्यम भरा होता है। X को धन आवेश दिया जाता है जबकि Y को पृथ्वी से जोड़ दिया जाता है।
 </div>
@@ -801,132 +907,169 @@ $$
 </div>
 <div class="qa-box">
 
-<div class="question">
-Q. संधारित्रों का श्रेणी संयोजन (Series Combination of Condensers) से आप क्या समझते हैं? श्रेणी संयोजन में तुल्य धारिता का व्यंजक स्थापित कीजिए।
-</div>
+    <div class="question">
+        Q. संधारित्रों का श्रेणी संयोजन (Series Combination of Condensers) से आप क्या समझते हैं? श्रेणी संयोजन में तुल्य धारिता का व्यंजक स्थापित कीजिए।
+    </div>
 
-<div class="answer">
-इस संयोजन में प्रथम संधारित्र की दूसरी प्लेट को दूसरे संधारित्र की पहली प्लेट से जोड़ा जाता है; दूसरे संधारित्र की दूसरी प्लेट को तीसरे संधारित्र की पहली प्लेट से जोड़ा जाता है और इसी प्रकार आगे भी। प्रथम संधारित्र की पहली प्लेट को आवेशित किया जाता है तथा अंतिम संधारित्र की दूसरी प्लेट को पृथ्वी से जोड़ दिया जाता है। इस स्थिति में प्रत्येक संधारित्र पर आवेश समान होता है।
-</div>
+    <div class="answer">
+        यदि प्रथम संधारित्र की दूसरी प्लेट को दूसरे संधारित्र की पहली प्लेट से, दूसरे संधारित्र की दूसरी प्लेट को तीसरे संधारित्र की पहली प्लेट से जोड़ा जाता है, प्रथम संधारित्र की पहली प्लेट को आवेशित किया जाता है तथा अंतिम संधारित्र की दूसरी प्लेट को पृथ्वी से जोड़ दिया जाता है, तो इस व्यवस्था को <b>संधारित्रों का श्रेणी क्रम संयोजन</b> कहते हैं। इस स्थिति में प्रत्येक संधारित्र पर आवेश समान होता है।
+    </div>
 
-<div class="answer">
-व्युत्पत्ति (Derivation) — मान लीजिए कि धारिता 𝐶1, 𝐶2 और 𝐶3 वाले तीन संधारित्रों को विभवांतर V के स्रोत से श्रेणीक्रम में जोड़ा गया है। प्रथम संधारित्र की पहली प्लेट को आवेश +Q दिया जाता है तथा अंतिम संधारित्र की दूसरी प्लेट को पृथ्वी से जोड़ दिया जाता है। अतः प्रत्येक संधारित्र की प्लेटों पर +Q और -Q आवेश उत्पन्न हो जाता है।
-</div>
+    <div class="question-image">
+        <img src="8.png" alt="Series Combination of Capacitors">
+    </div>
 
-<div class="answer">
-मान लीजिए तीनों संधारित्रों के बीच विभवांतर क्रमशः 𝑉1, 𝑉2 और 𝑉3 हैं, तो—
-</div>
+    <div class="answer">
+        <b>व्युत्पत्ति (Derivation) —</b> मान लीजिए कि धारिता \(C_1\), \(C_2\) तथा \(C_3\) वाले तीन संधारित्रों को विभवान्तर \(V\) के स्रोत से श्रेणी क्रम में जोड़ा गया है। प्रथम संधारित्र की पहली प्लेट को आवेश \(+Q\) दिया जाता है तथा अंतिम संधारित्र की दूसरी प्लेट को पृथ्वी से जोड़ दिया जाता है। अतः प्रत्येक संधारित्र की प्लेटों पर \(+Q\) तथा \(-Q\) आवेश उत्पन्न हो जाता है।
+    </div>
 
-<div class="formula">
-$$
-V = V_1 + V_2 + V_3 \quad ...(1)
-$$
-</div>
+    <div class="answer">
+        मान लीजिए तीनों संधारित्रों के सिरों पर विभवान्तर क्रमशः \(V_1\), \(V_2\) तथा \(V_3\) हैं।
+    </div>
 
-<div class="answer">
-अब सूत्र 𝑉 = Q/C से—
-</div>
+   <div class="answer">
+        तब  —
+    </div>
+        <div class="formula">
+        \[
+        V_1=\frac{Q}{C_1}
+        \]
+    </div>
+    <div class="formula">
+        \[
+        V_2=\frac{Q}{C_2}
+        \]
+    </div>
 
-<div class="formula">
-$$
-V_1 = \frac{Q}{C_1}, \quad V_2 = \frac{Q}{C_2}, \quad V_3 = \frac{Q}{C_3}
-$$
-</div>
+    <div class="formula">
+        \[
+        V_3=\frac{Q}{C_3}
+        \]
+    </div>
 
-<div class="answer">
-यदि तुल्य धारिता C हो, तो कुल विभवांतर होगा—
-</div>
+    <div class="answer">
+        यदि तुल्य धारिता \(C\) हो, तो कुल विभवान्तर होगा —
+    </div>
 
-<div class="formula">
-$$
-V = \frac{Q}{C}
-$$
-</div>
+    <div class="formula">
+        \[
+        V=\frac{Q}{C}
+        \]
+    </div>
 
-<div class="answer">
-समीकरण (1) में मान रखने पर—
-</div>
+    <div class="answer">
+        किन्तु श्रेणी संयोजन में —
+    </div>
 
-<div class="formula">
-$$
-\frac{Q}{C} = \frac{Q}{C_1} + \frac{Q}{C_2} + \frac{Q}{C_3}
-$$
-</div>
+    <div class="formula">
+        \[
+        V=V_1+V_2+V_3
+        \]
+    </div>
 
-<div class="formula">
-$$
-\frac{1}{C} = \frac{1}{C_1} + \frac{1}{C_2} + \frac{1}{C_3}
-$$
-</div>
+    <div class="formula">
+        \[
+        \frac{Q}{C}
+        =
+        \frac{Q}{C_1}
+        +
+        \frac{Q}{C_2}
+        +
+        \frac{Q}{C_3}
+        \]
+    </div>
 
-<div class="answer">
-अतः स्पष्ट है कि श्रेणी संयोजन में तुल्य धारिता का व्युत्क्रम प्रत्येक धारिता के व्युत्क्रमों के योग के बराबर होता है।
-</div>
+    <div class="formula">
+        \[
+        \frac{1}{C}
+        =
+        \frac{1}{C_1}
+        +
+        \frac{1}{C_2}
+        +
+        \frac{1}{C_3}
+        \]
+    </div>
+
+    <div class="answer">
+        अतः स्पष्ट है कि <b>श्रेणी संयोजन में तुल्य धारिता का व्युत्क्रम, प्रत्येक संधारित्र की धारिता के व्युत्क्रमों के योग के बराबर होता है।</b>
+    </div>
 
 </div>
 <div class="qa-box">
 
-<div class="question">
-Q. संधारित्रों का समानांतर संयोजन (Parallel Combination of Condensers) से आप क्या समझते हैं? समानांतर संयोजन में तुल्य धारिता का व्यंजक स्थापित कीजिए।
-</div>
+    <div class="question">
+        Q. संधारित्रों का समानांतर संयोजन (Parallel Combination of Condensers) से आप क्या समझते हैं? समानांतर संयोजन में तुल्य धारिता का व्यंजक स्थापित कीजिए।
+    </div>
 
-<div class="answer">
-इस संयोजन में प्रत्येक संधारित्र की एक प्लेट को बिंदु A से जोड़कर आवेशित किया जाता है तथा दूसरी प्लेट को बिंदु B से जोड़कर पृथ्वी से जोड़ दिया जाता है। इस प्रकार प्रत्येक संधारित्र के बीच समान विभवांतर होता है।
-</div>
+    <div class="answer">
+        इस संयोजन में प्रत्येक संधारित्र की एक प्लेट को बिंदु A से जोड़कर आवेशित किया जाता है तथा दूसरी प्लेट को बिंदु B से जोड़कर पृथ्वी से जोड़ दिया जाता है। इस प्रकार प्रत्येक संधारित्र के बीच समान विभवान्तर होता है।
+    </div>
 
-<div class="answer">
-व्युत्पत्ति (Derivation) — मान लीजिए कि धारिता 𝐶1, 𝐶2 और 𝐶3 वाले तीन संधारित्रों को विभवांतर V के स्रोत से समानांतर क्रम में जोड़ा गया है। अतः प्रत्येक संधारित्र के बीच विभवांतर समान V होगा।
-</div>
+    <div class="question-image">
+        <img src="9.png" alt="Parallel Combination of Capacitors">
+    </div>
 
-<div class="answer">
-यदि बिंदु A को कुल आवेश +Q दिया जाए, तो यह तीन भागों 𝑄1, 𝑄2 और 𝑄3 में विभाजित हो जाता है। अतः—
-</div>
+    <div class="answer">
+        <b>व्युत्पत्ति (Derivation) —</b> मान लीजिए कि धारिता \(C_1\), \(C_2\) तथा \(C_3\) वाले तीन संधारित्रों को विभवान्तर \(V\) के स्रोत से समानांतर क्रम में जोड़ा गया है। अतः प्रत्येक संधारित्र के बीच विभवान्तर समान \(V\) होगा।
+    </div>
 
-<div class="formula">
-$$
-Q = Q_1 + Q_2 + Q_3 \quad ...(1)
-$$
-</div>
+    <div class="answer">
+        यदि बिंदु A को कुल आवेश \(+Q\) दिया जाए, तो यह तीन भागों \(Q_1\), \(Q_2\) तथा \(Q_3\) में विभाजित हो जाता है। 
+    </div>
+    <div class="answer">
+    तब—
+    </div>
 
-<div class="answer">
-अब सूत्र Q = CV से—
-</div>
+    <div class="formula">
+        \[
+        Q_1 = C_1V
+        \]
+    </div>
 
-<div class="formula">
-$$
-Q_1 = C_1 V, \quad Q_2 = C_2 V, \quad Q_3 = C_3 V
-$$
-</div>
+    <div class="formula">
+        \[
+        Q_2 = C_2V
+        \]
+    </div>
 
-<div class="answer">
-यदि तुल्य धारिता C हो, तो—
-</div>
+    <div class="formula">
+        \[
+        Q_3 = C_3V
+        \]
+    </div>
 
-<div class="formula">
-$$
-Q = CV
-$$
-</div>
+    <div class="answer">
+        यदि तुल्य धारिता \(C\) हो, तो —
+    </div>
 
-<div class="answer">
-समीकरण (1) में मान रखने पर—
-</div>
+    <div class="formula">
+        \[
+        Q = CV
+        \]
+    </div>
 
-<div class="formula">
-$$
-CV = C_1V + C_2V + C_3V
-$$
-</div>
+    <div class="answer">
 
-<div class="formula">
-$$
-C = C_1 + C_2 + C_3
-$$
-</div>
+        किन्तु समान्तर संयोजन में —
 
-<div class="answer">
-अतः स्पष्ट है कि समानांतर संयोजन में तुल्य धारिता प्रत्येक संधारित्र की धारिताओं के योग के बराबर होती है।
-</div>
+    </div> 
+
+    <div class="formula">
+        \[
+        CV = C_1V + C_2V + C_3V
+        \]
+    </div>
+
+    <div class="formula">
+        \[
+        C = C_1 + C_2 + C_3
+        \]
+    </div>
+
+    <div class="answer">
+        अतः स्पष्ट है कि <b>समानांतर संयोजन में तुल्य धारिता, सभी संधारित्रों की धारिताओं के योग के बराबर होती है।</b>
+    </div>
 
 </div>
 <div class="qa-box">
@@ -1023,10 +1166,16 @@ $$
 <div class="question">
 Q. सिद्ध कीजिए कि दो आवेशित संधारित्रों को जोड़ने पर आवेश उनके धारिताओं के अनुपात में वितरित होता है।
 </div>
+    <div class="question-image">
+        <img src="10.png" alt="Question Image">
+            </div>
 
 <div class="answer">
 माना A और B दो चालक हैं जिनकी धारिताएँ क्रमशः 𝐶1 और 𝐶2 हैं। जब इन्हें अलग-अलग आवेश 𝑄1 और 𝑄2 दिए जाते हैं, तो उनके विभव क्रमशः 𝑉1 और 𝑉2 हो जाते हैं।
 </div>
+    <div class="question-image">
+        <img src="11.png" alt="Question Image">
+            </div>
 
 <div class="answer">
 अब यदि इन दोनों चालकों को एक पतले तार द्वारा जोड़ दिया जाए जिसकी धारिता नगण्य हो, तो आवेश उच्च विभव से निम्न विभव की ओर प्रवाहित होता है, जब तक कि दोनों का विभव समान न हो जाए। मान लीजिए यह सामान्य विभव V है।
@@ -1070,47 +1219,50 @@ $$
 
 </div>
 <div class="qa-box">
-
 <div class="question">
 Q. सिद्ध कीजिए कि दो आवेशित चालकों को जोड़ने पर ऊर्जा का ह्रास (Loss of Energy) होता है।
 </div>
-
+ <div class="question-image">
+        <img src="10.png" alt="Question Image">
+            </div>
 <div class="answer">
 माना A और B दो चालक हैं जिनकी धारिताएँ क्रमशः 𝐶1 और 𝐶2 हैं। जब इन्हें अलग-अलग आवेश दिए जाते हैं तो उनके विभव क्रमशः 𝑉1 और 𝑉2 हो जाते हैं।
 </div>
 
 <div class="answer">
-प्रारंभ में—
-</div>
-
-<div class="formula">
-$$
-Q_1 = C_1 V_1, \quad Q_2 = C_2 V_2
-$$
-</div>
-
-<div class="answer">
 अतः दोनों चालकों की प्रारंभिक स्थितिज ऊर्जा होगी—
 </div>
-
-<div class="formula">
-$$
-U_1 = \frac{1}{2} C_1 V_1^2, \quad U_2 = \frac{1}{2} C_2 V_2^2
-$$
-</div>
-
 <div class="formula">
 $$
 U_{\text{initial}} = \frac{1}{2} (C_1 V_1^2 + C_2 V_2^2)
 $$
 </div>
+ <div class="question-image">
+        <img src="11.png" alt="Question Image">
+            </div>
 
 <div class="answer">
 अब यदि दोनों चालकों को एक पतले तार से जोड़ दिया जाए, तो आवेश उच्च विभव से निम्न विभव की ओर प्रवाहित होकर एक सामान्य विभव V प्राप्त करते हैं।
 </div>
+<div class="answer">
+जोड़ने के बाद कुल आवेश—
+</div>
+<div class="formula">
+$$
+Q = Q_1 + Q_2
+$$
+</div>
+<div class="answer">
+जोड़ने के बाद कुल धारिता—
+</div>
+<div class="formula">
+$$
+C = C_1 + C_2
+$$
+</div>
 
 <div class="answer">
-समान विभव होगा—
+अतः उभयनिष्ठ विभव निम्न होगा—
 </div>
 
 <div class="formula">
@@ -1119,15 +1271,6 @@ V = \frac{C_1 V_1 + C_2 V_2}{C_1 + C_2}
 $$
 </div>
 
-<div class="answer">
-जोड़ने के बाद कुल धारिता—
-</div>
-
-<div class="formula">
-$$
-C = C_1 + C_2
-$$
-</div>
 
 <div class="answer">
 अतः अंतिम ऊर्जा होगी—
@@ -1161,19 +1304,131 @@ $$
 $$
 </div>
 
+<div class="answer">
+<b>हल :</b>
+</div>
+
 <div class="formula">
 $$
-\Delta U = \frac{1}{2}(C_1 V_1^2 + C_2 V_2^2) - \frac{(C_1 V_1 + C_2 V_2)^2}{2(C_1 + C_2)}
+\Delta U
+=
+\frac{1}{2}
+\left(
+C_1V_1^2 + C_2V_2^2
+\right)
+-
+\frac{(C_1V_1 + C_2V_2)^2}{2(C_1+C_2)}
 $$
 </div>
 
 <div class="answer">
-सरलीकरण करने पर—
+दूसरे पद का वर्ग खोलने पर —
 </div>
 
 <div class="formula">
 $$
-\Delta U = \frac{C_1 C_2 (V_1 - V_2)^2}{2(C_1 + C_2)}
+\Delta U
+=
+\frac{1}{2}
+\left(
+C_1V_1^2 + C_2V_2^2
+\right)
+-
+\frac{
+C_1^2V_1^2
++
+2C_1C_2V_1V_2
++
+C_2^2V_2^2
+}
+{2(C_1+C_2)}
+$$
+</div>
+
+<div class="answer">
+हर (Denominator) समान करने पर —
+</div>
+
+<div class="formula">
+$$
+\Delta U
+=
+\frac{
+(C_1+C_2)(C_1V_1^2+C_2V_2^2)
+-
+(C_1^2V_1^2+2C_1C_2V_1V_2+C_2^2V_2^2)
+}
+{2(C_1+C_2)}
+$$
+</div>
+
+<div class="answer">
+गुणा करने पर —
+</div>
+
+<div class="formula">
+$$
+\Delta U
+=
+\frac{
+C_1^2V_1^2
++
+C_1C_2V_1^2
++
+C_1C_2V_2^2
++
+C_2^2V_2^2
+-
+C_1^2V_1^2
+-
+2C_1C_2V_1V_2
+-
+C_2^2V_2^2
+}
+{2(C_1+C_2)}
+$$
+</div>
+
+<div class="answer">
+समान पद कट जाने पर —
+</div>
+
+<div class="formula">
+$$
+\Delta U
+=
+\frac{
+C_1C_2V_1^2
++
+C_1C_2V_2^2
+-
+2C_1C_2V_1V_2
+}
+{2(C_1+C_2)}
+$$
+</div>
+
+<div class="formula">
+$$
+\Delta U
+=
+\frac{
+C_1C_2
+\left(
+V_1^2+V_2^2-2V_1V_2
+\right)
+}
+{2(C_1+C_2)}
+$$
+</div>
+<div class="formula">
+$$
+\boxed{
+\Delta U
+=
+\frac{C_1C_2(V_1-V_2)^2}
+{2(C_1+C_2)}
+}
 $$
 </div>
 

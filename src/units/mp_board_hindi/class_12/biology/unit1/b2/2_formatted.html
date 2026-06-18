@@ -1,111 +1,176 @@
 <!DOCTYPE html>
 <html lang="hi">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>PAL STUDY CENTER | Notes</title>
 
-<!-- MathJax -->
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
 <script>
-window.MathJax = {
-  tex: {
-    inlineMath: [['$', '$'], ['\\(', '\\)']]
-  }
+window.MathJax={
+ tex:{
+ inlineMath:[
+ ['$','$'],
+ ['\\(','\\)']
+ ]
+}
 };
 </script>
+
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
+
 <style>
+
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
+
 
 body{
-    background:#f5f7fb;
-    color:#333;
-    line-height:1.7;
+background:#f5f7fb;
+line-height:1.7;
 }
 
-.navbar{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:1000;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:16px;
-    background:linear-gradient(135deg,#0D47A1,#1565C0);
-    box-shadow:0 6px 20px rgba(0,0,0,0.25);
-}
 
-.logo{ text-align:center; }
-.logo .main{
-    font-size:36px;
-    font-weight:900;
-    letter-spacing:3px;
-    color:white;
-    text-transform:uppercase;
-}
-.logo .sub{ display:none; }
+/* NAVBAR */
 
-.container{
-    max-width:900px;
-    margin:120px auto 30px;
-    padding:15px;
+    .navbar{
+
+      background:rgba(15,23,42,0.45);
+
+      backdrop-filter:blur(10px);
+
+      box-shadow:0 4px 18px rgba(0,0,0,.18);
+
+      padding:10px 0;
+
+      transition:.3s;
+
+    }
+
+    .navbar-brand{
+
+      font-size:28px;
+
+      font-weight:700;
+
+      color:white !important;
+
+    }
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+      .navbar-brand{
+        font-size:40px;
+      }
+/* CONTENT */
+
+.notes-container{
+
+max-width:900px;
+
+margin:100px auto 50px;
+
+padding:20px;
+
 }
 
 .notes-title{
-    background:#E3F2FD;
-    color:#1565C0;
-    padding:14px;
-    border-left:5px solid #1565C0;
-    border-radius:10px;
-    font-size:20px;
-    font-weight:bold;
-    margin-bottom:20px;
+
+background:#e3f2fd;
+
+color:#1565c0;
+
+padding:10px;
+
+border-left:5px solid #1565c0;
+
+border-radius:50px;
+
+font-size:30px;
+
+font-weight:bold;
+margin-top:100px;
+
+margin-bottom:50px;
+
 }
+
+
 
 .qa-box{
-    background:#fff;
-    padding:22px;
-    margin-bottom:18px;
-    border-radius:14px;
-    border-left:6px solid #1565C0;
-    box-shadow:0 4px 12px rgba(0,0,0,0.08);
-    transition:0.25s ease;
-    position:relative;
-    overflow:hidden;
+
+background:white;
+
+padding:22px;
+
+margin-bottom:18px;
+
+border-radius:14px;
+
+border-left:6px solid #1565c0;
+
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+transition:.25s;
+
 }
 
-.qa-box::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:4px;
-    background:linear-gradient(90deg,#1565C0,#42A5F5);
-}
 
 .qa-box:hover{
-    transform:translateY(-4px) scale(1.01);
-    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+
+transform:translateY(-4px);
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
 }
+
+
 
 .question{
-    font-weight:bold;
-    color:#1b3a57;
-    margin-bottom:8px;
+
+font-weight:bold;
+
+color:#1b3a57;
+
+margin-bottom:8px;
+
+}
+.question-image{
+    text-align:center;
+    margin:15px 0;
+    overflow-x:auto;
 }
 
+.question-image img{
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:8px;
+}
+
+
 .answer{
-    color:#2c3e50;
-    text-align:justify;
+
+color:#2c3e50;
+
+text-align:justify;
+
 }
 
 .answer img{
@@ -118,18 +183,27 @@ body{
 .answer table{
     width:100%;
     border-collapse:collapse;
-    margin:10px 0;
+    margin:12px 0;
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    display:block;
+    overflow-x:auto;
+    box-shadow:0 2px 8px rgba(0,0,0,0.06);
 }
 
 .answer table td, .answer table th{
     border:1px solid #ddd;
-    padding:10px;
+    padding:10px 12px;
     text-align:left;
+    vertical-align:top;
+    white-space:normal;
 }
 
 .answer table th{
-    background:#f0f0f0;
+    background:#eaf2fb;
     font-weight:bold;
+    color:#1b3a57;
 }
 
 .answer ol, .answer ul{
@@ -140,23 +214,64 @@ body{
 
 .answer li{ margin-bottom:8px; }
 
-@media(max-width:600px){
-    .logo .main{ font-size:24px; letter-spacing:2px; }
+
+@media(max-width:768px){
+
+.notes-container{
+
+margin-top:80px;
+
 }
+
+
+}
+.formula{
+    overflow-x:auto;
+    overflow-y:hidden;
+    margin:10px 0;
+}
+
+
 </style>
+
+
 </head>
+
 
 <body>
 
-<div class="navbar">
-    <div class="logo">
-        <div class="main">PAL STUDY CENTER</div>
-    </div>
-</div>
+
+
+<!-- NAVBAR -->
+
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
 
 <div class="container">
 
-    <div class="notes-title">📘 मानव जनन</div>
+<a class="navbar-brand" href="../index.html">
+
+पाल <span>स्टडी सेंटर</span>
+
+</a>
+    <button class="navbar-toggler bg-light"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+</div>
+
+</nav>
+
+
+<div class="container">
+
+    <div class="notes-title">📘 Unit 1(B) मानव जनन</div>
 
     <div class="qa-box">
         <div class="question">मानव जनन किसे कहते है?</div>
@@ -180,7 +295,7 @@ body{
         <div class="answer">
             <p>नर में वृषण, सहायक नलिकाएँ तथा सहायक ग्रंथियों के समूह को, जो नर युग्मक (शुक्राणु) के निर्माण, संग्रहण एवं परिवहन का कार्य करते हैं, नर जनन तंत्र कहलाता है।</p>
 <p>नर जनन तंत्र का नामांकित रेखाचित्र </p>
-<img src="images/image11.jpg" alt="चित्र" style="max-width:400px; height:auto; margin:10px 0;">
+<img src="images/image11.jpg" alt="चित्र" style="max-width:340px; height:auto; margin:10px 0;">
         </div>
     </div>
     <div class="qa-box">
@@ -262,7 +377,7 @@ body{
 <p>मुख्य कार्य</p>
 <p>ये कोशिकाएँ टेस्टोस्टेरोन हार्मोन का स्राव करती हैं।</p>
 <p>शुक्राणुजनन को प्रोत्साहन मिलता है।</p>
-<img src="images/image3.png" alt="चित्र" style="max-width:400px; height:auto; margin:10px 0;">
+<img src="images/image3.png" alt="चित्र" style="max-width:340px; height:auto; margin:10px 0;">
         </div>
     </div>
     <div class="qa-box">
@@ -324,7 +439,7 @@ body{
 <li>टेस्टोस्टेरॉन - यह पुरुष हार्मोन है, जो अन्तराली कोशिकाओं से स्रावित होता है।</li>
 </ol>
 <p>यह नर जनन अंगों के विकास और शुक्राणु परिपक्वन में सहायक होता है।</p>
-<img src="images/image13.png" alt="चित्र" style="max-width:400px; height:auto; margin:10px 0;">
+<img src="images/image13.png" alt="चित्र" style="max-width:340px; height:auto; margin:10px 0;">
         </div>
     </div>
     <div class="qa-box">
@@ -343,7 +458,7 @@ body{
     <div class="qa-box">
         <div class="question">मादा जनन तंत्र का नामांकित चित्र बनाइए।</div>
         <div class="answer">
-            <img src="images/image7.png" alt="चित्र" style="max-width:400px; height:auto; margin:10px 0;">
+            <img src="images/image7.png" alt="चित्र" style="max-width:350px; height:auto; margin:10px 0;">
         </div>
     </div>
     <div class="qa-box">
@@ -371,7 +486,7 @@ body{
 <li>कोर्टेक्स – इसमें फॉलिकल पाए जाते हैं।फॉलिकल में अण्डाणु का निर्माण होता है।</li>
 <li>मेडुला – रक्त वाहिकाएँ, तंतु, और लसीका वाहिकाएँ पाई जाती हैं। अण्डाशय को पोषण प्रदान करती हैं।</li>
 </ol>
-<img src="images/image15.png" alt="चित्र" style="max-width:400px; height:auto; margin:10px 0;">
+<img src="images/image15.png" alt="चित्र" style="max-width:350px; height:auto; margin:10px 0;">
         </div>
     </div>
     <div class="qa-box">
@@ -397,7 +512,7 @@ body{
     <div class="qa-box">
         <div class="question">ग्राफिय पुटिका का नामांकित रेखाचित्र बनाइए।</div>
         <div class="answer">
-            <img src="images/image4.png" alt="चित्र" style="max-width:400px; height:auto; margin:10px 0;">
+            <img src="images/image4.png" alt="चित्र" style="max-width:350px; height:auto; margin:10px 0;">
         </div>
     </div>
     <div class="qa-box">
@@ -490,7 +605,7 @@ body{
 <li>स्पर्मेटिडस का शुक्राणुओं मे रुपान्तरण अर्थात शुक्राणुजनन या स्पर्मियोजेनेसिस - अचल, गोलाकार, शुक्राणु प्रसू या स्पर्मेटिड्स का रुपान्तरित होकर सक्रिय या चल शुक्राणु में बदल जाना शुक्राणुजनन कहलाता है।</li>
 </ol>
 <p>इस प्रक्रिया में शुक्राणु प्रसु या स्पर्मेटिड्स की गाल्जीकरण शुक्राणु का स्क्रोसोम बनाती है।</p>
-<img src="images/image9.png" alt="चित्र" style="max-width:400px; height:auto; margin:10px 0;">
+<img src="images/image9.png" alt="चित्र" style="max-width:350px; height:auto; margin:10px 0;">
         </div>
     </div>
     <div class="qa-box">
@@ -527,7 +642,7 @@ body{
 <li>Middle part:- इस भाग को शुक्राणुओं का शक्तिग्रह कहते हैं, इसमे सूक्ष्म नलिकाएं होती है जिसमे माइट्रोकाड्रिया पाये जाते हैं। जो शुक्राणुओं को गति प्रदान करने के लिए ऊर्जा देते हैं।</li>
 <li>Tail:- यह शुक्राणु का अन्तिम लम्बा भाग है जो जीव दृत्य की झिल्ली से बना होता है।</li>
 </ol>
-<img src="images/image8.png" alt="चित्र" style="max-width:400px; height:auto; margin:10px 0;">
+<img src="images/image8.png" alt="चित्र" style="max-width:350px; height:auto; margin:10px 0;">
         </div>
     </div>
     <div class="qa-box">
@@ -548,7 +663,7 @@ body{
 <li>परिपक्वन प्रावस्था - वृद्धि प्रावस्था के बाद बनी कोशिका को प्राथमिक ऊसाइट कहते हैं, जिनमें अर्धसूत्री (1) के फलस्वरूप एक छोटी तथा एक बड़ी कोशिका बनती है। छोटी कोशिका को ध्रुवीय केन्द्रक तथा बड़ी कोशिका को द्वितीयक ऊसाइट कहते है। पुनः इन कोशिकाओं में अर्धसूत्री विभाजन (II) के फलस्वरूप एक बडी अण्ड कोशिका बनती है तथा तीन ध्रुवीय केन्द्रक बनते है जो प्रायः नष्ट हो जाते हैं।</li>
 </ol>
 <p>अर्धसूत्री (I) अण्डोत्सर्ग के समय होता है। जबकि अर्धरत्री (II) निषेचन के समय होता है।</p>
-<img src="images/image6.jpg" alt="चित्र" style="max-width:400px; height:auto; margin:10px 0;">
+ <img src="images/image6.jpg" alt="चित्र" style="max-width:350px; height:auto; margin:10px 0;">
         </div>
     </div>
     <div class="qa-box">
@@ -562,7 +677,7 @@ body{
         <div class="question">अण्डाणु किसे कहते है? इसकी की संरचना दीजिए।</div>
         <div class="answer">
             <p>निषेचन की क्रिया में भाग लेने वाला मादा युग्मक अण्डाणु कहलाता है।</p>
-<img src="images/image14.png" alt="चित्र" style="max-width:400px; height:auto; margin:10px 0;">
+<img src="images/image14.png" alt="चित्र" style="max-width:350px; height:auto; margin:10px 0;">
 <p>संरचना</p>
 <ol>
 <li>अण्डाणु के मध्य में एक केन्द्रक (n) पाया जाता है।</li>
@@ -649,7 +764,7 @@ body{
 <li>निषेचन की वास्तविक क्रिया फैलोपियन नलिका में होती है। अतः मनुष्य में आंतरिक निषेचन होता है।</li>
 <li>शुक्राणु में उपस्थित अगुणित (n) केंद्रक और अंडाणु के कोशिकाद्रव्य में स्थित अगुणित (n) केंद्रक के संलयन से द्विगुणित (2n) युग्मनज का निर्माण होता है।</li>
 </ol>
-<img src="images/image10.png" alt="चित्र" style="max-width:400px; height:auto; margin:10px 0;">
+<img src="images/image10.png" alt="चित्र" style="max-width:350px; height:auto; margin:10px 0;">
 <p>निषेचन का महत्व</p>
 <ol>
 <li>निषेचन के कारण युग्मनज में तर्क बनना आरम्भ हो जाता है।</li>
@@ -677,7 +792,7 @@ body{
         <div class="answer">
             <p>उत्तर –<br>निषेचन के बाद बना भ्रूण जब कोरकपुटी (Blastocyst) अवस्था में गर्भाशय की दीवार (एंडोमेट्रियम) से चिपककर उसमें धँस जाता है, तो इस प्रक्रिया को इम्प्लांटेशन (भ्रूण रोपण) कहते हैं।</p>
 <p>अण्डोत्सर्ग के लगभग 7वें दिन कोरकपुटी गर्भाशय की पिछली दीवार के फन्डस के पास चिपकती है और 8वें दिन यह प्रक्रिया पूर्ण हो जाती है।</p>
-<img src="images/image5.jpg" alt="चित्र" style="max-width:400px; height:auto; margin:10px 0;">
+<img src="images/image5.jpg" alt="चित्र" style="max-width:350px; height:auto; margin:10px 0;">
         </div>
     </div>
     <div class="qa-box">
@@ -713,7 +828,7 @@ body{
 <p>प्रश्र स्तन ग्रंथि (Mammary gland) किसे कहते हैं?</p>
 <p>उत्तर –<br>स्तन ग्रंथि वह सुसंवर्धित ग्रंथि है जो स्त्री के स्तन में स्थित होती है और दूध का निर्माण और स्त्राव करती है।</p>
 <p>मुख्य कार्य - नवजात शिशु के पोषण के लिए दूध का उत्पादन करती है।</p>
-<img src="images/image2.png" alt="चित्र" style="max-width:400px; height:auto; margin:10px 0;">
+<img src="images/image2.png" alt="चित्र" style="max-width:350px; height:auto; margin:10px 0;">
         </div>
     </div>
     <div class="qa-box">
