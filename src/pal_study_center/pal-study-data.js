@@ -150,6 +150,10 @@ const PAL_STUDY_DATA = {
       "Biology": [],
       "English": [],
       "Hindi": []
+    },
+    "Class 10th": {
+      "Mathematics": ["Real Numbers", "Polynomials"],
+      "Science": ["Chemical equations", "Acids and Bases", "Metals and Non-metals", "Carbon and its compounds"],
     }
   }
 };
@@ -207,6 +211,20 @@ const UNIT_FILE_PATHS = {
         "यूनिट 5 (B) जीव और समष्टियाँ" : "",
         "पारितंत्र" : "",
         "यूनिट 5 (C) जैव विविधता एवं संरक्षण" : ""
+      }
+    }
+  },
+  "CBSE": {
+    "Class 10th": {
+      "Mathematics": {
+        "Real Numbers": "../units/cbse/class_10/mathematics/u1.html",
+        "Polynomials": "../units/cbse/class_10/mathematics/u2.html"
+      },
+      "Science": {
+        "Chemical equations": "../units/cbse/class_10/science/chemical.html",
+        "Acids and Bases": "../units/cbse/class_10/science/acids.html",
+        "Metals and Non-metals": "../units/cbse/class_10/science/matels.html",
+        "Carbon and its compounds": "../units/cbse/class_10/science/carbon.html"
       }
     }
   }

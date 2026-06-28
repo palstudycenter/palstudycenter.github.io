@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | Notes</title>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<script>
+window.MathJax={
+ tex:{
+ inlineMath:[
+ ['$','$'],
+ ['\\(','\\)']
+ ]
+}
+};
+</script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<style>
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+
+body{
+background:#f5f7fb;
+line-height:1.7;
+}
+
+
+/* NAVBAR */
+
+    .navbar{
+
+      background:rgba(15,23,42,0.45);
+
+      backdrop-filter:blur(10px);
+
+      box-shadow:0 4px 18px rgba(0,0,0,.18);
+
+      padding:10px 0;
+
+      transition:.3s;
+
+    }
+
+    .navbar-brand{
+
+      font-size:28px;
+
+      font-weight:700;
+
+      color:white !important;
+
+    }
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+      .navbar-brand{
+        font-size:40px;
+      }
+/* CONTENT */
+
+.notes-container{
+
+max-width:900px;
+
+margin:100px auto 50px;
+
+padding:20px;
+
+}
+
+.notes-title{
+
+background:#e3f2fd;
+
+color:#1565c0;
+
+padding:10px;
+
+border-left:5px solid #1565c0;
+
+border-radius:50px;
+
+font-size:30px;
+
+font-weight:bold;
+margin-top:100px;
+
+margin-bottom:50px;
+
+}
+
+
+
+.qa-box{
+
+background:white;
+
+padding:22px;
+
+margin-bottom:18px;
+
+border-radius:14px;
+
+border-left:6px solid #1565c0;
+
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+transition:.25s;
+
+}
+
+
+.qa-box:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+
+.question{
+
+font-weight:bold;
+
+color:#1b3a57;
+
+margin-bottom:8px;
+
+}
+.question-image{
+    text-align:center;
+    margin:15px 0;
+    overflow-x:auto;
+}
+
+.question-image img{
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:8px;
+}
+
+
+
+.answer{
+
+color:#2c3e50;
+
+text-align:justify;
+
+}
+
+
+
+@media(max-width:768px){
+
+.notes-container{
+
+margin-top:80px;
+
+}
+
+
+}
+.formula{
+    overflow-x:auto;
+    overflow-y:hidden;
+    margin:10px 0;
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<!-- NAVBAR -->
+
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+
+पाल <span>स्टडी सेंटर</span>
+
+</a>
+    <button class="navbar-toggler bg-light"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+</div>
+
+</nav>
+
+
+
+
+
+<!-- NOTES -->
+
+<div class="qa-box">
+  <div class="container">
+<div class="notes-title">📘 Unit 1- मापन</div>  
+</div>
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - मापन किसे कहते हैं?
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+किसी भौतिक राशि के परिमाण की तुलना किसी मानक राशि (मात्रक) से करने की प्रक्रिया को <b>मापन (Measurement)</b> कहते हैं।
+</p>
+
+<p>
+अर्थात किसी राशि में यह ज्ञात करना कि उसमें मानक मात्रक कितनी बार सम्मिलित है, मापन कहलाता है।
+</p>
+
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - भौतिक राशि किसे कहते हैं? यह कितने प्रकार की होती है?
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+वे राशियाँ जिन्हें मापा जा सकता है तथा जिन्हें किसी संख्या और मात्रक द्वारा व्यक्त किया जा सकता है, <b>भौतिक राशियाँ (Physical Quantities)</b> कहलाती हैं।
+</p>
+
+<p>
+भौतिक राशियाँ मुख्यतः <b>दो प्रकार</b> की होती हैं—
+</p>
+
+<ol>
+
+<li>
+<b>मूल राशियाँ (Fundamental Quantities)</b> – वे राशियाँ जो स्वतंत्र होती हैं तथा अन्य राशियों के आधार पर व्यक्त नहीं की जा सकतीं, मूल राशियाँ कहलाती हैं।<br>
+उदाहरण – लंबाई, द्रव्यमान, समय, तापमान आदि।
+</li>
+
+<li>
+<b>व्युत्पन्न राशियाँ (Derived Quantities)</b> – वे राशियाँ जो मूल राशियों के संयोजन से प्राप्त होती हैं, व्युत्पन्न राशियाँ कहलाती हैं।<br>
+उदाहरण – वेग, त्वरण, बल, कार्य, ऊर्जा आदि।
+</li>
+
+</ol>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - मात्रक किसे कहते हैं? यह कितने प्रकार के होते हैं?
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+किसी भौतिक राशि के मापन के लिए निर्धारित मानक परिमाण को <b>मात्रक (Unit)</b> कहते हैं।
+</p>
+
+<p>
+किसी भौतिक राशि का मान उसके परिमाण तथा मात्रक के गुणनफल के रूप में व्यक्त किया जाता है।
+</p>
+
+<p>
+मात्रक मुख्यतः <b>दो प्रकार</b> के होते हैं—
+</p>
+
+<ol>
+
+<li>
+<b>मूल मात्रक (Fundamental Units)</b> – वे मात्रक जो स्वतंत्र होते हैं तथा अन्य मात्रकों पर निर्भर नहीं होते, मूल मात्रक कहलाते हैं।<br>
+उदाहरण – मीटर (m), किलोग्राम (kg), सेकण्ड (s), केल्विन (K) आदि।
+</li>
+
+<li>
+<b>व्युत्पन्न मात्रक (Derived Units)</b> – वे मात्रक जो मूल मात्रकों के संयोजन से प्राप्त होते हैं, व्युत्पन्न मात्रक कहलाते हैं।<br>
+उदाहरण – न्यूटन (N), जूल (J), वाट (W), मीटर/सेकण्ड (m/s) आदि।
+</li>
+
+</ol>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - मापन की कौन-कौन सी पद्धतियाँ हैं? समझाइए।
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+भौतिक राशियों के मापन के लिए विभिन्न देशों में अलग-अलग पद्धतियों का उपयोग किया गया। प्रमुख मापन पद्धतियाँ निम्नलिखित हैं—
+</p>
+
+<ol>
+
+<li>
+<b>CGS पद्धति (Centimetre-Gram-Second System)</b><br>
+इस पद्धति में लंबाई का मात्रक सेंटीमीटर (cm), द्रव्यमान का मात्रक ग्राम (g) तथा समय का मात्रक सेकण्ड (s) होता है।
+</li>
+
+<li>
+<b>FPS पद्धति (Foot-Pound-Second System)</b><br>
+इस पद्धति में लंबाई का मात्रक फुट (ft), द्रव्यमान का मात्रक पाउंड (lb) तथा समय का मात्रक सेकण्ड (s) होता है।
+</li>
+
+<li>
+<b>MKS पद्धति (Metre-Kilogram-Second System)</b><br>
+इस पद्धति में लंबाई का मात्रक मीटर (m), द्रव्यमान का मात्रक किलोग्राम (kg) तथा समय का मात्रक सेकण्ड (s) होता है।
+</li>
+
+
+<li>
+<b>SI (International System of Units)</b> या <b>अंतर्राष्ट्रीय मात्रक पद्धति</b> मापन की एक मानक एवं वैज्ञानिक पद्धति है, जिसे विश्व के अधिकांश देशों द्वारा स्वीकार किया गया है। इसका नाम फ्रांसीसी भाषा के शब्द <i>Système International d’Unités</i> से लिया गया है।
+</li>
+<p>
+SI पद्धति में <b>7 मूल मात्रक</b>, <b>2 पूरक मात्रक</b> तथा अनेक <b>व्युत्पन्न मात्रक</b> होते हैं।
+</p>
+
+<p><b>SI पद्धति के मूल मात्रक :</b></p>
+
+<table class="table table-bordered text-center">
+<thead>
+<tr>
+<th>मूल राशि</th>
+<th>SI मात्रक</th>
+<th>प्रतीक</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>लंबाई</td>
+<td>मीटर</td>
+<td>m</td>
+</tr>
+
+<tr>
+<td>द्रव्यमान</td>
+<td>किलोग्राम</td>
+<td>kg</td>
+</tr>
+
+<tr>
+<td>समय</td>
+<td>सेकण्ड</td>
+<td>s</td>
+</tr>
+
+<tr>
+<td>विद्युत धारा</td>
+<td>ऐम्पियर</td>
+<td>A</td>
+</tr>
+
+<tr>
+<td>ऊष्मागतिक ताप</td>
+<td>केल्विन</td>
+<td>K</td>
+</tr>
+
+<tr>
+<td>पदार्थ की मात्रा</td>
+<td>मोल</td>
+<td>mol</td>
+</tr>
+
+<tr>
+<td>ज्योति तीव्रता</td>
+<td>कैन्डेला</td>
+<td>cd</td>
+</tr>
+
+</tbody>
+</table>
+
+<p><b>SI पद्धति के पूरक मात्रक :</b></p>
+
+<table class="table table-bordered text-center">
+<thead>
+<tr>
+<th>पूरक राशि</th>
+<th>मात्रक</th>
+<th>प्रतीक</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>समतल कोण</td>
+<td>रेडियन</td>
+<td>rad</td>
+</tr>
+
+<tr>
+<td>घन कोण</td>
+<td>स्टीरेडियन</td>
+<td>sr</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="qa-box">
+
+
+
+<div class="question">
+
+प्रश्न - SI पद्धति की विशेषताएं लिखिए।
+
+</div>
+
+
+
+<div class="answer">
+
+
+
+<p><b>उत्तर -</b></p>
+
+<p><b>SI पद्धति की विशेषताएँ :</b></p>
+
+<ol>
+
+<li>यह एक अंतरराष्ट्रीय स्तर पर मान्यता प्राप्त पद्धति है।</li>
+
+<li>यह दशमलव पद्धति पर आधारित है।</li>
+
+<li>इसके मात्रक सरल, स्पष्ट एवं पुनरुत्पादित किए जा सकते हैं।</li>
+
+<li>मूल मात्रकों से अनेक व्युत्पन्न मात्रक प्राप्त किए जाते हैं।</li>
+
+<li>विज्ञान, इंजीनियरिंग तथा उद्योगों में इसी पद्धति का उपयोग किया जाता है।</li>
+
+<li>विश्व के अधिकांश देशों में यही मानक मापन पद्धति है।</li>
+
+</ol>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - SI पद्धति में सम्मिलित सभी मात्रकों को परिभाषित करें।
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+SI पद्धति में 7 मूल मात्रक तथा 2 पूरक मात्रक सम्मिलित हैं। इनके संक्षिप्त परिचय निम्नलिखित हैं—
+</p>
+
+<ol>
+
+<li>
+<b>मीटर (Metre)</b> – यह लंबाई का SI मात्रक है। निर्वात में प्रकाश द्वारा \(1/299792458\) सेकण्ड में तय की गई दूरी को 1 मीटर कहते हैं।
+</li>
+
+<li>
+<b>किलोग्राम (Kilogram)</b> – यह द्रव्यमान का SI मात्रक है। किलोग्राम को प्लांक नियतांक के निश्चित मान के आधार पर परिभाषित किया जाता है।
+</li>
+
+<li>
+<b>सेकण्ड (Second)</b> – यह समय का SI मात्रक है। सीज़ियम-133 परमाणु के दो अतिसूक्ष्म ऊर्जा स्तरों के मध्य संक्रमण से उत्पन्न विकिरण के \(9,192,631,770\) दोलनों की अवधि को 1 सेकण्ड कहते हैं।
+</li>
+
+<li>
+<b>ऐम्पियर (Ampere)</b> – यह विद्युत धारा का SI मात्रक है। एक सेकण्ड में \(1/1.602176634\times10^{-19}\) इलेक्ट्रॉनों के आवेश के बराबर धारा को 1 ऐम्पियर कहते हैं।
+</li>
+
+<li>
+<b>केल्विन (Kelvin)</b> – यह ऊष्मागतिक ताप का SI मात्रक है। इसे बोल्ट्ज़मान नियतांक के निश्चित मान के आधार पर परिभाषित किया जाता है।
+</li>
+
+<li>
+<b>मोल (Mole)</b> – यह पदार्थ की मात्रा का SI मात्रक है। 1 मोल में \(6.02214076\times10^{23}\) कण (परमाणु, अणु या आयन) होते हैं।
+</li>
+
+<li>
+<b>कैन्डेला (Candela)</b> – यह ज्योति तीव्रता का SI मात्रक है। एक निश्चित आवृत्ति के प्रकाश स्रोत की प्रकाश तीव्रता को कैन्डेला में व्यक्त किया जाता है।
+</li>
+
+<li>
+<b>रेडियन (Radian)</b> – यह समतल कोण का पूरक मात्रक है। वृत्त की त्रिज्या के बराबर चाप द्वारा केन्द्र पर बनाए गए कोण को 1 रेडियन कहते हैं।
+</li>
+
+<li>
+<b>स्टीरेडियन (Steradian)</b> – यह घन कोण का पूरक मात्रक है। गोले की त्रिज्या के वर्ग के बराबर क्षेत्रफल द्वारा केन्द्र पर बनाए गए घन कोण को 1 स्टीरेडियन कहते हैं।
+</li>
+
+</ol>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - खगोलीय दूरियों को मापने के कौन-कौन से मात्रक हैं? समझाइए।
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+ग्रहों, तारों तथा आकाशगंगाओं के बीच की दूरियाँ अत्यधिक बड़ी होती हैं। इसलिए इन्हें मीटर या किलोमीटर में व्यक्त करना सुविधाजनक नहीं होता। ऐसी विशाल दूरियों को मापने के लिए विशेष मात्रकों का उपयोग किया जाता है।
+</p>
+
+<p><b>खगोलीय दूरियों के प्रमुख मात्रक निम्नलिखित हैं—</b></p>
+
+<ol>
+
+<li>
+<b>खगोलीय इकाई (Astronomical Unit – AU)</b><br>
+पृथ्वी और सूर्य के बीच की औसत दूरी को एक खगोलीय इकाई कहते हैं।
+</li>
+
+<p class="formula">
+\[
+1\ AU = 1.496 \times 10^{11}\ m
+\]
+</p>
+
+<p>
+इसका उपयोग मुख्यतः सौरमंडल के ग्रहों एवं अन्य पिंडों की दूरियाँ मापने में किया जाता है।
+</p>
+
+<li>
+<b>प्रकाश वर्ष (Light Year – ly)</b><br>
+निर्वात में प्रकाश द्वारा एक वर्ष में तय की गई दूरी को एक प्रकाश वर्ष कहते हैं।
+</li>
+
+<p class="formula">
+\[
+1 Ly = 9.46 \times 10^{15}\ m
+\]
+</p>
+
+<p>
+इसका उपयोग तारों तथा आकाशगंगाओं की दूरियाँ व्यक्त करने में किया जाता है।
+</p>
+
+<li>
+<b>पारसेक (Parsec – pc)</b><br>
+वह दूरी जिस पर स्थित किसी तारे का लंबन कोण (Parallax Angle) एक आर्क-सेकण्ड हो, एक पारसेक कहलाती है।
+</li>
+
+<p class="formula">
+\[
+1\ pc = 3.26 Ly
+\]
+</p>
+
+<p class="formula">
+\[
+1\ pc = 3.086 \times 10^{16}\ m
+\]
+</p>
+
+<p>
+खगोल विज्ञान में अत्यधिक बड़ी दूरियों को मापने के लिए पारसेक का व्यापक उपयोग किया जाता है।
+</p>
+
+</ol>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - परमाणवीय दूरियों को मापने के कौन-कौन से मात्रक हैं? समझाइए।
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+परमाणुओं, अणुओं तथा नाभिकों के आकार और उनके बीच की दूरियाँ अत्यंत छोटी होती हैं। इसलिए इन्हें मीटर में व्यक्त करना सुविधाजनक नहीं होता। ऐसी सूक्ष्म दूरियों को मापने के लिए विशेष मात्रकों का उपयोग किया जाता है।
+</p>
+
+<p><b>परमाणवीय दूरियों के प्रमुख मात्रक निम्नलिखित हैं—</b></p>
+
+<ol>
+
+<li>
+<b>आंग्स्ट्रॉम (Angstrom – Å)</b><br>
+आंग्स्ट्रॉम परमाणुओं तथा अणुओं के आकार को व्यक्त करने का एक प्रचलित मात्रक है।
+</li>
+
+<p class="formula">
+\[
+1\ \text{Å} = 10^{-10}\ m
+\]
+</p>
+
+<p>
+परमाणुओं के व्यास तथा रासायनिक बंधों की लंबाई प्रायः आंग्स्ट्रॉम में व्यक्त की जाती है।
+</p>
+
+<li>
+<b>नैनोमीटर (Nanometre – nm)</b><br>
+नैनोमीटर सूक्ष्म लंबाइयों को मापने का महत्वपूर्ण मात्रक है।
+</li>
+
+<p class="formula">
+\[
+1\ nm = 10^{-9}\ m
+\]
+</p>
+
+<p>
+सूक्ष्म कणों, अणुओं तथा प्रकाश की तरंगदैर्घ्य को नैनोमीटर में व्यक्त किया जाता है।
+</p>
+
+<li>
+<b>फर्मी (Fermi – fm)</b><br>
+फर्मी का उपयोग परमाणु नाभिक के आकार एवं नाभिकीय दूरियों को व्यक्त करने में किया जाता है।
+</li>
+
+<p class="formula">
+\[
+1\ fm = 10^{-15}\ m
+\]
+</p>
+
+<p>
+फर्मी को <b>फेम्टोमीटर (Femtometre)</b> भी कहा जाता है।
+</p>
+
+</ol>
+
+<p>
+अतः परमाणवीय एवं नाभिकीय दूरियों को मापने के लिए मुख्यतः <b>आंग्स्ट्रॉम (Å), नैनोमीटर (nm) तथा फर्मी (fm)</b> का उपयोग किया जाता है।
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - निम्न भौतिक राशियों के मात्रकों को ज्ञात कीजिए।
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+निम्न भौतिक राशियों के SI मात्रक इस प्रकार हैं—
+</p>
+
+<table class="table table-bordered text-center">
+
+<thead>
+<tr>
+<th>भौतिक राशि</th>
+<th>SI मात्रक</th>
+<th>मात्रक का प्रतीक</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>क्षेत्रफल (Area)</td>
+<td>वर्ग मीटर</td>
+<td>\(m^2\)</td>
+</tr>
+
+<tr>
+<td>आयतन (Volume)</td>
+<td>घन मीटर</td>
+<td>\(m^3\)</td>
+</tr>
+
+<tr>
+<td>घनत्व (Density)</td>
+<td>किलोग्राम प्रति घन मीटर</td>
+<td>\(kg/m^3\)</td>
+</tr>
+
+<tr>
+<td>वेग (Velocity)</td>
+<td>मीटर प्रति सेकण्ड</td>
+<td>\(m/s\)</td>
+</tr>
+
+<tr>
+<td>त्वरण (Acceleration)</td>
+<td>मीटर प्रति सेकण्ड²</td>
+<td>\(m/s^2\)</td>
+</tr>
+
+<tr>
+<td>बल (Force)</td>
+<td>न्यूटन</td>
+<td>\(N\)</td>
+</tr>
+
+<tr>
+<td>कार्य या ऊर्जा (Work/Energy)</td>
+<td>जूल</td>
+<td>\(J\)</td>
+</tr>
+
+<tr>
+<td>शक्ति (Power)</td>
+<td>वाट</td>
+<td>\(W\)</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - विमाएँ, विमीय सूत्र तथा विमीय समीकरण किसे कहते हैं?
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+
+<b>विमाएँ (Dimensions)</b> – किसी भौतिक राशि को व्यक्त करने के लिए मूल राशियों पर जिन घातों को लगाया जाता हैं, उन्हें उस राशि की <b>विमाएँ</b> कहते हैं।
+
+</p>
+
+<p>
+उदाहरणार्थ, वेग की विमाएँ लंबाई तथा समय पर निर्भर करती हैं, अतः इसकी विमाएँ <b>[L T<sup>-1</sup>]</b> हैं।
+</p>
+
+<p>
+<b>विमीय सूत्र (Dimensional Formula)</b> – किसी भौतिक राशि को मूल राशियों (द्रव्यमान M, लंबाई L, समय T आदि) की घातों के रूप में व्यक्त करने वाले सूत्र को उस राशि का <b>विमीय सूत्र</b> कहते हैं।
+</p>
+
+<p>
+उदाहरणार्थ, बल का विमीय सूत्र है –
+</p>
+
+<p class="formula">
+\[
+[M^1L^1T^{-2}]
+\]
+</p>
+
+<p>
+<b>विमीय समीकरण (Dimensional Equation)</b> – किसी भौतिक राशि को उसके विमीय सूत्र के बराबर प्रदर्शित करने वाले समीकरण को <b>विमीय समीकरण</b> कहते हैं।
+</p>
+
+<p>
+उदाहरणार्थ, यदि बल को \(F\) द्वारा प्रदर्शित करें, तो उसका विमीय समीकरण होगा –
+</p>
+
+<p class="formula">
+\[
+[F]=[M^1L^1T^{-2}]
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - विमीय एकरूपता (एक्यता) का सिद्धान्त लिखिए।
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+<b>विमीय एकरूपता (Dimensional Homogeneity) का सिद्धान्त</b> कहता है कि किसी भी भौतिक समीकरण के दोनों पक्षों की विमाएँ समान होनी चाहिए।
+</p>
+<p>
+यदि किसी समीकरण के दोनों पक्षों की विमाएँ समान नहीं हैं, तो वह समीकरण भौतिक रूप से सही नहीं माना जाता।
+</p>
+
+<p><b>उदाहरण :</b></p>
+
+<p>
+गति का समीकरण
+</p>
+
+<p class="formula">
+\[
+s=ut+\frac{1}{2}at^2
+\]
+</p>
+<p class="formula">
+\[
+[L]=[LT^{-1}]\times[T]+[LT^{-2}]\times[T^2]
+\]
+</p>
+
+<p class="formula">
+\[
+[L]=[L]
+\]
+</p>
+
+<p>
+अतः समीकरण के सभी पदों की विमाएँ <b>[L]</b> हैं, इसलिए यह समीकरण विमीय एकरूपता के सिद्धान्त का पालन करता है।
+</p>
+
+</div>
+
+</div>
+
+
+
+
+<!-- NOTES -->
+
+
+
+
+
+
+
+<!-- PROTECTION -->
+
+
+<script>
+
+
+document.addEventListener("contextmenu",
+e=>e.preventDefault());
+
+
+document.addEventListener("selectstart",
+e=>e.preventDefault());
+
+
+document.addEventListener("copy",
+e=>{
+
+e.preventDefault();
+
+alert("Copying content is not allowed");
+
+});
+
+
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
+

@@ -61,7 +61,7 @@ async function loadUnits(subjectName) {
         <div class="units-list">
             ${units.map((unit, index) => {
                 // Get the file path for this unit
-                const filePath = getUnitFilePath(hiSubjectName || subjectName, unit);
+                const filePath = getUnitFilePath(subjectName, unit);
                 const clickHandler = filePath ? `onclick="openUnit('${filePath}')"` : '';
                 const cursorStyle = filePath ? 'cursor: pointer;' : '';
                 const hoverStyle = filePath ? 'transition: background-color 0.2s; ' : '';
@@ -93,13 +93,21 @@ async function loadUnits(subjectName) {
 function getUnitFilePath(subjectName, unitName) {
     try {
         const boardPaths = UNIT_FILE_PATHS[user.board];
-        if (boardPaths) {
-            const classPaths = boardPaths[user.class];
-            if (classPaths) {
-                const subjectPaths = classPaths[subjectName];
-                if (subjectPaths && subjectPaths[unitName]) {
-                    return subjectPaths[unitName];
-                }
+        if (!boardPaths) return null;
+
+        const classPaths = boardPaths[user.class];
+        if (!classPaths) return null;
+
+        const candidateSubjects = [subjectName];
+        const hiSubjectName = SUBJECT_NAME_MAP[subjectName];
+        if (hiSubjectName && hiSubjectName !== subjectName) {
+            candidateSubjects.push(hiSubjectName);
+        }
+
+        for (const subjectKey of candidateSubjects) {
+            const subjectPaths = classPaths[subjectKey];
+            if (subjectPaths && subjectPaths[unitName]) {
+                return subjectPaths[unitName];
             }
         }
     } catch (error) {
