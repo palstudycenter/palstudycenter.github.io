@@ -51,8 +51,8 @@ function filterStudents() {
 
 /* NOTICE PUBLISH */
 const TEST_SERIES_LINKS = {
-  'Class 12th': 'https://docs.google.com/spreadsheets/d/13NXpZ63gQ3iGfL9JmVlhVTlUgeLJP-IRt7f1D_hO2c4/edit?gid=1510681143#gid=1510681143',
-  'Class 11th': 'https://docs.google.com/spreadsheets/d/1vcGUNyIZ5n_lQXFWmsbfyGN-S9U8rGOQ/edit?gid=1827286670#gid=1827286670'
+  'Class 12th': 'https://docs.google.com/spreadsheets/d/1k5YMM_z401W3TmC6LvzWMkiJ0FKUpAfW/edit?usp=drivesdk&ouid=106422752548909187863&rtpof=true&sd=true ',
+  'Class 11th': 'https://docs.google.com/spreadsheets/d/19GcEBxhsdJXdYD3j8seSK8wryehOaYz2/edit?usp=drivesdk&ouid=106422752548909187863&rtpof=true&sd=true'
 };
 
 async function publishNotice() {

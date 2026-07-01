@@ -183,7 +183,7 @@ const UNIT_FILE_PATHS = {
       "रसायन शास्त्र ":{
           "यूनिट 1 विलयन": "../units/mp_board_hindi/class_12/chemistry/unit1/c1/1_formatted.html",
           "यूनिट 2 विद्युत रसायन": "../units/mp_board_hindi/class_12/chemistry/unit1/c2/2_formatted.html",
-          "यूनिट 3 रासायनिक गतिकी": "../units/mp_board_hindi/class_12/chemistry/unit1/c3/3_formatted.html",
+          "यूनिट 3 रासायनिक गतिकी": "../units/mp_board_hindi/class_12/chemistry/unit1/c3/mphc3.html",
           "यूनिट 4 d और f ब्लॉक के तत्व": "../units/mp_board_hindi/class_12/chemistry/unit1/c4/4_formatted.html",
           "यूनिट 5 समन्वय यौगिक": "../units/mp_board_hindi/class_12/chemistry/unit1/c5/5_formatted.html",
           "यूनिट 6 हैलोएल्केन और हैलोएरीन": "../units/mp_board_hindi/class_12/chemistry/unit1/c6/6_formatted.html",
