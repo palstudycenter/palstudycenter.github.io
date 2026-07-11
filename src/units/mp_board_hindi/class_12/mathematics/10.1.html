@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | Notes</title>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<script>
+window.MathJax={
+ tex:{
+ inlineMath:[
+ ['$','$'],
+ ['\\(','\\)']
+ ]
+}
+};
+</script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<style>
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+
+body{
+background:#f5f7fb;
+line-height:1.7;
+}
+
+
+/* NAVBAR */
+
+    .navbar{
+
+      background:rgba(15,23,42,0.45);
+
+      backdrop-filter:blur(10px);
+
+      box-shadow:0 4px 18px rgba(0,0,0,.18);
+
+      padding:10px 0;
+
+      transition:.3s;
+
+    }
+
+    .navbar-brand{
+
+      font-size:28px;
+
+      font-weight:700;
+
+      color:white !important;
+
+    }
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+      .navbar-brand{
+        font-size:40px;
+      }
+/* CONTENT */
+
+.notes-container{
+
+max-width:900px;
+
+margin:100px auto 50px;
+
+padding:20px;
+
+}
+
+.notes-title{
+
+background:#e3f2fd;
+
+color:#1565c0;
+
+padding:10px;
+
+border-left:5px solid #1565c0;
+
+border-radius:50px;
+
+font-size:30px;
+
+font-weight:bold;
+margin-top:100px;
+
+margin-bottom:50px;
+
+}
+
+
+
+.qa-box{
+
+background:white;
+
+padding:22px;
+
+margin-bottom:18px;
+
+border-radius:14px;
+
+border-left:6px solid #1565c0;
+
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+transition:.25s;
+
+}
+
+
+.qa-box:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+
+.question{
+
+font-weight:bold;
+
+color:#1b3a57;
+
+margin-bottom:8px;
+
+}
+.question-image{
+    text-align:center;
+    margin:15px 0;
+    overflow-x:auto;
+}
+
+.question-image img{
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:8px;
+}
+
+
+
+.answer{
+
+color:#2c3e50;
+
+text-align:justify;
+
+}
+
+
+
+@media(max-width:768px){
+
+.notes-container{
+
+margin-top:80px;
+
+}
+
+
+}
+.formula{
+    overflow-x:auto;
+    overflow-y:hidden;
+    margin:10px 0;
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<!-- NAVBAR -->
+
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+
+पाल <span>स्टडी सेंटर</span>
+
+</a>
+    <button class="navbar-toggler bg-light"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+</div>
+
+</nav>
+
+
+
+
+
+<!-- NOTES -->
+
+<div class="qa-box">
+  <div class="container">
+ <div class="notes-title">Exercise- 10.1 </div>  
+</div>
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+Q.1 Given: \(P(E)=0.6,\; P(F)=0.3,\; P(E \cap F)=0.2\) <br>
+(i) \(P(E|F)\) <br>
+(ii) \(P(F|E)\)
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p><b>(i) \(P(E|F)\)</b></p>
+
+<p>
+सशर्त प्रायिकता के सूत्र के अनुसार —
+</p>
+
+<p class="formula">
+\[
+P(E|F)=\frac{P(E \cap F)}{P(F)}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{0.2}{0.3}
+=\frac{2}{3}
+\]
+</p>
+
+
+<p><b>(ii) \(P(F|E)\)</b></p>
+
+<p>
+सशर्त प्रायिकता के सूत्र के अनुसार —
+</p>
+
+<p class="formula">
+\[
+P(F|E)=\frac{P(E \cap F)}{P(E)}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{0.2}{0.6}
+=\frac{1}{3}
+\]
+</p>
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.2 Given: \(P(B)=0.5,\; P(A \cap B)=0.32\) <br>
+Find \(P(A|B)\)
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+सशर्त प्रायिकता के सूत्र के अनुसार —
+</p>
+
+<p class="formula">
+\[
+P(A|B)=\frac{P(A \cap B)}{P(B)}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{0.32}{0.5}
+\]
+</p>
+
+<p class="formula">
+\[
+=0.64
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.3 Given: \(P(A)=0.8,\; P(B)=0.5,\; P(B|A)=0.4\) <br>
+(i) \(P(A \cap B)\) <br>
+(ii) \(P(A|B)\) <br>
+(iii) \(P(A \cup B)\)
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p><b>(i) \(P(A \cap B)\)</b></p>
+
+<p>
+सशर्त प्रायिकता के सूत्र के अनुसार —
+</p>
+
+<p class="formula">
+\[
+P(B|A)=\frac{P(A \cap B)}{P(A)}
+\]
+</p>
+
+<p class="formula">
+\[
+0.4=\frac{P(A \cap B)}{0.8}
+\]
+</p>
+
+<p class="formula">
+\[
+P(A \cap B)=0.4 \times 0.8
+\]
+</p>
+
+<p class="formula">
+\[
+=0.32
+\]
+</p>
+
+<p><b>(ii) \(P(A|B)\)</b></p>
+
+<p>
+सशर्त प्रायिकता के सूत्र के अनुसार —
+</p>
+
+<p class="formula">
+\[
+P(A|B)=\frac{P(A \cap B)}{P(B)}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{0.32}{0.5}
+\]
+</p>
+
+<p class="formula">
+\[
+=0.64
+\]
+</p>
+
+<p><b>(iii) \(P(A \cup B)\)</b></p>
+
+<p>
+योग प्रमेय के अनुसार —
+</p>
+
+<p class="formula">
+\[
+P(A \cup B)=P(A)+P(B)-P(A \cap B)
+\]
+</p>
+
+<p class="formula">
+\[
+=0.8+0.5-0.32
+\]
+</p>
+
+<p class="formula">
+\[
+=0.98
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.4 Given: \(2P(A)=P(B)=\frac{5}{13}\), \(P(A|B)=\frac{2}{5}\) <br>
+Find \(P(A \cup B)\)
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+दिया है —
+</p>
+
+<p class="formula">
+\[
+2P(A)=\frac{5}{13}
+\]
+</p>
+
+<p class="formula">
+\[
+P(A)=\frac{5}{26}
+\]
+</p>
+
+<p class="formula">
+\[
+P(B)=\frac{5}{13}
+\]
+</p>
+
+<p>
+सशर्त प्रायिकता के सूत्र के अनुसार —
+</p>
+
+<p class="formula">
+\[
+P(A|B)=\frac{P(A \cap B)}{P(B)}
+\]
+</p>
+
+<p class="formula">
+\[
+P(A \cap B)=P(A|B)\times P(B)
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{2}{5}\times\frac{5}{13}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{2}{13}
+\]
+</p>
+
+<p>
+अब,
+</p>
+
+<p class="formula">
+\[
+P(A \cup B)=P(A)+P(B)-P(A \cap B)
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{5}{26}+\frac{5}{13}-\frac{2}{13}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{5}{26}+\frac{6}{26}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{11}{26}
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.5 Given: \(P(A)=\frac{6}{11},\; P(B)=\frac{5}{11},\; P(A \cup B)=\frac{7}{11}\) <br>
+(i) \(P(A \cap B)\) <br>
+(ii) \(P(A|B)\) <br>
+(iii) \(P(B|A)\)
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p><b>(i) \(P(A \cap B)\)</b></p>
+
+<p>
+योग प्रमेय के अनुसार —
+</p>
+
+<p class="formula">
+\[
+P(A \cap B)=P(A)+P(B)-P(A \cup B)
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{6}{11}+\frac{5}{11}-\frac{7}{11}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{4}{11}
+\]
+</p>
+
+<p><b>(ii) \(P(A|B)\)</b></p>
+
+<p>
+सशर्त प्रायिकता के सूत्र के अनुसार —
+</p>
+
+<p class="formula">
+\[
+P(A|B)=\frac{P(A \cap B)}{P(B)}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{\frac{4}{11}}{\frac{5}{11}}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{4}{5}
+\]
+</p>
+
+<p><b>(iii) \(P(B|A)\)</b></p>
+
+<p>
+सशर्त प्रायिकता के सूत्र के अनुसार —
+</p>
+
+<p class="formula">
+\[
+P(B|A)=\frac{P(A \cap B)}{P(A)}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{\frac{4}{11}}{\frac{6}{11}}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{2}{3}
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.6 A coin is tossed three times. <br>
+(i) E : Head on third toss, F : Heads on first two tosses <br>
+Find \(P(E|F)\)
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+प्रतिदर्श समष्टि —
+</p>
+
+<p class="formula">
+\[
+S=\{HHH,HHT,HTH,HTT,THH,THT,TTH,TTT\}
+\]
+</p>
+
+<p>
+E : तीसरे उछाल पर Head
+</p>
+
+<p class="formula">
+\[
+E=\{HHH,HTH,THH,TTH\}
+\]
+</p>
+
+<p>
+F : पहले दो उछालों पर Head
+</p>
+
+<p class="formula">
+\[
+F=\{HHH,HHT\}
+\]
+</p>
+
+<p class="formula">
+\[
+E \cap F=\{HHH\}
+\]
+</p>
+
+<p class="formula">
+\[
+P(F)=\frac{2}{8}
+\]
+</p>
+
+<p class="formula">
+\[
+P(E \cap F)=\frac{1}{8}
+\]
+</p>
+
+<p class="formula">
+\[
+P(E|F)=\frac{P(E \cap F)}{P(F)}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{\frac{1}{8}}{\frac{2}{8}}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{1}{2}
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.7 Two coins are tossed once. <br>
+(i) E : Tail appears on one coin <br>
+F : One coin shows head <br>
+Find \(P(E|F)\)
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+प्रतिदर्श समष्टि —
+</p>
+
+<p class="formula">
+\[
+S=\{HH,HT,TH,TT\}
+\]
+</p>
+
+<p>
+E : एक सिक्के पर Tail आए
+</p>
+
+<p class="formula">
+\[
+E=\{HT,TH\}
+\]
+</p>
+
+<p>
+F : एक सिक्के पर Head आए
+</p>
+
+<p class="formula">
+\[
+F=\{HT,TH\}
+\]
+</p>
+
+<p class="formula">
+\[
+E \cap F=\{HT,TH\}
+\]
+</p>
+
+<p class="formula">
+\[
+P(E|F)=\frac{P(E \cap F)}{P(F)}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{\frac{2}{4}}{\frac{2}{4}}
+\]
+</p>
+
+<p class="formula">
+\[
+=1
+\]
+</p>
+
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+Q.7 (ii) E : No tail appears <br>
+F : No head appears <br>
+Find \(P(E|F)\)
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+प्रतिदर्श समष्टि —
+</p>
+
+<p class="formula">
+\[
+S=\{HH,HT,TH,TT\}
+\]
+</p>
+
+<p>
+E : कोई Tail नहीं आता
+</p>
+
+<p class="formula">
+\[
+E=\{HH\}
+\]
+</p>
+
+<p>
+F : कोई Head नहीं आता
+</p>
+
+<p class="formula">
+\[
+F=\{TT\}
+\]
+</p>
+
+<p class="formula">
+\[
+E \cap F=\phi
+\]
+</p>
+
+<p class="formula">
+\[
+P(E|F)=\frac{P(E \cap F)}{P(F)}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{0}{\frac{1}{4}}
+\]
+</p>
+
+<p class="formula">
+\[
+=0
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.8 A die is thrown three times. <br>
+E : 4 appears on third throw <br>
+F : 6 and 5 appear respectively on first two throws <br>
+Find \(P(E|F)\)
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+कुल संभावित परिणाम —
+</p>
+
+<p class="formula">
+\[
+6^3=216
+\]
+</p>
+
+<p>
+F : पहले दो फेंकों पर क्रमशः 6 तथा 5 प्राप्त हों
+</p>
+
+<p class="formula">
+\[
+F=\{(6,5,1),(6,5,2),(6,5,3),(6,5,4),(6,5,5),(6,5,6)\}
+\]
+</p>
+
+<p class="formula">
+\[
+n(F)=6
+\]
+</p>
+
+<p>
+E : तीसरे फेंक पर 4 प्राप्त हो
+</p>
+
+<p class="formula">
+\[
+E \cap F=\{(6,5,4)\}
+\]
+</p>
+
+<p class="formula">
+\[
+n(E \cap F)=1
+\]
+</p>
+
+<p class="formula">
+\[
+P(E|F)=\frac{P(E \cap F)}{P(F)}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{\frac{1}{216}}{\frac{6}{216}}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{1}{6}
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.9 Family Picture <br>
+Persons = Mother (M), Father (F), Son (S) <br>
+E : Son on one end <br>
+F : Father in middle <br>
+Find \(P(E|F)\)
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+कुल व्यवस्थाएँ —
+</p>
+
+<p class="formula">
+\[
+3!=6
+\]
+</p>
+
+<p>
+E : पुत्र एक छोर पर हो
+</p>
+
+<p class="formula">
+\[
+E=\{SMF,SFM,MFS,FMS\}
+\]
+</p>
+
+<p class="formula">
+\[
+n(E)=4
+\]
+</p>
+
+<p>
+F : पिता बीच में हों
+</p>
+
+<p class="formula">
+\[
+F=\{MFS,SFM\}
+\]
+</p>
+
+<p class="formula">
+\[
+n(F)=2
+\]
+</p>
+
+<p class="formula">
+\[
+E \cap F=\{MFS,SFM\}
+\]
+</p>
+
+<p class="formula">
+\[
+n(E \cap F)=2
+\]
+</p>
+
+<p class="formula">
+\[
+P(E|F)=\frac{P(E \cap F)}{P(F)}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{\frac{2}{6}}{\frac{2}{6}}
+\]
+</p>
+
+<p class="formula">
+\[
+=1
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.10 Black and Red Dice <br>
+(a) Given that the black die shows 5, find the probability that the sum is greater than 9.
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+काला पासा 5 दर्शाता है, अतः संभावित परिणाम —
+</p>
+
+<p class="formula">
+\[
+(5,1),(5,2),(5,3),(5,4),(5,5),(5,6)
+\]
+</p>
+
+<p class="formula">
+\[
+n(S)=6
+\]
+</p>
+
+<p>
+योग 9 से अधिक होने के लिए —
+</p>
+
+<p class="formula">
+\[
+(5,5),(5,6)
+\]
+</p>
+
+<p class="formula">
+\[
+n(E)=2
+\]
+</p>
+
+<p class="formula">
+\[
+P(\text{sum}>9 \mid \text{black die}=5)
+=\frac{2}{6}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{1}{3}
+\]
+</p>
+
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+Q.10 (b) Given that the red die shows a number less than 4, find the probability that the sum is 8.
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+लाल पासे पर 4 से छोटी संख्या आने पर संभावित परिणामों की संख्या —
+</p>
+
+<p class="formula">
+\[
+3 \times 6 = 18
+\]
+</p>
+
+<p>
+अनुकूल परिणाम जिनका योग 8 हो —
+</p>
+
+<p class="formula">
+\[
+(3,5),\;(2,6)
+\]
+</p>
+
+<p class="formula">
+\[
+n(E)=2
+\]
+</p>
+
+<p class="formula">
+\[
+P(\text{sum}=8 \mid \text{red die}<4)
+=\frac{2}{18}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{1}{9}
+\]
+</p>
+
+</div>
+
+</div>
+```
+<div class="qa-box">
+
+<div class="question">
+Q.11 Given <br>
+\(E=\{1,3,5\}\) <br>
+\(F=\{2,3\}\) <br>
+\(G=\{2,3,4,5\}\)
+</div>
+
+<div class="answer">
+
+<p><b>(i) \(P(E|F)\) तथा \(P(F|E)\)</b></p>
+
+<p class="formula">
+\[
+E \cap F=\{3\}
+\]
+</p>
+
+<p class="formula">
+\[
+P(E|F)=\frac{P(E \cap F)}{P(F)}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{\frac{1}{6}}{\frac{2}{6}}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{1}{2}
+\]
+</p>
+
+<p class="formula">
+\[
+P(F|E)=\frac{P(E \cap F)}{P(E)}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{\frac{1}{6}}{\frac{3}{6}}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{1}{3}
+\]
+</p>
+
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+Q.11 (ii) Find \(P(E|G)\) and \(P(G|E)\)
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p class="formula">
+\[
+E \cap G=\{3,5\}
+\]
+</p>
+
+<p class="formula">
+\[
+P(E|G)=\frac{P(E \cap G)}{P(G)}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{\frac{2}{6}}{\frac{4}{6}}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{1}{2}
+\]
+</p>
+
+<p class="formula">
+\[
+P(G|E)=\frac{P(E \cap G)}{P(E)}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{\frac{2}{6}}{\frac{3}{6}}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{2}{3}
+\]
+</p>
+
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+Q.11 (iii) Find \(P((E \cup F)|G)\) and \(P((E \cap F)|G)\)
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p class="formula">
+\[
+E \cup F=\{1,2,3,5\}
+\]
+</p>
+
+<p class="formula">
+\[
+(E \cup F)\cap G=\{2,3,5\}
+\]
+</p>
+
+<p class="formula">
+\[
+P((E \cup F)|G)
+=\frac{\frac{3}{6}}{\frac{4}{6}}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{3}{4}
+\]
+</p>
+
+<p class="formula">
+\[
+E \cap F=\{3\}
+\]
+</p>
+
+<p class="formula">
+\[
+P((E \cap F)|G)
+=\frac{\frac{1}{6}}{\frac{4}{6}}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{1}{4}
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.12 Two Children <br>
+(i) Given that the youngest child is a girl, find the probability that both children are girls.
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+प्रतिदर्श समष्टि —
+</p>
+
+<p class="formula">
+\[
+S=\{BB,BG,GB,GG\}
+\]
+</p>
+
+<p>
+सबसे छोटा बच्चा लड़की है, तो संभावित परिणाम —
+</p>
+
+<p class="formula">
+\[
+\{BG,GG\}
+\]
+</p>
+
+<p>
+दोनों बच्चे लड़कियाँ होने का अनुकूल परिणाम —
+</p>
+
+<p class="formula">
+\[
+\{GG\}
+\]
+</p>
+
+<p class="formula">
+\[
+P(\text{Both girls} \mid \text{youngest girl})
+=\frac{1}{2}
+\]
+</p>
+
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+Q.12 (ii) Given that at least one child is a girl, find the probability that both children are girls.
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+कम से कम एक लड़की होने पर संभावित परिणाम —
+</p>
+
+<p class="formula">
+\[
+\{BG,GB,GG\}
+\]
+</p>
+
+<p>
+दोनों बच्चे लड़कियाँ होने का अनुकूल परिणाम —
+</p>
+
+<p class="formula">
+\[
+\{GG\}
+\]
+</p>
+
+<p class="formula">
+\[
+P(\text{Both girls} \mid \text{at least one girl})
+=\frac{1}{3}
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.13 Question Bank <br>
+Easy MCQ = 500 <br>
+Difficult MCQ = 400 <br>
+Find the probability that a randomly selected MCQ is easy.
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+कुल MCQ की संख्या —
+</p>
+
+<p class="formula">
+\[
+500+400=900
+\]
+</p>
+
+<p>
+Easy MCQ की संख्या —
+</p>
+
+<p class="formula">
+\[
+500
+\]
+</p>
+
+<p class="formula">
+\[
+P(\text{Easy MCQ})
+=\frac{500}{900}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{5}{9}
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.14 Two Dice <br>
+Given that the numbers appearing on the two dice are different, find the probability that their sum is 4.
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+दो पासों के कुल संभावित परिणाम —
+</p>
+
+<p class="formula">
+\[
+36
+\]
+</p>
+
+<p>
+दोनों पासों पर समान संख्या आने वाले परिणाम —
+</p>
+
+<p class="formula">
+\[
+6
+\]
+</p>
+
+<p>
+अतः भिन्न संख्याएँ आने पर कुल संभावित परिणाम —
+</p>
+
+<p class="formula">
+\[
+36-6=30
+\]
+</p>
+
+<p>
+योग 4 होने के अनुकूल परिणाम —
+</p>
+
+<p class="formula">
+\[
+(1,3),\;(3,1)
+\]
+</p>
+
+<p>
+ध्यान दें कि \((2,2)\) को शामिल नहीं करेंगे क्योंकि दोनों संख्याएँ समान हैं।
+</p>
+
+<p class="formula">
+\[
+n(E)=2
+\]
+</p>
+
+<p class="formula">
+\[
+P(\text{sum}=4 \mid \text{numbers are different})
+=\frac{2}{30}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{1}{15}
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.15 If the first die shows a multiple of 3 (3 or 6), the die is thrown again. Otherwise a coin is tossed. <br>
+E : Coin shows Tail <br>
+F : At least one die shows 3 <br>
+Find \(P(E|F)\)
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+F : कम से कम एक पासे पर 3 प्राप्त हो।
+</p>
+
+<p>
+F की घटनाएँ —
+</p>
+
+<p class="formula">
+\[
+(3,1),(3,2),(3,3),(3,4),(3,5),(3,6),(6,3)
+\]
+</p>
+
+<p>
+इन सभी स्थितियों में पहला पासा 3 या 6 है, इसलिए सिक्का नहीं उछाला जाता।
+</p>
+
+<p>
+अतः घटना E (सिक्के पर Tail आना) घटित नहीं हो सकती।
+</p>
+
+<p class="formula">
+\[
+E \cap F=\varnothing
+\]
+</p>
+
+<p class="formula">
+\[
+P(E|F)=\frac{P(E \cap F)}{P(F)}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{0}{P(F)}
+\]
+</p>
+
+<p class="formula">
+\[
+=0
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.16 MCQ <br>
+If \(P(B)=0\), then find \(P(A|B)\).
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+सशर्त प्रायिकता का सूत्र —
+</p>
+
+<p class="formula">
+\[
+P(A|B)=\frac{P(A \cap B)}{P(B)}
+\]
+</p>
+
+<p>
+दिया है —
+</p>
+
+<p class="formula">
+\[
+P(B)=0
+\]
+</p>
+
+<p>
+अतः,
+</p>
+
+<p class="formula">
+\[
+P(A|B)=\frac{P(A \cap B)}{0}
+\]
+</p>
+
+<p>
+शून्य से भाग देना परिभाषित नहीं है।
+</p>
+
+<p>
+अतः \(P(A|B)\) परिभाषित नहीं है।
+</p>
+
+<p>
+<b>सही विकल्प : (C) Not Defined</b>
+</p>
+
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+Q.17 MCQ <br>
+Given that
+\[
+P(A|B)=P(B|A)
+\]
+Find the correct option.
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+सशर्त प्रायिकता के सूत्र के अनुसार —
+</p>
+
+<p class="formula">
+\[
+P(A|B)=\frac{P(A \cap B)}{P(B)}
+\]
+</p>
+
+<p class="formula">
+\[
+P(B|A)=\frac{P(A \cap B)}{P(A)}
+\]
+</p>
+
+<p>
+दिया है —
+</p>
+
+<p class="formula">
+\[
+\frac{P(A \cap B)}{P(B)}
+=
+\frac{P(A \cap B)}{P(A)}
+\]
+</p>
+
+<p>
+अतः,
+</p>
+
+<p class="formula">
+\[
+P(A)=P(B)
+\]
+</p>
+
+<p>
+<b>सही विकल्प : (D) \(P(A)=P(B)\)</b>
+</p>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- PROTECTION -->
+
+
+<script>
+
+
+document.addEventListener("contextmenu",
+e=>e.preventDefault());
+
+
+document.addEventListener("selectstart",
+e=>e.preventDefault());
+
+
+document.addEventListener("copy",
+e=>{
+
+e.preventDefault();
+
+alert("Copying content is not allowed");
+
+});
+
+
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
