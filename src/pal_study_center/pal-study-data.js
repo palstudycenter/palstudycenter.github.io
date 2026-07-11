@@ -81,22 +81,22 @@ const PAL_STUDY_DATA = {
         "यूनिट 13 प्रायिकता"
       ],
       "अग्रेजी": [
-        "Flamingo Unit 1 The Last Lesson",
-        "Unit 2 Lost Spring",
-        "Unit 3 Deep Water",
-        "Unit 4 The Rattrap",
-        "Unit 5 Indigo",
-        "Unit 6 Poets and Pancakes",
-        "Unit 7 The Interview",
-        "Unit 8 Going Places",
-        "Vistas Unit 1 The Third Level",
-        "Unit 2 The Tiger King",
-        "Unit 3 Journey to the End of the Earth",
-        "Unit 4 The Enemy",
-        "Unit 5 Should Wizard Hit Mommy",
-        "Unit 6 On the Face of It",
-        "Unit 7 Evans Tries an O-Level",
-        "Unit 8 Memories of Childhood"
+        "Flamingo - Unit 1 The Last Lesson",
+        "Flamingo - Unit 2 Lost Spring",
+        "Flamingo - Unit 3 Deep Water",
+        "Flamingo - Unit 4 The Rattrap",
+        "Flamingo - Unit 5 Indigo",
+        "Flamingo - Unit 6 Poets and Pancakes",
+        "Flamingo - Unit 7 The Interview",
+        "Flamingo - Unit 8 Going Places",
+        "Vistas - Unit 1 The Third Level",
+        "Vistas - Unit 2 The Tiger King",
+        "Vistas - Unit 3 Journey to the End of the Earth",
+        "Vistas - Unit 4 The Enemy",
+        "Vistas - Unit 5 Should Wizard Hit Mommy",
+        "Vistas - Unit 6 On the Face of It",
+        "Vistas - Unit 7 Evans Tries an O-Level",
+        "Vistas - Unit 8 Memories of Childhood"
       ],
       "हिंदी": [
         "यूनिट 1 काव्य खंड (पद्य भाग)",
@@ -110,8 +110,8 @@ const PAL_STUDY_DATA = {
       ]
     },
     "Class 11th": {
-      "भौतिकी": [],
-      "रसायन शास्त्र ": [],
+      "भौतिकी": ["यूनिट 1 - मापन", "यूनिट 2(A) - गति", "यूनिट 2(B) - सदिश", "यूनिट 3(A) - गति के नियम", "यूनिट 3(B) - वृत्तीय गति", "यूनिट 4 - कार्य ऊर्जा तथा शक्ति", "यूनिट 5 - गुरुत्वाकर्षण"],
+      "रसायन शास्त्र ": ["यूनिट 1 - रासायनिक संयोग के नियम", "यूनिट 2 - परमाणु संरचना", "यूनिट 3 - आवर्त नियम", "यूनिट 4 - रासायनिक बंध"],
       "गणित": [],
       "जीवविज्ञान": [],
       "अग्रेजी": [],
@@ -152,8 +152,8 @@ const PAL_STUDY_DATA = {
       "Hindi": []
     },
     "Class 10th": {
-      "Mathematics": ["Real Numbers", "Polynomials"],
-      "Science": ["Chemical equations", "Acids and Bases", "Metals and Non-metals", "Carbon and its compounds"],
+      "Mathematics": ["Real Numbers", "Polynomials", "Quadratic Equations"],
+      "Science": ["Chemical Reaction", "Acids and Bases", "Metals and Non-metals", "Carbon and its compounds", "Life Processes", "Light"],
     }
   }
 };
@@ -211,20 +211,44 @@ const UNIT_FILE_PATHS = {
         "यूनिट 5 (B) जीव और समष्टियाँ" : "",
         "पारितंत्र" : "",
         "यूनिट 5 (C) जैव विविधता एवं संरक्षण" : ""
-      }
+      },
+      "अग्रेजी": {
+        "Flamingo - Unit 1 The Last Lesson": "../units/mp_board_hindi/class_12/english/Flemindo/l1.html",
+        "Flamingo - Unit 2 Lost Spring": "../units/mp_board_hindi/class_12/english/Flemindo/l2.html"
+      },
+    },
+    "Class 11th": {
+      "भौतिकी": {
+        "यूनिट 1 - मापन": "../units/mp_board_hindi/class_11/physics/p1.html",
+        "यूनिट 2(A) - गति": "../units/mp_board_hindi/class_11/physics/p2.1.html", 
+        "यूनिट 2(B) - सदिश": "../units/mp_board_hindi/class_11/physics/p2.2.html", 
+        "यूनिट 3(A) - गति के नियम": "../units/mp_board_hindi/class_11/physics/p3A.html", 
+        "यूनिट 3(B) - वृत्तीय गति": "../units/mp_board_hindi/class_11/physics/p3B.html", 
+        "यूनिट 4 - कार्य ऊर्जा तथा शक्ति": "../units/mp_board_hindi/class_11/physics/p4.html", 
+        "यूनिट 5 - गुरुत्वाकर्षण" : "../units/mp_board_hindi/class_11/physics/p5.html",
+      },
+      "रसायन शास्त्र ":{
+        "यूनिट 1 - रासायनिक संयोग के नियम" : "../units/mp_board_hindi/class_11/Chemistry/c1.html",
+        "यूनिट 2 - परमाणु संरचना" : "../units/mp_board_hindi/class_11/Chemistry/c2.html",
+        "यूनिट 3 - आवर्त नियम" : "../units/mp_board_hindi/class_11/Chemistry/c3.html",
+        "यूनिट 4 - रासायनिक बंध" : "../units/mp_board_hindi/class_11/Chemistry/c4.html"
+      },
     }
   },
   "CBSE": {
     "Class 10th": {
       "Mathematics": {
-        "Real Numbers": "../units/cbse/class_10/mathematics/u1.html",
-        "Polynomials": "../units/cbse/class_10/mathematics/u2.html"
+        "Real Numbers": "../units/cbse/class_10/mathematics/1.html",
+        "Polynomials": "../units/cbse/class_10/mathematics/2.html",
+        "Quadratic Equations": "../units/cbse/class_10/mathematics/4.1.html"
       },
       "Science": {
-        "Chemical equations": "../units/cbse/class_10/science/chemical.html",
+        "Chemical Reaction": "../units/cbse/class_10/science/chemical.html",
         "Acids and Bases": "../units/cbse/class_10/science/acids.html",
         "Metals and Non-metals": "../units/cbse/class_10/science/matels.html",
-        "Carbon and its compounds": "../units/cbse/class_10/science/carbon.html"
+        "Carbon and its compounds": "../units/cbse/class_10/science/carbon.html",
+        "Life Processes": "../units/cbse/class_10/science/Life.html",
+        "Light": "../units/cbse/class_10/science/light.html",
       }
     }
   }

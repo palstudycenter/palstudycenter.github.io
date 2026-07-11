@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | Notes</title>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<script>
+window.MathJax={
+ tex:{
+ inlineMath:[
+ ['$','$'],
+ ['\\(','\\)']
+ ]
+}
+};
+</script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<style>
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+
+body{
+background:#f5f7fb;
+line-height:1.7;
+}
+
+
+/* NAVBAR */
+
+    .navbar{
+
+      background:rgba(15,23,42,0.45);
+
+      backdrop-filter:blur(10px);
+
+      box-shadow:0 4px 18px rgba(0,0,0,.18);
+
+      padding:10px 0;
+
+      transition:.3s;
+
+    }
+
+    .navbar-brand{
+
+      font-size:28px;
+
+      font-weight:700;
+
+      color:white !important;
+
+    }
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+      .navbar-brand{
+        font-size:40px;
+      }
+/* CONTENT */
+
+.notes-container{
+
+max-width:900px;
+
+margin:100px auto 50px;
+
+padding:20px;
+
+}
+
+.notes-title{
+
+background:#e3f2fd;
+
+color:#1565c0;
+
+padding:10px;
+
+border-left:5px solid #1565c0;
+
+border-radius:50px;
+
+font-size:30px;
+
+font-weight:bold;
+margin-top:100px;
+
+margin-bottom:50px;
+
+}
+
+
+
+.qa-box{
+
+background:white;
+
+padding:22px;
+
+margin-bottom:18px;
+
+border-radius:14px;
+
+border-left:6px solid #1565c0;
+
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+transition:.25s;
+
+}
+
+
+.qa-box:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+
+.question{
+
+font-weight:bold;
+
+color:#1b3a57;
+
+margin-bottom:8px;
+
+}
+.question-image{
+    text-align:center;
+    margin:15px 0;
+    overflow-x:auto;
+}
+
+.question-image img{
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:8px;
+}
+
+
+
+.answer{
+
+color:#2c3e50;
+
+text-align:justify;
+
+}
+
+
+
+@media(max-width:768px){
+
+.notes-container{
+
+margin-top:80px;
+
+}
+
+
+}
+.formula{
+    overflow-x:auto;
+    overflow-y:hidden;
+    margin:10px 0;
+}
+
+.table{
+    width:100%;
+    min-width:650px;
+}
+
+
+.table td,
+.table th{
+    vertical-align:middle;
+    text-align:center;
+    white-space:normal;
+}
+
+
+@media(max-width:768px){
+
+.table{
+    min-width:500px;
+    font-size:14px;
+}
+
+}
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<!-- NAVBAR -->
+
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+
+पाल <span>स्टडी सेंटर</span>
+
+</a>
+    <button class="navbar-toggler bg-light"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+</div>
+
+</nav>
+
+
+
+
+
+<!-- NOTES -->
+
+<div class="qa-box">
+  <div class="container">
+ <div class="notes-title">📘 Unit-4 Quadratic Equations</div>  
+</div>
+</div>
+<div class="qa-box">
+
+<div class="question">
+Question 1 (i): Check whether \((x+1)^2=2(x-3)\) is a quadratic equation.
+</div>
+
+<div class="answer">
+
+<p><b>Solution -</b></p>
+
+<p>
+Given equation:
+</p>
+
+<p style="text-align:center;">
+\[
+(x+1)^2=2(x-3)
+\]
+</p>
+
+<p>
+Expanding both sides,
+</p>
+
+<p style="text-align:center;">
+\[
+x^2+2x+1=2x-6
+\]
+</p>
+
+<p>
+Bringing all terms to one side,
+</p>
+
+<p style="text-align:center;">
+\[
+x^2+7=0
+\]
+</p>
+
+<p>
+The highest power of \(x\) is 2.
+</p>
+
+<p>
+<b>Hence, it is a quadratic equation.</b>
+</p>
+
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+Question 1 (ii): Check whether \(x^2-2x=(-2)(3-x)\) is a quadratic equation.
+</div>
+
+<div class="answer">
+
+<p><b>Solution -</b></p>
+
+<p>
+Given equation:
+</p>
+
+<p style="text-align:center;">
+\[
+x^2-2x=(-2)(3-x)
+\]
+</p>
+
+<p>
+Expanding the right-hand side,
+</p>
+
+<p style="text-align:center;">
+\[
+x^2-2x=-6+2x
+\]
+</p>
+
+<p>
+Bringing all terms to one side,
+</p>
+
+<p style="text-align:center;">
+\[
+x^2-4x+6=0
+\]
+</p>
+
+<p>
+The highest power of \(x\) is 2.
+</p>
+
+<p>
+<b>Hence, it is a quadratic equation.</b>
+</p>
+
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+Question 1 (iii): Check whether \((x-2)(x+1)=(x-1)(x+3)\) is a quadratic equation.
+</div>
+
+<div class="answer">
+
+<p><b>Solution -</b></p>
+
+<p>
+Given equation:
+</p>
+
+<p style="text-align:center;">
+\[
+(x-2)(x+1)=(x-1)(x+3)
+\]
+</p>
+
+<p>
+Expanding both sides,
+</p>
+
+<p style="text-align:center;">
+\[
+x^2-x-2=x^2+2x-3
+\]
+</p>
+
+<p>
+Bringing all terms to one side,
+</p>
+
+<p style="text-align:center;">
+\[
+-3x+1=0
+\]
+</p>
+
+<p>
+The highest power of \(x\) is 1.
+</p>
+
+<p>
+<b>Hence, it is not a quadratic equation.</b>
+</p>
+
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+Question 1 (iv): Check whether \((x-3)(2x+1)=x(x+5)\) is a quadratic equation.
+</div>
+
+<div class="answer">
+
+<p><b>Solution -</b></p>
+
+<p>
+Given equation:
+</p>
+
+<p style="text-align:center;">
+\[
+(x-3)(2x+1)=x(x+5)
+\]
+</p>
+
+<p>
+Expanding both sides,
+</p>
+
+<p style="text-align:center;">
+\[
+2x^2-5x-3=x^2+5x
+\]
+</p>
+
+<p>
+Bringing all terms to one side,
+</p>
+
+<p style="text-align:center;">
+\[
+x^2-10x-3=0
+\]
+</p>
+
+<p>
+The highest power of \(x\) is 2.
+</p>
+
+<p>
+<b>Hence, it is a quadratic equation.</b>
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Question 1 (v): Check whether \((2x-1)(x-3)=(x+5)(x-1)\) is a quadratic equation.
+</div>
+
+<div class="answer">
+
+<p><b>Solution -</b></p>
+
+<p>
+Given equation:
+</p>
+
+<p style="text-align:center;">
+\[
+(2x-1)(x-3)=(x+5)(x-1)
+\]
+</p>
+
+<p>
+Expanding both sides,
+</p>
+
+<p style="text-align:center;">
+\[
+2x^2-7x+3=x^2+4x-5
+\]
+</p>
+
+<p>
+Bringing all terms to one side,
+</p>
+
+<p style="text-align:center;">
+\[
+x^2-11x+8=0
+\]
+</p>
+
+<p>
+The highest power of \(x\) is 2.
+</p>
+
+<p>
+<b>Hence, it is a quadratic equation.</b>
+</p>
+
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+Question 1 (vi): Check whether \(x^2+3x+1=(x-2)^2\) is a quadratic equation.
+</div>
+
+<div class="answer">
+
+<p><b>Solution -</b></p>
+
+<p>
+Given equation:
+</p>
+
+<p style="text-align:center;">
+\[
+x^2+3x+1=(x-2)^2
+\]
+</p>
+
+<p>
+Expanding the right-hand side,
+</p>
+
+<p style="text-align:center;">
+\[
+x^2+3x+1=x^2-4x+4
+\]
+</p>
+
+<p>
+Bringing all terms to one side,
+</p>
+
+<p style="text-align:center;">
+\[
+7x-3=0
+\]
+</p>
+
+<p>
+The highest power of \(x\) is 1.
+</p>
+
+<p>
+<b>Hence, it is not a quadratic equation.</b>
+</p>
+
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+Question 1 (vii): Check whether \((x+2)^3=2x(x^2-1)\) is a quadratic equation.
+</div>
+
+<div class="answer">
+
+<p><b>Solution -</b></p>
+
+<p>
+Given equation:
+</p>
+
+<p style="text-align:center;">
+\[
+(x+2)^3=2x(x^2-1)
+\]
+</p>
+
+<p>
+Expanding both sides,
+</p>
+
+<p style="text-align:center;">
+\[
+x^3+6x^2+12x+8=2x^3-2x
+\]
+</p>
+
+<p>
+Bringing all terms to one side,
+</p>
+
+<p style="text-align:center;">
+\[
+x^3-6x^2-14x-8=0
+\]
+</p>
+
+<p>
+The highest power of \(x\) is 3.
+</p>
+
+<p>
+<b>Hence, it is not a quadratic equation.</b>
+</p>
+
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+Question 1 (viii): Check whether \(x^3-4x^2-x+1=(x-2)^3\) is a quadratic equation.
+</div>
+
+<div class="answer">
+
+<p><b>Solution -</b></p>
+
+<p>
+Given equation:
+</p>
+
+<p style="text-align:center;">
+\[
+x^3-4x^2-x+1=(x-2)^3
+\]
+</p>
+
+<p>
+Expanding the right-hand side,
+</p>
+
+<p style="text-align:center;">
+\[
+x^3-4x^2-x+1=x^3-6x^2+12x-8
+\]
+</p>
+
+<p>
+Bringing all terms to one side,
+</p>
+
+<p style="text-align:center;">
+\[
+2x^2-13x+9=0
+\]
+</p>
+
+<p>
+The highest power of \(x\) is 2.
+</p>
+
+<p>
+<b>Hence, it is a quadratic equation.</b>
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Question 2 (i): The area of a rectangular plot is 528 m<sup>2</sup>. The length of the plot (in metres) is one more than twice its breadth. Represent the situation in the form of a quadratic equation.
+</div>
+
+<div class="answer">
+
+<p><b>Solution -</b></p>
+
+<p>
+Let the breadth of the rectangular plot be \(x\) m.
+</p>
+
+<p>
+Then, the length of the plot is \((2x+1)\) m.
+</p>
+
+<p>
+Area of the plot = Length × Breadth
+</p>
+
+<p style="text-align:center;">
+\[
+x(2x+1)=528
+\]
+</p>
+
+<p>
+Bringing all the terms to one side,
+</p>
+
+<p style="text-align:center;">
+\[
+2x^2+x-528=0
+\]
+</p>
+
+<p>
+<b>Hence, the required quadratic equation is</b>
+</p>
+
+<p style="text-align:center;">
+\[
+2x^2+x-528=0
+\]
+</p>
+
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+Question 2 (ii): The product of two consecutive positive integers is 306. Represent the situation in the form of a quadratic equation.
+</div>
+
+<div class="answer">
+
+<p><b>Solution -</b></p>
+
+<p>
+Let the first positive integer be \(x\).
+</p>
+
+<p>
+Then, the next consecutive integer is \((x+1)\).
+</p>
+
+<p>
+According to the question,
+</p>
+
+<p style="text-align:center;">
+\[
+x(x+1)=306
+\]
+</p>
+
+<p>
+Bringing all the terms to one side,
+</p>
+
+<p style="text-align:center;">
+\[
+x^2+x-306=0
+\]
+</p>
+
+<p>
+<b>Hence, the required quadratic equation is</b>
+</p>
+
+<p style="text-align:center;">
+\[
+x^2+x-306=0
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Question 2 (iii): Rohan's mother is 26 years older than him. The product of their ages (in years) 3 years from now will be 360. Represent the situation in the form of a quadratic equation.
+</div>
+
+<div class="answer">
+
+<p><b>Solution -</b></p>
+
+<p>
+Let Rohan's present age be \(x\) years.
+</p>
+
+<p>
+Then, his mother's present age is \((x+26)\) years.
+</p>
+
+<p>
+After 3 years,
+</p>
+
+<p>
+Rohan's age = \((x+3)\) years
+</p>
+
+<p>
+
+Mother's age = \((x+29)\) years
+</p>
+
+<p>
+According to the question,
+</p>
+
+<p style="text-align:center;">
+\[
+(x+3)(x+29)=360
+\]
+</p>
+
+<p>
+Expanding,
+</p>
+
+<p style="text-align:center;">
+\[
+x^2+32x+87=360
+\]
+</p>
+
+<p>
+Bringing all the terms to one side,
+</p>
+
+<p style="text-align:center;">
+\[
+x^2+32x-273=0
+\]
+</p>
+
+<p>
+<b>Hence, the required quadratic equation is</b>
+</p>
+
+<p style="text-align:center;">
+\[
+x^2+32x-273=0
+\]
+</p>
+
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+Question 2 (iv): A train travels a distance of 480 km at a uniform speed. If the speed had been 8 km/h less, then it would have taken 3 hours more to cover the same distance. Represent the situation in the form of a quadratic equation.
+</div>
+
+<div class="answer">
+
+<p><b>Solution -</b></p>
+
+<p>
+Let the speed of the train be \(x\) km/h.
+</p>
+
+<p>
+Time taken to travel 480 km = \(\dfrac{480}{x}\) hours.
+</p>
+
+<p>
+If the speed were \((x-8)\) km/h, then the time taken would be \(\dfrac{480}{x-8}\) hours.
+</p>
+
+<p>
+According to the question,
+</p>
+
+<p style="text-align:center;">
+\[
+\frac{480}{x-8}=\frac{480}{x}+3
+\]
+</p>
+
+<p>
+Multiplying both sides by \(x(x-8)\),
+</p>
+
+<p style="text-align:center;">
+\[
+480x=480(x-8)+3x(x-8)
+\]
+</p>
+
+<p>
+Simplifying,
+</p>
+
+<p style="text-align:center;">
+\[
+3x^2-24x-3840=0
+\]
+</p>
+
+<p>
+Dividing throughout by 3,
+</p>
+
+<p style="text-align:center;">
+\[
+x^2-8x-1280=0
+\]
+</p>
+
+<p>
+<b>Hence, the required quadratic equation is</b>
+</p>
+
+<p style="text-align:center;">
+\[
+x^2-8x-1280=0
+\]
+</p>
+
+</div>
+
+</div>
+
+
+
+
+
+<!-- PROTECTION -->
+
+
+<script>
+
+
+document.addEventListener("contextmenu",
+e=>e.preventDefault());
+
+
+document.addEventListener("selectstart",
+e=>e.preventDefault());
+
+
+document.addEventListener("copy",
+e=>{
+
+e.preventDefault();
+
+alert("Copying content is not allowed");
+
+});
+
+
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
+
