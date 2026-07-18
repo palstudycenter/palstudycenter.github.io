@@ -219,13 +219,13 @@ const UNIT_FILE_PATHS = {
     },
     "Class 11th": {
       "भौतिकी": {
-        "यूनिट 1 - मापन": "../units/mp_board_hindi/class_11/physics/p1.html",
-        "यूनिट 2(A) - गति": "../units/mp_board_hindi/class_11/physics/p2.1.html", 
-        "यूनिट 2(B) - सदिश": "../units/mp_board_hindi/class_11/physics/p2.2.html", 
-        "यूनिट 3(A) - गति के नियम": "../units/mp_board_hindi/class_11/physics/p3A.html", 
-        "यूनिट 3(B) - वृत्तीय गति": "../units/mp_board_hindi/class_11/physics/p3B.html", 
-        "यूनिट 4 - कार्य ऊर्जा तथा शक्ति": "../units/mp_board_hindi/class_11/physics/p4.html", 
-        "यूनिट 5 - गुरुत्वाकर्षण" : "../units/mp_board_hindi/class_11/physics/p5.html",
+        "यूनिट 1 - मापन": "../units/mp_board_hindi/class_11/Physics/p1.html",
+        "यूनिट 2(A) - गति": "../units/mp_board_hindi/class_11/Physics/p2.1.html", 
+        "यूनिट 2(B) - सदिश": "../units/mp_board_hindi/class_11/Physics/p2.2.html", 
+        "यूनिट 3(A) - गति के नियम": "../units/mp_board_hindi/class_11/Physics/p3A.html", 
+        "यूनिट 3(B) - वृत्तीय गति": "../units/mp_board_hindi/class_11/Physics/p3B.html", 
+        "यूनिट 4 - कार्य ऊर्जा तथा शक्ति": "../units/mp_board_hindi/class_11/Physics/p4.html", 
+        "यूनिट 5 - गुरुत्वाकर्षण" : "../units/mp_board_hindi/class_11/Physics/p5.html",
       },
       "रसायन शास्त्र ":{
         "यूनिट 1 - रासायनिक संयोग के नियम" : "../units/mp_board_hindi/class_11/Chemistry/c1.html",
