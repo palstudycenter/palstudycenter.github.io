@@ -134,8 +134,8 @@ const PAL_STUDY_DATA = {
   },
   "MP Board (English Medium)": {
     "Class 12th": {
-      "Physics": ["Unit 1 Electrostatics"],
-      "Chemistry": [],
+      "Physics": ["Unit 1(A) - Electrostatics", "Unit 1(B) - Electric potentials", "Unit 2(C)- Capacity", "Unit 2 - Electric Current"],
+      "Chemistry": ["Unit 1 - Solution", "Unit 2 - Electrochemistry", "Unit 3 - Chemical Kinetics", "Unit 4 - d and f Block Elements", "Unit 5 - Coordination Compounds", "Unit 6 - Haloalkanes and Haloarenes", "Unit 7 - Alcohols", "Unit 8 - Phenols", "Unit 9 - Ethers", "Unit 10 - Aldehydes and Ketones", "Unit 11 - Carboxylic Acids", "Unit 12 - Amines", "Unit 13 - Biomolecules"],
       "Mathematics": [],
       "Biology": [],
       "English": [],
@@ -233,6 +233,22 @@ const UNIT_FILE_PATHS = {
         "यूनिट 3 - आवर्त नियम" : "../units/mp_board_hindi/class_11/Chemistry/c3.html",
         "यूनिट 4 - रासायनिक बंध" : "../units/mp_board_hindi/class_11/Chemistry/c4.html"
       },
+    }
+  },
+  "MP Board (English Medium)": {
+    "Class 12th": {
+      "भौतिकी": {
+        "Unit 1(A) - Electrostatics": "../units/mp_board_hindi/class_12/physics/unit1/1a.html",
+        "Unit 1(B) - Electric potentials": "../units/mp_board_hindi/class_12/physics/unit1/1b.html",
+        "Unit 2(C)- Capacity": "../units/mp_board_hindi/class_12/physics/unit1/1c.html",
+        "Unit 2 - Electric Current": "../units/mp_board_hindi/class_12/physics/unit1/2.html"
+      },
+      "रसायन शास्त्र ": {
+        "Unit 1 - Solution": "../units/mp_board_hindi/class_12/chemistry/unit1/c1/1.html",
+        "Unit 2 - Electrochemistry": "../units/mp_board_hindi/class_12/chemistry/unit1/c2/2.html",
+        "Unit 3 - Chemical Kinetics": "../units/mp_board_hindi/class_12/chemistry/unit1/c3/3.html",
+        "Unit 4 - d and f Block Elements": "../units/mp_board_hindi/class_12/chemistry/unit1/c4/4.html"
+      }
     }
   },
   "CBSE": {

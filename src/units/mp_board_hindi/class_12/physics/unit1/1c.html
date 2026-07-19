@@ -1,0 +1,1581 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | Notes</title>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<script>
+window.MathJax={
+ tex:{
+ inlineMath:[
+ ['$','$'],
+ ['\\(','\\)']
+ ]
+}
+};
+</script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<style>
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+
+body{
+background:#f5f7fb;
+line-height:1.7;
+}
+
+
+/* NAVBAR */
+
+    .navbar{
+
+      background:rgba(15,23,42,0.45);
+
+      backdrop-filter:blur(10px);
+
+      box-shadow:0 4px 18px rgba(0,0,0,.18);
+
+      padding:10px 0;
+
+      transition:.3s;
+
+    }
+
+    .navbar-brand{
+
+      font-size:28px;
+
+      font-weight:700;
+
+      color:white !important;
+
+    }
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+      .navbar-brand{
+        font-size:40px;
+      }
+/* CONTENT */
+
+.notes-container{
+
+max-width:900px;
+
+margin:100px auto 50px;
+
+padding:20px;
+
+}
+
+.notes-title{
+
+background:#e3f2fd;
+
+color:#1565c0;
+
+padding:10px;
+
+border-left:5px solid #1565c0;
+
+border-radius:50px;
+
+font-size:30px;
+
+font-weight:bold;
+margin-top:100px;
+
+margin-bottom:50px;
+
+}
+
+
+
+.qa-box{
+
+background:white;
+
+padding:22px;
+
+margin-bottom:18px;
+
+border-radius:14px;
+
+border-left:6px solid #1565c0;
+
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+transition:.25s;
+
+}
+
+
+.qa-box:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+
+.question{
+
+font-weight:bold;
+
+color:#1b3a57;
+
+margin-bottom:8px;
+
+}
+.question-image{
+    text-align:center;
+    margin:15px 0;
+    overflow-x:auto;
+}
+
+.question-image img{
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:8px;
+}
+
+
+
+.answer{
+
+color:#2c3e50;
+
+text-align:justify;
+
+}
+
+
+
+@media(max-width:768px){
+
+.notes-container{
+
+margin-top:80px;
+
+}
+
+
+}
+.formula{
+    overflow-x:auto;
+    overflow-y:hidden;
+    margin:10px 0;
+}
+
+.table{
+    width:100%;
+    min-width:650px;
+}
+
+
+.table td,
+.table th{
+    vertical-align:middle;
+    text-align:center;
+    white-space:normal;
+}
+
+
+@media(max-width:768px){
+
+.table{
+    min-width:500px;
+    font-size:14px;
+}
+
+}
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<!-- NAVBAR -->
+
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+
+पाल <span>स्टडी सेंटर</span>
+
+</a>
+    <button class="navbar-toggler bg-light"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+</div>
+
+</nav>
+
+
+
+
+
+<!-- NOTES -->
+
+<div class="qa-box">
+  <div class="container">
+ <div class="notes-title">📘 Unit 2(C)- Capacity</div>  
+</div>
+</div><div class="qa-box">
+
+<div class="question">
+Q. What do you understand by the Capacity of a Conductor?
+</div>
+
+<div class="answer">
+The charge given to a conductor is directly proportional to its potential.
+</div>
+
+<div class="answer">
+If a charge \(Q\) is given to a conductor and its potential becomes \(V\), then—
+</div>
+
+<div class="formula">
+$$
+Q \propto V
+$$
+</div>
+
+<div class="formula">
+$$
+Q = CV
+$$
+</div>
+
+<div class="answer">
+Where \(C\) is a constant, called the <b>capacity (capacitance)</b> of the conductor.
+</div>
+
+<div class="answer">
+The SI unit of capacitance is coulomb per volt, which is called the <b>farad</b>.
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+Q. What do you understand by One Farad?
+</div>
+
+<div class="answer">
+Farad is the SI unit of capacitance.
+</div>
+
+<div class="answer">
+If the potential of a conductor increases by 1 volt when it is given a charge of 1 coulomb, then its capacitance is called <b>one farad</b>.
+</div>
+
+<div class="formula">
+$$
+1\,F=\frac{1\,C}{1\,V}
+$$
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+Q. What are the factors affecting the capacitance of a conductor? How do they affect it?
+</div>
+
+<div class="answer">
+The capacitance of a conductor depends upon the following factors—
+</div>
+
+<div class="answer">
+<b>1. Dependence on the size of the conductor –</b>
+</div>
+
+<div class="answer">
+If the size of the conductor is increased, its potential decreases and therefore its capacitance increases.
+</div>
+
+<div class="answer">
+<b>2. Dependence on the presence of other conductors –</b>
+</div>
+
+<div class="answer">
+When an uncharged conductor is brought near a charged conductor, its potential decreases and hence its capacitance increases.
+</div>
+
+<div class="answer">
+<b>3. Dependence on the nature of the medium –</b>
+</div>
+
+<div class="answer">
+If a dielectric medium is present around the conductor, its potential decreases, thereby increasing its capacitance.
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+Q. Prove that the capacitance of an isolated spherical conductor is directly proportional to its radius. Or, derive the expression for the capacitance of a spherical conductor.
+</div>
+
+<div class="question-image">
+<img src="image6.png" alt="Question Image">
+</div>
+
+<div class="answer">
+Consider an isolated spherical conductor of radius \(r\). Let it be given a charge \(+Q\). The charge is uniformly distributed over its surface; therefore, the entire surface is an equipotential surface.
+</div>
+
+<div class="answer">
+In this case, the whole charge may be assumed to be concentrated at the centre of the sphere.
+</div>
+
+<div class="answer">
+Hence, the potential at the surface of the sphere is—
+</div>
+
+<div class="formula">
+$$
+V=\frac{1}{4\pi\varepsilon_0}\cdot\frac{Q}{r}
+$$
+</div>
+
+<div class="answer">
+Capacitance of the conductor—
+</div>
+
+<div class="formula">
+$$
+C=\frac{Q}{V}
+$$
+</div>
+
+<div class="formula">
+$$
+C=\frac{Q}{\frac{1}{4\pi\varepsilon_0}\cdot\frac{Q}{r}}
+$$
+</div>
+
+<div class="formula">
+$$
+C=4\pi\varepsilon_0r
+$$
+</div>
+
+<div class="answer">
+Hence, it is clear that—
+</div>
+
+<div class="formula">
+$$
+C\propto r
+$$
+</div>
+
+<div class="answer">
+Therefore, the capacitance of an isolated spherical conductor is directly proportional to its radius.
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q. Is a spherical conductor of capacitance 1 farad possible?
+</div>
+
+<div class="answer">
+No, an isolated spherical conductor having a capacitance of 1 farad is not practically possible.
+</div>
+
+<div class="answer">
+Because the capacitance of a spherical conductor is given by—
+</div>
+
+<div class="formula">
+$$
+C = 4 \pi \varepsilon_0 R
+$$
+</div>
+
+<div class="answer">
+Therefore, the radius is—
+</div>
+
+<div class="formula">
+$$
+R = \frac{C}{4 \pi \varepsilon_0}
+$$
+</div>
+
+<div class="answer">
+If \(C = 1\,F\) and \(\frac{1}{4\pi\varepsilon_0}=9\times10^9\), then—
+</div>
+
+<div class="formula">
+$$
+R = 9 \times 10^9 \, m
+$$
+</div>
+
+<div class="answer">
+This radius is extremely large (much greater than the size of the Earth). Therefore, an isolated spherical conductor having a capacitance of 1 farad is not practically possible.
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+Q. What is a Condenser (Capacitor)? Explain its principle.
+</div>
+
+<div class="answer">
+A condenser (capacitor) is a device used to store electric charge.
+</div>
+
+<div class="answer">
+It consists of two conductors placed close to each other, separated by air or a dielectric medium.
+</div>
+
+<div class="answer">
+When one conductor is charged and the other conductor is connected to the earth, the charge storage capacity increases due to electrostatic induction.
+</div>
+
+<div class="answer">
+</div>
+
+<div class="question">
+Principle:
+</div>
+
+<div class="answer">
+The principle of a condenser is that the capacitance of a conductor increases in the presence of another conductor connected to the earth or placed nearby because its potential decreases while it can hold more charge.
+</div>
+
+<div class="answer">
+That is—
+</div>
+
+<div class="formula">
+$$
+Q \propto V \quad \Rightarrow \quad Q = CV
+$$
+</div>
+
+<div class="answer">
+Where \(C\) is a constant called the capacitance.
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+Q. Describe the construction of a parallel plate capacitor and derive an expression for its capacitance.
+</div>
+
+<div class="question-image">
+<img src="4.png" alt="Question Image">
+</div>
+
+<div class="answer">
+
+<b>Construction —</b><br>
+It consists of two parallel metallic plates X and Y placed close to each other. The space between the plates is filled with air or a dielectric medium. Plate X is given a charge while plate Y is connected to the earth.
+
+<br><br>
+
+<b>Expression for Capacitance —</b><br>
+Consider a parallel plate capacitor whose plates have area \(A\) and are separated by a distance \(d\). A dielectric medium of dielectric constant \(K\) is filled between the plates. Plate X is given a charge \(Q\) and plate Y is connected to the earth.
+
+<br><br>
+
+Due to electrostatic induction, a charge \(-Q\) appears on the inner surface of plate Y, while the \(+Q\) charge on its outer surface flows to the earth. Therefore, the surface charge density on each plate is
+
+$$
+\sigma=\frac{Q}{A}
+$$
+
+<br>
+
+Electric field intensity due to plate X at point P is
+
+$$
+E_x=\frac{\sigma}{2\varepsilon_0K}
+$$
+
+(Towards plate Y)
+
+<br><br>
+
+Similarly, due to plate Y,
+
+$$
+E_y=\frac{\sigma}{2\varepsilon_0K}
+$$
+
+(Towards plate Y)
+
+<br><br>
+
+Since both electric fields are in the same direction, the resultant electric field is
+
+$$
+E=E_x+E_y
+$$
+
+$$
+E=\frac{\sigma}{2\varepsilon_0K}+\frac{\sigma}{2\varepsilon_0K}
+$$
+
+$$
+E=\frac{2\sigma}{2\varepsilon_0K}
+$$
+
+$$
+E=\frac{\sigma}{\varepsilon_0K}
+$$
+
+<br><br>
+
+Therefore, the potential difference between the plates is
+
+$$
+V=E\times d
+$$
+
+$$
+V=\frac{\sigma}{\varepsilon_0K}\times d
+$$
+
+$$
+V=\frac{Q}{\varepsilon_0KA}\times d
+$$
+
+<br><br>
+
+Hence, the capacitance is
+
+$$
+C=\frac{Q}{V}
+$$
+
+$$
+C=\frac{Q}{\left(\frac{Q}{\varepsilon_0KA}\times d\right)}
+$$
+
+$$
+C=\frac{\varepsilon_0KA}{d}
+$$
+
+<br><br>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q. How can the capacitance of a parallel plate capacitor be increased?
+</div>
+
+<div class="answer">
+
+The capacitance of a parallel plate capacitor is given by
+
+$$
+C=\frac{\varepsilon_0KA}{d}
+$$
+
+Therefore, its capacitance depends upon the following factors—
+
+<br><br>
+
+<b>1. Area of the plates —</b><br>
+Since \(C \propto A\), the capacitance increases if the area of the plates is increased.
+
+<br><br>
+
+<b>2. Dielectric constant of the medium —</b><br>
+Since \(C \propto K\), the capacitance increases if a medium having a higher dielectric constant is placed between the plates.
+
+<br><br>
+
+<b>3. Distance between the plates —</b><br>
+Since \(C \propto \frac{1}{d}\), the capacitance increases if the distance between the plates is decreased.
+
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+Q. Derive the expression for the capacitance of a parallel plate capacitor partially filled with a dielectric medium.
+</div>
+
+<div class="question-image">
+<img src="6.png" alt="Question Image">
+</div>
+
+<div class="answer">
+
+Consider a parallel plate capacitor having plate area \(A\) and separation \(d\). A dielectric slab of thickness \(t\) and dielectric constant \(K\) is placed between the plates. Plate X is given a charge \(Q\) and plate Y is connected to the earth.
+
+<br><br>
+
+Due to electrostatic induction, a charge \(-Q\) appears on the inner surface of plate Y, while the charge on its outer surface flows to the earth.
+
+Therefore, the surface charge density on each plate is
+
+$$
+\sigma=\frac{Q}{A}
+$$
+
+<br>
+
+The electric field intensity in the air region is
+
+$$
+E_a=\frac{\sigma}{\varepsilon_0}
+$$
+
+<br>
+
+The electric field intensity inside the dielectric medium is
+
+$$
+E_m=\frac{\sigma}{\varepsilon_0K}
+$$
+
+<br><br>
+
+Hence, the potential difference between the two plates is
+
+$$
+V=E_a(d-t)+E_m(t)
+$$
+
+$$
+V=\frac{\sigma}{\varepsilon_0}(d-t)+\frac{\sigma}{\varepsilon_0K}(t)
+$$
+
+$$
+V=\frac{\sigma}{\varepsilon_0}\left(d-t+\frac{t}{K}\right)
+$$
+
+$$
+V=\frac{Q}{\varepsilon_0A}\left(d-t+\frac{t}{K}\right)
+$$
+
+<br><br>
+
+Therefore, the capacitance of the capacitor is
+
+$$
+C=\frac{Q}{V}
+$$
+
+$$
+C=\frac{Q}{\frac{Q}{\varepsilon_0A}\left(d-t+\frac{t}{K}\right)}
+$$
+
+$$
+C=\frac{\varepsilon_0A}{\left(d-t+\frac{t}{K}\right)}
+$$
+
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+Q. Describe the construction of a spherical capacitor and derive an expression for its capacitance.
+</div>
+
+<div class="question-image">
+<img src="12.png" alt="Question Image">
+</div>
+
+<div class="answer">
+
+<b>Construction —</b><br>
+It consists of two concentric hollow metallic spheres X and Y which do not touch each other. The space between them is filled with air or a dielectric medium. The outer sphere Y is connected to the earth, while the inner sphere X is connected to a metallic rod H.
+
+<br><br>
+
+<b>Let —</b><br>
+The radius of the inner sphere X be \(a\) and that of the outer sphere Y be \(b\). A dielectric medium of dielectric constant \(K\) is present between the two spheres.
+
+The inner sphere X is given a charge \(Q\), while the outer sphere Y is connected to the earth.
+
+<br><br>
+
+Due to electrostatic induction, a charge \(-Q\) appears on the inner surface of the outer sphere Y, while the charge on its outer surface flows to the earth.
+
+<br><br>
+
+Now, the potential of the inner sphere X is
+
+$$
+V_1=\frac{1}{4\pi\varepsilon_0K}\cdot\frac{Q}{a}-\frac{1}{4\pi\varepsilon_0K}\cdot\frac{Q}{b}
+$$
+
+$$
+V_1=\frac{1}{4\pi\varepsilon_0K}\left(\frac{Q}{a}-\frac{Q}{b}\right)
+$$
+
+$$
+V_1=\frac{Q}{4\pi\varepsilon_0K}\left(\frac{b-a}{ab}\right)
+$$
+
+<br>
+
+Since the outer sphere Y is connected to the earth,
+
+$$
+V_2=0
+$$
+
+<br>
+
+Therefore, the potential difference is
+
+$$
+V=V_1-V_2
+$$
+
+$$
+V=\frac{Q}{4\pi\varepsilon_0K}\left(\frac{b-a}{ab}\right)
+$$
+
+<br><br>
+
+Hence, the capacitance of the spherical capacitor is
+
+$$
+C=\frac{Q}{V}
+$$
+
+$$
+C=4\pi\varepsilon_0K\left(\frac{ab}{b-a}\right)
+$$
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q. What are the factors affecting the capacitance of a spherical capacitor? How can its capacitance be increased?
+</div>
+
+<div class="answer">
+
+The capacitance of a spherical capacitor is given by
+
+$$
+C=4\pi\varepsilon_0K\left(\frac{ab}{b-a}\right)
+$$
+
+Therefore, its capacitance depends upon the following factors—
+
+<br><br>
+
+<b>1. Radius of both spheres —</b><br>
+The greater the radii \(a\) and \(b\) of the two spheres, the greater will be the capacitance of the capacitor.
+
+<br><br>
+
+<b>2. Difference between the radii —</b><br>
+The smaller the difference \((b-a)\) between the radii of the two spheres, the greater will be the capacitance.
+
+<br><br>
+
+<b>3. Dielectric medium —</b><br>
+The greater the dielectric constant \(K\) of the medium between the spheres, the greater will be the capacitance of the capacitor.
+
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+Q. Derive the expression for the capacitance of a Cylindrical Condenser.
+</div>
+
+<div class="question-image">
+<img src="5.png" alt="Question Image">
+</div>
+
+<div class="answer">
+The construction of a cylindrical condenser is shown in the figure. X and Y are two coaxial cylinders which do not touch each other. The space between them is filled with air or a dielectric medium. Cylinder X is given a positive charge, while cylinder Y is connected to the earth.
+</div>
+
+<div class="answer">
+Expression for capacitance — Let the linear charge density on cylinder X be \( \lambda \), and let the radii of cylinders X and Y be \(a\) and \(b\), respectively, where \(b>a\).
+</div>
+
+<div class="answer">
+∴ The electric field intensity at a distance \(r\) due to cylinder X in the medium between the cylinders is—
+</div>
+
+<div class="formula">
+$$
+E=
+\frac{1}{2\pi\varepsilon_0K}
+\times
+\frac{\lambda}{r}
+$$
+</div>
+
+<div class="answer">
+∴ The potential difference between the two cylinders is—
+</div>
+
+<div class="formula">
+$$
+V=\int_a^b E\,dx
+$$
+</div>
+
+<div class="formula">
+$$
+V=\int_a^b
+\frac{1}{2\pi\varepsilon_0K}
+\times
+\frac{\lambda}{x}
+\,dx
+$$
+</div>
+
+<div class="formula">
+$$
+V=
+\frac{\lambda}{2\pi\varepsilon_0K}
+\int_a^b\frac{1}{x}dx
+$$
+</div>
+
+<div class="formula">
+$$
+V=
+\frac{\lambda}{2\pi\varepsilon_0K}
+[\log x]_a^b
+$$
+</div>
+
+<div class="formula">
+$$
+V=
+\frac{\lambda}{2\pi\varepsilon_0K}
+[\log b-\log a]
+$$
+</div>
+
+<div class="formula">
+$$
+V=
+\frac{\lambda}{2\pi\varepsilon_0K}
+\log\left(\frac{b}{a}\right)
+$$
+</div>
+
+<div class="answer">
+∴ The capacitance per unit length of the cylindrical condenser is—
+</div>
+
+<div class="formula">
+$$
+C=\frac{\lambda}{V}
+$$
+</div>
+
+<div class="formula">
+$$
+C=
+\frac{\lambda}
+{\frac{\lambda}{2\pi\varepsilon_0K}
+\log\left(\frac{b}{a}\right)}
+$$
+</div>
+
+<div class="formula">
+$$
+C=
+\frac{2\pi\varepsilon_0K}
+{\log\left(\frac{b}{a}\right)}
+$$
+</div>
+
+<div class="answer">
+Hence, this is the required expression for the capacitance of a cylindrical condenser.
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+Q. How can the capacitance of a Cylindrical Condenser be increased?
+</div>
+
+<div class="answer">
+The capacitance of a cylindrical condenser is given by—
+</div>
+
+<div class="formula">
+$$
+C=
+\frac{2\pi\varepsilon_0K}
+{\log\left(\frac{b}{a}\right)}
+$$
+</div>
+
+<div class="answer">
+Therefore, the following points should be considered to increase the capacitance of a cylindrical condenser—
+</div>
+
+<div class="answer">
+1. The length of both cylinders should be increased.<br><br>
+
+2. The value of \(b/a\) should be small, i.e., the radii of the two cylinders should be nearly equal.<br><br>
+
+3. The medium between the two cylinders should have a high dielectric constant.
+</div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        Q. What do you understand by the Series Combination of Capacitors? Derive the expression for equivalent capacitance in series combination.
+    </div>
+
+    <div class="answer">
+        If the second plate of the first capacitor is connected to the first plate of the second capacitor, the second plate of the second capacitor is connected to the first plate of the third capacitor, the first plate of the first capacitor is charged, and the second plate of the last capacitor is connected to the earth, then this arrangement is called the <b>series combination of capacitors</b>. In this arrangement, the charge on each capacitor remains the same.
+    </div>
+
+    <div class="question-image">
+        <img src="8.png" alt="Series Combination of Capacitors">
+    </div>
+
+    <div class="answer">
+        <b>Derivation —</b> Let three capacitors of capacitances \(C_1\), \(C_2\), and \(C_3\) be connected in series across a source of potential difference \(V\). The first plate of the first capacitor is given a charge \(+Q\), and the second plate of the last capacitor is connected to the earth. Therefore, charges \(+Q\) and \(-Q\) appear on the plates of each capacitor.
+    </div>
+
+    <div class="answer">
+        Let the potential differences across the three capacitors be \(V_1\), \(V_2\), and \(V_3\), respectively.
+    </div>
+
+    <div class="answer">
+        Then —
+    </div>
+
+    <div class="formula">
+        \[
+        V_1=\frac{Q}{C_1}
+        \]
+    </div>
+
+    <div class="formula">
+        \[
+        V_2=\frac{Q}{C_2}
+        \]
+    </div>
+
+    <div class="formula">
+        \[
+        V_3=\frac{Q}{C_3}
+        \]
+    </div>
+
+    <div class="answer">
+        If the equivalent capacitance is \(C\), then the total potential difference is —
+    </div>
+
+    <div class="formula">
+        \[
+        V=\frac{Q}{C}
+        \]
+    </div>
+
+    <div class="answer">
+        But in series combination —
+    </div>
+
+    <div class="formula">
+        \[
+        V=V_1+V_2+V_3
+        \]
+    </div>
+
+    <div class="formula">
+        \[
+        \frac{Q}{C}=\frac{Q}{C_1}+\frac{Q}{C_2}+\frac{Q}{C_3}
+        \]
+    </div>
+
+    <div class="formula">
+        \[
+        \boxed{\frac{1}{C}=\frac{1}{C_1}+\frac{1}{C_2}+\frac{1}{C_3}}
+        \]
+    </div>
+
+    <div class="answer">
+        Hence, the equivalent capacitance of capacitors connected in series is equal to the reciprocal of the sum of the reciprocals of their individual capacitances.
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        Q. What do you understand by the Parallel Combination of Capacitors? Derive the expression for equivalent capacitance in parallel combination.
+    </div>
+
+    <div class="answer">
+        In this combination, one plate of each capacitor is connected to point A and charged, while the other plate is connected to point B and then to the earth. Thus, the potential difference across each capacitor remains the same.
+    </div>
+
+    <div class="question-image">
+        <img src="9.png" alt="Parallel Combination of Capacitors">
+    </div>
+
+    <div class="answer">
+        <b>Derivation —</b> Let three capacitors of capacitances \(C_1\), \(C_2\), and \(C_3\) be connected in parallel across a source of potential difference \(V\). Therefore, the potential difference across each capacitor is the same, i.e., \(V\).
+    </div>
+
+    <div class="answer">
+        If a total charge \(+Q\) is supplied to point A, it gets divided into three parts \(Q_1\), \(Q_2\), and \(Q_3\).
+    </div>
+
+    <div class="answer">
+        Then—
+    </div>
+
+    <div class="formula">
+        \[
+        Q_1=C_1V
+        \]
+    </div>
+
+    <div class="formula">
+        \[
+        Q_2=C_2V
+        \]
+    </div>
+
+    <div class="formula">
+        \[
+        Q_3=C_3V
+        \]
+    </div>
+
+    <div class="answer">
+        If the equivalent capacitance is \(C\), then—
+    </div>
+
+    <div class="formula">
+        \[
+        Q=CV
+        \]
+    </div>
+
+    <div class="answer">
+        But in parallel combination—
+    </div>
+
+    <div class="formula">
+        \[
+        CV=C_1V+C_2V+C_3V
+        \]
+    </div>
+
+    <div class="formula">
+        \[
+        C=C_1+C_2+C_3
+        \]
+    </div>
+
+    <div class="answer">
+        Hence, it is clear that <b>the equivalent capacitance in parallel combination is equal to the sum of the capacitances of all the capacitors.</b>
+    </div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+Q. What do you understand by the Potential Energy of a Conductor? Derive its expression.
+</div>
+
+<div class="answer">
+The work done in charging a conductor is called the <b>potential energy</b> of the conductor. It is denoted by \(U\).
+</div>
+
+<div class="answer">
+<b>Derivation —</b> Suppose a conductor is to be given a total charge \(Q\). Initially, when the conductor has no charge, its potential is zero. As the charge is supplied, its potential gradually increases to \(V\).
+</div>
+
+<div class="answer">
+Therefore, the average potential of the conductor is—
+</div>
+
+<div class="formula">
+$$
+\text{Mean Potential}=\frac{0+V}{2}=\frac{V}{2}
+$$
+</div>
+
+<div class="answer">
+Hence, the work done in giving charge \(Q\) to the conductor is—
+</div>
+
+<div class="formula">
+$$
+U=\text{Charge}\times\text{Mean Potential}
+$$
+</div>
+
+<div class="formula">
+$$
+U=Q\times\frac{V}{2}
+$$
+</div>
+
+<div class="formula">
+$$
+U=\frac{1}{2}QV \quad ...(1)
+$$
+</div>
+
+<div class="answer">
+Since \(Q=CV\), therefore—
+</div>
+
+<div class="formula">
+$$
+U=\frac{1}{2}CV\cdot V
+$$
+</div>
+
+<div class="formula">
+$$
+U=\frac{1}{2}CV^2 \quad ...(2)
+$$
+</div>
+
+<div class="answer">
+Again, putting \(V=\frac{Q}{C}\)—
+</div>
+
+<div class="formula">
+$$
+U=\frac{1}{2}Q\cdot\frac{Q}{C}
+$$
+</div>
+
+<div class="formula">
+$$
+U=\frac{Q^2}{2C}\quad ...(3)
+$$
+</div>
+
+<div class="answer">
+Thus, the three forms of potential energy are—
+</div>
+
+<div class="formula">
+$$
+U=\frac{1}{2}QV=\frac{1}{2}CV^2=\frac{Q^2}{2C}
+$$
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q. Prove that when two charged conductors are connected together, the charge is distributed in the ratio of their capacitances.
+</div>
+
+<div class="question-image">
+    <img src="10.png" alt="Question Image">
+</div>
+
+<div class="answer">
+Let A and B be two conductors having capacitances \(C_1\) and \(C_2\), respectively. When they are given charges separately, their potentials become \(V_1\) and \(V_2\), respectively.
+</div>
+
+<div class="question-image">
+    <img src="11.png" alt="Question Image">
+</div>
+
+<div class="answer">
+Now, if these two conductors are connected by a thin wire of negligible capacitance, charge flows from the conductor at higher potential to the conductor at lower potential until both attain the same common potential. Let this common potential be \(V\).
+</div>
+
+<div class="answer">
+After connection—
+</div>
+
+<div class="formula">
+$$
+Q_1' = C_1V \quad ...(1)
+$$
+</div>
+
+<div class="formula">
+$$
+Q_2' = C_2V \quad ...(2)
+$$
+</div>
+
+<div class="answer">
+Dividing equation (1) by equation (2), we get—
+</div>
+
+<div class="formula">
+$$
+\frac{Q_1'}{Q_2'}=\frac{C_1V}{C_2V}
+$$
+</div>
+
+<div class="formula">
+$$
+\frac{Q_1'}{Q_2'}=\frac{C_1}{C_2}
+$$
+</div>
+
+<div class="answer">
+Hence, it is proved that when two charged conductors are connected together, the charge is distributed in the ratio of their capacitances.
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+Q. Prove that there is a Loss of Energy when Two Charged Conductors are Connected.
+</div>
+
+<div class="question-image">
+    <img src="10.png" alt="Question Image">
+</div>
+
+<div class="answer">
+Let A and B be two conductors having capacitances \(C_1\) and \(C_2\), respectively. When they are charged separately, their potentials become \(V_1\) and \(V_2\), respectively.
+</div>
+
+<div class="answer">
+Hence, the initial potential energy of the two conductors is—
+</div>
+
+<div class="formula">
+$$
+U_{\text{initial}}=\frac{1}{2}(C_1V_1^2+C_2V_2^2)
+$$
+</div>
+
+<div class="question-image">
+    <img src="11.png" alt="Question Image">
+</div>
+
+<div class="answer">
+Now, if both conductors are connected by a thin wire, charge flows from the higher potential to the lower potential until both attain a common potential \(V\).
+</div>
+
+<div class="answer">
+Total charge after connection—
+</div>
+
+<div class="formula">
+$$
+Q=Q_1+Q_2
+$$
+</div>
+
+<div class="answer">
+Total capacitance after connection—
+</div>
+
+<div class="formula">
+$$
+C=C_1+C_2
+$$
+</div>
+
+<div class="answer">
+Therefore, the common potential is—
+</div>
+
+<div class="formula">
+$$
+V=\frac{C_1V_1+C_2V_2}{C_1+C_2}
+$$
+</div>
+
+<div class="answer">
+Hence, the final energy is—
+</div>
+
+<div class="formula">
+$$
+U_{\text{final}}
+=\frac{1}{2}(C_1+C_2)V^2
+$$
+</div>
+
+<div class="formula">
+$$
+U_{\text{final}}
+=
+\frac{1}{2}(C_1+C_2)
+\left(
+\frac{C_1V_1+C_2V_2}{C_1+C_2}
+\right)^2
+$$
+</div>
+
+<div class="formula">
+$$
+U_{\text{final}}
+=
+\frac{(C_1V_1+C_2V_2)^2}
+{2(C_1+C_2)}
+$$
+</div>
+
+<div class="answer">
+Loss of energy—
+</div>
+
+<div class="formula">
+$$
+\Delta U
+=
+U_{\text{initial}}
+-
+U_{\text{final}}
+$$
+</div>
+
+<div class="answer">
+<b>Solution:</b>
+</div>
+
+<div class="formula">
+$$
+\Delta U
+=
+\frac{1}{2}
+\left(
+C_1V_1^2+C_2V_2^2
+\right)
+-
+\frac{(C_1V_1+C_2V_2)^2}
+{2(C_1+C_2)}
+$$
+</div>
+
+<div class="answer">
+Expanding the square of the second term—
+</div>
+
+<div class="formula">
+$$
+\Delta U
+=
+\frac{1}{2}
+\left(
+C_1V_1^2+C_2V_2^2
+\right)
+-
+\frac{
+C_1^2V_1^2
++
+2C_1C_2V_1V_2
++
+C_2^2V_2^2
+}
+{2(C_1+C_2)}
+$$
+</div>
+
+<div class="answer">
+Taking the common denominator—
+</div>
+
+<div class="formula">
+$$
+\Delta U
+=
+\frac{
+(C_1+C_2)(C_1V_1^2+C_2V_2^2)
+-
+(C_1^2V_1^2+2C_1C_2V_1V_2+C_2^2V_2^2)
+}
+{2(C_1+C_2)}
+$$
+</div>
+
+<div class="answer">
+Multiplying the terms—
+</div>
+
+<div class="formula">
+$$
+\Delta U
+=
+\frac{
+C_1^2V_1^2
++
+C_1C_2V_1^2
++
+C_1C_2V_2^2
++
+C_2^2V_2^2
+-
+C_1^2V_1^2
+-
+2C_1C_2V_1V_2
+-
+C_2^2V_2^2
+}
+{2(C_1+C_2)}
+$$
+</div>
+
+<div class="answer">
+Cancelling the common terms—
+</div>
+
+<div class="formula">
+$$
+\Delta U
+=
+\frac{
+C_1C_2V_1^2
++
+C_1C_2V_2^2
+-
+2C_1C_2V_1V_2
+}
+{2(C_1+C_2)}
+$$
+</div>
+
+<div class="formula">
+$$
+\Delta U
+=
+\frac{
+C_1C_2
+\left(
+V_1^2+V_2^2-2V_1V_2
+\right)
+}
+{2(C_1+C_2)}
+$$
+</div>
+
+<div class="formula">
+$$
+\boxed{
+\Delta U
+=
+\frac{C_1C_2(V_1-V_2)^2}
+{2(C_1+C_2)}
+}
+$$
+</div>
+
+<div class="answer">
+Since all the quantities are positive, therefore \(\Delta U>0\). Hence, it is proved that there is a loss of energy when two charged conductors are connected together.
+</div>
+
+</div>
+
+
+
+
+
+
+<!-- PROTECTION -->
+
+
+<script>
+
+
+document.addEventListener("contextmenu",
+e=>e.preventDefault());
+
+
+document.addEventListener("selectstart",
+e=>e.preventDefault());
+
+
+document.addEventListener("copy",
+e=>{
+
+e.preventDefault();
+
+alert("Copying content is not allowed");
+
+});
+
+
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
+
