@@ -40,13 +40,13 @@ const PAL_STUDY_DATA = {
         "यूनिट 4 d और f ब्लॉक के तत्व",
         "यूनिट 5 समन्वय यौगिक",
         "यूनिट 6 हैलोएल्केन और हैलोएरीन",
-        "यूनिट 7 अल्कोहल",
-        "यूनिट 8 फिनोल",
-        "यूनिट 9 ईथर",
-        "यूनिट 10 एल्डिहाइड एवं कीटोन",
-        "यूनिट 11 कार्बोक्सिलिक अम्ल",
-        "यूनिट 12 अमीन",
-        "यूनिट 13 जैव-अणु"
+        "यूनिट 7(A) अल्कोहल",
+        "यूनिट 7(B) फिनोल",
+        "यूनिट 7(C) ईथर",
+        "यूनिट 8(A) एल्डिहाइड एवं कीटोन",
+        "यूनिट 8(B) कार्बोक्सिलिक अम्ल",
+        "यूनिट 9 अमीन",
+        "यूनिट 10 जैव-अणु"
       ],
       "जीवविज्ञान": [
         "यूनिट 1 (A) पुष्पीय पौधों में लैंगिक जनन",
@@ -112,7 +112,7 @@ const PAL_STUDY_DATA = {
       "भौतिकी": ["यूनिट 1 - मापन", "यूनिट 2(A) - गति", "यूनिट 2(B) - सदिश", "यूनिट 3(A) - गति के नियम", "यूनिट 3(B) - वृत्तीय गति", "यूनिट 4 - कार्य ऊर्जा तथा शक्ति", "यूनिट 5 - गुरुत्वाकर्षण"],
       "रसायन शास्त्र ": ["यूनिट 1 - रासायनिक संयोग के नियम", "यूनिट 2 - परमाणु संरचना", "यूनिट 3 - आवर्त नियम", "यूनिट 4 - रासायनिक बंध"],
       "गणित": [],
-      "जीवविज्ञान": [],
+      "जीवविज्ञान": ["Unit-1(A) जीव जगत"],
       "अग्रेजी": [],
       "हिंदी": []
     },
@@ -167,7 +167,7 @@ const UNIT_FILE_PATHS = {
            "यूनिट 1 (C ) धारिता": "../units/mp_board_hindi/class_12/physics/unit1/mphp-1c.html",
         "यूनिट 2 विद्युत धारा": "../units/mp_board_hindi/class_12/physics/unit1/mphp-2.html",
         "यूनिट 3(A ) धारा का चुम्बकीय प्रभाव": "../units/mp_board_hindi/class_12/physics/unit1/mphp3A.html",
-        "यूनिट 3(B ) चुंबकत्व": "../units/mp_board_hindi/class_12/physics/unit1/mphp3B.html",
+        "यूनिट 3(B ) चुंबकत्व": "../units/mp_board_hindi/class_12/physics/unit1/mphp3b.html",
         "यूनिट 5 चुंबकत्व एवं पदार्थ": "../units/mp_board_hindi/class_12/physics/unit5/MP_Hindi_12th_Physics_unit5.html",
         "यूनिट 6 विद्युत चुंबकीय प्रेरण": "../units/mp_board_hindi/class_12/physics/unit6/MP_Hindi_12th_Physics_unit6.html",
         "यूनिट 7 प्रत्यावर्ती धारा": "../units/mp_board_hindi/class_12/physics/unit7/MP_Hindi_12th_Physics_unit7.html",
@@ -186,20 +186,20 @@ const UNIT_FILE_PATHS = {
           "यूनिट 4 d और f ब्लॉक के तत्व": "../units/mp_board_hindi/class_12/chemistry/unit1/c4/4_formatted.html",
           "यूनिट 5 समन्वय यौगिक": "../units/mp_board_hindi/class_12/chemistry/unit1/c5/5_formatted.html",
           "यूनिट 6 हैलोएल्केन और हैलोएरीन": "../units/mp_board_hindi/class_12/chemistry/unit1/c6/6_formatted.html",
-          "यूनिट 7 अल्कोहल": "../units/mp_board_hindi/class_12/chemistry/unit1/c7/7_formatted.html",
-          "यूनिट 8 फिनोल": "../units/mp_board_hindi/class_12/chemistry/unit1/c8/8_formatted.html",
-          "यूनिट 9 ईथर": "../units/mp_board_hindi/class_12/chemistry/unit1/c9/9_formatted.html",
-          "यूनिट 10 एल्डिहाइड एवं कीटोन": "../units/mp_board_hindi/class_12/chemistry/unit1/c10/10_formatted.html",
-          "यूनिट 11 कार्बोक्सिलिक अम्ल": "../units/mp_board_hindi/class_12/chemistry/unit1/c11/11_formatted.html",
-          "यूनिट 12 अमीन": "../units/mp_board_hindi/class_12/chemistry/unit1/c12/12_formatted.html",
-          "यूनिट 13 जैव-अणु": "../units/mp_board_hindi/class_12/chemistry/unit1/c13/13_formatted.html"
+          "यूनिट 7(A) अल्कोहल": "../units/mp_board_hindi/class_12/chemistry/unit1/c7/7_formatted.html",
+          "यूनिट 8(B) फिनोल": "../units/mp_board_hindi/class_12/chemistry/unit1/c8/8_formatted.html",
+          "यूनिट 9(C) ईथर": "../units/mp_board_hindi/class_12/chemistry/unit1/c9/9_formatted.html",
+          "यूनिट 10(A) एल्डिहाइड एवं कीटोन": "../units/mp_board_hindi/class_12/chemistry/unit1/c10/10_formatted.html",
+          "यूनिट 11(B) कार्बोक्सिलिक अम्ल": "../units/mp_board_hindi/class_12/chemistry/unit1/c11/11_formatted.html",
+          "यूनिट 9(C) अमीन": "../units/mp_board_hindi/class_12/chemistry/unit1/c12/12_formatted.html",
+          "यूनिट 10 जैव-अणु": "../units/mp_board_hindi/class_12/chemistry/unit1/c10/10_formatted.html"
       },
       "जीवविज्ञान": {
         "यूनिट 1 (A) पुष्पीय पौधों में लैंगिक जनन" : "../units/mp_board_hindi/class_12/biology/unit1/b1/1_formatted.html",
         "यूनिट 1 (B) मानव जनन": "../units/mp_board_hindi/class_12/biology/unit1/b2/2_formatted.html",
         "यूनिट 1 (C) जनन स्वास्थ्य" : "../units/mp_board_hindi/class_12/biology/unit1/b3/3_formatted.html",
         "यूनिट 2 (A) वंशागति के सिद्धांत" : "",
-        "यूनिट 2 (B) वंशागति का आणविक आधार" : "",
+        "यूनिट 2 (B) वंशागति का आणविक आधार" : "../units/mp_board_hindi/class_12/biology/unit1/b2/4.html",
         "यूनिट 2 (C) विकास" : "",
         "यूनिट 3 (A) मानव कल्याण में जीवविज्ञान" : "",
         "यूनिट 3 (B) मानव स्वास्थ्य एवं रोग" : "",
@@ -230,6 +230,9 @@ const UNIT_FILE_PATHS = {
         "यूनिट 2 - परमाणु संरचना" : "../units/mp_board_hindi/class_11/Chemistry/c2.html",
         "यूनिट 3 - आवर्त नियम" : "../units/mp_board_hindi/class_11/Chemistry/c3.html",
         "यूनिट 4 - रासायनिक बंध" : "../units/mp_board_hindi/class_11/Chemistry/c4.html"
+      },
+      "जीवविज्ञान": {
+        "Unit-1(A) जीव जगत" : "../units/mp_board_hindi/class_11/Biology/1a.html",
       },
     }
   },
