@@ -157,6 +157,10 @@ const PAL_STUDY_DATA = {
       "Biology": [],
       "English": [],
       "Hindi": []
+    },
+    "Class 10th": {
+      "Mathematics": ["Real Numbers", "Polynomials", "Quadratic Equations"],
+      "Science": ["Chemical Reaction", "Acids and Bases", "Metals and Non-metals", "Carbon and its compounds", "Life Processes", "Light"],
     }
   },
   "CBSE": {
@@ -311,6 +315,21 @@ const UNIT_FILE_PATHS = {
         "Unit 2 - Electrochemistry": "../units/mp_board_hindi/class_12/chemistry/unit1/c2/2.html",
         "Unit 3 - Chemical Kinetics": "../units/mp_board_hindi/class_12/chemistry/unit1/c3/3.html",
         "Unit 4 - d and f Block Elements": "../units/mp_board_hindi/class_12/chemistry/unit1/c4/4.html"
+      }
+    },
+    "Class 10th": {
+      "Mathematics": {
+        "Real Numbers": "../units/cbse/class_10/mathematics/1.html",
+        "Polynomials": "../units/cbse/class_10/mathematics/2.html",
+        "Quadratic Equations": "../units/cbse/class_10/mathematics/4.1.html"
+      },
+      "Science": {
+        "Chemical Reaction": "../units/cbse/class_10/science/chemical.html",
+        "Acids and Bases": "../units/cbse/class_10/science/acids.html",
+        "Metals and Non-metals": "../units/cbse/class_10/science/matels.html",
+        "Carbon and its compounds": "../units/cbse/class_10/science/carbon.html",
+        "Life Processes": "../units/cbse/class_10/science/Life.html",
+        "Light": "../units/cbse/class_10/science/light.html",
       }
     }
   },
