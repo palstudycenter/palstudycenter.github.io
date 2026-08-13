@@ -1,0 +1,1563 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | Biology Chapter 7</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    line-height:1.7;
+}
+
+/* NAVBAR */
+
+.navbar{
+    background:rgba(15,23,42,0.90);
+    backdrop-filter:blur(10px);
+    box-shadow:0 4px 18px rgba(0,0,0,.18);
+    padding:10px 0;
+}
+
+.navbar-brand{
+    font-size:30px;
+    font-weight:700;
+    color:white !important;
+}
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+
+/* NOTES CONTAINER */
+
+.notes-container{
+    max-width:900px;
+    margin:100px auto 50px;
+    padding:20px;
+}
+
+/* CHAPTER TITLE */
+
+.notes-title{
+    background:#e3f2fd;
+    color:#1565c0;
+    padding:15px 20px;
+    border-left:6px solid #1565c0;
+    border-radius:50px;
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:30px;
+    text-align:center;
+}
+
+/* QUESTION ANSWER BOX */
+
+.qa-box{
+    background:white;
+    padding:22px;
+    margin-bottom:18px;
+    border-radius:14px;
+    border-left:6px solid #1565c0;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    transition:.25s;
+}
+
+.qa-box:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.question{
+    font-weight:bold;
+    color:#1b3a57;
+    margin-bottom:10px;
+    font-size:19px;
+}
+
+.answer{
+    color:#2c3e50;
+    text-align:justify;
+}
+
+.answer ul,
+.answer ol{
+    margin-left:25px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+/* TABLE */
+
+.answer table{
+    width:100%;
+    border-collapse:collapse;
+    margin:12px 0;
+    background:#fff;
+    overflow-x:auto;
+}
+
+.answer table td,
+.answer table th{
+    border:1px solid #ddd;
+    padding:10px 12px;
+    text-align:left;
+    vertical-align:top;
+}
+
+.answer table th{
+    background:#eaf2fb;
+    font-weight:bold;
+    color:#1b3a57;
+}
+
+/* IMPORTANT POINT */
+
+.important{
+    background:#fff8e1;
+    border-left:5px solid #ffb300;
+    padding:12px 15px;
+    margin-top:12px;
+    border-radius:8px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .navbar-brand{
+        font-size:24px;
+    }
+
+    .notes-container{
+        margin-top:85px;
+        padding:12px;
+    }
+
+    .notes-title{
+        font-size:22px;
+        border-radius:20px;
+    }
+
+    .qa-box{
+        padding:17px;
+    }
+
+    .question{
+        font-size:17px;
+    }
+
+}
+/* ============================= */
+/* DIAGRAM RESPONSIVE CSS */
+/* ============================= */
+
+.qa-box img,
+.answer img,
+.diagram img {
+    display: block;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    margin: 15px auto;
+    object-fit: contain;
+    box-sizing: border-box;
+}
+
+/* Diagram container */
+.diagram {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+/* SVG diagrams */
+.qa-box svg,
+.answer svg,
+.diagram svg {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin: 15px auto;
+    box-sizing: border-box;
+}
+
+/* Prevent long diagram/content from going outside */
+.qa-box,
+.answer {
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* Tables inside answers */
+.qa-box table,
+.answer table {
+    max-width: 100%;
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+    box-sizing: border-box;
+}
+
+/* Mobile screen */
+@media (max-width: 600px) {
+
+    .qa-box {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .qa-box img,
+    .answer img,
+    .diagram img {
+        max-width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .qa-box svg,
+    .answer svg,
+    .diagram svg {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+}
+/* PROTECTION */
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar fixed-top">
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+    पाल <span>स्टडी सेंटर</span>
+</a>
+
+</div>
+
+</nav>
+
+
+<!-- NOTES -->
+
+<div class="notes-container">
+
+<div class="notes-title">
+Chapter 11 – Work and Energy
+</div>
+
+
+<!-- ===================================================== -->
+<!-- CLASS 9 CBSE SCIENCE – CHAPTER 11 -->
+<!-- WORK AND ENERGY -->
+<!-- ===================================================== -->
+
+<!-- ============================= -->
+<!-- Q1 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q1. What is work?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Work is said to be done when a force acting on an object
+produces displacement in the direction of the force.
+</p>
+
+<p>
+The mathematical expression for work is:
+</p>
+
+<p>
+<b>W = F × s</b>
+</p>
+
+<p>
+where <b>W</b> is work, <b>F</b> is force and <b>s</b> is displacement.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q2 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q2. What are the two conditions necessary for work to be done?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> The two conditions necessary for work to be done are:
+</p>
+
+<ol>
+<li>A force must act on the object.</li>
+<li>The object must undergo displacement in the direction of the force or have a component of displacement along the force.</li>
+</ol>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q3 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q3. Write the SI unit of work.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> The SI unit of work is the <b>joule (J)</b>.
+</p>
+
+<p>
+One joule is the work done when a force of one newton displaces an object
+through one metre in the direction of the force.
+</p>
+
+<p>
+<b>1 J = 1 N × 1 m</b>
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q4 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q4. When is work said to be positive?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Work is positive when the force and displacement are in the
+same direction.
+</p>
+
+<p>
+For example, when a person pushes an object forward and the object moves
+forward, the work done by the applied force is positive.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q5 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q5. When is work said to be negative?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Work is negative when the force and displacement are in
+opposite directions.
+</p>
+
+<p>
+For example, friction generally does negative work because it acts opposite
+to the direction of motion.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q6 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q6. When is work done zero?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Work done is zero when there is no displacement of the object
+or when the force is perpendicular to the displacement.
+</p>
+
+<p>
+For example, when a person carries a bag horizontally at constant height,
+the upward force applied by the person is perpendicular to the horizontal
+displacement. Therefore, the work done by the upward force is zero.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- DIAGRAM – WORK -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Diagram: Force and Displacement
+</div>
+
+<div class="answer">
+
+<div class="ch11-diagram">
+
+<svg viewBox="0 0 760 220" width="100%" height="auto"
+     style="max-width:100%;height:auto;display:block;margin:auto;">
+
+<line x1="80" y1="150" x2="680" y2="150"
+      stroke="currentColor" stroke-width="3"/>
+
+<polygon points="680,150 660,140 660,160" fill="currentColor"/>
+
+<rect x="220" y="105" width="90" height="45"
+      fill="none" stroke="currentColor" stroke-width="3"/>
+
+<line x1="310" y1="127" x2="510" y2="127"
+      stroke="currentColor" stroke-width="3"/>
+
+<polygon points="510,127 490,117 490,137" fill="currentColor"/>
+
+<text x="235" y="95" font-size="20">Object</text>
+<text x="375" y="115" font-size="20">Force (F)</text>
+<text x="385" y="180" font-size="20">Displacement (s)</text>
+
+</svg>
+
+</div>
+
+<p>
+When force and displacement are in the same direction, work done is positive.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q7 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q7. What is energy?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Energy is the capacity of an object to do work.
+</p>
+
+<p>
+The SI unit of energy is <b>joule (J)</b>.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q8 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q8. What are the different forms of energy?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Energy exists in many forms, such as:
+</p>
+
+<ul>
+<li>Kinetic energy</li>
+<li>Potential energy</li>
+<li>Heat energy</li>
+<li>Light energy</li>
+<li>Sound energy</li>
+<li>Electrical energy</li>
+<li>Chemical energy</li>
+<li>Nuclear energy</li>
+</ul>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q9 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q9. What is kinetic energy?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> The energy possessed by an object due to its motion is called
+<b>kinetic energy</b>.
+</p>
+
+<p>
+The kinetic energy of an object is:
+</p>
+
+<p>
+<b>K.E. = 1/2 mv<sup>2</sup></b>
+</p>
+
+<p>
+where <b>m</b> is mass and <b>v</b> is velocity.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q10 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q10. What is potential energy?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> The energy possessed by an object due to its position or
+configuration is called <b>potential energy</b>.
+</p>
+
+<p>
+The gravitational potential energy of an object at height <b>h</b> is:
+</p>
+
+<p>
+<b>P.E. = mgh</b>
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q11 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q11. Give two examples of potential energy.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b>
+</p>
+
+<ol>
+<li>Water stored in a dam possesses gravitational potential energy.</li>
+<li>A stretched rubber band possesses potential energy due to its configuration.</li>
+</ol>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q12 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q12. Give two examples of kinetic energy.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b>
+</p>
+
+<ol>
+<li>A moving car possesses kinetic energy.</li>
+<li>A moving ball possesses kinetic energy.</li>
+</ol>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q13 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q13. On what factors does the kinetic energy of an object depend?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Kinetic energy depends on:
+</p>
+
+<ol>
+<li>The mass of the object.</li>
+<li>The square of its velocity.</li>
+</ol>
+
+<p>
+<b>K.E. = 1/2 mv<sup>2</sup></b>
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q14 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q14. On what factors does gravitational potential energy depend?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Gravitational potential energy depends on:
+</p>
+
+<ol>
+<li>Mass of the object.</li>
+<li>Acceleration due to gravity.</li>
+<li>Height of the object above the reference level.</li>
+</ol>
+
+<p>
+<b>P.E. = mgh</b>
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q15 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q15. What happens to the kinetic energy of an object if its velocity is doubled?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b>
+</p>
+
+<p>
+Kinetic energy is proportional to the square of velocity:
+</p>
+
+<p>
+<b>K.E. ∝ v<sup>2</sup></b>
+</p>
+
+<p>
+If velocity is doubled:
+</p>
+
+<p>
+<b>K.E. becomes 2<sup>2</sup> = 4 times.</b>
+</p>
+
+<p>
+Therefore, the kinetic energy becomes <b>four times</b>.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q16 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q16. What is power?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Power is the rate of doing work.
+</p>
+
+<p>
+<b>Power = Work / Time</b>
+</p>
+
+<p>
+<b>P = W/t</b>
+</p>
+
+<p>
+The SI unit of power is <b>watt (W)</b>.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q17 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q17. Define one watt.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> One watt is the power of an object that does one joule of
+work in one second.
+</p>
+
+<p>
+<b>1 W = 1 J/s</b>
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q18 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q18. What is the difference between work and power?
+</div>
+
+<div class="answer">
+
+<table class="science-table">
+
+<tr>
+<th>Work</th>
+<th>Power</th>
+</tr>
+
+<tr>
+<td>Work is done when force produces displacement.</td>
+<td>Power is the rate of doing work.</td>
+</tr>
+
+<tr>
+<td>SI unit is joule (J).</td>
+<td>SI unit is watt (W).</td>
+</tr>
+
+<tr>
+<td>Formula: W = F × s</td>
+<td>Formula: P = W/t</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q19 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q19. State the law of conservation of energy.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Energy can neither be created nor destroyed. It can only be
+transformed from one form to another. The total energy of an isolated system
+always remains constant.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q20 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q20. Explain the law of conservation of energy using a freely falling object.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Consider an object falling from a height. At the highest
+position, it has maximum potential energy and minimum kinetic energy.
+</p>
+
+<p>
+As it falls, its potential energy decreases and kinetic energy increases.
+Just before reaching the ground, its kinetic energy is maximum and potential
+energy is minimum.
+</p>
+
+<p>
+Thus, potential energy is continuously converted into kinetic energy, while
+the total mechanical energy remains constant.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- DIAGRAM – CONSERVATION -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Diagram: Conservation of Mechanical Energy
+</div>
+
+<div class="answer">
+
+<div class="ch11-diagram">
+
+<svg viewBox="0 0 760 430" width="100%" height="auto"
+     style="max-width:100%;height:auto;display:block;margin:auto;">
+
+<line x1="120" y1="360" x2="650" y2="360"
+      stroke="currentColor" stroke-width="3"/>
+
+<line x1="160" y1="80" x2="160" y2="360"
+      stroke="currentColor" stroke-width="3"/>
+
+<line x1="160" y1="80" x2="500" y2="80"
+      stroke="currentColor" stroke-width="3"/>
+
+<line x1="500" y1="80" x2="500" y2="360"
+      stroke="currentColor" stroke-width="3"/>
+
+<circle cx="300" cy="80" r="22"
+        fill="none" stroke="currentColor" stroke-width="3"/>
+
+<circle cx="500" cy="350" r="22"
+        fill="none" stroke="currentColor" stroke-width="3"/>
+
+<line x1="300" y1="105" x2="300" y2="250"
+      stroke="currentColor" stroke-width="3"/>
+
+<polygon points="300,250 290,230 310,230" fill="currentColor"/>
+
+<text x="220" y="55" font-size="20">Maximum Potential Energy</text>
+
+<text x="400" y="395" font-size="20">Maximum Kinetic Energy</text>
+
+<text x="335" y="185" font-size="20">Falling Object</text>
+
+</svg>
+
+</div>
+
+<p>
+During free fall, potential energy is converted into kinetic energy.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q21 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q21. What is mechanical energy?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> The sum of the kinetic energy and potential energy of an
+object is called its <b>mechanical energy</b>.
+</p>
+
+<p>
+<b>Mechanical Energy = Kinetic Energy + Potential Energy</b>
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q22 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q22. What is the commercial unit of electrical energy?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> The commercial unit of electrical energy is
+<b>kilowatt-hour (kWh)</b>.
+</p>
+
+<p>
+It is commonly called one unit of electricity.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q23 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q23. Define one kilowatt-hour.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> One kilowatt-hour is the energy consumed by an appliance
+having a power of one kilowatt when it is used for one hour.
+</p>
+
+<p>
+<b>1 kWh = 3.6 × 10<sup>6</sup> J</b>
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q24 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q24. Can an object have energy even when it is not in motion?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Yes. An object can possess potential energy even when it is
+at rest. For example, a stone placed at a height possesses gravitational
+potential energy.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q25 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q25. Can there be displacement without work being done?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Yes. If the force acting on an object is perpendicular to its
+displacement, the work done by that force is zero.
+</p>
+
+<p>
+For example, while carrying a bag horizontally, the upward force applied by
+the person is perpendicular to the horizontal displacement.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q26 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q26. A person holds a heavy object stationary. Is any work done by the person?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> No. The person applies a force on the object, but the object
+does not undergo displacement. Therefore, the work done on the object is
+zero.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q27 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q27. A force of 10 N displaces an object through 5 m in the direction of the
+force. Calculate the work done.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Given:</b>
+</p>
+
+<p>
+Force, F = 10 N<br>
+Displacement, s = 5 m
+</p>
+
+<p>
+<b>Formula:</b>
+</p>
+
+<p>
+W = F × s
+</p>
+
+<p>
+W = 10 × 5
+</p>
+
+<p>
+<b>W = 50 J</b>
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q28 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q28. A force of 20 N acts on an object and moves it through 4 m. Find the
+work done.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Given:</b> F = 20 N, s = 4 m
+</p>
+
+<p>
+<b>W = F × s</b>
+</p>
+
+<p>
+W = 20 × 4
+</p>
+
+<p>
+<b>W = 80 J</b>
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q29 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q29. Calculate the kinetic energy of a body of mass 2 kg moving with a
+velocity of 5 m/s.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Given:</b>
+</p>
+
+<p>
+m = 2 kg<br>
+v = 5 m/s
+</p>
+
+<p>
+<b>Formula:</b>
+</p>
+
+<p>
+K.E. = 1/2 mv<sup>2</sup>
+</p>
+
+<p>
+= 1/2 × 2 × 5<sup>2</sup>
+</p>
+
+<p>
+= 25
+</p>
+
+<p>
+<b>K.E. = 25 J</b>
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q30 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q30. Find the kinetic energy of an object of mass 10 kg moving with a
+velocity of 2 m/s.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Given:</b> m = 10 kg, v = 2 m/s
+</p>
+
+<p>
+<b>K.E. = 1/2 mv<sup>2</sup></b>
+</p>
+
+<p>
+= 1/2 × 10 × 2<sup>2</sup>
+</p>
+
+<p>
+= 5 × 4
+</p>
+
+<p>
+<b>K.E. = 20 J</b>
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q31 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q31. Calculate the potential energy of a body of mass 5 kg kept at a height
+of 10 m. Take g = 9.8 m/s².
+</div>
+
+<div class="answer">
+
+<p>
+<b>Given:</b>
+</p>
+
+<p>
+m = 5 kg<br>
+h = 10 m<br>
+g = 9.8 m/s²
+</p>
+
+<p>
+<b>P.E. = mgh</b>
+</p>
+
+<p>
+= 5 × 9.8 × 10
+</p>
+
+<p>
+<b>P.E. = 490 J</b>
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q32 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q32. A body does 600 J of work in 20 seconds. Calculate its power.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Given:</b>
+</p>
+
+<p>
+Work, W = 600 J<br>
+Time, t = 20 s
+</p>
+
+<p>
+<b>Power = Work / Time</b>
+</p>
+
+<p>
+P = 600 / 20
+</p>
+
+<p>
+<b>P = 30 W</b>
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q33 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q33. A machine has a power of 100 W. How much work will it do in 5 seconds?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Given:</b>
+</p>
+
+<p>
+P = 100 W<br>
+t = 5 s
+</p>
+
+<p>
+<b>P = W/t</b>
+</p>
+
+<p>
+Therefore,
+</p>
+
+<p>
+<b>W = P × t</b>
+</p>
+
+<p>
+W = 100 × 5
+</p>
+
+<p>
+<b>W = 500 J</b>
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q34 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q34. What happens to the potential energy of an object when its height is
+doubled?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Since:
+</p>
+
+<p>
+<b>P.E. = mgh</b>
+</p>
+
+<p>
+Potential energy is directly proportional to height. Therefore, if the
+height is doubled, the potential energy also becomes <b>two times</b>.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q35 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q35. What happens to the kinetic energy if the mass of an object is doubled
+while its velocity remains the same?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Since:
+</p>
+
+<p>
+<b>K.E. = 1/2 mv<sup>2</sup></b>
+</p>
+
+<p>
+Kinetic energy is directly proportional to mass. Therefore, if the mass is
+doubled, the kinetic energy also becomes <b>two times</b>.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- IMPORTANT DIFFERENCES -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Important Difference: Kinetic Energy and Potential Energy
+</div>
+
+<div class="answer">
+
+<table class="science-table">
+
+<tr>
+<th>Kinetic Energy</th>
+<th>Potential Energy</th>
+</tr>
+
+<tr>
+<td>It is the energy possessed due to motion.</td>
+<td>It is the energy possessed due to position or configuration.</td>
+</tr>
+
+<tr>
+<td>K.E. = 1/2 mv<sup>2</sup></td>
+<td>P.E. = mgh</td>
+</tr>
+
+<tr>
+<td>A moving car has kinetic energy.</td>
+<td>A stone kept at a height has potential energy.</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- IMPORTANT FORMULA
+
+
+<!-- PROTECTION -->
+
+<script>
+
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+document.addEventListener("selectstart", e => e.preventDefault());
+
+document.addEventListener("copy", e => {
+
+    e.preventDefault();
+
+    alert("Copying content is not allowed");
+
+});
+
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1046 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | Biology Chapter 7</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    line-height:1.7;
+}
+
+/* NAVBAR */
+
+.navbar{
+    background:rgba(15,23,42,0.90);
+    backdrop-filter:blur(10px);
+    box-shadow:0 4px 18px rgba(0,0,0,.18);
+    padding:10px 0;
+}
+
+.navbar-brand{
+    font-size:30px;
+    font-weight:700;
+    color:white !important;
+}
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+
+/* NOTES CONTAINER */
+
+.notes-container{
+    max-width:900px;
+    margin:100px auto 50px;
+    padding:20px;
+}
+
+/* CHAPTER TITLE */
+
+.notes-title{
+    background:#e3f2fd;
+    color:#1565c0;
+    padding:15px 20px;
+    border-left:6px solid #1565c0;
+    border-radius:50px;
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:30px;
+    text-align:center;
+}
+
+/* QUESTION ANSWER BOX */
+
+.qa-box{
+    background:white;
+    padding:22px;
+    margin-bottom:18px;
+    border-radius:14px;
+    border-left:6px solid #1565c0;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    transition:.25s;
+}
+
+.qa-box:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.question{
+    font-weight:bold;
+    color:#1b3a57;
+    margin-bottom:10px;
+    font-size:19px;
+}
+
+.answer{
+    color:#2c3e50;
+    text-align:justify;
+}
+
+.answer ul,
+.answer ol{
+    margin-left:25px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+/* TABLE */
+
+.answer table{
+    width:100%;
+    border-collapse:collapse;
+    margin:12px 0;
+    background:#fff;
+    overflow-x:auto;
+}
+
+.answer table td,
+.answer table th{
+    border:1px solid #ddd;
+    padding:10px 12px;
+    text-align:left;
+    vertical-align:top;
+}
+
+.answer table th{
+    background:#eaf2fb;
+    font-weight:bold;
+    color:#1b3a57;
+}
+
+/* IMPORTANT POINT */
+
+.important{
+    background:#fff8e1;
+    border-left:5px solid #ffb300;
+    padding:12px 15px;
+    margin-top:12px;
+    border-radius:8px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .navbar-brand{
+        font-size:24px;
+    }
+
+    .notes-container{
+        margin-top:85px;
+        padding:12px;
+    }
+
+    .notes-title{
+        font-size:22px;
+        border-radius:20px;
+    }
+
+    .qa-box{
+        padding:17px;
+    }
+
+    .question{
+        font-size:17px;
+    }
+
+}
+/* ============================= */
+/* DIAGRAM RESPONSIVE CSS */
+/* ============================= */
+
+.qa-box img,
+.answer img,
+.diagram img {
+    display: block;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    margin: 15px auto;
+    object-fit: contain;
+    box-sizing: border-box;
+}
+
+/* Diagram container */
+.diagram {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+/* SVG diagrams */
+.qa-box svg,
+.answer svg,
+.diagram svg {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin: 15px auto;
+    box-sizing: border-box;
+}
+
+/* Prevent long diagram/content from going outside */
+.qa-box,
+.answer {
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* Tables inside answers */
+.qa-box table,
+.answer table {
+    max-width: 100%;
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+    box-sizing: border-box;
+}
+
+/* Mobile screen */
+@media (max-width: 600px) {
+
+    .qa-box {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .qa-box img,
+    .answer img,
+    .diagram img {
+        max-width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .qa-box svg,
+    .answer svg,
+    .diagram svg {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+}
+/* PROTECTION */
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar fixed-top">
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+    पाल <span>स्टडी सेंटर</span>
+</a>
+
+</div>
+
+</nav>
+
+
+<!-- NOTES -->
+
+<div class="notes-container">
+
+<div class="notes-title">
+📘 Chapter 12 – Patterns in Life: Diversity and Classification
+</div>
+
+<!-- ===================================================== -->
+<!-- CLASS 9 SCIENCE – CHAPTER 12 -->
+<!-- PATTERNS IN LIFE: DIVERSITY AND CLASSIFICATION -->
+<!-- ===================================================== -->
+
+<!-- ============================= -->
+<!-- Q1 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q1. What is biodiversity?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Biodiversity refers to the variety of living organisms found
+on Earth. It includes the diversity of plants, animals, microorganisms and
+their different forms and habitats.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q2 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q2. Why is classification of organisms necessary?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Classification is necessary because there are millions of
+organisms on Earth. It helps us identify, study and understand organisms
+systematically and shows the relationships among them.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q3 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q3. What is biological classification?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Biological classification is the process of grouping organisms
+into different categories on the basis of their similarities, differences and
+evolutionary relationships.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q4 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q4. What are the main criteria used for classification of organisms?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Organisms may be classified on the basis of cell structure,
+number of cells, mode of nutrition, body organisation, reproduction and
+evolutionary relationships.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q5 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q5. What is the difference between unicellular and multicellular organisms?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b>
+</p>
+
+<ul>
+<li><b>Unicellular organisms:</b> Their body consists of a single cell which
+performs all necessary life processes.</li>
+
+<li><b>Multicellular organisms:</b> Their body consists of many cells which
+usually perform specialised functions.</li>
+</ul>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q6 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q6. What are prokaryotic and eukaryotic organisms?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Prokaryotic organisms have cells without a true membrane-bound
+nucleus. Eukaryotic organisms have cells with a well-defined membrane-bound
+nucleus.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q7 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q7. Give two examples of prokaryotic organisms.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Bacteria and cyanobacteria are examples of prokaryotic
+organisms.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q8 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q8. Give examples of eukaryotic organisms.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Plants, animals, fungi and protists are examples of
+eukaryotic organisms.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q9 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q9. What are the major groups of living organisms?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Living organisms can be grouped into major categories based on
+their cell type, organisation, nutrition and evolutionary relationships.
+Important groups include bacteria, protists, fungi, plants and animals.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q10 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q10. What is the basis of classification of plants?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Plants are classified mainly on the basis of body organisation,
+presence or absence of vascular tissues, seed formation and whether seeds are
+enclosed within fruits.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q11 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q11. What are flowering and non-flowering plants?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Flowering plants produce flowers and usually form seeds inside
+fruits. Non-flowering plants do not produce flowers and include groups such as
+ferns and mosses.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q12 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q12. What is the difference between plants and animals?
+</div>
+
+<div class="answer">
+
+<table class="comparison-table">
+
+<tr>
+<th>Plants</th>
+<th>Animals</th>
+</tr>
+
+<tr>
+<td>Usually prepare their own food by photosynthesis.</td>
+<td>Generally depend on other organisms for food.</td>
+</tr>
+
+<tr>
+<td>Usually have a cell wall.</td>
+<td>Do not have a cell wall.</td>
+</tr>
+
+<tr>
+<td>Usually remain fixed at one place.</td>
+<td>Most animals can move from one place to another.</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q13 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q13. What is taxonomy?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Taxonomy is the branch of biology concerned with the
+identification, naming and classification of organisms.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q14 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q14. What is binomial nomenclature?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Binomial nomenclature is the scientific system of naming an
+organism with two words. The first word represents the genus and the second
+word represents the species.
+</p>
+
+<p>
+<b>Example:</b> <i>Homo sapiens</i>
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q15 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q15. Who introduced the binomial system of nomenclature?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Carolus Linnaeus is widely known for establishing the modern
+system of binomial nomenclature.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q16 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q16. What is a species?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> A species is a group of similar organisms that can generally
+reproduce among themselves and produce fertile offspring.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q17 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q17. What is the importance of scientific names?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Scientific names provide a universal and standard way of
+identifying organisms. They avoid confusion caused by different common names
+used in different regions and languages.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q18 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q18. What is the hierarchy of classification?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Classification is arranged in a hierarchical manner. The major
+taxonomic categories include:
+</p>
+
+<p class="diagram">
+Species → Genus → Family → Order → Class → Phylum/Division → Kingdom
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- DIAGRAM -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+📊 Diagram – Hierarchy of Classification
+</div>
+
+<div class="answer">
+
+<div class="classification-diagram">
+
+<div>Kingdom</div>
+<span>↓</span>
+
+<div>Phylum / Division</div>
+<span>↓</span>
+
+<div>Class</div>
+<span>↓</span>
+
+<div>Order</div>
+<span>↓</span>
+
+<div>Family</div>
+<span>↓</span>
+
+<div>Genus</div>
+<span>↓</span>
+
+<div>Species</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q19 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q19. How does classification help in studying biodiversity?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Classification organises the enormous variety of organisms
+into manageable groups. It helps scientists identify organisms, study their
+characteristics and understand their evolutionary relationships.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q20 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q20. What is the relationship between classification and evolution?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Classification can reflect evolutionary relationships.
+Organisms having more similarities are often placed closer together because
+they may have a common evolutionary history.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- IMPORTANT DIFFERENCE -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+⭐ Important Difference – Prokaryotic vs Eukaryotic Cells
+</div>
+
+<div class="answer">
+
+<table class="comparison-table">
+
+<tr>
+<th>Prokaryotic</th>
+<th>Eukaryotic</th>
+</tr>
+
+<tr>
+<td>No true membrane-bound nucleus.</td>
+<td>Well-defined membrane-bound nucleus.</td>
+</tr>
+
+<tr>
+<td>Generally smaller and simpler.</td>
+<td>Generally larger and more complex.</td>
+</tr>
+
+<tr>
+<td>Membrane-bound organelles are absent.</td>
+<td>Membrane-bound organelles are present.</td>
+</tr>
+
+<tr>
+<td>Example: Bacteria.</td>
+<td>Example: Plants and animals.</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- IMPORTANT QUESTIONS -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+📝 Important Exam Questions
+</div>
+
+<div class="answer">
+
+<ol>
+
+<li>What is biodiversity?</li>
+
+<li>Why is classification necessary?</li>
+
+<li>Define biological classification.</li>
+
+<li>Differentiate between prokaryotic and eukaryotic organisms.</li>
+
+<li>Differentiate between unicellular and multicellular organisms.</li>
+
+<li>What is taxonomy?</li>
+
+<li>What is binomial nomenclature?</li>
+
+<li>Who introduced binomial nomenclature?</li>
+
+<li>What is a species?</li>
+
+<li>Write the hierarchy of classification.</li>
+
+<li>Explain the importance of scientific names.</li>
+
+<li>How does classification help in understanding biodiversity?</li>
+
+<li>Explain the relationship between classification and evolution.</li>
+
+</ol>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- KEY POINTS -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+🌟 Key Points for Revision
+</div>
+
+<div class="answer">
+
+<ul>
+
+<li>Biodiversity means the variety of living organisms.</li>
+
+<li>Classification makes the study of organisms systematic and easier.</li>
+
+<li>Prokaryotic cells lack a true membrane-bound nucleus.</li>
+
+<li>Eukaryotic cells possess a membrane-bound nucleus.</li>
+
+<li>Taxonomy deals with identification, naming and classification.</li>
+
+<li>Binomial nomenclature gives each organism a two-word scientific name.</li>
+
+<li>The first word of a scientific name represents the genus.</li>
+
+<li>The second word represents the species.</li>
+
+<li>Classification helps us understand similarities, differences and
+evolutionary relationships.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- CSS FOR DIAGRAM -->
+<!-- ============================= -->
+
+<style>
+
+.classification-diagram {
+    width: 100%;
+    max-width: 420px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.classification-diagram div {
+    width: 90%;
+    max-width: 300px;
+    padding: 10px;
+    margin: 3px 0;
+    text-align: center;
+    border: 2px solid #333;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background: #f5f5f5;
+}
+
+.classification-diagram span {
+    display: block;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.comparison-table {
+    width: 100%;
+    max-width: 700px;
+    margin: 15px auto;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.comparison-table th,
+.comparison-table td {
+    border: 1px solid #777;
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+
+    .classification-diagram {
+        width: 100%;
+        padding: 0 8px;
+    }
+
+    .classification-diagram div {
+        width: 100%;
+    }
+
+    .comparison-table {
+        font-size: 14px;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 6px;
+    }
+
+}
+
+</style>
+
+
+
+<!-- PROTECTION -->
+
+<script>
+
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+document.addEventListener("selectstart", e => e.preventDefault());
+
+document.addEventListener("copy", e => {
+
+    e.preventDefault();
+
+    alert("Copying content is not allowed");
+
+});
+
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

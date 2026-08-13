@@ -1,0 +1,1122 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | Biology Chapter 7</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    line-height:1.7;
+}
+
+/* NAVBAR */
+
+.navbar{
+    background:rgba(15,23,42,0.90);
+    backdrop-filter:blur(10px);
+    box-shadow:0 4px 18px rgba(0,0,0,.18);
+    padding:10px 0;
+}
+
+.navbar-brand{
+    font-size:30px;
+    font-weight:700;
+    color:white !important;
+}
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+
+/* NOTES CONTAINER */
+
+.notes-container{
+    max-width:900px;
+    margin:100px auto 50px;
+    padding:20px;
+}
+
+/* CHAPTER TITLE */
+
+.notes-title{
+    background:#e3f2fd;
+    color:#1565c0;
+    padding:15px 20px;
+    border-left:6px solid #1565c0;
+    border-radius:50px;
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:30px;
+    text-align:center;
+}
+
+/* QUESTION ANSWER BOX */
+
+.qa-box{
+    background:white;
+    padding:22px;
+    margin-bottom:18px;
+    border-radius:14px;
+    border-left:6px solid #1565c0;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    transition:.25s;
+}
+
+.qa-box:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.question{
+    font-weight:bold;
+    color:#1b3a57;
+    margin-bottom:10px;
+    font-size:19px;
+}
+
+.answer{
+    color:#2c3e50;
+    text-align:justify;
+}
+
+.answer ul,
+.answer ol{
+    margin-left:25px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+/* TABLE */
+
+.answer table{
+    width:100%;
+    border-collapse:collapse;
+    margin:12px 0;
+    background:#fff;
+    overflow-x:auto;
+}
+
+.answer table td,
+.answer table th{
+    border:1px solid #ddd;
+    padding:10px 12px;
+    text-align:left;
+    vertical-align:top;
+}
+
+.answer table th{
+    background:#eaf2fb;
+    font-weight:bold;
+    color:#1b3a57;
+}
+
+/* IMPORTANT POINT */
+
+.important{
+    background:#fff8e1;
+    border-left:5px solid #ffb300;
+    padding:12px 15px;
+    margin-top:12px;
+    border-radius:8px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .navbar-brand{
+        font-size:24px;
+    }
+
+    .notes-container{
+        margin-top:85px;
+        padding:12px;
+    }
+
+    .notes-title{
+        font-size:22px;
+        border-radius:20px;
+    }
+
+    .qa-box{
+        padding:17px;
+    }
+
+    .question{
+        font-size:17px;
+    }
+
+}
+/* ============================= */
+/* DIAGRAM RESPONSIVE CSS */
+/* ============================= */
+
+.qa-box img,
+.answer img,
+.diagram img {
+    display: block;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    margin: 15px auto;
+    object-fit: contain;
+    box-sizing: border-box;
+}
+
+/* Diagram container */
+.diagram {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+/* SVG diagrams */
+.qa-box svg,
+.answer svg,
+.diagram svg {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin: 15px auto;
+    box-sizing: border-box;
+}
+
+/* Prevent long diagram/content from going outside */
+.qa-box,
+.answer {
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* Tables inside answers */
+.qa-box table,
+.answer table {
+    max-width: 100%;
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+    box-sizing: border-box;
+}
+
+/* Mobile screen */
+@media (max-width: 600px) {
+
+    .qa-box {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .qa-box img,
+    .answer img,
+    .diagram img {
+        max-width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .qa-box svg,
+    .answer svg,
+    .diagram svg {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+}
+/* PROTECTION */
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar fixed-top">
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+    पाल <span>स्टडी सेंटर</span>
+</a>
+
+</div>
+
+</nav>
+
+
+<!-- NOTES -->
+
+<div class="notes-container">
+
+<div class="notes-title">
+📘 Chapter 2 – Is Matter Around Us Pure?
+</div>
+<!-- ===================================================== -->
+<!-- CLASS 9 CBSE SCIENCE – CHAPTER 2 -->
+<!-- IS MATTER AROUND US PURE? -->
+<!-- ===================================================== -->
+<!-- ============================= -->
+<!-- Q1 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q1. What is a pure substance?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> A pure substance is a substance consisting of only one kind
+of particles and having a fixed composition and definite properties.
+</p>
+
+<p>
+<b>Examples:</b> Gold, oxygen, distilled water and sodium chloride.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q2 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q2. What is a mixture?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> A mixture is a substance formed by physically combining two
+or more different substances in any proportion.
+</p>
+
+<p>
+The components of a mixture retain their individual properties and can
+usually be separated by physical methods.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q3 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q3. What are the two types of mixtures?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Mixtures are of two main types:
+</p>
+
+<ol>
+<li><b>Homogeneous mixture</b></li>
+<li><b>Heterogeneous mixture</b></li>
+</ol>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q4 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q4. What is a homogeneous mixture?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> A homogeneous mixture has a uniform composition throughout
+and its components cannot be distinguished separately.
+</p>
+
+<p>
+<b>Examples:</b> Salt solution, sugar solution and air.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q5 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q5. What is a heterogeneous mixture?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> A heterogeneous mixture does not have a uniform composition
+throughout. Its different components can often be distinguished.
+</p>
+
+<p>
+<b>Examples:</b> Soil, oil and water, and sand in water.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q6 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q6. What is a solution?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> A solution is a homogeneous mixture of two or more substances.
+The substance that is dissolved is called the <b>solute</b> and the substance
+in which it is dissolved is called the <b>solvent</b>.
+</p>
+
+<p>
+<b>Example:</b> In a salt solution, salt is the solute and water is the
+solvent.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q7 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q7. What are solute and solvent?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Solute:</b> The component of a solution that is dissolved in the solvent
+is called the solute.
+</p>
+
+<p>
+<b>Solvent:</b> The component of a solution that dissolves the solute is
+called the solvent.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q8 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q8. What is a saturated solution?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> A saturated solution is a solution that cannot dissolve any
+more solute at a given temperature.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q9 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q9. What is an unsaturated solution?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> An unsaturated solution is a solution that can dissolve more
+solute at a given temperature.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q10 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q10. What is concentration of a solution?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> The concentration of a solution is the amount of solute
+present in a given amount of solution.
+</p>
+
+<p>
+One formula used to express concentration is:
+</p>
+
+<p>
+<b>Mass percentage = (Mass of solute / Mass of solution) × 100</b>
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q11 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q11. What is a suspension?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> A suspension is a heterogeneous mixture in which insoluble
+solid particles are dispersed in a liquid. The particles are large enough
+to be seen and settle down when the mixture is left undisturbed.
+</p>
+
+<p>
+<b>Example:</b> Muddy water.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q12 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q12. What is a colloidal solution?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> A colloid is a heterogeneous mixture in which very small
+particles of one substance are dispersed in another substance. The particles
+do not settle down on standing.
+</p>
+
+<p>
+<b>Example:</b> Milk.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q13 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q13. What is the Tyndall effect?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> The scattering of light by colloidal particles is called the
+<b>Tyndall effect</b>.
+</p>
+
+<p>
+It makes the path of a beam of light visible when it passes through a
+colloid.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q14 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q14. Write four differences between a solution, suspension and colloid.
+</div>
+
+<div class="answer">
+
+<table class="science-table">
+
+<tr>
+<th>Property</th>
+<th>Solution</th>
+<th>Colloid</th>
+<th>Suspension</th>
+</tr>
+
+<tr>
+<td>Nature</td>
+<td>Homogeneous</td>
+<td>Heterogeneous</td>
+<td>Heterogeneous</td>
+</tr>
+
+<tr>
+<td>Particle size</td>
+<td>Very small</td>
+<td>Intermediate</td>
+<td>Large</td>
+</tr>
+
+<tr>
+<td>Particles settle down</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td>Tyndall effect</td>
+<td>No</td>
+<td>Yes</td>
+<td>Usually yes</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q15 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q15. How can a mixture of salt and water be separated?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> A mixture of salt and water can be separated by
+<b>evaporation</b>. On heating, water evaporates and salt is left behind.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q16 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q16. How can a mixture of salt and water be separated by distillation?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> The mixture is heated in a distillation apparatus. Water
+changes into vapour and is then cooled in a condenser to obtain pure water.
+Salt remains behind in the flask.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q17 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q17. How can the components of a mixture of two miscible liquids be separated?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Two miscible liquids having different boiling points can be
+separated by <b>distillation</b>. If their boiling points are close, the
+mixture can be separated by <b>fractional distillation</b>.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q18 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q18. What is filtration?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Filtration is a method used to separate an insoluble solid
+from a liquid by using a filter medium.
+</p>
+
+<p>
+<b>Example:</b> Separating sand from water.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q19 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q19. What is centrifugation?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Centrifugation is a method of separation in which components
+of a mixture are separated by rapidly rotating the mixture.
+</p>
+
+<p>
+<b>Example:</b> Cream can be separated from milk by centrifugation.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q20 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q20. What is chromatography?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Chromatography is a method used to separate different
+components of a mixture based on their different rates of movement through
+a medium.
+</p>
+
+<p>
+It is commonly used to separate different colours in a dye or ink.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q21 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q21. What is sublimation?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Sublimation is the process in which a solid changes directly
+into vapour without changing into a liquid.
+</p>
+
+<p>
+<b>Examples:</b> Ammonium chloride, camphor and naphthalene.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q22 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q22. How can a mixture of ammonium chloride and salt be separated?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> The mixture can be separated by sublimation. Ammonium chloride
+sublimes on heating, while salt remains behind.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q23 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q23. What is crystallisation?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Crystallisation is a process used to obtain pure crystals of
+a substance from its solution.
+</p>
+
+<p>
+It is used to purify solids that may decompose or contain impurities when
+separated by simple evaporation.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q24 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q24. Give examples of physical and chemical changes.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Physical changes:</b> Melting of ice, boiling of water and cutting of
+paper.
+</p>
+
+<p>
+<b>Chemical changes:</b> Rusting of iron, burning of paper and formation of
+curd from milk.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q25 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q25. Differentiate between a mixture and a compound.
+</div>
+
+<div class="answer">
+
+<table class="science-table">
+
+<tr>
+<th>Mixture</th>
+<th>Compound</th>
+</tr>
+
+<tr>
+<td>Substances are physically combined.</td>
+<td>Elements are chemically combined.</td>
+</tr>
+
+<tr>
+<td>Components may be present in any proportion.</td>
+<td>Elements are present in a fixed ratio.</td>
+</tr>
+
+<tr>
+<td>Components retain their individual properties.</td>
+<td>A compound has properties different from its constituent elements.</td>
+</tr>
+
+<tr>
+<td>Components can generally be separated by physical methods.</td>
+<td>Components can be separated only by chemical methods.</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q26 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q26. Give two examples each of homogeneous and heterogeneous mixtures.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Homogeneous mixtures:</b> Air and salt solution.
+</p>
+
+<p>
+<b>Heterogeneous mixtures:</b> Soil and oil in water.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q27 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q27. Is air a mixture or a pure substance? Give reason.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Air is a <b>mixture</b> because it contains several gases such
+as nitrogen, oxygen, carbon dioxide and other gases. These gases are not
+chemically combined and their proportions can vary.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q28 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q28. Why is water considered a compound and not a mixture?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Water is a compound because hydrogen and oxygen are chemically
+combined in a fixed ratio of 1:8 by mass. It has properties different from
+hydrogen and oxygen.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q29 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q29. Which separation method would you use for the following mixtures?
+</div>
+
+<div class="answer">
+
+<ol>
+<li>Salt from water – <b>Evaporation</b></li>
+<li>Sand from water – <b>Filtration</b></li>
+<li>Ammonium chloride from salt – <b>Sublimation</b></li>
+<li>Cream from milk – <b>Centrifugation</b></li>
+<li>Different colours from ink – <b>Chromatography</b></li>
+<li>Two miscible liquids with different boiling points – <b>Distillation</b></li>
+</ol>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- IMPORTANT POINTS -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+⭐ Important Points for CBSE Exam
+</div>
+
+<div class="answer">
+
+<ol>
+<li>Learn the difference between pure substances and mixtures.</li>
+<li>Learn the differences between homogeneous and heterogeneous mixtures.</li>
+<li>Remember the properties of solutions, colloids and suspensions.</li>
+<li>Learn the Tyndall effect and its examples.</li>
+<li>Practise different methods of separation of mixtures.</li>
+<li>Remember the difference between mixtures and compounds.</li>
+</ol>
+
+</div>
+
+</div>
+
+
+<!-- PROTECTION -->
+
+<script>
+
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+document.addEventListener("selectstart", e => e.preventDefault());
+
+document.addEventListener("copy", e => {
+
+    e.preventDefault();
+
+    alert("Copying content is not allowed");
+
+});
+
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

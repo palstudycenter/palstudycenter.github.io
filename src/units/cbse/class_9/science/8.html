@@ -1,0 +1,1039 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | Biology Chapter 7</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    line-height:1.7;
+}
+
+/* NAVBAR */
+
+.navbar{
+    background:rgba(15,23,42,0.90);
+    backdrop-filter:blur(10px);
+    box-shadow:0 4px 18px rgba(0,0,0,.18);
+    padding:10px 0;
+}
+
+.navbar-brand{
+    font-size:30px;
+    font-weight:700;
+    color:white !important;
+}
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+
+/* NOTES CONTAINER */
+
+.notes-container{
+    max-width:900px;
+    margin:100px auto 50px;
+    padding:20px;
+}
+
+/* CHAPTER TITLE */
+
+.notes-title{
+    background:#e3f2fd;
+    color:#1565c0;
+    padding:15px 20px;
+    border-left:6px solid #1565c0;
+    border-radius:50px;
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:30px;
+    text-align:center;
+}
+
+/* QUESTION ANSWER BOX */
+
+.qa-box{
+    background:white;
+    padding:22px;
+    margin-bottom:18px;
+    border-radius:14px;
+    border-left:6px solid #1565c0;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    transition:.25s;
+}
+
+.qa-box:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.question{
+    font-weight:bold;
+    color:#1b3a57;
+    margin-bottom:10px;
+    font-size:19px;
+}
+
+.answer{
+    color:#2c3e50;
+    text-align:justify;
+}
+
+.answer ul,
+.answer ol{
+    margin-left:25px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+/* TABLE */
+
+.answer table{
+    width:100%;
+    border-collapse:collapse;
+    margin:12px 0;
+    background:#fff;
+    overflow-x:auto;
+}
+
+.answer table td,
+.answer table th{
+    border:1px solid #ddd;
+    padding:10px 12px;
+    text-align:left;
+    vertical-align:top;
+}
+
+.answer table th{
+    background:#eaf2fb;
+    font-weight:bold;
+    color:#1b3a57;
+}
+
+/* IMPORTANT POINT */
+
+.important{
+    background:#fff8e1;
+    border-left:5px solid #ffb300;
+    padding:12px 15px;
+    margin-top:12px;
+    border-radius:8px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .navbar-brand{
+        font-size:24px;
+    }
+
+    .notes-container{
+        margin-top:85px;
+        padding:12px;
+    }
+
+    .notes-title{
+        font-size:22px;
+        border-radius:20px;
+    }
+
+    .qa-box{
+        padding:17px;
+    }
+
+    .question{
+        font-size:17px;
+    }
+
+}
+/* ============================= */
+/* DIAGRAM RESPONSIVE CSS */
+/* ============================= */
+
+.qa-box img,
+.answer img,
+.diagram img {
+    display: block;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    margin: 15px auto;
+    object-fit: contain;
+    box-sizing: border-box;
+}
+
+/* Diagram container */
+.diagram {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+/* SVG diagrams */
+.qa-box svg,
+.answer svg,
+.diagram svg {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin: 15px auto;
+    box-sizing: border-box;
+}
+
+/* Prevent long diagram/content from going outside */
+.qa-box,
+.answer {
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* Tables inside answers */
+.qa-box table,
+.answer table {
+    max-width: 100%;
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+    box-sizing: border-box;
+}
+
+/* Mobile screen */
+@media (max-width: 600px) {
+
+    .qa-box {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .qa-box img,
+    .answer img,
+    .diagram img {
+        max-width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .qa-box svg,
+    .answer svg,
+    .diagram svg {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+}
+/* PROTECTION */
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar fixed-top">
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+    पाल <span>स्टडी सेंटर</span>
+</a>
+
+</div>
+
+</nav>
+
+
+<!-- NOTES -->
+
+<div class="notes-container">
+
+<div class="notes-title">
+📘 Chapter 8 – Force and Laws of Motion
+</div>
+<!-- ===================================================== -->
+<!-- CLASS 9 CBSE SCIENCE – CHAPTER 8 -->
+<!-- FORCE AND LAWS OF MOTION -->
+<!-- ===================================================== -->
+
+
+
+<div class="qa-box">
+
+<div class="question">
+Q1. What is force?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Force is a push or a pull acting on an object. It can change
+the state of motion, direction, or shape of an object.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+Q2. What are balanced and unbalanced forces?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Forces acting on an object are called <b>balanced forces</b>
+when their resultant force is zero. They do not change the state of motion
+of the object.
+</p>
+
+<p>
+<b>Unbalanced forces</b> are forces whose resultant is not zero. They can
+change the state of motion of an object.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+Q3. What is inertia?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Inertia is the tendency of an object to resist any change in
+its state of rest or motion.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+Q4. What are the different types of inertia?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> There are three types of inertia:
+</p>
+
+<ol>
+<li>Inertia of rest</li>
+<li>Inertia of motion</li>
+<li>Inertia of direction</li>
+</ol>
+
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+Q5. What is inertia of rest? Give an example.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> The tendency of an object at rest to remain at rest is called
+inertia of rest.
+</p>
+
+<p>
+<b>Example:</b> When a bus starts suddenly, passengers tend to fall
+backwards because their bodies tend to remain at rest.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+Q6. What is inertia of motion? Give an example.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> The tendency of a moving object to continue moving with the
+same velocity is called inertia of motion.
+</p>
+
+<p>
+<b>Example:</b> When a moving bus stops suddenly, passengers tend to fall
+forward because their bodies tend to remain in motion.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+Q7. What is inertia of direction? Give an example.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> The tendency of an object to resist a change in its direction
+of motion is called inertia of direction.
+</p>
+
+<p>
+<b>Example:</b> Passengers in a turning bus tend to lean sideways because
+their bodies tend to continue moving in the original direction.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+Q8. State Newton's First Law of Motion.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> An object remains at rest or continues to move with uniform
+velocity in a straight line unless acted upon by an external unbalanced
+force.
+</p>
+
+<p>
+Newton's First Law is also called the <b>Law of Inertia</b>.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+Q9. Why is Newton's First Law called the Law of Inertia?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Newton's First Law describes the tendency of an object to
+resist a change in its state of rest or uniform motion. This tendency is
+called inertia. Therefore, it is called the Law of Inertia.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+Q10. State Newton's Second Law of Motion.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> The rate of change of momentum of an object is directly
+proportional to the applied force and takes place in the direction of the
+force.
+</p>
+
+<p>
+Mathematically,
+</p>
+
+<p>
+<b>F = ma</b>
+</p>
+
+<p>
+where <b>F</b> = force, <b>m</b> = mass and <b>a</b> = acceleration.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+Q11. Define momentum. Write its formula and SI unit.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Momentum is the product of the mass and velocity of an object.
+</p>
+
+<p>
+<b>p = mv</b>
+</p>
+
+<p>
+The SI unit of momentum is <b>kg m/s</b>.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+Q12. State Newton's Third Law of Motion.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> To every action, there is an equal and opposite reaction.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+Q13. Give two examples of Newton's Third Law of Motion.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b>
+</p>
+
+<ol>
+<li>While walking, we push the ground backwards and the ground pushes us forwards.</li>
+<li>A swimmer pushes water backwards and the water pushes the swimmer forwards.</li>
+</ol>
+
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+Q14. What is the relation between force, mass and acceleration?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> According to Newton's Second Law:
+</p>
+
+<p>
+<b>F = ma</b>
+</p>
+
+<p>
+Thus, force is equal to the product of mass and acceleration.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+Q15. What is the SI unit of force?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> The SI unit of force is <b>newton (N)</b>.
+</p>
+
+<p>
+One newton is the force required to produce an acceleration of
+<b>1 m/s²</b> in an object of mass <b>1 kg</b>.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+Q16. Why do passengers fall forward when a moving bus stops suddenly?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> When a moving bus stops suddenly, the lower part of the body
+comes to rest with the bus, while the upper part tends to remain in motion
+due to inertia of motion. Therefore, passengers fall forward.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+Q17. Why do passengers fall backwards when a bus starts suddenly?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> When a bus starts suddenly, the lower part of the body moves
+with the bus while the upper part tends to remain at rest due to inertia of
+rest. Therefore, passengers fall backwards.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+Q18. Why are seat belts used in cars?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Seat belts protect passengers from being thrown forward when
+a car stops suddenly. They reduce the effect of inertia of motion and help
+prevent injuries.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+Q19. Explain the conservation of momentum.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> The law of conservation of momentum states that when no
+external force acts on a system, the total momentum of the system remains
+constant.
+</p>
+
+<p>
+<b>Total momentum before collision = Total momentum after collision</b>
+</p>
+
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+Q20. Write the mathematical expression for conservation of momentum.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> If two objects of masses <b>m₁</b> and <b>m₂</b> have initial
+velocities <b>u₁</b> and <b>u₂</b>, and final velocities <b>v₁</b> and
+<b>v₂</b>, then:
+</p>
+
+<p>
+<b>m₁u₁ + m₂u₂ = m₁v₁ + m₂v₂</b>
+</p>
+
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+Q21. Why does a gun recoil when a bullet is fired?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> When a bullet is fired, it moves forward with momentum.
+According to the law of conservation of momentum, the gun moves backwards
+with an equal and opposite momentum. This backward motion is called recoil.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+Q22. Why does a person fall backwards when a gun is fired?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> When the bullet moves forward, the gun experiences a backward
+reaction due to conservation of momentum. This backward recoil can cause
+the person holding the gun to move backwards.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+Q23. Why does a cricket player move his hands backwards while catching a ball?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> The player moves his hands backwards while catching the ball
+to increase the time taken to stop the ball. This decreases the rate of
+change of momentum and hence reduces the force on the hands.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+Q24. Why does a karate player break a pile of tiles with a blow?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> The karate player strikes the tiles with a high velocity.
+The sudden change in momentum produces a large force, which can break the
+tiles.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+Q25. Why does dust come out of a carpet when it is beaten with a stick?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> When the carpet is beaten, it moves suddenly but the dust
+particles tend to remain at rest due to inertia of rest. Therefore, the
+dust separates from the carpet.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+Q26. Why are athletes advised to come to a stop slowly after finishing a race?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> An athlete's body is in motion while running. If the athlete
+stops suddenly, the body tends to continue moving due to inertia of motion.
+Stopping gradually reduces the risk of falling.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+Q27. A force of 10 N acts on an object of mass 2 kg. Find its acceleration.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b>
+</p>
+
+<p>
+Given: <b>F = 10 N</b>, <b>m = 2 kg</b>
+</p>
+
+<p>
+Using <b>F = ma</b>
+</p>
+
+<p>
+<b>a = F/m = 10/2 = 5 m/s²</b>
+</p>
+
+<p>
+Therefore, the acceleration is <b>5 m/s²</b>.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+Q28. An object of mass 5 kg is moving with an acceleration of 2 m/s². Find the force acting on it.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b>
+</p>
+
+<p>
+Given: <b>m = 5 kg</b>, <b>a = 2 m/s²</b>
+</p>
+
+<p>
+<b>F = ma</b>
+</p>
+
+<p>
+<b>F = 5 × 2 = 10 N</b>
+</p>
+
+<p>
+Therefore, the force acting on the object is <b>10 N</b>.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+Q29. A body of mass 2 kg moves with a velocity of 5 m/s. Calculate its momentum.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b>
+</p>
+
+<p>
+Given: <b>m = 2 kg</b>, <b>v = 5 m/s</b>
+</p>
+
+<p>
+<b>p = mv</b>
+</p>
+
+<p>
+<b>p = 2 × 5 = 10 kg m/s</b>
+</p>
+
+<p>
+Therefore, the momentum is <b>10 kg m/s</b>.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+Q30. What is the difference between mass and inertia?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Mass is the amount of matter present in an object, while
+inertia is the tendency of an object to resist a change in its state of
+motion. Greater mass means greater inertia.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- IMPORTANT FORMULAE -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+⭐ Important Formulae
+</div>
+
+<div class="answer">
+
+<p><b>Momentum:</b> p = mv</p>
+
+<p><b>Force:</b> F = ma</p>
+
+<p><b>Force in terms of momentum:</b> F = (v - u)m/t</p>
+
+<p><b>Conservation of momentum:</b></p>
+
+<p>
+<b>m₁u₁ + m₂u₂ = m₁v₁ + m₂v₂</b>
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- KEY POINTS -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+📌 Important Points for Examination
+</div>
+
+<div class="answer">
+
+<ul>
+<li>Newton's First Law is also called the Law of Inertia.</li>
+<li>There are three types of inertia: rest, motion and direction.</li>
+<li>Newton's Second Law gives the relation <b>F = ma</b>.</li>
+<li>Momentum is given by <b>p = mv</b>.</li>
+<li>The SI unit of force is <b>newton (N)</b>.</li>
+<li>The SI unit of momentum is <b>kg m/s</b>.</li>
+<li>Newton's Third Law states that every action has an equal and opposite reaction.</li>
+<li>In an isolated system, total momentum remains conserved.</li>
+</ul>
+
+</div>
+
+</div>
+
+
+
+<!-- PROTECTION -->
+
+<script>
+
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+document.addEventListener("selectstart", e => e.preventDefault());
+
+document.addEventListener("copy", e => {
+
+    e.preventDefault();
+
+    alert("Copying content is not allowed");
+
+});
+
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

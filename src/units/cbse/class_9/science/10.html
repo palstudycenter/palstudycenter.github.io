@@ -1,0 +1,1234 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | Biology Chapter 7</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    line-height:1.7;
+}
+
+/* NAVBAR */
+
+.navbar{
+    background:rgba(15,23,42,0.90);
+    backdrop-filter:blur(10px);
+    box-shadow:0 4px 18px rgba(0,0,0,.18);
+    padding:10px 0;
+}
+
+.navbar-brand{
+    font-size:30px;
+    font-weight:700;
+    color:white !important;
+}
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+
+/* NOTES CONTAINER */
+
+.notes-container{
+    max-width:900px;
+    margin:100px auto 50px;
+    padding:20px;
+}
+
+/* CHAPTER TITLE */
+
+.notes-title{
+    background:#e3f2fd;
+    color:#1565c0;
+    padding:15px 20px;
+    border-left:6px solid #1565c0;
+    border-radius:50px;
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:30px;
+    text-align:center;
+}
+
+/* QUESTION ANSWER BOX */
+
+.qa-box{
+    background:white;
+    padding:22px;
+    margin-bottom:18px;
+    border-radius:14px;
+    border-left:6px solid #1565c0;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    transition:.25s;
+}
+
+.qa-box:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.question{
+    font-weight:bold;
+    color:#1b3a57;
+    margin-bottom:10px;
+    font-size:19px;
+}
+
+.answer{
+    color:#2c3e50;
+    text-align:justify;
+}
+
+.answer ul,
+.answer ol{
+    margin-left:25px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+/* TABLE */
+
+.answer table{
+    width:100%;
+    border-collapse:collapse;
+    margin:12px 0;
+    background:#fff;
+    overflow-x:auto;
+}
+
+.answer table td,
+.answer table th{
+    border:1px solid #ddd;
+    padding:10px 12px;
+    text-align:left;
+    vertical-align:top;
+}
+
+.answer table th{
+    background:#eaf2fb;
+    font-weight:bold;
+    color:#1b3a57;
+}
+
+/* IMPORTANT POINT */
+
+.important{
+    background:#fff8e1;
+    border-left:5px solid #ffb300;
+    padding:12px 15px;
+    margin-top:12px;
+    border-radius:8px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .navbar-brand{
+        font-size:24px;
+    }
+
+    .notes-container{
+        margin-top:85px;
+        padding:12px;
+    }
+
+    .notes-title{
+        font-size:22px;
+        border-radius:20px;
+    }
+
+    .qa-box{
+        padding:17px;
+    }
+
+    .question{
+        font-size:17px;
+    }
+
+}
+/* ============================= */
+/* DIAGRAM RESPONSIVE CSS */
+/* ============================= */
+
+.qa-box img,
+.answer img,
+.diagram img {
+    display: block;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    margin: 15px auto;
+    object-fit: contain;
+    box-sizing: border-box;
+}
+
+/* Diagram container */
+.diagram {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+/* SVG diagrams */
+.qa-box svg,
+.answer svg,
+.diagram svg {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin: 15px auto;
+    box-sizing: border-box;
+}
+
+/* Prevent long diagram/content from going outside */
+.qa-box,
+.answer {
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* Tables inside answers */
+.qa-box table,
+.answer table {
+    max-width: 100%;
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+    box-sizing: border-box;
+}
+
+/* Mobile screen */
+@media (max-width: 600px) {
+
+    .qa-box {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .qa-box img,
+    .answer img,
+    .diagram img {
+        max-width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .qa-box svg,
+    .answer svg,
+    .diagram svg {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+}
+/* PROTECTION */
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar fixed-top">
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+    पाल <span>स्टडी सेंटर</span>
+</a>
+
+</div>
+
+</nav>
+
+
+<!-- NOTES -->
+
+<div class="notes-container">
+
+<div class="notes-title">
+📘 Chapter 10 – Gravitation
+</div>
+
+
+<!-- ===================================================== -->
+<!-- CLASS 9 CBSE SCIENCE – CHAPTER 10 -->
+<!-- GRAVITATION -->
+<!-- ===================================================== -->
+
+<!-- ============================= -->
+<!-- Q1 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q1. What is gravitation?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Gravitation is the force of attraction between any two objects
+in the universe due to their masses.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q2 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q2. State the universal law of gravitation.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Every object in the universe attracts every other object with a
+force which is directly proportional to the product of their masses and
+inversely proportional to the square of the distance between their centres.
+</p>
+
+<p>
+The mathematical expression is:
+</p>
+
+<p>
+<b>F = Gm₁m₂ / r²</b>
+</p>
+
+<p>
+Where <b>F</b> is the gravitational force, <b>m₁</b> and <b>m₂</b> are the
+masses of the two objects, <b>r</b> is the distance between their centres and
+<b>G</b> is the universal gravitational constant.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q3 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q3. What is the SI unit of the universal gravitational constant G?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> The SI unit of the universal gravitational constant is
+<b>N m² kg⁻²</b>.
+</p>
+
+<p>
+Its approximate value is:
+</p>
+
+<p>
+<b>G = 6.67 × 10⁻¹¹ N m² kg⁻²</b>
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q4 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q4. What is free fall?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> The motion of an object towards the Earth under the influence
+of Earth's gravitational force alone is called <b>free fall</b>.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q5 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q5. What is acceleration due to gravity?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> The acceleration produced in an object due to the gravitational
+force of the Earth is called <b>acceleration due to gravity</b>.
+It is represented by <b>g</b>.
+</p>
+
+<p>
+Near the surface of the Earth:
+</p>
+
+<p>
+<b>g ≈ 9.8 m/s²</b>
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q6 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q6. Write the relation between G and g.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> The relation between the universal gravitational constant
+<b>G</b> and acceleration due to gravity <b>g</b> is:
+</p>
+
+<p>
+<b>g = GM / R²</b>
+</p>
+
+<p>
+Where <b>M</b> is the mass of the Earth and <b>R</b> is the radius of the Earth.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q7 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q7. What is the difference between mass and weight?
+</div>
+
+<div class="answer">
+
+<table class="science-table">
+
+<tr>
+<th>Mass</th>
+<th>Weight</th>
+</tr>
+
+<tr>
+<td>Mass is the amount of matter contained in an object.</td>
+<td>Weight is the gravitational force acting on an object.</td>
+</tr>
+
+<tr>
+<td>Its SI unit is kilogram (kg).</td>
+<td>Its SI unit is newton (N).</td>
+</tr>
+
+<tr>
+<td>Mass remains constant at different places.</td>
+<td>Weight may change from place to place.</td>
+</tr>
+
+<tr>
+<td>Mass is measured using a beam balance.</td>
+<td>Weight is measured using a spring balance.</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q8 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q8. Write the formula for weight of an object.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b>
+</p>
+
+<p>
+<b>W = mg</b>
+</p>
+
+<p>
+Where <b>W</b> is weight, <b>m</b> is mass and <b>g</b> is acceleration due to
+gravity.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q9 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q9. Why is the weight of an object on the Moon about one-sixth of its weight
+on the Earth?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> The Moon has much less mass than the Earth. Therefore, the
+gravitational acceleration on the Moon is about one-sixth of that on Earth.
+Since <b>W = mg</b>, the weight of an object on the Moon is about one-sixth
+of its weight on Earth.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q10 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q10. What is thrust?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> The force acting normally on a surface is called
+<b>thrust</b>.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q11 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q11. What is pressure?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Pressure is the force acting normally on a unit area of a
+surface.
+</p>
+
+<p>
+<b>Pressure = Force / Area</b>
+</p>
+
+<p>
+Its SI unit is <b>pascal (Pa)</b>.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q12 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q12. Why does a sharp knife cut better than a blunt knife?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> A sharp knife has a smaller area of contact. For the same force,
+it produces greater pressure. Therefore, it cuts objects more easily than a
+blunt knife.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q13 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q13. Why are school bags provided with broad straps?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Broad straps increase the area of contact with the shoulders.
+Therefore, the pressure exerted by the bag on the shoulders decreases, making
+the bag more comfortable to carry.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q14 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q14. What is buoyancy?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> The upward force exerted by a fluid on an object immersed in
+it is called <b>buoyant force</b> or <b>buoyancy</b>.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q15 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q15. Why does an object float or sink in water?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> An object floats when the buoyant force acting on it is equal
+to or greater than its weight. An object sinks when its weight is greater
+than the buoyant force.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q16 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q16. State Archimedes' principle.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> When an object is completely or partially immersed in a fluid,
+it experiences an upward buoyant force equal to the weight of the fluid
+displaced by the object.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q17 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q17. Why does a ship made of iron float on water?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> A ship is hollow and contains a large volume of air. Its
+average density becomes less than the density of water. Therefore, the
+buoyant force can balance its weight and the ship floats.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q18 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q18. Why does a person feel lighter while standing in water?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Water exerts an upward buoyant force on the person. This
+upward force reduces the apparent weight of the person, so the person feels
+lighter in water.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q19 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q19. What is relative density?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Relative density is the ratio of the density of a substance
+to the density of water at 4°C.
+</p>
+
+<p>
+<b>Relative density = Density of substance / Density of water</b>
+</p>
+
+<p>
+Relative density has no unit.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q20 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q20. What is the density of a substance?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Density is the mass contained in a unit volume of a substance.
+</p>
+
+<p>
+<b>Density = Mass / Volume</b>
+</p>
+
+<p>
+The SI unit of density is <b>kg/m³</b>.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q21 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q21. Why do objects fall towards the Earth?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Objects fall towards the Earth because the Earth attracts
+objects towards its centre due to gravitational force.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q22 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q22. What happens to the value of gravitational force if the distance between
+two objects is doubled?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> According to the universal law of gravitation:
+</p>
+
+<p>
+<b>F ∝ 1/r²</b>
+</p>
+
+<p>
+If the distance is doubled, the gravitational force becomes:
+</p>
+
+<p>
+<b>F' = F/4</b>
+</p>
+
+<p>
+Therefore, the gravitational force becomes one-fourth of its original value.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q23 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q23. What happens to the gravitational force if the mass of one object is
+doubled?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Gravitational force is directly proportional to the mass of
+each object. Therefore, if the mass of one object is doubled, the
+gravitational force also becomes double.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q24 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q24. Why do objects of different masses fall with the same acceleration in
+the absence of air resistance?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> The acceleration due to gravity near the surface of the Earth
+does not depend on the mass of the falling object. Therefore, in the absence
+of air resistance, objects of different masses fall with the same
+acceleration <b>g</b>.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- Q25 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q25. What is meant by acceleration due to gravity on the Moon?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> The acceleration produced in an object due to the gravitational
+force of the Moon is called acceleration due to gravity on the Moon. Its
+value is approximately:
+</p>
+
+<p>
+<b>g<sub>moon</sub> ≈ 1.62 m/s²</b>
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- NUMERICAL QUESTIONS -->
+<!-- ============================= -->
+
+<div class="notes-title">
+🧮 Important Numericals
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+Q26. Calculate the weight of a body of mass 10 kg on Earth. Take
+g = 9.8 m/s².
+</div>
+
+<div class="answer">
+
+<p>
+<b>Given:</b>
+</p>
+
+<p>
+Mass, m = 10 kg<br>
+Acceleration due to gravity, g = 9.8 m/s²
+</p>
+
+<p>
+<b>Formula:</b> W = mg
+</p>
+
+<p>
+W = 10 × 9.8
+</p>
+
+<p>
+<b>W = 98 N</b>
+</p>
+
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+Q27. A body has a mass of 50 kg. Calculate its weight on Earth.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Given:</b> m = 50 kg, g = 9.8 m/s²
+</p>
+
+<p>
+<b>W = mg</b>
+</p>
+
+<p>
+W = 50 × 9.8
+</p>
+
+<p>
+<b>W = 490 N</b>
+</p>
+
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+Q28. An object weighs 98 N on Earth. Find its mass.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Given:</b> W = 98 N, g = 9.8 m/s²
+</p>
+
+<p>
+<b>W = mg</b>
+</p>
+
+<p>
+<b>m = W/g</b>
+</p>
+
+<p>
+m = 98/9.8
+</p>
+
+<p>
+<b>m = 10 kg</b>
+</p>
+
+</div>
+
+</div>
+
+
+<div class="qa-box">
+
+<div class="question">
+Q29. A body of mass 6 kg is taken to the Moon. Find its mass and weight on
+the Moon. Take g<sub>moon</sub> = 1.62 m/s².
+</div>
+
+<div class="answer">
+
+<p>
+<b>Mass on Moon:</b> Mass remains unchanged.
+</p>
+
+<p>
+<b>Mass = 6 kg</b>
+</p>
+
+<p>
+Weight on Moon:
+</p>
+
+<p>
+W = mg
+</p>
+
+<p>
+W = 6 × 1.62
+</p>
+
+<p>
+<b>W = 9.72 N</b>
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- FORMULA BOX -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+⭐ Important Formulae
+</div>
+
+<div class="answer">
+
+<ul>
+
+<li><b>F = Gm₁m₂ / r²</b></li>
+
+<li><b>g = GM / R²</b></li>
+
+<li><b>W = mg</b></li>
+
+<li><b>Pressure = Force / Area</b></li>
+
+<li><b>Density = Mass / Volume</b></li>
+
+<li><b>Relative Density = Density of substance / Density of water</b></li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- KEY POINTS -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+📌 Important Points for Examination
+</div>
+
+<div class="answer">
+
+<ul>
+
+<li>Universal gravitational constant: <b>G = 6.67 × 10⁻¹¹ N m² kg⁻²</b></li>
+
+<li>Acceleration due to gravity on Earth: <b>g ≈ 9.8 m/s²</b></li>
+
+<li>Acceleration due to gravity on Moon: <b>≈ 1.62 m/s²</b></li>
+
+<li>SI unit of force: <b>newton (N)</b></li>
+
+<li>SI unit of pressure: <b>pascal (Pa)</b></li>
+
+<li>SI unit of density: <b>kg/m³</b></li>
+
+<li>SI unit of mass: <b>kilogram (kg)</b></li>
+
+<li>SI unit of weight: <b>newton (N)</b></li>
+
+<li>Relative density has <b>no unit</b>.</li>
+
+<li>Weight changes from place to place, while mass remains constant.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+<!-- ============================= -->
+<!-- MAIN MESSAGE -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="answer">
+
+<div class="important">
+
+<b>⭐ Chapter Summary:</b><br><br>
+
+Gravitation is the universal force of attraction between masses. The Earth
+attracts objects towards itself due to gravity. The weight of an object is
+given by W = mg. Pressure depends on force and area. Fluids exert buoyant
+force on immersed objects, and Archimedes' principle explains this buoyant
+force. Density and relative density help us compare substances and explain
+why objects float or sink.
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PROTECTION -->
+
+<script>
+
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+document.addEventListener("selectstart", e => e.preventDefault());
+
+document.addEventListener("copy", e => {
+
+    e.preventDefault();
+
+    alert("Copying content is not allowed");
+
+});
+
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

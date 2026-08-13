@@ -1,0 +1,1231 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | Biology Chapter 7</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    line-height:1.7;
+}
+
+/* NAVBAR */
+
+.navbar{
+    background:rgba(15,23,42,0.90);
+    backdrop-filter:blur(10px);
+    box-shadow:0 4px 18px rgba(0,0,0,.18);
+    padding:10px 0;
+}
+
+.navbar-brand{
+    font-size:30px;
+    font-weight:700;
+    color:white !important;
+}
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+
+/* NOTES CONTAINER */
+
+.notes-container{
+    max-width:900px;
+    margin:100px auto 50px;
+    padding:20px;
+}
+
+/* CHAPTER TITLE */
+
+.notes-title{
+    background:#e3f2fd;
+    color:#1565c0;
+    padding:15px 20px;
+    border-left:6px solid #1565c0;
+    border-radius:50px;
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:30px;
+    text-align:center;
+}
+
+/* QUESTION ANSWER BOX */
+
+.qa-box{
+    background:white;
+    padding:22px;
+    margin-bottom:18px;
+    border-radius:14px;
+    border-left:6px solid #1565c0;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    transition:.25s;
+}
+
+.qa-box:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.question{
+    font-weight:bold;
+    color:#1b3a57;
+    margin-bottom:10px;
+    font-size:19px;
+}
+
+.answer{
+    color:#2c3e50;
+    text-align:justify;
+}
+
+.answer ul,
+.answer ol{
+    margin-left:25px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+/* TABLE */
+
+.answer table{
+    width:100%;
+    border-collapse:collapse;
+    margin:12px 0;
+    background:#fff;
+    overflow-x:auto;
+}
+
+.answer table td,
+.answer table th{
+    border:1px solid #ddd;
+    padding:10px 12px;
+    text-align:left;
+    vertical-align:top;
+}
+
+.answer table th{
+    background:#eaf2fb;
+    font-weight:bold;
+    color:#1b3a57;
+}
+
+/* IMPORTANT POINT */
+
+.important{
+    background:#fff8e1;
+    border-left:5px solid #ffb300;
+    padding:12px 15px;
+    margin-top:12px;
+    border-radius:8px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .navbar-brand{
+        font-size:24px;
+    }
+
+    .notes-container{
+        margin-top:85px;
+        padding:12px;
+    }
+
+    .notes-title{
+        font-size:22px;
+        border-radius:20px;
+    }
+
+    .qa-box{
+        padding:17px;
+    }
+
+    .question{
+        font-size:17px;
+    }
+
+}
+/* ============================= */
+/* DIAGRAM RESPONSIVE CSS */
+/* ============================= */
+
+.qa-box img,
+.answer img,
+.diagram img {
+    display: block;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    margin: 15px auto;
+    object-fit: contain;
+    box-sizing: border-box;
+}
+
+/* Diagram container */
+.diagram {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+/* SVG diagrams */
+.qa-box svg,
+.answer svg,
+.diagram svg {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin: 15px auto;
+    box-sizing: border-box;
+}
+
+/* Prevent long diagram/content from going outside */
+.qa-box,
+.answer {
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* Tables inside answers */
+.qa-box table,
+.answer table {
+    max-width: 100%;
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+    box-sizing: border-box;
+}
+
+/* Mobile screen */
+@media (max-width: 600px) {
+
+    .qa-box {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .qa-box img,
+    .answer img,
+    .diagram img {
+        max-width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .qa-box svg,
+    .answer svg,
+    .diagram svg {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+}
+/* PROTECTION */
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar fixed-top">
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+    पाल <span>स्टडी सेंटर</span>
+</a>
+
+</div>
+
+</nav>
+
+
+<!-- NOTES -->
+
+<div class="notes-container">
+
+<div class="notes-title">
+📘 The Fundamental Unit of Life
+</div>
+
+<!-- ===================================================== -->
+<!-- Q3 -->
+<!-- ===================================================== -->
+
+<div class="qa-box">
+
+<div class="question">
+Q3. What is a cell?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> A cell is the basic structural and functional unit of a living
+organism. It contains various structures called cell organelles that perform
+specific functions.
+</p>
+
+</div>
+</div>
+
+
+<!-- ===================================================== -->
+<!-- Q4 -->
+<!-- ===================================================== -->
+
+<div class="qa-box">
+
+<div class="question">
+Q4. What are unicellular and multicellular organisms?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Organisms made up of a single cell are called
+<b>unicellular organisms</b>. For example, Amoeba and Paramecium.
+</p>
+
+<p>
+Organisms made up of many cells are called <b>multicellular organisms</b>.
+For example, humans, plants and animals.
+</p>
+
+</div>
+</div>
+<!-- ============================= -->
+<!-- Q5 -->
+<!-- ============================= -->
+
+<div class="qa-box">
+
+<div class="question">
+Q5. What do you mean by prokaryotic and eukaryotic cells?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b>
+</p>
+
+<p>
+<b>Prokaryotic Cells:</b> Cells that do not have a true nucleus surrounded by a nuclear membrane are called prokaryotic cells. Their genetic material is present in a region called the nucleoid. Example: Bacteria.
+</p>
+
+<p>
+<b>Eukaryotic Cells:</b> Cells that have a well-defined nucleus surrounded by a nuclear membrane are called eukaryotic cells. They also contain membrane-bound cell organelles. Examples: Plant cells and animal cells.
+</p>
+
+</div>
+
+</div>
+
+<!-- ===================================================== -->
+<!-- Q5 -->
+<!-- ===================================================== -->
+
+<div class="qa-box">
+
+<div class="question">
+Q5. What is the difference between prokaryotic and eukaryotic cells?
+</div>
+
+<div class="answer">
+
+<table border="1" cellpadding="8" cellspacing="0">
+
+<tr>
+<th>Prokaryotic Cell</th>
+<th>Eukaryotic Cell</th>
+</tr>
+
+<tr>
+<td>It does not have a true nucleus.</td>
+<td>It has a well-defined nucleus.</td>
+</tr>
+
+<tr>
+<td>Membrane-bound organelles are absent.</td>
+<td>Membrane-bound organelles are present.</td>
+</tr>
+
+<tr>
+<td>It is generally smaller.</td>
+<td>It is generally larger.</td>
+</tr>
+
+<tr>
+<td>Example: Bacteria</td>
+<td>Example: Plant and animal cells</td>
+</tr>
+
+</table>
+
+</div>
+</div>
+
+<!-- ===================================================== -->
+<!-- Q1 -->
+<!-- ===================================================== -->
+
+<div class="qa-box">
+
+<div class="question">
+Q1. Why is the cell called the fundamental unit of life?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> The cell is called the fundamental unit of life because all
+living organisms are made up of cells. A cell performs all basic life
+processes and is the smallest unit capable of carrying out life activities.
+</p>
+
+</div>
+</div>
+
+
+<!-- ===================================================== -->
+<!-- Q2 -->
+<!-- ===================================================== -->
+
+<div class="qa-box">
+
+<div class="question">
+Q2. Who discovered the cell?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Robert Hooke discovered cells in 1665 while observing a thin
+slice of cork under a microscope. He observed small empty compartments and
+called them "cells".
+</p>
+
+</div>
+</div>
+
+
+<!-- ===================================================== -->
+<!-- Q6 -->
+<!-- ===================================================== -->
+
+<div class="qa-box">
+
+<div class="question">
+Q6. What is the plasma membrane? Write its functions.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> The plasma membrane is the thin, living and selectively
+permeable membrane surrounding the cell.
+</p>
+
+<p>
+<b>Functions:</b>
+</p>
+
+<ol>
+<li>It separates the cell from its surroundings.</li>
+<li>It controls the movement of substances into and out of the cell.</li>
+<li>It helps maintain the internal environment of the cell.</li>
+</ol>
+
+</div>
+</div>
+
+
+<!-- ===================================================== -->
+<!-- Q7 -->
+<!-- ===================================================== -->
+
+<div class="qa-box">
+
+<div class="question">
+Q7. What is diffusion?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Diffusion is the movement of particles from a region of higher
+concentration to a region of lower concentration until they become evenly
+distributed.
+</p>
+
+</div>
+</div>
+
+
+<!-- ===================================================== -->
+<!-- Q8 -->
+<!-- ===================================================== -->
+
+<div class="qa-box">
+
+<div class="question">
+Q8. What is osmosis?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Osmosis is the movement of water molecules through a
+selectively permeable membrane from a region of higher water concentration
+to a region of lower water concentration.
+</p>
+
+</div>
+</div>
+
+
+<!-- ===================================================== -->
+<!-- OSMOSIS DIAGRAM -->
+<!-- ===================================================== -->
+
+<div class="qa-box">
+
+<div class="question">
+Q9. Explain osmosis with a diagram.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> In osmosis, water moves through a selectively permeable
+membrane from a dilute solution towards a concentrated solution.
+</p>
+
+<svg width="700" height="300" viewBox="0 0 700 300"
+xmlns="http://www.w3.org/2000/svg">
+
+<rect x="80" y="50" width="540" height="180"
+fill="none" stroke="black" stroke-width="3"/>
+
+<line x1="350" y1="50" x2="350" y2="230"
+stroke="black" stroke-width="4" stroke-dasharray="8,6"/>
+
+<text x="120" y="85" font-size="20">
+Dilute Solution
+</text>
+
+<text x="420" y="85" font-size="20">
+Concentrated Solution
+</text>
+
+<text x="140" y="130" font-size="18">
+More Water
+</text>
+
+<text x="450" y="130" font-size="18">
+Less Water
+</text>
+
+<line x1="280" y1="165" x2="420" y2="165"
+stroke="black" stroke-width="4"/>
+
+<polygon points="420,165 405,155 405,175"
+fill="black"/>
+
+<text x="270" y="205" font-size="17">
+Movement of Water
+</text>
+
+<text x="315" y="260" font-size="16">
+Selectively Permeable Membrane
+</text>
+
+</svg>
+
+</div>
+</div>
+
+
+<!-- ===================================================== -->
+<!-- Q10 -->
+<!-- ===================================================== -->
+
+<div class="qa-box">
+
+<div class="question">
+Q10. What happens to a cell when it is placed in a hypotonic solution?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Water enters the cell by osmosis. As a result, the cell may
+swell and, in some cases, may burst.
+</p>
+
+</div>
+</div>
+
+
+<!-- ===================================================== -->
+<!-- Q11 -->
+<!-- ===================================================== -->
+
+<div class="qa-box">
+
+<div class="question">
+Q11. What happens to a cell when it is placed in a hypertonic solution?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Water moves out of the cell by osmosis. The cell shrinks.
+In a plant cell, the plasma membrane may pull away from the cell wall.
+This process is called <b>plasmolysis</b>.
+</p>
+
+</div>
+</div>
+
+
+<!-- ===================================================== -->
+<!-- Q12 -->
+<!-- ===================================================== -->
+
+<div class="qa-box">
+
+<div class="question">
+Q12. What is the function of the cell wall?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> The cell wall is a rigid, non-living outer covering found in
+plant cells. It provides shape, support and protection to the cell and
+prevents the cell from bursting when excess water enters it.
+</p>
+
+</div>
+</div>
+
+
+<!-- ===================================================== -->
+<!-- Q13 -->
+<!-- ===================================================== -->
+
+<div class="qa-box">
+
+<div class="question">
+Q13. Why do plant cells not burst when placed in a hypotonic solution?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Water enters the plant cell by osmosis, but the rigid cell wall
+provides resistance to excessive expansion. Therefore, the plant cell does
+not burst easily.
+</p>
+
+</div>
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q. Name the cell organelles and write one function of each.
+</div>
+
+<div class="answer">
+
+<p><b>Answer:</b></p>
+
+<ol>
+<li>
+<b>Nucleus:</b> Controls all the activities of the cell and contains genetic material.
+</li>
+
+<li>
+<b>Mitochondria:</b> Produces energy in the form of ATP.
+</li>
+
+<li>
+<b>Ribosomes:</b> Help in protein synthesis.
+</li>
+
+<li>
+<b>Endoplasmic Reticulum:</b> Helps in the transport and synthesis of materials inside the cell.
+</li>
+
+<li>
+<b>Golgi Apparatus:</b> Modifies, packages and transports substances.
+</li>
+
+<li>
+<b>Lysosomes:</b> Digest waste materials and worn-out cell organelles.
+</li>
+
+<li>
+<b>Vacuoles:</b> Store water, food and other substances.
+</li>
+
+<li>
+<b>Chloroplasts:</b> Carry out photosynthesis in plant cells.
+</li>
+
+<li>
+<b>Plastids:</b> Help in photosynthesis, storage and giving colour to plant parts.
+</li>
+
+<li>
+<b>Cell Wall:</b> Provides protection, support and shape to plant cells.
+</li>
+
+</ol>
+
+</div>
+
+</div>
+
+<!-- ===================================================== -->
+<!-- Q14 -->
+<!-- ===================================================== -->
+
+<div class="qa-box">
+
+<div class="question">
+Q14. What is the nucleus? Write its functions.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> The nucleus is a membrane-bound organelle present in
+eukaryotic cells. It contains genetic material and controls many activities
+of the cell.
+</p>
+
+<p>
+<b>Functions:</b>
+</p>
+
+<ol>
+<li>It controls cellular activities.</li>
+<li>It contains chromosomes and genetic information.</li>
+<li>It plays an important role in cell division.</li>
+</ol>
+
+</div>
+</div>
+
+
+<!-- ===================================================== -->
+<!-- Q15 -->
+<!-- ===================================================== -->
+
+<div class="qa-box">
+
+<div class="question">
+Q15. What are chromosomes?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Chromosomes are thread-like structures present in the nucleus.
+They contain DNA and carry genes that transmit hereditary information from
+parents to offspring.
+</p>
+
+</div>
+</div>
+
+
+<!-- ===================================================== -->
+<!-- Q16 -->
+<!-- ===================================================== -->
+
+<div class="qa-box">
+
+<div class="question">
+Q16. What are genes?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Genes are functional units of heredity present on chromosomes.
+They carry information responsible for particular characteristics of an
+organism.
+</p>
+
+</div>
+</div>
+
+
+<!-- ===================================================== -->
+<!-- Q17 -->
+<!-- ===================================================== -->
+
+<div class="qa-box">
+
+<div class="question">
+Q17. What are mitochondria? Why are they called the powerhouse of the cell?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Mitochondria are membrane-bound organelles that carry out
+cellular respiration and release energy in the form of ATP.
+</p>
+
+<p>
+They are called the <b>powerhouse of the cell</b> because they provide usable
+energy for various cellular activities.
+</p>
+
+</div>
+</div>
+
+
+<!-- ===================================================== -->
+<!-- Q18 -->
+<!-- ===================================================== -->
+
+<div class="qa-box">
+
+<div class="question">
+Q18. What is the function of ribosomes?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Ribosomes are the sites of protein synthesis. They may occur
+freely in the cytoplasm or be attached to the rough endoplasmic reticulum.
+</p>
+
+</div>
+</div>
+
+
+<!-- ===================================================== -->
+<!-- Q19 -->
+<!-- ===================================================== -->
+
+<div class="qa-box">
+
+<div class="question">
+Q19. What is endoplasmic reticulum? Name its two types.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Endoplasmic reticulum is a network of membranous tubules and
+channels present in the cytoplasm.
+</p>
+
+<p>
+Its two types are:
+</p>
+
+<ol>
+<li><b>Rough Endoplasmic Reticulum (RER)</b> – It has ribosomes and helps in
+protein synthesis.</li>
+<li><b>Smooth Endoplasmic Reticulum (SER)</b> – It lacks ribosomes and helps
+in lipid synthesis and other cellular functions.</li>
+</ol>
+
+</div>
+</div>
+
+
+<!-- ===================================================== -->
+<!-- Q20 -->
+<!-- ===================================================== -->
+
+<div class="qa-box">
+
+<div class="question">
+Q20. What is the Golgi apparatus? Write its functions.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> The Golgi apparatus is a system of flattened membranous
+sacs.
+</p>
+
+<p>
+<b>Functions:</b>
+</p>
+
+<ol>
+<li>It modifies proteins and lipids.</li>
+<li>It packages materials for transport.</li>
+<li>It helps in the formation of lysosomes.</li>
+<li>It is involved in secretion and intracellular transport.</li>
+</ol>
+
+</div>
+</div>
+
+
+<!-- ===================================================== -->
+<!-- Q21 -->
+<!-- ===================================================== -->
+
+<div class="qa-box">
+
+<div class="question">
+Q21. What are lysosomes? Why are they called suicidal bags?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Lysosomes are small membrane-bound organelles containing
+digestive enzymes. They help digest unwanted materials and worn-out cell
+parts.
+</p>
+
+<p>
+They are sometimes called <b>suicidal bags</b> because, if their membrane
+breaks under certain conditions, their enzymes can digest cellular
+components.
+</p>
+
+</div>
+</div>
+
+
+<!-- ===================================================== -->
+<!-- Q22 -->
+<!-- ===================================================== -->
+
+<div class="qa-box">
+
+<div class="question">
+Q22. What are vacuoles? Write their functions.
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Vacuoles are membrane-bound storage structures.
+</p>
+
+<p>
+They store water, food, minerals, pigments and waste materials. In plant
+cells, the large central vacuole also helps maintain the internal pressure
+of the cell.
+</p>
+
+</div>
+</div>
+
+
+<!-- ===================================================== -->
+<!-- Q23 -->
+<!-- ===================================================== -->
+
+<div class="qa-box">
+
+<div class="question">
+Q23. What is the function of chloroplasts?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Chloroplasts are present mainly in plant cells. They contain
+chlorophyll and are the sites of photosynthesis.
+</p>
+
+</div>
+</div>
+
+
+<!-- ===================================================== -->
+<!-- Q24 -->
+<!-- ===================================================== -->
+
+<div class="qa-box">
+
+<div class="question">
+Q24. Differentiate between plant cells and animal cells.
+</div>
+
+<div class="answer">
+
+<table border="1" cellpadding="8" cellspacing="0">
+
+<tr>
+<th>Plant Cell</th>
+<th>Animal Cell</th>
+</tr>
+
+<tr>
+<td>Cell wall is present.</td>
+<td>Cell wall is absent.</td>
+</tr>
+
+<tr>
+<td>Chloroplasts are generally present in photosynthetic cells.</td>
+<td>Chloroplasts are absent.</td>
+</tr>
+
+<tr>
+<td>Usually has a large central vacuole.</td>
+<td>Vacuoles are generally small or may be absent.</td>
+</tr>
+
+<tr>
+<td>Usually has a fixed or regular shape.</td>
+<td>Shape may be irregular or flexible.</td>
+</tr>
+
+</table>
+
+</div>
+</div>
+
+
+<!-- ===================================================== -->
+<!-- PLANT CELL DIAGRAM -->
+<!-- ===================================================== -->
+
+<div class="qa-box">
+
+<div class="question">
+Q25. Draw a neat labelled diagram of a plant cell.
+</div>
+
+<div class="answer">
+
+<p><b>Answer:</b> Important parts to label include:</p>
+
+<p>
+Cell Wall, Plasma Membrane, Cytoplasm, Nucleus, Chloroplast,
+Large Vacuole, Endoplasmic Reticulum, Golgi Apparatus and Mitochondria.
+</p>
+
+<svg width="700" height="430" viewBox="0 0 700 430"
+xmlns="http://www.w3.org/2000/svg">
+
+<rect x="80" y="50" width="450" height="300"
+rx="35" fill="none" stroke="black" stroke-width="6"/>
+
+<rect x="95" y="65" width="420" height="270"
+rx="30" fill="none" stroke="black" stroke-width="3"/>
+
+<ellipse cx="300" cy="205" rx="55" ry="45"
+fill="none" stroke="black" stroke-width="3"/>
+
+<text x="275" y="210" font-size="16">Nucleus</text>
+
+<ellipse cx="170" cy="120" rx="30" ry="15"
+fill="none" stroke="black" stroke-width="3"/>
+
+<text x="560" y="125" font-size="17">Chloroplast</text>
+<line x1="200" y1="120" x2="550" y2="120"
+stroke="black" stroke-width="2"/>
+
+<ellipse cx="430" cy="280" rx="30" ry="15"
+fill="none" stroke="black" stroke-width="3"/>
+
+<text x="550" y="285" font-size="17">Chloroplast</text>
+<line x1="460" y1="280" x2="550" y2="280"
+stroke="black" stroke-width="2"/>
+
+<ellipse cx="175" cy="275" rx="65" ry="35"
+fill="none" stroke="black" stroke-width="3"/>
+
+<text x="10" y="280" font-size="17">Vacuole</text>
+<line x1="75" y1="275" x2="110" y2="275"
+stroke="black" stroke-width="2"/>
+
+<ellipse cx="420" cy="140" rx="25" ry="12"
+fill="none" stroke="black" stroke-width="3"/>
+
+<text x="555" y="80" font-size="17">Cell Wall</text>
+<line x1="515" y1="80" x2="555" y2="80"
+stroke="black" stroke-width="2"/>
+
+<text x="250" y="390" font-size="18">Plant Cell</text>
+
+</svg>
+
+</div>
+</div>
+
+
+<!-- ===================================================== -->
+<!-- ANIMAL CELL DIAGRAM -->
+<!-- ===================================================== -->
+
+<div class="qa-box">
+
+<div class="question">
+Q26. Draw a neat labelled diagram of an animal cell.
+</div>
+
+<div class="answer">
+
+<p><b>Answer:</b> Important parts to label include:</p>
+
+<p>
+Plasma Membrane, Cytoplasm, Nucleus, Mitochondria, Endoplasmic Reticulum,
+Golgi Apparatus and Ribosomes.
+</p>
+
+<svg width="700" height="430" viewBox="0 0 700 430"
+xmlns="http://www.w3.org/2000/svg">
+
+<ellipse cx="330" cy="210" rx="230" ry="145"
+fill="none" stroke="black" stroke-width="5"/>
+
+<ellipse cx="330" cy="210" rx="65" ry="50"
+fill="none" stroke="black" stroke-width="3"/>
+
+<text x="305" y="215" font-size="17">Nucleus</text>
+
+<ellipse cx="180" cy="150" rx="28" ry="14"
+fill="none" stroke="black" stroke-width="3"/>
+
+<text x="500" y="155" font-size="17">Mitochondrion</text>
+<line x1="208" y1="150" x2="500" y2="150"
+stroke="black" stroke-width="2"/>
+
+<ellipse cx="470" cy="250" rx="28" ry="14"
+fill="none" stroke="black" stroke-width="3"/>
+
+<text x="520" y="255" font-size="17">Mitochondrion</text>
+
+<path d="M190 270 Q230 240 270 270 T350 270"
+fill="none" stroke="black" stroke-width="3"/>
+
+<text x="50" y="300" font-size="17">Endoplasmic Reticulum</text>
+
+<line x1="100" y1="80" x2="190" y2="100"
+stroke="black" stroke-width="2"/>
+
+<text x="20" y="75" font-size="17">Plasma Membrane</text>
+
+<text x="275" y="390" font-size="18">Animal Cell</text>
+
+</svg>
+
+</div>
+</div>
+
+
+<!-- ===================================================== -->
+<!-- Q27 -->
+<!-- ===================================================== -->
+
+<div class="qa-box">
+
+<div class="question">
+Q27. Why are lysosomes important for the cell?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Lysosomes contain digestive enzymes that break down unwanted
+materials, foreign substances and worn-out cell organelles. Thus, they help
+keep the cell clean and functioning properly.
+</p>
+
+</div>
+</div>
+
+
+<!-- ===================================================== -->
+<!-- Q28 -->
+<!-- ===================================================== -->
+
+<div class="qa-box">
+
+<div class="question">
+Q28. Why are mitochondria called semi-autonomous organelles?
+</div>
+
+<div class="answer">
+
+<p>
+<b>Answer:</b> Mitochondria contain their own DNA and ribosomes and can make
+some of their proteins. Therefore, they are called semi-autonomous
+organelles.
+</p>
+
+</div>
+</div>
+
+
+<!-- ===================================================== -->
+<!-- Q29 -->
+<!-- =======================================
+
+
+
+<!-- PROTECTION -->
+
+<script>
+
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+document.addEventListener("selectstart", e => e.preventDefault());
+
+document.addEventListener("copy", e => {
+
+    e.preventDefault();
+
+    alert("Copying content is not allowed");
+
+});
+
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
