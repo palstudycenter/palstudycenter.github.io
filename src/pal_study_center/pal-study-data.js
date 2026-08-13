@@ -94,7 +94,15 @@ const PAL_STUDY_DATA = {
         "Vistas - Unit 5 Should Wizard Hit Mommy",
         "Vistas - Unit 6 On the Face of It",
         "Vistas - Unit 7 Evans Tries an O-Level",
-        "Vistas - Unit 8 Memories of Childhood"
+        "Vistas - Unit 8 Memories of Childhood",
+        "Grammar - Articles",
+        "Grammar - Determiners",
+        "Grammar - narration",
+        "Grammar - preposition",
+        "Grammar - voice",
+        "letter",
+        "poster",
+        "Essay"
       ],
       "हिंदी": [
         "यूनिट 1 काव्य खंड (पद्य भाग)",
@@ -175,6 +183,9 @@ const PAL_STUDY_DATA = {
     "Class 10th": {
       "Mathematics": ["Real Numbers", "Polynomials", "Quadratic Equations"],
       "Science": ["Chemical Reaction", "Acids and Bases", "Metals and Non-metals", "Carbon and its compounds", "Life Processes", "Light"],
+    },
+    "Class 9th": {
+      "Science": ["Chapter 1 - Matter in Our Surroundings", "Chapter 2 - Is Matter Around Us Pure?", "Chapter 3 - Atoms and Molecules", "Chapter 4 - Structure of the Atom", "Chapter 5 - The Fundamental Unit of Life", "Chapter 6 - Tissues", "Chapter 7 - Motion", "Chapter 8 - Force and Laws of Motion", "Chapter 9 - Gravitation", "Chapter 10 - Gravitation", "Chapter 11 - Work and Energy", "Chapter 12 - Patterns in Life: Diversity and Classification"],
     }
   }
 };
@@ -238,7 +249,16 @@ const UNIT_FILE_PATHS = {
         "Flamingo - Unit 3 Deep Water": "../units/mp_board_hindi/class_12/english/Flemindo/l3.html",
         "Flamingo - Unit 4 The Rattrap": "../units/mp_board_hindi/class_12/english/Flemindo/l4.html",
         "Flamingo - Unit 5 Indigo": "../units/mp_board_hindi/class_12/english/Flemindo/l5.html",
-        "Flamingo - Unit 6 Poets and Pancakes": "../units/mp_board_hindi/class_12/english/Flemindo/l6.html"
+        "Flamingo - Unit 6 Poets and Pancakes": "../units/mp_board_hindi/class_12/english/Flemindo/l6.html",
+        "Grammar - Articles": "../units/mp_board_hindi/class_12/english/Gramer/article.html",
+        "Grammar - Determiners": "../units/mp_board_hindi/class_12/english/Gramer/determinates.html",
+        "Grammar - narration": "../units/mp_board_hindi/class_12/english/Gramer/narration.html",
+        "Grammar - preposition": "../units/mp_board_hindi/class_12/english/Gramer/preposition.html",
+        "Grammar - voice": "../units/mp_board_hindi/class_12/english/Gramer/voice.html",
+        "letter": "../units/mp_board_hindi/class_12/english/Gramer/letter.html",
+        "poster": "../units/mp_board_hindi/class_12/english/poster.html",
+        "Essay": "../units/mp_board_hindi/class_12/english/Essay.html",
+
       },
       "गणित": {
         "EX. 1.1" : "../units/mp_board_hindi/class_12/mathematics/1.1.html",
@@ -348,6 +368,22 @@ const UNIT_FILE_PATHS = {
         "Life Processes": "../units/cbse/class_10/science/Life.html",
         "Light": "../units/cbse/class_10/science/light.html",
       }
+    },
+    "Class 9th": {
+      "Science": {
+      "Chapter 1 - Matter in Our Surroundings" : "../units/cbse/class_9/science/1.html", 
+      "Chapter 2 - Is Matter Around Us Pure?" : "../units/cbse/class_9/science/2.html", 
+      "Chapter 3 - Atoms and Molecules" : "../units/cbse/class_9/science/3.html", 
+      "Chapter 4 - Structure of the Atom" : "../units/cbse/class_9/science/4.html", 
+      "Chapter 5 - The Fundamental Unit of Life" : "../units/cbse/class_9/science/5.html", 
+      "Chapter 6 - Tissues" : "../units/cbse/class_9/science/6.html", 
+      "Chapter 7 - Motion" : "../units/cbse/class_9/science/7.html", 
+      "Chapter 8 - Force and Laws of Motion" : "../units/cbse/class_9/science/8.html", 
+      "Chapter 9 - Gravitation" : "../units/cbse/class_9/science/9.html", 
+      "Chapter 10 - Gravitation" : "../units/cbse/class_9/science/10.html", 
+      "Chapter 11 - Work and Energy" : "../units/cbse/class_9/science/11.html", 
+      "Chapter 12 - Patterns in Life: Diversity and Classification" : "../units/cbse/class_9/science/12.html"
+      },
     }
   }
 };
