@@ -218,7 +218,7 @@ const UNIT_FILE_PATHS = {
           "यूनिट 3 रासायनिक गतिकी": "../units/mp_board_hindi/class_12/chemistry/unit1/c3/mphc3.html",
           "यूनिट 4 d और f ब्लॉक के तत्व": "../units/mp_board_hindi/class_12/chemistry/unit1/c4/4_formatted.html",
           "यूनिट 5 समन्वय यौगिक": "../units/mp_board_hindi/class_12/chemistry/unit1/c5/5_formatted.html",
-          "यूनिट 6 हैलोएल्केन और हैलोएरीन": "../units/mp_board_hindi/class_12/chemistry/unit1/c6/6_formatted.html",
+          "यूनिट 6 हैलोएल्केन और हैलोएरीन": "../units/mp_board_hindi/class_12/chemistry/unit1/6.html",
           "यूनिट 7(A) अल्कोहल": "../units/mp_board_hindi/class_12/chemistry/unit1/c7/7_formatted.html",
           "यूनिट 8(B) फिनोल": "../units/mp_board_hindi/class_12/chemistry/unit1/c8/8_formatted.html",
           "यूनिट 9(C) ईथर": "../units/mp_board_hindi/class_12/chemistry/unit1/c9/9_formatted.html",
