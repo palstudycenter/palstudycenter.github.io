@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | हैलोएरीन</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- MathJax -->
+<script>
+window.MathJax = {
+    tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+    },
+    svg: {
+        fontCache: 'global'
+    }
+};
+</script>
+
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    line-height:1.7;
+}
+
+/* NAVBAR */
+
+.navbar{
+    background:rgba(15,23,42,0.90);
+    backdrop-filter:blur(10px);
+    box-shadow:0 4px 18px rgba(0,0,0,.18);
+    padding:10px 0;
+}
+
+.navbar-brand{
+    font-size:30px;
+    font-weight:700;
+    color:white !important;
+}
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+
+/* NOTES CONTAINER */
+
+.notes-container{
+    max-width:900px;
+    margin:100px auto 50px;
+    padding:20px;
+}
+
+/* CHAPTER TITLE */
+
+.notes-title{
+    background:#e3f2fd;
+    color:#1565c0;
+    padding:15px 20px;
+    border-left:6px solid #1565c0;
+    border-radius:50px;
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:30px;
+    text-align:center;
+}
+
+/* QUESTION ANSWER BOX */
+
+.qa-box{
+    background:white;
+    padding:22px;
+    margin-bottom:18px;
+    border-radius:14px;
+    border-left:6px solid #1565c0;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    transition:.25s;
+}
+
+.qa-box:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.question{
+    font-weight:bold;
+    color:#1b3a57;
+    margin-bottom:10px;
+    font-size:19px;
+}
+
+.answer{
+    color:#2c3e50;
+    text-align:justify;
+}
+
+.answer ul,
+.answer ol{
+    margin-left:25px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.answer li{
+    margin-bottom:7px;
+}
+
+/* FORMULA */
+
+.formula{
+    background:#f8fafc;
+    padding:12px;
+    margin:14px 0;
+    border-radius:8px;
+    text-align:center;
+    overflow-x:auto;
+    font-size:19px;
+}
+
+/* IMPORTANT */
+
+.important{
+    background:#fff8e1;
+    border-left:5px solid #ffb300;
+    padding:12px 15px;
+    margin-top:12px;
+    border-radius:8px;
+}
+
+/* SUB HEADING */
+
+.sub-heading{
+    color:#1565c0;
+    font-weight:bold;
+    margin-top:15px;
+    margin-bottom:8px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .navbar-brand{
+        font-size:24px;
+    }
+
+    .notes-container{
+        margin-top:85px;
+        padding:12px;
+    }
+
+    .notes-title{
+        font-size:22px;
+        border-radius:20px;
+    }
+
+    .qa-box{
+        padding:17px;
+    }
+
+    .question{
+        font-size:17px;
+    }
+
+    .formula{
+        font-size:16px;
+    }
+
+}
+
+/* PROTECTION */
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar fixed-top">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="../index.html">
+            पाल <span>स्टडी सेंटर</span>
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- NOTES -->
+
+< class="notes-container">
+
+    <div class="notes-title">
+        📘 अध्याय — हैलोएरीन
+    </div>
+
+
+    <!-- ================= प्रश्न 1 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            प्रश्न: हैलोएरीन क्या हैं?
+        </div>
+
+        <div class="answer">
+
+            <p>
+                बेंजीन वलय पर सीधे जुड़े हैलोजन युक्त सुगंधित यौगिक
+                <b>हैलोएरीन</b> कहलाते हैं।
+            </p>
+
+            <p><b>उदाहरण:</b></p>
+
+            <ul>
+                <li>क्लोरोबेंजीन — C<sub>6</sub>H<sub>5</sub>Cl</li>
+                <li>ब्रोमोबेंजीन — C<sub>6</sub>H<sub>5</sub>Br</li>
+                <li>आयोडोबेंजीन — C<sub>6</sub>H<sub>5</sub>I</li>
+            </ul>
+
+            <div class="important">
+                हैलोएरीन, हैलोऐल्केन की तुलना में सामान्यतः कम अभिक्रियाशील होते हैं।
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= प्रश्न 2 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            प्रश्न: हैलोएरीन, हैलोऐल्केन की तुलना में कम अभिक्रियाशील होते हैं,
+            क्यों? व्याख्या कीजिए।
+        </div>
+
+        <div class="answer">
+
+            <p>
+                हैलोएरीन में हैलोजन का एकाकी इलेक्ट्रॉन युग्म बेंजीन वलय के
+                साथ <b>अनुनाद</b> में भाग लेता है। इसके कारण C–X बंध में
+                आंशिक द्विबंध का गुण आ जाता है।
+            </p>
+
+            <p>
+                इसलिए C–X बंध अधिक मजबूत हो जाता है और नाभिकस्नेही
+                (Nu<sup>−</sup>) के लिए इस बंध को तोड़ना कठिन होता है।
+                अतः हैलोएरीन कम अभिक्रियाशील होते हैं।
+            </p>
+
+            <p>
+                इसके विपरीत, हैलोऐल्केन में ऐसा अनुनाद नहीं होता। इसलिए उनका
+                C–X बंध अपेक्षाकृत आसानी से टूट जाता है और वे नाभिकस्नेही
+                प्रतिस्थापन अभिक्रियाएँ आसानी से देते हैं।
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= प्रश्न 3 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            प्रश्न: क्लोरोबेंजीन बनाने की सामान्य विधियाँ लिखिए।
+        </div>
+
+        <div class="answer">
+
+            <!-- विधि 1 -->
+
+            <p class="sub-heading">
+                1. बेंजीन का हैलोजनीकरण
+            </p>
+
+            <p>
+                बेंजीन को FeCl<sub>3</sub> उत्प्रेरक की उपस्थिति में
+                क्लोरीन के साथ अभिक्रिया कराने पर क्लोरोबेंजीन प्राप्त होता है।
+            </p>
+
+            <div class="formula">
+                \[
+                C_6H_6 + Cl_2
+                \xrightarrow{FeCl_3}
+                C_6H_5Cl + HCl
+                \]
+            </div>
+
+
+            <!-- विधि 2 -->
+
+            <p class="sub-heading">
+                2. रास्चिग प्रक्रिया द्वारा
+            </p>
+
+            <p>
+                बेंजीन वाष्प, वायु और HCl के मिश्रण को लगभग 230°C पर
+                CuCl<sub>2</sub> उत्प्रेरक के ऊपर प्रवाहित करने पर
+                क्लोरोबेंजीन प्राप्त होता है।
+            </p>
+
+            <div class="formula">
+                \[
+                C_6H_6+\frac{1}{2}O_2+HCl
+                \xrightarrow[\;230^\circ C\;]{CuCl_2}
+                C_6H_5Cl+H_2O
+                \]
+            </div>
+
+
+            <!-- विधि 3 -->
+
+            <p class="sub-heading">
+                3. फिनोल से
+            </p>
+
+            <p>
+                फिनोल को PCl<sub>5</sub> के साथ गर्म करने पर क्लोरोबेंजीन
+                प्राप्त होता है।
+            </p>
+
+            <div class="formula">
+                \[
+                C_6H_5OH+PCl_5
+                \xrightarrow{\Delta}
+                C_6H_5Cl+POCl_3+HCl
+                \]
+            </div>
+
+
+            <!-- विधि 4 -->
+
+            <p class="sub-heading">
+                4. हुन्सडीकर अभिक्रिया
+            </p>
+
+            <p>
+                सिल्वर बेंजोएट को क्लोरीन के साथ अभिक्रिया कराने पर
+                क्लोरोबेंजीन प्राप्त होता है।
+            </p>
+
+            <div class="formula">
+                \[
+                C_6H_5COOAg+Cl_2
+                \xrightarrow{CCl_4}
+                C_6H_5Cl+CO_2+AgCl
+                \]
+            </div>
+
+
+            <!-- विधि 5 -->
+
+            <p class="sub-heading">
+                5. सेण्डमेयर अभिक्रिया
+            </p>
+
+            <p>
+                बेंजीन डाइएजोनियम क्लोराइड को CuCl की उपस्थिति में
+                अभिक्रिया कराने पर क्लोरोबेंजीन प्राप्त होता है।
+            </p>
+
+            <div class="formula">
+                \[
+                C_6H_5N_2Cl
+                \xrightarrow{CuCl/HCl}
+                C_6H_5Cl+N_2
+                \]
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= प्रश्न 4 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            प्रश्न: क्लोरोबेंजीन के भौतिक गुण लिखिए।
+        </div>
+
+        <div class="answer">
+
+            <ul>
+
+                <li>
+                    यह रंगहीन से हल्का पीला, विशिष्ट गंध वाला द्रव है।
+                </li>
+
+                <li>
+                    यह जल में अघुलनशील, परंतु अल्कोहल, ईथर, बेंजीन आदि
+                    कार्बनिक विलायकों में घुलनशील है।
+                </li>
+
+                <li>
+                    इसका क्वथनांक लगभग <b>132°C</b> होता है।
+                </li>
+
+                <li>
+                    इसका घनत्व पानी से अधिक होता है।
+                    लगभग <b>1.106 g/mL</b>।
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= प्रश्न 5 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            प्रश्न: क्लोरोबेंजीन के रासायनिक गुण लिखिए।
+        </div>
+
+        <div class="answer">
+
+            <!-- A -->
+
+            <p class="sub-heading">
+                (A) नाभिकस्नेही प्रतिस्थापन अभिक्रिया
+            </p>
+
+            <p>
+                क्लोरोबेंजीन कुछ नाभिकस्नेही अभिकर्मकों (Nu<sup>−</sup>)
+                के साथ अभिक्रिया करके नए यौगिक बनाता है।
+            </p>
+
+
+            <p><b>1. जलीय NaOH के साथ अभिक्रिया:</b></p>
+
+            <p>
+                उच्च ताप और दाब पर क्लोरोबेंजीन से फिनोल प्राप्त किया जा सकता है।
+            </p>
+
+            <div class="formula">
+                \[
+                C_6H_5Cl+NaOH
+                \xrightarrow[\;300\,atm\;]{623\,K}
+                C_6H_5OH+NaCl
+                \]
+            </div>
+
+
+            <p><b>2. CuCN के साथ अभिक्रिया:</b></p>
+
+            <p>
+                क्लोरोबेंजीन से फेनिल सायनाइड प्राप्त होता है।
+            </p>
+
+            <div class="formula">
+                \[
+                C_6H_5Cl+CuCN
+                \xrightarrow{\Delta}
+                C_6H_5CN+CuCl
+                \]
+            </div>
+
+
+            <p><b>3. KSH के साथ अभिक्रिया:</b></p>
+
+            <p>
+                क्लोरोबेंजीन से थायोफेनोल प्राप्त होता है।
+            </p>
+
+            <div class="formula">
+                \[
+                C_6H_5Cl+KSH
+                \xrightarrow{\Delta}
+                C_6H_5SH+KCl
+                \]
+            </div>
+
+
+            <!-- B -->
+
+            <p class="sub-heading">
+                (B) अपचयन
+            </p>
+
+            <p>
+                क्लोरोबेंजीन के अपचयन से बेंजीन प्राप्त होता है।
+            </p>
+
+            <div class="formula">
+                \[
+                C_6H_5Cl+2[H]
+                \xrightarrow{Ni/Al}
+                C_6H_6+HCl
+                \]
+            </div>
+
+
+            <!-- C -->
+
+            <p class="sub-heading">
+                (C) धातुओं के साथ अभिक्रिया
+            </p>
+
+
+            <p><b>1. मैग्नीशियम के साथ अभिक्रिया:</b></p>
+
+            <p>
+                शुष्क ईथर की उपस्थिति में क्लोरोबेंजीन मैग्नीशियम के साथ
+                अभिक्रिया करके फेनिल मैग्नीशियम क्लोराइड बनाता है।
+            </p>
+
+            <div class="formula">
+                \[
+                C_6H_5Cl+Mg
+                \xrightarrow{\text{शुष्क ईथर}}
+                C_6H_5MgCl
+                \]
+            </div>
+
+
+            <p><b>2. वुर्ट्ज़-फिटिग अभिक्रिया:</b></p>
+
+            <p>
+                क्लोरोबेंजीन को मैथिल क्लोराइड तथा सोडियम के साथ
+                शुष्क ईथर में गर्म करने पर टॉल्यून प्राप्त होता है।
+            </p>
+
+            <div class="formula">
+                \[
+                C_6H_5Cl+CH_3Cl+2Na
+                \xrightarrow{\text{शुष्क ईथर}}
+                C_6H_5CH_3+2NaCl
+                \]
+            </div>
+
+
+            <p><b>3. फिटिग अभिक्रिया:</b></p>
+
+            <p>
+                क्लोरोबेंजीन को सोडियम के साथ शुष्क ईथर में गर्म करने पर
+                डाइफेनिल प्राप्त होता है।
+            </p>
+
+            <div class="formula">
+                \[
+                2C_6H_5Cl+2Na
+                \xrightarrow{\text{शुष्क ईथर}}
+                C_6H_5-C_6H_5+2NaCl
+                \]
+            </div>
+
+
+            <p><b>4. उल्मान का डायरिल संश्लेषण:</b></p>
+
+            <p>
+                क्लोरोबेंजीन को ताँबे के चूर्ण के साथ लगभग 200°C पर
+                गर्म करने पर डाइफेनिल प्राप्त होता है।
+            </p>
+
+            <div class="formula">
+                \[
+                2C_6H_5Cl+2Cu
+                \xrightarrow{200^\circ C}
+                C_6H_5-C_6H_5+2CuCl
+                \]
+            </div>
+
+    <div class="question">
+        (D) क्लोरोबेंजीन में इलेक्ट्रोफिलिक एरोमैटिक प्रतिस्थापन
+    </div>
+
+    <div class="answer">
+
+        <!-- नाइट्रीकरण -->
+
+        <p class="sub-heading">
+            1. नाइट्रीकरण
+        </p>
+
+        <p>
+            क्लोरोबेंजीन, सांद्र सल्फ्यूरिक अम्ल की उपस्थिति में
+            सांद्र नाइट्रिक अम्ल के साथ अभिक्रिया करके
+            <b>ऑर्थो तथा पैरा नाइट्रोक्लोरोबेंजीन</b> बनाता है।
+        </p>
+
+        <div class="formula">
+            \[
+            C_6H_5Cl + HNO_3
+            \xrightarrow{conc.\ H_2SO_4}
+            o\text{-}ClC_6H_4NO_2
+            +
+            p\text{-}ClC_6H_4NO_2
+            + H_2O
+            \]
+        </div>
+
+
+        <!-- सल्फोनीकरण -->
+
+        <p class="sub-heading">
+            2. सल्फोनीकरण
+        </p>
+
+        <p>
+            क्लोरोबेंजीन, सांद्र सल्फ्यूरिक अम्ल के साथ अभिक्रिया करके
+            <b>ऑर्थो तथा पैरा क्लोरोबेंजीन सल्फोनिक अम्ल</b> बनाता है।
+        </p>
+
+        <div class="formula">
+            \[
+            C_6H_5Cl + H_2SO_4
+            \xrightarrow{\Delta}
+            o\text{-}ClC_6H_4SO_3H
+            +
+            p\text{-}ClC_6H_4SO_3H
+            + H_2O
+            \]
+        </div>
+
+
+        <!-- फ्रिडल क्राफ्ट्स -->
+
+        <p class="sub-heading">
+            3. फ्रिडल-क्राफ्ट्स अभिक्रिया
+        </p>
+
+        <p>
+            क्लोरोबेंजीन को निर्जल AlCl<sub>3</sub> की उपस्थिति में
+            मेथिल क्लोराइड के साथ अभिक्रिया कराने पर
+            <b>ऑर्थो तथा पैरा क्लोरो-टॉल्यून</b> का मिश्रण प्राप्त होता है।
+        </p>
+
+        <div class="formula">
+            \[
+            C_6H_5Cl + CH_3Cl
+            \xrightarrow{anhyd.\ AlCl_3}
+            o\text{-}ClC_6H_4CH_3
+            +
+            p\text{-}ClC_6H_4CH_3
+            + HCl
+            \]
+        </div>
+
+        <div class="important">
+            <b>नोट:</b> क्लोरीन का –I प्रभाव वलय को निष्क्रिय करता है,
+            लेकिन +R प्रभाव के कारण क्लोरोबेंजीन में प्रतिस्थापन
+            मुख्यतः <b>ऑर्थो तथा पैरा</b> स्थितियों पर होता है।
+        </div>
+
+    </div>
+
+</div>
+</div>
+
+
+<!-- ================= प्रश्न 7 ================= -->
+
+<div class="qa-box">
+
+    <div class="question">
+        प्रश्न: क्लोरोबेंजीन के उपयोग लिखिए।
+    </div>
+
+    <div class="answer">
+
+        <p>
+            क्लोरोबेंजीन के निम्नलिखित प्रमुख उपयोग हैं—
+        </p>
+
+        <ol>
+            <li>
+                <b>फिनोल तथा एनिलिन</b> के निर्माण में।
+            </li>
+
+            <li>
+                <b>DDT</b> के निर्माण में।
+            </li>
+
+            <li>
+                <b>पिक्रिक अम्ल</b> के निर्माण में।
+            </li>
+        </ol>
+
+    </div>
+
+</div>
+
+<!-- PROTECTION -->
+
+<script>
+
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+document.addEventListener("selectstart", e => e.preventDefault());
+
+document.addEventListener("copy", e => {
+
+    e.preventDefault();
+
+    alert("Copying content is not allowed");
+
+});
+
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
