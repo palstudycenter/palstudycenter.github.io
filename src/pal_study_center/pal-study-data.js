@@ -169,7 +169,7 @@ const PAL_STUDY_DATA = {
     },
     "Class 10th": {
       "Mathematics": ["Real Numbers", "Polynomials", "Quadratic Equations"],
-      "Science": ["Chemical Reaction", "Acids and Bases", "Metals and Non-metals", "Carbon and its compounds", "Life Processes", "Light"],
+      "Science": ["Chemical Reaction", "Acids and Bases", "Metals and Non-metals", "Carbon and its compounds", "Life Processes", "Control and Coordination", "Light"],
     }
   },
   "CBSE": {
@@ -183,7 +183,7 @@ const PAL_STUDY_DATA = {
     },
     "Class 10th": {
       "Mathematics": ["Real Numbers", "Polynomials", "Quadratic Equations"],
-      "Science": ["Chemical Reaction", "Acids and Bases", "Metals and Non-metals", "Carbon and its compounds", "Life Processes", "Light"],
+      "Science": ["Chemical Reaction", "Acids and Bases", "Metals and Non-metals", "Carbon and its compounds", "Life Processes", "Control and Coordination", "Light"],
     },
     "Class 9th": {
       "Science": ["Chapter 1 - Matter in Our Surroundings", "Chapter 2 - Is Matter Around Us Pure?", "Chapter 3 - Atoms and Molecules", "Chapter 4 - Structure of the Atom", "Chapter 5 - The Fundamental Unit of Life", "Chapter 6 - Tissues", "Chapter 7 - Motion", "Chapter 8 - Force and Laws of Motion", "Chapter 9 - Gravitation", "Chapter 10 - Gravitation", "Chapter 11 - Work and Energy", "Chapter 12 - Patterns in Life: Diversity and Classification"],
@@ -357,6 +357,7 @@ const UNIT_FILE_PATHS = {
         "Metals and Non-metals": "../units/cbse/class_10/science/matels.html",
         "Carbon and its compounds": "../units/cbse/class_10/science/carbon.html",
         "Life Processes": "../units/cbse/class_10/science/Life.html",
+        "Control and Coordination": "../units/cbse/class_10/science/Control.html",
         "Light": "../units/cbse/class_10/science/light.html",
       }
     }
@@ -374,6 +375,7 @@ const UNIT_FILE_PATHS = {
         "Metals and Non-metals": "../units/cbse/class_10/science/matels.html",
         "Carbon and its compounds": "../units/cbse/class_10/science/carbon.html",
         "Life Processes": "../units/cbse/class_10/science/Life.html",
+        "Control and Coordination": "../units/cbse/class_10/science/Control.html",
         "Light": "../units/cbse/class_10/science/light.html",
       }
     },
