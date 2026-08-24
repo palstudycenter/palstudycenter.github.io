@@ -39,7 +39,8 @@ const PAL_STUDY_DATA = {
         "यूनिट 3 रासायनिक गतिकी",
         "यूनिट 4 d और f ब्लॉक के तत्व",
         "यूनिट 5 समन्वय यौगिक",
-        "यूनिट 6 हैलोएल्केन और हैलोएरीन",
+        "यूनिट 6(A) हैलोएल्केन",
+        "यूनिट 6(B) हैलोएरीन",
         "यूनिट 7(A) अल्कोहल",
         "यूनिट 7(B) फिनोल",
         "यूनिट 7(C) ईथर",
@@ -116,8 +117,8 @@ const PAL_STUDY_DATA = {
       ]
     },
     "Class 11th": {
-      "भौतिकी": ["यूनिट 1 - मापन", "यूनिट 2(A) - गति", "यूनिट 2(B) - सदिश", "यूनिट 3(A) - गति के नियम", "यूनिट 3(B) - वृत्तीय गति", "यूनिट 4 - कार्य ऊर्जा तथा शक्ति", "यूनिट 5 - गुरुत्वाकर्षण"],
-      "रसायन शास्त्र ": ["यूनिट 1 - रासायनिक संयोग के नियम", "यूनिट 2 - परमाणु संरचना", "यूनिट 3 - आवर्त नियम", "यूनिट 4 - रासायनिक बंध"],
+      "भौतिकी": ["यूनिट 1 - मापन", "यूनिट 2(A) - गति", "यूनिट 2(B) - सदिश", "यूनिट 2(C) - प्रक्षेप्य गति", "यूनिट 3(A) - गति के नियम", "यूनिट 3(B) - वृत्तीय गति", "यूनिट 4 - कार्य ऊर्जा तथा शक्ति", "यूनिट 5 - गुरुत्वाकर्षण"],
+      "रसायन शास्त्र ": ["यूनिट 1 - रासायनिक संयोग के नियम", "यूनिट 2 - परमाणु संरचना", "यूनिट 3 - आवर्त नियम", "यूनिट 4 - रासायनिक बंध", "यूनिट 5 - ऊष्मागतिकी",  "यूनिट 6 - रासायनिक साम्य",  "यूनिट 7 - रेडॉक्स अभिक्रिया", "यूनिट 8 - कार्बनिक रसायन - कुछ आधारभूत सिद्धांत तथा तकनीकें",  "यूनिट 9 - हाइड्रोकार्बन"],
       "गणित": [],
       "जीवविज्ञान": [
         "यूनिट-1(A) जीव जगत",
@@ -218,7 +219,8 @@ const UNIT_FILE_PATHS = {
           "यूनिट 3 रासायनिक गतिकी": "../units/mp_board_hindi/class_12/chemistry/unit1/c3/mphc3.html",
           "यूनिट 4 d और f ब्लॉक के तत्व": "../units/mp_board_hindi/class_12/chemistry/unit1/c4/4_formatted.html",
           "यूनिट 5 समन्वय यौगिक": "../units/mp_board_hindi/class_12/chemistry/unit1/c5/5_formatted.html",
-          "यूनिट 6 हैलोएल्केन और हैलोएरीन": "../units/mp_board_hindi/class_12/chemistry/unit1/6.html",
+          "यूनिट 6(A) हैलोएल्केन": "../units/mp_board_hindi/class_12/chemistry/unit1/6.html",
+          "यूनिट 6(B) हैलोएरीन": "../units/mp_board_hindi/class_12/chemistry/unit1/6b.html",
           "यूनिट 7(A) अल्कोहल": "../units/mp_board_hindi/class_12/chemistry/unit1/c7/7_formatted.html",
           "यूनिट 8(B) फिनोल": "../units/mp_board_hindi/class_12/chemistry/unit1/c8/8_formatted.html",
           "यूनिट 9(C) ईथर": "../units/mp_board_hindi/class_12/chemistry/unit1/c9/9_formatted.html",
@@ -280,6 +282,7 @@ const UNIT_FILE_PATHS = {
         "यूनिट 1 - मापन": "../units/mp_board_hindi/class_11/Physics/p1.html",
         "यूनिट 2(A) - गति": "../units/mp_board_hindi/class_11/Physics/p2.1.html", 
         "यूनिट 2(B) - सदिश": "../units/mp_board_hindi/class_11/Physics/p2.2.html", 
+        "यूनिट 2(C) - प्रक्षेप्य गति": "../units/mp_board_hindi/class_11/Physics/p2.3.html",
         "यूनिट 3(A) - गति के नियम": "../units/mp_board_hindi/class_11/Physics/p3A.html", 
         "यूनिट 3(B) - वृत्तीय गति": "../units/mp_board_hindi/class_11/Physics/p3B.html", 
         "यूनिट 4 - कार्य ऊर्जा तथा शक्ति": "../units/mp_board_hindi/class_11/Physics/p4.html", 
@@ -289,7 +292,12 @@ const UNIT_FILE_PATHS = {
         "यूनिट 1 - रासायनिक संयोग के नियम" : "../units/mp_board_hindi/class_11/Chemistry/c1.html",
         "यूनिट 2 - परमाणु संरचना" : "../units/mp_board_hindi/class_11/Chemistry/c2.html",
         "यूनिट 3 - आवर्त नियम" : "../units/mp_board_hindi/class_11/Chemistry/c3.html",
-        "यूनिट 4 - रासायनिक बंध" : "../units/mp_board_hindi/class_11/Chemistry/c4.html"
+        "यूनिट 4 - रासायनिक बंध" : "../units/mp_board_hindi/class_11/Chemistry/c4.html",
+        "यूनिट 5 - ऊष्मागतिकी" : "../units/mp_board_hindi/class_11/Chemistry/c6.html",
+        "यूनिट 6 - रासायनिक साम्य" : "../units/mp_board_hindi/class_11/Chemistry/c7.html",
+        "यूनिट 7 - रेडॉक्स अभिक्रिया" : "../units/mp_board_hindi/class_11/Chemistry/c5.html",
+        "यूनिट 8 - कार्बनिक रसायन - कुछ आधारभूत सिद्धांत तथा तकनीकें" : "../units/mp_board_hindi/class_11/Chemistry/c8.html",
+        "यूनिट 9 - हाइड्रोकार्बन" : "../units/mp_board_hindi/class_11/Chemistry/c9.html"
       },
       "जीवविज्ञान": {
         "यूनिट-1(A) जीव जगत" : "../units/mp_board_hindi/class_11/Biology/1a.html",
