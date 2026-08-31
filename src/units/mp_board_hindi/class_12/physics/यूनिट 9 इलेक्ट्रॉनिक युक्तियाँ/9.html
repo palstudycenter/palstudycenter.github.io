@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | Notes</title>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<script>
+window.MathJax={
+ tex:{
+ inlineMath:[
+ ['$','$'],
+ ['\\(','\\)']
+ ]
+}
+};
+</script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<style>
+<style>
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+
+body{
+background:#f5f7fb;
+line-height:1.7;
+}
+
+
+/* NAVBAR */
+
+    .navbar{
+
+      background:rgba(15,23,42,0.45);
+
+      backdrop-filter:blur(10px);
+
+      box-shadow:0 4px 18px rgba(0,0,0,.18);
+
+      padding:10px 0;
+
+      transition:.3s;
+
+    }
+
+    .navbar-brand{
+
+      font-size:28px;
+
+      font-weight:700;
+
+      color:white !important;
+
+    }
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+      .navbar-brand{
+        font-size:40px;
+      }
+/* CONTENT */
+
+.notes-container{
+
+max-width:900px;
+
+margin:100px auto 50px;
+
+padding:20px;
+
+}
+
+.notes-title{
+
+background:#e3f2fd;
+
+color:#1565c0;
+
+padding:10px;
+
+border-left:5px solid #1565c0;
+
+border-radius:50px;
+
+font-size:30px;
+
+font-weight:bold;
+margin-top:100px;
+
+margin-bottom:50px;
+
+}
+
+
+
+.qa-box{
+
+background:white;
+
+padding:22px;
+
+margin-bottom:18px;
+
+border-radius:14px;
+
+border-left:6px solid #1565c0;
+
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+transition:.25s;
+
+}
+
+
+.qa-box:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+
+.question{
+
+font-weight:bold;
+
+color:#1b3a57;
+
+margin-bottom:8px;
+
+}
+.question-image{
+    text-align:center;
+    margin:15px 0;
+    overflow-x:auto;
+}
+
+.question-image img{
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:8px;
+}
+
+
+.answer{
+
+color:#2c3e50;
+
+text-align:justify;
+
+}
+
+
+
+@media(max-width:768px){
+
+.notes-container{
+
+margin-top:80px;
+
+}
+
+
+}
+.formula{
+    overflow-x:auto;
+    overflow-y:hidden;
+    margin:10px 0;
+}
+.answer table{
+    width:100%;
+    border-collapse:collapse;
+    margin:12px 0;
+    display:table;      /* block हटाकर table करें */
+    overflow-x:auto;
+}
+
+.answer th,
+.answer td{
+    border:1px solid #ddd;
+    padding:10px;
+    vertical-align:middle;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+
+पाल <span>स्टडी सेंटर</span>
+
+</a>
+    <button class="navbar-toggler bg-light"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+</div>
+
+</nav>
+
+
+<!-- CONTENT -->
+<div class="container">
+
+ <div class="notes-title">📘 Unit 9 - इलेक्ट्रॉनिक युक्तियाँ</div
+>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: अर्द्धचालक किसे कहते हैं? किन्हीं दो अर्द्धचालक पदार्थों के नाम लिखिए।
+    </div>
+    <div class="answer">
+        उत्तर - वे पदार्थ जिनमें निम्न ताप पर तो विद्युत प्रवाह आसानी से नहीं हो पाता है, लेकिन ताप बढ़ाने पर विद्युत प्रवाह आसानी से हो जाता है, अर्द्ध-चालक कहलाते हैं।
+
+        <br><br>
+
+        इनकी विद्युत चालकता चालक और कुचालक के बीच होती है।
+
+        <br><br>
+
+        <strong>उदाहरण:</strong> सिलिकॉन, जर्मेनियम आदि।
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: किन्हीं दो अर्द्धचालक पदार्थों के नाम लिखिए।
+    </div>
+    <div class="answer">
+        दो अर्द्धचालक पदार्थों के नाम निम्न है।
+
+        <ol>
+            <li>सिलिकॉन</li>
+            <li>जर्मेनियम</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: किसी चालक और अर्द्धचालक का ताप बढ़ाने से उनकी विद्युत चालकता पर क्या प्रभाव पड़ता है? (म. प्र. 2024)
+    </div>
+    <div class="answer">
+        उत्तर - किसी चालक का ताप बढ़ाने से चालक की विद्युत चालकता घटती है तथा अर्द्धचालकों की विद्युत चालकता बढ़ती है।
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: अर्द्ध-चालक कितने प्रकार के होते हैं?
+    </div>
+    <div class="answer">
+        अर्द्ध-चालक मुख्यतः दो प्रकार के होते हैं—
+
+        <ol>
+            <li><strong>शुद्ध (आंतरिक) अर्द्ध-चालक</strong> - इनमें कोई अशुद्धि नहीं मिलाई जाती। ताप बढ़ने पर इलेक्ट्रॉन–होल युग्म उत्पन्न होते हैं और दोनों धारा वहन करते हैं।
+                <br>उदाहरण — सिलिकॉन (Si), जर्मेनियम (Ge)
+                <div class="question-image">
+                    <img src="images/image4.jpg" alt="शुद्ध (आंतरिक) जर्मेनियम की क्रिस्टल संरचना">
+                </div>
+            </li>
+            <li><strong>अशुद्ध (बाह्य) अर्द्ध-चालक</strong> - शुद्ध अर्द्ध-चालक में अल्प मात्रा में अशुद्धि मिलाने से प्राप्त अर्द्ध-चालक को अशुद्ध (बाह्य) अर्द्ध-चालक कहते है।</li>
+        </ol>
+
+        ये दो प्रकार के होते हैं—
+
+        <br><br>
+
+        <strong>N-प्रकार</strong> — इलेक्ट्रॉन बहुसंख्यक वाहक होते हैं।
+
+        <br><br>
+
+        <strong>P-प्रकार</strong> — होल बहुसंख्यक वाहक होते हैं।
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: निज अर्द्धचालक एवं बाह्य अर्द्धचालक में अंतर लिखिए।
+    </div>
+    <div class="answer">
+        <table>
+            <tr>
+                <th>क्रमांक</th>
+                <th>निज (आंतरिक) अर्द्धचालक</th>
+                <th>बाह्य (अशुद्ध) अर्द्धचालक</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>पूर्णतः शुद्ध अर्द्धचालक होता है</td>
+                <td>इसमें अल्प मात्रा में अशुद्धि मिलाई जाती है</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>चालकता केवल ताप पर निर्भर करती है</td>
+                <td>चालकता मुख्यतः अशुद्धि पर निर्भर करती है</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>इलेक्ट्रॉन और होल की संख्या समान होती है</td>
+                <td>इलेक्ट्रॉन और होल की संख्या असमान होती है</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>विद्युत चालकता कम होती है</td>
+                <td>विद्युत चालकता अधिक होती है</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: डोपिंग किसे कहते हैं?
+    </div>
+    <div class="answer">
+        डोपिंग वह प्रक्रिया है जिसमें शुद्ध अर्द्धचालक (जैसे सिलिकॉन या जर्मेनियम) में उसकी विद्युत चालकता बढ़ाने के लिए बहुत कम मात्रा में उपयुक्त अशुद्धि मिलाई जाती है।
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: अशुद्ध अर्द्ध-चालक कितने प्रकार के होते हैं? अथवा शुद्ध अर्द्धचालक से P व N प्रकार का अर्द्धचालक कैसे प्राप्त किया जाता है? इसकी रचना समझाइए। अथवा N एवं P प्रकार के अर्द्धचालकों को परिभाषित कीजिए। (म. प्र. 2019/21/26)
+    </div>
+    <div class="answer">
+        उत्तर - अशुद्ध अर्द्ध-चालक दो प्रकार के होते हैं।
+
+        <ol>
+            <li><strong>N प्रकार का अर्द्धचालक</strong> - जिस अर्द्धचालक में इलेक्ट्रॉन बहुसंख्यक वाहक हों, उसे N-प्रकार अर्द्धचालक कहते हैं।</li>
+        </ol>
+
+        जब शुद्ध जर्मेनियम में पाँच संयोजकता वाली अशुद्धि (जैसे फॉस्फोरस, आर्सेनिक, ऐण्टिमनी) मिलाई जाती है, तो अशुद्धि के पाँच इलेक्ट्रॉनों में से चार इलेक्ट्रॉन बन्ध बना लेते हैं और एक इलेक्ट्रॉन मुक्त रह जाता है।
+
+        <br><br>
+
+        यह मुक्त इलेक्ट्रॉन आसानी से विद्युत धारा का वहन करता है। इसलिए ऐसे अर्द्धचालक को N-प्रकार अर्द्धचालक या दाता अर्द्धचालक कहते हैं।
+
+        <div class="question-image">
+            <img src="images/image2.png" alt="N-प्रकार अर्द्धचालक की संरचना (पंचसंयोजी Sb अशुद्धि सहित स्वतंत्र इलेक्ट्रॉन)">
+        </div>
+
+        इलेक्ट्रॉन → बहुसंख्यक वाहक
+
+        <br><br>
+
+        होल → अल्पसंख्यक वाहक
+
+        <ol start="2">
+            <li><strong>P प्रकार का अर्द्धचालक</strong> - जिस अर्द्धचालक में होल बहुसंख्यक वाहक हों, उसे P-प्रकार अर्द्धचालक कहते हैं।</li>
+        </ol>
+
+        जब शुद्ध जर्मेनियम में तीन संयोजकता वाली अशुद्धि (जैसे बोरॉन, ऐलुमिनियम, गैलियम) मिलाई जाती है, तो अशुद्धि के तीन इलेक्ट्रॉन बन्ध बना लेते हैं और एक बन्ध अधूरा रह जाता है। इस अधूरे बन्ध को होल कहते हैं।
+
+        <br><br>
+
+        यह होल धन आवेश वाहक की तरह कार्य करता है और विद्युत धारा के वहन में सहायक होता है। इसलिए ऐसे अर्द्धचालक को P-प्रकार अर्द्धचालक या ग्राही अर्द्धचालक कहते हैं।
+
+        <div class="question-image">
+            <img src="images/image8.png" alt="P-प्रकार अर्द्धचालक की संरचना (त्रिसंयोजी B अशुद्धि सहित होल)">
+        </div>
+
+        होल → बहुसंख्यक वाहक
+
+        <br><br>
+
+        इलेक्ट्रॉन → अल्पसंख्यक वाहक
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: N-प्रकार अर्द्धचालक एवं P-प्रकार अर्द्धचालक में अंतर लिखिए।
+    </div>
+    <div class="answer">
+        <table>
+            <tr>
+                <th>N-प्रकार अर्द्धचालक</th>
+                <th>P-प्रकार अर्द्धचालक</th>
+            </tr>
+            <tr>
+                <td>पंचसंयोजी अशुद्धि मिलाई जाती है।</td>
+                <td>त्रिसंयोजी अशुद्धि मिलाई जाती है।</td>
+            </tr>
+            <tr>
+                <td>इलेक्ट्रॉन बहुसंख्यक वाहक होते हैं।</td>
+                <td>होल बहुसंख्यक वाहक होते हैं।</td>
+            </tr>
+            <tr>
+                <td>होल अल्पसंख्यक वाहक होते हैं।</td>
+                <td>इलेक्ट्रॉन अल्पसंख्यक वाहक होते हैं।</td>
+            </tr>
+            <tr>
+                <td>दाता अर्द्धचालक कहलाता है।</td>
+                <td>ग्राही अर्द्धचालक कहलाता है।</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: P प्रकार तथा N प्रकार के अर्द्धचालकों के बहुसंख्यक आवेश वाहकों के नाम लिखिए। (म. प्र. 2025)
+    </div>
+    <div class="answer">
+        उत्तर - P प्रकार के अर्द्धचालकों में आवेश वाहक होल होते हैं तथा N प्रकार के अर्द्धचालकों में बहुसंख्यक आवेश वाहक इलेक्ट्रॉन होते हैं।
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: P–N संधि डायोड क्या है?
+    </div>
+    <div class="answer">
+        P-प्रकार और N-प्रकार अर्द्धचालक की संधि से बनी, एकदिशीय चालकता दिखाने वाली युक्ति को P–N संधि डायोड कहते हैं।
+
+        <div class="question-image">
+            <img src="images/image7.png" alt="P-N संधि डायोड का प्रतीक चिन्ह">
+        </div>
+
+        <strong>गुण:</strong>
+
+        <ol>
+            <li>अग्र अभिनति में धारा प्रवाहित करता है।</li>
+            <li>प्रतिवर्ती बायस में धारा को रोकता है।</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: P-N सन्धि डायोड में धारा का प्रवाह अग्र अभिनति के रूप में समझाइए।
+    </div>
+    <div class="answer">
+        P–N संधि डायोड में जब P-प्रकार को बैटरी के धनात्मक (+) ध्रुव से तथा N-प्रकार को ऋणात्मक (–) ध्रुव से जोड़ा जाता है, तो इसे अग्र अभिनति कहते हैं।
+
+        <div class="question-image">
+            <img src="images/image9.png" alt="P-N संधि डायोड की अग्र अभिनति (Forward Bias)">
+        </div>
+
+        <strong>कार्यविधि -</strong> अग्र अभिनति में बाह्य बैटरी के विद्युत क्षेत्र के प्रभाव से P-प्रकार के होल संधि की ओर बढ़ते हैं और N-प्रकार के इलेक्ट्रॉन भी संधि की ओर आकर्षित होते हैं।
+
+        <br><br>
+
+        संधि पर होल और इलेक्ट्रॉन के संयोग से अवरोध विभव कम हो जाता है। अवरोध विभव पर्याप्त रूप से कम होने पर इलेक्ट्रॉन N से P की ओर तथा होल P से N की ओर प्रवाहित होते हैं। परिणामस्वरूप डायोड में धारा का प्रवाह शुरू हो जाता है।
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: P-N सन्धि डायोड में धारा का प्रवाह पश्च अभिनति के रूप में समझाइए।
+    </div>
+    <div class="answer">
+        जब P-प्रकार को बैटरी के ऋणात्मक (–) ध्रुव से और N-प्रकार को धनात्मक (+) ध्रुव से जोड़ा जाता है, तो इसे पश्च-अभिनति कहते हैं।
+
+        <div class="question-image">
+            <img src="images/image6.png" alt="P-N संधि डायोड की पश्च अभिनति (Reverse Bias)">
+        </div>
+
+        <strong>कार्यविधि -</strong> पश्च अभिनति में बाह्य बैटरी के विद्युत क्षेत्र के प्रभाव से P-प्रकार के होल संधि से दूर खींचे जाते हैं और N-प्रकार के इलेक्ट्रॉन भी संधि से दूर रहते हैं। इसके कारण अवरोध परत मजबूत हो जाती है और धारा के प्रवाह का मार्ग अवरुद्ध हो जाता है। सामान्य परिस्थितियों में धारा लगभग शून्य रहती है। केवल अत्यधिक उच्च वोल्टेज पर (ब्रेकडाउन वोल्टेज) धारा बह सकती है।
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: दिष्टकारी किसे कहते हैं?
+    </div>
+    <div class="answer">
+        प्रत्यावर्ती धारा को दिष्टधारा में बदलने की क्रिया को दिष्टकरण कहते हैं तथा इस क्रिया में प्रयुक्त उपकरण को दिष्टकारी कहते हैं।
+
+        <br><br>
+
+        यह दो प्रकार के होते हैं -
+
+        <ol>
+            <li>अर्द्ध-तरंग दिष्टकारी</li>
+            <li>पूर्ण तरंग दिष्टकारी</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: P-N संधि डायोड का अर्द्धतरंग दिष्टकरण के रूप में क्रिया को चित्र एवं निर्गत सिग्नल आरेख द्वारा समझाइए। (2026)
+    </div>
+    <div class="answer">
+        <div class="question-image">
+            <img src="images/image5.png" alt="अर्द्ध-तरंग दिष्टकारी परिपथ तथा निवेशी एवं निर्गत सिग्नल आरेख">
+        </div>
+
+        <strong>कार्य-विधि -</strong> जब ट्रांसफॉर्मर की प्राथमिक कुण्डली में AC वोल्टेज लगाया जाता है तो द्वितीयक कुण्डली में भी AC वोल्टेज प्रेरित होता है। AC वोल्टेज में दो अर्द्ध-चक्र होते हैं, पहला धनात्मक और दूसरा ऋणात्मक।
+
+        <br><br>
+
+        धनात्मक अर्द्ध-चक्र में द्वितीयक कुण्डली का सिरा A, सिरा B के सापेक्ष धनात्मक होता है। इस समय डायोड अग्र-अभिनति में होता है। धारा डायोड से होकर लोड R में प्रवाहित होती है और लोड पर निर्गत वोल्टेज प्राप्त होता है।
+
+        <br><br>
+
+        ऋणात्मक अर्द्ध-चक्र में सिरा A, B के सापेक्ष ऋणात्मक हो जाता है। इस समय डायोड पश्च-अभिनति में होता है। धारा डायोड और लोड में नहीं बहती और लोड पर निर्गत वोल्टेज शून्य होता है।
+
+        <br><br>
+
+        इस प्रकार P-N डायोड केवल धनात्मक अर्द्ध-चक्र में ही धारा को लोड तक पहुँचाता है। इसलिए इसे अर्द्ध-तरंग दिष्टकारी कहते हैं।
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: P-N संधि डायोड का पूर्ण-तरंग दिष्टकरण के रूप में क्रिया को चित्र एवं निर्गत सिग्नल आरेख द्वारा समझाइए।
+    </div>
+    <div class="answer">
+        <div class="question-image">
+            <img src="images/image3.png" alt="पूर्ण-तरंग दिष्टकारी परिपथ तथा निवेशी एवं निर्गत सिग्नल आरेख">
+        </div>
+
+        जब ट्रांसफॉर्मर की प्राथमिक कुण्डली में AC वोल्टेज लगाया जाता है तो द्वितीयक कुण्डली में भी AC वोल्टेज प्रेरित होता है। पूर्ण-तरंग दिष्टकरण में दो या चार डायोडों का प्रयोग करके दोनों अर्द्ध-चक्रों को लोड तक पहुँचाया जाता है।
+
+        <br><br>
+
+        धनात्मक अर्द्ध-चक्र में डायोड अग्र-अभिनति में होते हैं और धारा लोड R में प्रवाहित होती है। इस समय लोड पर निर्गत वोल्टेज धनात्मक होता है।
+
+        <br><br>
+
+        ऋणात्मक अर्द्ध-चक्र में भी डायोडों का ऐसा संयोजन होता है कि धारा लोड R में उसी दिशा में बहती है। इस समय भी लोड पर निर्गत वोल्टेज धनात्मक होता है।
+
+        <br><br>
+
+        इस प्रकार, पूर्ण-तरंग दिष्टकरण में दोनों अर्द्ध-चक्रों का उपयोग करके लोड में लगातार और धनात्मक धारा प्राप्त होती है। इसलिए इसे पूर्ण-तरंग दिष्टकारी कहते हैं।
+    </div>
+</div>
+
+</div>
+
+<!-- SCRIPT -->
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("show");
+}
+
+document.addEventListener("click", function(e){
+    if(!e.target.closest(".navbar")){
+        document.getElementById("menu").classList.remove("show");
+    }
+});
+</script>
+
+<!-- Content Protection Scripts -->
+<script>
+// Disable right-click context menu
+document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+
+// Disable text selection
+document.addEventListener("selectstart", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+
+// Disable copy keyboard shortcut (Ctrl+C, Cmd+C)
+document.addEventListener("keydown", function(e) {
+    // Disable PrintScreen and related screenshot keys
+    if (e.key === "PrintScreen" ||
+        e.keyCode === 44 ||  // PrintScreen
+        (e.ctrlKey && e.shiftKey && e.key === "S") ||  // Windows Snipping Tool
+        (e.keyCode === 91 && e.shiftKey && e.key === "5")) {  // Mac Screenshot
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+C and Cmd+C (copy)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "c" || e.keyCode === 67)) {
+        e.preventDefault();
+        alert("Copying content is not allowed on this page.");
+        return false;
+    }
+
+    // Disable Ctrl+A (select all)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "a" || e.keyCode === 65)) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+X (cut)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "x" || e.keyCode === 88)) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable F12 (Developer Tools)
+    if (e.keyCode === 123) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+Shift+I (Developer Tools)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "i" || e.keyCode === 73)) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+Shift+J (Console)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "j" || e.keyCode === 74)) {
+        e.preventDefault();
+        return false;
+    }
+}, false);
+
+// Prevent copy on mouse up
+document.addEventListener("mouseup", function() {
+    document.selection.empty ? document.selection.empty() : window.getSelection().removeAllRanges();
+}, false);
+
+// Disable paste
+document.addEventListener("paste", function(e) {
+    e.preventDefault();
+    alert("Pasting content is not allowed on this page.");
+    return false;
+}, false);
+
+// Add user-select: none CSS dynamically
+document.addEventListener("DOMContentLoaded", function() {
+    document.body.style.userSelect = "none";
+    document.body.style.webkitUserSelect = "none";
+    document.body.style.msUserSelect = "none";
+    document.body.style.mozUserSelect = "none";
+});
+
+// Prevent image download
+document.addEventListener("dragstart", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | Notes</title>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<script>
+window.MathJax={
+ tex:{
+ inlineMath:[
+ ['$','$'],
+ ['\\(','\\)']
+ ]
+}
+};
+</script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<style>
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+
+body{
+background:#f5f7fb;
+line-height:1.7;
+}
+
+
+/* NAVBAR */
+
+    .navbar{
+
+      background:rgba(15,23,42,0.45);
+
+      backdrop-filter:blur(10px);
+
+      box-shadow:0 4px 18px rgba(0,0,0,.18);
+
+      padding:10px 0;
+
+      transition:.3s;
+
+    }
+
+    .navbar-brand{
+
+      font-size:28px;
+
+      font-weight:700;
+
+      color:white !important;
+
+    }
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+      .navbar-brand{
+        font-size:40px;
+      }
+/* CONTENT */
+
+.notes-container{
+
+max-width:900px;
+
+margin:100px auto 50px;
+
+padding:20px;
+
+}
+
+.notes-title{
+
+background:#e3f2fd;
+
+color:#1565c0;
+
+padding:10px;
+
+border-left:5px solid #1565c0;
+
+border-radius:50px;
+
+font-size:30px;
+
+font-weight:bold;
+margin-top:100px;
+
+margin-bottom:50px;
+
+}
+
+
+
+.qa-box{
+
+background:white;
+
+padding:22px;
+
+margin-bottom:18px;
+
+border-radius:14px;
+
+border-left:6px solid #1565c0;
+
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+transition:.25s;
+
+}
+
+
+.qa-box:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+
+.question{
+
+font-weight:bold;
+
+color:#1b3a57;
+
+margin-bottom:8px;
+
+}
+.question-image{
+    text-align:center;
+    margin:15px 0;
+    overflow-x:auto;
+}
+
+.question-image img{
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:8px;
+}
+
+
+.answer{
+
+color:#2c3e50;
+
+text-align:justify;
+
+}
+
+
+
+@media(max-width:768px){
+
+.notes-container{
+
+margin-top:80px;
+
+}
+
+
+}
+.formula{
+    overflow-x:auto;
+    overflow-y:hidden;
+    margin:10px 0;
+}
+.answer table{
+    width:100%;
+    border-collapse:collapse;
+    margin:12px 0;
+    display:table;
+    overflow-x:auto;
+}
+
+.answer th,
+.answer td{
+    border:1px solid #ddd;
+    padding:10px;
+    vertical-align:middle;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+
+Pal <span>Study Center</span>
+
+</a>
+    <button class="navbar-toggler bg-light"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+</div>
+
+</nav>
+
+
+<!-- CONTENT -->
+<div class="container">
+
+ <div class="notes-title">📘 Unit 9 - Electronic Devices</div
+>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What is a semiconductor? Name any two semiconductor materials.
+    </div>
+    <div class="answer">
+        Answer - Materials in which electric current does not flow easily at low temperature, but flows easily when the temperature is increased, are called semiconductors.
+
+        <br><br>
+
+        Their electrical conductivity lies between that of a conductor and an insulator.
+
+        <br><br>
+
+        <strong>Examples:</strong> Silicon, germanium, etc.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Name any two semiconductor materials.
+    </div>
+    <div class="answer">
+        The names of two semiconductor materials are as follows.
+
+        <ol>
+            <li>Silicon</li>
+            <li>Germanium</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What effect does increasing the temperature of a conductor and a semiconductor have on their electrical conductivity? (M.P. 2024)
+    </div>
+    <div class="answer">
+        Answer - Increasing the temperature of a conductor decreases the conductor's electrical conductivity, while it increases the electrical conductivity of semiconductors.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: How many types of semiconductors are there?
+    </div>
+    <div class="answer">
+        Semiconductors are mainly of two types—
+
+        <ol>
+            <li><strong>Intrinsic (pure) semiconductor</strong> - No impurity is added to these. When the temperature increases, electron-hole pairs are generated and both carry current.
+                <br>Examples — Silicon (Si), Germanium (Ge)
+                <div class="question-image">
+                    <img src="images/image4.jpg" alt="Crystal structure of intrinsic (pure) germanium">
+                </div>
+            </li>
+            <li><strong>Extrinsic (impure) semiconductor</strong> - A semiconductor obtained by adding a small amount of impurity to an intrinsic semiconductor is called an extrinsic (impure) semiconductor.</li>
+        </ol>
+
+        These are of two types—
+
+        <br><br>
+
+        <strong>N-type</strong> — Electrons are the majority carriers.
+
+        <br><br>
+
+        <strong>P-type</strong> — Holes are the majority carriers.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Write the difference between an intrinsic semiconductor and an extrinsic semiconductor.
+    </div>
+    <div class="answer">
+        <table>
+            <tr>
+                <th>S.No.</th>
+                <th>Intrinsic (pure) semiconductor</th>
+                <th>Extrinsic (impure) semiconductor</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>It is a completely pure semiconductor</td>
+                <td>A small amount of impurity is added to it</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Conductivity depends only on temperature</td>
+                <td>Conductivity mainly depends on the impurity</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>The number of electrons and holes is equal</td>
+                <td>The number of electrons and holes is unequal</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Electrical conductivity is low</td>
+                <td>Electrical conductivity is high</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What is doping?
+    </div>
+    <div class="answer">
+        Doping is the process in which a very small amount of a suitable impurity is added to a pure semiconductor (such as silicon or germanium) to increase its electrical conductivity.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: How many types of extrinsic semiconductors are there? Or, how are P-type and N-type semiconductors obtained from a pure semiconductor? Explain their formation. Or, define N-type and P-type semiconductors. (M.P. 2019/21/26)
+    </div>
+    <div class="answer">
+        Answer - Extrinsic semiconductors are of two types.
+
+        <ol>
+            <li><strong>N-type semiconductor</strong> - A semiconductor in which electrons are the majority carriers is called an N-type semiconductor.</li>
+        </ol>
+
+        When a pentavalent impurity (such as phosphorus, arsenic, antimony) is added to pure germanium, four of the five electrons of the impurity atom form bonds and one electron remains free.
+
+        <br><br>
+
+        This free electron easily carries the electric current. Hence such a semiconductor is called an N-type semiconductor or donor semiconductor.
+
+        <div class="question-image">
+            <img src="images/image2.png" alt="Structure of an N-type semiconductor (with pentavalent Sb impurity and a free electron)">
+        </div>
+
+        Electron → majority carrier
+
+        <br><br>
+
+        Hole → minority carrier
+
+        <ol start="2">
+            <li><strong>P-type semiconductor</strong> - A semiconductor in which holes are the majority carriers is called a P-type semiconductor.</li>
+        </ol>
+
+        When a trivalent impurity (such as boron, aluminium, gallium) is added to pure germanium, the three electrons of the impurity atom form bonds and one bond remains incomplete. This incomplete bond is called a hole.
+
+        <br><br>
+
+        This hole behaves like a positive charge carrier and helps in carrying the electric current. Hence such a semiconductor is called a P-type semiconductor or acceptor semiconductor.
+
+        <div class="question-image">
+            <img src="images/image8.png" alt="Structure of a P-type semiconductor (with trivalent B impurity and a hole)">
+        </div>
+
+        Hole → majority carrier
+
+        <br><br>
+
+        Electron → minority carrier
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Write the difference between an N-type semiconductor and a P-type semiconductor.
+    </div>
+    <div class="answer">
+        <table>
+            <tr>
+                <th>N-type semiconductor</th>
+                <th>P-type semiconductor</th>
+            </tr>
+            <tr>
+                <td>A pentavalent impurity is added.</td>
+                <td>A trivalent impurity is added.</td>
+            </tr>
+            <tr>
+                <td>Electrons are the majority carriers.</td>
+                <td>Holes are the majority carriers.</td>
+            </tr>
+            <tr>
+                <td>Holes are the minority carriers.</td>
+                <td>Electrons are the minority carriers.</td>
+            </tr>
+            <tr>
+                <td>It is called a donor semiconductor.</td>
+                <td>It is called an acceptor semiconductor.</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Name the majority charge carriers of P-type and N-type semiconductors. (M.P. 2025)
+    </div>
+    <div class="answer">
+        Answer - In P-type semiconductors the charge carriers are holes, and in N-type semiconductors the majority charge carriers are electrons.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What is a P-N junction diode?
+    </div>
+    <div class="answer">
+        A device formed by the junction of a P-type and an N-type semiconductor, which shows unidirectional conductivity, is called a P-N junction diode.
+
+        <div class="question-image">
+            <img src="images/image7.png" alt="Symbol of the P-N junction diode">
+        </div>
+
+        <strong>Properties:</strong>
+
+        <ol>
+            <li>It conducts current in forward bias.</li>
+            <li>It blocks current in reverse bias.</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Explain the flow of current in a P-N junction diode under forward bias.
+    </div>
+    <div class="answer">
+        In a P-N junction diode, when the P-type is connected to the positive (+) terminal of the battery and the N-type is connected to the negative (–) terminal, it is called forward bias.
+
+        <div class="question-image">
+            <img src="images/image9.png" alt="Forward bias of a P-N junction diode">
+        </div>
+
+        <strong>Working -</strong> In forward bias, due to the effect of the electric field of the external battery, the holes of the P-type move towards the junction and the electrons of the N-type are also attracted towards the junction.
+
+        <br><br>
+
+        At the junction, the combination of holes and electrons reduces the barrier potential. When the barrier potential is sufficiently reduced, electrons flow from N to P and holes flow from P to N. As a result, current begins to flow through the diode.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Explain the flow of current in a P-N junction diode under reverse bias.
+    </div>
+    <div class="answer">
+        When the P-type is connected to the negative (–) terminal of the battery and the N-type is connected to the positive (+) terminal, it is called reverse bias.
+
+        <div class="question-image">
+            <img src="images/image6.png" alt="Reverse bias of a P-N junction diode">
+        </div>
+
+        <strong>Working -</strong> In reverse bias, due to the effect of the electric field of the external battery, the holes of the P-type are pulled away from the junction and the electrons of the N-type also stay away from the junction. Because of this, the depletion layer becomes stronger and the path for the flow of current gets blocked. Under normal conditions the current remains almost zero. Current can flow only at a very high voltage (the breakdown voltage).
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What is a rectifier?
+    </div>
+    <div class="answer">
+        The process of converting alternating current into direct current is called rectification, and the device used in this process is called a rectifier.
+
+        <br><br>
+
+        It is of two types -
+
+        <ol>
+            <li>Half-wave rectifier</li>
+            <li>Full-wave rectifier</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Explain the action of a P-N junction diode as a half-wave rectifier with the help of a circuit diagram and the input-output signal diagram. (2026)
+    </div>
+    <div class="answer">
+        <div class="question-image">
+            <img src="images/image5.png" alt="Half-wave rectifier circuit and the input and output signal diagrams">
+        </div>
+
+        <strong>Working -</strong> When an AC voltage is applied to the primary coil of the transformer, an AC voltage is also induced in the secondary coil. The AC voltage has two half-cycles, the first positive and the second negative.
+
+        <br><br>
+
+        During the positive half-cycle, end A of the secondary coil is positive with respect to end B. At this time the diode is in forward bias. Current flows through the diode into the load R, and an output voltage is obtained across the load.
+
+        <br><br>
+
+        During the negative half-cycle, end A becomes negative with respect to end B. At this time the diode is in reverse bias. No current flows through the diode and the load, and the output voltage across the load is zero.
+
+        <br><br>
+
+        In this way, the P-N diode passes current to the load only during the positive half-cycle. Hence it is called a half-wave rectifier.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Explain the action of a P-N junction diode as a full-wave rectifier with the help of a circuit diagram and the input-output signal diagram.
+    </div>
+    <div class="answer">
+        <div class="question-image">
+            <img src="images/image3.png" alt="Full-wave rectifier circuit and the input and output signal diagrams">
+        </div>
+
+        When an AC voltage is applied to the primary coil of the transformer, an AC voltage is also induced in the secondary coil. In full-wave rectification, two or four diodes are used so that both half-cycles are delivered to the load.
+
+        <br><br>
+
+        During the positive half-cycle, the diodes are in forward bias and current flows through the load R. At this time the output voltage across the load is positive.
+
+        <br><br>
+
+        During the negative half-cycle also, the diodes are connected in such a way that current flows through the load R in the same direction. At this time too the output voltage across the load is positive.
+
+        <br><br>
+
+        In this way, full-wave rectification uses both half-cycles to obtain a continuous, positive current in the load. Hence it is called a full-wave rectifier.
+    </div>
+</div>
+
+</div>
+
+<!-- SCRIPT -->
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("show");
+}
+
+document.addEventListener("click", function(e){
+    if(!e.target.closest(".navbar")){
+        document.getElementById("menu").classList.remove("show");
+    }
+});
+</script>
+
+<!-- Content Protection Scripts -->
+<script>
+// Disable right-click context menu
+document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+
+// Disable text selection
+document.addEventListener("selectstart", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+
+// Disable copy keyboard shortcut (Ctrl+C, Cmd+C)
+document.addEventListener("keydown", function(e) {
+    // Disable PrintScreen and related screenshot keys
+    if (e.key === "PrintScreen" ||
+        e.keyCode === 44 ||  // PrintScreen
+        (e.ctrlKey && e.shiftKey && e.key === "S") ||  // Windows Snipping Tool
+        (e.keyCode === 91 && e.shiftKey && e.key === "5")) {  // Mac Screenshot
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+C and Cmd+C (copy)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "c" || e.keyCode === 67)) {
+        e.preventDefault();
+        alert("Copying content is not allowed on this page.");
+        return false;
+    }
+
+    // Disable Ctrl+A (select all)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "a" || e.keyCode === 65)) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+X (cut)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "x" || e.keyCode === 88)) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable F12 (Developer Tools)
+    if (e.keyCode === 123) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+Shift+I (Developer Tools)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "i" || e.keyCode === 73)) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+Shift+J (Console)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "j" || e.keyCode === 74)) {
+        e.preventDefault();
+        return false;
+    }
+}, false);
+
+// Prevent copy on mouse up
+document.addEventListener("mouseup", function() {
+    document.selection.empty ? document.selection.empty() : window.getSelection().removeAllRanges();
+}, false);
+
+// Disable paste
+document.addEventListener("paste", function(e) {
+    e.preventDefault();
+    alert("Pasting content is not allowed on this page.");
+    return false;
+}, false);
+
+// Add user-select: none CSS dynamically
+document.addEventListener("DOMContentLoaded", function() {
+    document.body.style.userSelect = "none";
+    document.body.style.webkitUserSelect = "none";
+    document.body.style.msUserSelect = "none";
+    document.body.style.mozUserSelect = "none";
+});
+
+// Prevent image download
+document.addEventListener("dragstart", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+</script>
+
+</body>
+</html>

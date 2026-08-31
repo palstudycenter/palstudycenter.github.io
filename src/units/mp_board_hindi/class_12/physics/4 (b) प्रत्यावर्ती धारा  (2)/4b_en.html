@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | Notes</title>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<script>
+window.MathJax={
+ tex:{
+ inlineMath:[
+ ['$','$'],
+ ['\\(','\\)']
+ ]
+}
+};
+</script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<style>
+<style>
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+
+body{
+background:#f5f7fb;
+line-height:1.7;
+}
+
+
+/* NAVBAR */
+
+    .navbar{
+
+      background:rgba(15,23,42,0.45);
+
+      backdrop-filter:blur(10px);
+
+      box-shadow:0 4px 18px rgba(0,0,0,.18);
+
+      padding:10px 0;
+
+      transition:.3s;
+
+    }
+
+    .navbar-brand{
+
+      font-size:28px;
+
+      font-weight:700;
+
+      color:white !important;
+
+    }
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+      .navbar-brand{
+        font-size:40px;
+      }
+/* CONTENT */
+
+.notes-container{
+
+max-width:900px;
+
+margin:100px auto 50px;
+
+padding:20px;
+
+}
+
+.notes-title{
+
+background:#e3f2fd;
+
+color:#1565c0;
+
+padding:10px;
+
+border-left:5px solid #1565c0;
+
+border-radius:50px;
+
+font-size:30px;
+
+font-weight:bold;
+margin-top:100px;
+
+margin-bottom:50px;
+
+}
+
+
+
+.qa-box{
+
+background:white;
+
+padding:22px;
+
+margin-bottom:18px;
+
+border-radius:14px;
+
+border-left:6px solid #1565c0;
+
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+transition:.25s;
+
+}
+
+
+.qa-box:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+
+.question{
+
+font-weight:bold;
+
+color:#1b3a57;
+
+margin-bottom:8px;
+
+}
+.question-image{
+    text-align:center;
+    margin:15px 0;
+    overflow-x:auto;
+}
+
+.question-image img{
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:8px;
+}
+
+
+.answer{
+
+color:#2c3e50;
+
+text-align:justify;
+
+}
+
+
+
+@media(max-width:768px){
+
+.notes-container{
+
+margin-top:80px;
+
+}
+
+
+}
+.formula{
+    overflow-x:auto;
+    overflow-y:hidden;
+    margin:10px 0;
+}
+.answer table{
+    width:100%;
+    border-collapse:collapse;
+    margin:12px 0;
+    display:table;      /* remove block, use table */
+    overflow-x:auto;
+}
+
+.answer th,
+.answer td{
+    border:1px solid #ddd;
+    padding:10px;
+    vertical-align:middle;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+
+Pal <span>Study Center</span>
+
+</a>
+    <button class="navbar-toggler bg-light"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+</div>
+
+</nav>
+
+
+<!-- CONTENT -->
+<div class="container">
+
+ <div class="notes-title">📘 Unit 4(B) - Alternating Current (AC)</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What is direct current?
+    </div>
+    <div class="question-image">
+        <img src="images/image17.jpg" alt="Comparison of alternating current and direct current waveforms">
+    </div>
+    <div class="answer">
+        The current whose magnitude and direction remain constant with time is called <strong>direct current</strong>. This current always flows in one direction only.<br><br><strong>Example</strong> – current obtained from a battery, cell, or DC generator.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What is alternating current?
+    </div>
+    <div class="question-image">
+        <img src="images/image14.png" alt="Waveform of alternating current">
+    </div>
+    <div class="answer">
+        The current whose magnitude as well as direction keep changing continuously with time is called <strong>alternating current</strong>. It flows in the form of a sine wave. It is represented by the following equation.<div class="formula">$$ I = I_0 \sin\omega t $$</div>Example – the electric current used in our homes (220 V, 50 Hz).
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What are the instantaneous value, peak value and root mean square value of alternating current?
+    </div>
+    <div class="question-image">
+        <img src="images/image19.png" alt="Waveform of alternating current (peak value)">
+    </div>
+    <div class="answer">
+        <strong>Instantaneous value</strong> - The instantaneous value of an alternating current is the value that the current has at a particular instant. Its average value over one complete cycle is zero. Its value is given by-<div class="formula">$$ I = I_0\sin\omega t $$</div><strong>Peak value</strong> - The maximum value of an alternating current is called its amplitude or peak value. It is denoted by \(I_0\).<div class="formula">$$ I_0 = \sqrt{2}\, I_{rms} $$</div><strong>Root mean square (rms) value</strong> - The square root of the mean of the squares of the instantaneous values of the alternating current over one complete cycle is called the root mean square value of the alternating current. It is also called the virtual value of the alternating current. It is denoted by \(I_{rms}\).
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Write the difference between alternating current and direct current.
+    </div>
+    <div class="answer">
+        <table>
+            <tr>
+                <th>Direct Current (DC)</th>
+                <th>Alternating Current (AC)</th>
+            </tr>
+            <tr>
+                <td>The magnitude can change, but the direction remains fixed.</td>
+                <td>Both the direction and magnitude keep changing.</td>
+            </tr>
+            <tr>
+                <td>A transformer cannot be used.</td>
+                <td>A transformer can be used with it.</td>
+            </tr>
+            <tr>
+                <td>It is not useful for making electromagnets.</td>
+                <td>This electric current can be used to make electromagnets.</td>
+            </tr>
+            <tr>
+                <td>Its measuring instruments are based on the magnetic effect.</td>
+                <td>Its measuring instruments are based on the heating effect.</td>
+            </tr>
+            <tr>
+                <td>It is relatively less dangerous.</td>
+                <td>It is dangerous.</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Why are the magnetic and chemical effects of alternating current zero? (Sample paper 2026)
+    </div>
+    <div class="answer">
+        The electric current flows in one direction for half the cycle and in the opposite direction for the other half, so that its average value over a complete cycle is zero. Hence the magnetic and chemical effects of alternating current are zero.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Why can alternating current not be measured with a moving-coil galvanometer?
+    </div>
+    <div class="answer">
+        The average value of alternating current over one complete cycle is zero. Hence alternating current does not exhibit a (net) magnetic effect. Whereas a moving-coil galvanometer is based on the magnetic effect of current. Consequently, alternating current cannot be measured with the help of a moving-coil galvanometer.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: On what principle are instruments that measure alternating current (AC) based?
+    </div>
+    <div class="answer">
+        Instruments that measure alternating current (AC) mainly work on the heating (thermal) principle of the current.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Establish the relation between the root mean square value and the peak value of alternating current.<br>Or<br>Prove that the root mean square value of the current is \(1/\sqrt{2}\) times its peak value.
+    </div>
+    <div class="answer">
+        Let the alternating current at some instant be \(I = I_0\sin\omega t\).<br><br>Hence the root mean square value of the alternating current -<div class="formula">$$ I^2_{rms} = \frac{1}{T}\int_0^T I^2\,dt $$</div><div class="formula">$$ I^2_{rms} = \frac{1}{T}\int_0^T (I_0\sin\omega t)^2\,dt $$</div><div class="formula">$$ I^2_{rms} = \frac{I_0^2}{T}\int_0^T \sin^2\omega t\,dt $$</div><div class="formula">$$ I^2_{rms} = \frac{I_0^2}{2T}\int_0^T (1-\cos2\omega t)\,dt $$</div><div class="formula">$$ I^2_{rms} = \frac{I_0^2}{2T}\Big[t-\frac{\sin2\omega t}{2\omega}\Big]_0^T $$</div><div class="formula">$$ I^2_{rms} = \frac{I_0^2}{2T}\Big[\Big(T-\frac{\sin2\omega T}{2\omega}\Big)-\Big(0-\frac{\sin0}{2\omega}\Big)\Big] $$</div><div class="formula">$$ I^2_{rms} = \frac{I_0^2}{2T}\Big[T-\frac{\sin2\omega(2\pi/\omega)}{2\omega}\Big] $$</div><div class="formula">$$ I^2_{rms} = \frac{I_0^2}{2T}\big[T-\frac{\sin4\pi}{2\omega}\big] $$</div><div class="formula">$$ I^2_{rms} = \frac{I_0^2}{2T}[T-0] $$</div><div class="formula">$$ I^2_{rms} = \frac{I_0^2}{2} $$</div><div class="formula">$$ I_{rms} = \frac{I_0}{\sqrt{2}} $$</div>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Why is alternating current more dangerous than direct current? (2025)<br>Or<br>Between alternating current and direct current of the same potential, which is safer and why?
+    </div>
+    <div class="answer">
+        In alternating current the potential difference keeps changing continuously. Its virtual (rms) value is usually 220 volts.<br><br>Hence its actual <strong>maximum value, i.e. peak value</strong> -<div class="formula">$$ I_0 = \sqrt{2}\,I_{rms} $$</div><div class="formula">$$ I_0 = 1.41(300) $$</div><div class="formula">$$ I_0 = 331\text{ volts} $$</div>That is, the voltage of a 220-volt AC supply actually keeps changing between +311 volts and −311 volts.<br><br>Whereas in direct current the voltage always remains constant. If the DC voltage is 220 volts, it will always remain 220 volts.<br><br>Thus alternating current is more dangerous than direct current.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What is the peak-to-peak value of an alternating emf?
+    </div>
+    <div class="answer">
+        It is equal to the sum of the positive peak value and the negative peak value.<br><br>That is, the peak-to-peak value of the emf = 2E = 2√20
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What are resistance, reactance and impedance? Explain.
+    </div>
+    <div class="answer">
+        <strong>Resistance</strong> - The obstruction offered by a conductor to the path of electric current is called resistance. It is denoted by \(R\).<br><br><strong>Reactance</strong> - The obstruction produced in the path of alternating current by only an inductor or only a capacitor in an AC circuit is called reactance. It is denoted by \(X\).<br><br><strong>Impedance</strong> - The obstruction offered by two or more of the components — ohmic resistance, inductor and capacitor — in an AC circuit is called impedance. It is denoted by \(Z\).
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Write the difference between resistance, reactance and impedance.
+    </div>
+    <div class="answer">
+        <table>
+            <tr>
+                <th>Resistance</th>
+                <th>Reactance</th>
+                <th>Impedance</th>
+            </tr>
+            <tr>
+                <td>The obstruction offered to the path of electric current is called resistance.</td>
+                <td>The opposition offered to the path of current by an inductor and capacitor in an AC circuit is called reactance.</td>
+                <td>The combined opposition offered by ohmic resistance, inductor and capacitor together in an AC circuit is called impedance.</td>
+            </tr>
+            <tr>
+                <td>It does not depend on frequency.</td>
+                <td>It depends on frequency.</td>
+                <td>It depends on frequency.</td>
+            </tr>
+            <tr>
+                <td>It is denoted by R.</td>
+                <td>It is denoted by X.</td>
+                <td>It is denoted by Z.</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: A capacitor blocks direct current but allows high-frequency alternating current to pass through, why? (Sample paper 2026)
+    </div>
+    <div class="answer">
+        Direct current always flows in one direction, so its frequency is zero \((f=0)\), which makes its \(X_c\) infinite. Hence a capacitor blocks direct current.<br><br>On the other hand, the frequency \((f)\) of alternating current is high, so its \(X_c\) becomes very small. Hence alternating current passes through a capacitor easily.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What is the resistance of a coil of inductance \(L\) in a direct current circuit?
+    </div>
+    <div class="answer">
+        For direct current, the frequency \(v=0\)<br><br>The resistance of the coil in the circuit, i.e. the inductive reactance<div class="formula">$$ X_c = \omega L $$</div><div class="formula">$$ X_c = 2\pi v L $$</div><div class="formula">$$ X_c = 0 $$</div>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: An AC circuit contains only an ohmic resistance. Find the expression for the current and the phase difference between the current and the voltage.
+    </div>
+    <div class="question-image">
+        <img src="images/image5.png" alt="Pure resistance (R) circuit">
+    </div>
+    <div class="answer">
+        Let the equation of the alternating voltage across the resistance \(R\) at some instant be-<div class="formula">$$ V = V_0\sin\omega t \quad ...(1) $$</div>If the value of the current flowing through the resistance \(R\) at the same instant is \(I\), then by Ohm's law \(I=V/R\)<div class="formula">$$ I = \frac{V_0\sin\omega t}{R} $$</div><div class="formula">$$ I = \Big(\frac{V_0}{R}\Big)\sin\omega t $$</div><div class="formula">$$ I = I_0\sin\omega t \quad ...(2) $$</div>where \(I_0 = V_0/R\) = the peak value of the alternating current.<br><br>The effective resistance of the circuit -<div class="formula">$$ R = \frac{V_0}{I_0} $$</div><strong>Phase difference</strong> - From equations (1) and (2) it is clear that the alternating voltage and current are in the same phase.<div class="question-image"><img src="images/image3.png" alt="Waveform and phasor diagram of V and I in a pure resistance circuit"></div>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: An AC circuit contains only an inductor. Find the expression for the current. Find the reactance of the circuit and the phase difference between the current and the voltage.
+    </div>
+    <div class="question-image">
+        <img src="images/image7.png" alt="Pure inductance (L) circuit">
+    </div>
+    <div class="answer">
+        Let the equation of the alternating voltage across the inductor \(L\) at some instant be-<div class="formula">$$ V = V_0\sin\omega t \quad ...(1) $$</div>If the charge on the plates of the capacitor \(C\) at the same instant is \(Q\), then<div class="formula">$$ Q = CV $$</div><div class="formula">$$ Q = C(V_0\sin\omega t) $$</div><div class="formula">$$ Q = (CV_0)\sin\omega t $$</div>Hence the current flowing in the circuit<div class="formula">$$ I = \frac{dQ}{dt} $$</div><div class="formula">$$ I = \frac{d(CV_0\sin\omega t)}{dt} $$</div><div class="formula">$$ I = CV_0\,\frac{d(\sin\omega t)}{dt} $$</div><div class="formula">$$ I = CV_0(\omega\cos\omega t) $$</div><div class="formula">$$ I = \omega C V_0\sin\Big(\omega t+\frac{\pi}{2}\Big) $$</div><div class="formula">$$ I = I_0\sin\Big(\omega t+\frac{\pi}{2}\Big) \quad ...(2) $$</div>where \(I_0 = \omega C V_0\) = the peak value of the alternating current.<br><br><strong>Reactance</strong> - The effective resistance of the circuit<div class="formula">$$ X_c = \frac{V_0}{I_0} $$</div><div class="formula">$$ X_c = \frac{V_0}{\omega C V_0} $$</div><div class="formula">$$ X_c = \frac{1}{\omega C} $$</div><strong>Phase difference</strong> - From equations (1) and (2) it is clear that the current lags the alternating potential difference by a phase of \(\pi/2\).<div class="question-image"><img src="images/image16.png" alt="Waveform and phasor diagram of the 90-degree phase difference between V and I"></div>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: An AC circuit contains only a capacitor. Find the expression for the current. Find the reactance of the circuit and the phase difference between the current and the voltage.
+    </div>
+    <div class="question-image">
+        <img src="images/image8.png" alt="Pure capacitance (C) circuit">
+    </div>
+    <div class="answer">
+        Let the equation of the alternating voltage across the capacitor \(C\) at some instant be-<div class="formula">$$ V = V_0\sin\omega t \quad ...(1) $$</div>If the charge on the plates of the capacitor \(C\) at the same instant is \(Q\), then<div class="formula">$$ Q = CV $$</div><div class="formula">$$ Q = C(V_0\sin\omega t) $$</div><div class="formula">$$ Q = (CV_0)\sin\omega t $$</div>Hence the current flowing in the circuit<div class="formula">$$ I = \frac{dQ}{dt} $$</div><div class="formula">$$ I = \frac{d(CV_0\sin\omega t)}{dt} $$</div><div class="formula">$$ I = CV_0\,\frac{d(\sin\omega t)}{dt} $$</div><div class="formula">$$ I = CV_0(\omega\cos\omega t) $$</div><div class="formula">$$ I = \omega C V_0\sin\Big(\omega t+\frac{\pi}{2}\Big) $$</div><div class="formula">$$ I = I_0\sin\Big(\omega t+\frac{\pi}{2}\Big) \quad ...(2) $$</div>where \(I_0 = \omega C V_0\) = the peak value of the alternating current.<br><br><strong>Reactance</strong> - The effective resistance of the circuit<div class="formula">$$ X_c = \frac{V_0}{I_0} $$</div><div class="formula">$$ X_c = \frac{V_0}{\omega C V_0} $$</div><div class="formula">$$ X_c = \frac{1}{\omega C} $$</div><strong>Phase difference</strong> - From equations (1) and (2) it is clear that the current leads the alternating potential difference by a phase of \(\pi/2\).<div class="question-image"><img src="images/image10.png" alt="Waveform of V and I in a pure capacitance circuit"></div><div class="question-image"><img src="images/image6.png" alt="Phasor diagram of a pure capacitance circuit"></div>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Find the expression for the reactance, phase difference and current in an RC alternating current circuit.
+    </div>
+    <div class="question-image">
+        <img src="images/image15.png" alt="RC circuit">
+    </div>
+    <div class="answer">
+        Let the potential difference in an RC circuit at some time be-<div class="formula">$$ V = V_0\sin\omega t \quad ...(1) $$</div>Potential difference across the resistance \(R\), \(V_R = IR\)<br>Potential difference across the capacitor \(C\), \(V_C = IX_c\)<br><br>We know that the current \(I\) and \(V_R\) are in the same phase. The current \(I\) leads the potential difference \(V_C\) by \(\pi/2\).<div class="question-image"><img src="images/image21.png" alt="Phasor diagram of an RC circuit (VR, VC, φ)"></div>If the resultant potential difference of \(V_R\) and \(V_C\) is \(V\), then by the Pythagoras theorem<div class="formula">$$ V^2 = V_R^2 + V_C^2 $$</div><div class="formula">$$ V^2 = (IR)^2 + (IX_c)^2 $$</div><div class="formula">$$ V^2 = I^2R^2 + I^2X_c^2 $$</div><div class="formula">$$ V^2 = I^2(R^2 + X_c^2) $$</div><div class="formula">$$ \frac{V^2}{I^2} = R^2 + X_c^2 $$</div><div class="formula">$$ \frac{V}{I} = \sqrt{R^2 + X_c^2} $$</div><strong>Impedance</strong> - The effective resistance of the circuit is called impedance. It is denoted by \(Z_{RC}\).<div class="formula">$$ Z_{RC} = \frac{V}{I} $$</div><div class="formula">$$ Z_{RC} = \sqrt{R^2 + X_c^2} $$</div><strong>Phase difference</strong> - The phase difference \((\theta)\) is the angle between the voltage and the current in an AC circuit. In a right-angled triangle<div class="formula">$$ \tan\theta = \frac{\text{perpendicular}}{\text{base}} $$</div><div class="formula">$$ \tan\theta = \frac{V_c}{V_R} $$</div><div class="formula">$$ \tan\theta = \frac{IX_c}{IR} $$</div><div class="formula">$$ \tan\theta = \frac{X_c}{R} $$</div><div class="formula">$$ \theta = \tan^{-1}\Big(\frac{X_c}{R}\Big) $$</div>Hence the current flowing in the circuit will be as follows.<div class="formula">$$ I = I_0\sin(\omega t+\theta) $$</div>where \(I_0 = V_0/Z_{RC}\) = the peak value of the alternating current.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Find the expression for the reactance, phase difference and current in an RL alternating current circuit.
+    </div>
+    <div class="question-image">
+        <img src="images/image2.png" alt="RL circuit">
+    </div>
+    <div class="answer">
+        Let the potential difference in an RL circuit at some time be-<div class="formula">$$ V = V_0\sin\omega t \quad ...(1) $$</div>Potential difference across the resistance \(R\), \(V_R = IR\)<br>Potential difference across the inductor \(L\), \(V_L = IX_L\)<br><br>We know that the current \(I\) and \(V_R\) are in the same phase. The current \(I\) lags the potential difference \(V_L\) by \(\pi/2\).<div class="question-image"><img src="images/image9.png" alt="Phasor diagram of an RL circuit (VR, VL, V)"></div>If the resultant potential difference of \(V_R\) and \(V_L\) is \(V\), then by the Pythagoras theorem<div class="formula">$$ V^2 = V_R^2 + V_L^2 $$</div><div class="formula">$$ V^2 = (IR)^2 + (IX_L)^2 $$</div><div class="formula">$$ V^2 = I^2R^2 + I^2X_L^2 $$</div><div class="formula">$$ V^2 = I^2(R^2 + X_L^2) $$</div><div class="formula">$$ \frac{V^2}{I^2} = R^2 + X_L^2 $$</div><div class="formula">$$ \frac{V}{I} = \sqrt{R^2 + X_L^2} $$</div><strong>Impedance</strong> - The effective resistance of the circuit is called impedance. It is denoted by \(Z_{RL}\).<div class="formula">$$ Z_{RL} = \frac{V}{I} $$</div><div class="formula">$$ Z_{RL} = \sqrt{R^2 + X_L^2} $$</div><strong>Phase difference</strong> - The phase difference \((\theta)\) is the angle between the voltage and the current in an AC circuit. In a right-angled triangle<div class="formula">$$ \tan\theta = \frac{\text{perpendicular}}{\text{base}} $$</div><div class="formula">$$ \tan\theta = \frac{V_L}{V_R} $$</div><div class="formula">$$ \tan\theta = \frac{IX_L}{IR} $$</div><div class="formula">$$ \tan\theta = \frac{X_L}{R} $$</div><div class="formula">$$ \theta = \tan^{-1}\Big(\frac{X_L}{R}\Big) $$</div>Hence the current flowing in the circuit will be as follows.<div class="formula">$$ I = I_0\sin(\omega t-\theta) $$</div>where \(I_0 = V_0/Z_{RL}\) = the peak value of the alternating current.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Find the expression for the reactance, phase difference and current in an LC alternating current circuit.
+    </div>
+    <div class="question-image">
+        <img src="images/image4.png" alt="Phasor diagram of an LC circuit">
+    </div>
+    <div class="answer">
+        Let the potential difference in an LC circuit at some time be-<div class="formula">$$ V = V_0\sin\omega t \quad ...(1) $$</div>Potential difference across the inductor \(L\), \(V_L = IX_L\)<br>Potential difference across the capacitor \(C\), \(V_C = IX_c\)<br><br>We know that the current \(I\) lags the potential difference \(V_L\) by \(\pi/2\). The current \(I\) leads the potential difference \(V_C\) by \(\pi/2\).<br><br>Hence if the resultant potential difference of \(V_L\) and \(V_C\) is \(V\), then by the Pythagoras theorem<div class="formula">$$ V = V_L - V_c $$</div><div class="formula">$$ V = IX_L - IX_c $$</div><div class="formula">$$ V = I(X_L - X_c) $$</div><div class="formula">$$ \frac{V}{I} = X_L - X_c $$</div><strong>Impedance</strong> - The effective resistance of the circuit is called impedance. It is denoted by \(Z_{LC}\).<div class="formula">$$ Z_{LC} = \frac{V}{I} $$</div><div class="formula">$$ Z_{LC} = X_L - X_c $$</div><strong>Phase difference</strong> - The phase difference \((\theta)\) is the angle between the voltage and the current in an AC circuit.<div class="formula">$$ \theta = \frac{\pi}{2} $$</div>Hence the current flowing in the circuit will be as follows.<div class="formula">$$ I = I_0\sin\Big(\omega t+\frac{\pi}{2}\Big) $$</div>where \(I_0 = V_0/Z_{LC}\) = the peak value of the alternating current.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What is resonance? Find the resonant frequency for an LC alternating current circuit.
+    </div>
+    <div class="answer">
+        <strong>Resonance</strong> - When the inductive reactance \(X_L\) and the capacitive reactance \(X_c\) of an alternating current (AC) circuit become equal, it is called resonance.<br><br>That is, at resonance<ul><li>\(Z_{LC} = 0\) (minimum)</li><li>\(X_L = X_c\)</li><li>Current \(I\) is maximum</li></ul><strong>Resonant frequency</strong> - The specific frequency at which resonance occurs in an LC circuit is called the resonant frequency. It is denoted by \(f_0\).<br><br>At resonance<div class="formula">$$ Z_{LC} = 0 $$</div><div class="formula">$$ X_L - X_c = 0 $$</div><div class="formula">$$ X_L = X_c $$</div><div class="formula">$$ \omega L = \frac{1}{\omega C} $$</div><div class="formula">$$ \omega^2 = \frac{1}{LC} $$</div><div class="formula">$$ \omega = \frac{1}{\sqrt{LC}} $$</div><div class="formula">$$ 2\pi f_0 = \frac{1}{\sqrt{LC}} $$</div><div class="formula">$$ f_0 = \frac{1}{2\pi\sqrt{LC}} $$</div>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What is the Q-factor? Write its formula and the conditions for its value to be high.
+    </div>
+    <div class="answer">
+        The Q-factor is a measure of the quality of a resonant circuit. It indicates how low the energy loss in the circuit is and how sharp the resonance is.<br><br><strong>Formula for the Q-factor</strong><div class="formula">$$ Q = \frac{\text{resonant frequency}}{\text{bandwidth}} $$</div><strong>Conditions for a high Q-factor</strong><ul><li>Energy loss should be very low.</li><li>Resistance should be low.</li><li>The resonance should be sharp.</li><li>The bandwidth should be small.</li><li>Damping in the circuit should be minimum.</li></ul>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: (Very important) Find the expression for the reactance, phase difference and current in an LCR alternating current circuit.
+    </div>
+    <div class="question-image">
+        <img src="images/image2.png" alt="LCR circuit">
+    </div>
+    <div class="answer">
+        Let the potential difference in an LCR circuit at some time be-<div class="formula">$$ V = V_0\sin\omega t \quad ...(1) $$</div>Potential difference across the resistance \(R\), \(V_R = IR\)<br>Potential difference across the inductor \(L\), \(V_L = IX_L\)<br><br>We know that the current \(I\) and \(V_R\) are in the same phase. The current \(I\) lags the potential difference \(V_L\) by \(\pi/2\). The current \(I\) leads the potential difference \(V_C\) by \(\pi/2\).<div class="question-image"><img src="images/image4.png" alt="Phasor diagram of an LCR circuit (VL-VC, VR, V, φ)"></div>Hence the resultant of \(V_L\) and \(V_C\) will be \((V_L - V_C)\), whose direction will be the same as the direction of \(V_L\). Now if the resultant potential difference of \(V_R\) and \((V_L - V_C)\) is \(V\), then by the Pythagoras theorem<div class="formula">$$ V^2 = V_R^2 + (V_L - V_c)^2 $$</div><div class="formula">$$ V^2 = (IR)^2 + (IX_L - IX_c)^2 $$</div><div class="formula">$$ V^2 = I^2R^2 + I^2(X_L - X_c)^2 $$</div><div class="formula">$$ V^2 = I^2\big[R^2 + (X_L - X_c)^2\big] $$</div><div class="formula">$$ \frac{V^2}{I^2} = R^2 + (X_L - X_c)^2 $$</div><div class="formula">$$ \frac{V}{I} = \sqrt{R^2 + (X_L - X_c)^2} $$</div><strong>Impedance</strong> - The effective resistance of the circuit is called impedance. It is denoted by \(Z_{LCR}\).<div class="formula">$$ Z_{LCR} = \frac{V}{I} $$</div><div class="formula">$$ Z_{LCR} = \sqrt{R^2 + (X_L - X_c)^2} $$</div><strong>Phase difference</strong> - The phase difference \((\theta)\) is the angle between the voltage and the current in an AC circuit. In a right-angled triangle<div class="formula">$$ \tan\theta = \frac{\text{perpendicular}}{\text{base}} $$</div><div class="formula">$$ \tan\theta = \frac{V_L-V_c}{V_R} $$</div><div class="formula">$$ \tan\theta = \frac{IX_L-IX_c}{IR} $$</div><div class="formula">$$ \tan\theta = \frac{I(X_L-X_c)}{IR} $$</div><div class="formula">$$ \tan\theta = \frac{X_L-X_c}{R} $$</div><div class="formula">$$ \theta = \tan^{-1}\Big[\frac{X_L-X_c}{R}\Big] $$</div>Hence the current flowing in the circuit will be as follows.<div class="formula">$$ I = I_0\sin(\omega t+\theta) $$</div>where \(I_0 = V_0/Z_{RL}\) = the peak value of the alternating current.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q19: What will be the value of the impedance in a series resonant L-C-R circuit?
+    </div>
+    <div class="answer">
+        Impedance in an L-C-R circuit<div class="formula">$$ Z_{LCR} = \sqrt{R^2 + (X_L-X_c)^2} $$</div>At resonance<div class="formula">$$ X_L = X_c $$</div>Hence the <strong>impedance</strong> of the circuit<div class="formula">$$ Z_{LCR} = \sqrt{R^2 + (0)^2} $$</div><div class="formula">$$ Z_{LCR} = \sqrt{R^2} $$</div><div class="formula">$$ Z_{LCR} = R $$</div>Hence the impedance will be equal to the resistance.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Prove that for an alternating current circuit \(P_{av} = V_{rms}I_{rms}\cos\varphi\). (2025)
+    </div>
+    <div class="answer">
+        Let the alternating potential difference and the alternating current at some instant be as follows.<div class="formula">$$ V = V_0\sin\omega t $$</div><div class="formula">$$ I = I_0\sin\omega t $$</div>Hence the average power for one complete cycle<div class="formula">$$ P_{av} = VI $$</div><div class="formula">$$ P_{av} = [V_0\sin\omega t][I_0\sin(\omega t-\varphi)] $$</div><div class="formula">$$ P_{av} = V_0I_0\,\sin\omega t\sin(\omega t-\varphi) $$</div><div class="formula">$$ P_{av} = V_0 I_0\,\sin\omega t(\sin\omega t\cos\varphi-\cos\omega t\sin\varphi) $$</div><div class="formula">$$ P_{av} = V_0 I_0\,(\sin^2\omega t\cos\varphi-\sin\omega t\cos\omega t\sin\varphi) $$</div>But we know that for one complete cycle<div class="formula">$$ \overline{\sin^2\omega t} = \frac{1}{2}\ \text{and}\ \overline{\sin\omega t\cos\omega t} = 0 $$</div>Hence<div class="formula">$$ P_{av} = V_0 I_0\Big[\Big(\frac{1}{2}\Big)\cos\varphi - 0\Big] $$</div><div class="formula">$$ P_{av} = V_0 I_0\Big[\frac{1}{2}\cos\varphi\Big] $$</div><div class="formula">$$ P_{av} = \Big(\frac{V_0}{\sqrt{2}}\Big)\Big(\frac{I_0}{\sqrt{2}}\Big)\cos\varphi $$</div><div class="formula">$$ P_{av} = V_{rms}\,I_{rms}\cos\varphi $$</div><div class="formula">$$ P_{av} = \text{apparent power}\times\text{power factor} $$</div>where<br>Apparent power = \(V_{rms}I_{rms}\)<br>Power factor = \(\cos\varphi\)
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What is meant by wattless current?
+    </div>
+    <div class="answer">
+        If a current flows in an alternating current circuit, but the average power consumed is zero, then that current is called wattless current.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Under what condition is a current wattless?
+    </div>
+    <div class="answer">
+        A current is wattless when an alternating current circuit contains pure inductance or pure capacitance, because in this condition there is a phase difference of \(\pi/2\) between the current and the voltage. Consequently, the average power consumed is zero.<div class="formula">$$ P_{av} = V_{rms}I_{rms}\cos\varphi $$</div><div class="formula">$$ P_{av} = V_{rms}I_{rms}\cos\Big(\frac{\pi}{2}\Big) $$</div><div class="formula">$$ P_{av} = V_{rms}I_{rms}\times0 $$</div><div class="formula">$$ P_{av} = 0 $$</div>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What is the principle of a choke coil? Explain its use for controlling current.
+    </div>
+    <div class="question-image">
+        <img src="images/image18.png" alt="Structure of a choke coil (coil wound on a laminated soft-iron core)">
+    </div>
+    <div class="answer">
+        <strong>Principle</strong> - To control the value of current in an alternating current circuit, a coil of very low resistance and high inductance is used. This causes very little energy loss in the circuit. This coil is called a choke coil.<br><br>If an alternating current circuit contains only pure inductance and the resistance of the soft-iron core is zero, then there is a phase difference of \(90^\circ\) between the emf and the current. In this condition the average power of the circuit<div class="formula">$$ P_{av} = V_{rms}I_{rms}\cos\varphi $$</div><div class="formula">$$ P_{av} = V_{rms}I_{rms}\cos\Big(\frac{\pi}{2}\Big) $$</div><div class="formula">$$ P_{av} = V_{rms}I_{rms}\times0 $$</div><div class="formula">$$ P_{av} = 0 $$</div>Hence there is no dissipation of energy at all, but in practice the resistance can never be zero. Hence some part of the electrical energy keeps getting dissipated as heat energy.<br><br><strong>Construction</strong> - A choke coil is made by winding many turns of thick, insulated copper wire on a soft-iron core.<br><br><strong>Use</strong> - By placing a choke coil in an alternating current circuit, the value of the alternating current is controlled. The reactance of the coil \(X_L = \omega L\); hence if the inductance of the choke coil is high, the value of the current decreases, and if the inductance is low, the value of the current increases. In this process the dissipation of electrical energy as heat energy is negligible.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Why is the current flowing in a choke coil called wattless current? (2018)
+    </div>
+    <div class="answer">
+        A choke coil is made of copper wire whose resistance is negligible. Also, because of the phase difference of \(\pi/2\) between the current and the voltage, the average power consumed is zero. Hence the current flowing in a choke coil is a wattless current.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Why is inductance more suitable than resistance for reducing the value of alternating current?
+    </div>
+    <div class="answer">
+        If resistance is used to reduce the value of alternating current, some part of the electrical energy gets dissipated as heat energy, whereas if inductance is used, since its power factor is zero, there is no dissipation of energy at all.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What is a transformer? Explain the types, construction, principle and working of a transformer. (2021/23/Sample paper 2026)
+    </div>
+    <div class="answer">
+        A transformer is a device that increases or decreases an alternating potential difference, but its frequency and power remain the same.<br><br><strong>Types</strong> - It is of two types.<ol><li><strong>Step-up transformer</strong> - This converts a low potential difference into a high potential difference. In this, the number of turns in the secondary coil is more than in the primary coil.<br>Example – to raise the voltage to a very high value (11 kV → 220 kV) at a power station.</li><li><strong>Step-down transformer</strong> - This converts a high potential difference into a low potential difference. In this, the number of turns in the secondary coil is less than in the primary coil.<br>Example – converting 220 V AC into 12 V or 6 V (used in household appliances).</li></ol><div class="question-image"><img src="images/image11.png" alt="Construction of step-up and step-down transformers"></div><strong>Construction of a transformer</strong> - A transformer mainly has three parts.<ol><li><strong>Iron core</strong> - It is made of sheets of soft laminated iron. The primary and secondary coils are wound on this core.</li><li><strong>Primary coil</strong> - This is connected to the electrical source (AC supply).</li><li><strong>Secondary coil</strong> - This is connected to the circuit where the increased or decreased potential difference is obtained.</li></ol><strong>Principle</strong> - A transformer works on the principle of electromagnetic induction. When an alternating current flows in the primary coil, a changing magnetic flux is produced in the core. This flux passes through the secondary coil and induces an electromotive force (emf) in it.<br><br><strong>Working and derivation of the formula</strong> - Let the number of turns in the primary and secondary coils be \(N_p\) and \(N_s\) respectively. If the magnetic flux linked with the primary coil at some instant is \(\phi\), then the emf induced in it<div class="formula">$$ e_p = -N_p\frac{d\phi}{dt} \quad ...(1) $$</div>If there is no leakage of magnetic flux, then the magnetic flux linked with the secondary coil will also be \(\phi\). Hence the emf induced in the secondary coil<div class="formula">$$ e_s = -N_s\frac{d\phi}{dt} \quad ...(2) $$</div>Dividing equation (2) by (1)-<div class="formula">$$ \frac{e_s}{e_p} = \frac{N_s}{N_p} \quad ...(3) $$</div>Also, we know that for an ideal transformer input power = output power<div class="formula">$$ e_sI_s = e_pI_p $$</div><div class="formula">$$ \frac{e_s}{e_p} = \frac{I_p}{I_s} \quad ...(4) $$</div>From equations (3) and (4)-<div class="formula">$$ \frac{e_s}{e_p} = \frac{N_s}{N_p} = \frac{I_p}{I_s} = r $$</div>where \(r\) is the turns ratio (transformation ratio). This is the principle of the transformer. (2023/26, 2021/23/Sample paper 2026)
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Write the various causes of energy loss in a transformer and the measures to reduce them. (2023/26)
+    </div>
+    <div class="answer">
+        Although the efficiency of a transformer is very high (95%–99%), there is still some energy loss in it. Taken together, these losses are called energy loss.<br><br><strong>1. Copper loss</strong> - Heat is produced when current flows through the copper wires of the primary and secondary coils due to their resistance. This loss is called \(I^2R\) loss.<br><br><strong>2. Iron loss</strong> - This loss occurs in the iron core due to the alternating flux. It is of two types –<br>(i) Hysteresis loss – due to repeated realignment of the magnetic domains in the iron core.<br>(ii) Eddy current loss – heat is produced due to the current induced in the core by the changing flux.<br><br><strong>3. Leakage flux loss</strong> - Some magnetic flux passes outside the core and fails to link with the secondary coil. This reduces the efficiency of the transformer.<br><br><strong>Measures to reduce energy loss</strong><ol><li>Using thick copper wires of low resistance.</li><li>Making the core of thin laminated sheets.</li><li>Using good quality iron material.</li><li>Designing the transformer so that leakage flux is minimum.</li></ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: How is the effect of eddy currents reduced in a transformer?<br>Or<br>Why are the cores of transformers made laminated? (2025)
+    </div>
+    <div class="answer">
+        The effect of eddy currents is reduced by making the core of a transformer laminated. Lamination of the core greatly increases its resistance. Hence the strength of the eddy currents produced becomes very low. In this way the dissipation of electrical energy as heat energy is prevented.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: How is the core of a transformer made laminated?
+    </div>
+    <div class="answer">
+        Instead of a single uniform piece of iron, the core of a transformer is made of thin sheets of iron.<br><br>Several rectangular strips made of soft iron are taken. The rectangular portion between them is cut and separated. These strips are given a coating of insulating material and joined together to form the required thickness. This is called a laminated core.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Write the uses of a transformer.
+    </div>
+    <div class="answer">
+        A transformer is used in electrical appliances that operate at a voltage other than that obtained from the mains supply.<ol><li>A step-up transformer is used in the transmission of electricity at a generating station. A step-up transformer is also used to provide a high accelerating voltage in televisions, wireless equipment and X-ray tubes.</li><li>A step-down transformer is used in electric bells, in valve heaters in radio sets, with night lamps (to reduce 220 volts to 6 volts), for welding purposes, and in electrical sub-stations to reduce the voltage before distribution to consumers.</li></ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Write the difference between a step-up and a step-down transformer.
+    </div>
+    <div class="answer">
+        <table>
+            <tr>
+                <th>Step-up transformer</th>
+                <th>Step-down transformer</th>
+            </tr>
+            <tr>
+                <td>It increases the alternating potential difference.</td>
+                <td>It decreases the alternating potential difference.</td>
+            </tr>
+            <tr>
+                <td>It decreases the strength of the current.</td>
+                <td>It increases the strength of the current.</td>
+            </tr>
+            <tr>
+                <td>The number of turns in its secondary coil is more than in the primary coil.</td>
+                <td>The number of turns in its secondary coil is less than in the primary coil.</td>
+            </tr>
+            <tr>
+                <td>Its turns ratio is greater than 1.</td>
+                <td>Its turns ratio is less than 1.</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What is a dynamo (generator)? Write its principle. (2022)
+    </div>
+    <div class="answer">
+        The device with the help of which mechanical energy is converted into electrical energy is called a dynamo.<br><br>A dynamo is of the following two types.<ol><li><strong>AC dynamo</strong> - This converts mechanical work into electrical energy in the form of alternating current.</li><li><strong>DC dynamo</strong> - This converts mechanical work into electrical energy in the form of direct current.</li></ol><strong>Principle</strong> - A dynamo works on the principle of electromagnetic induction. When the magnetic flux linked with a coil changes, an emf is induced in that coil, and if the coil forms a closed circuit, an induced current begins to flow in it.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What is an AC dynamo? Write its construction and working.
+    </div>
+    <div class="question-image">
+        <img src="images/image12.png" alt="Construction of an AC dynamo (with slip rings)">
+    </div>
+    <div class="answer">
+        A dynamo that converts mechanical work into electrical energy in the form of alternating current is called an AC dynamo. Its working is based on electromagnetic induction.<br><br><strong>Construction</strong> - An AC dynamo has the following parts:<ol><li><strong>Field magnet</strong>: This is a horseshoe-shaped permanent magnet that produces the magnetic field.</li><li><strong>Armature</strong>: This is a rectangular coil made of copper wires, wound on an iron core, which can rotate freely in the magnetic field.</li><li><strong>Slip rings</strong>: The two slip rings \(S_1\) and \(S_2\) connected to the ends of the armature reverse the direction of the current after every half cycle, so that current in both directions is obtained in the external resistance \(R\).</li><li><strong>Brushes</strong>: Flexible pieces of metal \(B_1\) and \(B_2\) that maintain contact with the slip rings and are connected to the external resistance \(R\).</li></ol><strong>Working</strong> - When the armature ABCD is rotated between the magnetic poles N and S, it cuts across the magnetic field lines. As a result, the magnetic flux passing through it changes, and due to this an induced current is produced in it. The direction of this current is found using Fleming's right-hand rule.<br><br>Suppose the armature is rotating anticlockwise and at some instant its arm AB is moving upward while CD is moving downward. Then the direction of the current will be DCBA, and in the external circuit the current will flow from \(B_1\) to \(B_2\).<br><br>After half a cycle, the positions of the arms are reversed. Now CD moves upward and AB moves downward. At this time the direction of the current will be ABCD, and in the external circuit the current will flow from \(B_2\) to \(B_1\).<br><br>As a result, the current flowing in the external circuit is an alternating current, which is expressed by the equation \(I=I_0\sin\omega t\).
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What is a DC dynamo? Write its construction and working.
+    </div>
+    <div class="question-image">
+        <img src="images/image13.jpg" alt="Construction of a DC dynamo (with split-ring commutator)">
+    </div>
+    <div class="answer">
+        A dynamo that converts mechanical work into electrical energy in the form of direct current is called a DC dynamo. Its working is based on electromagnetic induction.<br><br><strong>Construction</strong> - A DC dynamo has the following parts:<ol><li><strong>Field magnet</strong>: This is a horseshoe-shaped permanent magnet that produces the magnetic field.</li><li><strong>Armature</strong>: This is a rectangular coil made of copper wires, wound on an iron core, which can rotate freely in the magnetic field.</li><li><strong>Split rings (commutator)</strong>: The two split rings \(C_1\) and \(C_2\) connected to the ends of the armature keep the direction of the current the same after every half cycle, so that current in only one direction is obtained in the external resistance \(R\).</li><li><strong>Brushes</strong>: Flexible pieces of metal \(B_1\) and \(B_2\) that maintain contact with the split rings and are connected to the external resistance \(R\).</li></ol><strong>Working</strong> - When the armature ABCD is rotated between the magnetic poles N and S, it cuts across the magnetic field lines. As a result, the magnetic flux passing through it changes, and due to this an induced current is produced in it. The direction of this current is found using Fleming's right-hand rule.<br><br>Suppose the armature is rotating anticlockwise and at some instant its arm AB is moving upward while CD is moving downward. Then the direction of the current will be DCBA, and in the external circuit the current will flow from \(B_1\) to \(B_2\).<br><br>After half a cycle, the positions of the arms are reversed. Now CD moves upward and AB moves downward. At this time the direction of the current will be ABCD, and in the external circuit the current will still flow from \(B_1\) to \(B_2\).<br><br>As a result, the current flowing in the external circuit is direct current.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Write the difference between an AC dynamo and a DC dynamo.
+    </div>
+    <div class="answer">
+        <table>
+            <tr>
+                <th>S.No.</th>
+                <th>AC dynamo (alternating current generator)</th>
+                <th>DC dynamo (direct current generator)</th>
+            </tr>
+            <tr>
+                <td>1.</td>
+                <td>It produces alternating current (AC).</td>
+                <td>It produces direct current (DC).</td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>It uses slip rings.</td>
+                <td>It uses a split-ring commutator.</td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>The direction of the current keeps changing periodically.</td>
+                <td>The direction of the current always remains the same.</td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td>Its construction is simple.</td>
+                <td>Its construction is relatively complex.</td>
+            </tr>
+            <tr>
+                <td>5.</td>
+                <td>It is used for large-scale power generation at power houses.</td>
+                <td>It is used for charging batteries, electric motors, etc.</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What is a DC motor? Write its construction and working.
+    </div>
+    <div class="question-image">
+        <img src="images/image20.jpg" alt="Construction of a DC motor">
+    </div>
+    <div class="answer">
+        The device that converts electrical energy into mechanical energy is called a DC motor (direct current motor). It is based on the principle of the electromagnetic force.<br><br><strong>Construction</strong> - The main parts of a DC motor are as follows –<ol><li><strong>Field magnet</strong>: This is a horseshoe-shaped permanent magnet that produces the magnetic field.</li><li><strong>Armature</strong>: This is a rectangular coil made of copper wires, wound on an iron core, which can rotate freely in the magnetic field.</li><li><strong>Split rings (commutator)</strong>: The two split rings \(C_1\) and \(C_2\) connected to the ends of the armature reverse the direction of the current after every half cycle, so that the armature keeps rotating continuously in the same direction.</li><li><strong>Brushes</strong>: Flexible pieces of metal \(B_1\) and \(B_2\) that maintain contact with the split rings and carry current from the external circuit.</li></ol><strong>Working</strong> - When direct current is passed through the armature of a DC motor, a Lorentz force is produced between the magnetic field and the current flowing in each arm of the armature.<br><br>The forces acting on the left and right arms are in opposite directions, causing the armature to rotate. After every half cycle, the split ring (commutator) reverses the direction of the current so that the armature always keeps rotating in the same direction. In this way electrical energy is converted into mechanical rotational energy.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Write the difference between a DC dynamo and a DC motor.
+    </div>
+    <div class="answer">
+        <table>
+            <tr>
+                <th>S.No.</th>
+                <th>DC dynamo (electric generator)</th>
+                <th>DC motor (electric motor)</th>
+            </tr>
+            <tr>
+                <td>1.</td>
+                <td>It converts mechanical energy into electrical energy.</td>
+                <td>It converts electrical energy into mechanical energy.</td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>Its working principle is based on electromagnetic induction.</td>
+                <td>Its working principle is based on the magnetic force.</td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>In this, the armature is rotated by an external mechanical force.</td>
+                <td>In this, the armature rotates on its own due to the flow of current.</td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td>It produces current.</td>
+                <td>It does work, i.e. produces rotation.</td>
+            </tr>
+            <tr>
+                <td>5.</td>
+                <td>It is used for generating electricity.</td>
+                <td>It is used for running fans, toys, machines, etc.</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        15 Multiple Choice Questions (MCQs)
+    </div>
+    <div class="answer">
+        <ol>
+<li>What is the frequency of alternating current in India?<br><strong>Answer:</strong> 50 Hertz</li>
+<li>What is the unit of alternating current frequency?<br><strong>Answer:</strong> Hertz (Hz)</li>
+<li>For what time interval is the average value of alternating current zero?<br><strong>Answer:</strong> For one complete cycle</li>
+<li>Which instrument is used to measure alternating current?<br><strong>Answer:</strong> AC ammeter</li>
+<li>What is the device called that converts direct current into alternating current?<br><strong>Answer:</strong> Inverter</li>
+<li>What is the RMS value of alternating current?<br><strong>Answer:</strong> 1/√2 times the maximum value</li>
+<li>What gives the average value of electrical power?<br><strong>Answer:</strong> \(P = V_{rms}I_{rms}\cos\phi\)</li>
+<li>In what range does the value of the power factor lie?<br><strong>Answer:</strong> Between 0 and 1</li>
+<li>In an LCR circuit, if the reactance is zero, what is this condition of the circuit called?<br><strong>Answer:</strong> Resonance</li>
+<li>What is the angle between the current and potential difference in an ideal inductor?<br><strong>Answer:</strong> 90°</li>
+<li>What is the angle between the current and potential difference in a pure capacitor?<br><strong>Answer:</strong> 90°</li>
+<li>When is the power of alternating current maximum?<br><strong>Answer:</strong> When φ = 0° (the current and potential difference are in the same phase)</li>
+<li>What is the instantaneous equation of an alternating voltage?<br><strong>Answer:</strong> \(E = E_0\sin\omega t\)</li>
+<li>On what principle does a transformer work?<br><strong>Answer:</strong> On the principle of electromagnetic induction</li>
+<li>How many times does the direction of alternating current change?<br><strong>Answer:</strong> Twice in each cycle</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Fill in the Blanks
+    </div>
+    <div class="answer">
+        <ol>
+<li>Alternating current keeps changing __________ with time.<br><strong>Answer:</strong> direction and magnitude</li>
+<li>One complete wave of alternating current is called a __________.<br><strong>Answer:</strong> cycle</li>
+<li>The virtual value of alternating current is __________ of its peak value.<br><strong>Answer:</strong> 1/√2</li>
+<li>When φ = 90°, the value of power in the circuit is __________.<br><strong>Answer:</strong> zero</li>
+<li>The working principle of a transformer is based on __________.<br><strong>Answer:</strong> electromagnetic induction</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Match the Following
+    </div>
+    <div class="answer">
+        <table>
+            <tr>
+                <th>A</th>
+                <th>B</th>
+            </tr>
+            <tr>
+                <td>1. Inductor</td>
+                <td>(c) Current lags the potential difference by 90°</td>
+            </tr>
+            <tr>
+                <td>2. Capacitor</td>
+                <td>(a) Current leads the potential difference by 90°</td>
+            </tr>
+            <tr>
+                <td>3. Resonance condition</td>
+                <td>(d) Inductive and capacitive reactance equal</td>
+            </tr>
+            <tr>
+                <td>4. Power factor</td>
+                <td>(b) cosφ</td>
+            </tr>
+            <tr>
+                <td>5. Transformer</td>
+                <td>(e) To increase or decrease the alternating voltage</td>
+            </tr>
+        </table>
+        <br>
+        <strong>Correct answer sequence:</strong> 1-c, 2-a, 3-d, 4-b, 5-e
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        State True or False
+    </div>
+    <div class="answer">
+        <ol>
+<li>The average value of alternating current is always zero. – <strong>False</strong></li>
+<li>A transformer works on direct current. – <strong>False</strong></li>
+<li>In an inductor, the current lags the potential difference. – <strong>True</strong></li>
+<li>At resonance, the impedance of the circuit is minimum. – <strong>True</strong></li>
+<li>The higher the power factor, the lower the power loss. – <strong>True</strong></li>
+        </ol>
+    </div>
+</div>
+
+</div>
+
+
+<!-- SCRIPT -->
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("show");
+}
+
+document.addEventListener("click", function(e){
+    if(!e.target.closest(".navbar")){
+        document.getElementById("menu").classList.remove("show");
+    }
+});
+</script>
+
+<!-- Content Protection Scripts -->
+<script>
+// Disable right-click context menu
+document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+
+// Disable text selection
+document.addEventListener("selectstart", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+
+// Disable copy keyboard shortcut (Ctrl+C, Cmd+C)
+document.addEventListener("keydown", function(e) {
+    // Disable PrintScreen and related screenshot keys
+    if (e.key === "PrintScreen" ||
+        e.keyCode === 44 ||  // PrintScreen
+        (e.ctrlKey && e.shiftKey && e.key === "S") ||  // Windows Snipping Tool
+        (e.keyCode === 91 && e.shiftKey && e.key === "5")) {  // Mac Screenshot
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+C and Cmd+C (copy)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "c" || e.keyCode === 67)) {
+        e.preventDefault();
+        alert("Copying content is not allowed on this page.");
+        return false;
+    }
+
+    // Disable Ctrl+A (select all)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "a" || e.keyCode === 65)) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+X (cut)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "x" || e.keyCode === 88)) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable F12 (Developer Tools)
+    if (e.keyCode === 123) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+Shift+I (Developer Tools)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "i" || e.keyCode === 73)) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+Shift+J (Console)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "j" || e.keyCode === 74)) {
+        e.preventDefault();
+        return false;
+    }
+}, false);
+
+// Prevent copy on mouse up
+document.addEventListener("mouseup", function() {
+    document.selection.empty ? document.selection.empty() : window.getSelection().removeAllRanges();
+}, false);
+
+// Disable paste
+document.addEventListener("paste", function(e) {
+    e.preventDefault();
+    alert("Pasting content is not allowed on this page.");
+    return false;
+}, false);
+
+// Add user-select: none CSS dynamically
+document.addEventListener("DOMContentLoaded", function() {
+    document.body.style.userSelect = "none";
+    document.body.style.webkitUserSelect = "none";
+    document.body.style.msUserSelect = "none";
+    document.body.style.mozUserSelect = "none";
+});
+
+// Prevent image download
+document.addEventListener("dragstart", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+</script>
+
+</body>
+</html>

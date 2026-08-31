@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | Notes</title>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<script>
+window.MathJax={
+ tex:{
+ inlineMath:[
+ ['$','$'],
+ ['\\(','\\)']
+ ]
+}
+};
+</script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<style>
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+
+body{
+background:#f5f7fb;
+line-height:1.7;
+}
+
+
+/* NAVBAR */
+
+    .navbar{
+
+      background:rgba(15,23,42,0.45);
+
+      backdrop-filter:blur(10px);
+
+      box-shadow:0 4px 18px rgba(0,0,0,.18);
+
+      padding:10px 0;
+
+      transition:.3s;
+
+    }
+
+    .navbar-brand{
+
+      font-size:28px;
+
+      font-weight:700;
+
+      color:white !important;
+
+    }
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+      .navbar-brand{
+        font-size:40px;
+      }
+/* CONTENT */
+
+.notes-container{
+
+max-width:900px;
+
+margin:100px auto 50px;
+
+padding:20px;
+
+}
+
+.notes-title{
+
+background:#e3f2fd;
+
+color:#1565c0;
+
+padding:10px;
+
+border-left:5px solid #1565c0;
+
+border-radius:50px;
+
+font-size:30px;
+
+font-weight:bold;
+margin-top:100px;
+
+margin-bottom:50px;
+
+}
+
+
+
+.qa-box{
+
+background:white;
+
+padding:22px;
+
+margin-bottom:18px;
+
+border-radius:14px;
+
+border-left:6px solid #1565c0;
+
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+transition:.25s;
+
+}
+
+
+.qa-box:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+
+.question{
+
+font-weight:bold;
+
+color:#1b3a57;
+
+margin-bottom:8px;
+
+}
+.question-image{
+    text-align:center;
+    margin:15px 0;
+    overflow-x:auto;
+}
+
+.question-image img{
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:8px;
+}
+
+
+
+.answer{
+
+color:#2c3e50;
+
+text-align:justify;
+
+}
+
+
+
+@media(max-width:768px){
+
+.notes-container{
+
+margin-top:80px;
+
+}
+
+
+}
+.formula{
+    overflow-x:auto;
+    overflow-y:hidden;
+    margin:10px 0;
+}
+
+.answer table{
+    width:100%;
+    border-collapse:collapse;
+    margin:12px 0;
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    display:block;
+    overflow-x:auto;
+    box-shadow:0 2px 8px rgba(0,0,0,0.06);
+}
+
+.answer table td, .answer table th{
+    border:1px solid #ddd;
+    padding:10px 12px;
+    text-align:left;
+    vertical-align:top;
+    white-space:normal;
+}
+
+.answer table th{
+    background:#eaf2fb;
+    font-weight:bold;
+    color:#1b3a57;
+}
+
+.answer ol, .answer ul{
+    margin-left:20px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<!-- NAVBAR -->
+
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+
+Pal <span>Study Center</span>
+
+</a>
+    <button class="navbar-toggler bg-light"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+</div>
+
+</nav>
+
+
+
+
+
+<!-- NOTES -->
+
+<div class="qa-box">
+  <div class="container">
+ <div class="notes-title">📘  11-Organisms and Populations </div>
+</div>
+</div>
+
+<div class="qa-box">
+
+    <div class="question">
+        Q: What is ecology?
+    </div>
+
+    <div class="answer">
+        <strong>Answer:</strong>
+        <p>The science in which the mutual relationships between organisms and their environment (biotic and abiotic components) are studied is called ecology.</p>
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        Q: What is environment?
+    </div>
+
+    <div class="answer">
+        <strong>Answer:</strong>
+        <p>Environment is the entire set of external conditions that surround an organism on all sides and influence its life, development and activities.</p>
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        Q: What are environmental factors?
+    </div>
+
+    <div class="answer">
+        <strong>Answer:</strong>
+        <p>Those components of the environment that directly or indirectly affect organisms are called environmental factors.</p>
+        <p>Environmental factors are mainly divided into two groups—</p>
+        <ol>
+            <li><strong>Biotic factors:</strong> These include components such as microorganisms, animals and plants.</li>
+            <li><strong>Abiotic factors:</strong> These include components such as soil, water, temperature, light and radiation.</li>
+        </ol>
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        Q: What is an organism?
+    </div>
+
+    <div class="answer">
+        <strong>Answer:</strong>
+        <p>A living component found in the environment is called an organism.</p>
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        Q: What is a population?
+    </div>
+
+    <div class="answer">
+        <strong>Answer:</strong>
+        <p>A group of organisms of the same species living in a defined geographical area at a given time, that uses the same resources or competes for them, is called a population.</p>
+        <p><strong>Example:</strong> The human population.</p>
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        Q: What is population ecology?
+    </div>
+
+    <div class="answer">
+        <strong>Answer:</strong>
+        <p>The branch of ecology in which the mutual interactions between groups of the same species and their environment are studied is called population ecology.</p>
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        Q: Write the characteristics or features of a population.
+    </div>
+
+    <div class="answer">
+        <strong>Answer:</strong>
+        <p>The characteristics of a population are as follows—</p>
+        <ol>
+            <li>Population size and population density</li>
+            <li>Birth rate (natality)</li>
+            <li>Death rate (mortality)</li>
+            <li>Sex ratio</li>
+        </ol>
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        Q: What is meant by population density?
+    </div>
+
+    <div class="answer">
+        <strong>Answer:</strong>
+        <p>The number of organisms found per unit area is called population density.</p>
+        <div class="formula">
+            $$\text{Population density} = \dfrac{\text{Total number of organisms}}{\text{Area}}$$
+        </div>
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        Q: Write the factors that affect population growth.
+        <br><small>OR</small><br>
+        Name the basic processes that decrease and increase the population density in a given habitat during a given period. (2025)
+    </div>
+
+    <div class="answer">
+        <strong>Answer:</strong>
+        <p>The factors that affect population growth are as follows—</p>
+        <ol>
+            <li>Birth rate (natality)</li>
+            <li>Death rate (mortality)</li>
+            <li>Immigration</li>
+            <li>Emigration</li>
+        </ol>
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        Q: What is the birth rate (natality) of a population? <small>(2017/18/19)</small>
+    </div>
+
+    <div class="answer">
+        <strong>Answer:</strong>
+        <p>The average number of offspring produced by a population per unit time is called the birth rate (natality).</p>
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        Q: What is the death rate (mortality) of a population? <small>(2017/18/19)</small>
+    </div>
+
+    <div class="answer">
+        <strong>Answer:</strong>
+        <p>The average number of individuals dying in a population per unit time is called the death rate (mortality). It is a major factor in determining the size of a population.</p>
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        Q: What is immigration?
+    </div>
+
+    <div class="answer">
+        <strong>Answer:</strong>
+        <p>Immigration is the process in which organisms or individuals come from other places and settle in an area, causing the population of that area to increase.</p>
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        Q: What is emigration?
+    </div>
+
+    <div class="answer">
+        <strong>Answer:</strong>
+        <p>Emigration is the process in which organisms or individuals leave an area and settle in some other place, causing the population of that area to decrease.</p>
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        Q: What is an age pyramid?
+    </div>
+
+    <div class="answer">
+        <strong>Answer:</strong>
+        <p>An age pyramid is a graphical representation in which a population is depicted on the basis of its age structure (pre-reproductive, reproductive and post-reproductive age groups).</p>
+        <p>An age pyramid shows whether a population is growing, stable, or declining.</p>
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        Q: What is a community?
+    </div>
+
+    <div class="answer">
+        <strong>Answer:</strong>
+        <p>A group of interacting populations of different species (plants, animals, microorganisms) living in a defined area is called a community.</p>
+        <p><strong>Example:</strong> The algae, fish, frogs, insects, etc. found in a pond together form a community.</p>
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        Q: Write the difference between population and community.
+    </div>
+
+    <div class="answer">
+        <strong>Answer:</strong>
+        <table>
+            <tr>
+                <th>Population</th>
+                <th>Community</th>
+            </tr>
+            <tr>
+                <td>1. A group of organisms of the same species is called a population.</td>
+                <td>1. A group of populations of different species is called a community. <em>(In the source, this line originally read "...is called a population" — this appears to be a clear typing error in the source; it has been corrected here to "community".)</em></td>
+            </tr>
+            <tr>
+                <td>2. It has a lower level of organization.</td>
+                <td>2. It has a higher level of organization.</td>
+            </tr>
+            <tr>
+                <td>3. Example: The group of all fish in a pond.</td>
+                <td>3. Example: The group of all plants and animals in a pond.</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        Q: What is an ecotone?
+    </div>
+
+    <div class="answer">
+        <strong>Answer:</strong>
+        <p>When two communities are located close to each other, a region exists between them in which the populations of both communities are found. This region is called an ecotone (a zone of tension).</p>
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        Q: What is an ecological system (ecosystem)?
+    </div>
+
+    <div class="answer">
+        <strong>Answer:</strong>
+        <p>A system formed by more than one community together with their abiotic components is called an ecosystem.</p>
+        <p><strong>Examples:</strong></p>
+        <ol>
+            <li>Pond ecosystem</li>
+            <li>Forest ecosystem</li>
+            <li>Grassland ecosystem</li>
+        </ol>
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        Q: What is a biome?
+    </div>
+
+    <div class="answer">
+        <strong>Answer:</strong>
+        <p>A group of more than one similar type of ecosystem is called a biome.</p>
+        <p><strong>Examples:</strong></p>
+        <ol>
+            <li>Desert biome</li>
+            <li>Tropical rainforest biome</li>
+            <li>Tundra biome</li>
+        </ol>
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        Q: What is the biosphere?
+    </div>
+
+    <div class="answer">
+        <strong>Answer:</strong>
+        <p>All the biomes found on Earth, taken together, are called the biosphere.</p>
+        <p><strong>Example:</strong> The entire life-supporting zone of the Earth (the life-bearing part of the land, water and atmosphere).</p>
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        Q: Where is the troposphere found?
+    </div>
+
+    <div class="answer">
+        <strong>Answer:</strong>
+        <p>The lowest layer of the atmosphere surrounding the Earth is called the troposphere.</p>
+        <p>It extends on average to a height of about 8 to 16 km from the Earth's surface. This layer contains the life-sustaining gases, and clouds, rain and other weather-related events occur in it.</p>
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        Q: What is a habitat?
+    </div>
+
+    <div class="answer">
+        <strong>Answer:</strong>
+        <p>The natural place or environment where an organism lives, obtains food, reproduces and completes its life cycle is called a habitat.</p>
+        <p><strong>For example—</strong></p>
+        <ol>
+            <li>The habitat of a fish is water.</li>
+            <li>The habitat of a lion is the forest.</li>
+        </ol>
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        Q: What is a niche?
+    </div>
+
+    <div class="answer">
+        <strong>Answer:</strong>
+        <p>The specific activities carried out by an organism within its habitat are called its niche.</p>
+        <p><strong>For example—</strong></p>
+        <ol>
+            <li>The way it obtains food</li>
+            <li>Its use of energy</li>
+            <li>Its relationship with other organisms</li>
+        </ol>
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        Q: Write the difference between habitat and niche.
+    </div>
+
+    <div class="answer">
+        <strong>Answer:</strong>
+        <table>
+            <tr>
+                <th>Habitat</th>
+                <th>Niche</th>
+            </tr>
+            <tr>
+                <td>1. The natural place where an organism lives.</td>
+                <td>1. The specific role played by an organism within its habitat.</td>
+            </tr>
+            <tr>
+                <td>2. Relates to where the organism lives, its safety and reproduction.</td>
+                <td>2. Relates to the organism's food, use of energy and relationships with other organisms.</td>
+            </tr>
+            <tr>
+                <td>3. It tells where the organism lives.</td>
+                <td>3. It tells what the organism does.</td>
+            </tr>
+            <tr>
+                <td>4. Example: The habitat of a fish — water.</td>
+                <td>4. Example: The niche of a fish — the role of a consumer.</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        Q: What are population interactions? How many types are there?
+    </div>
+
+    <div class="answer">
+        <strong>Answer:</strong>
+        <p>When different populations in an ecosystem affect one another positively, negatively, or neutrally, these are called population interactions.</p>
+        <p>They are of the following types—</p>
+        <ol>
+            <li>Positive interactions</li>
+            <li>Negative interactions</li>
+            <li>Neutral interactions</li>
+        </ol>
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        Q: What are positive interactions?
+    </div>
+
+    <div class="answer">
+        <strong>Answer:</strong>
+        <p>In these, organisms or populations help each other, benefiting one or both of them. These are called positive interactions.</p>
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        Q: What is symbiosis? Explain with examples.
+    </div>
+
+    <div class="answer">
+        <strong>Answer:</strong>
+        <p>A relationship between organisms of two different species in which one or both organisms benefit, and neither organism is harmed, is called symbiosis.</p>
+        <p>This relationship can be of the following types—</p>
+        <ol>
+            <li><strong>Mutualism:</strong> When a relationship exists between organisms of two different species such that both benefit, it is called mutualism. This relationship may be permanent or long-term.<br>
+            <strong>Example:</strong> Lichen — the alga carries out photosynthesis and provides food to the fungus; the fungus provides shelter to the alga.</li>
+
+            <li><strong>Commensalism:</strong> When a relationship exists between two organisms or populations such that one benefits while the other is neither benefited nor harmed, it is called commensalism. This relationship may be permanent or temporary.<br>
+            <strong>Example:</strong> Orchid plants growing on trees get support and light, while the tree suffers no harm.</li>
+
+            <li><strong>Scavenging:</strong> Scavenging is the process in which certain organisms obtain food from the bodies of dead organisms. Such organisms are called scavengers.<br>
+            <strong>Example:</strong> Foxes, jackals, hyenas, vultures, etc.</li>
+        </ol>
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        Q: What are negative interactions?
+    </div>
+
+    <div class="answer">
+        <strong>Answer:</strong>
+        <p>When at least one organism is harmed in a mutual relationship between two organisms or populations, these are called negative interactions.</p>
+        <p>This relationship is of the following types—</p>
+        <ol>
+            <li><strong>Competition:</strong> There is rivalry among organisms for space, water, food, minerals and other resources. Both organisms are harmed in this. Competition between organisms of the same species is called intraspecific competition, and competition between organisms of different species is called interspecific competition.<br>
+            <strong>Example:</strong> Crop and weeds.</li>
+
+            <li><strong>Predation:</strong> This is a temporary mutual relationship between two species, in which an organism of one species kills and eats an organism of another species as food. In this, one organism benefits and the other is harmed.<br>
+            <strong>Example:</strong> Lion–deer.</li>
+
+            <li><strong>Antibiosis:</strong> When a relationship exists between two organisms such that a substance secreted by one organism inhibits the growth of, or kills, the other organism, it is called antibiosis.<br>
+            <strong>Example:</strong> Antibiotics such as penicillin and streptomycin inhibit the growth of microorganisms.</li>
+
+            <li><strong>Parasitism:</strong> When an organism obtains its food from another living organism, it is called parasitism. Parasites are of two types—
+                <ul>
+                    <li><strong>(a) Ectoparasites:</strong> Parasites that obtain their food from the outer surface of the host are called ectoparasites.<br>
+                    <strong>Example:</strong> Lice and dodder (Cuscuta).</li>
+                    <li><strong>(b) Endoparasites:</strong> Parasites that live inside the body of their host and obtain nutrition from it, thereby harming the host.<br>
+                    <strong>Example:</strong> Tapeworm present in the intestine of humans or animals.</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        Q: Write the difference between mutualism and commensalism.
+    </div>
+
+    <div class="answer">
+        <strong>Answer:</strong>
+        <table>
+            <tr>
+                <th>Mutualism</th>
+                <th>Commensalism</th>
+            </tr>
+            <tr>
+                <td>1. Both organisms benefit.</td>
+                <td>1. Only one organism benefits; the other is neither benefited nor harmed.</td>
+            </tr>
+            <tr>
+                <td>2. The relationship may be permanent or long-term.</td>
+                <td>2. The relationship may be permanent or temporary.</td>
+            </tr>
+            <tr>
+                <td>3. Example: Lichen – alga and fungus.</td>
+                <td>3. Example: Orchid plants growing on trees.</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        Q: Write the difference between symbiosis and parasitism.
+    </div>
+
+    <div class="answer">
+        <strong>Answer:</strong>
+        <table>
+            <tr>
+                <th>Symbiosis (Mutualism)</th>
+                <th>Parasitism</th>
+            </tr>
+            <tr>
+                <td>1. In this, two organisms live together such that both benefit and neither is harmed.</td>
+                <td>1. In this, a smaller organism (the parasite) obtains food from a larger organism (the host).</td>
+            </tr>
+            <tr>
+                <td>2. It is a positive interaction.</td>
+                <td>2. It is a negative interaction.</td>
+            </tr>
+            <tr>
+                <td>3. Example: Lichen (alga + fungus).</td>
+                <td>3. Example: Tapeworm — in the intestine of humans or animals.</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+<!-- PROTECTION -->
+
+
+<script>
+
+
+document.addEventListener("contextmenu",
+e=>e.preventDefault());
+
+
+document.addEventListener("selectstart",
+e=>e.preventDefault());
+
+
+document.addEventListener("copy",
+e=>{
+
+e.preventDefault();
+
+alert("Copying content is not allowed");
+
+});
+
+
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
