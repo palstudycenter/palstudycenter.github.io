@@ -1,0 +1,1774 @@
+<!DOCTYPE html>
+
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>PAL STUDY CENTER | ईथर</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background: #f5f7fb;
+        line-height: 1.7;
+    }
+
+    /* NAVBAR */
+
+    .navbar {
+        background: rgba(15, 23, 42, 0.90);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 18px rgba(0, 0, 0, .18);
+        padding: 10px 0;
+    }
+
+    .navbar-brand {
+        font-size: 30px;
+        font-weight: 700;
+        color: white !important;
+    }
+
+    .navbar-brand span {
+        color: #93c5fd;
+    }
+
+    /* NOTES CONTAINER */
+
+    .notes-container {
+        max-width: 900px;
+        margin: 100px auto 50px;
+        padding: 20px;
+    }
+
+    /* CHAPTER TITLE */
+
+    .notes-title {
+        background: #e3f2fd;
+        color: #1565c0;
+        padding: 15px 20px;
+        border-left: 6px solid #1565c0;
+        border-radius: 50px;
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    /* QUESTION ANSWER BOX */
+
+    .qa-box {
+        background: white;
+        padding: 22px;
+        margin-bottom: 18px;
+        border-radius: 14px;
+        border-left: 6px solid #1565c0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+        transition: .25s;
+    }
+
+    .qa-box:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
+    }
+
+    .question {
+        font-weight: bold;
+        color: #1b3a57;
+        margin-bottom: 10px;
+        font-size: 19px;
+    }
+
+    .answer {
+        color: #2c3e50;
+        text-align: justify;
+    }
+
+    .answer ul,
+    .answer ol {
+        margin-left: 25px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    /* FORMULA */
+
+    .formula {
+        background: #f8fafc;
+        border: 1px solid #dbe5ef;
+        border-radius: 10px;
+        padding: 12px 15px;
+        margin: 12px 0;
+        text-align: center;
+        font-size: 21px;
+        font-weight: bold;
+        color: #123b5d;
+        overflow-x: auto;
+    }
+
+    /* CHEMICAL REACTION */
+
+    .reaction-box {
+        width: 100%;
+        overflow-x: auto;
+        margin: 15px 0;
+        padding: 5px 0;
+    }
+
+    .chemical-reaction {
+        width: 100%;
+        min-width: 700px;
+        height: auto;
+    }
+
+    .chemical-reaction text {
+        font-family: Arial, sans-serif;
+    }
+
+    /* IMPORTANT POINT */
+
+    .important {
+        background: #fff8e1;
+        border-left: 5px solid #ffb300;
+        padding: 12px 15px;
+        margin-top: 12px;
+        border-radius: 8px;
+    }
+
+    /* TABLE */
+
+    .answer table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 12px 0;
+        background: #fff;
+    }
+
+    .answer table td,
+    .answer table th {
+        border: 1px solid #ddd;
+        padding: 10px 12px;
+        text-align: left;
+        vertical-align: top;
+    }
+
+    .answer table th {
+        background: #eaf2fb;
+        font-weight: bold;
+        color: #1b3a57;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 768px) {
+
+        .navbar-brand {
+            font-size: 24px;
+        }
+
+        .notes-container {
+            margin-top: 85px;
+            padding: 12px;
+        }
+
+        .notes-title {
+            font-size: 22px;
+            border-radius: 20px;
+            padding: 12px 15px;
+        }
+
+        .qa-box {
+            padding: 17px;
+        }
+
+        .question {
+            font-size: 17px;
+        }
+
+        .answer {
+            text-align: left;
+        }
+
+        .formula {
+            font-size: 18px;
+        }
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- NAVBAR -->
+
+<nav class="navbar fixed-top">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="../index.html">
+            पाल <span>स्टडी सेंटर</span>
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- NOTES -->
+
+< class="notes-container">
+  <div class="notes-title">
+    📘 Unit 6 -(हेलोऐल्केन)
+</div>
+
+
+    <div class="notes-title">
+        📘 ईथर — प्रश्न एवं उत्तर
+    </div>
+
+
+    <!-- QUESTION 1 -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            प्रश्न: ईथर किसे कहते हैं?
+        </div>
+
+        <div class="answer">
+
+            <p>
+                वे कार्बनिक यौगिक जिनमें दो ऐल्किल या एरिल मूलक एक ही
+                ऑक्सीजन परमाणु से जुड़े रहते हैं, <b>ईथर</b> कहलाते हैं।
+                ईथर का सामान्य सूत्र <b>R–O–R′</b> है।
+            </p>
+
+            <p>
+                इन्हें ऐल्कोहॉल का <b>ऐनहाइड्राइड</b> अथवा जल का
+                <b>डाइऐल्किल व्युत्पन्न</b> भी माना जा सकता है।
+            </p>
+
+            <div class="reaction-box">
+
+                <svg class="chemical-reaction"
+                     viewBox="0 0 950 150"
+                     preserveAspectRatio="xMidYMid meet">
+
+                    <text x="30" y="95" font-size="30">
+                        R–OH + HO–R
+                    </text>
+
+                    <line x1="280" y1="75"
+                          x2="450" y2="75"
+                          stroke="black"
+                          stroke-width="3"/>
+
+                    <polygon points="450,75 435,66 435,84"
+                             fill="black"/>
+
+                    <text x="500" y="95" font-size="30">
+                        R–O–R + H₂O
+                    </text>
+
+                </svg>
+
+            </div>
+
+            <p style="text-align:center;">
+                <b>ऐल्कोहॉल → ईथर</b>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- QUESTION 2 -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            प्रश्न: ईथर कितने प्रकार के होते हैं?
+        </div>
+
+        <div class="answer">
+
+            <p>
+                ईथर मुख्यतः <b>दो प्रकार</b> के होते हैं—
+            </p>
+
+            <p>
+                <b>1. सरल ईथर:</b> जब ऑक्सीजन परमाणु से जुड़े दोनों
+                ऐल्किल या एरिल मूलक समान होते हैं, तो उन्हें सरल ईथर कहते हैं।
+            </p>
+
+            <div class="formula">
+                R–O–R
+            </div>
+
+            <div class="formula">
+                CH₃–O–CH₃ — डाइमेथिल ईथर
+            </div>
+
+            <div class="formula">
+                C₆H₅–O–C₆H₅ — डाइफेनिल ईथर
+            </div>
+
+            <p>
+                <b>2. मिश्रित ईथर:</b> जब ऑक्सीजन परमाणु से जुड़े दोनों
+                मूलक भिन्न होते हैं, तो उन्हें मिश्रित ईथर कहते हैं।
+            </p>
+
+            <div class="formula">
+                CH₃–O–C₂H₅ — एथिल मेथिल ईथर
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- QUESTION 3 -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            प्रश्न: ईथर के नामकरण को समझाइए।
+        </div>
+
+        <div class="answer">
+
+            <p>
+                ईथर के नामकरण की दो प्रमुख पद्धतियाँ हैं—
+            </p>
+
+            <p>
+                <b>(i) साधारण पद्धति:</b> इस विधि में ऑक्सीजन से जुड़े दोनों
+                ऐल्किल या एरिल मूलकों के नाम लिखकर अंत में <b>ईथर</b>
+                शब्द जोड़ दिया जाता है।
+            </p>
+
+            <div class="formula">
+                CH₃–O–CH₃ — डाइमेथिल ईथर
+            </div>
+
+            <div class="formula">
+                CH₃–O–C₂H₅ — एथिल मेथिल ईथर
+            </div>
+
+            <p>
+                <b>(ii) IUPAC पद्धति:</b> इस पद्धति में ईथर को
+                <b>ऐल्कॉक्सी ऐल्केन</b> माना जाता है। छोटे ऐल्किल मूलक को
+                ऐल्कॉक्सी समूह तथा बड़े मूलक को ऐल्केन का भाग माना जाता है।
+            </p>
+
+            <div class="formula">
+                CH₃–O–CH₃ — मेथॉक्सीमीथेन
+            </div>
+
+            <div class="formula">
+                CH₃–O–C₂H₅ — मेथॉक्सीइथेन
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- QUESTION 4 -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            प्रश्न: ईथर में कौन-कौन सी विभिन्न प्रकार की समावयवता पाई जाती है?
+        </div>
+
+        <div class="answer">
+
+            <p>
+                ईथर में मुख्यतः <b>क्रियात्मक समावयवता</b> तथा
+                <b>मध्यावयवता (मेटामेरिज्म)</b> पाई जाती है।
+            </p>
+
+            <p>
+                <b>1. क्रियात्मक समावयवता:</b> जब समान आणविक सूत्र वाले
+                यौगिकों में भिन्न-भिन्न क्रियात्मक समूह उपस्थित होते हैं,
+                तो इसे क्रियात्मक समावयवता कहते हैं।
+            </p>
+
+            <p>
+                ऐल्कोहॉल और ईथर में क्रियात्मक समावयवता पाई जाती है।
+            </p>
+
+            <div class="formula">
+                C₂H₆O
+            </div>
+
+            <div class="formula">
+                CH₃–CH₂–OH — एथिल ऐल्कोहॉल
+            </div>
+
+            <div class="formula">
+                CH₃–O–CH₃ — डाइमेथिल ईथर
+            </div>
+
+            <p>
+                <b>2. मध्यावयवता (मेटामेरिज्म):</b> जब यौगिकों का
+                क्रियात्मक समूह समान हो, लेकिन क्रियात्मक समूह के दोनों ओर
+                जुड़े कार्बन समूहों का वितरण अलग-अलग हो, तो इसे
+                मध्यावयवता कहते हैं।
+            </p>
+
+            <p>
+                उदाहरण के लिए, <b>C₄H₁₀O</b> के दो ईथर—
+            </p>
+
+            <div class="formula">
+                CH₃CH₂–O–CH₂CH₃ — डाइएथिल ईथर
+            </div>
+
+            <div class="formula">
+                CH₃–O–CH₂CH₂CH₃ — मेथिल प्रोपिल ईथर
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- QUESTION 5 -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            प्रश्न: ईथर बनाने की सामान्य विधियाँ लिखिए।
+        </div>
+
+        <div class="answer">
+
+            <p>
+                <b>उत्तर:</b> ईथर बनाने की सामान्य विधियाँ निम्नलिखित हैं—
+            </p>
+
+
+            <p>
+                <b>1. ऐल्कोहॉलों के निर्जलीकरण से:</b>
+            </p>
+
+            <p>
+                जब प्राथमिक ऐल्कोहॉल को सान्द्र H₂SO₄ के साथ लगभग
+                140°C पर गर्म किया जाता है, तो जल का एक अणु निकल जाता है
+                और ईथर बनता है।
+            </p>
+
+            <div class="reaction-box">
+
+                <svg class="chemical-reaction"
+                     viewBox="0 0 1200 160"
+                     preserveAspectRatio="xMidYMid meet">
+
+                    <text x="20" y="105" font-size="36">
+                        2CH₃CH₂–OH
+                    </text>
+
+                    <line x1="260" y1="80"
+                          x2="560" y2="80"
+                          stroke="black"
+                          stroke-width="3"/>
+
+                    <polygon points="560,80 545,71 545,89"
+                             fill="black"/>
+
+                    <text x="410" y="48"
+                          text-anchor="middle"
+                          font-size="25">
+                        सान्द्र H₂SO₄ / 140°C
+                    </text>
+
+                    <text x="600" y="105" font-size="36">
+                        CH₃CH₂–O–CH₂CH₃ + H₂O
+                    </text>
+
+                </svg>
+
+            </div>
+
+
+            <p>
+                <b>(ii) ऐलुमिना या थोरिया द्वारा:</b>
+            </p>
+
+            <div class="reaction-box">
+
+                <svg class="chemical-reaction"
+                     viewBox="0 0 1200 160"
+                     preserveAspectRatio="xMidYMid meet">
+
+                    <text x="20" y="105" font-size="36">
+                        2CH₃CH₂–OH
+                    </text>
+
+                    <line x1="260" y1="80"
+                          x2="560" y2="80"
+                          stroke="black"
+                          stroke-width="3"/>
+
+                    <polygon points="560,80 545,71 545,89"
+                             fill="black"/>
+
+                    <text x="410" y="48"
+                          text-anchor="middle"
+                          font-size="25">
+                        Al₂O₃ / 520 K
+                    </text>
+
+                    <text x="600" y="105" font-size="36">
+                        CH₃CH₂–O–CH₂CH₃ + H₂O
+                    </text>
+
+                </svg>
+
+            </div>
+
+
+            <p>
+                <b>2. विलियमसन संश्लेषण द्वारा:</b>
+            </p>
+
+            <p>
+                सोडियम ऐल्कॉक्साइड की ऐल्किल हैलाइड से अभिक्रिया कराने पर
+                ईथर प्राप्त होता है।
+            </p>
+
+            <div class="reaction-box">
+
+                <svg class="chemical-reaction"
+                     viewBox="0 0 1200 160"
+                     preserveAspectRatio="xMidYMid meet">
+
+                    <text x="20" y="105" font-size="36">
+                        CH₃CH₂–ONa + Br–CH₂CH₃
+                    </text>
+
+                    <line x1="480" y1="80"
+                          x2="610" y2="80"
+                          stroke="black"
+                          stroke-width="3"/>
+
+                    <polygon points="610,80 595,71 595,89"
+                             fill="black"/>
+
+                    <text x="650" y="105" font-size="36">
+                        CH₃CH₂–O–CH₂CH₃ + NaBr
+                    </text>
+
+                </svg>
+
+            </div>
+
+            <div class="important">
+                <b>महत्वपूर्ण:</b> विलियमसन संश्लेषण ईथर बनाने की एक
+                महत्वपूर्ण विधि है, जिसमें ऐल्कॉक्साइड आयन ऐल्किल हैलाइड
+                के साथ अभिक्रिया करता है।
+            </div>
+
+        </div>
+
+    </div>
+
+
+<!-- QUESTION: ईथर के भौतिक गुण -->
+
+<div class="qa-box">
+
+    <div class="question">
+        प्रश्न: ईथर के भौतिक गुण लिखिए।
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>उत्तर:</b> ईथर के प्रमुख भौतिक गुण निम्नलिखित हैं—
+        </p>
+
+        <ol>
+            <li>
+                ईथर सामान्यतः <b>रंगहीन और वाष्पशील द्रव</b> होते हैं।
+            </li>
+
+            <li>
+                इनमें सामान्यतः <b>विशिष्ट गंध</b> पाई जाती है।
+            </li>
+
+            <li>
+                ईथर के <b>क्वथनांक ऐल्कोहॉलों की अपेक्षा कम</b> होते हैं।
+            </li>
+
+            <li>
+                ईथर <b>जल में कम घुलनशील</b> होते हैं, जबकि अधिकांश
+                कार्बनिक विलायकों में अच्छी तरह घुलते हैं।
+            </li>
+
+            <li>
+                ईथर का घनत्व सामान्यतः <b>जल से कम</b> होता है।
+            </li>
+
+            <li>
+                ईथर <b>अत्यधिक ज्वलनशील</b> होते हैं।
+            </li>
+
+            <li>
+                ईथर के अणुओं में आपस में <b>हाइड्रोजन बंध</b> नहीं बनता।
+                इसलिए इनके क्वथनांक समान आणविक द्रव्यमान वाले ऐल्कोहॉलों
+                से कम होते हैं।
+            </li>
+
+            <li>
+                निम्न आणविक द्रव्यमान वाले ईथर सामान्यतः
+                <b>अधिक वाष्पशील</b> होते हैं।
+            </li>
+        </ol>
+
+        <div class="important">
+            <b>महत्वपूर्ण:</b> ईथर के अणुओं में आपस में हाइड्रोजन बंध न बनने
+            के कारण इनके क्वथनांक संबंधित ऐल्कोहॉलों की तुलना में कम होते हैं।
+        </div>
+
+    </div>
+
+</div>
+  <!-- QUESTION: ईथर जल में विलेय क्यों होते हैं? -->
+
+<div class="qa-box">
+
+<div class="question">
+    प्रश्न: निम्न ईथर जल में विलेय होते हैं, क्यों?
+</div>
+
+<div class="answer">
+
+    <p>
+        <b>उत्तर:</b> ईथर जल के अणुओं के साथ
+        <b>हाइड्रोजन बंध</b> स्थापित कर लेते हैं, जिसके कारण
+        ये जल में विलेय होते हैं।
+    </p>
+
+    <p>
+        अणुभार में वृद्धि के साथ ईथर की जल में
+        <b>विलेयता कम होती जाती है।</b>
+    </p>
+
+</div>
+
+</div>
+
+<!-- QUESTION: ईथर वाष्पशील क्यों होते हैं? -->
+
+<div class="qa-box">
+
+<div class="question">
+    प्रश्न: ईथर वाष्पशील होते हैं, क्यों?
+</div>
+
+<div class="answer">
+
+    <p>
+        <b>उत्तर:</b> ईथर के अणुओं में आपस में
+        <b>हाइड्रोजन बंध</b> नहीं पाया जाता है, जिसके कारण
+        ये संगुणित नहीं रहते हैं।
+    </p>
+
+    <p>
+        अतः ये अनुरूप ऐल्कोहॉल की अपेक्षा
+        <b>अधिक वाष्पशील</b> होते हैं।
+    </p>
+
+</div>
+
+</div>
+<!-- QUESTION: ईथर की रासायनिक अभिक्रियाएँ -->
+
+<div class="qa-box">
+
+    <div class="question">
+        प्रश्न: ईथर की रासायनिक अभिक्रियाओं का वर्णन कीजिए।
+    </div>
+
+    <div class="answer">
+
+        <p>
+            ईथर की रासायनिक अभिक्रियाएँ मुख्यतः निम्नलिखित प्रकार की होती हैं—
+        </p>
+
+
+        <!-- (अ) ऐल्किल मूलक के कारण अभिक्रियाएँ -->
+
+        <p>
+            <b>(अ) ऐल्किल मूलक के कारण अभिक्रियाएँ</b>
+        </p>
+
+
+        <!-- 1. दहन -->
+
+        <p>
+            <b>1. दहन —</b>
+            ईथर अत्यन्त वाष्पशील और ज्वलनशील होने के कारण बहुत शीघ्रता
+            से जल जाते हैं। इनके वाष्प वायु के साथ ज्वलनशील मिश्रण बनाते हैं।
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1200 160"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="105" font-size="36">
+                    CH₃CH₂–O–CH₂CH₃ + 6O₂
+                </text>
+
+                <line x1="470" y1="80"
+                      x2="650" y2="80"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="650,80 635,71 635,89"
+                         fill="black"/>
+
+                <text x="700" y="105" font-size="36">
+                    4CO₂ + 5H₂O
+                </text>
+
+            </svg>
+
+        </div>
+
+
+        <!-- 2. हैलोजेनीकरण -->
+
+        <p>
+            <b>2. हैलोजेनीकरण —</b>
+            ईथर अंधेरे में क्लोरीन से क्रिया करके डाइक्लोरो डाइएथिल
+            ईथर बनाता है।
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1500 180"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="115" font-size="34">
+                    CH₃CH₂–O–CH₂CH₃ + Cl₂
+                </text>
+
+                <line x1="410" y1="90"
+                      x2="570" y2="90"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="570,90 555,81 555,99"
+                         fill="black"/>
+
+                <text x="490" y="55"
+                      text-anchor="middle"
+                      font-size="25">
+                    अंधेरे में
+                </text>
+
+                <text x="610" y="115" font-size="34">
+                    CH₃CHCl–O–CH₂CH₃
+                </text>
+
+                <text x="930" y="115" font-size="34">
+                    + Cl₂
+                </text>
+
+                <line x1="1050" y1="90"
+                      x2="1170" y2="90"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="1170,90 1155,81 1155,99"
+                         fill="black"/>
+
+                <text x="1190" y="115" font-size="34">
+                    CH₃CHCl–O–CHClCH₃
+                </text>
+
+            </svg>
+
+        </div>
+
+        <p style="text-align:center;">
+            <b>डाइक्लोरो डाइएथिल ईथर</b>
+        </p>
+
+
+        <p>
+            सूर्य के प्रकाश की उपस्थिति में परक्लोरो डाइएथिल ईथर बनता है।
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1450 180"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="115" font-size="34">
+                    CH₃CH₂–O–CH₂CH₃ + 10Cl₂
+                </text>
+
+                <line x1="450" y1="90"
+                      x2="650" y2="90"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="650,90 635,81 635,99"
+                         fill="black"/>
+
+                <text x="550" y="55"
+                      text-anchor="middle"
+                      font-size="25">
+                    सूर्य का प्रकाश
+                </text>
+
+                <text x="690" y="115" font-size="34">
+                    CCl₃CCl₂–O–CCl₂CCl₃
+                </text>
+
+            </svg>
+
+        </div>
+
+        <p style="text-align:center;">
+            <b>परक्लोरो डाइएथिल ईथर</b>
+        </p>
+
+
+        <!-- (ब) C-O-C बन्ध -->
+
+        <p>
+            <b>(ब) C–O–C ईथरीय बन्ध के कारण अभिक्रियाएँ</b>
+        </p>
+
+
+        <!-- 1. सल्फ्यूरिक अम्ल -->
+
+        <p>
+            <b>1. सल्फ्यूरिक अम्ल की क्रिया —</b>
+            विभिन्न परिस्थितियों में ईथर से विभिन्न यौगिक बनते हैं।
+        </p>
+
+
+        <p>
+            <b>(i) तनु H₂SO₄ के साथ उच्च दाब पर गर्म करने पर:</b>
+            ईथर का जल-अपघटन होता है और ऐल्कोहॉल बनते हैं।
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1250 180"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="115" font-size="36">
+                    CH₃CH₂–O–CH₂CH₃ + H₂O
+                </text>
+
+                <line x1="450" y1="90"
+                      x2="650" y2="90"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="650,90 635,81 635,99"
+                         fill="black"/>
+
+                <text x="550" y="55"
+                      text-anchor="middle"
+                      font-size="25">
+                    तनु H₂SO₄ / उच्च दाब
+                </text>
+
+                <text x="690" y="115" font-size="36">
+                    2CH₃CH₂OH
+                </text>
+
+            </svg>
+
+        </div>
+
+
+        <p>
+            <b>(ii) सान्द्र H₂SO₄ के साथ गर्म करने पर:</b>
+            ईथर अपघटित होकर ऐल्किल हाइड्रोजन सल्फेट और ऐल्कोहॉल बनाता है।
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1350 180"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="115" font-size="34">
+                    CH₃CH₂–O–CH₂CH₃ + H₂SO₄
+                </text>
+
+                <line x1="470" y1="90"
+                      x2="650" y2="90"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="650,90 635,81 635,99"
+                         fill="black"/>
+
+                <text x="560" y="55"
+                      text-anchor="middle"
+                      font-size="25">
+                    सान्द्र H₂SO₄
+                </text>
+
+                <text x="690" y="115" font-size="34">
+                    CH₃CH₂HSO₄ + CH₃CH₂OH
+                </text>
+
+            </svg>
+
+        </div>
+
+
+        <!-- 2. HI -->
+
+        <p>
+            <b>2. हाइड्रोजन आयोडाइड (HI) की क्रिया —</b>
+        </p>
+
+
+        <p>
+            <b>(i) ठण्डे HI के साथ:</b>
+            ईथर अपघटित होकर ऐल्कोहॉल और ऐल्किल आयोडाइड देते हैं।
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1250 180"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="115" font-size="36">
+                    CH₃CH₂–O–CH₂CH₃ + HI
+                </text>
+
+                <line x1="410" y1="90"
+                      x2="600" y2="90"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="600,90 585,81 585,99"
+                         fill="black"/>
+
+                <text x="505" y="55"
+                      text-anchor="middle"
+                      font-size="25">
+                    ठण्डा HI
+                </text>
+
+                <text x="640" y="115" font-size="36">
+                    CH₃CH₂I + CH₃CH₂OH
+                </text>
+
+            </svg>
+
+        </div>
+
+
+        <p>
+            <b>(ii) उच्च ताप पर सान्द्र HI के साथ:</b>
+            गर्म करने पर ऐल्किल आयोडाइड के दो अणु बनते हैं।
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1250 180"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="115" font-size="36">
+                    CH₃CH₂–O–CH₂CH₃ + 2HI
+                </text>
+
+                <line x1="440" y1="90"
+                      x2="630" y2="90"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="630,90 615,81 615,99"
+                         fill="black"/>
+
+                <text x="535" y="55"
+                      text-anchor="middle"
+                      font-size="25">
+                    सान्द्र HI / उच्च ताप
+                </text>
+
+                <text x="670" y="115" font-size="36">
+                    2CH₃CH₂I + H₂O
+                </text>
+
+            </svg>
+
+        </div>
+
+
+        <!-- 3. एसिड क्लोराइड -->
+
+        <p>
+            <b>3. एसिड क्लोराइड की क्रिया —</b>
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1450 180"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="115" font-size="32">
+                    CH₃CH₂–O–CH₂CH₃ + CH₃COCl
+                </text>
+
+                <line x1="540" y1="90"
+                      x2="760" y2="90"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="760,90 745,81 745,99"
+                         fill="black"/>
+
+                <text x="650" y="55"
+                      text-anchor="middle"
+                      font-size="24">
+                    निर्जल ZnCl₂
+                </text>
+
+                <text x="800" y="115" font-size="32">
+                    CH₃CH₂Cl + CH₃COOCH₂CH₃
+                </text>
+
+            </svg>
+
+        </div>
+
+
+        <!-- 4. निर्जलीकरण -->
+
+        <p>
+            <b>4. निर्जलीकरण —</b>
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1200 180"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="115" font-size="36">
+                    CH₃CH₂–O–CH₂CH₃
+                </text>
+
+                <line x1="370" y1="90"
+                      x2="610" y2="90"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="610,90 595,81 595,99"
+                         fill="black"/>
+
+                <text x="490" y="55"
+                      text-anchor="middle"
+                      font-size="25">
+                    Al₂O₃ / 350°C
+                </text>
+
+                <text x="650" y="115" font-size="36">
+                    2CH₂=CH₂ + H₂O
+                </text>
+
+            </svg>
+
+        </div>
+
+
+        <!-- 5. अपचयन -->
+
+        <p>
+            <b>5. अपचयन —</b>
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1200 180"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="115" font-size="36">
+                    CH₃CH₂–O–CH₂CH₃
+                </text>
+
+                <line x1="370" y1="90"
+                      x2="610" y2="90"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="610,90 595,81 595,99"
+                         fill="black"/>
+
+                <text x="490" y="55"
+                      text-anchor="middle"
+                      font-size="25">
+                    लाल P / HI
+                </text>
+
+                <text x="650" y="115" font-size="36">
+                    2CH₃CH₃ + H₂O
+                </text>
+
+            </svg>
+
+        </div>
+
+
+        <!-- 6. PCl5 -->
+
+        <p>
+            <b>6. PCl₅ से क्रिया —</b>
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1250 180"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="115" font-size="36">
+                    CH₃CH₂–O–CH₂CH₃ + PCl₅
+                </text>
+
+                <line x1="430" y1="90"
+                      x2="630" y2="90"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="630,90 615,81 615,99"
+                         fill="black"/>
+
+                <text x="675" y="115" font-size="36">
+                    2CH₃CH₂Cl + POCl₃
+                </text>
+
+            </svg>
+
+        </div>
+
+
+        <!-- IMPORTANT -->
+
+        <div class="important">
+            <b>महत्वपूर्ण:</b>
+            ईथर की कुछ अभिक्रियाएँ ऐल्किल मूलक के कारण तथा कुछ
+            C–O–C ईथरीय बन्ध के कारण होती हैं।
+        </div>
+
+    </div>
+
+</div>
+  <!-- QUESTION: डाइएथिल ईथर की प्रयोगशाला में तैयारी -->
+
+<div class="qa-box">
+
+    <div class="question">
+        प्रश्न: डाइएथिल ईथर बनाने की प्रयोगशाला विधि का वर्णन निम्न बिन्दुओं में लिखिए।
+    </div>
+
+    <div class="answer">
+
+        <!-- सिद्धांत -->
+
+        <p>
+            <b>सिद्धांत —</b>
+            डाइएथिल ईथर का निर्माण एथिल ऐल्कोहॉल के निर्जलीकरण से
+            होता है। इस प्रक्रिया में सल्फ्यूरिक अम्ल की उपस्थिति में
+            अभिक्रिया दो पदों में समझी जाती है।
+        </p>
+
+
+        <!-- समीकरण -->
+
+        <p>
+            <b>समीकरण —</b>
+        </p>
+
+        <p>
+            <b>(i) प्रथम पद:</b>
+            एथिल हाइड्रोजन सल्फेट का निर्माण होता है।
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1200 160"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="105" font-size="34">
+                    C₂H₅OH + H₂SO₄
+                </text>
+
+                <line x1="360" y1="80"
+                      x2="570" y2="80"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="570,80 555,71 555,89"
+                         fill="black"/>
+
+                <text x="465" y="48"
+                      text-anchor="middle"
+                      font-size="24">
+                    अभिक्रिया
+                </text>
+
+                <text x="610" y="105" font-size="34">
+                    C₂H₅HSO₄ + H₂O
+                </text>
+
+            </svg>
+
+        </div>
+
+
+        <p>
+            <b>(ii) द्वितीय पद:</b>
+            एथिल हाइड्रोजन सल्फेट एथिल ऐल्कोहॉल के साथ अभिक्रिया करके
+            डाइएथिल ईथर बनाता है और सल्फ्यूरिक अम्ल पुनः प्राप्त होता है।
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1350 160"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="105" font-size="34">
+                    C₂H₅HSO₄ + C₂H₅OH
+                </text>
+
+                <line x1="450" y1="80"
+                      x2="650" y2="80"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="650,80 635,71 635,89"
+                         fill="black"/>
+
+                <text x="550" y="48"
+                      text-anchor="middle"
+                      font-size="24">
+                    अभिक्रिया
+                </text>
+
+                <text x="690" y="105" font-size="34">
+                    C₂H₅–O–C₂H₅ + H₂SO₄
+                </text>
+
+            </svg>
+
+        </div>
+
+
+        <!-- समग्र समीकरण -->
+
+        <p>
+            <b>समग्र अभिक्रिया:</b>
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1250 160"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="105" font-size="34">
+                    2C₂H₅OH
+                </text>
+
+                <line x1="250" y1="80"
+                      x2="520" y2="80"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="520,80 505,71 505,89"
+                         fill="black"/>
+
+                <text x="385" y="48"
+                      text-anchor="middle"
+                      font-size="24">
+                    H₂SO₄
+                </text>
+
+                <text x="560" y="105" font-size="34">
+                    C₂H₅–O–C₂H₅ + H₂O
+                </text>
+
+            </svg>
+
+        </div>
+
+
+        <!-- रेखाचित्र -->
+
+        <p>
+            <b>रेखाचित्र —</b>
+        </p>
+
+        <div class="important">
+            <b>सैद्धांतिक उपकरण क्रम:</b>
+            ऐल्कोहॉल एवं अम्ल के मिश्रण से ईथर बनने के बाद उत्पाद को
+            संघनित करके एकत्र किया जाता है। वास्तविक प्रयोगशाला में
+            यह प्रक्रिया प्रशिक्षित शिक्षक की देखरेख में ही की जाती है,
+            क्योंकि ईथर अत्यन्त ज्वलनशील होता है।
+        </div>
+
+
+        <!-- विधि -->
+
+        <p>
+            <b>विधि —</b>
+            ऐल्कोहॉल के अम्लीय निर्जलीकरण द्वारा डाइएथिल ईथर प्राप्त किया
+            जाता है। इस प्रक्रिया में ईथर को संघनित करके अलग किया जाता है।
+            लगातार ऐल्कोहॉल की आपूर्ति के सिद्धांत पर आधारित इस प्रक्रिया
+            को <b>अविरत ईथरीकरण विधि</b> कहा जाता है।
+        </p>
+
+
+        <!-- शुद्धीकरण -->
+
+        <p>
+            <b>शुद्धीकरण —</b>
+            प्राप्त ईथर में अल्प मात्रा में ऐल्कोहॉल, जल तथा अम्लीय
+            अशुद्धियाँ हो सकती हैं। इसलिए शैक्षणिक रूप से इसके शुद्धीकरण
+            में पहले अम्लीय अशुद्धियों को क्षारीय माध्यम से हटाया जाता है,
+            फिर उपयुक्त सुखाने वाले पदार्थ द्वारा नमी हटाई जाती है।
+            अंत में आसवन द्वारा शुद्ध एवं शुष्क ईथर प्राप्त किया जाता है।
+        </p>
+
+    </div>
+
+</div>
+  <!-- QUESTION: निरन्तर ईथरीकरण विधि -->
+
+<div class="qa-box">
+
+    <div class="question">
+        प्रश्न: निरन्तर ईथरीकरण विधि किसे कहते हैं? क्या यह एक सतत प्रक्रिया है?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>उत्तर:</b>
+            डाइएथिल ईथर को एथिल ऐल्कोहॉल के आधिक्य में सान्द्र
+            H₂SO₄ की उपस्थिति में लगभग 140°C ताप पर गर्म करके बनाया जाता है।
+            यह अभिक्रिया दो पदों में होती है।
+        </p>
+
+
+        <p>
+            <b>प्रथम पद:</b>
+            एथिल ऐल्कोहॉल, सल्फ्यूरिक अम्ल के साथ अभिक्रिया करके
+            एथिल हाइड्रोजन सल्फेट बनाता है।
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1200 160"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="105" font-size="34">
+                    C₂H₅OH + H₂SO₄
+                </text>
+
+                <line x1="370" y1="80"
+                      x2="570" y2="80"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="570,80 555,71 555,89"
+                         fill="black"/>
+
+                <text x="470" y="48"
+                      text-anchor="middle"
+                      font-size="24">
+                    140°C
+                </text>
+
+                <text x="610" y="105" font-size="34">
+                    C₂H₅HSO₄ + H₂O
+                </text>
+
+            </svg>
+
+        </div>
+
+
+        <p>
+            <b>द्वितीय पद:</b>
+            एथिल हाइड्रोजन सल्फेट, एथिल ऐल्कोहॉल के साथ अभिक्रिया करके
+            डाइएथिल ईथर बनाता है तथा H₂SO₄ पुनः उत्पन्न हो जाता है।
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1350 160"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="105" font-size="34">
+                    C₂H₅HSO₄ + C₂H₅OH
+                </text>
+
+                <line x1="450" y1="80"
+                      x2="650" y2="80"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="650,80 635,71 635,89"
+                         fill="black"/>
+
+                <text x="550" y="48"
+                      text-anchor="middle"
+                      font-size="24">
+                    140°C
+                </text>
+
+                <text x="690" y="105" font-size="34">
+                    C₂H₅–O–C₂H₅ + H₂SO₄
+                </text>
+
+            </svg>
+
+        </div>
+
+
+        <p>
+            उपर्युक्त समीकरणों से स्पष्ट होता है कि <b>H₂SO₄ पुनः उत्पन्न</b>
+            हो जाता है, जो एथिल ऐल्कोहॉल को ईथर में बदलने में सहायता करता है।
+            इस प्रकार यह क्रम चलता रहता है। इसलिए इस विधि को
+            <b>निरन्तर ईथरीकरण विधि (Continuous Etherification Method)</b>
+            कहते हैं।
+        </p>
+
+
+        <p>
+            <b>क्या यह वास्तव में एक सतत प्रक्रिया है?</b>
+        </p>
+
+        <p>
+            वास्तव में इस विधि से ईथर का उत्पादन अनन्त समय तक निरन्तर नहीं
+            किया जा सकता। इसके निम्नलिखित प्रमुख कारण हैं—
+        </p>
+
+
+        <p>
+            <b>1. जल का निर्माण:</b>
+            अभिक्रिया में बनने वाला जल सल्फ्यूरिक अम्ल को तनु कर देता है,
+            जिससे उसकी अभिक्रियाशीलता कम हो जाती है।
+        </p>
+
+
+        <p>
+            <b>2. सल्फ्यूरिक अम्ल का अपचयन:</b>
+            उच्च ताप पर सल्फ्यूरिक अम्ल का कुछ भाग ऐल्कोहॉल द्वारा
+            अपचयित होकर सल्फर डाइऑक्साइड (SO₂) में परिवर्तित हो सकता है।
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1250 160"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="105" font-size="34">
+                    H₂SO₄
+                </text>
+
+                <line x1="180" y1="80"
+                      x2="400" y2="80"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="400,80 385,71 385,89"
+                         fill="black"/>
+
+                <text x="290" y="48"
+                      text-anchor="middle"
+                      font-size="24">
+                    उच्च ताप / C₂H₅OH
+                </text>
+
+                <text x="450" y="105" font-size="34">
+                    SO₂
+                </text>
+
+            </svg>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- प्रश्न: सल्फ्यूरिक ईथर -->
+
+<div class="qa-box">
+
+    <div class="question">
+        प्रश्न: सल्फ्यूरिक ईथर किसे कहते हैं?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>उत्तर:</b>
+            एथिल ईथर अर्थात् डाइएथिल ईथर को
+            <b>सल्फ्यूरिक ईथर</b> भी कहते हैं, क्योंकि इसके निर्माण में
+            सान्द्र H₂SO₄ का प्रयोग किया जाता है।
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- प्रश्न: डाइएथिल ईथर के उपयोग -->
+
+<div class="qa-box">
+
+    <div class="question">
+        प्रश्न: डाइएथिल ईथर के उपयोग लिखिए।
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>उत्तर:</b>
+            डाइएथिल ईथर के प्रमुख उपयोग निम्नलिखित हैं—
+        </p>
+
+        <ol>
+
+            <li>
+                क्लोरोफॉर्म तथा ऐल्कोहॉलों के साथ मिलाकर
+                <b>निश्चेतक</b> के रूप में इसका ऐतिहासिक रूप से उपयोग किया जाता था।
+            </li>
+
+            <li>
+                रेजिन, वसा, तेल, गोंद आदि पदार्थों के
+                <b>विलायक</b> के रूप में इसका उपयोग किया जाता है।
+            </li>
+
+            <li>
+                इसका उपयोग <b>प्रशीतक</b> के रूप में भी किया जाता है।
+            </li>
+
+            <li>
+                इसकी अपेक्षाकृत निष्क्रिय प्रकृति के कारण
+                <b>ग्रिगनार्ड अभिकर्मक के विलायक</b> के रूप में इसका उपयोग
+                किया जाता है।
+            </li>
+
+        </ol>
+
+    </div>
+
+</div>
+
+
+<!-- प्रश्न: ऐल्कोहॉल और डाइएथिल ईथर में अंतर -->
+
+<div class="qa-box">
+
+    <div class="question">
+        प्रश्न: ऐल्कोहॉल और डाइएथिल ईथर के बीच अंतर कैसे करें? (2019)
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>उत्तर:</b>
+            ऐल्कोहॉल और डाइएथिल ईथर में निम्नलिखित परीक्षणों द्वारा
+            अंतर किया जा सकता है—
+        </p>
+
+
+        <p>
+            <b>1. सोडियम परीक्षण:</b>
+        </p>
+
+        <p>
+            ऐल्कोहॉल सोडियम के साथ अभिक्रिया करके
+            <b>हाइड्रोजन गैस</b> देता है। यह हाइड्रोजन गैस प्रज्वलित करने
+            पर पॉप ध्वनि के साथ जलती है। जबकि डाइएथिल ईथर सामान्यतः
+            यह परीक्षण नहीं देता है।
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1200 160"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="105" font-size="36">
+                    2C₂H₅OH + 2Na
+                </text>
+
+                <line x1="390" y1="80"
+                      x2="600" y2="80"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="600,80 585,71 585,89"
+                         fill="black"/>
+
+                <text x="495" y="48"
+                      text-anchor="middle"
+                      font-size="24">
+                    अभिक्रिया
+                </text>
+
+                <text x="640" y="105" font-size="36">
+                    2C₂H₅ONa + H₂↑
+                </text>
+
+            </svg>
+
+        </div>
+
+
+        <p>
+            <b>2. आयोडोफॉर्म परीक्षण:</b>
+        </p>
+
+        <p>
+            यदि ऐल्कोहॉल <b>एथेनॉल (C₂H₅OH)</b> है, तो यह
+            <b>आयोडोफॉर्म परीक्षण</b> देता है और पीले रंग का आयोडोफॉर्म
+            (CHI₃) प्राप्त होता है। जबकि डाइएथिल ईथर आयोडोफॉर्म परीक्षण
+            नहीं देता है।
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1300 160"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="105" font-size="34">
+                    C₂H₅OH + I₂ + NaOH
+                </text>
+
+                <line x1="390" y1="80"
+                      x2="610" y2="80"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="610,80 595,71 595,89"
+                         fill="black"/>
+
+                <text x="500" y="48"
+                      text-anchor="middle"
+                      font-size="24">
+                    आयोडोफॉर्म परीक्षण
+                </text>
+
+                <text x="650" y="105" font-size="34">
+                    CHI₃↓ + अन्य उत्पाद
+                </text>
+
+            </svg>
+
+        </div>
+
+
+    </div>
+
+</div>
+  
+<!-- ETHER MCQs -->
+
+<div class="qa-box">
+
+    <div class="question">
+        प्रश्न: ईथर का सामान्य सूत्र क्या है?
+    </div>
+
+    <div class="answer">
+        <p>
+            <b>उत्तर:</b> R–O–R′
+        </p>
+    </div>
+
+</div>
+
+
+<div class="qa-box">
+
+    <div class="question">
+        प्रश्न: ईथर में कौन-सा बंध पाया जाता है?
+    </div>
+
+    <div class="answer">
+        <p>
+            <b>उत्तर:</b> ईथर बंध (C–O–C)
+        </p>
+    </div>
+
+</div>
+<!-- BOOTSTRAP JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- BASIC PROTECTION -->
+
+<script>
+
+    document.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+    });
+
+    document.addEventListener("selectstart", function (e) {
+        e.preventDefault();
+    });
+
+    document.addEventListener("copy", function (e) {
+        e.preventDefault();
+        alert("Copying content is not allowed");
+    });
+
+</script>
+```
+
+</body>
+
+</html>

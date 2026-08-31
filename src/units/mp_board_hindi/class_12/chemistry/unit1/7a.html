@@ -1,0 +1,2298 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | Biology Chapter 7</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    line-height:1.7;
+}
+
+/* NAVBAR */
+
+.navbar{
+    background:rgba(15,23,42,0.90);
+    backdrop-filter:blur(10px);
+    box-shadow:0 4px 18px rgba(0,0,0,.18);
+    padding:10px 0;
+}
+
+.navbar-brand{
+    font-size:30px;
+    font-weight:700;
+    color:white !important;
+}
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+
+/* NOTES CONTAINER */
+
+.notes-container{
+    max-width:900px;
+    margin:100px auto 50px;
+    padding:20px;
+}
+
+/* CHAPTER TITLE */
+
+.notes-title{
+    background:#e3f2fd;
+    color:#1565c0;
+    padding:15px 20px;
+    border-left:6px solid #1565c0;
+    border-radius:50px;
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:30px;
+    text-align:center;
+}
+
+/* QUESTION ANSWER BOX */
+
+.qa-box{
+    background:white;
+    padding:22px;
+    margin-bottom:18px;
+    border-radius:14px;
+    border-left:6px solid #1565c0;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    transition:.25s;
+}
+
+.qa-box:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.question{
+    font-weight:bold;
+    color:#1b3a57;
+    margin-bottom:10px;
+    font-size:19px;
+}
+
+.answer{
+    color:#2c3e50;
+    text-align:justify;
+}
+
+.answer ul,
+.answer ol{
+    margin-left:25px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+/* TABLE */
+
+.answer table{
+    width:100%;
+    border-collapse:collapse;
+    margin:12px 0;
+    background:#fff;
+    overflow-x:auto;
+}
+
+.answer table td,
+.answer table th{
+    border:1px solid #ddd;
+    padding:10px 12px;
+    text-align:left;
+    vertical-align:top;
+}
+
+.answer table th{
+    background:#eaf2fb;
+    font-weight:bold;
+    color:#1b3a57;
+}
+
+/* IMPORTANT POINT */
+
+.important{
+    background:#fff8e1;
+    border-left:5px solid #ffb300;
+    padding:12px 15px;
+    margin-top:12px;
+    border-radius:8px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .navbar-brand{
+        font-size:24px;
+    }
+
+    .notes-container{
+        margin-top:85px;
+        padding:12px;
+    }
+
+    .notes-title{
+        font-size:22px;
+        border-radius:20px;
+    }
+
+    .qa-box{
+        padding:17px;
+    }
+
+    .question{
+        font-size:17px;
+    }
+
+}
+
+.qa-box {
+    width: 100%;
+    max-width: 1000px;
+    margin: 15px auto;
+    box-sizing: border-box;
+}
+
+.question {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.answer {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.sub-heading {
+    font-size: 19px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.reaction-box {
+    width: 100%;
+    max-width: 1000px;
+    margin: 18px auto;
+    padding: 5px;
+    box-sizing: border-box;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.chemical-reaction {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* समीकरण के अक्षर */
+.chemical-reaction text {
+    font-family: Arial, "Noto Sans Devanagari", sans-serif;
+}
+
+/* मोबाइल स्क्रीन */
+@media (max-width: 600px) {
+
+    .reaction-box {
+        width: 100%;
+        padding: 2px;
+    }
+
+    .chemical-reaction {
+        min-width: 470px;
+    }
+
+    .question {
+        font-size: 19px;
+    }
+
+    .answer {
+        font-size: 17px;
+    }
+
+    .sub-heading {
+        font-size: 18px;
+    }
+}
+.reaction-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    width: 100%;
+    overflow-x: auto;
+    padding: 15px 5px;
+    box-sizing: border-box;
+}
+
+.vertical-reaction {
+    flex: 1 1 0;
+    min-width: 180px;
+    text-align: center;
+    font-size: clamp(16px, 3vw, 22px);
+    line-height: 1.5;
+}
+
+.vertical-reaction > div {
+    margin: 5px 0;
+}
+
+.arrow {
+    font-size: 25px;
+    line-height: 1;
+}
+
+.condition {
+    font-size: clamp(13px, 2.5vw, 17px);
+}
+
+@media (max-width: 600px) {
+    .reaction-container {
+        justify-content: flex-start;
+        gap: 12px;
+    }
+
+    .vertical-reaction {
+        min-width: 155px;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar fixed-top">
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+    पाल <span>स्टडी सेंटर</span>
+</a>
+
+</div>
+
+</nav>
+
+
+<!-- NOTES -->
+
+<div class="notes-container">
+
+<div class="notes-title">
+    📘 अध्याय 7 — प्राणियों में संरचनात्मक संगठन
+</div>
+
+<div class="qa-box">
+
+    <div class="question">
+        प्रश्न - अल्कोहल किसे कहते हैं? इनका वर्गीकरण दीजिए।
+    </div>
+
+    <div class="answer">
+
+        <p><b>उत्तर -</b></p>
+
+        <p>
+            वे कार्बनिक यौगिक जिनमें हाइड्रॉक्सिल समूह (–OH) सीधे किसी
+            संतृप्त कार्बन परमाणु (sp³-C) से जुड़ा हो, उन्हें
+            <b>अल्कोहल</b> कहते हैं।
+        </p>
+
+        <p class="formula">
+            सामान्य सूत्र: R–OH
+        </p>
+
+        <p>
+            <b>उदाहरण -</b> 
+      <p>CH₃OH (मैथिल एल्कोहॉल )
+        </p>
+      <p>
+            C₂H₅OH (एथिल एल्कोहॉल )
+      </p>
+
+        <p class="sub-heading">
+            अल्कोहल का वर्गीकरण
+        </p>
+
+        <p>
+         हाइड्रॉक्सिल समूह की संख्या के आधार पर
+        </p>
+
+        <p>
+            <b>(1) मोनोहाइड्रिक अल्कोहल -</b>
+            वे अल्कोहल जिनमें केवल एक –OH समूह होता है।
+        </p>
+
+        <p>
+            इनके –OH समूह वाले कार्बन की प्रकृति के आधार पर तीन प्रकार हैं—
+        </p>
+
+        <p>
+            <b>प्राथमिक अल्कोहल (1°) -</b>
+            –OH उस कार्बन से जुड़ा होता है जो केवल एक अन्य कार्बन से जुड़ा हो।
+        </p>
+
+        <p class="formula">
+            CH₃–CH₂–OH → एथेनॉल
+        </p>
+
+        <p>
+            <b>द्वितीयक अल्कोहल (2°) -</b>
+            –OH उस कार्बन से जुड़ा होता है जो दो अन्य कार्बनों से जुड़ा हो।
+        </p>
+
+        <p class="formula">
+            (CH₃)₂CH–OH → आइसोप्रोपानॉल
+        </p>
+
+        <p>
+            <b>तृतीयक अल्कोहल (3°) -</b>
+            –OH उस कार्बन से जुड़ा होता है जो तीन अन्य कार्बनों से जुड़ा हो।
+        </p>
+
+        <p class="formula">
+            (CH₃)₃C–OH → टर्ट-ब्यूटानॉल
+        </p>
+
+        <p>
+            <b>(2) डाइहाइड्रिक अल्कोहल -</b>
+            वे अल्कोहल जिनमें दो –OH समूह होते हैं।
+        </p>
+
+        <p class="formula">
+            HO–CH₂–CH₂–OH → एथिलीन ग्लाइकोल
+        </p>
+
+        <p>
+            <b>(3) ट्राइहाइड्रिक अल्कोहल -</b>
+            वे अल्कोहल जिनमें तीन –OH समूह होते हैं।
+        </p>
+
+        <p class="formula">
+            HO–CH₂–CHOH–CH₂–OH → ग्लिसरॉल
+        </p>
+
+    </div>
+
+</div>
+
+
+<div class="qa-box">
+
+    <div class="question">
+        प्रश्न - अल्कोहल का नामकरण समझाइए।
+    </div>
+
+    <div class="answer">
+
+        <p><b>उत्तर -</b></p>
+
+        <p>
+            <b>1. सामान्य नामकरण -</b>
+            इसमें अल्कोहल का नाम एल्किल समूह और 'अल्कोहल' शब्द से बनाया जाता है।
+        </p>
+
+        <p class="formula">
+            एल्किल + अल्कोहल
+        </p>
+
+        <p>
+            <b>उदाहरण -</b>
+        </p>
+
+        <p class="formula">
+            CH₃OH → मेथाइल अल्कोहल
+            <br>
+            C₂H₅OH → एथाइल अल्कोहल
+        </p>
+
+        <p>
+            <b>2. IUPAC नामकरण -</b>
+            अल्कोहल के IUPAC नामकरण में निम्न चरण अपनाए जाते हैं—
+        </p>
+
+        <p>
+            1. सबसे लंबी कार्बन श्रृंखला चुनते हैं जिसमें –OH समूह उपस्थित हो।
+        </p>
+
+        <p>
+            2. गिनती उस सिरे से करते हैं जिससे –OH समूह को सबसे छोटा स्थान मिले।
+        </p>
+
+        <p>
+            3. मूल हाइड्रोकार्बन के नाम में अंतिम <b>–e</b> हटाकर
+            <b>–ol</b> जोड़ा जाता है।
+        </p>
+
+        <p>
+            4. एक से अधिक –OH समूह होने पर <b>diol, triol</b> आदि प्रत्यय लगाए जाते हैं।
+        </p>
+
+        <p>
+            <b>उदाहरण -</b>
+        </p>
+
+        <p class="formula">
+            CH₃OH → मिथेनॉल
+            <br>
+            C₂H₅OH → एथेनॉल
+        </p>
+
+    </div>
+
+</div>
+
+<div class="qa-box">
+
+    <div class="question">
+        प्रश्न - अल्कोहल यौगिकों में कौन-कौन सी विभिन्न प्रकार की समावयवता पाई जाती है? उदाहरण दीजिए।
+    </div>
+
+    <div class="answer">
+
+        <p><b>उत्तर -</b></p>
+
+        <p>
+            अल्कोहल यौगिकों में मुख्यतः निम्नलिखित प्रकार की समावयवता पाई जाती है—
+        </p>
+
+        <p>
+            <b>1. श्रृंखला समावयवता -</b>
+            कार्बन श्रृंखला की संरचना अलग होने पर श्रृंखला समावयवता होती है।
+        </p>
+
+        <p class="formula">
+            C₄H₉OH → CH₃–CH₂–CH₂–CH₂OH
+            <br>
+            CH₃–CH(CH₃)–CH₂OH
+        </p>
+
+        <p>
+            <b>2. स्थान समावयवता -</b>
+            कार्बन श्रृंखला समान हो, लेकिन –OH समूह का स्थान अलग हो।
+        </p>
+
+        <p class="formula">
+            CH₃–CH₂–CH₂OH → प्रोपेन-1-ऑल
+            <br>
+            CH₃–CHOH–CH₃ → प्रोपेन-2-ऑल
+        </p>
+
+        <p>
+            <b>3. क्रियात्मक समूह समावयवता -</b>
+            समान आणविक सूत्र लेकिन भिन्न क्रियात्मक समूह होने पर यह समावयवता होती है।
+        </p>
+
+        <p class="formula">
+            C₂H₆O:
+            &nbsp; CH₃CH₂OH → एथेनॉल
+            <br>
+            CH₃–O–CH₃ → डाइमेथाइल ईथर
+        </p>
+
+        <p>
+            अतः अल्कोहल में मुख्यतः <b>श्रृंखला, स्थान तथा क्रियात्मक समूह समावयवता</b>
+            पाई जाती है।
+        </p>
+
+    </div>
+
+</div>
+  <div class="qa-box">
+
+    <div class="question">
+        प्रश्न - अल्कोहल बनाने की सामान्य विधियाँ लिखिए।
+    </div>
+
+    <div class="answer">
+
+        <p><b>उत्तर -</b></p>
+
+        <p>
+            अल्कोहल बनाने की सामान्य विधियाँ निम्नलिखित हैं—
+        </p>
+
+
+        <!-- विधि 1 -->
+        <p class="sub-heading">
+            1. एल्कीन से
+        </p>
+
+        <p>
+            एल्कीन में जल का योग कराने पर अल्कोहल प्राप्त होता है।
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction"
+                 viewBox="0 0 900 190"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="35" y="110" font-size="30">
+                    CH₂=CH₂ + H₂O
+                </text>
+
+                <line x1="280" y1="88"
+                      x2="440" y2="88"
+                      stroke="black"
+                      stroke-width="2.8"/>
+
+                <polygon points="440,88 426,80 426,96"
+                         fill="black"/>
+
+                <text x="360" y="55"
+                      text-anchor="middle"
+                      font-size="22">
+                    H₂SO₄
+                </text>
+
+                <text x="480" y="110" font-size="30">
+                    CH₃–CH₂–OH
+                </text>
+
+            </svg>
+        </div>
+
+
+        <!-- विधि 2 -->
+        <p class="sub-heading">
+            2. ऐल्किल हैलाइड से
+        </p>
+
+        <p>
+            ऐल्किल हैलाइड को जलीय KOH से अभिक्रिया कराने पर अल्कोहल प्राप्त होता है।
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction"
+                 viewBox="0 0 950 190"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="25" y="110" font-size="30">
+                    CH₃–CH₂–Br + KOH(aq)
+                </text>
+
+                <line x1="350" y1="88"
+                      x2="500" y2="88"
+                      stroke="black"
+                      stroke-width="2.8"/>
+
+                <polygon points="500,88 486,80 486,96"
+                         fill="black"/>
+
+                <text x="530" y="110" font-size="30">
+                    CH₃–CH₂–OH + KBr
+                </text>
+
+            </svg>
+        </div>
+
+
+        <!-- विधि 3 -->
+        <p class="sub-heading">
+            3. ऐल्डिहाइड और कीटोन के अपचयन से
+        </p>
+
+        <p>
+            ऐल्डिहाइड के अपचयन से प्राथमिक तथा कीटोन के अपचयन से
+            द्वितीयक अल्कोहल प्राप्त होता है।
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1050 300"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <!-- ऐल्डिहाइड -->
+                <text x="25" y="80" font-size="30">
+                    CH₃–CHO + 2[H]
+                </text>
+
+                <line x1="280" y1="58"
+                      x2="460" y2="58"
+                      stroke="black"
+                      stroke-width="2.8"/>
+
+                <polygon points="460,58 446,50 446,66"
+                         fill="black"/>
+
+                <text x="370" y="30"
+                      text-anchor="middle"
+                      font-size="21">
+                    LiAlH₄ / NaBH₄
+                </text>
+
+                <text x="495" y="80" font-size="30">
+                    CH₃–CH₂OH
+                </text>
+
+
+                <!-- कीटोन -->
+                <text x="25" y="210" font-size="30">
+                    CH₃–CO–CH₃ + 2[H]
+                </text>
+
+                <line x1="330" y1="188"
+                      x2="510" y2="188"
+                      stroke="black"
+                      stroke-width="2.8"/>
+
+                <polygon points="510,188 496,180 496,196"
+                         fill="black"/>
+
+                <text x="420" y="160"
+                      text-anchor="middle"
+                      font-size="21">
+                    LiAlH₄ / NaBH₄
+                </text>
+
+                <text x="545" y="210" font-size="30">
+                    CH₃–CHOH–CH₃
+                </text>
+
+            </svg>
+        </div>
+
+
+        <!-- विधि 4 -->
+        <p class="sub-heading">
+            4. एस्टर के अपचयन से
+        </p>
+
+        <p>
+            एस्टर के अपचयन से दो अल्कोहल प्राप्त होते हैं।
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction"
+                 viewBox="0 0 950 190"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="25" y="110" font-size="30">
+                    CH₃–COOCH₃ + 4[H]
+                </text>
+
+                <line x1="315" y1="88"
+                      x2="470" y2="88"
+                      stroke="black"
+                      stroke-width="2.8"/>
+
+                <polygon points="470,88 456,80 456,96"
+                         fill="black"/>
+
+                <text x="392" y="55"
+                      text-anchor="middle"
+                      font-size="22">
+                    LiAlH₄
+                </text>
+
+                <text x="505" y="110" font-size="30">
+                    CH₃–CH₂OH + CH₃OH
+                </text>
+
+            </svg>
+        </div>
+
+
+        <!-- विधि 5 -->
+        <p class="sub-heading">
+            5. ग्लूकोज़ के किण्वन से
+        </p>
+
+        <p>
+            ग्लूकोज़ को यीस्ट की उपस्थिति में किण्वित करने पर एथेनॉल प्राप्त होता है।
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction"
+                 viewBox="0 0 950 190"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="35" y="110" font-size="30">
+                    C₆H₁₂O₆
+                </text>
+
+                <line x1="190" y1="88"
+                      x2="400" y2="88"
+                      stroke="black"
+                      stroke-width="2.8"/>
+
+                <polygon points="400,88 386,80 386,96"
+                         fill="black"/>
+
+                <text x="295" y="55"
+                      text-anchor="middle"
+                      font-size="22">
+                    यीस्ट
+                </text>
+
+                <text x="445" y="110" font-size="30">
+                    2CH₃–CH₂OH + 2CO₂
+                </text>
+
+            </svg>
+        </div>
+
+
+        <!-- विधि 6 -->
+        <p class="sub-heading">
+            6. ग्रिग्नार्ड अभिकर्मक से
+        </p>
+
+        <p>
+            ग्रिग्नार्ड अभिकर्मक (RMgX) की फॉर्मल्डिहाइड, ऐल्डिहाइड
+            या कीटोन से अभिक्रिया तथा जल अपघटन द्वारा विभिन्न अल्कोहल
+            प्राप्त होते हैं।
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction"
+                 viewBox="0 0 950 190"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="35" y="110" font-size="30">
+                    HCHO + CH₃MgX
+                </text>
+
+                <line x1="280" y1="88"
+                      x2="440" y2="88"
+                      stroke="black"
+                      stroke-width="2.8"/>
+
+                <polygon points="440,88 426,80 426,96"
+                         fill="black"/>
+
+                <text x="360" y="55"
+                      text-anchor="middle"
+                      font-size="22">
+                    H₂O
+                </text>
+
+                <text x="485" y="110" font-size="30">
+                    CH₃–CH₂OH
+                </text>
+
+            </svg>
+        </div>
+
+
+        <!-- विधि 7 -->
+        <p class="sub-heading">
+            7. हाइड्रोबोरेशन–ऑक्सीकरण अभिक्रिया
+        </p>
+
+        <p>
+            एल्कीन को पहले BH₃ से हाइड्रोबोरेशन तथा फिर क्षारीय माध्यम में
+            H₂O₂ से ऑक्सीकरण करने पर अल्कोहल प्राप्त होता है।
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1000 200"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="30" y="120" font-size="30">
+                    R–CH=CH₂
+                </text>
+
+                <line x1="200" y1="98"
+                      x2="520" y2="98"
+                      stroke="black"
+                      stroke-width="2.8"/>
+
+                <polygon points="520,98 506,90 506,106"
+                         fill="black"/>
+
+                <text x="360" y="55"
+                      text-anchor="middle"
+                      font-size="21">
+                    1. BH₃/THF
+                </text>
+
+                <text x="360" y="82"
+                      text-anchor="middle"
+                      font-size="21">
+                    2. H₂O₂/OH⁻
+                </text>
+
+                <text x="560" y="120" font-size="30">
+                    R–CH₂–CH₂OH
+                </text>
+
+            </svg>
+        </div>
+
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        प्रश्न - अल्कोहल के भौतिक गुण लिखिए।
+    </div>
+
+    <div class="answer">
+
+        <p><b>उत्तर -</b></p>
+
+        <p>
+            1. निम्न सदस्य सामान्यतः रंगहीन द्रव होते हैं, जबकि उच्च सदस्य
+            ठोस हो सकते हैं।
+        </p>
+
+        <p>
+            2. निम्न अणुभार वाले अल्कोहल जल में घुलनशील होते हैं। अणुभार
+            बढ़ने पर जल में घुलनशीलता घटती है।
+        </p>
+
+        <p>
+            3. अल्कोहल के क्वथनांक समान अणुभार वाले हाइड्रोकार्बनों की तुलना
+            में अधिक होते हैं, क्योंकि इनमें हाइड्रोजन बंध पाए जाते हैं।
+        </p>
+
+        <p>
+            4. अल्कोहल का गलनांक और क्वथनांक सामान्यतः अणुभार बढ़ने पर बढ़ता है।
+        </p>
+
+        <p>
+            5. अल्कोहल ध्रुवीय यौगिक होते हैं तथा इनके अणुओं के बीच
+            हाइड्रोजन बंध पाए जाते हैं।
+        </p>
+
+        <p>
+            6. निम्न अल्कोहल की गंध विशिष्ट होती है और उच्च अल्कोहल की
+            गंध अपेक्षाकृत कम तीव्र होती है।
+        </p>
+
+    </div>
+
+</div>
+  <div class="qa-box">
+
+    <!-- प्रश्न 1 -->
+    <div class="question">
+        प्रश्न - प्रोपेनॉल का क्वथनांक संगत ऐल्केन से अधिक होता है, क्यों?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            प्रोपेनॉल के अणुओं के बीच <b>अंतराआण्विक हाइड्रोजन बंध</b>
+            पाए जाते हैं। इसके कारण प्रोपेनॉल के अणुओं में संगुणन होता है।
+            अतः अणुओं को अलग करने के लिए अधिक ऊर्जा की आवश्यकता होती है।
+            इसलिए इसका क्वथनांक संगत ऐल्केन से अधिक होता है।
+        </p>
+</div>
+  </div>
+  <div class="qa-box">
+
+        <!-- प्रश्न 2 -->
+        <div class="question">
+            प्रश्न - ऐल्कोहॉल के क्वथनांक ईथर के क्वथनांक से उच्च होते हैं, क्यों?
+        </div>
+
+        <p>
+            ऐल्कोहॉल के अणु आपस में <b>हाइड्रोजन बंधों</b> द्वारा संगुणित होते हैं।
+            अतः इन अणुओं को अलग करने के लिए अधिक ऊर्जा की आवश्यकता होती है।
+        </p>
+
+        <p>
+            ईथर के अणु आपस में हाइड्रोजन बंध नहीं बनाते हैं। अतः उनके
+            क्वथनांक ऐल्कोहॉलों की अपेक्षा कम होते हैं।
+        </p>
+    </div>
+</div>
+
+ <div class="qa-box">
+
+    <div class="question">
+        प्रश्न: अल्कोहल के रासायनिक गुणों का वर्णन कीजिए।
+    </div>
+
+    <div class="answer">
+
+        <p><b>(A) R–O–H बंध के कारण होने वाली अभिक्रियाएँ (अम्लीय स्वभाव)</b></p>
+
+        <p><b>1. सोडियम के साथ अभिक्रिया:</b></p>
+        <p>
+            अल्कोहल सोडियम तथा पोटैशियम जैसी सक्रिय धातुओं के साथ
+            अभिक्रिया करके अल्कॉक्साइड बनाते हैं तथा हाइड्रोजन गैस
+            निकलती है।
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction" viewBox="0 0 950 150"
+                 preserveAspectRatio="xMidYMid meet">
+                <text x="30" y="95" font-size="30">
+                    2CH₃–CH₂–OH + 2Na
+                </text>
+                <line x1="430" y1="75" x2="555" y2="75"
+                      stroke="black" stroke-width="2.8"/>
+                <polygon points="555,75 541,67 541,83" fill="black"/>
+                <text x="585" y="95" font-size="30">
+                    2CH₃–CH₂–ONa + H₂↑
+                </text>
+            </svg>
+        </div>
+
+        <p><b>2. धातु ऑक्साइडों के साथ अभिक्रिया:</b></p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction" viewBox="0 0 950 150"
+                 preserveAspectRatio="xMidYMid meet">
+                <text x="40" y="95" font-size="30">
+                    2CH₃–OH + Na₂O
+                </text>
+                <line x1="390" y1="75" x2="515" y2="75"
+                      stroke="black" stroke-width="2.8"/>
+                <polygon points="515,75 501,67 501,83" fill="black"/>
+                <text x="545" y="95" font-size="30">
+                    2CH₃–ONa + H₂O
+                </text>
+            </svg>
+        </div>
+
+        <p>
+            ये अभिक्रियाएँ अल्कोहल के <b>अम्लीय स्वभाव</b> को प्रदर्शित करती हैं।
+        </p>
+
+        <p><b>3. एस्टरीकरण:</b></p>
+        <p>
+            अल्कोहल, सांद्र H₂SO₄ की उपस्थिति में कार्बोक्सिलिक अम्लों
+            के साथ अभिक्रिया करके एस्टर बनाते हैं।
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction" viewBox="0 0 1100 170"
+                 preserveAspectRatio="xMidYMid meet">
+                <text x="20" y="110" font-size="28">
+                    CH₃–CH₂–OH + CH₃–COOH
+                </text>
+                <line x1="430" y1="90" x2="625" y2="90"
+                      stroke="black" stroke-width="2.8"/>
+                <polygon points="625,90 611,82 611,98" fill="black"/>
+                <text x="527" y="58" text-anchor="middle" font-size="21">
+                    H₂SO₄
+                </text>
+                <text x="655" y="110" font-size="28">
+                    CH₃–COO–CH₂–CH₃ + H₂O
+                </text>
+            </svg>
+        </div>
+
+        <p><b>4. ऐसीलीकरण:</b></p>
+        <p>
+            अल्कोहल, अम्ल क्लोराइड अथवा अम्ल ऐनहाइड्राइड के साथ अभिक्रिया
+            करके एस्टर बनाते हैं।
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction" viewBox="0 0 1000 150"
+                 preserveAspectRatio="xMidYMid meet">
+                <text x="30" y="95" font-size="28">
+                    CH₃–CH₂–OH + CH₃–COCl
+                </text>
+                <line x1="455" y1="75" x2="575" y2="75"
+                      stroke="black" stroke-width="2.8"/>
+                <polygon points="575,75 561,67 561,83" fill="black"/>
+                <text x="610" y="95" font-size="28">
+                    CH₃–COO–CH₂–CH₃ + HCl
+                </text>
+            </svg>
+        </div>
+
+        <p><b>5. ग्रीगनार्ड अभिकर्मक के साथ अभिक्रिया:</b></p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction" viewBox="0 0 1000 150"
+                 preserveAspectRatio="xMidYMid meet">
+                <text x="25" y="95" font-size="28">
+                    CH₃–CH₂–OH + CH₃–MgBr
+                </text>
+                <line x1="430" y1="75" x2="555" y2="75"
+                      stroke="black" stroke-width="2.8"/>
+                <polygon points="555,75 541,67 541,83" fill="black"/>
+                <text x="585" y="95" font-size="28">
+                    CH₃–CH₂–OMgBr + CH₄
+                </text>
+            </svg>
+        </div>
+
+        <p><b>(B) R–OH बंध के कारण होने वाली अभिक्रियाएँ</b></p>
+
+        <p><b>1. PCl₅ के साथ अभिक्रिया:</b></p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction" viewBox="0 0 1050 150"
+                 preserveAspectRatio="xMidYMid meet">
+                <text x="20" y="95" font-size="27">
+                    CH₃–CH₂–OH + PCl₅
+                </text>
+                <line x1="385" y1="75" x2="510" y2="75"
+                      stroke="black" stroke-width="2.8"/>
+                <polygon points="510,75 496,67 496,83" fill="black"/>
+                <text x="540" y="95" font-size="27">
+                    CH₃–CH₂–Cl + POCl₃ + HCl
+                </text>
+            </svg>
+        </div>
+
+        <p><b>2. PCl₃ के साथ अभिक्रिया:</b></p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction" viewBox="0 0 1050 150"
+                 preserveAspectRatio="xMidYMid meet">
+                <text x="20" y="95" font-size="27">
+                    3CH₃–CH₂–OH + PCl₃
+                </text>
+                <line x1="430" y1="75" x2="555" y2="75"
+                      stroke="black" stroke-width="2.8"/>
+                <polygon points="555,75 541,67 541,83" fill="black"/>
+                <text x="585" y="95" font-size="27">
+                    3CH₃–CH₂–Cl + H₃PO₃
+                </text>
+            </svg>
+        </div>
+
+        <p><b>3. थायोनिल क्लोराइड के साथ अभिक्रिया:</b></p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction" viewBox="0 0 1050 150"
+                 preserveAspectRatio="xMidYMid meet">
+                <text x="20" y="95" font-size="27">
+                    CH₃–CH₂–OH + SOCl₂
+                </text>
+                <line x1="400" y1="75" x2="525" y2="75"
+                      stroke="black" stroke-width="2.8"/>
+                <polygon points="525,75 511,67 511,83" fill="black"/>
+                <text x="555" y="95" font-size="27">
+                    CH₃–CH₂–Cl + SO₂ + HCl
+                </text>
+            </svg>
+        </div>
+
+        <p><b>4. अमोनिया के साथ अभिक्रिया:</b></p>
+
+        <p>
+            अल्कोहल और अमोनिया के वाष्पों को गर्म Al₂O₃ के ऊपर प्रवाहित
+            करने पर प्राथमिक, द्वितीयक तथा तृतीयक अमीन प्राप्त होते हैं।
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction" viewBox="0 0 1050 150"
+                 preserveAspectRatio="xMidYMid meet">
+                <text x="30" y="100" font-size="28">
+                    CH₃OH + NH₃
+                </text>
+                <line x1="300" y1="78" x2="480" y2="78"
+                      stroke="black" stroke-width="2.8"/>
+                <polygon points="480,78 466,70 466,86" fill="black"/>
+                <text x="390" y="48" text-anchor="middle" font-size="20">
+                    Al₂O₃ / 630 K
+                </text>
+                <text x="515" y="100" font-size="28">
+                    CH₃NH₂ + H₂O
+                </text>
+            </svg>
+        </div>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction" viewBox="0 0 900 130"
+                 preserveAspectRatio="xMidYMid meet">
+                <text x="30" y="85" font-size="27">
+                    2CH₃OH + NH₃
+                </text>
+                <line x1="310" y1="65" x2="440" y2="65"
+                      stroke="black" stroke-width="2.8"/>
+                <polygon points="440,65 426,57 426,73" fill="black"/>
+                <text x="475" y="85" font-size="27">
+                    (CH₃)₂NH + 2H₂O
+                </text>
+            </svg>
+        </div>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction" viewBox="0 0 900 130"
+                 preserveAspectRatio="xMidYMid meet">
+                <text x="30" y="85" font-size="27">
+                    3CH₃OH + NH₃
+                </text>
+                <line x1="310" y1="65" x2="440" y2="65"
+                      stroke="black" stroke-width="2.8"/>
+                <polygon points="440,65 426,57 426,73" fill="black"/>
+                <text x="475" y="85" font-size="27">
+                    (CH₃)₃N + 3H₂O
+                </text>
+            </svg>
+        </div>
+
+        <p><b>5. हाइड्रोजन हैलाइडों के साथ अभिक्रिया:</b></p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction" viewBox="0 0 750 130"
+                 preserveAspectRatio="xMidYMid meet">
+                <text x="30" y="85" font-size="28">
+                    R–OH + HX
+                </text>
+                <line x1="220" y1="65" x2="350" y2="65"
+                      stroke="black" stroke-width="2.8"/>
+                <polygon points="350,65 336,57 336,73" fill="black"/>
+                <text x="385" y="85" font-size="28">
+                    R–X + H₂O
+                </text>
+            </svg>
+        </div>
+
+        <p>
+            हैलोजन अम्लों की अभिक्रियाशीलता का क्रम:
+            <b>HI &gt; HBr &gt; HCl</b>
+        </p>
+
+        <p>
+            अल्कोहलों की अभिक्रियाशीलता का क्रम:
+            <b>तृतीयक &gt; द्वितीयक &gt; प्राथमिक</b>
+        </p>
+
+    </div>
+
+</div>
+  <div class="qa-box">
+
+    <div class="question">
+        प्रश्न: प्राथमिक, द्वितीयक तथा तृतीयक अल्कोहल में भेद करने की
+        कौन-कौन सी विधियाँ हैं?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            प्राथमिक, द्वितीयक तथा तृतीयक अल्कोहल में भेद करने की
+            निम्नलिखित प्रमुख विधियाँ हैं—
+        </p>
+
+        <ol>
+            <li><b>लुकास परीक्षण</b></li>
+            <li><b>विक्टर-मेयर परीक्षण</b></li>
+            <li><b>ऑक्सीकरण परीक्षण</b></li>
+            <li><b>डिहाइड्रोजनीकरण परीक्षण</b></li>
+        </ol>
+
+    </div>
+
+  </div>
+
+<div class="qa-box">
+
+    <div class="question">
+        प्रश्न: लुकास अभिकर्मक क्या है? लुकास परीक्षण लिखिए।
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>लुकास अभिकर्मक:</b> सान्द्र HCl तथा निर्जल ZnCl₂ का मिश्रण
+            <b>लुकास अभिकर्मक</b> कहलाता है।
+        </p>
+
+        <p>
+          <p><b>लुकास परीक्षण:</b></p>
+
+            <p>अल्कोहल में लुकास अभिकर्मक मिलाने पर एल्किल हैलाइड का 
+           धुंधलापन उत्पन्न होता है।
+        </p>
+<p><b>अभिक्रिया:</b></p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction"
+                 viewBox="0 0 800 150"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="30" y="95" font-size="30">
+                    R–OH + HCl
+                </text>
+
+                <line x1="235" y1="75"
+                      x2="400" y2="75"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="400,75 385,66 385,84"
+                         fill="black"/>
+
+                <text x="317" y="48"
+                      text-anchor="middle"
+                      font-size="22">
+                    ZnCl₂
+                </text>
+
+                <text x="435" y="95" font-size="30">
+                    R–Cl + H₂O
+                </text>
+
+            </svg>
+        </div>
+
+<ul>
+    <li>
+        <b>तृतीयक (3°) अल्कोहल</b> — तुरंत धुंधलापन उत्पन्न होता है।
+    </li>
+
+    <li>
+        <b>द्वितीयक (2°) अल्कोहल</b> — कुछ मिनट बाद धुंधलापन उत्पन्न होता है।
+    </li>
+
+    <li>
+        <b>प्राथमिक (1°) अल्कोहल</b> — सामान्य ताप पर बहुत देर से
+        धुंधलापन उत्पन्न होता है।
+    </li>
+</ul>
+        <p>
+            अतः लुकास परीक्षण द्वारा प्राथमिक, द्वितीयक तथा तृतीयक
+            अल्कोहल की पहचान की जाती है।
+        </p>
+
+    
+    </div>
+
+</div>
+
+<div class="qa-box">
+  
+   <div class="question">
+        प्रश्न: विक्टर मेयर विधि द्वारा प्राथमिक, द्वितीयक तथा तृतीयक
+        अल्कोहल में अंतर कैसे किया जाता है?
+    </div>
+
+    <div class="answer">
+
+        <p>
+           विक्टर मेयर विधि प्राथमिक (1°), द्वितीयक (2°) और तृतीयक (3°) अल्कोहल में अंतर करने की एक रासायनिक परीक्षण विधि है। </p>
+     <p> इस विधि में अल्कोहल को पहले PI₃ की अभिक्रिया से आयोडोऐल्केन में और फिर AgNO₂ की अभिक्रिया से 
+            नाइट्रोऐल्केन में परिवर्तित किया जाता है। नाइट्रोऐल्केन को
+            नाइट्रस अम्ल तथा क्षार से अभिक्रिया कराने पर अलग-अलग रंग
+            प्राप्त होते हैं।
+        </p>
+
+        <ul>
+            <li>
+                <b>प्राथमिक (1°) अल्कोहल:</b> लाल रंग देता है।
+            </li>
+
+            <li>
+                <b>द्वितीयक (2°) अल्कोहल:</b> नीला रंग देता है।
+            </li>
+
+            <li>
+                <b>तृतीयक (3°) अल्कोहल:</b> कोई रंग उत्पन्न नहीं करता।
+            </li>
+        </ul>
+
+        <p>
+            अतः प्राप्त रंग के आधार पर अल्कोहल की प्रकृति की पहचान की जा सकती है।
+        </p>
+
+    </div>
+  
+<div class="reaction-container">
+
+    <!-- प्राथमिक -->
+    <div class="vertical-reaction">
+      
+        <b>प्राथमिक (1°)</b>
+
+        <div>R–CH₂OH</div>
+        <div class="arrow">↓</div>
+        <div class="condition">PI₃</div>
+        <div class="arrow">↓</div>
+        <div>R–CH₂I</div>
+        <div class="arrow">↓</div>
+        <div class="condition">AgNO₂</div>
+        <div class="arrow">↓</div>
+        <div>R–CH₂NO₂</div>
+        <div class="arrow">↓</div>
+        <div class="condition">HNO₂ / NaOH</div>
+        <div class="arrow">↓</div>
+        <div><b>लाल रंग</b></div>
+    </div>
+
+
+    <!-- द्वितीयक -->
+    <div class="vertical-reaction">
+        <b>द्वितीयक (2°)</b>
+
+        <div>R₂CHOH</div>
+        <div class="arrow">↓</div>
+        <div class="condition">PI₃</div>
+        <div class="arrow">↓</div>
+        <div>R₂CHI</div>
+        <div class="arrow">↓</div>
+        <div class="condition">AgNO₂</div>
+        <div class="arrow">↓</div>
+        <div>R₂CHNO₂</div>
+        <div class="arrow">↓</div>
+        <div class="condition">HNO₂ / NaOH</div>
+        <div class="arrow">↓</div>
+        <div><b>नीला रंग</b></div>
+    </div>
+
+
+    <!-- तृतीयक -->
+    <div class="vertical-reaction">
+        <b>तृतीयक (3°)</b>
+
+        <div>R₃COH</div>
+        <div class="arrow">↓</div>
+        <div class="condition">PI₃</div>
+        <div class="arrow">↓</div>
+        <div>R₃CI</div>
+        <div class="arrow">↓</div>
+        <div class="condition">AgNO₂</div>
+        <div class="arrow">↓</div>
+        <div>R₃CNO₂</div>
+        <div class="arrow">↓</div>
+        <div class="condition">HNO₂ / NaOH</div>
+        <div class="arrow">↓</div>
+        <div><b>रंग नहीं</b></div>
+    </div>
+
+</div>
+
+</div>
+
+<div class="qa-box">
+
+    <div class="question">
+        प्रश्न: ऑक्सीकरण विधि द्वारा प्राथमिक, द्वितीयक तथा तृतीयक
+        ऐल्कोहॉल में अंतर स्पष्ट कीजिए। उपयुक्त रासायनिक समीकरण दीजिए।
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>(3) ऑक्सीकरण:</b> भिन्न-भिन्न ऐल्कोहॉल ऑक्सीकरण पर
+            भिन्न-भिन्न उत्पाद देते हैं। इसी आधार पर प्राथमिक, द्वितीयक
+            तथा तृतीयक ऐल्कोहॉल में अंतर किया जा सकता है।
+        </p>
+
+        <p>
+            <b>प्राथमिक ऐल्कोहॉल (1°):</b>
+            प्राथमिक ऐल्कोहॉल K₂Cr₂O₇ द्वारा आसानी से ऑक्सीकृत होकर
+            पहले ऐल्डिहाइड और फिर कार्बोक्सिलिक अम्ल देते हैं।
+      </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1000 150"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="25" y="95" font-size="30">
+                    CH₃–CH₂OH + [O]
+                </text>
+
+                <line x1="300" y1="75"
+                      x2="470" y2="75"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="470,75 455,66 455,84"
+                         fill="black"/>
+
+                <text x="385" y="48"
+                      text-anchor="middle"
+                      font-size="21">
+                    K₂Cr₂O₇ / H⁺
+                </text>
+
+                <text x="510" y="95" font-size="30">
+                    CH₃–CHO + H₂O
+                </text>
+
+            </svg>
+        </div>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction"
+                 viewBox="0 0 800 150"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="30" y="95" font-size="30">
+                    CH₃–CHO + [O]
+                </text>
+
+                <line x1="270" y1="75"
+                      x2="450" y2="75"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="450,75 435,66 435,84"
+                         fill="black"/>
+
+                <text x="360" y="48"
+                      text-anchor="middle"
+                      font-size="21">
+                    K₂Cr₂O₇ / H⁺
+                </text>
+
+                <text x="490" y="95" font-size="30">
+                    CH₃–COOH
+                </text>
+
+            </svg>
+        </div>
+
+
+        <p>
+            <b>द्वितीयक ऐल्कोहॉल (2°):</b>
+            द्वितीयक ऐल्कोहॉल K₂Cr₂O₇ द्वारा ऑक्सीकरण पर पहले कीटोन देते हैं। कीटोन सामान्य परिस्थितियों में
+            K₂Cr₂O₇ से आसानी से ऑक्सीकृत नहीं होते।
+        </p>
+
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction"
+                 viewBox="0 0 850 150"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="25" y="95" font-size="30">
+                    (CH₃)₂CH–OH + [O]
+                </text>
+
+                <line x1="270" y1="75"
+                      x2="450" y2="75"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="450,75 435,66 435,84"
+                         fill="black"/>
+
+                <text x="360" y="48"
+                      text-anchor="middle"
+                      font-size="21">
+                    K₂Cr₂O₇ / H⁺
+                </text>
+
+                <text x="490" y="95" font-size="30">
+                    CH₃–CO–CH₃
+                </text>
+
+            </svg>
+        </div>
+
+
+        <p>
+            <b>तृतीयक ऐल्कोहॉल (3°):</b>
+            तृतीयक ऐल्कोहॉल में सामान्य परिस्थितियों में
+            K₂Cr₂O₇ से आसानी से ऑक्सीकृत नहीं होते।
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction"
+                 viewBox="0 0 850 150"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="25" y="95" font-size="30">
+                    (CH₃)₃C–OH + [O]
+                </text>
+
+                <line x1="250" y1="75"
+                      x2="450" y2="75"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="450,75 435,66 435,84"
+                         fill="black"/>
+
+                <text x="350" y="48"
+                      text-anchor="middle"
+                      font-size="21">
+                    K₂Cr₂O₇ / H⁺
+                </text>
+
+                <text x="485" y="95" font-size="30">
+                    सामान्य दशाओं में ऑक्सीकरण नहीं
+                </text>
+
+            </svg>
+        </div>
+
+    </div>
+
+</div>
+
+  <div class="qa-box">
+
+    <div class="question">
+        प्रश्न: ऐल्कोहॉलों के विहाइड्रोजनीकरण से क्या समझते हैं?
+        प्राथमिक, द्वितीयक तथा तृतीयक ऐल्कोहॉल के विहाइड्रोजनीकरण की
+        अभिक्रियाएँ लिखिए।
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>विहाइड्रोजनीकरण:</b> ऐल्कोहॉल की वाष्प को लगभग
+            <b>570 K</b> ताप पर गर्म करने पर वह हाइड्रोजन का एक अणु
+            खो देती है। इस प्रक्रिया को <b>विहाइड्रोजनीकरण</b> कहते हैं।
+            भिन्न-भिन्न ऐल्कोहॉल विहाइड्रोजनीकरण पर भिन्न-भिन्न उत्पाद देते हैं।
+        </p>
+
+        <p><b>प्राथमिक ऐल्कोहॉल:</b> प्राथमिक ऐल्कोहॉल विहाइड्रोजनीकरण पर
+        ऐल्डिहाइड देते हैं।</p>
+<!-- प्राथमिक ऐल्कोहॉल -->
+<div class="reaction-box">
+    <svg class="chemical-reaction"
+         viewBox="0 0 900 150"
+         preserveAspectRatio="xMidYMid meet">
+
+        <text x="30" y="95" font-size="30">
+            CH₃–CH₂–OH
+        </text>
+
+        <line x1="240" y1="75"
+              x2="430" y2="75"
+              stroke="black"
+              stroke-width="3"/>
+
+        <polygon points="430,75 415,66 415,84"
+                 fill="black"/>
+
+        <text x="335" y="48"
+              text-anchor="middle"
+              font-size="21">
+            Cu / 300°C
+        </text>
+
+        <text x="470" y="95" font-size="30">
+            CH₃–CHO + H₂
+        </text>
+
+    </svg>
+</div>
+
+
+<!-- द्वितीयक ऐल्कोहॉल -->
+<p><b>द्वितीयक ऐल्कोहॉल:</b> द्वितीयक ऐल्कोहॉल विहाइड्रोजनीकरण पर
+        कीटोन देते हैं।</p>      
+<div class="reaction-box">
+    <svg class="chemical-reaction"
+         viewBox="0 0 900 150"
+         preserveAspectRatio="xMidYMid meet">
+
+        <text x="30" y="95" font-size="30">
+            (CH₃)₂CH–OH
+        </text>
+
+        <line x1="260" y1="75"
+              x2="450" y2="75"
+              stroke="black"
+              stroke-width="3"/>
+
+        <polygon points="450,75 435,66 435,84"
+                 fill="black"/>
+
+        <text x="355" y="48"
+              text-anchor="middle"
+              font-size="21">
+            Cu / 300°C
+        </text>
+
+        <text x="490" y="95" font-size="30">
+            CH₃–CO–CH₃ + H₂
+        </text>
+
+    </svg>
+</div>
+
+
+<!-- तृतीयक ऐल्कोहॉल -->
+      <p><b>तृतीयक ऐल्कोहॉल:</b> तृतीयक ऐल्कोहॉल में सामान्य
+        विहाइड्रोजनीकरण के बजाय उच्च ताप पर निर्जलीकरण होकर ऐल्कीन बनता है।
+      </p>
+<div class="reaction-box">
+    <svg class="chemical-reaction"
+         viewBox="0 0 900 150"
+         preserveAspectRatio="xMidYMid meet">
+
+        <text x="30" y="95" font-size="30">
+            (CH₃)₃C–OH
+        </text>
+
+        <line x1="250" y1="75"
+              x2="445" y2="75"
+              stroke="black"
+              stroke-width="3"/>
+
+        <polygon points="445,75 430,66 430,84"
+                 fill="black"/>
+
+        <text x="350" y="48"
+              text-anchor="middle"
+              font-size="21">
+            Al₂O₃ / Δ
+        </text>
+
+        <text x="485" y="95" font-size="30">
+            (CH₃)₂C=CH₂ + H₂O
+        </text>
+
+    </svg>
+</div>
+    
+
+    </div>
+
+</div>
+
+
+<div class="qa-box">
+
+    <div class="question">
+        प्रश्न: अल्कोहल के परीक्षण लिखिए।
+    </div>
+
+    <div class="answer">
+
+        <p>
+            अल्कोहल की पहचान के लिए निम्नलिखित परीक्षण किए जाते हैं—
+        </p>
+
+        <p>
+            <b>1. सेरिक अमोनियम नाइट्रेट परीक्षण:</b>
+            अल्कोहल को सेरिक अमोनियम नाइट्रेट के विलयन के साथ मिलाने पर
+            <b>लाल-भूरा रंग</b> प्राप्त होता है। यह अल्कोहल की उपस्थिति
+            का परीक्षण है।
+        </p>
+
+        <p>
+            <b>2. एस्टर परीक्षण:</b>
+            अल्कोहल को एसिटिक अम्ल तथा सांद्र H₂SO₄ के साथ गर्म करने पर
+            एस्टर बनता है, जिससे <b>मीठी, सुगंधित गंध</b> प्राप्त होती है।
+        </p>
+
+    </div>
+
+</div>
+  <div class="qa-box">
+
+    <div class="question">
+        प्रश्न: वुड स्पिरिट किसे कहते हैं?
+    </div>
+
+    <div class="answer">
+        <p>
+            लकड़ी के भंजक आसवन द्वारा प्राप्त <b>मेथनॉल (CH₃OH)</b> को
+            <b>वुड स्पिरिट</b> कहते हैं।
+        </p>
+    </div>
+
+</div>
+
+
+<div class="qa-box">
+
+    <div class="question">
+        प्रश्न: मेथनॉल बनाने की आधुनिक विधि तथा इसके गुण व उपयोग लिखिए।
+    </div>
+
+    <div class="answer">
+
+        <p><b>आधुनिक विधि:</b></p>
+
+        <p>
+            कार्बन मोनोऑक्साइड और हाइड्रोजन के मिश्रण को उच्च दाब तथा
+            ताप पर ZnO/Cr₂O₃ उत्प्रेरक के ऊपर प्रवाहित करने पर मेथनॉल
+            प्राप्त होता है।
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction"
+                 viewBox="0 0 900 150"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="30" y="95" font-size="30">
+                    CO + 2H₂
+                </text>
+
+                <line x1="210" y1="75"
+                      x2="390" y2="75"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="390,75 375,66 375,84"
+                         fill="black"/>
+
+                <text x="300" y="48"
+                      text-anchor="middle"
+                      font-size="21">
+                    ZnO / Cr₂O₃
+                </text>
+
+                <text x="430" y="95" font-size="30">
+                    CH₃OH
+                </text>
+
+            </svg>
+        </div>
+
+        <p><b>भौतिक गुण:</b></p>
+
+        <ul>
+    <li>यह एक रंगहीन, ज्वलनशील तथा जल में घुलनशील द्रव है।</li>
+    <li>इसका क्वथनांक लगभग <b>338 K</b> होता है।</li>
+    <li>इसकी गंध विशिष्ट होती है।</li>
+    <li>यह <b>विषैला</b> होता है।</li>
+    <li>इसके सेवन से अंधापन तथा मृत्यु हो सकती है।</li>
+        </ul>
+
+        <p><b>उपयोग:</b></p>
+
+        <ul>
+    <li>फॉर्मेल्डिहाइड तथा फॉर्मेलिन के निर्माण में।</li>
+    <li>एथिल अल्कोहल को विकृत करने में।</li>
+    <li>पेंट, वार्निश तथा शैलैक के विलायक के रूप में।</li>
+    <li>मिथाइल सैलिसिलेट तथा मिथाइल एंथ्रानिलेट के निर्माण में।</li>
+    <li>रंगों तथा औषधियों के निर्माण में।</li>
+    <li>प्लास्टिक (पर्सपेक्स) के निर्माण में।</li>
+    <li>पेट्रोल के साथ ईंधन के रूप में।</li>
+    <li>ठंडे देशों में मोटरकार आदि के रेडिएटर में एंटीफ्रीज के रूप में।</li>
+        </ul>
+
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        प्रश्न: किण्वन किसे कहते हैं? इसके उपयोग लिखिए।
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>किण्वन:</b> वह जैव रासायनिक प्रक्रिया है जिसमें शर्करा
+            एंजाइमों की सहायता से अल्कोहल अथवा अम्ल में परिवर्तित हो जाती है,
+            किण्वन कहलाती है।
+        </p>
+
+        <p><b>उपयोग:</b></p>
+
+        <ul>
+            <li>अल्कोहलिक पेय जैसे वाइन और बीयर के निर्माण में।</li>
+            <li>ब्रेड तथा बेकरी उद्योग में CO₂ द्वारा आटा फूलाने में।</li>
+            <li>दही बनाने में।</li>
+            <li>अचार तथा सिरका बनाने में।</li>
+        </ul>
+
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        प्रश्न: मोलासास (शिरा) या गुड़ किसे कहते हैं?
+    </div>
+
+    <div class="answer">
+        <p>
+            गन्ने के रस से चीनी बनाने के बाद बचा हुआ गाढ़ा, मीठा और
+            चिपचिपा पदार्थ <b>मोलासास (शिरा) या गुड़</b> कहलाता है। इसमें मुख्यतः
+            शर्करा की मात्रा होती है और इसका उपयोग <b>एथिल अल्कोहल
+            बनाने में</b> किया जाता है।
+        </p>
+    </div>
+
+</div>
+  <div class="qa-box">
+
+    <div class="question">
+        प्रश्न: मोलासास (शिरा) या गुड़ से एथिल अल्कोहल कैसे प्राप्त किया जाता है?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            गुड़ (या शीरे) से एथिल अल्कोहल प्राप्त करने की मुख्य विधि
+            <b>किण्वन</b> है। यह प्रक्रिया निम्नलिखित चरणों में पूरी होती है।
+        </p>
+
+        <p><b>(i) तनुकरण:</b></p>
+
+        <p>
+            गुड़ को एक टैंक में लेकर उसमें पानी मिलाया जाता है, जिससे
+            शर्करा की मात्रा लगभग <b>8–10%</b> हो जाती है।
+        </p>
+
+        <p><b>(ii) पोषण मिश्रण:</b></p>
+
+        <p>
+            तनु विलयन में अमोनियम सल्फेट तथा अमोनियम फॉस्फेट मिलाए जाते हैं।
+            ये लवण खमीर के लिए पोषक पदार्थ का कार्य करते हैं।
+        </p>
+
+        <p><b>(iii) तनु H₂SO₄ मिलाना:</b></p>
+
+        <p>
+            अवांछित जीवाणुओं की वृद्धि रोकने के लिए विलयन में तनु H₂SO₄
+            की कुछ बूँदें मिलाई जाती हैं।
+        </p>
+
+        <p><b>(iv) खमीर मिलाना:</b></p>
+
+        <p>
+            अब इसमें खमीर मिलाकर मिश्रण को लगभग <b>25–30°C</b> तापमान पर
+            रखा जाता है।
+        </p>
+
+        <p><b>(v) किण्वन:</b></p>
+
+        <p>
+            किण्वन के दौरान इनवर्टेज एंजाइम सुक्रोज को ग्लूकोज और फ्रुक्टोज
+            में बदलता है।
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1050 150"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="95" font-size="28">
+                    C₁₂H₂₂O₁₁ + H₂O
+                </text>
+
+                <line x1="300" y1="75"
+                      x2="540" y2="75"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="540,75 525,66 525,84"
+                         fill="black"/>
+
+                <text x="420" y="48"
+                      text-anchor="middle"
+                      font-size="20">
+                    इनवर्टेज / यीस्ट
+                </text>
+
+                <text x="575" y="95" font-size="28">
+                    C₆H₁₂O₆ + C₆H₁₂O₆
+                </text>
+
+            </svg>
+        </div>
+
+        <p style="text-align:center;">
+            <b>सुक्रोज → ग्लूकोज + फ्रुक्टोज</b>
+        </p>
+
+        <p>
+            इसके बाद ज़ाइमेज एंजाइम ग्लूकोज को एथिल अल्कोहल तथा
+            कार्बन डाइऑक्साइड में बदलता है।
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction"
+                 viewBox="0 0 950 150"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="25" y="95" font-size="28">
+                    C₆H₁₂O₆
+                </text>
+
+                <line x1="210" y1="75"
+                      x2="430" y2="75"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="430,75 415,66 415,84"
+                         fill="black"/>
+
+                <text x="320" y="48"
+                      text-anchor="middle"
+                      font-size="20">
+                    ज़ाइमेज / यीस्ट
+                </text>
+
+                <text x="465" y="95" font-size="28">
+                    2C₂H₅OH + 2CO₂
+                </text>
+
+            </svg>
+        </div>
+
+        <p><b>(vi) आसवन:</b></p>
+
+        <p>
+            जब किण्वन पूरा हो जाता है और CO₂ निकलना बंद हो जाता है, तब
+            प्राप्त किण्वित द्रव को आसवन द्वारा शुद्ध किया जाता है।
+            इस प्रकार लगभग <b>90–95% C₂H₅OH</b> वाला रेक्टिफाइड स्पिरिट
+            प्राप्त होता है।
+        </p>
+
+    </div>
+
+  </div>
+  
+<div class="qa-box">
+
+    <div class="question">
+        प्रश्न: स्टार्च से इथेनॉल कैसे प्राप्त किया जाता है? संक्षेप में समझाइए।
+        अभिक्रिया के समीकरण दीजिए।
+    </div>
+
+    <div class="answer">
+
+        <p>
+            इथेनॉल को आलू, जौ आदि स्टार्चयुक्त पदार्थों से औद्योगिक रूप से
+            तैयार किया जाता है। स्टार्चयुक्त पदार्थ को लगभग <b>335 K</b> पर
+            अतितप्त भाप के साथ गर्म करके पेस्ट बनाया जाता है और इसमें माल्ट
+            मिलाया जाता है।
+        </p>
+
+        <p>
+            माल्ट में उपस्थित <b>डायस्टेस</b> एंजाइम स्टार्च को माल्टोज में
+            परिवर्तित करता है।
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1100 150"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="95" font-size="27">
+                    2(C₆H₁₀O₅)ₙ + nH₂O
+                </text>
+
+                <line x1="390" y1="75"
+                      x2="590" y2="75"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="590,75 575,66 575,84"
+                         fill="black"/>
+
+                <text x="490" y="48"
+                      text-anchor="middle"
+                      font-size="20">
+                    डायस्टेस
+                </text>
+
+                <text x="625" y="95" font-size="27">
+                    nC₁₂H₂₂O₁₁
+                </text>
+
+            </svg>
+        </div>
+
+        <p style="text-align:center;">
+            <b>स्टार्च → माल्टोज</b>
+        </p>
+
+        <p>
+            प्राप्त उत्पाद को ठंडा करके उसमें खमीर मिलाया जाता है। खमीर में
+            उपस्थित <b>माल्टेज</b> एंजाइम माल्टोज को ग्लूकोज में परिवर्तित करता है।
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1000 150"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="25" y="95" font-size="28">
+                    C₁₂H₂₂O₁₁ + H₂O
+                </text>
+
+                <line x1="330" y1="75"
+                      x2="530" y2="75"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="530,75 515,66 515,84"
+                         fill="black"/>
+
+                <text x="430" y="48"
+                      text-anchor="middle"
+                      font-size="20">
+                    माल्टेज
+                </text>
+
+                <text x="565" y="95" font-size="28">
+                    2C₆H₁₂O₆
+                </text>
+
+            </svg>
+        </div>
+
+        <p style="text-align:center;">
+            <b>माल्टोज → ग्लूकोज</b>
+        </p>
+
+        <p>
+            अंत में <b>ज़ाइमेज</b> एंजाइम ग्लूकोज का किण्वन करके इथेनॉल
+            तथा कार्बन डाइऑक्साइड बनाता है।
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1000 150"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="25" y="95" font-size="28">
+                    C₆H₁₂O₆
+                </text>
+
+                <line x1="210" y1="75"
+                      x2="450" y2="75"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="450,75 435,66 435,84"
+                         fill="black"/>
+
+                <text x="330" y="48"
+                      text-anchor="middle"
+                      font-size="20">
+                    ज़ाइमेज / यीस्ट
+                </text>
+
+                <text x="485" y="95" font-size="28">
+                    2C₂H₅OH + 2CO₂
+                </text>
+
+            </svg>
+        </div>
+
+        <p style="text-align:center;">
+            <b>ग्लूकोज → इथेनॉल + कार्बन डाइऑक्साइड</b>
+        </p>
+
+    </div>
+
+</div>
+        
+<div class="qa-box">
+
+    <div class="question">
+        प्रश्न: एथिल अल्कोहल की निम्नलिखित के साथ अभिक्रिया कराने पर
+        प्राप्त उत्पादों के नाम लिखिए।
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>1. ब्लीचिंग पाउडर</b> — क्लोरोफॉर्म
+        </p>
+
+        <p>
+            <b>2. आयोडीन और कास्टिक सोडा</b> — आयोडोफॉर्म
+        </p>
+
+        <p>
+            <b>3. क्लोरीन</b> — एसीटैल्डिहाइड
+        </p>
+
+        <p>
+            <b>4. फॉस्फोरस पेंटाक्लोराइड (PCl₅)</b> — एथिल क्लोराइड
+        </p>
+
+    </div>
+
+</div>
+
+
+<div class="qa-box">
+
+    <div class="question">
+        प्रश्न: इथेनॉल के गुण तथा उपयोग लिखिए।
+    </div>
+
+    <div class="answer">
+
+        <p><b>गुण:</b></p>
+
+        <ul>
+            <li>यह रंगहीन, पारदर्शी तथा वाष्पशील द्रव है।</li>
+            <li>इसमें विशेष तीव्र गंध तथा जलनयुक्त स्वाद होता है।</li>
+            <li>यह पानी, ईथर तथा बेंजीन में पूर्णतः घुलनशील है।</li>
+            <li>इसका क्वथनांक लगभग <b>78.1°C</b> होता है।</li>
+            <li>यह जल के साथ हाइड्रोजन बंध बनाता है।</li>
+        </ul>
+
+        <p><b>उपयोग:</b></p>
+
+        <ul>
+            <li>पेय पदार्थों में अल्कोहल के रूप में।</li>
+            <li>वार्निश, पेंट, दवाइयों तथा परफ्यूम में विलायक के रूप में।</li>
+            <li>गैसोलीन के साथ मिलाकर ईंधन के रूप में।</li>
+            <li>जीवाणुनाशक तथा औषधीय तैयारियों में।</li>
+            <li>एसीटिक अम्ल, क्लोरोफॉर्म, आयोडोफॉर्म तथा ईथर के निर्माण में।</li>
+            <li>प्रयोगशाला में अभिकर्मक तथा संरक्षक के रूप में।</li>
+        </ul>
+
+    </div>
+
+</div>
+
+
+<div class="qa-box">
+
+    <div class="question">
+        प्रश्न: एज़ियोट्रोप किसे कहते हैं?
+    </div>
+
+    <div class="answer">
+        <p>
+            एथेनॉल और जल के घोल का एक स्थिर-उबलने वाला मिश्रण
+            <b>एज़ियोट्रोप</b> कहलाता है। एथेनॉल-जल का एज़ियोट्रोप
+            लगभग <b>95% एथेनॉल और 5% जल</b> का होता है।
+        </p>
+    </div>
+
+</div>
+
+
+<div class="qa-box">
+
+    <div class="question">
+        प्रश्न: निरपेक्ष ऐल्कोहॉल से आप क्या समझते हैं?
+    </div>
+
+    <div class="answer">
+        <p>
+            लगभग पूर्णतः शुद्ध एथिल अल्कोहल को <b>निरपेक्ष ऐल्कोहॉल</b>
+            कहते हैं। इसे एज़ियोट्रोप से जल हटाकर प्राप्त किया जाता है।
+        </p>
+    </div>
+
+</div>
+
+
+<div class="qa-box">
+
+    <div class="question">
+        प्रश्न: विकृत स्पिरिट से आप क्या समझते हैं?
+    </div>
+
+    <div class="answer">
+        <p>
+            एथिल अल्कोहल के दुरुपयोग को रोकने के लिए उसमें थोड़ी मात्रा में
+            मेथनॉल अथवा अन्य उपयुक्त पदार्थ मिलाकर उसे पीने योग्य नहीं रहने
+            दिया जाता है। इस प्रकार प्राप्त अल्कोहल को
+            <b>विकृत स्पिरिट</b> कहते हैं।
+        </p>
+    </div>
+
+</div> 
+  <div class="qa-box">
+
+    <div class="question">
+        प्रश्न: मेथिल ऐल्कोहॉल और एथिल ऐल्कोहॉल में अंतर लिखिए।
+    </div>
+
+    <div class="answer">
+
+        <table>
+            <tr>
+                <th>मेथिल ऐल्कोहॉल</th>
+                <th>एथिल ऐल्कोहॉल</th>
+            </tr>
+
+            <tr>
+                <td>इसका सूत्र <b>CH₃OH</b> है।</td>
+                <td>इसका सूत्र <b>C₂H₅OH</b> है।</td>
+            </tr>
+
+            <tr>
+                <td>इसे मेथनॉल कहते हैं।</td>
+                <td>इसे एथनॉल कहते हैं।</td>
+            </tr>
+
+            <tr>
+                <td>यह अत्यंत विषैला होता है।</td>
+                <td>यह मेथनॉल की अपेक्षा कम विषैला होता है, लेकिन इसका सेवन स्वास्थ्य के लिए हानिकारक हो सकता है।</td>
+            </tr>
+
+            <tr>
+                <td>इसके सेवन से अंधापन तथा मृत्यु हो सकती है।</td>
+                <td>इसका उपयोग औद्योगिक विलायक तथा ईंधन आदि में किया जाता है।</td>
+            </tr>
+        </table>
+
+    </div>
+
+  </div>
+
+
+<!-- PROTECTION -->
+
+<script>
+
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+document.addEventListener("selectstart", e => e.preventDefault());
+
+document.addEventListener("copy", e => {
+
+    e.preventDefault();
+
+    alert("Copying content is not allowed");
+
+});
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- PROTECTION -->
+
+
+<script>
+
+
+document.addEventListener("contextmenu",
+e=>e.preventDefault());
+
+
+document.addEventListener("selectstart",
+e=>e.preventDefault());
+
+
+document.addEventListener("copy",
+e=>{
+
+e.preventDefault();
+
+alert("Copying content is not allowed");
+
+});
+
+
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
