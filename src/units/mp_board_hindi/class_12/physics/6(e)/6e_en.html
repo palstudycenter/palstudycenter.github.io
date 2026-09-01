@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | Notes</title>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<script>
+window.MathJax={
+ tex:{
+ inlineMath:[
+ ['$','$'],
+ ['\\(','\\)']
+ ]
+}
+};
+</script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<style>
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+
+body{
+background:#f5f7fb;
+line-height:1.7;
+}
+
+
+/* NAVBAR */
+
+    .navbar{
+
+      background:rgba(15,23,42,0.45);
+
+      backdrop-filter:blur(10px);
+
+      box-shadow:0 4px 18px rgba(0,0,0,.18);
+
+      padding:10px 0;
+
+      transition:.3s;
+
+    }
+
+    .navbar-brand{
+
+      font-size:28px;
+
+      font-weight:700;
+
+      color:white !important;
+
+    }
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+      .navbar-brand{
+        font-size:40px;
+      }
+/* CONTENT */
+
+.notes-container{
+
+max-width:900px;
+
+margin:100px auto 50px;
+
+padding:20px;
+
+}
+
+.notes-title{
+
+background:#e3f2fd;
+
+color:#1565c0;
+
+padding:10px;
+
+border-left:5px solid #1565c0;
+
+border-radius:50px;
+
+font-size:30px;
+
+font-weight:bold;
+margin-top:100px;
+
+margin-bottom:50px;
+
+}
+
+
+
+.qa-box{
+
+background:white;
+
+padding:22px;
+
+margin-bottom:18px;
+
+border-radius:14px;
+
+border-left:6px solid #1565c0;
+
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+transition:.25s;
+
+}
+
+
+.qa-box:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+
+.question{
+
+font-weight:bold;
+
+color:#1b3a57;
+
+margin-bottom:8px;
+
+}
+.question-image{
+    text-align:center;
+    margin:15px 0;
+    overflow-x:auto;
+}
+
+.question-image img{
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:8px;
+}
+
+
+.answer{
+
+color:#2c3e50;
+
+text-align:justify;
+
+}
+
+
+
+@media(max-width:768px){
+
+.notes-container{
+
+margin-top:80px;
+
+}
+
+
+}
+.formula{
+    overflow-x:auto;
+    overflow-y:hidden;
+    margin:10px 0;
+}
+.answer table{
+    width:100%;
+    border-collapse:collapse;
+    margin:12px 0;
+    display:table;
+    overflow-x:auto;
+}
+
+.answer th,
+.answer td{
+    border:1px solid #ddd;
+    padding:10px;
+    vertical-align:middle;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+
+Pal <span>Study Center</span>
+
+</a>
+    <button class="navbar-toggler bg-light"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+</div>
+
+</nav>
+
+
+<!-- CONTENT -->
+<div class="container">
+
+ <div class="notes-title">📘 Unit 6(e) - Wave Optics</div>
+
+<div class="qa-box">
+    <div class="question">Q: What are the various theories put forward to explain the nature of light?</div>
+    <div class="answer">
+        The main theories that explain the nature of light are:
+        <ol>
+            <li>Corpuscular theory</li>
+            <li>Wave theory</li>
+            <li>Electromagnetic theory</li>
+            <li>Quantum theory</li>
+            <li>Photon theory</li>
+            <li>De Broglie's dual nature theory</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: State Newton's corpuscular theory.</div>
+    <div class="answer">
+        According to Newton —
+        <ol>
+            <li>Light is made up of extremely tiny, hard, and spherical corpuscles.</li>
+            <li>These corpuscles are emitted from a light source with a very high velocity.</li>
+            <li>These corpuscles travel in a straight line.</li>
+            <li>Corpuscles produce different colours by striking different media.</li>
+            <li>On striking a mirror, the corpuscles bounce back, which causes <strong>reflection</strong>.</li>
+            <li>On changing the medium, the speed of the corpuscles changes, which explains <strong>refraction</strong>.</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: State the shortcomings of Newton's corpuscular theory.</div>
+    <div class="answer">
+        <ol>
+            <li>It could not explain wave phenomena such as interference, diffraction, and polarization.</li>
+            <li>According to it, the speed of light increases in a denser medium, which is incorrect.</li>
+            <li>It could not explain how corpuscles produce different colours.</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: What is Huygens' wave theory? What are its shortcomings? (2021)</div>
+    <div class="answer">
+        In the year 1678, the scientist Huygens propounded the wave theory related to the propagation of light. Its main postulates are as follows.
+        <ol>
+            <li>Light is emitted from the source in the form of waves.</li>
+            <li>These waves travel in all possible directions with a velocity of \(3 \times 10^8\) metre/second in an all-pervading hypothetical medium called ether.</li>
+            <li>Initially, light waves were considered longitudinal, but later, to explain polarization, they were considered transverse.</li>
+            <li>The wavelength of light of different colours is different.</li>
+        </ol>
+        <strong>Shortcomings</strong> - On the basis of this theory, phenomena such as reflection, refraction, interference, diffraction, and polarization of light could be explained, but the rectilinear propagation of light could not be explained.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: What is a wavefront? How many types are there?</div>
+    <div class="answer">
+        The imaginary surface on which all points of a wave oscillate in the same phase is called a wavefront.
+
+        <br><br>
+
+        <strong>Types of wavefronts:</strong>
+
+        <br><br>
+
+        A wavefront is mainly of three types —
+        <ol>
+            <li><strong>Plane wavefront</strong> - When a wave comes from a source located very far away, its wavefronts are plane.</li>
+            <li><strong>Spherical wavefront</strong> - When a wave originates from a point source, all wavefronts are spherical.</li>
+            <li><strong>Cylindrical wavefront</strong> - When a wave originates from a linear source (such as a long slit), the wavefronts are cylindrical.</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: Explain Huygens' principle of secondary wavelets. (2010/12/19/24 question bank)</div>
+    <div class="answer">
+        The scientist Huygens propounded a principle regarding the propagation of waves, which is called Huygens' principle of secondary wavelets. Its main postulates are as follows-
+        <ol>
+            <li>Every point on a wavefront acts as a source of waves, giving rise to new waves. These waves are called secondary wavelets.</li>
+            <li>The secondary wavelets travel forward with the same velocity as the original wave.</li>
+            <li>The envelope drawn tangential (outward) to these secondary wavelets at any instant represents the position of the new wavefront at that instant.</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: State the principle of superposition of light waves. (question bank)</div>
+    <div class="answer">
+        According to the principle of superposition of light waves, when two or more waves arrive simultaneously at a point in a medium, the resultant displacement at that point is equal to the vector sum of the individual displacements due to each wave.
+
+        <br><br>
+
+        If \(n\) waves arrive simultaneously at a point, and the displacement of this point due to each wave is \(y_1,y_2,y_3......y_n\) respectively, then by the principle of superposition, the resultant displacement \(y\) of this point will be as follows.
+
+        <div class="formula">
+        $$
+        y = y_1 + y_2 + y_3 +......+ y_n
+        $$
+        </div>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: What do you understand by interference of light? How many types are there? (2022/23)</div>
+    <div class="answer">
+        When two light waves of nearly equal amplitude and equal frequency travel simultaneously in the same direction in a medium, then, as a result of their superposition, the intensity of light at different points of the medium is different — this phenomenon is called interference of light.
+
+        <br><br>
+
+        Interference is of the following two types.
+
+        <br><br>
+
+        <strong>(1) Constructive interference</strong> - When two light waves meet at a point in the same phase, their resultant intensity and amplitude become maximum. Such interference is called constructive interference.
+
+        <div class="question-image">
+            <img src="images/image10.png" alt="Constructive interference">
+        </div>
+
+        If the individual amplitudes of the interfering waves are \(a_1\) and \(a_2\) respectively, then in the condition of constructive interference, their resultant amplitude is as follows.
+
+        <div class="formula">
+        $$
+        A = a_1 + a_2
+        $$
+        </div>
+
+        <strong>Condition -</strong>
+        <ol>
+            <li>Both waves must be in the same phase.</li>
+            <li>The frequencies of both the superposing waves must be equal.</li>
+            <li>If the waves are polarized, then the planes of polarization of both must be the same.</li>
+        </ol>
+
+        <strong>(2) Destructive interference</strong> - When two light waves meet at a point in opposite phase, their resultant intensity and amplitude become minimum. Such interference is called destructive interference.
+
+        <div class="question-image">
+            <img src="images/image1.png" alt="Destructive interference">
+        </div>
+
+        If the individual amplitudes of the interfering waves are \(a_1\) and \(a_2\) respectively, then in the condition of destructive interference, their resultant amplitude is as follows.
+
+        <div class="formula">
+        $$
+        A = a_1 - a_2
+        $$
+        </div>
+
+        <strong>Condition -</strong> Both waves must be in opposite phase.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: Explain that the phenomenon of interference conforms to the law of conservation of energy. Or, in the interference of two waves, the energy at some points becomes zero. Is this energy destroyed?</div>
+    <div class="answer">
+        In the phenomenon of interference, the total energy of the interfering waves remains constant. Only redistribution of energy takes place. Whatever energy disappears at the point of minimum intensity, an equal amount of extra energy appears at the point of maximum intensity. Hence, the phenomenon of interference conforms to the law of conservation of energy.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: Explain Young's double-slit experiment for the interference of light.</div>
+    <div class="answer">
+        <strong>Experimental arrangement -</strong>
+        <ol>
+            <li>A monochromatic light source is placed in front of a narrow aperture S so that the light becomes uniform (coherent).</li>
+            <li>Light rays coming out of S fall on two very narrow parallel slits \(S_1\) and \(S_2\).</li>
+            <li>Light waves emerging from these slits proceed further and reach a screen.</li>
+            <li>An interference pattern of bright and dark fringes is obtained on the screen.</li>
+        </ol>
+
+        <div class="question-image">
+            <img src="images/image7.png" alt="Young's double-slit experiment">
+        </div>
+
+        <strong>Method -</strong>
+        <ol>
+            <li>Rays coming out of the light source first pass through a single aperture and then reach the two slits.</li>
+            <li>Both slits act as secondary coherent sources of light waves.</li>
+            <li>These waves superpose upon each other and meet at different points on the screen.</li>
+            <li>Where the two waves meet in the same phase, bright fringes are formed.</li>
+            <li>Where the two waves meet in opposite phase, dark fringes are formed.</li>
+            <li>A regular arrangement of bright and dark fringes is formed on the screen, which is called the interference pattern.</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: Derive the formula for the distances of the n-th bright and dark fringes from the central bright fringe in Young's double-slit experiment.</div>
+    <div class="answer">
+        <div class="question-image">
+            <img src="images/image3.png" alt="Geometry of Young's double-slit experiment">
+        </div>
+
+        Let, in Young's experiment, the distance between the slits \(S_1\) and \(S_2\) be \(d\), and the distance of the screen from them be \(D\). The perpendicular bisector of \(S_1S_2\) meets the screen at point O. Hence, the central bright fringe will be formed exactly at O. Let P be a point on the screen at a distance \(x_n\) from O.
+
+        <br><br>
+
+        If point P is not very far from point O, then
+
+        <div class="formula">
+        $$
+        S_1P \approx S_2P \approx D
+        $$
+        </div>
+
+        <div class="formula">
+        $$
+        \therefore\ S_2P + S_1P \approx D + D = 2D
+        $$
+        </div>
+
+        Now, in the right triangle \(\triangle S_2PN\), by the Pythagoras theorem-
+
+        <div class="formula">
+        $$
+        S_2P^2 = S_2N^2 + NP^2
+        $$
+        </div>
+
+        <div class="formula">
+        $$
+        S_2P^2 = D^2 + \left(x_n + \frac{d}{2}\right)^2 \quad ....(1)
+        $$
+        </div>
+
+        Similarly, in the right triangle \(\triangle S_1PM\), by the Pythagoras theorem-
+
+        <div class="formula">
+        $$
+        S_1P^2 = S_1M^2 + MP^2
+        $$
+        </div>
+
+        <div class="formula">
+        $$
+        S_1P^2 = D^2 + \left(x_n - \frac{d}{2}\right)^2 \quad ....(2)
+        $$
+        </div>
+
+        Subtracting equation (2) from (1)
+
+        <div class="formula">
+        $$
+        S_2P^2 - S_1P^2 = \left(x_n + \frac{d}{2}\right)^2 - \left(x_n - \frac{d}{2}\right)^2
+        $$
+        </div>
+
+        <div class="formula">
+        $$
+        (S_2P - S_1P)(S_2P + S_1P) = 2x_nd
+        $$
+        </div>
+
+        <div class="formula">
+        $$
+        (S_2P - S_1P)(2D) = 2x_nd
+        $$
+        </div>
+
+        <div class="formula">
+        $$
+        S_2P - S_1P = \frac{x_nd}{D}
+        $$
+        </div>
+
+        Let \(\Delta\) be the path difference between the waves reaching point P from sources \(S_1\) and \(S_2\), then
+
+        <div class="formula">
+        $$
+        \Delta = S_2P - S_1P
+        $$
+        </div>
+
+        <div class="formula">
+        $$
+        \Delta = \frac{x_nd}{D}
+        $$
+        </div>
+
+        <ol>
+            <li><strong>Constructive interference</strong> - In this, the n-th bright fringe is formed at point P, so the path difference
+
+                <div class="formula">
+                $$
+                \Delta = n\lambda
+                $$
+                </div>
+
+                <div class="formula">
+                $$
+                \frac{x_nd}{D} = n\lambda
+                $$
+                </div>
+
+                <div class="formula">
+                $$
+                x_n = \frac{n\lambda D}{d}
+                $$
+                </div>
+            </li>
+            <li><strong>Destructive interference</strong> - In this, the n-th dark fringe is formed at point P, so the path difference
+
+                <div class="formula">
+                $$
+                \Delta = \frac{(2n+1)\lambda}{2}
+                $$
+                </div>
+
+                <div class="formula">
+                $$
+                \frac{x_nd}{D} = \frac{(2n+1)\lambda}{2}
+                $$
+                </div>
+
+                <div class="formula">
+                $$
+                x_n = \frac{(2n+1)\lambda D}{2d}
+                $$
+                </div>
+            </li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: What is fringe width in Young's double-slit experiment? Derive the formula for it.</div>
+    <div class="answer">
+        In the phenomenon of interference of light waves, the distance between two consecutive bright fringes, or between two consecutive dark fringes, is called the fringe width. It is denoted by \(\beta\).
+
+        <br><br>
+
+        <strong>Derivation of formula -</strong>
+
+        <br><br>
+
+        Distance of the n-th bright fringe from the central bright fringe
+
+        <div class="formula">
+        $$
+        x_n = \frac{n\lambda D}{d}
+        $$
+        </div>
+
+        Distance of the (n-1)-th bright fringe from the central bright fringe
+
+        <div class="formula">
+        $$
+        x_{(n-1)} = \frac{(n-1)\lambda D}{d}
+        $$
+        </div>
+
+        Hence, the fringe width
+
+        <div class="formula">
+        $$
+        \beta = x_{(n-1)} - x_n
+        $$
+        </div>
+
+        <div class="formula">
+        $$
+        \beta = \frac{n\lambda D}{d} - \frac{(n-1)\lambda D}{d}
+        $$
+        </div>
+
+        <div class="formula">
+        $$
+        \beta = \frac{[n-(n-1)]\lambda D}{d}
+        $$
+        </div>
+
+        <div class="formula">
+        $$
+        \beta = \frac{[n-n+1]\lambda D}{d}
+        $$
+        </div>
+
+        <div class="formula">
+        $$
+        \boxed{\beta = \frac{\lambda D}{d}}
+        $$
+        </div>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: Write the formula for fringe width in Young's double-slit experiment and state the factors affecting it. (2020/22 supplementary)</div>
+    <div class="answer">
+        Formula for fringe width:
+
+        <div class="formula">
+        $$
+        \beta = \frac{\lambda D}{d}
+        $$
+        </div>
+
+        Here
+        <ul>
+            <li><strong>\(\beta\)</strong> = fringe width</li>
+            <li><strong>\(\lambda\)</strong> = wavelength of light</li>
+            <li><strong>\(D\)</strong> = distance from the screen</li>
+            <li><strong>\(d\)</strong> = distance between the two slits</li>
+        </ul>
+
+        The factors affecting the fringe width are as follows.
+        <ol>
+            <li>The fringe width is directly proportional to the wavelength of light. That is, \(\beta \propto \lambda\)</li>
+            <li>The fringe width is directly proportional to the distance \(D\) of the screen from the source. That is, \(\beta \propto D\)</li>
+            <li>The fringe width is inversely proportional to the distance 2d between the two wave sources. That is, \(\beta \propto \dfrac{1}{d}\)</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: In Young's double-slit experiment, if the wavelength of the monochromatic light is increased, what effect will it have on the fringe width?</div>
+    <div class="answer">
+        Formula for fringe width:
+
+        <div class="formula">
+        $$
+        \beta = \frac{\lambda D}{d}
+        $$
+        </div>
+
+        That is, the fringe width is directly proportional to the wavelength of light. Hence, if the wavelength of light is increased, the value of the fringe width will increase.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: If the apparatus of Young's double-slit experiment is immersed in water, what effect will it have on the fringe width?</div>
+    <div class="answer">
+        Formula for fringe width:
+
+        <div class="formula">
+        $$
+        \beta = \frac{\lambda D}{d}
+        $$
+        </div>
+
+        That is, the fringe width is directly proportional to the wavelength of light. Since the wavelength of light decreases in water, the fringe width will decrease.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: In Young's double-slit experiment, if the screen is moved away from the slits, what effect will it have?</div>
+    <div class="answer">
+        Formula for fringe width:
+
+        <div class="formula">
+        $$
+        \beta = \frac{\lambda D}{d}
+        $$
+        </div>
+
+        That is, the fringe width is directly proportional to the distance \(D\) of the screen from the source. Hence, on moving the screen away from the slits, the fringe width will increase.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: If the distance between the coherent light sources is decreased, what effect will it have on the fringe width?</div>
+    <div class="answer">
+        Formula for fringe width:
+
+        <div class="formula">
+        $$
+        \beta = \frac{\lambda D}{d}
+        $$
+        </div>
+
+        That is, the fringe width is inversely proportional to the distance 2d between the two wave sources. Hence, if the distance between the coherent light sources is decreased, the fringe width will increase.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: In Young's double-slit experiment, if the distance between the slits is doubled and the distance between the slits and the screen is kept half, what will happen to the fringe width?</div>
+    <div class="answer">
+        Formula for fringe width:
+
+        <div class="formula">
+        $$
+        \beta = \frac{\lambda D}{d}
+        $$
+        </div>
+
+        If the distance between the slits is doubled and the distance between the slits and the screen is kept half, then
+
+        <div class="formula">
+        $$
+        \beta' = \frac{\lambda \left(\dfrac{D}{2}\right)}{2d}
+        $$
+        </div>
+
+        <div class="formula">
+        $$
+        \beta' = \frac{1}{4}\left(\frac{\lambda D}{d}\right)
+        $$
+        </div>
+
+        <div class="formula">
+        $$
+        \boxed{\beta' = \frac{1}{4}\beta}
+        $$
+        </div>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: What effect will be seen on the interference pattern in Young's double-slit experiment if one slit is closed?</div>
+    <div class="answer">
+        The interference pattern will not be obtained.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: What is the shape of the interference fringes in Young's double-slit experiment?</div>
+    <div class="answer">
+        The interference fringes obtained in Young's double-slit experiment are like straight lines parallel to one another. They are parallel to the slits and are alternately bright and dark.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: State four essential conditions for the interference of light. (2015/21)</div>
+    <div class="answer">
+        The essential conditions for the interference of light are as follows.
+        <ol>
+            <li>The frequencies of both waves must be equal.</li>
+            <li>The amplitudes of both waves must be nearly equal.</li>
+            <li>Both waves must travel in the same direction.</li>
+            <li>Both sources must be close to each other.</li>
+            <li>Both light sources must be extremely narrow.</li>
+            <li>The phase difference of the waves must be constant.</li>
+            <li>The light sources must be monochromatic.</li>
+            <li>If the light waves are polarized, their planes of polarization must be the same.</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: What is a coherent source? State two conditions for two sources to be coherent. (2009/17 question bank)</div>
+    <div class="answer">
+        Two light sources whose frequency is the same and whose phase difference remains constant are called coherent sources.
+
+        <br><br>
+
+        <strong>Conditions -</strong>
+        <ol>
+            <li>The frequency must be the same.</li>
+            <li>The phase difference must remain constant.</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: How can coherent waves be obtained?</div>
+    <div class="answer">
+        To obtain coherent waves, two light sources are obtained from a single light source by various methods (such as Fresnel's biprism method, Lloyd's mirror method, amplitude-splitting method, etc.).
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: Can two independent sources of light produce interference?</div>
+    <div class="answer">
+        The phase difference between light waves coming from two independent sources keeps changing with time. Hence, two independent sources of light cannot produce interference.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: When an airplane flying at a low altitude passes overhead, we sometimes find the picture on a television screen shaking. Why? (question bank)</div>
+    <div class="answer">
+        An airplane flying at a low altitude reflects the T.V. signal. Hence, due to interference between the directly arriving signal and the reflected signal, the picture on the T.V. screen appears to shake.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: Can interference be obtained with white light?</div>
+    <div class="answer">
+        Yes. White light consists of seven colours. The position of the central bright fringe is the same for all colours. Hence, the central fringe is white. The positions of the other bright fringes are different for different colours.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: When white light is incident on a thin film of a soap bubble, or on a thin film of oil on the surface of water, beautiful colours are seen. Explain the reason. Or, a soap bubble appears coloured. Explain the reason.</div>
+    <div class="answer">
+        When sunlight is incident on a thin film (whose thickness is of the order of the wavelength of light), a part of it is reflected from the upper surface of the film, and the remaining part enters it and is reflected from the lower surface. Interference occurs between these light waves reflected from the two surfaces. Since white light is composed of seven colours, the film appears coloured due to the interference of the reflected waves.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: What do you understand by diffraction of light? (2021) Or, what is diffraction of light?</div>
+    <div class="answer">
+        The phenomenon of bending of light waves at the sharp edge of an obstacle or aperture is called diffraction.
+
+        <br><br>
+
+        <strong>Condition</strong> - The necessary condition for diffraction is that the size of the obstacle should be of the order of the wavelength of light.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: On which factors does diffraction depend?</div>
+    <div class="answer">
+        Diffraction depends on two factors-
+        <ol>
+            <li>Size of the aperture</li>
+            <li>Wavelength</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: Why is it easier to demonstrate the phenomenon of diffraction in sound waves than in light waves?</div>
+    <div class="answer">
+        The wavelength of sound is of the order of the obstacles that come in its path, whereas generally the wavelength of light is not of the order of the obstacles that come in its path. Hence, it is easier to demonstrate the phenomenon of diffraction in sound waves than in light waves.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: Persons standing on either side of a tall obstacle cannot see each other but can hear each other's voice. Why? (NCERT)</div>
+    <div class="answer">
+        For diffraction of waves, it is necessary that the size of the obstacle be of the order of the wavelength of the wave. The wavelength of sound is of the order of the size of the obstacle. Hence, sound waves get diffracted and reach the persons, and they are able to hear each other's voice.
+
+        <br><br>
+
+        The wavelength of light is very small, while the aperture of the obstacle is very large; hence, light waves cannot get diffracted. As a result, they are not able to see each other.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: When a small circular obstacle is placed in the path of light coming from a distance, a bright spot is seen at the centre of the shadow of the obstacle. Why? (NCERT)</div>
+    <div class="answer">
+        When a small circular obstacle is placed in the path of light coming from a distance, diffraction of light takes place at its edge. The diffracted waves produce constructive interference at the centre of the shadow, hence a bright spot is seen at the centre.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: How many types of diffraction are there? Give examples of each.</div>
+    <div class="answer">
+        Diffraction is of two types.
+        <ol>
+            <li><strong>Fresnel diffraction</strong> - An example of Fresnel diffraction is diffraction by a straight edge.</li>
+            <li><strong>Fraunhofer diffraction</strong> - An example of Fraunhofer diffraction is diffraction by a single slit.</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: State the differences between interference and diffraction.</div>
+    <div class="answer">
+        <table>
+            <tr>
+                <th>Interference</th>
+                <th>Diffraction</th>
+            </tr>
+            <tr>
+                <td>It is produced by the superposition of two or more waves.</td>
+                <td>It is produced when a wave bends around an obstacle or a narrow aperture.</td>
+            </tr>
+            <tr>
+                <td>It requires two sources.</td>
+                <td>It is possible with a single aperture or edge.</td>
+            </tr>
+            <tr>
+                <td>Its fringes are regular and equally spaced.</td>
+                <td>Its fringes are irregular. The central fringe is wide.</td>
+            </tr>
+            <tr>
+                <td>Its intensity depends on the phase difference.</td>
+                <td>Its intensity depends on the width of the aperture and \(\lambda\).</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: What is meant by polarization of light? State its condition.</div>
+    <div class="answer">
+        When the oscillations of transverse light waves are confined to only one plane perpendicular to the direction of wave propagation, this process is called polarization of light.
+
+        <br><br>
+
+        <strong>Condition for polarization of light -</strong> Polarization of light is possible only when the light wave is transverse.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: In which type of wave does the phenomenon of polarization not occur?</div>
+    <div class="answer">
+        The phenomenon of polarization does not occur in longitudinal waves.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: Polarization does not occur in longitudinal waves. Why?</div>
+    <div class="answer">
+        In longitudinal waves, the particles of the medium oscillate in the same direction as the propagation of the wave; hence, polarization does not occur in longitudinal waves.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: Light waves can be polarized, but sound waves cannot. Why?</div>
+    <div class="answer">
+        The phenomenon of polarization is possible only in transverse waves. Light waves are transverse, and sound waves are longitudinal waves. Hence, light waves can be polarized, but sound waves cannot.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: Among X-rays, sound waves, and radio waves, in which waves is polarization possible, and why?</div>
+    <div class="answer">
+        Polarization is possible in X-rays and radio waves, because both of these are transverse waves. Polarization is not possible in sound waves because they are longitudinal waves.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: What is meant by the plane of vibration and the plane of polarization?</div>
+    <div class="answer">
+        <ul>
+            <li><strong>Plane of vibration -</strong> When light is polarized, the plane in which the oscillations of the light wave occur is called the plane of vibration.</li>
+            <li><strong>Plane of polarization -</strong> The plane in which there is no oscillation, but only the propagation of light, is called the plane of polarization. It is perpendicular (90°) to the plane of vibration.</li>
+        </ul>
+
+        <div class="question-image">
+            <img src="images/image9.png" alt="Plane of vibration and plane of polarization">
+        </div>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: What is meant by unpolarized light and polarized light?</div>
+    <div class="answer">
+        <ul>
+            <li><strong>Unpolarized light -</strong> When the oscillations of a light wave occur in all possible directions perpendicular to the direction of propagation of light, such light is called unpolarized light. <br><strong>Example:</strong> Light emitted from the sun, a bulb, a tube light, etc. is unpolarized.</li>
+            <li><strong>Polarized light -</strong> When the oscillations of a light wave are confined to only one plane perpendicular to the direction of propagation of light, such light is called polarized light. <br><strong>Example:</strong> Light emitted from a Polaroid sheet is polarized.</li>
+        </ul>
+
+        <div class="question-image">
+            <img src="images/image6.jpg" alt="Unpolarized and polarized light">
+        </div>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: State the differences between unpolarized light and polarized light.</div>
+    <div class="answer">
+        <table>
+            <tr>
+                <th>Unpolarized light</th>
+                <th>Polarized light</th>
+            </tr>
+            <tr>
+                <td>Oscillations occur in all possible directions.</td>
+                <td>Oscillations occur in only one plane.</td>
+            </tr>
+            <tr>
+                <td>Generally obtained from natural or ordinary sources.</td>
+                <td>Obtained by an artificial process (such as a Polaroid).</td>
+            </tr>
+            <tr>
+                <td>Its intensity is uniformly distributed.</td>
+                <td>Since the oscillations are restricted, the intensity depends on the direction.</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: What is a Polaroid?</div>
+    <div class="answer">
+        A Polaroid is a simple and inexpensive device for producing plane-polarized light.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: What is a Polaroid? Describe its construction and working.</div>
+    <div class="answer">
+        A simple and inexpensive device that produces plane-polarized light is called a Polaroid.
+
+        <br><br>
+
+        <strong>Construction</strong> - It consists of a film that is placed between two glass plates. To make this film, extremely small crystals of iodoquinine sulphate are spread on a thin sheet of nitrocellulose in such a way that the axes of all the crystals remain parallel to one another.
+
+        <div class="question-image">
+            <img src="images/image4.png" alt="Construction of a Polaroid">
+        </div>
+
+        <strong>Working</strong> - When ordinary light is incident on a Polaroid, only those electric vectors whose vibrations are parallel to the axis of the crystals are able to pass out of the Polaroid. Thus, the light emerging from the Polaroid is plane-polarized light.
+
+        <br><br>
+
+        When two Polaroids are parallel to each other, the light emerging from the first Polaroid (called the polarizer) also emerges from the second Polaroid (called the analyzer). But when they are perpendicular to each other, the light emerging from the first Polaroid is blocked by the second Polaroid. As a result, the intensity of the emergent light is zero. In this condition, the two Polaroids are said to be crossed.
+
+        <div class="question-image">
+            <img src="images/image8.png" alt="Parallel and crossed Polaroids">
+        </div>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: For which arrangement of the polarizer and analyzer, in the analysis of polarized light, is the intensity of light minimum?</div>
+    <div class="answer">
+        When the axes of the polarizer and analyzer are mutually perpendicular.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: What is meant by crossed Polaroids?</div>
+    <div class="answer">
+        Two Polaroids whose transmission axes are mutually perpendicular are called crossed Polaroids.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: How will you obtain plane-polarized light from a Polaroid?</div>
+    <div class="answer">
+        Ordinary light coming directly from a light source is first made incident on a Polaroid. The light that emerges from the Polaroid is plane-polarized light.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: How will you distinguish between plane-polarized light and unpolarized light?</div>
+    <div class="answer">
+        To identify whether light is polarized or unpolarized, the light is first made incident on a Polaroid. If, on rotating the Polaroid, there is a change in the intensity of the light emerging from it, then the light incident on the Polaroid is polarized light; and if there is no change in the intensity of the emergent light, then the light incident on the Polaroid is unpolarized light.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: Why are sunglasses made of Polaroid more useful than those made of coloured glass?</div>
+    <div class="answer">
+        Light reflected from objects is partially plane-polarized. A Polaroid cuts off the horizontal vibrations of the partially polarized light. As a result, the glare of light is eliminated. Sunglasses made of coloured glass are not able to remove the glare of light.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: State four uses of Polaroids in daily life.</div>
+    <div class="answer">
+        The uses of Polaroids are as follows.
+        <ol>
+            <li>In sunglasses to remove the glare of light.</li>
+            <li>In controlling the intensity of light entering motor cars, aeroplanes, trains, etc.</li>
+            <li>In viewing three-dimensional pictures.</li>
+            <li>In studying the optical properties of metals.</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: Why does polarization occur due to scattering? Explain.</div>
+    <div class="answer">
+        It has been found that sunlight gets scattered by the molecules of the atmosphere. Due to this scattering, sunlight becomes polarized.
+
+        <br><br>
+
+        Polarization due to scattering can be explained as follows-
+
+        <br><br>
+
+        Polarization by scattering of incident light by a nitrogen molecule in two perpendicular directions has been shown. The incident light is unpolarized light, in which the electric vector can vibrate in every possible direction in the plane perpendicular to the incident light. All these vibrations can be resolved into two rectangular components.
+        <ol>
+            <li>Those parallel to the plane of the paper are represented by an arrowed line.</li>
+            <li>Those perpendicular to the plane of the paper are represented by dots.</li>
+        </ol>
+
+        When a light wave is incident on a nitrogen molecule, the electrons of the molecule start vibrating in these two perpendicular directions.
+
+        <br><br>
+
+        The vibrations parallel to the plane of the paper are along the line of sight of the observer. Hence, these vibrations cannot produce a transverse wave in the direction of the observer. Thus, the light entering the observer's eye is plane-polarized, with its vibrations perpendicular to the plane of the paper.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: What is meant by the angle of polarization or Brewster's angle?</div>
+    <div class="answer">
+        When unpolarized light incident on the surface of a transparent medium is made incident at a particular angle, the reflected light becomes completely polarized. This particular angle is called the angle of polarization. It is denoted by \(i_p\).
+
+        <div class="question-image">
+            <img src="images/image5.png" alt="Brewster's angle">
+        </div>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: What is Brewster's law?</div>
+    <div class="answer">
+        <strong>Brewster's law</strong> - According to this law, the refractive index of a medium is equal to the tangent of the angle of polarization.
+
+        <br><br>
+
+        That is
+
+        <div class="formula">
+        $$
+        \tan i_p = \mu
+        $$
+        </div>
+
+        Here
+        <ul>
+            <li>\(i_p\) = angle of polarization</li>
+            <li>\(\mu\) = refractive index of the medium</li>
+        </ul>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: Prove that when light is incident at the angle of polarization, the reflected ray and the refracted ray are mutually perpendicular.</div>
+    <div class="answer">
+        <div class="question-image">
+            <img src="images/image5.png" alt="Incidence at the angle of polarization">
+        </div>
+
+        Suppose a light ray is incident at the angle of polarization \(i_p\) on the surface of a medium of refractive index \(\mu\).
+
+        <br><br>
+
+        Then, according to Snell's law,
+
+        <div class="formula">
+        $$
+        \frac{\sin i_p}{\sin r} = \mu \quad ....(1)
+        $$
+        </div>
+
+        According to Brewster's law
+
+        <div class="formula">
+        $$
+        \tan i_p = \mu \quad ....(2)
+        $$
+        </div>
+
+        From equations (1) and (2) -
+
+        <div class="formula">
+        $$
+        \tan i_p = \frac{\sin i_p}{\sin r}
+        $$
+        </div>
+
+        <div class="formula">
+        $$
+        \frac{\sin i_p}{\cos i_p} = \frac{\sin i_p}{\sin r}
+        $$
+        </div>
+
+        <div class="formula">
+        $$
+        \frac{1}{\cos i_p} = \frac{1}{\sin r}
+        $$
+        </div>
+
+        <div class="formula">
+        $$
+        \sin r = \cos i_p
+        $$
+        </div>
+
+        <div class="formula">
+        $$
+        \sin r = \sin\left(\frac{\pi}{2} - i_p\right)
+        $$
+        </div>
+
+        <div class="formula">
+        $$
+        r = \frac{\pi}{2} - i_p
+        $$
+        </div>
+
+        <div class="formula">
+        $$
+        i_p + r = \frac{\pi}{2}
+        $$
+        </div>
+
+        The angle between the reflected ray and the refracted ray
+
+        <div class="formula">
+        $$
+        \angle BCD = \pi - (i_p + r)
+        $$
+        </div>
+
+        <div class="formula">
+        $$
+        \angle BCD = \pi - \frac{\pi}{2}
+        $$
+        </div>
+
+        <div class="formula">
+        $$
+        \boxed{\angle BCD = \frac{\pi}{2}}
+        $$
+        </div>
+
+        Hence, when light is incident at the angle of polarization, the reflected ray and the refracted ray are mutually perpendicular.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: State Malus's law. (2025)</div>
+    <div class="answer">
+        According to Malus's law, "when polarized light is passed through a polarizer, the intensity of the light is proportional to the square of the cosine of the angle between the axis of the polarizer and the direction of polarization of the light."
+
+        <br><br>
+
+        That is
+
+        <div class="formula">
+        $$
+        I \propto \cos^2\theta
+        $$
+        </div>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">Q: How is the phenomenon of polarization different from the phenomena of interference and diffraction?</div>
+    <div class="answer">
+        The phenomena of interference and diffraction are possible in both transverse and longitudinal waves, whereas the phenomenon of polarization is possible only in transverse waves, not in longitudinal waves.
+    </div>
+</div>
+
+</div>
+
+<!-- SCRIPT -->
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("show");
+}
+
+document.addEventListener("click", function(e){
+    if(!e.target.closest(".navbar")){
+        document.getElementById("menu").classList.remove("show");
+    }
+});
+</script>
+
+<!-- Content Protection Scripts -->
+<script>
+// Disable right-click context menu
+document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+
+// Disable text selection
+document.addEventListener("selectstart", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+
+// Disable copy keyboard shortcut (Ctrl+C, Cmd+C)
+document.addEventListener("keydown", function(e) {
+    // Disable PrintScreen and related screenshot keys
+    if (e.key === "PrintScreen" ||
+        e.keyCode === 44 ||  // PrintScreen
+        (e.ctrlKey && e.shiftKey && e.key === "S") ||  // Windows Snipping Tool
+        (e.keyCode === 91 && e.shiftKey && e.key === "5")) {  // Mac Screenshot
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+C and Cmd+C (copy)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "c" || e.keyCode === 67)) {
+        e.preventDefault();
+        alert("Copying content is not allowed on this page.");
+        return false;
+    }
+
+    // Disable Ctrl+A (select all)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "a" || e.keyCode === 65)) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+X (cut)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "x" || e.keyCode === 88)) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable F12 (Developer Tools)
+    if (e.keyCode === 123) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+Shift+I (Developer Tools)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "i" || e.keyCode === 73)) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+Shift+J (Console)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "j" || e.keyCode === 74)) {
+        e.preventDefault();
+        return false;
+    }
+}, false);
+
+// Prevent copy on mouse up
+document.addEventListener("mouseup", function() {
+    document.selection.empty ? document.selection.empty() : window.getSelection().removeAllRanges();
+}, false);
+
+// Disable paste
+document.addEventListener("paste", function(e) {
+    e.preventDefault();
+    alert("Pasting content is not allowed on this page.");
+    return false;
+}, false);
+
+// Add user-select: none CSS dynamically
+document.addEventListener("DOMContentLoaded", function() {
+    document.body.style.userSelect = "none";
+    document.body.style.webkitUserSelect = "none";
+    document.body.style.msUserSelect = "none";
+    document.body.style.mozUserSelect = "none";
+});
+
+// Prevent image download
+document.addEventListener("dragstart", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | Notes</title>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<script>
+window.MathJax={
+ tex:{
+ inlineMath:[
+ ['$','$'],
+ ['\\(','\\)']
+ ]
+}
+};
+</script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<style>
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+
+body{
+background:#f5f7fb;
+line-height:1.7;
+}
+
+
+/* NAVBAR */
+
+    .navbar{
+
+      background:rgba(15,23,42,0.45);
+
+      backdrop-filter:blur(10px);
+
+      box-shadow:0 4px 18px rgba(0,0,0,.18);
+
+      padding:10px 0;
+
+      transition:.3s;
+
+    }
+
+    .navbar-brand{
+
+      font-size:28px;
+
+      font-weight:700;
+
+      color:white !important;
+
+    }
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+      .navbar-brand{
+        font-size:40px;
+      }
+/* CONTENT */
+
+.notes-container{
+
+max-width:900px;
+
+margin:100px auto 50px;
+
+padding:20px;
+
+}
+
+.notes-title{
+
+background:#e3f2fd;
+
+color:#1565c0;
+
+padding:10px;
+
+border-left:5px solid #1565c0;
+
+border-radius:50px;
+
+font-size:30px;
+
+font-weight:bold;
+margin-top:100px;
+
+margin-bottom:50px;
+
+}
+
+
+
+.qa-box{
+
+background:white;
+
+padding:22px;
+
+margin-bottom:18px;
+
+border-radius:14px;
+
+border-left:6px solid #1565c0;
+
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+transition:.25s;
+
+}
+
+
+.qa-box:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+
+.question{
+
+font-weight:bold;
+
+color:#1b3a57;
+
+margin-bottom:8px;
+
+}
+.question-image{
+    text-align:center;
+    margin:15px 0;
+    overflow-x:auto;
+}
+
+.question-image img{
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:8px;
+}
+
+
+.answer{
+
+color:#2c3e50;
+
+text-align:justify;
+
+}
+
+
+
+@media(max-width:768px){
+
+.notes-container{
+
+margin-top:80px;
+
+}
+
+
+}
+.formula{
+    overflow-x:auto;
+    overflow-y:hidden;
+    margin:10px 0;
+}
+.answer table{
+    width:100%;
+    border-collapse:collapse;
+    margin:12px 0;
+    display:table;      /* block हटाकर table करें */
+    overflow-x:auto;
+}
+
+.answer th,
+.answer td{
+    border:1px solid #ddd;
+    padding:10px;
+    vertical-align:middle;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+
+Pal <span>Study Center</span>
+
+</a>
+    <button class="navbar-toggler bg-light"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+</div>
+
+</nav>
+
+
+<!-- CONTENT -->
+<div class="container">
+
+ <div class="notes-title">📘 Unit 6(D) - Optical Instruments</div
+>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What are optical instruments called? How many types are there?
+    </div>
+    <div class="answer">
+        Instruments with the help of which the image of an object is observed, measured, or studied using light are called optical instruments.
+        <br><br>
+        <strong>Types:</strong> Optical instruments are of two types—
+        <ol>
+            <li><strong>Optical instruments producing a real image</strong> – such as the human eye and the photographic camera.</li>
+            <li><strong>Optical instruments producing a virtual image</strong> – such as the microscope, telescope, etc.</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Define the following related to the human eye.
+    </div>
+    <div class="answer">
+        <ol>
+            <li><strong>Near point</strong> - The minimum distance at which the eye can see an object clearly is called the near point. Normally this distance is 25 cm.</li>
+            <li><strong>Far point</strong> - The maximum distance up to which the eye can see an object clearly without any strain is called the far point. For a normal eye this distance is infinity (∞).</li>
+            <li><strong>Range of vision</strong> - The distance between the near point and the far point of the human eye is called the range of vision. For a normal eye the range of vision is: 25 cm to infinity.</li>
+            <li><strong>Least distance of distinct vision</strong> - The minimum distance at which the eye sees an object clearly without any blurring is called the least distance of distinct vision. It is denoted by \(D\). It is normally 25 cm.</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What is meant by the angle of vision?
+    </div>
+    <div class="answer">
+        When an object is viewed by the eye, the angle subtended at the centre of the eye by the extremities of the object is called the angle of vision. It is denoted by \(\theta\) (theta).
+        <br><br>
+        The angle of vision determines how large or small the object appears to us.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Why does a nearby object appear large and a distant object appear small?
+    </div>
+    <div class="answer">
+        The larger the angle of vision, the larger the object appears, and the smaller the angle of vision, the smaller the object appears.
+        <br><br>
+        The angle of vision is greater for a nearby object and smaller for a distant object. Hence a nearby object appears large and a distant object appears small.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What is a microscope called? How many types are there?
+    </div>
+    <div class="answer">
+        The optical instrument with the help of which very small objects or minute structures are magnified and viewed clearly is called a microscope.
+        <br><br>
+        <strong>Types:</strong> Microscopes are of two types—
+        <ol>
+            <li><strong>Simple microscope</strong> – it consists of a single convex lens.</li>
+            <li><strong>Compound microscope</strong> – it consists of two lenses (objective lens and eyepiece lens).</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What is meant by the magnifying power of a microscope?
+    </div>
+    <div class="answer">
+        The ratio of the angle of vision subtended at the eye by the final image formed by a microscope to the angle of vision subtended at the eye by the object placed at the least distance of distinct vision is called the magnifying power of the microscope. It is denoted by \(m\).
+        <div class="formula">
+            $$
+            m=\frac{\text{Angle of vision formed by the final image}}{\text{Angle of vision formed by the object placed at the least distance of distinct vision}}
+            $$
+        </div>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What is a simple microscope called? Write its principle, construction, and uses.
+    </div>
+    <div class="answer">
+        A convex lens of short focal length is called a simple microscope. It is used to view small objects in a magnified and clear form.
+        <br><br>
+        <strong>Principle</strong> - When the object is placed within the focus of the convex lens, the lens forms a virtual, erect, and magnified image of the object. Thus the object appears larger than its actual size.
+        <br><br>
+        <strong>Construction</strong> - Its construction consists of a powerful convex lens, which is its main part. This lens is fitted in a handle.
+        <br><br>
+        <strong>Diagram</strong>
+        <br><br>
+        <strong>Uses -</strong>
+        <ol>
+            <li>It is used by watchmakers and jewellers for their fine work.</li>
+            <li>It is used to read the vernier scale fitted in instruments.</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Explain the simple microscope on the basis of the following. (a) Image formed at the distance of distinct vision. (b) Image formed at infinity. (2019)
+    </div>
+    <div class="answer">
+        <ol>
+            <li><strong>Ray diagram for image formation,</strong></li>
+            <li><strong>Magnifying power when the final image</strong></li>
+        </ol>
+        <strong>Ray diagram-</strong>
+        <div class="question-image">
+            <img src="images/image5.png" alt="Ray diagram of a simple microscope">
+        </div>
+        <strong>Magnifying power -</strong> Copy from notebook.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: How can the magnifying power of a simple microscope be increased?
+    </div>
+    <div class="answer">
+        The magnifying power of a simple microscope can be increased in the following ways-
+        <ol>
+            <li>By decreasing the focal length of the lens.</li>
+            <li>By forming the final image at the least distance of distinct vision.</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Explain the compound microscope on the basis of the following. (a) Image formed at the distance of distinct vision. (b) Image formed at infinity.
+    </div>
+    <div class="answer">
+        <ol>
+            <li><strong>Ray diagram for image formation,</strong></li>
+            <li><strong>Magnifying power when the final image</strong></li>
+        </ol>
+        <div class="question-image">
+            <img src="images/image4.png" alt="Ray diagram of a compound microscope">
+        </div>
+        Note this answer down from your notebook.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: How can the magnifying power of a compound microscope be increased? (M.P. 2022 Supplementary)
+    </div>
+    <div class="answer">
+        The magnifying power of a compound microscope can be increased in the following ways-
+        <ol>
+            <li>By decreasing the focal lengths of both lenses.</li>
+            <li>By forming the final image at the least distance of distinct vision.</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What is a telescope called? How many types are there?
+    </div>
+    <div class="answer">
+        The optical instrument with the help of which distant objects are viewed clearly in a magnified form is called a telescope.
+        <br><br>
+        Telescopes are of two types—
+        <ol>
+            <li><strong>Reflecting telescope —</strong> this uses mirrors.</li>
+            <li><strong>Refracting telescope —</strong> this uses lenses. Refracting telescopes are mainly of two types.</li>
+        </ol>
+        <ul>
+            <li><strong>Astronomical telescope —</strong> it is used to observe celestial bodies such as stars, planets, satellites, etc. The final image formed in it is inverted.</li>
+            <li><strong>Terrestrial telescope —</strong> it is used to observe terrestrial objects such as buildings, trees, mountains, etc. The final image formed in it is erect.</li>
+        </ul>
+        <div class="question-image">
+            <img src="images/image2.png" alt="Construction of a reflecting telescope">
+        </div>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What is meant by the magnifying power of a telescope?
+    </div>
+    <div class="answer">
+        The ratio of the angle subtended at the eye by the final image formed by a telescope to the angle subtended at the eye by the object is called the magnifying power of the telescope. It is denoted by \(m\).
+        <div class="formula">
+            $$
+            m=\frac{\text{Angle of vision formed by the final image}}{\text{Angle of vision formed by the object}}
+            $$
+        </div>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Explain the astronomical telescope on the basis of the following. (a) Image formed at the distance of distinct vision. (b) Image formed at infinity.
+    </div>
+    <div class="answer">
+        <strong>Ray diagram for image formation,</strong>
+        <br><br>
+        <strong>Magnifying power when the final image</strong>
+        <div class="question-image">
+            <img src="images/image3.jpg" alt="Ray diagram of an astronomical telescope">
+        </div>
+        Note this answer down from your notebook.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: How can the magnifying power of an astronomical telescope be increased? Or, how can the magnifying power of an astronomical telescope be increased?
+    </div>
+    <div class="answer">
+        The magnifying power \(m\) of an astronomical telescope can be increased in the following ways.
+        <ol>
+            <li>By increasing the value of the focal length of the objective lens.</li>
+            <li>By decreasing the value of the focal length of the eyepiece lens.</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: In an astronomical telescope, the objective lens is large and thin while the eye lens is small and thick, why?
+    </div>
+    <div class="answer">
+        In an astronomical telescope, the objective lens is large and thin so that it can gather more light rays and form a clear, real image of the object. Whereas the eye lens is small and thick so that it can magnify that real image and form a viewable virtual image.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: When the diameter of the objective lens of an astronomical telescope is doubled, what effect will it have on the following?
+    </div>
+    <div class="answer">
+        <ol>
+            <li><strong>Magnifying power.</strong></li>
+            <li><strong>Image intensity.</strong></li>
+            <li><strong>Resolving power.</strong></li>
+        </ol>
+        Effect of doubling the diameter of the objective lens:
+        <ol>
+            <li><strong>On magnifying power -</strong> Magnifying power does not depend on the diameter, hence it remains unchanged.</li>
+            <li><strong>On image intensity -</strong> The intensity of the image \((I)\) is proportional to the square of the aperture diameter of the objective in metres \((d)\). Thus when the diameter is doubled, the image intensity becomes four times.</li>
+            <li><strong>On resolving power -</strong> The resolving power of the telescope is proportional to the diameter \((d)\) of the objective lens, so when the diameter is doubled, the resolving power also becomes double.</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What is the difference between the objective lens of a telescope and that of a microscope?
+    </div>
+    <div class="answer">
+        The objective lens of a telescope has a large aperture, whereas the objective lens of a microscope has a small aperture.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Write the difference between a simple microscope and an astronomical telescope. (2022)
+    </div>
+    <div class="answer">
+        The following are the differences between a simple microscope and an astronomical telescope.
+        <ol>
+            <li>A microscope uses a single convex lens, whereas an astronomical telescope uses two convex lenses.</li>
+            <li>A simple microscope is used to view very small objects, whereas an astronomical telescope is used to view large and distant objects.</li>
+            <li>The image formed in a simple microscope is always larger than the actual object. The image formed in an astronomical telescope is always smaller than the actual object.</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Compare a compound microscope and an astronomical telescope.
+    </div>
+    <div class="answer">
+        Comparison of compound microscope and astronomical telescope
+        <table>
+            <tr>
+                <th>Compound microscope</th>
+                <th>Astronomical telescope</th>
+            </tr>
+            <tr>
+                <td>It forms a magnified image of small objects placed nearby.</td>
+                <td>It forms a magnified image of large objects situated at a long distance.</td>
+            </tr>
+            <tr>
+                <td>The focal length of the objective lens is less than the focal length of the eye lens.</td>
+                <td>The focal length of the objective lens is much greater than the focal length of the eye lens.</td>
+            </tr>
+            <tr>
+                <td>The difference between the focal lengths of the objective lens and the eye lens is very small.</td>
+                <td>The difference between the focal lengths of the objective lens and the eye lens is very large.</td>
+            </tr>
+            <tr>
+                <td>The image formed is always larger than the actual object.</td>
+                <td>The image is always smaller than the actual object.</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Explain the terrestrial telescope on the basis of the following. (a) Image formed at the distance of distinct vision. (b) Image formed at infinity.
+    </div>
+    <div class="answer">
+        <strong>Ray diagram for image formation,</strong>
+        <br><br>
+        <strong>Magnifying power when the final image</strong>
+        <br><br>
+        <strong>Construction</strong> - A terrestrial telescope uses three convex lenses. To make the inverted image formed by the telescope erect, a third lens (between the objective lens and the eyepiece lens) is fitted.
+        <br><br>
+        The lens used for this is called the field lens. This lens is placed between the eyepiece lens and the objective lens in such a way that the image formed by the eyepiece lens forms at twice its focal length. The image formed by the eyepiece lens is erect and of the same size, at twice its focal length, towards the eyepiece lens. This image acts as an object for the eyepiece lens.
+        <br><br>
+        The rest of the construction of the terrestrial telescope is the same as that of the astronomical telescope. Hence in this telescope too, the final image can be formed at the least distance of distinct vision or at infinity by moving the eyepiece lens back and forth.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: How is an astronomical telescope converted into a terrestrial telescope? What effect does this have on its magnifying power?
+    </div>
+    <div class="answer">
+        An astronomical telescope is converted into a terrestrial telescope by fitting a convex lens between the objective and the eyepiece.
+        <br><br>
+        <strong>Effect on magnifying power:</strong> There is no change in the magnifying power when an astronomical telescope is converted into a terrestrial telescope.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Write two characteristics of a refracting telescope.
+    </div>
+    <div class="answer">
+        <ol>
+            <li>The image formed by it is brighter compared to the image formed by a reflecting telescope.</li>
+            <li>The image formed by it is free from spherical aberration.</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Write two differences between refracting telescope and reflecting telescope. (2023)
+    </div>
+    <div class="answer">
+        The following are two differences between a refracting telescope and a reflecting telescope.
+        <ol>
+            <li>In a refracting telescope, light from the object is refracted by lenses to form the image, whereas in a reflecting telescope, light is reflected by mirrors to form the image.</li>
+            <li>In a refracting telescope the main part is a convex lens, whereas in a reflecting telescope the main part is a concave mirror.</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What do you understand by the resolving power and limit of resolution of optical instruments? Explain. (Question Bank)
+    </div>
+    <div class="answer">
+        <strong>Resolving power</strong> - The ability of an optical instrument to separately distinguish the images of two closely-spaced objects is called its resolving power.
+        <br><br>
+        <strong>Limit of resolution</strong> - The limit of resolution of an optical instrument is equal to the minimum angular separation subtended at the objective of the instrument by two point objects.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What are the factors on which the resolving power of a telescope depends?
+    </div>
+    <div class="answer">
+        The resolving power of a telescope is inversely proportional to the wavelength of light and directly proportional to the aperture of the telescope's objective.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: The diameter of the objective lens of a telescope is 1 metre. Calculate the resolving power for light of wavelength 4538Å. (2022)
+    </div>
+    <div class="answer">
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What is meant by a defect of vision?
+    </div>
+    <div class="answer">
+        As a person's age increases, or due to other causes, the lens of the eye becomes hardened and the muscles become weak, due to which the real image of an object is not formed on the retina of the eye, and as a result the object appears unclear and blurred. This defect that occurs in the eye is called a defect of vision.
+    </div>
+</div>
+
+</div>
+
+<!-- SCRIPT -->
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("show");
+}
+
+document.addEventListener("click", function(e){
+    if(!e.target.closest(".navbar")){
+        document.getElementById("menu").classList.remove("show");
+    }
+});
+</script>
+
+<!-- Content Protection Scripts -->
+<script>
+// Disable right-click context menu
+document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+
+// Disable text selection
+document.addEventListener("selectstart", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+
+// Disable copy keyboard shortcut (Ctrl+C, Cmd+C)
+document.addEventListener("keydown", function(e) {
+    // Disable PrintScreen and related screenshot keys
+    if (e.key === "PrintScreen" ||
+        e.keyCode === 44 ||  // PrintScreen
+        (e.ctrlKey && e.shiftKey && e.key === "S") ||  // Windows Snipping Tool
+        (e.keyCode === 91 && e.shiftKey && e.key === "5")) {  // Mac Screenshot
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+C and Cmd+C (copy)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "c" || e.keyCode === 67)) {
+        e.preventDefault();
+        alert("Copying content is not allowed on this page.");
+        return false;
+    }
+
+    // Disable Ctrl+A (select all)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "a" || e.keyCode === 65)) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+X (cut)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "x" || e.keyCode === 88)) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable F12 (Developer Tools)
+    if (e.keyCode === 123) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+Shift+I (Developer Tools)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "i" || e.keyCode === 73)) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+Shift+J (Console)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "j" || e.keyCode === 74)) {
+        e.preventDefault();
+        return false;
+    }
+}, false);
+
+// Prevent copy on mouse up
+document.addEventListener("mouseup", function() {
+    document.selection.empty ? document.selection.empty() : window.getSelection().removeAllRanges();
+}, false);
+
+// Disable paste
+document.addEventListener("paste", function(e) {
+    e.preventDefault();
+    alert("Pasting content is not allowed on this page.");
+    return false;
+}, false);
+
+// Add user-select: none CSS dynamically
+document.addEventListener("DOMContentLoaded", function() {
+    document.body.style.userSelect = "none";
+    document.body.style.webkitUserSelect = "none";
+    document.body.style.msUserSelect = "none";
+    document.body.style.mozUserSelect = "none";
+});
+
+// Prevent image download
+document.addEventListener("dragstart", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | Notes</title>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<script>
+window.MathJax={
+ tex:{
+ inlineMath:[
+ ['$','$'],
+ ['\\(','\\)']
+ ]
+}
+};
+</script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<style>
+<style>
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+
+body{
+background:#f5f7fb;
+line-height:1.7;
+}
+
+
+/* NAVBAR */
+
+    .navbar{
+
+      background:rgba(15,23,42,0.45);
+
+      backdrop-filter:blur(10px);
+
+      box-shadow:0 4px 18px rgba(0,0,0,.18);
+
+      padding:10px 0;
+
+      transition:.3s;
+
+    }
+
+    .navbar-brand{
+
+      font-size:28px;
+
+      font-weight:700;
+
+      color:white !important;
+
+    }
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+      .navbar-brand{
+        font-size:40px;
+      }
+/* CONTENT */
+
+.notes-container{
+
+max-width:900px;
+
+margin:100px auto 50px;
+
+padding:20px;
+
+}
+
+.notes-title{
+
+background:#e3f2fd;
+
+color:#1565c0;
+
+padding:10px;
+
+border-left:5px solid #1565c0;
+
+border-radius:50px;
+
+font-size:30px;
+
+font-weight:bold;
+margin-top:100px;
+
+margin-bottom:50px;
+
+}
+
+
+
+.qa-box{
+
+background:white;
+
+padding:22px;
+
+margin-bottom:18px;
+
+border-radius:14px;
+
+border-left:6px solid #1565c0;
+
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+transition:.25s;
+
+}
+
+
+.qa-box:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+
+.question{
+
+font-weight:bold;
+
+color:#1b3a57;
+
+margin-bottom:8px;
+
+}
+.question-image{
+    text-align:center;
+    margin:15px 0;
+    overflow-x:auto;
+}
+
+.question-image img{
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:8px;
+}
+
+
+.answer{
+
+color:#2c3e50;
+
+text-align:justify;
+
+}
+
+
+
+@media(max-width:768px){
+
+.notes-container{
+
+margin-top:80px;
+
+}
+
+
+}
+.formula{
+    overflow-x:auto;
+    overflow-y:hidden;
+    margin:10px 0;
+}
+.answer table{
+    width:100%;
+    border-collapse:collapse;
+    margin:12px 0;
+    display:table;      /* block हटाकर table करें */
+    overflow-x:auto;
+}
+
+.answer th,
+.answer td{
+    border:1px solid #ddd;
+    padding:10px;
+    vertical-align:middle;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+
+पाल <span>स्टडी सेंटर</span>
+
+</a>
+    <button class="navbar-toggler bg-light"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+</div>
+
+</nav>
+
+
+<!-- CONTENT -->
+<div class="container">
+
+ <div class="notes-title">📘 Unit 6(C) - प्रिज्म</div
+>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: प्रिज्म किसे कहते हैं?
+    </div>
+    <div class="answer">
+        प्रिज्म समरूप पारदर्शी माध्यम का एक भाग है, जो किसी भी कोण पर झुकी हुई दो समतल सतहों से घिरा होता है।
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: प्रिज्म से प्रकाश के अपवर्तन को सचित्र समझाइए। (प्रश्न बैंक)
+        <br>
+        अथवा प्रिज्म से प्रकाश के अपवर्तन का नामांकित चित्र बनाइए।
+    </div>
+    <div class="answer">
+        <div class="question-image">
+            <img src="images/image5.png" alt="प्रिज्म से प्रकाश के अपवर्तन का चित्र">
+        </div>
+        <div class="question-image">
+            <img src="images/image7.jpg" alt="प्रिज्म से प्रकाश के अपवर्तन का नामांकित चित्र">
+        </div>
+
+        चित्र में —
+
+        <br><br>
+
+        PQ = आपतित किरण<br>
+        QR = अपवर्तित किरण<br>
+        RS = निर्गत किरण<br>
+        ND/MD = अभिलम्ब<br>
+        \(i\) = आपतन कोण<br>
+        \(r_1/r_2\) = अपवर्तन कोण<br>
+        \(e\) = निर्गत कोण<br>
+        \(d\) = विचलन कोण
+
+        <br><br>
+
+        माना कि प्रिज्म ABC के एक अपवर्तन फलक AB के Q बिन्दु पर प्रकाश किरण PQ अभिलम्ब ND से आपतन कोण \(i\) बनाते हुए आपतित होती है और अभिलम्ब की ओर मुड़ते हुए अपवर्तन कोण \(r_1\) बनाकर गमन करती है।
+
+        <br><br>
+
+        यह किरण प्रिज्म के दूसरे अवयवी तल AC के R बिन्दु पर अभिलम्ब MD से आपतन कोण \(r_2\) बनाते हुए आपतित होती है और अभिलम्ब से दूर हटते हुये निर्गत कोण बनाते हुए RS दिशा में निकल जाती है।
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: प्रिज्म का विचलन कोण किसे कहते हैं? (प्रश्न बैंक)
+    </div>
+    <div class="answer">
+        आपतित किरण व निर्गत किरण के बीच बनने वाला कोण विचलन कोण कहलाता है। इसे \(d\) से व्यक्त करते हैं।
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: विचलन कोण किन कारकों पर निर्भर करता है?
+    </div>
+    <div class="answer">
+        विचलन कोण निम्न कारकों पर निर्भर करता है—
+        <ul>
+            <li>आपतन कोण पर</li>
+            <li>प्रिज्म के पदार्थ पर</li>
+            <li>प्रकाश की तरंगदैर्घ्य पर</li>
+            <li>प्रिज्म के कोण पर</li>
+        </ul>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: न्यूनतम विचलन कोण क्या है?
+    </div>
+    <div class="answer">
+        प्रारंभ में जैसे-जैसे आपतन कोण का मान बढ़ाया जाता है वैसे-वैसे विचलन कोण का मान कम होने लगता है। आपतन कोण के एक विशेष मान के लिए विचलन कोण का मान न्यूनतम होता है। उसके बाद आपतन कोण के मान को और बढ़ाने पर विचलन कोण का मान कम होने के बजाय बढ़ने लगता है। विचलन कोण के इस न्यूनतम मान को ही न्यूनतम विचलन कोण कहते हैं। इसे \(d_m\) से व्यक्त करते हैं।
+
+        <div class="question-image">
+            <img src="images/image4.jpg" alt="आपतन कोण के साथ विचलन कोण के परिवर्तन का ग्राफ">
+        </div>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: न्यूनतम विचलन की शर्तें लिखिए।
+    </div>
+    <div class="answer">
+        न्यूनतम विचलन की स्थिति में —
+        <ol>
+            <li>आपतन कोण व निर्गत कोण बराबर होते हैं। अर्थात \(i = r\)</li>
+            <li>अपवर्तित किरण आधार के समानांतर होती है।</li>
+            <li>दोनों अपवर्तित कोण बराबर होते हैं। अर्थात \(r_1 = r_2\)</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: न्यूनतम विचलन कोण किन-किन कारकों पर निर्भर करता है?
+    </div>
+    <div class="answer">
+        न्यूनतम विचलन कोण निम्न कारकों पर निर्भर करता है—
+        <ol>
+            <li>प्रकाश के रंग पर - बैंगनी रंग के लिए न्यूनतम विचलन कोण का मान सर्वाधिक एवं लाल रंग के लिए न्यूनतम होता है।</li>
+            <li>प्रिज्म के पदार्थ पर - प्रिज्म के पदार्थ का अपवर्तनांक अधिक होने पर न्यूनतम विचलन कोण का मान अधिक होता है।</li>
+            <li>प्रिज्म के कोण पर - प्रिज्म का कोण अधिक होने पर न्यूनतम विचलन कोण का मान अधिक होता है।</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: प्रिज्म के पदार्थ के अपवर्तनांक का सूत्र निगमित कीजिए। (2025)
+        <br>
+        Question: Derive the formula for the refractive index of the material of the prism. (2025)
+    </div>
+    <div class="answer">
+        Prove that the refractive index of the prism is:
+
+        <div class="formula">
+            $$
+            \mu = \frac{\sin\left(\frac{A+\delta_m}{2}\right)}{\sin\left(\frac{A}{2}\right)}
+            $$
+        </div>
+
+        <strong>Proof</strong>
+
+        <div class="question-image">
+            <img src="images/image8.jpg" alt="न्यूनतम विचलन की स्थिति में प्रिज्म से गुजरती प्रकाश किरण का चित्र">
+        </div>
+
+        एक त्रिकोणीय काँच के प्रिज्म ABC के फेस AB पर पड़ने वाली एक मोनोक्रोमैटिक प्रकाश किरण OP पर विचार करें।
+
+        <br><br>
+
+        जब प्रिज्म को मिनिमम डेविएशन (न्यूनतम विचलन) की स्थिति में रखा जाता है, तो प्रकाश की किरण प्रिज्म से सिमेट्रिकली (सममित रूप से) गुजरती है। इस विशेष स्थिति में—
+
+        <br><br>
+
+        विचलन कोण न्यूनतम हो जाता है, यानी \(\delta = \delta_m\)।
+
+        <br><br>
+
+        आपतन कोण और निर्गत कोण बराबर होते हैं, यानी \(i_1 = i_2 = i\)।
+
+        <br><br>
+
+        अपवर्तित किरण PQ आधार BC के समानांतर होती है।
+
+        <br><br>
+
+        दोनों अपवर्तित कोण बराबर होते हैं, यानी \(r_1 = r_2 = r\)।
+
+        <br><br>
+
+        चतुर्भुज APNQ में, अभिलंब कोण \(\angle APN\) और \(\angle AQN\) दोनों \(90^\circ\) हैं।
+
+        <br><br>
+
+        चूंकि \(\angle A + \angle PNQ = 180^\circ\)
+
+        <br><br>
+
+        \(\angle PNQ = 180^\circ - A\)
+
+        <br><br>
+
+        त्रिभुज PNQ में —
+
+        <div class="formula">
+            $$
+            r_1 + r_2 + \angle PNQ = 180^\circ
+            $$
+            $$
+            r + r + 180^\circ - A = 180^\circ
+            $$
+            $$
+            2r - A = 0
+            $$
+            $$
+            2r = A
+            $$
+            $$
+            r = \frac{A}{2}
+            $$
+        </div>
+
+        अब कुल विचलन कोण \(\delta\) दोनों अपवर्तक फलकों पर हुए विचलन का योग है —
+
+        <div class="formula">
+            $$
+            \delta = \delta_1 + \delta_2
+            $$
+            $$
+            \delta = (i_1 - r_1) + (i_2 - r_2)
+            $$
+            $$
+            \delta_m = (i - r) + (i - r)
+            $$
+            $$
+            \delta_m = 2i - 2r
+            $$
+            $$
+            \delta_m = 2i - A
+            $$
+            $$
+            2i = \delta_m + A
+            $$
+            $$
+            i = \frac{\delta_m + A}{2}
+            $$
+        </div>
+
+        स्नेल के नियम के अनुसार, हवा के सापेक्ष प्रिज्म के पदार्थ का अपवर्तनांक \(\mu\) है—
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: सिद्ध कीजिए कि पतले प्रिज्म के लिए \(\delta_m = A(\mu - 1)\)
+    </div>
+    <div class="answer">
+        <strong>प्रमाण:</strong>
+
+        <br><br>
+
+        हम जानते हैं कि प्रिज्म के पदार्थ का अपवर्तनांक है।
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: एक प्रिज्म द्वारा प्रकाश का वर्ण-विक्षेपण किस प्रकार होता है? समझाइये।
+        <br>
+        अथवा प्रिज्म से गुजरने के बाद प्रकाश का वर्ण-विक्षेपण क्यों हो जाता है?
+    </div>
+    <div class="answer">
+        सूर्य-प्रकाश प्रिज्म से गुजरने पर सात रंगों में विभक्त हो जाता है, जिसे वर्ण-विक्षेपण कहते हैं।
+
+        <div class="question-image">
+            <img src="images/image6.jpg" alt="श्वेत प्रकाश का प्रिज्म द्वारा वर्ण-विक्षेपण, सात रंगों का स्पेक्ट्रम">
+        </div>
+
+        <div class="question-image">
+            <img src="images/image9.png" alt="प्रिज्म से लाल तथा बैंगनी रंग के विचलन की तुलना">
+        </div>
+
+        <strong>कारण —</strong> सूर्य-प्रकाश सात रंगों से मिलकर बना होता है। प्रिज्म के पदार्थ का अपवर्तनांक भिन्न-भिन्न रंगों के लिए भिन्न-भिन्न होता है। अतः सूत्र \(d_m = A(u - 1)\) के अनुसार प्रिज्म से गुजरते समय भिन्न-भिन्न रंग की किरणों का विचलन भिन्न-भिन्न होता है, जिससे सूर्य-प्रकाश प्रिज्म से गुजरने पर सात रंगों में विभक्त हो जाता है।
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: काँच के आयताकार गुटके से अपवर्तित प्रकाश में वर्ण-विक्षेपण क्यों नहीं होता है?
+    </div>
+    <div class="answer">
+        गुटके की दोनों समान्तर पृष्ठों से अपवर्तन के बाद निर्गत किरणें आपतित किरणों के समान्तर होती हैं। गुटके के अन्दर श्वेत प्रकाश का वर्ण-विक्षेपण हो जाता है किन्तु जब विभिन्न रंगों की किरणें गुटके से निकलती हैं तो वे एक-दूसरे के समान्तर होती हैं अतः सभी रंग मिलकर पुनः श्वेत प्रकाश का निर्माण कर देते हैं।
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: स्पेक्ट्रम किसे कहते हैं?
+    </div>
+    <div class="answer">
+        विक्षेपण की घटना से प्राप्त रंगों के समुदाय को स्पेक्ट्रम कहते हैं। श्वेत प्रकाश के स्पेक्ट्रम में रंगों का क्रम है - बैंगनी, आसमानी, नीला, हरा, पीला, नारंगी और लाल।
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: कोणीय वर्ण-विक्षेपण की परिभाषा लिखिए तथा इसके लिए सूत्र स्थापित कीजिए।
+    </div>
+    <div class="answer">
+        प्रिज्म से निर्गत् दो चरम रंगों की किरणों के बीच के कोण को कोणीय वर्ण-विक्षेपण कहते हैं। इसे \(\theta\) से व्यक्त करते हैं।
+
+        <br><br>
+
+        यदि बैंगनी रंग का विचलन \(d_V\) तथा लाल रंग का विचलन \(d_R\) हो, तो उन रंगों का कोणीय वर्ण-विक्षेपण—
+
+        <div class="formula">
+            $$
+            \theta = d_V - d_R
+            $$
+        </div>
+
+        <strong>सूत्र स्थापना —</strong>
+
+        <div class="question-image">
+            <img src="images/image3.png" alt="प्रिज्म से बैंगनी तथा लाल रंग के विचलन का चित्र">
+        </div>
+
+        माना कि बैंगनी तथा लाल रंग के लिए प्रिज्म के पदार्थ के अपवर्तनांक क्रमशः \(u_V\) तथा \(u_R\) है। माना प्रिज्म का अपवर्तक कोण \(A\) है, तब—
+
+        <br><br>
+
+        बैंगनी के लिए विचलन कोण
+
+        <div class="formula">
+            $$
+            d_V = A(u_V - 1)
+            $$
+        </div>
+
+        लाल के लिए विचलन कोण
+
+        <div class="formula">
+            $$
+            d_R = A(u_R - 1)
+            $$
+        </div>
+
+        अतः कोणीय वर्ण-विक्षेपण
+
+        <div class="formula">
+            $$
+            \theta = d_V - d_R
+            $$
+            $$
+            \theta = A(u_V - 1) - A(u_R - 1)
+            $$
+            $$
+            \theta = A[(u_V - 1) - (u_R - 1)]
+            $$
+            $$
+            \theta = A[u_V - 1 - u_R + 1]
+            $$
+            $$
+            \boxed{\theta = A[u_V - u_R]}
+            $$
+        </div>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: वर्ण-विक्षेपण क्षमता की परिभाषा लिखिए। इसके लिए सूत्र स्थापित कीजिए।
+    </div>
+    <div class="answer">
+        किन्हीं दो रंगों की किरणों के कोणीय विक्षेपण और माध्य किरण के विचलन के अनुपात को उन रंगों के लिए प्रिज्म की वर्ण-विक्षेपण क्षमता कहते हैं। इसे \(w\) से व्यक्त करते हैं।
+
+        <br><br>
+
+        माना कि बैंगनी, लाल तथा माध्य रंग पीले के लिए प्रिज्म के पदार्थ के विचलन कोण क्रमशः \(d_V\), \(d_R\) तथा \(d_y\) है। अतः वर्ण-विक्षेपण क्षमता—
+
+        <div class="formula">
+            $$
+            w = \frac{d_V - d_R}{d_y}
+            $$
+        </div>
+
+        <strong>सूत्र स्थापना —</strong>
+
+        <div class="question-image">
+            <img src="images/image3.png" alt="प्रिज्म से बैंगनी तथा लाल रंग के विचलन का चित्र">
+        </div>
+
+        माना कि बैंगनी तथा लाल रंग के लिए प्रिज्म के पदार्थ के अपवर्तनांक क्रमशः \(u_V\) तथा \(u_R\) है। माना प्रिज्म का अपवर्तक कोण \(A\) है, तब—
+
+        <br><br>
+
+        बैंगनी के लिए विचलन कोण
+
+        <div class="formula">
+            $$
+            d_V = A(u_V - 1)
+            $$
+        </div>
+
+        लाल के लिए विचलन कोण
+
+        <div class="formula">
+            $$
+            d_R = A(u_R - 1)
+            $$
+        </div>
+
+        पीले रंग के लिए विचलन कोण \(d_y\) =
+
+        <br><br>
+
+        अतः वर्ण-विक्षेपण क्षमता
+
+        <div class="formula">
+            $$
+            W = \frac{\theta}{d_y}
+            $$
+            $$
+            W = \frac{d_V - d_R}{d_y}
+            $$
+            $$
+            W = \frac{A(u_V - 1) - A(u_R - 1)}{A(u_y - 1)}
+            $$
+            $$
+            W = \frac{A[u_V - 1 - u_R + 1]}{A(u_y - 1)}
+            $$
+            $$
+            \boxed{W = \frac{u_V - u_R}{u_y - 1}}
+            $$
+        </div>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: प्रकाश का प्रकीर्णन क्या है?
+    </div>
+    <div class="answer">
+        जब प्रकाश ऐसे सूक्ष्म कणों से टकराता है जिसका आकार प्रकाश की तरंगदैर्ध्य की तुलना में छोटा है तो प्रकाश विभिन्न दिशाओं में प्रकीर्णित हो जाता है, इसे प्रकाश का प्रकीर्णन कहते हैं।
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: रैले का नियम लिखिए।
+    </div>
+    <div class="answer">
+        रैले के अनुसार प्रकीर्णन की तीव्रता तरंगदैर्ध्य के चतुर्थ घात के व्युत्क्रमानुपाती होती है।
+
+        <br><br>
+
+        लाल रंग का तरंगदैर्ध्य अधिकतम होता है अतः लाल रंग की प्रकीर्णन क्षमता (तीव्रता) न्यूनतम होगी।
+
+        <br><br>
+
+        नीले रंग का तरंगदैर्ध्य न्यूनतम होता है अतः नीले रंग की प्रकीर्णन क्षमता (तीव्रता) अधिकतम होगी।
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: सूर्योदय और सूर्यास्त के समय सूर्य लाल दिखाई देता है, क्यों?
+    </div>
+    <div class="answer">
+        सूर्योदय और सूर्यास्त के समय प्रकाश किरणों को सूर्य से हम तक आने में अधिक दूरी तय करनी पड़ती है। अतः लाल रंग का तरंगदैर्ध्य अधिक होने से वायुमण्डल के अणुओं द्वारा उसका प्रकीर्णन बहुत ही कम होता है, जबकि अन्य सभी रंग पूर्णतः प्रकीर्णित हो जाते हैं। अतः सूर्योदय और सूर्यास्त के समय सूर्य लाल दिखाई देता है।
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: आकाश नीला क्यों दिखाई देता है?
+    </div>
+    <div class="answer">
+        रैले के अनुसार, कम तरंगदैर्ध्य वाले प्रकाश का प्रकीर्णन अधिक होता है। हम जानते हैं कि नीले रंग का तरंगदैर्ध्य लाल रंग के तरंगदैर्ध्य से कम होता है। अतः जब सूर्य का प्रकाश वायुमण्डल के अणुओं पर पड़ता है तो नीले रंग का प्रकीर्णन अन्य रंगों की तुलना में अधिक होता है। अतः आकाश नीला दिखाई देता है।
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: खतरे के सिग्नल लाल होते हैं क्यों? (2022)
+    </div>
+    <div class="answer">
+        लाल रंग के प्रकाश की तरंगदैर्ध्य सबसे अधिक होती है, अतः लाल रंग का प्रकाश सबसे कम प्रकीर्णित होता है तथा दूर तक पहुँच सकता है। जिससे सिग्नल को दूर से देखा जा सकता है, इसलिए खतरे का सिग्नल लाल रंग का होता है।
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: इन्द्रधनुष किसे कहते हैं? यह कितने प्रकार का होता है?
+    </div>
+    <div class="answer">
+        वर्षा की बूँदों में सूर्य के प्रकाश के अपवर्तन, परावर्तन और विकिरण से बनने वाला सात रंगों का अर्धवृत्ताकार दृश्य इन्द्रधनुष कहलाता है।
+
+        <br><br>
+
+        इन्द्रधनुष दो प्रकार के होते हैं—
+
+        <br><br>
+
+        <strong>प्राथमिक इन्द्रधनुष</strong> - जब पृथ्वी के समान्तर चलने वाली किरणें जल की बूँदों में केन्द्रों के ऊपर आपतित होती हैं तो किरणों का दो बार अपवर्तन तथा एक बार पूर्ण परावर्तन हो जाता है, इसके कारण जो इन्द्रधनुष बनता है उसे प्राथमिक इन्द्रधनुष कहते हैं।
+
+        <br><br>
+
+        प्राथमिक इन्द्रधनुष की कोणीय चौड़ाई \(2^\circ\) होती है, जिसमें लाल रंग बाह्य किनारे पर तथा बैंगनी रंग आन्तरिक किनारे पर होता है।
+
+        <br><br>
+
+        <strong>द्वितीय इन्द्रधनुष</strong> - जब पृथ्वी के समान्तर चलने वाली किरणें जल की बूँदों में केन्द्रों के नीचे आपतित होती हैं तो किरणों का दो बार अपवर्तन तथा दो बार पूर्ण परावर्तन हो जाता है, इसके कारण जो इन्द्रधनुष बनता है उसे द्वितीय इन्द्रधनुष कहते हैं।
+
+        <br><br>
+
+        द्वितीय इन्द्रधनुष की कोणीय चौड़ाई \(2^\circ\) होती है, जिसमें बैंगनी रंग बाह्य किनारे पर तथा लाल रंग आन्तरिक किनारे पर होता है।
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: प्राथमिक एवं द्वितीयक इन्द्रधनुष में अन्तर लिखिए।
+    </div>
+    <div class="answer">
+        <table>
+            <tr>
+                <th>क्रमांक</th>
+                <th>प्राथमिक इन्द्रधनुष</th>
+                <th>द्वितीयक इन्द्रधनुष</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>इसमें लाल रंग बाह्य किनारे पर तथा बैंगनी रंग आन्तरिक किनारे पर होता है।</td>
+                <td>इसमें बैंगनी रंग बाह्य किनारे पर तथा लाल रंग आन्तरिक किनारे पर होता है।</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>प्राथमिक इन्द्रधनुष तीव्र होता है।</td>
+                <td>द्वितीयक इन्द्रधनुष फीका होता है।</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>इसकी कोणीय चौड़ाई कम होती है।</td>
+                <td>इसकी कोणीय चौड़ाई अधिक होती है।</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>यह द्वितीयक इन्द्रधनुष के नीचे होता है।</td>
+                <td>यह प्राथमिक इन्द्रधनुष के ऊपर होता है।</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>इसका निर्माण दो अपवर्तन एवं एक पूर्ण आन्तरिक परावर्तन के कारण होता है।</td>
+                <td>इसका निर्माण दो अपवर्तन एवं दो पूर्ण आन्तरिक परावर्तन के कारण होता है।</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: एक समबाहु काँच के प्रिज्म पर आपतित प्रकाश की किरण न्यूनतम 30° का विचलन दर्शाती है।
+        <ol>
+            <li>प्रिज्म के माध्यम से प्रकाश की चाल की गणना कीजिए।</li>
+            <li>पहले फलक पर आपतित कोण ज्ञात कीजिए जिससे निर्गत किरण दूसरे फलक के अनुदिश जाए।</li>
+        </ol>
+    </div>
+    <div class="answer">
+        <em>(इस प्रश्न का हल स्रोत दस्तावेज़ में उपलब्ध नहीं है।)</em>
+    </div>
+</div>
+
+</div>
+
+<!-- SCRIPT -->
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("show");
+}
+
+document.addEventListener("click", function(e){
+    if(!e.target.closest(".navbar")){
+        document.getElementById("menu").classList.remove("show");
+    }
+});
+</script>
+
+<!-- Content Protection Scripts -->
+<script>
+// Disable right-click context menu
+document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+
+// Disable text selection
+document.addEventListener("selectstart", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+
+// Disable copy keyboard shortcut (Ctrl+C, Cmd+C)
+document.addEventListener("keydown", function(e) {
+    // Disable PrintScreen and related screenshot keys
+    if (e.key === "PrintScreen" ||
+        e.keyCode === 44 ||  // PrintScreen
+        (e.ctrlKey && e.shiftKey && e.key === "S") ||  // Windows Snipping Tool
+        (e.keyCode === 91 && e.shiftKey && e.key === "5")) {  // Mac Screenshot
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+C and Cmd+C (copy)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "c" || e.keyCode === 67)) {
+        e.preventDefault();
+        alert("Copying content is not allowed on this page.");
+        return false;
+    }
+
+    // Disable Ctrl+A (select all)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "a" || e.keyCode === 65)) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+X (cut)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "x" || e.keyCode === 88)) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable F12 (Developer Tools)
+    if (e.keyCode === 123) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+Shift+I (Developer Tools)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "i" || e.keyCode === 73)) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+Shift+J (Console)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "j" || e.keyCode === 74)) {
+        e.preventDefault();
+        return false;
+    }
+}, false);
+
+// Prevent copy on mouse up
+document.addEventListener("mouseup", function() {
+    document.selection.empty ? document.selection.empty() : window.getSelection().removeAllRanges();
+}, false);
+
+// Disable paste
+document.addEventListener("paste", function(e) {
+    e.preventDefault();
+    alert("Pasting content is not allowed on this page.");
+    return false;
+}, false);
+
+// Add user-select: none CSS dynamically
+document.addEventListener("DOMContentLoaded", function() {
+    document.body.style.userSelect = "none";
+    document.body.style.webkitUserSelect = "none";
+    document.body.style.msUserSelect = "none";
+    document.body.style.mozUserSelect = "none";
+});
+
+// Prevent image download
+document.addEventListener("dragstart", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+</script>
+
+</body>
+</html>

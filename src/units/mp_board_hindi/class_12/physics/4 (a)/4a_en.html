@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | Notes</title>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<script>
+window.MathJax={
+ tex:{
+ inlineMath:[
+ ['$','$'],
+ ['\\(','\\)']
+ ]
+}
+};
+</script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<style>
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+
+body{
+background:#f5f7fb;
+line-height:1.7;
+}
+
+
+/* NAVBAR */
+
+    .navbar{
+
+      background:rgba(15,23,42,0.45);
+
+      backdrop-filter:blur(10px);
+
+      box-shadow:0 4px 18px rgba(0,0,0,.18);
+
+      padding:10px 0;
+
+      transition:.3s;
+
+    }
+
+    .navbar-brand{
+
+      font-size:28px;
+
+      font-weight:700;
+
+      color:white !important;
+
+    }
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+      .navbar-brand{
+        font-size:40px;
+      }
+/* CONTENT */
+
+.notes-container{
+
+max-width:900px;
+
+margin:100px auto 50px;
+
+padding:20px;
+
+}
+
+.notes-title{
+
+background:#e3f2fd;
+
+color:#1565c0;
+
+padding:10px;
+
+border-left:5px solid #1565c0;
+
+border-radius:50px;
+
+font-size:30px;
+
+font-weight:bold;
+margin-top:100px;
+
+margin-bottom:50px;
+
+}
+
+
+
+.qa-box{
+
+background:white;
+
+padding:22px;
+
+margin-bottom:18px;
+
+border-radius:14px;
+
+border-left:6px solid #1565c0;
+
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+transition:.25s;
+
+}
+
+
+.qa-box:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+
+.question{
+
+font-weight:bold;
+
+color:#1b3a57;
+
+margin-bottom:8px;
+
+}
+.question-image{
+    text-align:center;
+    margin:15px 0;
+    overflow-x:auto;
+}
+
+.question-image img{
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:8px;
+}
+
+
+.answer{
+
+color:#2c3e50;
+
+text-align:justify;
+
+}
+
+
+
+@media(max-width:768px){
+
+.notes-container{
+
+margin-top:80px;
+
+}
+
+
+}
+.formula{
+    overflow-x:auto;
+    overflow-y:hidden;
+    margin:10px 0;
+}
+.answer table{
+    width:100%;
+    border-collapse:collapse;
+    margin:12px 0;
+    display:table;      /* keep as table, not block */
+    overflow-x:auto;
+}
+
+.answer th,
+.answer td{
+    border:1px solid #ddd;
+    padding:10px;
+    vertical-align:middle;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+
+Pal <span>Study Center</span>
+
+</a>
+    <button class="navbar-toggler bg-light"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+</div>
+
+</nav>
+
+
+<!-- CONTENT -->
+<div class="container">
+
+ <div class="notes-title">📘 Unit 5(A) - Electromagnetic Induction</div
+>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What is magnetic flux? Write its unit.
+    </div>
+    <div class="answer">
+        The number of perpendicular magnetic field lines passing through an area is called the magnetic flux. It is denoted by \(\phi\).
+        <br><br>
+        <div class="question-image">
+            <img src="images/image8.png" alt="Magnetic flux">
+        </div>
+        <br><br>
+        If the magnetic field is \(B\) and it makes an angle \(\theta\) with the normal to the area \(A\), then
+        <div class="formula">
+        $$
+        \phi = BA\cos\theta
+        $$
+        </div>
+        This is a scalar quantity.
+        <br><br>
+        Its SI unit is the weber (Wb).
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What is the weber?
+    </div>
+    <div class="answer">
+        The weber is the SI unit of magnetic flux.
+        <br><br>
+        When a magnetic field of 1 tesla acts perpendicularly on an area of 1 m², it is called one weber. It is denoted by the letters 'Wb'.
+        <br><br>
+        1 weber \(=\) 1 volt-second
+        <br><br>
+        1 weber \(= 10^{8}\) maxwell
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What is meant by electromagnetic induction?
+    </div>
+    <div class="answer">
+        When the magnetic flux passing through a circuit changes, an electromotive force (emf) is induced in that circuit, due to which an induced current begins to flow in the circuit. This phenomenon is called electromagnetic induction.
+        <br><br>
+        <div class="question-image">
+            <img src="images/image13.png" alt="Faraday's electromagnetic induction experiment">
+        </div>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: In electromagnetic induction, which form of energy is converted into which other form?
+    </div>
+    <div class="answer">
+        In the process of electromagnetic induction, mechanical energy is converted into electrical energy.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Write and explain Faraday's laws of electromagnetic induction.
+    </div>
+    <div class="answer">
+        Faraday stated two laws of electromagnetic induction—
+        <ol>
+            <li><strong>First law:</strong> Whenever the magnetic flux linked with a closed circuit changes, an electromotive force (emf) is induced in the circuit.</li>
+            <li><strong>Second law:</strong> The magnitude of the induced emf is proportional to the rate of change of magnetic flux.</li>
+        </ol>
+<br><br>
+        <div class="formula">
+        $$
+        e=-\frac{d\phi}{dt}
+        $$
+        </div>
+        The negative sign represents Lenz's law.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What are the rules used to determine the direction of the induced current in electromagnetic induction?
+    </div>
+    <div class="answer">
+        The direction of the induced current is found using the following rules –
+        <ol>
+            <li>Fleming's right-hand rule</li>
+            <li>Lenz's law</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: State Fleming's right-hand rule.
+    </div>
+    <div class="answer">
+        If the thumb, forefinger and middle finger of the right hand are held mutually perpendicular such that the forefinger points in the direction of the magnetic field \(B\) and the thumb points in the direction of motion \(v\) of the conductor, then the middle finger gives the direction of the induced current \(I\).
+        <br><br>
+        <div class="question-image">
+            <img src="images/image20.png" alt="Fleming's right-hand rule">
+        </div>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: State Lenz's law.
+    </div>
+    <div class="answer">
+        According to Lenz's law, the direction of the induced current is always such that it opposes the cause that produced it. It follows the law of conservation of energy.
+        <br><br>
+        <strong>Explanation:</strong>
+        <br><br>
+        <div class="question-image">
+            <img src="images/image22.png" alt="Direction of induced current">
+        </div>
+        <ol>
+            <li>When we bring the N pole of a magnet closer to a coil, the magnetic flux through the coil increases. Hence, according to Lenz's law, the direction of the induced current will be such that it opposes this increasing flux, i.e., the nearest face of the coil itself becomes an N pole so as to prevent the magnet from approaching.</li>
+            <li>Similarly, when we move the N pole of a magnet away from the coil, the magnetic flux through the coil decreases. Hence, according to Lenz's law, the direction of the induced current will be such that it opposes this decreasing flux, i.e., the nearest face of the coil itself becomes an S pole so as to prevent the magnet from moving away.</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Prove that Lenz's law obeys the law of conservation of energy.
+    </div>
+    <div class="answer">
+        When we bring the N pole of a magnet closer to a coil, the nearest face of the coil itself acts like an N pole, which repels the N pole of the magnet. Hence we have to do work to push the magnet closer. This very work gets converted into electrical energy in the form of the induced current in the coil.
+        <br><br>
+        Similarly, when we move the N pole of a magnet away from the coil, the nearest face of the coil itself acts like an S pole, which attracts the N pole of the magnet. Hence we have to do work to move the magnet away. This very work gets converted into electrical energy in the form of the induced current in the coil.
+        <br><br>
+        Thus, Lenz's law obeys the law of conservation of energy.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What is self-induction?
+    </div>
+    <div class="answer">
+        When the current flowing in a coil is changed, the magnetic flux produced in that same coil also changes. Due to this change in flux, an induced electromotive force is produced in that same coil, due to which an induced current begins to flow in the opposite direction in that same coil. This phenomenon is called self-induction.
+        <br><br>
+        <div class="question-image">
+            <img src="images/image7.png" alt="Self-induction">
+        </div>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What is the coefficient of self-induction? Write its definition and unit.
+    </div>
+    <div class="answer">
+        If a current \(I\) is flowing in a coil, the magnetic flux \(\Phi\) produced is proportional to the current.
+        <div class="formula">
+        $$
+        \Phi \propto I
+        $$
+        $$
+        \Phi = LI
+        $$
+        </div>
+        where \(L\) is a constant called the coefficient of self-induction.
+        <br><br>
+        <strong>Coefficient of self-induction:</strong> When unit current flows in a coil, the total magnetic flux linked with the coil is called the coefficient of self-induction of that coil.
+        <br><br>
+        <strong>Unit:</strong> The SI unit of the coefficient of self-induction is the henry (H).
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What is the henry?
+    </div>
+    <div class="answer">
+        The henry is the SI unit of self-induction.
+        <br><br>
+        When unit current is passed through a coil and the total magnetic flux linked with it is one weber, then the coefficient of self-induction of that coil is called one henry.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Derive the formula for the coefficient of self-induction of a plane circular coil.
+    </div>
+    <div class="answer">
+        If a plane circular coil of \(n\) turns has radius \(r\) and carries a current \(I\), then the intensity of the magnetic field produced at its centre will be—
+        <div class="formula">
+        $$
+        B=\frac{\mu_0 nI}{2r}
+        $$
+        </div>
+<br><br>
+        The total magnetic flux linked with the plane circular coil—
+        <div class="formula">
+        $$
+        \Phi = B\times n(\pi r^2)
+        $$
+        $$
+        \Phi = \left(\frac{\mu_0 nI}{2r}\right)\times n(\pi r^2)
+        $$
+        $$
+        \Phi = \frac{\mu_0 \pi n^2 r I}{2}
+        $$
+        </div>
+        <strong>Self Inductance:</strong>
+        <div class="formula">
+        $$
+        L=\frac{\Phi}{I}
+        $$
+        $$
+        \boxed{L=\frac{\mu_0 \pi n^2 r}{2}}
+        $$
+        </div>
+</div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Write the factors that affect the coefficient of self-induction of a plane circular coil.
+    </div>
+    <div class="answer">
+        The coefficient of self-induction of a coil is as follows.
+        <br><br>
+The factors that affect the self-inductance of a coil are as follows—
+        <ol>
+            <li>\(L \propto \mu_0\), i.e., increasing the magnetic permeability \((\mu_0)\) of the medium placed between the turns of the coil increases the coefficient of self-induction \(L\).</li>
+            <li>\(L \propto n^2\), i.e., increasing the number of turns of the coil increases the coefficient of self-induction \(L\).</li>
+            <li>\(L \propto r\), i.e., increasing the area \(A\) of the coil increases the coefficient of self-induction \(L\).</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Derive the expression for the self-inductance of a long solenoid.
+    </div>
+    <div class="answer">
+        <div class="question-image">
+            <img src="images/image16.png" alt="Solenoid">
+        </div>
+        Let there be a solenoid whose cross-sectional area is \(A\), length \(l\), and total number of turns \(n\). If a current \(I\) flows through it, the intensity of the magnetic field produced on its axis will be—
+        <div class="formula">
+        $$
+        B=\frac{\mu_0 nI}{l}
+        $$
+        </div>
+<br><br>
+        The total magnetic flux linked with the solenoid—
+        <div class="formula">
+        $$
+        \Phi = B\times \text{effective area}
+        $$
+        Since there are a total of \(n\) turns
+        $$
+        \Phi = \left(\frac{\mu_0 nI}{l}\right)\times nA
+        $$
+        $$
+        \Phi = \frac{\mu_0 n^2 IA}{l}
+        $$
+        </div>
+        <strong>Self Inductance:</strong>
+        <div class="formula">
+        $$
+        L=\frac{\Phi}{I}
+        $$
+        $$
+        \boxed{L=\frac{\mu_0 n^2 A}{l}}
+        $$
+        </div>
+</div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Write the factors that affect the self-inductance of a solenoid.
+    </div>
+    <div class="answer">
+        The coefficient of self-induction of a solenoid is as follows.
+        <br><br>
+The factors that affect the self-inductance of a solenoid are as follows.
+        <ol>
+            <li>\(L \propto \mu_0\), i.e., increasing the magnetic permeability \((\mu_0)\) of the medium placed inside the solenoid increases the coefficient of self-induction \(L\).</li>
+            <li>\(L \propto n^2\), i.e., increasing the number of turns of the solenoid increases the coefficient of self-induction \(L\).</li>
+            <li>\(L \propto A\), i.e., increasing the area \(A\) of the solenoid increases the coefficient of self-induction \(L\).</li>
+            <li>\(L \propto \dfrac{1}{l}\), i.e., decreasing the length of the solenoid increases the coefficient of self-induction \(L\).</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What is mutual induction?
+    </div>
+    <div class="answer">
+        When the current in one coil changes, the flux linked with another coil placed near it also changes, which produces an induced current in the second coil. This phenomenon is called mutual induction.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What is mutual inductance? Define it and state its unit.
+    </div>
+    <div class="answer">
+        Suppose the flux \(\Phi\) linked with a secondary coil, due to a current \(I\) flowing in the primary coil, is given by
+        <div class="formula">
+        $$
+        \Phi \propto I
+        $$
+        $$
+        \Phi = MI
+        $$
+        </div>
+        where \(M\) is a constant called the coefficient of mutual inductance of the coils.
+        <br><br>
+        <strong>Coefficient of mutual inductance:</strong> When unit current flows in the primary coil, the total magnetic flux linked with the secondary coil is called the coefficient of mutual inductance of that pair of coils.
+        <br><br>
+        <strong>Unit:</strong> The SI unit of the coefficient of mutual induction is the henry (H).
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Derive the formula for the coefficient of mutual induction between two plane circular coils.
+    </div>
+    <div class="answer">
+        <div class="question-image">
+            <img src="images/image15.png" alt="Two plane circular coils">
+        </div>
+        Let the radii of two plane circular coils be \(r_1\) and \(r_2\) respectively, and let the number of turns in them be \(n_1\) and \(n_2\).
+        <br><br>
+        Further, suppose a current \(I\) flows in the primary coil, due to which the magnetic field produced at the centre of the first coil will be as follows.
+        <div class="formula">
+        $$
+        B=\frac{\mu_0 n_1 I}{2r}
+        $$
+        </div>
+        Hence, the magnetic flux linked with the second coil—
+        <div class="formula">
+        $$
+        \phi = B\times \text{effective area of the coil}
+        $$
+        $$
+        \phi = \left(\frac{\mu_0 n_1 I}{2r}\right)\times n_2(\pi r^2)
+        $$
+        $$
+        \phi = \frac{\mu_0 \pi n_1 n_2 r I}{2}
+        $$
+        </div>
+<br><br>
+        Hence, the coefficient of mutual induction of the coils—
+        <div class="formula">
+        $$
+        M=\frac{\phi}{I}
+        $$
+        $$
+        M=\frac{\left(\dfrac{\mu_0 \pi n_1 n_2 rI}{2}\right)}{I}
+        $$
+        $$
+        \boxed{M=\frac{\mu_0 \pi n_1 n_2 r}{2}}
+        $$
+        </div>
+</div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Write the factors that affect the coefficient of mutual induction of two coils.
+    </div>
+    <div class="answer">
+        The coefficient of mutual induction of two coils is as follows.
+        <br><br>
+The factors that affect the coefficient of mutual induction of two coils are as follows.
+        <ol>
+            <li>\(M \propto \mu_0\), i.e., increasing the magnetic permeability \((\mu_0)\) of the medium placed between the coils increases the coefficient of mutual induction \(M\).</li>
+            <li>\(M \propto n_1 n_2\), i.e., increasing the number of turns of both coils increases the coefficient of mutual induction \(M\).</li>
+            <li>\(M \propto r\), i.e., increasing the radius \(r\) of the second coil increases the coefficient of mutual induction \(M\).</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Derive the formula for the coefficient of mutual induction between two coaxial current-carrying solenoids.
+    </div>
+    <div class="answer">
+        <div class="question-image">
+            <img src="images/image5.png" alt="B = μ₀n₁i/l and φ = μ₀n₁n₂iA/l">
+        </div>
+        Let two coaxial current-carrying solenoids have number of turns \(n_1\) and \(n_2\) respectively. Both solenoids have length \(l\), and the cross-sectional area of the secondary solenoid is \(A\).
+        <br><br>
+        Suppose a current \(I\) flows in the primary solenoid, due to which the magnetic field produced inside it will be—
+        <div class="formula">
+        $$
+        B=\frac{\mu_0 n_1 I}{l}
+        $$
+        </div>
+        Hence, the magnetic flux linked with the second solenoid—
+        <div class="formula">
+        $$
+        \phi = B\times \text{effective area}
+        $$
+        $$
+        \phi = \left(\frac{\mu_0 n_1 I}{l}\right) n_2 A
+        $$
+        $$
+        \phi = \frac{\mu_0 n_1 n_2 IA}{l}
+        $$
+        </div>
+<br><br>
+        Hence, the coefficient of mutual induction of the solenoids—
+        <div class="formula">
+        $$
+        M=\frac{\phi}{I}
+        $$
+        $$
+        M=\frac{\left(\dfrac{\mu_0 n_1 n_2 IA}{l}\right)}{I}
+        $$
+        $$
+        \boxed{M=\frac{\mu_0 n_1 n_2 A}{l}}
+        $$
+        </div>
+</div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Write the factors that affect the coefficient of mutual induction between two solenoids.
+    </div>
+    <div class="answer">
+        The coefficient of mutual induction between two solenoids is as follows.
+        <br><br>
+The factors that affect the coefficient of mutual induction between two solenoids are as follows.
+        <ol>
+            <li>\(M \propto \mu_0\), i.e., increasing the magnetic permeability \((\mu_0)\) of the medium placed between the solenoids increases the coefficient of mutual induction \(M\).</li>
+            <li>\(M \propto n_1 n_2\), i.e., increasing the number of turns of both solenoids increases the coefficient of mutual induction \(M\).</li>
+            <li>\(M \propto A\), i.e., increasing the area \(A\) of the second solenoid increases the coefficient of mutual induction \(M\).</li>
+            <li>\(M \propto \dfrac{1}{l}\), i.e., decreasing the length of the solenoids increases the coefficient of mutual induction \(M\).</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Write the difference between self-induction and mutual induction.
+    </div>
+    <div class="answer">
+        <table>
+            <tr>
+                <th>Self-induction</th>
+                <th>Mutual induction</th>
+            </tr>
+            <tr>
+                <td>
+                    <ol>
+                        <li>This phenomenon occurs in the same coil when the current flowing through it changes.</li>
+                        <li>Only one coil is involved in this phenomenon.</li>
+                        <li>The induced current affects the main current.</li>
+                    </ol>
+                </td>
+                <td>
+                    <ol>
+                        <li>This phenomenon occurs in another coil placed near the coil in which the current is changing.</li>
+                        <li>Two coils are involved in this phenomenon.</li>
+                        <li>The induced current is produced in the second coil, so the main current is not affected.</li>
+                    </ol>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: What are eddy currents? What are the losses caused by eddy currents, and what are their uses?
+    </div>
+    <div class="answer">
+        When a changing magnetic field passes through a conducting plate, circulating currents are produced in the plate, which are called eddy currents.
+        <br><br>
+        <div class="question-image">
+            <img src="images/image9.png" alt="Eddy currents">
+        </div>
+        <strong>Losses:</strong>
+        <ol>
+            <li>Heat is dissipated in the metal.</li>
+            <li>Energy loss occurs in machines.</li>
+        </ol>
+        <strong>Uses:</strong>
+        <ol>
+            <li>To control the motion in electric meters.</li>
+            <li>In induction heaters and braking.</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Why is an electric spark seen at the switch when an electric circuit is closed?
+    </div>
+    <div class="answer">
+        When a switch is closed, a sudden high current flows in the circuit. When the switch contacts break, an electric spark appears due to electrical breakdown of the air.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Why does a bird sitting on a high-voltage current-carrying wire fly away as soon as the current is switched on?
+    </div>
+    <div class="answer">
+        In a wire at high voltage, the electric field is very strong. A charge is also induced on the bird's body, and due to the resulting electrical attraction and repulsion, the bird receives a shock and flies away.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Q: Why is the wire used to make the resistance coil inside a resistance box doubled over?
+    </div>
+    <div class="answer">
+        Doubling the wire cancels out the eddy currents that would otherwise be produced in the resistance box. This reduces energy loss and heating.
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Multiple Choice Questions (MCQ)
+    </div>
+    <div class="answer">
+        <ol>
+            <li>Q.1 The unit of self-induction is –<br>(a) weber&nbsp;&nbsp;&nbsp;(b) tesla&nbsp;&nbsp;&nbsp;(c) henry&nbsp;&nbsp;&nbsp;(d) newton<br><strong>Answer – (c) henry</strong></li>
+            <li>Q.2 If the rate of change of current \(I\) in a coil is \(dI/dt\), the emf produced will be –<br>(a) \(e = L\,dI/dt\)&nbsp;&nbsp;&nbsp;(b) \(e = L/(dI/dt)\)&nbsp;&nbsp;&nbsp;(c) \(e = I/L\)&nbsp;&nbsp;&nbsp;(d) \(e = dt/dI\)<br><strong>Answer – (a)</strong></li>
+            <li>Q.3 The unit of mutual inductance between two coils is –<br>(a) weber&nbsp;&nbsp;&nbsp;(b) henry&nbsp;&nbsp;&nbsp;(c) ohm&nbsp;&nbsp;&nbsp;(d) tesla<br><strong>Answer – (b) henry</strong></li>
+            <li>Q.4 The coefficient of self-induction of a coil depends on?<br>(a) the length of the coil&nbsp;&nbsp;&nbsp;(b) the number of turns of the coil&nbsp;&nbsp;&nbsp;(c) the area of the coil&nbsp;&nbsp;&nbsp;(d) all of the above<br><strong>Answer – (d)</strong></li>
+            <li>Q.5 The relation \(M = \sqrt{L_1 L_2}\) is called –<br>(a) Fleming's rule&nbsp;&nbsp;&nbsp;(b) Maxwell's rule&nbsp;&nbsp;&nbsp;(c) the rule of coupled coils&nbsp;&nbsp;&nbsp;(d) Faraday's law<br><strong>Answer – (c)</strong></li>
+            <li>Q.6 What gives the direction of the induced current?<br>(a) Faraday's law&nbsp;&nbsp;&nbsp;(b) Lenz's law&nbsp;&nbsp;&nbsp;(c) Ohm's law&nbsp;&nbsp;&nbsp;(d) Coulomb's law<br><strong>Answer – (b)</strong></li>
+            <li>Q.7 The SI unit of magnetic flux is –<br>(a) tesla&nbsp;&nbsp;&nbsp;(b) weber&nbsp;&nbsp;&nbsp;(c) henry&nbsp;&nbsp;&nbsp;(d) ampere<br><strong>Answer – (b) weber</strong></li>
+            <li>Q.8 When flux changes with time, what is produced?<br>(a) induced current&nbsp;&nbsp;&nbsp;(b) induced emf&nbsp;&nbsp;&nbsp;(c) both (a) and (b)&nbsp;&nbsp;&nbsp;(d) none of these<br><strong>Answer – (c)</strong></li>
+            <li>Q.9 The coefficient of self-induction of a coil will be doubled if –<br>(a) the number of turns is doubled&nbsp;&nbsp;&nbsp;(b) the length is halved&nbsp;&nbsp;&nbsp;(c) the area is doubled&nbsp;&nbsp;&nbsp;(d) all of the above<br><strong>Answer – (d)</strong></li>
+            <li>Q.10 If the current in a circuit is increasing, in which direction will the induced current be?<br>(a) in the direction of the increase&nbsp;&nbsp;&nbsp;(b) opposite to the direction of the increase&nbsp;&nbsp;&nbsp;(c) in both directions&nbsp;&nbsp;&nbsp;(d) zero<br><strong>Answer – (b)</strong></li>
+            <li>Q.11 Which law does Lenz's law follow?<br>(a) the law of conservation of energy&nbsp;&nbsp;&nbsp;(b) the law of conservation of momentum&nbsp;&nbsp;&nbsp;(c) Ohm's law&nbsp;&nbsp;&nbsp;(d) Coulomb's law<br><strong>Answer – (a)</strong></li>
+            <li>Q.12 The definition \(L = N\phi/I\) is for –<br>(a) resistance&nbsp;&nbsp;&nbsp;(b) capacitance&nbsp;&nbsp;&nbsp;(c) coefficient of self-induction&nbsp;&nbsp;&nbsp;(d) coefficient of mutual induction<br><strong>Answer – (c)</strong></li>
+            <li>Q.13 The coefficient of self-induction of a solenoid is –<br>(a) \(\mu_0 n^2Al\)&nbsp;&nbsp;&nbsp;(b) \(\mu_0 n^2Al\)&nbsp;&nbsp;&nbsp;(c) \(\left(\mu_0 N^2 A\right)/l\)&nbsp;&nbsp;&nbsp;(d) \(\mu_0 A^2 N\)<br><strong>Answer – (c)</strong></li>
+            <li>Q.14 The induced emf depends on?<br>(a) the rate of change of flux&nbsp;&nbsp;&nbsp;(b) the strength of the current&nbsp;&nbsp;&nbsp;(c) the resistance&nbsp;&nbsp;&nbsp;(d) the temperature<br><strong>Answer – (a)</strong></li>
+            <li>Q.15 What is produced when a conductor moves in a magnetic field?<br>(a) magnetic force&nbsp;&nbsp;&nbsp;(b) electric force&nbsp;&nbsp;&nbsp;(c) induced emf&nbsp;&nbsp;&nbsp;(d) resistance<br><strong>Answer – (c)</strong></li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Fill in the Blanks
+    </div>
+    <div class="answer">
+        <ol>
+            <li>1. The unit of the coefficient of self-induction is ________. <strong>Answer – henry</strong></li>
+            <li>2. Lenz's law obeys the conservation of ________. <strong>Answer – energy</strong></li>
+            <li>3. The coefficient of mutual induction is expressed as \(M = \sqrt{L_1 L_2}\) when the coupling is ________. <strong>Answer – ideal</strong></li>
+            <li>4. The unit of magnetic flux is ________. <strong>Answer – weber</strong></li>
+            <li>5. Induced emf = ________ . <strong>Answer – \(e = -d\phi/dt\)</strong></li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        Match the Following
+    </div>
+    <div class="answer">
+        <table>
+            <tr>
+                <th>Column A</th>
+                <th>Column B</th>
+            </tr>
+            <tr>
+                <td>(1) Faraday's law</td>
+                <td>(a) Direction of induced current</td>
+            </tr>
+            <tr>
+                <td>(2) Lenz's law</td>
+                <td>(b) Induced emf</td>
+            </tr>
+            <tr>
+                <td>(3) Self-induction</td>
+                <td>(c) \(L = N\phi/I\)</td>
+            </tr>
+            <tr>
+                <td>(4) Mutual induction</td>
+                <td>(d) \(M = N_2\phi_{21}/I_1\)</td>
+            </tr>
+            <tr>
+                <td>(5) Unit henry</td>
+                <td>(e) Self-induction</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- SCRIPT -->
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("show");
+}
+
+document.addEventListener("click", function(e){
+    if(!e.target.closest(".navbar")){
+        document.getElementById("menu").classList.remove("show");
+    }
+});
+</script>
+
+<!-- Content Protection Scripts -->
+<script>
+// Disable right-click context menu
+document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+
+// Disable text selection
+document.addEventListener("selectstart", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+
+// Disable copy keyboard shortcut (Ctrl+C, Cmd+C)
+document.addEventListener("keydown", function(e) {
+    // Disable PrintScreen and related screenshot keys
+    if (e.key === "PrintScreen" ||
+        e.keyCode === 44 ||  // PrintScreen
+        (e.ctrlKey && e.shiftKey && e.key === "S") ||  // Windows Snipping Tool
+        (e.keyCode === 91 && e.shiftKey && e.key === "5")) {  // Mac Screenshot
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+C and Cmd+C (copy)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "c" || e.keyCode === 67)) {
+        e.preventDefault();
+        alert("Copying content is not allowed on this page.");
+        return false;
+    }
+
+    // Disable Ctrl+A (select all)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "a" || e.keyCode === 65)) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+X (cut)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "x" || e.keyCode === 88)) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable F12 (Developer Tools)
+    if (e.keyCode === 123) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+Shift+I (Developer Tools)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "i" || e.keyCode === 73)) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+Shift+J (Console)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "j" || e.keyCode === 74)) {
+        e.preventDefault();
+        return false;
+    }
+}, false);
+
+// Prevent copy on mouse up
+document.addEventListener("mouseup", function() {
+    document.selection.empty ? document.selection.empty() : window.getSelection().removeAllRanges();
+}, false);
+
+// Disable paste
+document.addEventListener("paste", function(e) {
+    e.preventDefault();
+    alert("Pasting content is not allowed on this page.");
+    return false;
+}, false);
+
+// Add user-select: none CSS dynamically
+document.addEventListener("DOMContentLoaded", function() {
+    document.body.style.userSelect = "none";
+    document.body.style.webkitUserSelect = "none";
+    document.body.style.msUserSelect = "none";
+    document.body.style.mozUserSelect = "none";
+});
+
+// Prevent image download
+document.addEventListener("dragstart", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+</script>
+
+</body>
+</html>
