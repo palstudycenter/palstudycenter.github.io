@@ -100,7 +100,23 @@ const PAL_STUDY_DATA = {
       ]
     },
     "Class 11th": {
-      "भौतिकी": ["यूनिट 1 - मापन", "यूनिट 2(A) - गति", "यूनिट 2(B) - सदिश", "यूनिट 2(C) - प्रक्षेप्य गति", "यूनिट 3(A) - गति के नियम", "यूनिट 3(B) - वृत्तीय गति", "यूनिट 4 - कार्य ऊर्जा तथा शक्ति", "यूनिट 5 - गुरुत्वाकर्षण"],
+      "भौतिकी": [
+        "यूनिट 1 - मापन",
+        "यूनिट 2(A) - गति",
+        "यूनिट 2(B) - सदिश",
+        "यूनिट 2(C) - प्रक्षेप्य गति",
+        "यूनिट 3(A) - गति के नियम",
+        "यूनिट 3(B) - वृत्तीय गति",
+        "यूनिट 4 - कार्य ऊर्जा तथा शक्ति",
+        "यूनिट 5 - कणों के निकाय तथा घूर्णी गति",
+        "यूनिट 6 - गुरुत्वाकर्षण",
+        "यूनिट 7(A) - ठोसों के यांत्रिक गुण",
+        "यूनिट 7(B) - तरलों के यांत्रिक गुण",
+        "यूनिट 8(A) - द्रव्य के तापीय गुण",
+        "यूनिट 8(B) - ऊष्मागतिकी",
+        "यूनिट 9 - अणुगति सिद्धांत",
+        "यूनिट 10 - दोलन एवं तरंगें"
+      ],
       "रसायन शास्त्र ": ["यूनिट 1 - रासायनिक संयोग के नियम", "यूनिट 2 - परमाणु संरचना", "यूनिट 3 - आवर्त नियम", "यूनिट 4 - रासायनिक बंध", "यूनिट 5 - ऊष्मागतिकी",  "यूनिट 6 - रासायनिक साम्य",  "यूनिट 7 - रेडॉक्स अभिक्रिया", "यूनिट 8 - कार्बनिक रसायन - कुछ आधारभूत सिद्धांत तथा तकनीकें",  "यूनिट 9 - हाइड्रोकार्बन"],
       "गणित": [],
       "जीवविज्ञान": [
@@ -127,7 +143,21 @@ const PAL_STUDY_DATA = {
       "हिंदी": []
     },
     "Class 10th": {
-      "विज्ञान": ["रासायनिक अभिक्रियाएँ एवं समीकरण", "अम्ल, क्षार एवं लवण", "धातु एवं अधातु", "कार्बन एवं उसके यौगिक", "जीव क्रियाएँ"],
+      "विज्ञान": [
+        "अध्याय 1: रासायनिक अभिक्रियाएँ एवं समीकरण",
+        "अध्याय 2: अम्ल, क्षार एवं लवण",
+        "अध्याय 3: धातु एवं अधातु",
+        "अध्याय 4: कार्बन एवं उसके यौगिक",
+        "अध्याय 5: जैव प्रक्रम",
+        "अध्याय 6: नियंत्रण एवं समन्वय",
+        "अध्याय 7: जीव जनन कैसे करते हैं?",
+        "अध्याय 8: आनुवंशिकता",
+        "अध्याय 9: प्रकाश – परावर्तन तथा अपवर्तन",
+        "अध्याय 10: मानव नेत्र तथा रंग-बिरंगा संसार",
+        "अध्याय 11: विद्युत",
+        "अध्याय 12: विद्युत धारा के चुंबकीय प्रभाव",
+        "अध्याय 13: हमारा पर्यावरण"
+      ],
       "गणित": [],
       "सामाजिक विज्ञान": [],
       "अंग्रेजी": [],
@@ -143,16 +173,59 @@ const PAL_STUDY_DATA = {
   },
   "MP Board (English Medium)": {
     "Class 12th": {
-      "Physics": ["Unit 1(A) - Electrostatics", "Unit 1(B) - Electric potentials", "Unit 2(C)- Capacity", "Unit 2 - Electric Current"],
-      "Chemistry": ["Unit 1 - Solution", "Unit 2 - Electrochemistry", "Unit 3 - Chemical Kinetics", "Unit 4 - d and f Block Elements", "Unit 5 - Coordination Compounds", "Unit 6 - Haloalkanes and Haloarenes", "Unit 7 - Alcohols", "Unit 8 - Phenols", "Unit 9 - Ethers", "Unit 10 - Aldehydes and Ketones", "Unit 11 - Carboxylic Acids", "Unit 12 - Amines", "Unit 13 - Biomolecules"],
+      "Physics": ["Unit 1(A) - Electrostatics", "Unit 1(B) - Electric potentials", "Unit 1(C) - Capacity", "Unit 2 - Electric Current", "Unit 3(A) Magnetic Effect of Current", "Unit 3(B) Magnetism", "Unit 3(C) Magnetism and Matter", "Unit 4(A) Electromagnetic Induction", "Unit 4(B) Alternating Current", "Unit 5 Electromagnetic Waves", "Unit 6(A) Reflection", "Unit 6(B) Refraction", "Unit 6(C) Prism", "Unit 6(D) Optical Instruments", "Unit 6(E) Wave Optics", "Unit 7 Dual Nature of Matter", "Unit 8(A) Atoms", "Unit 8(B) Nuclei", "Unit 9 Semiconductor Electronics"],
+      "Chemistry": [
+        "Unit 1 Solutions",
+        "Unit 2 Electrochemistry",
+        "Unit 3 Chemical Kinetics",
+        "Unit 4 d and f Block Elements",
+        "Unit 5 Coordination Compounds",
+        "Unit 6(A) Haloalkanes",
+        "Unit 6(B) Haloarenes",
+        "Unit 7(A) Alcohols",
+        "Unit 7(B) Phenols",
+        "Unit 7(C) Ethers",
+        "Unit 8(A) Aldehydes and Ketones",
+        "Unit 8(B) Carboxylic Acids",
+        "Unit 9 Amines",
+        "Unit 10 Biomolecules"
+      ],
       "Mathematics": [],
-      "Biology": [],
+      "Biology": [
+        "Unit 1 (A) Sexual Reproduction in Flowering Plants",
+        "Unit 1 (B) Human Reproduction",
+        "Unit 1 (C) Reproductive Health",
+        "Unit 2 (A) Principles of Inheritance and Variation",
+        "Unit 2 (B) Molecular Basis of Inheritance",
+        "Unit 2 (C) Evolution",
+        "Unit 3 (A) Human Health and Disease",
+        "Unit 3 (B) Microbes in Human Welfare",
+        "Unit 4 (A) Biotechnology: Principles and Processes",
+        "Unit 4 (B) Biotechnology and Its Applications",
+        "Unit 5 (A) Organisms and Populations",
+        "Unit 5 (B) Ecosystem",
+        "Unit 5 (C) Biodiversity and Conservation"
+      ],
       "English": [],
       "Hindi": []
     },
     "Class 10th": {
       "Mathematics": ["Real Numbers", "Polynomials", "Quadratic Equations"],
-      "Science": ["Chemical Reaction", "Acids and Bases", "Metals and Non-metals", "Carbon and its compounds", "Life Processes", "Control and Coordination", "Light"],
+      "Science": [
+        "Chapter 1: Chemical Reactions and Equations",
+        "Chapter 2: Acids, Bases and Salts",
+        "Chapter 3: Metals and Non-metals",
+        "Chapter 4: Carbon and its Compounds",
+        "Chapter 5: Life Processes",
+        "Chapter 6: Control and Coordination",
+        "Chapter 7: How do Organisms Reproduce?",
+        "Chapter 8: Heredity",
+        "Chapter 9: Light – Reflection and Refraction",
+        "Chapter 10: The Human Eye and the Colorful World",
+        "Chapter 11: Electricity",
+        "Chapter 12: Magnetic Effects of Electric Current",
+        "Chapter 13: Our Environment"
+      ],
     }
   },
   "CBSE": {
@@ -166,7 +239,21 @@ const PAL_STUDY_DATA = {
     },
     "Class 10th": {
       "Mathematics": ["Real Numbers", "Polynomials", "Quadratic Equations"],
-      "Science": ["Chemical Reaction", "Acids and Bases", "Metals and Non-metals", "Carbon and its compounds", "Life Processes", "Control and Coordination", "Light"],
+      "Science": [
+        "Chapter 1: Chemical Reactions and Equations",
+        "Chapter 2: Acids, Bases and Salts",
+        "Chapter 3: Metals and Non-metals",
+        "Chapter 4: Carbon and its Compounds",
+        "Chapter 5: Life Processes",
+        "Chapter 6: Control and Coordination",
+        "Chapter 7: How do Organisms Reproduce?",
+        "Chapter 8: Heredity",
+        "Chapter 9: Light – Reflection and Refraction",
+        "Chapter 10: The Human Eye and the Colorful World",
+        "Chapter 11: Electricity",
+        "Chapter 12: Magnetic Effects of Electric Current",
+        "Chapter 13: Our Environment"
+      ],
     },
     "Class 9th": {
       "Science": ["Chapter 1 - Matter in Our Surroundings", "Chapter 2 - Is Matter Around Us Pure?", "Chapter 3 - Atoms and Molecules", "Chapter 4 - Structure of the Atom", "Chapter 5 - The Fundamental Unit of Life", "Chapter 6 - Tissues", "Chapter 7 - Motion", "Chapter 8 - Force and Laws of Motion", "Chapter 9 - Gravitation", "Chapter 10 - Gravitation", "Chapter 11 - Work and Energy", "Chapter 12 - Patterns in Life: Diversity and Classification"],
@@ -271,7 +358,15 @@ const UNIT_FILE_PATHS = {
         "यूनिट 3(A) - गति के नियम": "../units/mp_board_hindi/class_11/Physics/p3A.html", 
         "यूनिट 3(B) - वृत्तीय गति": "../units/mp_board_hindi/class_11/Physics/p3B.html", 
         "यूनिट 4 - कार्य ऊर्जा तथा शक्ति": "../units/mp_board_hindi/class_11/Physics/p4.html", 
-        "यूनिट 5 - गुरुत्वाकर्षण" : "../units/mp_board_hindi/class_11/Physics/p5.html",
+        "यूनिट 5 - कणों के निकाय तथा घूर्णी गति" : "../units/mp_board_hindi/class_11/Physics/p6.html",
+        "यूनिट 6 - गुरुत्वाकर्षण" : "../units/mp_board_hindi/class_11/Physics/p5.html",
+        "यूनिट 7(A) - ठोसों के यांत्रिक गुण" : "../units/mp_board_hindi/class_11/Physics/p7a.html",
+        "यूनिट 7(B) - तरलों के यांत्रिक गुण" : "../units/mp_board_hindi/class_11/Physics/p7b.html",        
+        "यूनिट 8(A) - द्रव्य के तापीय गुण" : "../units/mp_board_hindi/class_11/Physics/p8a.html",
+        "यूनिट 8(B) - ऊष्मागतिकी" : "../units/mp_board_hindi/class_11/Physics/p8b.html",
+        "यूनिट 9 - अणुगति सिद्धांत" : "../units/mp_board_hindi/class_11/Physics/p9.html",
+        "यूनिट 10 - दोलन एवं तरंगें" : "../units/mp_board_hindi/class_11/Physics/p10.html",
+
       },
       "रसायन शास्त्र ":{
         "यूनिट 1 - रासायनिक संयोग के नियम" : "../units/mp_board_hindi/class_11/Chemistry/c1.html",
@@ -307,28 +402,76 @@ const UNIT_FILE_PATHS = {
     },
     "Class 10th": {
       "विज्ञान": {
-        "रासायनिक अभिक्रियाएँ एवं समीकरण" : "../units/mp_board_hindi/class-10/Scince/s1.html",
-        "अम्ल, क्षार एवं लवण" : "../units/mp_board_hindi/class-10/Scince/s2.html",
-        "धातु एवं अधातु" : "../units/mp_board_hindi/class-10/Scince/s3.html",
-        "कार्बन एवं उसके यौगिक" : "../units/mp_board_hindi/class-10/Scince/s4.html",
-        "जीव क्रियाएँ" : "../units/mp_board_hindi/class-10/Scince/s5.html"
+        "अध्याय 1: रासायनिक अभिक्रियाएँ एवं समीकरण": "../units/mp_board_hindi/class-10/Scince/s1.html",
+        "अध्याय 2: अम्ल, क्षार एवं लवण": "../units/mp_board_hindi/class-10/Scince/s2.html",
+        "अध्याय 3: धातु एवं अधातु": "../units/mp_board_hindi/class-10/Scince/s3.html",
+        "अध्याय 4: कार्बन एवं उसके यौगिक": "../units/mp_board_hindi/class-10/Scince/s4.html",
+        "अध्याय 5: जैव प्रक्रम": "../units/mp_board_hindi/class-10/Scince/s5.html",
+        "अध्याय 6: नियंत्रण एवं समन्वय": "../units/mp_board_hindi/class-10/Scince/s6.html",
+        "अध्याय 7: जीव जनन कैसे करते हैं?": "../units/mp_board_hindi/class-10/Scince/s7.html",
+        "अध्याय 8: आनुवंशिकता": "../units/mp_board_hindi/class-10/Scince/s8.html",
+        "अध्याय 9: प्रकाश – परावर्तन तथा अपवर्तन": "../units/mp_board_hindi/class-10/Scince/s9.html",
+        "अध्याय 10: मानव नेत्र तथा रंग-बिरंगा संसार": "../units/mp_board_hindi/class-10/Scince/s10.html",
+        "अध्याय 11: विद्युत": "../units/mp_board_hindi/class-10/Scince/s11.html",
+        "अध्याय 12: विद्युत धारा के चुंबकीय प्रभाव": "../units/mp_board_hindi/class-10/Scince/s12.html",
+        "अध्याय 13: हमारा पर्यावरण": "../units/mp_board_hindi/class-10/Scince/s13.html"
       }
     }
   },
   "MP Board (English Medium)": {
     "Class 12th": {
       "भौतिकी": {
-        "Unit 1(A) - Electrostatics": "../units/mp_board_hindi/class_12/physics/unit1/1a.html",
-        "Unit 1(B) - Electric potentials": "../units/mp_board_hindi/class_12/physics/unit1/1b.html",
-        "Unit 2(C)- Capacity": "../units/mp_board_hindi/class_12/physics/unit1/1c.html",
-        "Unit 2 - Electric Current": "../units/mp_board_hindi/class_12/physics/unit1/2.html"
+        "Unit 1(A) - Electrostatics": "../units/mp_board_hindi/class_12/physics/1a/1a_en.html",
+        "Unit 1(B) - Electric potentials": "../units/mp_board_hindi/class_12/physics/1b/1b_en.html",
+        "Unit 1(C) - Capacity": "../units/mp_board_hindi/class_12/physics/1c/1c_en.html",
+        "Unit 2 - Electric Current": "../units/mp_board_hindi/class_12/physics/2/2_en.html",
+        "Unit 3(A) Magnetic Effect of Current": "../units/mp_board_hindi/class_12/physics/3a/3a_en.html",
+        "Unit 3(B) Magnetism": "../units/mp_board_hindi/class_12/physics/3b/3b_en.html",
+        "Unit 3(C) Magnetism and Matter": "../units/mp_board_hindi/class_12/physics/3c/3c_en.html",
+        "Unit 4(A) Electromagnetic Induction": "../units/mp_board_hindi/class_12/physics/4a/4a_en.html",
+        "Unit 4(B) Alternating Current": "../units/mp_board_hindi/class_12/physics/4b/4b_en.html",
+        "Unit 5 Electromagnetic Waves": "../units/mp_board_hindi/class_12/physics/5/5_en.html",
+        "Unit 6(A) Reflection": "../units/mp_board_hindi/class_12/physics/6a/6a_en.html",
+        "Unit 6(B) Refraction": "../units/mp_board_hindi/class_12/physics/6b/6b_en.html",
+        "Unit 6(C) Prism": "../units/mp_board_hindi/class_12/physics/6c/6c_en.html",
+        "Unit 6(D) Optical Instruments": "../units/mp_board_hindi/class_12/physics/6d/6d_en.html",
+        "Unit 6(E) Wave Optics": "../units/mp_board_hindi/class_12/physics/6e/6e_en.html",
+        "Unit 7 Dual Nature of Matter": "../units/mp_board_hindi/class_12/physics/7/7_en.html",
+        "Unit 8(A) Atoms": "../units/mp_board_hindi/class_12/physics/8a/8a_en.html",
+        "Unit 8(B) Nuclei": "../units/mp_board_hindi/class_12/physics/8b/8b_en.html",
+        "Unit 9 Semiconductor Electronics": "../units/mp_board_hindi/class_12/physics/9/9_en.html"
       },
       "रसायन शास्त्र ": {
-        "Unit 1 - Solution": "../units/mp_board_hindi/class_12/chemistry/unit1/c1/1.html",
-        "Unit 2 - Electrochemistry": "../units/mp_board_hindi/class_12/chemistry/unit1/c2/2.html",
-        "Unit 3 - Chemical Kinetics": "../units/mp_board_hindi/class_12/chemistry/unit1/c3/3.html",
-        "Unit 4 - d and f Block Elements": "../units/mp_board_hindi/class_12/chemistry/unit1/c4/4.html"
-      }
+        "Unit 1 Solutions": "../units/mp_board_hindi/class_12/chemistry/1/1_en.html",
+        "Unit 2 Electrochemistry": "../units/mp_board_hindi/class_12/chemistry/2/2_en.html",
+        "Unit 3 Chemical Kinetics": "../units/mp_board_hindi/class_12/chemistry/3/3_en.html",
+        "Unit 4 d and f Block Elements": "../units/mp_board_hindi/class_12/chemistry/4/4_en.html",
+        "Unit 5 Coordination Compounds": "../units/mp_board_hindi/class_12/chemistry/5/5_en.html",
+        "Unit 6(A) Haloalkanes": "../units/mp_board_hindi/class_12/chemistry/6a/6a_en.html",
+        "Unit 6(B) Haloarenes": "../units/mp_board_hindi/class_12/chemistry/6b/6b_en.html",
+        "Unit 7(A) Alcohols": "../units/mp_board_hindi/class_12/chemistry/7a/7a_en.html",
+        "Unit 7(B) Phenols": "../units/mp_board_hindi/class_12/chemistry/7b/7b_en.html",
+        "Unit 7(C) Ethers": "../units/mp_board_hindi/class_12/chemistry/7c/7c_en.html",
+        "Unit 8(A) Aldehydes and Ketones": "../units/mp_board_hindi/class_12/chemistry/8a/8a_en.html",
+        "Unit 8(B) Carboxylic Acids": "../units/mp_board_hindi/class_12/chemistry/8b/8b_en.html",
+        "Unit 9 Amines": "../units/mp_board_hindi/class_12/chemistry/9/9_en.html",
+        "Unit 10 Biomolecules": "../units/mp_board_hindi/class_12/chemistry/10/10_en.html"
+      },
+      "जीवविज्ञान": {
+        "Unit 1 (A) Sexual Reproduction in Flowering Plants": "../units/mp_board_hindi/class_12/biology/1/1_en.html",
+        "Unit 1 (B) Human Reproduction": "../units/mp_board_hindi/class_12/biology/2/2_en.html",
+        "Unit 1 (C) Reproductive Health": "../units/mp_board_hindi/class_12/biology/3/3_en.html",
+        "Unit 2 (A) Principles of Inheritance and Variation": "../units/mp_board_hindi/class_12/biology/4/4_en.html",
+        "Unit 2 (B) Molecular Basis of Inheritance": "../units/mp_board_hindi/class_12/biology/5/5_en.html",
+        "Unit 2 (C) Evolution": "../units/mp_board_hindi/class_12/biology/6/6_en.html",
+        "Unit 3 (A) Human Health and Disease": "../units/mp_board_hindi/class_12/biology/7/7_en.html",
+        "Unit 3 (B) Microbes in Human Welfare": "../units/mp_board_hindi/class_12/biology/8/8_en.html",
+        "Unit 4 (A) Biotechnology: Principles and Processes": "../units/mp_board_hindi/class_12/biology/9/9_en.html",
+        "Unit 4 (B) Biotechnology and Its Applications": "../units/mp_board_hindi/class_12/biology/10/10_en.html",
+        "Unit 5 (A) Organisms and Populations": "../units/mp_board_hindi/class_12/biology/11/11_en.html",
+        "Unit 5 (B) Ecosystem": "../units/mp_board_hindi/class_12/biology/12/12_en.html",
+        "Unit 5 (C) Biodiversity and Conservation": "../units/mp_board_hindi/class_12/biology/13/13_en.html"
+      },
     },
     "Class 10th": {
       "Mathematics": {
@@ -337,13 +480,19 @@ const UNIT_FILE_PATHS = {
         "Quadratic Equations": "../units/cbse/class_10/mathematics/4.1.html"
       },
       "Science": {
-        "Chemical Reaction": "../units/cbse/class_10/science/chemical.html",
-        "Acids and Bases": "../units/cbse/class_10/science/acids.html",
-        "Metals and Non-metals": "../units/cbse/class_10/science/matels.html",
-        "Carbon and its compounds": "../units/cbse/class_10/science/carbon.html",
-        "Life Processes": "../units/cbse/class_10/science/Life.html",
-        "Control and Coordination": "../units/cbse/class_10/science/Control.html",
-        "Light": "../units/cbse/class_10/science/light.html",
+        "Chapter 1: Chemical Reactions and Equations": "../units/cbse/class_10/science/chemical.html",
+        "Chapter 2: Acids, Bases and Salts": "../units/cbse/class_10/science/acids.html",
+        "Chapter 3: Metals and Non-metals": "../units/cbse/class_10/science/matels.html",
+        "Chapter 4: Carbon and its Compounds": "../units/cbse/class_10/science/carbon.html",
+        "Chapter 5: Life Processes": "../units/cbse/class_10/science/life.html",
+        "Chapter 6: Control and Coordination": "../units/cbse/class_10/science/control.html",
+        "Chapter 7: How do Organisms Reproduce?": "../units/cbse/class_10/science/reproduce.html",
+        "Chapter 8: Heredity": "../units/cbse/class_10/science/heredity.html",
+        "Chapter 9: Light – Reflection and Refraction": "../units/cbse/class_10/science/light.html",
+        "Chapter 10: The Human Eye and the Colorful World": "../units/cbse/class_10/science/eye.html",
+        "Chapter 11: Electricity": "../units/cbse/class_10/science/electricity.html",
+        "Chapter 12: Magnetic Effects of Electric Current": "../units/cbse/class_10/science/magnetic.html",
+        "Chapter 13: Our Environment": "../units/cbse/class_10/science/environment.html"
       }
     }
   },
@@ -355,13 +504,19 @@ const UNIT_FILE_PATHS = {
         "Quadratic Equations": "../units/cbse/class_10/mathematics/4.1.html"
       },
       "Science": {
-        "Chemical Reaction": "../units/cbse/class_10/science/chemical.html",
-        "Acids and Bases": "../units/cbse/class_10/science/acids.html",
-        "Metals and Non-metals": "../units/cbse/class_10/science/matels.html",
-        "Carbon and its compounds": "../units/cbse/class_10/science/carbon.html",
-        "Life Processes": "../units/cbse/class_10/science/Life.html",
-        "Control and Coordination": "../units/cbse/class_10/science/Control.html",
-        "Light": "../units/cbse/class_10/science/light.html",
+        "Chapter 1: Chemical Reactions and Equations": "../units/cbse/class_10/science/chemical.html",
+        "Chapter 2: Acids, Bases and Salts": "../units/cbse/class_10/science/acids.html",
+        "Chapter 3: Metals and Non-metals": "../units/cbse/class_10/science/matels.html",
+        "Chapter 4: Carbon and its Compounds": "../units/cbse/class_10/science/carbon.html",
+        "Chapter 5: Life Processes": "../units/cbse/class_10/science/life.html",
+        "Chapter 6: Control and Coordination": "../units/cbse/class_10/science/control.html",
+        "Chapter 7: How do Organisms Reproduce?": "../units/cbse/class_10/science/reproduce.html",
+        "Chapter 8: Heredity": "../units/cbse/class_10/science/heredity.html",
+        "Chapter 9: Light – Reflection and Refraction": "../units/cbse/class_10/science/light.html",
+        "Chapter 10: The Human Eye and the Colorful World": "../units/cbse/class_10/science/eye.html",
+        "Chapter 11: Electricity": "../units/cbse/class_10/science/electricity.html",
+        "Chapter 12: Magnetic Effects of Electric Current": "../units/cbse/class_10/science/magnetic.html",
+        "Chapter 13: Our Environment": "../units/cbse/class_10/science/environment.html"
       }
     },
     "Class 9th": {
