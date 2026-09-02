@@ -16,23 +16,7 @@ const SUBJECT_NAME_MAP = {
 const PAL_STUDY_DATA = {
   "MP Board (Hindi Medium)": {
     "Class 12th": {
-      "भौतिकी": [
-        "यूनिट 1 विद्युत आवेश एवं क्षेत्र",
-       "यूनिट 1 (B ) विद्युत विभव", "यूनिट 1 (C ) धारिता", 
-        "यूनिट 2 विद्युत धारा",
-        "यूनिट 3(A ) धारा का चुम्बकीय प्रभाव",
-        "यूनिट 3(B ) चुंबकत्व",
-        "यूनिट 3(C) चुंबकत्व एवं पदार्थ",
-        "यूनिट 6 विद्युत चुंबकीय प्रेरण",
-        "यूनिट 7 प्रत्यावर्ती धारा",
-        "यूनिट 8 विद्युत चुंबकीय तरंगें",
-        "यूनिट 9 प्रकाशिकी",
-        "यूनिट 10 तरंग प्रकाशिकी",
-        "यूनिट 11 पदार्थ की द्वैत प्रकृति",
-        "यूनिट 12 परमाणु",
-        "यूनिट 13 नाभिक",
-        "यूनिट 14 अर्धचालक इलेक्ट्रॉनिक्स"
-      ],
+      "भौतिकी": ["यूनिट 1 विद्युत आवेश एवं क्षेत्र", "यूनिट 1 (B ) विद्युत विभव", "यूनिट 1 (C ) धारिता", "यूनिट 2 विद्युत धारा", "यूनिट 3(A ) धारा का चुम्बकीय प्रभाव", "यूनिट 3(B ) चुंबकत्व", "यूनिट 3(C) चुंबकत्व एवं पदार्थ" , "यूनिट 4(A) विद्युत चुंबकीय प्रेरण", "यूनिट 4(B) प्रत्यावर्ती धारा", "यूनिट 5 विद्युत चुंबकीय तरंगें", "यूनिट 6(A) परावर्तन", "यूनिट 6(B) अपवर्तन", "यूनिट 6(C) प्रिज्म", "यूनिट 6(D) प्रकाशिक यंत्र", "यूनिट 6(E) तरंग प्रकाशिकी", "यूनिट 7 पदार्थ की द्वैत प्रकृति", "यूनिट 8(A) परमाणु", "यूनिट 8(B) नाभिक", "यूनिट 9 अर्धचालक इलेक्ट्रॉनिक्स"],
       "रसायन शास्त्र ": [
         "यूनिट 1 विलयन",
         "यूनिट 2 विद्युत रसायन",
@@ -195,22 +179,25 @@ const UNIT_FILE_PATHS = {
   "MP Board (Hindi Medium)": {
     "Class 12th": {
       "भौतिकी": {
-        "यूनिट 1 विद्युत आवेश एवं क्षेत्र": "../units/mp_board_hindi/class_12/physics/unit1/MP_Hindi_12th_Physics_unit1.html",
-         "यूनिट 1 (B ) विद्युत विभव": "../units/mp_board_hindi/class_12/physics/unit1/mphp-1b.html",
-           "यूनिट 1 (C ) धारिता": "../units/mp_board_hindi/class_12/physics/unit1/mphp-1c.html",
-        "यूनिट 2 विद्युत धारा": "../units/mp_board_hindi/class_12/physics/unit1/mphp-2.html",
-        "यूनिट 3(A ) धारा का चुम्बकीय प्रभाव": "../units/mp_board_hindi/class_12/physics/unit1/mphp3A.html",
-        "यूनिट 3(B ) चुंबकत्व": "../units/mp_board_hindi/class_12/physics/unit1/mphp3b.html",
-        "यूनिट 5 चुंबकत्व एवं पदार्थ": "../units/mp_board_hindi/class_12/physics/unit5/MP_Hindi_12th_Physics_unit5.html",
-        "यूनिट 6 विद्युत चुंबकीय प्रेरण": "../units/mp_board_hindi/class_12/physics/unit6/MP_Hindi_12th_Physics_unit6.html",
-        "यूनिट 7 प्रत्यावर्ती धारा": "../units/mp_board_hindi/class_12/physics/unit7/MP_Hindi_12th_Physics_unit7.html",
-        "यूनिट 8 विद्युत चुंबकीय तरंगें": "../units/mp_board_hindi/class_12/physics/unit8/MP_Hindi_12th_Physics_unit8.html",
-        "यूनिट 9 प्रकाशिकी": "../units/mp_board_hindi/class_12/physics/unit9/MP_Hindi_12th_Physics_unit9.html",
-        "यूनिट 10 तरंग प्रकाशिकी": "../units/mp_board_hindi/class_12/physics/unit10/MP_Hindi_12th_Physics_unit10.html",
-        "यूनिट 11 पदार्थ की द्वैत प्रकृति": "../units/mp_board_hindi/class_12/physics/unit11/MP_Hindi_12th_Physics_unit11.html",
-        "यूनिट 12 परमाणु": "../units/mp_board_hindi/class_12/physics/unit12/MP_Hindi_12th_Physics_unit12.html",
-        "यूनिट 13 नाभिक": "../units/mp_board_hindi/class_12/physics/unit13/MP_Hindi_12th_Physics_unit13.html",
-        "यूनिट 14 अर्धचालक इलेक्ट्रॉनिक्स": "../units/mp_board_hindi/class_12/physics/unit14/MP_Hindi_12th_Physics_unit14.html"
+        "यूनिट 1 विद्युत आवेश एवं क्षेत्र": "../units/mp_board_hindi/class_12/physics/1a/1a.html",
+         "यूनिट 1 (B ) विद्युत विभव": "../units/mp_board_hindi/class_12/physics/1b/1b.html",
+           "यूनिट 1 (C ) धारिता": "../units/mp_board_hindi/class_12/physics/1c/1c.html",
+        "यूनिट 2 विद्युत धारा": "../units/mp_board_hindi/class_12/physics/2/2.html",
+        "यूनिट 3(A ) धारा का चुम्बकीय प्रभाव": "../units/mp_board_hindi/class_12/physics/3a/3a.html",
+        "यूनिट 3(B ) चुंबकत्व": "../units/mp_board_hindi/class_12/physics/3b/3b.html",
+        "यूनिट 3(C) चुंबकत्व एवं पदार्थ" : "../units/mp_board_hindi/class_12/physics/3c/3c.html",
+        "यूनिट 4(A) विद्युत चुंबकीय प्रेरण": "../units/mp_board_hindi/class_12/physics/4a/4a.html",
+        "यूनिट 4(B) प्रत्यावर्ती धारा": "../units/mp_board_hindi/class_12/physics/4b/4b.html",
+        "यूनिट 5 विद्युत चुंबकीय तरंगें": "../units/mp_board_hindi/class_12/physics/5/5.html",
+        "यूनिट 6(A) परावर्तन": "../units/mp_board_hindi/class_12/physics/6a/6a.html",
+        "यूनिट 6(B) अपवर्तन": "../units/mp_board_hindi/class_12/physics/6b/6b.html",
+        "यूनिट 6(C) प्रिज्म": "../units/mp_board_hindi/class_12/physics/6c/6c.html",
+        "यूनिट 6(D) प्रकाशिक यंत्र": "../units/mp_board_hindi/class_12/physics/6d/6d.html",
+        "यूनिट 6(E) तरंग प्रकाशिकी": "../units/mp_board_hindi/class_12/physics/6e/6e.html",
+        "यूनिट 7 पदार्थ की द्वैत प्रकृति": "../units/mp_board_hindi/class_12/physics/7/7.html",
+        "यूनिट 8(A) परमाणु": "../units/mp_board_hindi/class_12/physics/8a/8a.html",
+        "यूनिट 8(B) नाभिक": "../units/mp_board_hindi/class_12/physics/8b/8b.html",
+        "यूनिट 9 अर्धचालक इलेक्ट्रॉनिक्स": "../units/mp_board_hindi/class_12/physics/9/9.html"
       },
       "रसायन शास्त्र ":{
           "यूनिट 1 विलयन": "../units/mp_board_hindi/class_12/chemistry/1/1.html",
