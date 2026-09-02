@@ -1,0 +1,3329 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | एल्डिहाइड तथा कीटोन</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- MathJax -->
+<script>
+window.MathJax = {
+    tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+    },
+    svg: {
+        fontCache: 'global'
+    }
+};
+</script>
+
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    line-height:1.7;
+}
+
+/* NAVBAR */
+
+.navbar{
+    background:rgba(15,23,42,0.90);
+    backdrop-filter:blur(10px);
+    box-shadow:0 4px 18px rgba(0,0,0,.18);
+    padding:10px 0;
+}
+
+.navbar-brand{
+    font-size:30px;
+    font-weight:700;
+    color:white !important;
+}
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+
+/* NOTES CONTAINER */
+
+.notes-container{
+    max-width:900px;
+    margin:100px auto 50px;
+    padding:20px;
+}
+
+/* CHAPTER TITLE */
+
+.notes-title{
+    background:#e3f2fd;
+    color:#1565c0;
+    padding:15px 20px;
+    border-left:6px solid #1565c0;
+    border-radius:50px;
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:30px;
+    text-align:center;
+}
+
+/* QUESTION ANSWER BOX */
+
+.qa-box{
+    background:white;
+    padding:22px;
+    margin-bottom:18px;
+    border-radius:14px;
+    border-left:6px solid #1565c0;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    transition:.25s;
+}
+
+.qa-box:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.question{
+    font-weight:bold;
+    color:#1b3a57;
+    margin-bottom:10px;
+    font-size:19px;
+}
+
+.answer{
+    color:#2c3e50;
+    text-align:justify;
+}
+
+.answer ul,
+.answer ol{
+    margin-left:25px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.answer li{
+    margin-bottom:7px;
+}
+
+/* FORMULA */
+
+.formula{
+    background:#f8fafc;
+    padding:12px;
+    margin:14px 0;
+    border-radius:8px;
+    text-align:center;
+    overflow-x:auto;
+    font-size:19px;
+}
+
+/* IMPORTANT */
+
+.important{
+    background:#fff8e1;
+    border-left:5px solid #ffb300;
+    padding:12px 15px;
+    margin-top:12px;
+    border-radius:8px;
+}
+
+/* SUB HEADING */
+
+.sub-heading{
+    color:#1565c0;
+    font-weight:bold;
+    margin-top:15px;
+    margin-bottom:8px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .navbar-brand{
+        font-size:24px;
+    }
+
+    .notes-container{
+        margin-top:85px;
+        padding:12px;
+    }
+
+    .notes-title{
+        font-size:22px;
+        border-radius:20px;
+    }
+
+    .qa-box{
+        padding:17px;
+    }
+
+    .question{
+        font-size:17px;
+    }
+
+    .formula{
+        font-size:16px;
+    }
+
+}
+.reaction-box {
+    width: 100%;
+    max-width: 1000px;
+    margin: 15px auto;
+    padding: 5px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.chemical-reaction {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+/* ================= Q&A BOX ================= */
+
+.qa-box {
+    width: 100%;
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 15px;
+    box-sizing: border-box;
+    font-family: Arial, "Noto Sans Devanagari", sans-serif;
+    line-height: 1.7;
+}
+
+/* ================= QUESTION ================= */
+
+.question {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    word-wrap: break-word;
+}
+
+/* ================= ANSWER ================= */
+
+.answer {
+    width: 100%;
+    font-size: 18px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+/* ================= TABLE ================= */
+
+.answer table {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+/* Table cells */
+
+.answer th,
+.answer td {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+
+    /* लंबे शब्द/टेक्स्ट को बाहर जाने से रोकता है */
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+    white-space: normal;
+
+    box-sizing: border-box;
+}
+
+/* Table heading */
+
+.answer th {
+    font-weight: bold;
+    text-align: center;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .qa-box {
+        padding: 10px;
+    }
+
+    .question {
+        font-size: 19px;
+    }
+
+    .answer {
+        font-size: 16px;
+    }
+
+    .answer table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .answer th,
+    .answer td {
+        min-width: 130px;
+        padding: 8px;
+        white-space: normal;
+        font-size: 14px;
+    }
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 480px) {
+
+    .qa-box {
+        padding: 8px;
+    }
+
+    .question {
+        font-size: 18px;
+    }
+
+    .answer {
+        font-size: 15px;
+    }
+
+    .answer th,
+    .answer td {
+        min-width: 115px;
+        padding: 7px;
+        font-size: 13px;
+    }
+  }
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar fixed-top">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="../index.html">
+            पाल <span>स्टडी सेंटर</span>
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- NOTES -->
+
+< class="notes-container">
+
+    <div class="notes-title">
+        📘 अध्याय — एल्डिहाइड तथा कीटोन
+    </div>
+
+
+    <!-- ================= प्रश्न 1 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            प्रश्न: कार्बोनिल समूह किसे कहते हैं?
+        </div>
+
+        <div class="answer">
+
+            <p>
+                ( &gt;C=O ) समूह को <b>कार्बोनिल समूह</b> कहते हैं।
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= प्रश्न 2 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            प्रश्न: कार्बोनिल यौगिक किसे कहते हैं?
+        </div>
+
+        <div class="answer">
+
+            <p>
+                जिन यौगिकों में कार्बोनिल समूह ( &gt;C=O ) होता है, उन्हें
+                <b>कार्बोनिल यौगिक</b> कहा जाता है।
+            </p>
+          <p>जैसे — एल्डिहाइड तथा कीटोन।
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= प्रश्न 3 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            प्रश्न: एल्डिहाइड और कीटोन क्या होते हैं?
+        </div>
+
+        <div class="answer">
+
+            <p>
+                <b>एल्डिहाइड —</b> जब एल्केन के सिरे वाले कार्बन के दो हाइड्रोजन
+                परमाणु एक द्विबंध युक्त ऑक्सीजन परमाणु से प्रतिस्थापित होते हैं
+                तो इसे एल्डिहाइड कहते हैं। एल्डिहाइड में (–CHO) समूह होता है।
+            </p>
+
+            <div class="formula">
+                \[
+                CH_4 \xrightarrow{-2H/+O} HCHO
+                \]
+            </div>
+
+            <div class="formula">
+                \[
+                CH_3-CH_3 \xrightarrow{-2H/+O} CH_3CHO
+                \]
+            </div>
+
+            <p>
+                <b>कीटोन —</b> जब एल्केन के मध्य वाले कार्बन के दो हाइड्रोजन
+                परमाणु एक द्विबंध युक्त ऑक्सीजन परमाणु से प्रतिस्थापित होते हैं
+                तो इसे कीटोन कहते हैं। कीटोन में (–CO–) समूह होता है।
+            </p>
+
+            <div class="formula">
+                \[
+                CH_3-CH_2-CH_3 \xrightarrow{-2H/+O} CH_3-CO-CH_3
+                \]
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= प्रश्न 4 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            प्रश्न: कीटोन कितने प्रकार के होते हैं?
+        </div>
+
+        <div class="answer">
+
+            <p>कीटोन दो प्रकार के होते हैं।</p>
+
+            <ol>
+                <li>
+                    <b>सरल या सममित कीटोन:</b> जब कीटोन समूह से जुड़ने वाले
+                    दोनों एल्किल समूह समान होते हैं तो इसे सरल या सममित कीटोन
+                    कहते हैं।<br>
+                    उदाहरण: 
+                
+          CH<sub>3</sub>-CO-CH<sub>3</sub> — डाई मिथाइल कीटोन
+                    (एसीटोन)
+                </li>
+                <li>
+                    <b>मिश्रित या असममित कीटोन:</b> जब कीटोन समूह से जुड़ने
+                    वाले दोनों एल्किल समूह असमान होते हैं तो इसे मिश्रित या
+                    असममित कीटोन कहते हैं।<br>
+                    उदाहरण: CH<sub>3</sub>-CO-C<sub>2</sub>H<sub>5</sub> —
+                    मिथाइल एथाइल कीटोन
+                </li>
+            </ol>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= प्रश्न 5 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            प्रश्न: एल्डिहाइड तथा कीटोन का नामकरण कैसे होता है?
+        </div>
+
+        <div class="answer">
+
+            <p class="sub-heading">1. साधारण पद्धति में</p>
+
+            <p>
+                <b>एल्डिहाइड →</b> इनके संगत अम्ल जिस स्त्रोत से प्राप्त होते
+                हैं, उनके नाम के अनुसार अंत में प्रत्यय 'एल्डिहाइड' जोड़ देते
+                हैं।
+            </p>
+
+            <b>उदाहरण:</b> 
+             <p> HCHO — फॉर्मल्डिहाइड</p>
+             <p> CH<sub>3</sub>CHO —
+                एसिटैल्डिहाइड</p>
+
+            <p>
+                <b>कीटोन →</b> सर्वप्रथम छोटे एल्किल मूलक तथा उसके बाद बड़े
+                एल्किल मूलक का नाम लिखकर अंत में 'कीटोन' शब्द जोड़ देते हैं।
+            </p>
+
+            <b>उदाहरण:</b> 
+             <p> CH<sub>3</sub>CO CH<sub>3</sub> — डाई मैथिल
+                कीटोन</p>
+
+            <p class="sub-heading">2. IUPAC पद्धति में</p>
+
+            <p>
+                <b>एल्डिहाइड →</b> संगत एल्केन के 'e' को हटाकर 'al' जोड़ते हैं।
+            </p>
+
+            
+              <b>उदाहरण:</b> 
+          <p>HCHO — मेथेनल</p> 
+          <p>CH<sub>3</sub>CHO — एथेनल</p>
+
+            <p>
+                <b>कीटोन →</b> संगत एल्केन के 'e' को हटाकर 'one' जोड़ते हैं।
+            </p>
+
+            <b>उदाहरण:</b> <p>CH<sub>3</sub>CO CH<sub>3</sub> — प्रोपेनोन</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= प्रश्न 6 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+    प्रश्न: एल्डिहाइड और कीटोन बनाने की सामान्य विधियाँ लिखिए।<br>
+
+    <small>
+        अथवा — निम्न को प्राप्त करने के लिए केवल रासायनिक समीकरण लिखिए:
+    </small><br>
+
+    <small>
+        1. कैल्सियम ऐसीटेट से ऐसीटैल्डिहाइड।
+    </small><br>
+
+    <small>
+        2. कैल्सियम ऐसीटेट से ऐसीटोन।
+    </small><br>
+
+    <small>
+        3. ऐसीटिलीन से ऐसीटैल्डिहाइड।
+    </small><br>
+
+    <small>
+        4. ऐसीटिलीन से ऐसीटोन।
+    </small><br>
+
+    <small>
+        5. ऐसीटिल क्लोराइड से ऐसीटैल्डिहाइड।
+    </small><br>
+
+    <small>
+        अथवा — क्या होता है जब:
+    </small><br>
+
+    <small>
+        6. इथाइल ऐल्कोहॉल का अम्लीय K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub>
+        द्वारा ऑक्सीकरण किया जाता है।
+    </small><br>
+
+    <small>
+        7. BaSO<sub>4</sub> की उपस्थिति में ऐसीटिल क्लोराइड को
+        हाइड्रोजन द्वारा अपचयित किया जाता है।
+    </small><br>
+
+    <small>
+        8. कैल्सियम फॉर्मेट का शुष्क आसवन किया जाता है।
+    </small><br>
+
+    <small>
+        9. कैल्सियम ऐसीटेट का शुष्क आसवन किया जाता है।
+    </small><br>
+
+    <small>
+        10. ऐसीटिलीन H<sub>2</sub>SO<sub>4</sub> तथा HgSO<sub>4</sub>
+        की उपस्थिति में जल के साथ अभिक्रिया करता है।
+    </small>
+        </div>
+
+        <div class="answer">
+
+            <p>एल्डिहाइड और कीटोन बनाने की सामान्य विधियाँ निम्न हैं।</p>
+
+            <p class="sub-heading">1. अल्कोहल का ऑक्सीकरण</p>
+
+            <p>
+                जब अल्कोहल का ऑक्सीकरण अम्लीय K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub>
+                की उपस्थिति में कराया जाता है तो एल्डिहाइड तथा कीटोन प्राप्त
+                होते हैं। प्राथमिक अल्कोहल के ऑक्सीकरण से एल्डिहाइड प्राप्त
+                होते हैं जबकि द्वितीयक अल्कोहल कीटोन देते हैं।
+            </p>
+
+            <div class="formula">
+                \[
+                H\text{-}CH_2\text{-}OH + [O]
+                \xrightarrow{\text{अम्लीय } K_2Cr_2O_7}
+                H\text{-}CHO + H_2O
+                \]
+            </div>
+
+            <div class="formula">
+                \[
+                CH_3\text{-}CH_2\text{-}OH + [O]
+                \xrightarrow{\text{अम्लीय } K_2Cr_2O_7}
+                CH_3\text{-}CHO + H_2O
+                \]
+            </div>
+
+            <div class="formula">
+                \[
+                CH_3\text{-}CH(OH)\text{-}CH_3 + [O]
+                \xrightarrow{\text{अम्लीय } K_2Cr_2O_7}
+                CH_3\text{-}CO\text{-}CH_3 + H_2O
+                \]
+            </div>
+
+            <p class="sub-heading">2. अल्कोहल का विहाइड्रोजनीकरण</p>
+
+            <p>
+                जब अल्कोहल का विहाइड्रोजनीकरण Cu उत्प्रेरक की उपस्थिति में
+                300°C पर कराया जाता है तो एल्डिहाइड तथा कीटोन प्राप्त होते हैं।
+                प्राथमिक अल्कोहल से एल्डिहाइड तथा द्वितीयक अल्कोहल से कीटोन
+                प्राप्त होते हैं।
+            </p>
+
+            <div class="formula">
+                \[
+                H\text{-}CH_2\text{-}OH
+                \xrightarrow{Cu/300^\circ C}
+                H\text{-}CHO + H_2
+                \]
+            </div>
+
+            <div class="formula">
+                \[
+                CH_3\text{-}CH_2\text{-}OH
+                \xrightarrow{Cu/300^\circ C}
+                CH_3\text{-}CHO + H_2
+                \]
+            </div>
+
+            <div class="formula">
+                \[
+                CH_3\text{-}CH(OH)\text{-}CH_3
+                \xrightarrow{Cu/300^\circ C}
+                CH_3\text{-}CO\text{-}CH_3 + H_2
+                \]
+            </div>
+
+            <p class="sub-heading">3. वसा अम्ल वाष्प का ऑक्सीकरण (गरम MnO के ऊपर)</p>
+
+            <p>
+                वसा अम्लों की वाष्प को गरम MnO पर 300°C पर प्रवाहित करने पर
+                ऐल्डिहाइड तथा कीटोन प्राप्त होते हैं।
+            </p>
+
+            <div class="formula">
+                \[
+                HCOOH + HCOOH
+                \xrightarrow{MnO/300^\circ C}
+                HCHO + CO_2 + H_2O
+                \]
+            </div>
+
+            <div class="formula">
+                \[
+                CH_3COOH + HCOOH
+                \xrightarrow{MnO/300^\circ C}
+                CH_3CHO + CO_2 + H_2O
+                \]
+            </div>
+
+            <div class="formula">
+                \[
+                CH_3COOH + CH_3COOH
+                \xrightarrow{MnO/300^\circ C}
+                CH_3COCH_3 + CO_2 + H_2O
+                \]
+            </div>
+
+            <p class="sub-heading">4. वसा अम्ल के कैल्सियम लवण का शुष्क आसवन</p>
+
+            <p>
+                जब वसा अम्ल के कैल्सियम लवण का शुष्क आसवन किया जाता है तब
+                ऐल्डिहाइड तथा कीटोन प्राप्त होते हैं। <i>(2009/12/16/18/21/22/24)</i>
+            </p>
+
+            <div class="formula">
+                \[
+                (HCOO)_2Ca
+                \xrightarrow{\text{शुष्क आसवन}}
+                HCHO + CaCO_3
+                \]
+            </div>
+
+            <div class="formula">
+                \[
+                (CH_3COO)_2Ca + (HCOO)_2Ca
+                \xrightarrow{\text{शुष्क आसवन}}
+                2CH_3CHO + 2CaCO_3
+                \]
+            </div>
+
+            <div class="formula">
+                \[
+                (CH_3COO)_2Ca
+                \xrightarrow{\text{शुष्क आसवन}}
+                CH_3COCH_3 + CaCO_3
+                \]
+            </div>
+
+            <p class="sub-heading">5. रोज़ेनमंड अभिक्रिया</p>
+
+            <p>
+                जब एसिटिल क्लोराइड को BaSO₄ युक्त पैलेडियम की उपस्थिति में
+                अपचयित किया जाता है तो एसीटैल्डिहाइड प्राप्त होता है। इसे
+                रोज़ेनमंड अभिक्रिया कहते हैं। यहाँ पैलेडियम उत्प्रेरक का कार्य
+                करता है जबकि BaSO₄ एसीटैल्डिहाइड को आगे अल्कोहल में अपचयित
+                होने से रोकता है। <i>(2022/23/25)</i>
+            </p>
+
+            <div class="formula">
+                \[
+                CH_3COCl + H_2
+                \xrightarrow{Pd/BaSO_4}
+                CH_3CHO + HCl
+                \]
+            </div>
+
+            <p class="sub-heading">6. स्टिफ़ेन अभिक्रिया</p>
+
+            <p>
+                जब मिथाइल सायनाइड का अपचयन Sn और HCl की उपस्थिति में किया
+                जाता है, तो एक मध्यवर्ती यौगिक बनता है जिसका जलअपघटन करने पर
+                एसीटैल्डिहाइड बनता है। इसे स्टिफ़ेन अभिक्रिया कहते हैं।
+            </p>
+
+            <div class="formula">
+                \[
+                CH_3CN + 2[H]
+                \xrightarrow{Sn/HCl}
+                CH_3CH=NH\cdot HCl
+                \xrightarrow{+H_2O}
+                CH_3CHO + NH_4Cl
+                \]
+            </div>
+
+            <p class="sub-heading">7. एसीटिलीन के जलअपघटन द्वारा</p>
+
+            <p>
+                जब एसीटिलीन का जलअपघटन तनु 42% H₂SO₄ और 1% HgSO₄ की उपस्थिति
+                में किया जाता है, तो एसीटैल्डिहाइड प्राप्त होता है। <i>(2020/23/25)</i>
+            </p>
+
+            <div class="formula">
+                \[
+                CH \equiv CH + H_2O
+                \xrightarrow{42\%\,H_2SO_4/1\%\,HgSO_4}
+                CH_3CHO
+                \]
+            </div>
+
+            <p class="sub-heading">8. गाटरमान-कोच अभिक्रिया</p>
+
+            <p>
+                कार्बन मोनो-ऑक्साइड और निर्जल AlCl₃ या क्यूप्रस क्लोराइड (अल्प
+                मात्रा) की उपस्थिति में उच्च दाब पर बेंजीन को ईथरीय विलयन में
+                प्रवाहित करने पर बेंजैल्डिहाइड बनता है। <i>(2012)</i>
+            </p>
+
+            <div class="formula">
+                \[
+                C_6H_6 + CO
+                \xrightarrow{\text{निर्जल } AlCl_3/HCl}
+                C_6H_5CHO
+                \]
+            </div>
+
+            <p class="sub-heading">9. गटरमान एल्डिहाइड संश्लेषण</p>
+
+            <p>
+                निर्जल AlCl₃ की उपस्थिति में बेंजीन की HCN तथा HCl के साथ
+                अभिक्रिया कराने पर पहले मध्यवर्ती इमिनो क्लोराइड बनता है,
+                जिसका जलअपघटन करने पर बेंजैल्डिहाइड प्राप्त होता है। <i>(2020/23/25)</i>
+            </p>
+
+            <div class="formula">
+                \[
+                C_6H_6 + HCN + HCl
+                \xrightarrow{\text{निर्जल } AlCl_3}
+                C_6H_5CH=NH\cdot Cl
+                \xrightarrow{+H_2O}
+                C_6H_5CHO + NH_4Cl
+                \]
+            </div>
+
+            <p class="sub-heading">10. ईटार्ड अभिक्रिया</p>
+
+            <p>
+                जब टॉलुइन का ऑक्सीकरण CS₂ या CCl₄ में क्रोमिल क्लोराइड द्वारा
+                किया जाता है तो बेंजैल्डिहाइड बनता है। इसे ईटार्ड अभिक्रिया
+                कहते हैं।
+            </p>
+
+            <div class="formula">
+                \[
+                C_6H_5CH_3 + 2[O]
+                \xrightarrow{\text{क्रोमिल क्लोराइड}/CCl_4}
+                C_6H_5CHO + H_2O
+                \]
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= प्रश्न 7 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            प्रश्न: एल्डिहाइड तथा कीटोन के भौतिक गुण लिखिए।
+        </div>
+
+        <div class="answer">
+
+            <p>एल्डिहाइड तथा कीटोन के भौतिक गुण निम्न हैं।</p>
+
+            <ol>
+                <li>
+                    <b>भौतिक अवस्था:</b> अधिकांश ऐल्डिहाइड कमरे के तापमान पर
+                    द्रव होते हैं। निम्न कीटोन रंगहीन द्रव होते हैं और इनमें
+                    सुगंध होती है। उच्च अणुभार वाले यौगिक रंगहीन ठोस होते हैं।
+                </li>
+                <li>
+                    <b>क्वथनांक:</b> ऐल्डिहाइड और कीटोन का क्वथनांक तुलनात्मक
+                    आणविक भार वाले हाइड्रोकार्बनों की तुलना में अधिक होता है।
+                </li>
+                <li>
+                    <b>विलेयता:</b> निम्न ऐल्डिहाइड और कीटोन जल में विलेय होते
+                    हैं। एल्किल समूह का आकार बढ़ने पर इन यौगिकों की जल में
+                    विलेयता घटती है।
+                </li>
+            </ol>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= प्रश्न 8 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            प्रश्न: ऐल्डिहाइड तथा कीटोन ध्रुवीय प्रकृति के होते हैं क्यों?<br>
+            <small>(अथवा — ऐल्डिहाइड तथा कीटोन नाभिकस्नेही योगात्मक
+            अभिक्रिया क्यों देते हैं?)</small>
+        </div>
+
+        <div class="answer">
+
+            <p>
+                ऐल्डिहाइड और कीटोन में कार्बोनिल समूह (&gt;C=O) होता है।
+                कार्बोनिल समूह का ऑक्सीजन अधिक विद्युतऋणात्मक होने के कारण यह
+                द्विबंध के इलेक्ट्रॉन घनत्व को अपनी ओर खींच लेता है, जिससे इस
+                पर आंशिक ऋणात्मक आवेश (δ–) आ जाता है, जबकि कार्बन पर आंशिक
+                धनात्मक आवेश (δ+) आ जाता है। इस कारण कार्बोनिल समूह ध्रुवीय
+                होता है।
+            </p>
+
+            <div class="formula">
+                \[
+                >C=O \;\longrightarrow\; >C^{\delta+}-O^{\delta-}
+                \]
+            </div>
+
+            <p>
+                कार्बोनिल समूह के धनात्मक आवेशित कार्बन परमाणु पर नाभिकस्नेही
+                अभिकर्मक (Nu<sup>−</sup>) द्वारा आसानी से आक्रमण कर लिया जाता
+                है। इसी कारण ऐल्डिहाइड तथा कीटोन नाभिकस्नेही योगात्मक
+                अभिक्रिया देते हैं।
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= प्रश्न 9 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+    प्रश्न: फॉर्मल्डिहाइड, एसीटैल्डिहाइड और एसीटोन में अभिक्रियाशीलता
+    का क्रम समझाइए।
+</div>
+
+<div class="answer">
+
+    <p>
+        ऐल्डिहाइड और कीटोन में कार्बोनिल समूह (&gt;C=O) उपस्थित होता है।
+        ऑक्सीजन की अधिक विद्युतऋणात्मकता के कारण कार्बोनिल समूह ध्रुवीय होता है।
+        इसमें कार्बोनिल कार्बन पर आंशिक धनात्मक आवेश (δ+) तथा ऑक्सीजन पर
+        आंशिक ऋणात्मक आवेश (δ–) होता है।
+    </p>
+
+    <div class="formula">
+        \[
+        &gt;C=O \;\longrightarrow\; &gt;C^{\delta+}-O^{\delta-}
+        \]
+    </div>
+
+    <p>
+        इसलिए नाभिकस्नेही अभिकर्मक कार्बोनिल कार्बन पर आसानी से आक्रमण करते हैं।
+        ऐल्किल समूह का +I प्रभाव कार्बोनिल कार्बन के धनात्मक आवेश को कम करता है,
+        जिससे अभिक्रियाशीलता घटती है।
+    </p>
+
+    <p>
+        फॉर्मल्डिहाइड में कोई ऐल्किल समूह नहीं होता, एसीटैल्डिहाइड में एक
+        मैथिल समूह तथा एसीटोन में दो मैथिल समूह होते हैं। इसलिए एसीटोन की
+        अभिक्रियाशीलता सबसे कम और फॉर्मल्डिहाइड की सबसे अधिक होती है।
+    </p>
+
+    <p>
+        <b>अतः अभिक्रियाशीलता का क्रम:</b><br>
+        फॉर्मल्डिहाइड &gt; एसीटैल्डिहाइड &gt; एसीटोन
+    </p>
+
+</div>
+    </div>
+
+
+    <!-- ================= प्रश्न 10 (मेगा) ================= -->
+
+  <div class="qa-box">
+        
+        <div class="question">
+    प्रश्न: एल्डिहाइड तथा कीटोन में कौन-कौन सी रासायनिक अभिक्रियाएँ होती हैं?
+</div>
+
+<div class="answer">
+
+    <p>
+        एल्डिहाइड तथा कीटोन में निम्नलिखित प्रमुख रासायनिक अभिक्रियाएँ होती हैं—
+    </p>
+
+    <p>• क्लोरीन के साथ अभिक्रियाएँ</p>
+    <p>• अपचयन अभिक्रियाएँ</p>
+    <p>• नाभिकस्नेही योगात्मक अभिक्रियाएँ</p>
+    <p>• अमोनिया के साथ अभिक्रियाएँ</p>
+    <p>• प्रतिस्थापन अभिक्रियाएँ</p>
+    <p>• ऑक्सीकरण अभिक्रियाएँ</p>
+    <p>• शिफ अभिकर्मक के साथ अभिक्रियाएँ</p>
+    <p>• α-हाइड्रोजन की अभिक्रियाएँ</p>
+    <p>• संघनन अभिक्रियाएँ</p>
+    <p>• बहुलीकरण अभिक्रियाएँ</p>
+
+</div>
+</div>
+    <div class="qa-box">
+
+        <div class="question">
+    प्रश्न: एल्डिहाइड तथा कीटोन के रासायनिक गुण लिखिए।<br>
+
+    <small>
+        अथवा — निम्न को प्राप्त करने के लिए केवल रासायनिक समीकरण लिखिए:
+    </small><br>
+
+    <small>• फॉर्मेल्डिहाइड से यूरोट्रोपिन।</small><br>
+    <small>• ऐसीटोन से आयोडोफॉर्म।</small><br>
+    <small>• ऐसीटिल क्लोराइड से ऐसीटोन।</small><br>
+    <small>• ऐसीटिल क्लोराइड से ऐसीटैल्डिहाइड।</small><br>
+    <small>• फॉर्मेल्डिहाइड से मेथेनॉल।</small><br>
+    <small>• एथिल ऐसीटेट से ऐसीटिक अम्ल।</small><br>
+    <small>• बेंजल्डिहाइड से सोडियम बेंजोएट।</small><br>
+
+    <small>
+        अथवा — क्या होता है जब:
+    </small><br>
+
+    <small>• अमोनिया की क्रिया फॉर्मेल्डिहाइड से होती है।</small><br>
+    <small>• ऐसीटोन को सान्द्र H<sub>2</sub>SO<sub>4</sub> के साथ गर्म किया जाता है।</small><br>
+    <small>• एसीटोन की क्लोरोफॉर्म के साथ अभिक्रिया होती है।</small><br>
+
+    <small>
+        अथवा — टॉलेन्स अभिकर्मक क्या है? यह कैसे बनाया जाता है?
+    </small><br>
+
+    <small>
+        अथवा — फैहलिंग अभिकर्मक क्या है? यह कैसे तैयार किया जाता है?
+    </small><br>
+
+    <small>
+        अथवा — शिफ अभिकर्मक किसे कहते हैं?
+    </small><br>
+
+    <small>
+        अथवा — यूरोट्रोपिन क्या है? इसका पूरा नाम, बनाने की विधि,
+        संरचना तथा उपयोग लिखिए।
+    </small><br>
+
+    <small>
+        अथवा — क्या होता है जब अमोनिया के साथ फॉर्मेल्डिहाइड की
+        अभिक्रिया होती है?
+    </small><br>
+
+    <small>
+        अथवा — कैनिज़ारो अभिक्रिया लिखिए।
+    </small><br>
+
+    <small>
+        अथवा — क्या होता है जब बेन्जैल्डिहाइड 45% NaOH के साथ उबलता है?
+    </small><br>
+
+    <small>
+        (इन सभी प्रश्नों के उत्तर नीचे दिए गए वर्गीकृत रासायनिक गुणों
+        में निहित हैं।)
+    </small>
+        </div>
+
+        <div class="answer">
+
+            <p>एल्डिहाइड तथा कीटोन के रासायनिक गुण निम्न हैं।</p>
+
+            <p class="sub-heading">[A] योगात्मक अभिक्रियाएं</p>
+
+            <p><b>1. हाइड्रोजन का योग:</b> एल्डिहाइड तथा कीटोन हाइड्रोजन से
+                क्रिया करके अल्कोहल बनाते हैं।</p>
+
+            <div class="formula">
+                
+                
+                <svg class="chemical-reaction" viewBox="0 0 770 210" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(20,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">H</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">H</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">O</text>
+                </g>
+                <text x="210" y="85" font-size="26">+</text>
+                <text x="245" y="85" font-size="22">H₂</text>
+                <line x1="300" y1="80" x2="400" y2="80" stroke="black" stroke-width="2.5"/>
+                <polygon points="400,80 387,73 387,87" fill="black"/>
+                <g transform="translate(420,10)">
+                <text x="70" y="81" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="61" y1="67" x2="42" y2="51" stroke="black" stroke-width="2"/>
+                <text x="36" y="47" text-anchor="middle" font-size="20">H</text>
+                <line x1="79" y1="67" x2="98" y2="51" stroke="black" stroke-width="2"/>
+                <text x="104" y="47" text-anchor="middle" font-size="20">OH</text>
+                <line x1="61" y1="83" x2="42" y2="99" stroke="black" stroke-width="2"/>
+                <text x="36" y="115" text-anchor="middle" font-size="20">H</text>
+                <line x1="79" y1="83" x2="98" y2="99" stroke="black" stroke-width="2"/>
+                <text x="104" y="115" text-anchor="middle" font-size="20">H</text>
+                </g>
+                <text x="90" y="195" text-anchor="middle" font-size="17">फॉर्मेल्डिहाइड (HCHO)</text>
+                <text x="520" y="195" text-anchor="middle" font-size="17">मेथेनॉल (CH₃OH)</text>
+                </svg>
+            </div>
+
+            <div class="formula">
+                
+                
+                
+                <svg class="chemical-reaction" viewBox="0 0 770 210" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(20,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">H</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">O</text>
+                </g>
+                <text x="210" y="85" font-size="26">+</text>
+                <text x="245" y="85" font-size="22">H₂</text>
+                <line x1="300" y1="80" x2="400" y2="80" stroke="black" stroke-width="2.5"/>
+                <polygon points="400,80 387,73 387,87" fill="black"/>
+                <g transform="translate(420,10)">
+                <text x="70" y="81" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="61" y1="67" x2="42" y2="51" stroke="black" stroke-width="2"/>
+                <text x="36" y="47" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="79" y1="67" x2="98" y2="51" stroke="black" stroke-width="2"/>
+                <text x="104" y="47" text-anchor="middle" font-size="20">OH</text>
+                <line x1="61" y1="83" x2="42" y2="99" stroke="black" stroke-width="2"/>
+                <text x="36" y="115" text-anchor="middle" font-size="20">H</text>
+                <line x1="79" y1="83" x2="98" y2="99" stroke="black" stroke-width="2"/>
+                <text x="104" y="115" text-anchor="middle" font-size="20">H</text>
+                </g>
+                <text x="90" y="195" text-anchor="middle" font-size="17">ऐसीटैल्डिहाइड (CH₃CHO)</text>
+                <text x="520" y="195" text-anchor="middle" font-size="17">एथेनॉल (CH₃CH₂OH)</text>
+                </svg>
+            </div>
+
+            <div class="formula">
+                
+                
+                <svg class="chemical-reaction" viewBox="0 0 770 210" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(20,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">O</text>
+                </g>
+                <text x="210" y="85" font-size="26">+</text>
+                <text x="245" y="85" font-size="22">H₂</text>
+                <line x1="300" y1="80" x2="400" y2="80" stroke="black" stroke-width="2.5"/>
+                <polygon points="400,80 387,73 387,87" fill="black"/>
+                <g transform="translate(420,10)">
+                <text x="70" y="81" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="61" y1="67" x2="42" y2="51" stroke="black" stroke-width="2"/>
+                <text x="36" y="47" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="79" y1="67" x2="98" y2="51" stroke="black" stroke-width="2"/>
+                <text x="104" y="47" text-anchor="middle" font-size="20">OH</text>
+                <line x1="61" y1="83" x2="42" y2="99" stroke="black" stroke-width="2"/>
+                <text x="36" y="115" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="79" y1="83" x2="98" y2="99" stroke="black" stroke-width="2"/>
+                <text x="104" y="115" text-anchor="middle" font-size="20">H</text>
+                </g>
+                <text x="90" y="195" text-anchor="middle" font-size="17">ऐसीटोन ((CH₃)₂CO)</text>
+                <text x="520" y="195" text-anchor="middle" font-size="17">आइसोप्रोपेनॉल ((CH₃)₂CHOH)</text>
+                </svg>
+            </div>
+
+            <div class="formula">
+                
+                
+                
+                
+                <svg class="chemical-reaction" viewBox="0 0 800 220" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(20,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">C₆H₅</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">H</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">O</text>
+                </g>
+                <text x="220" y="85" font-size="26">+</text>
+                <text x="255" y="85" font-size="22">H₂</text>
+                <line x1="310" y1="80" x2="410" y2="80" stroke="black" stroke-width="2.5"/>
+                <polygon points="410,80 397,73 397,87" fill="black"/>
+                <g transform="translate(430,10)">
+                <text x="70" y="81" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="61" y1="67" x2="42" y2="51" stroke="black" stroke-width="2"/>
+                <text x="36" y="47" text-anchor="middle" font-size="20">C₆H₅</text>
+                <line x1="79" y1="67" x2="98" y2="51" stroke="black" stroke-width="2"/>
+                <text x="104" y="47" text-anchor="middle" font-size="20">OH</text>
+                <line x1="61" y1="83" x2="42" y2="99" stroke="black" stroke-width="2"/>
+                <text x="36" y="115" text-anchor="middle" font-size="20">H</text>
+                <line x1="79" y1="83" x2="98" y2="99" stroke="black" stroke-width="2"/>
+                <text x="104" y="115" text-anchor="middle" font-size="20">H</text>
+                </g>
+                <text x="95" y="205" text-anchor="middle" font-size="17">बेन्ज़ैल्डिहाइड (C₆H₅CHO)</text>
+                <text x="540" y="205" text-anchor="middle" font-size="17">बेन्ज़िल ऐल्कोहॉल (C₆H₅CH₂OH)</text>
+                </svg>
+            </div>
+
+            <p><b>2. हाइड्रोजन सायनाइड का योग:</b> एल्डिहाइड तथा कीटोन
+                हाइड्रोजन सायनाइड से क्रिया करके सायनोहाइड्रिन बनाते हैं।</p>
+
+            <div class="formula">
+                
+                
+                <svg class="chemical-reaction" viewBox="0 0 790 210" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(20,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">H</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">H</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">O</text>
+                </g>
+                <text x="210" y="85" font-size="26">+</text>
+                <text x="245" y="85" font-size="22">HCN</text>
+                <line x1="320" y1="80" x2="420" y2="80" stroke="black" stroke-width="2.5"/>
+                <polygon points="420,80 407,73 407,87" fill="black"/>
+                <g transform="translate(420,10)">
+                <text x="70" y="81" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="61" y1="67" x2="42" y2="51" stroke="black" stroke-width="2"/>
+                <text x="36" y="47" text-anchor="middle" font-size="20">H</text>
+                <line x1="79" y1="67" x2="98" y2="51" stroke="black" stroke-width="2"/>
+                <text x="104" y="47" text-anchor="middle" font-size="20">OH</text>
+                <line x1="61" y1="83" x2="42" y2="99" stroke="black" stroke-width="2"/>
+                <text x="36" y="115" text-anchor="middle" font-size="20">H</text>
+                <line x1="79" y1="83" x2="98" y2="99" stroke="black" stroke-width="2"/>
+                <text x="104" y="115" text-anchor="middle" font-size="20">CN</text>
+                </g>
+                <text x="90" y="195" text-anchor="middle" font-size="17">फॉर्मेल्डिहाइड</text>
+                <text x="520" y="195" text-anchor="middle" font-size="17">ग्लाइकोनाइट्राइल (साइनोहाइड्रिन)</text>
+                </svg>
+            </div>
+
+            <div class="formula">
+                
+                
+                
+                <svg class="chemical-reaction" viewBox="0 0 790 210" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(20,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">H</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">O</text>
+                </g>
+                <text x="210" y="85" font-size="26">+</text>
+                <text x="245" y="85" font-size="22">HCN</text>
+                <line x1="320" y1="80" x2="420" y2="80" stroke="black" stroke-width="2.5"/>
+                <polygon points="420,80 407,73 407,87" fill="black"/>
+                <g transform="translate(420,10)">
+                <text x="70" y="81" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="61" y1="67" x2="42" y2="51" stroke="black" stroke-width="2"/>
+                <text x="36" y="47" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="79" y1="67" x2="98" y2="51" stroke="black" stroke-width="2"/>
+                <text x="104" y="47" text-anchor="middle" font-size="20">OH</text>
+                <line x1="61" y1="83" x2="42" y2="99" stroke="black" stroke-width="2"/>
+                <text x="36" y="115" text-anchor="middle" font-size="20">H</text>
+                <line x1="79" y1="83" x2="98" y2="99" stroke="black" stroke-width="2"/>
+                <text x="104" y="115" text-anchor="middle" font-size="20">CN</text>
+                </g>
+                <text x="90" y="195" text-anchor="middle" font-size="17">ऐसीटैल्डिहाइड</text>
+                <text x="520" y="195" text-anchor="middle" font-size="17">ऐसीटैल्डिहाइड साइनोहाइड्रिन</text>
+                </svg>
+            </div>
+
+            <div class="formula">
+                
+                
+                <svg class="chemical-reaction" viewBox="0 0 790 210" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(20,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">O</text>
+                </g>
+                <text x="210" y="85" font-size="26">+</text>
+                <text x="245" y="85" font-size="22">HCN</text>
+                <line x1="320" y1="80" x2="420" y2="80" stroke="black" stroke-width="2.5"/>
+                <polygon points="420,80 407,73 407,87" fill="black"/>
+                <g transform="translate(420,10)">
+                <text x="70" y="81" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="61" y1="67" x2="42" y2="51" stroke="black" stroke-width="2"/>
+                <text x="36" y="47" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="79" y1="67" x2="98" y2="51" stroke="black" stroke-width="2"/>
+                <text x="104" y="47" text-anchor="middle" font-size="20">OH</text>
+                <line x1="61" y1="83" x2="42" y2="99" stroke="black" stroke-width="2"/>
+                <text x="36" y="115" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="79" y1="83" x2="98" y2="99" stroke="black" stroke-width="2"/>
+                <text x="104" y="115" text-anchor="middle" font-size="20">CN</text>
+                </g>
+                <text x="90" y="195" text-anchor="middle" font-size="17">ऐसीटोन</text>
+                <text x="520" y="195" text-anchor="middle" font-size="17">ऐसीटोन साइनोहाइड्रिन</text>
+                </svg>
+            </div>
+
+            <div class="formula">
+                
+                
+                
+                
+                <svg class="chemical-reaction" viewBox="0 0 800 220" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(20,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">C₆H₅</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">H</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">O</text>
+                </g>
+                <text x="220" y="85" font-size="26">+</text>
+                <text x="255" y="85" font-size="22">HCN</text>
+                <line x1="330" y1="80" x2="430" y2="80" stroke="black" stroke-width="2.5"/>
+                <polygon points="430,80 417,73 417,87" fill="black"/>
+                <g transform="translate(430,10)">
+                <text x="70" y="81" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="61" y1="67" x2="42" y2="51" stroke="black" stroke-width="2"/>
+                <text x="36" y="47" text-anchor="middle" font-size="20">C₆H₅</text>
+                <line x1="79" y1="67" x2="98" y2="51" stroke="black" stroke-width="2"/>
+                <text x="104" y="47" text-anchor="middle" font-size="20">OH</text>
+                <line x1="61" y1="83" x2="42" y2="99" stroke="black" stroke-width="2"/>
+                <text x="36" y="115" text-anchor="middle" font-size="20">H</text>
+                <line x1="79" y1="83" x2="98" y2="99" stroke="black" stroke-width="2"/>
+                <text x="104" y="115" text-anchor="middle" font-size="20">CN</text>
+                </g>
+                <text x="95" y="205" text-anchor="middle" font-size="17">बेन्ज़ैल्डिहाइड</text>
+                <text x="540" y="205" text-anchor="middle" font-size="17">मैन्डेलोनाइट्राइल</text>
+                </svg>
+            </div>
+
+            <p><b>3. सोडियम बाई सल्फाइड का योग:</b> एल्डिहाइड तथा कीटोन
+                सोडियम बाई सल्फाइड से क्रिया करके सोडियम बाई सल्फाइड व्युत्पन्न
+                बनाते हैं।</p>
+
+            <div class="formula">
+                <svg class="chemical-reaction" viewBox="0 0 820 210" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(20,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">H</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">H</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">O</text>
+                </g>
+                <text x="210" y="85" font-size="26">+</text>
+                <text x="245" y="85" font-size="22">NaHSO₃</text>
+                <line x1="320" y1="80" x2="420" y2="80" stroke="black" stroke-width="2.5"/>
+                <polygon points="420,80 407,73 407,87" fill="black"/>
+                <g transform="translate(430,10)">
+                <text x="70" y="81" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="61" y1="67" x2="42" y2="51" stroke="black" stroke-width="2"/>
+                <text x="36" y="47" text-anchor="middle" font-size="20">H</text>
+                <line x1="79" y1="67" x2="98" y2="51" stroke="black" stroke-width="2"/>
+                <text x="104" y="47" text-anchor="middle" font-size="20">OH</text>
+                <line x1="61" y1="83" x2="42" y2="99" stroke="black" stroke-width="2"/>
+                <text x="36" y="115" text-anchor="middle" font-size="20">H</text>
+                <line x1="79" y1="83" x2="98" y2="99" stroke="black" stroke-width="2"/>
+                <text x="104" y="115" text-anchor="middle" font-size="20">SO₃Na</text>
+                </g>
+                <text x="90" y="195" text-anchor="middle" font-size="17">फॉर्मेल्डिहाइड</text>
+                <text x="540" y="195" text-anchor="middle" font-size="17">बाइसल्फाइड व्युत्पन्न</text>
+                </svg>
+            </div>
+
+            <div class="formula">
+                <svg class="chemical-reaction" viewBox="0 0 820 210" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(20,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">H</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">O</text>
+                </g>
+                <text x="210" y="85" font-size="26">+</text>
+                <text x="245" y="85" font-size="22">NaHSO₃</text>
+                <line x1="320" y1="80" x2="420" y2="80" stroke="black" stroke-width="2.5"/>
+                <polygon points="420,80 407,73 407,87" fill="black"/>
+                <g transform="translate(430,10)">
+                <text x="70" y="81" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="61" y1="67" x2="42" y2="51" stroke="black" stroke-width="2"/>
+                <text x="36" y="47" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="79" y1="67" x2="98" y2="51" stroke="black" stroke-width="2"/>
+                <text x="104" y="47" text-anchor="middle" font-size="20">OH</text>
+                <line x1="61" y1="83" x2="42" y2="99" stroke="black" stroke-width="2"/>
+                <text x="36" y="115" text-anchor="middle" font-size="20">H</text>
+                <line x1="79" y1="83" x2="98" y2="99" stroke="black" stroke-width="2"/>
+                <text x="104" y="115" text-anchor="middle" font-size="20">SO₃Na</text>
+                </g>
+                <text x="90" y="195" text-anchor="middle" font-size="17">ऐसीटैल्डिहाइड</text>
+                <text x="540" y="195" text-anchor="middle" font-size="17">बाइसल्फाइड व्युत्पन्न</text>
+                </svg>
+            </div>
+
+            <div class="formula">
+                <svg class="chemical-reaction" viewBox="0 0 820 210" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(20,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">O</text>
+                </g>
+                <text x="210" y="85" font-size="26">+</text>
+                <text x="245" y="85" font-size="22">NaHSO₃</text>
+                <line x1="320" y1="80" x2="420" y2="80" stroke="black" stroke-width="2.5"/>
+                <polygon points="420,80 407,73 407,87" fill="black"/>
+                <g transform="translate(430,10)">
+                <text x="70" y="81" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="61" y1="67" x2="42" y2="51" stroke="black" stroke-width="2"/>
+                <text x="36" y="47" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="79" y1="67" x2="98" y2="51" stroke="black" stroke-width="2"/>
+                <text x="104" y="47" text-anchor="middle" font-size="20">OH</text>
+                <line x1="61" y1="83" x2="42" y2="99" stroke="black" stroke-width="2"/>
+                <text x="36" y="115" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="79" y1="83" x2="98" y2="99" stroke="black" stroke-width="2"/>
+                <text x="104" y="115" text-anchor="middle" font-size="20">SO₃Na</text>
+                </g>
+                <text x="90" y="195" text-anchor="middle" font-size="17">ऐसीटोन</text>
+                <text x="540" y="195" text-anchor="middle" font-size="17">बाइसल्फाइड व्युत्पन्न</text>
+                </svg>
+            </div>
+
+            <div class="formula">
+                <svg class="chemical-reaction" viewBox="0 0 820 210" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(20,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">C₆H₅</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">H</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">O</text>
+                </g>
+                <text x="210" y="85" font-size="26">+</text>
+                <text x="245" y="85" font-size="22">NaHSO₃</text>
+                <line x1="320" y1="80" x2="420" y2="80" stroke="black" stroke-width="2.5"/>
+                <polygon points="420,80 407,73 407,87" fill="black"/>
+                <g transform="translate(430,10)">
+                <text x="70" y="81" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="61" y1="67" x2="42" y2="51" stroke="black" stroke-width="2"/>
+                <text x="36" y="47" text-anchor="middle" font-size="20">C₆H₅</text>
+                <line x1="79" y1="67" x2="98" y2="51" stroke="black" stroke-width="2"/>
+                <text x="104" y="47" text-anchor="middle" font-size="20">OH</text>
+                <line x1="61" y1="83" x2="42" y2="99" stroke="black" stroke-width="2"/>
+                <text x="36" y="115" text-anchor="middle" font-size="20">H</text>
+                <line x1="79" y1="83" x2="98" y2="99" stroke="black" stroke-width="2"/>
+                <text x="104" y="115" text-anchor="middle" font-size="20">SO₃Na</text>
+                </g>
+                <text x="90" y="195" text-anchor="middle" font-size="17">बेन्ज़ैल्डिहाइड</text>
+                <text x="540" y="195" text-anchor="middle" font-size="17">बाइसल्फाइड व्युत्पन्न</text>
+                </svg>
+            </div>
+          </div>
+    </div>
+    <div class="qa-box">
+
+            <p class="sub-heading">[B] प्रतिस्थापन अभिक्रियाएं</p>
+
+            <p><b>1. हाइड्रॉक्सिल ऐमिन से क्रिया:</b> एल्डिहाइड तथा कीटोन
+                हाइड्रॉक्सिल ऐमिन से क्रिया करके ऑक्सिम बनाते हैं।</p>
+
+            <div class="formula">
+                <svg class="chemical-reaction" viewBox="0 0 780 210" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(20,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">H</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">H</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">O</text>
+                </g>
+                <text x="205" y="90" font-size="26">+</text>
+                <text x="320" y="70" text-anchor="middle" font-size="18">H₂N-OH</text><text x="320" y="112" text-anchor="middle" font-size="14">(&#8722; H&#8322;O)</text>
+                <line x1="240" y1="90" x2="400" y2="90" stroke="black" stroke-width="2.5"/>
+                <polygon points="400,90 387,83 387,97" fill="black"/>
+                <g transform="translate(430,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">H</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">H</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">N</text>
+                <line x1="128" y1="60" x2="152" y2="60" stroke="black" stroke-width="2"/>
+                <text x="172.0" y="67" text-anchor="middle" font-size="20">OH</text>
+                </g>
+                <text x="90" y="195" text-anchor="middle" font-size="17">फॉर्मेल्डिहाइड</text>
+                <text x="560" y="195" text-anchor="middle" font-size="17">ऑक्सिम</text>
+                </svg>
+            </div>
+
+            <div class="formula">
+                <svg class="chemical-reaction" viewBox="0 0 780 210" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(20,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">H</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">O</text>
+                </g>
+                <text x="205" y="90" font-size="26">+</text>
+                <text x="320" y="70" text-anchor="middle" font-size="18">H₂N-OH</text><text x="320" y="112" text-anchor="middle" font-size="14">(&#8722; H&#8322;O)</text>
+                <line x1="240" y1="90" x2="400" y2="90" stroke="black" stroke-width="2.5"/>
+                <polygon points="400,90 387,83 387,97" fill="black"/>
+                <g transform="translate(430,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">H</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">N</text>
+                <line x1="128" y1="60" x2="152" y2="60" stroke="black" stroke-width="2"/>
+                <text x="172.0" y="67" text-anchor="middle" font-size="20">OH</text>
+                </g>
+                <text x="90" y="195" text-anchor="middle" font-size="17">ऐसीटैल्डिहाइड</text>
+                <text x="560" y="195" text-anchor="middle" font-size="17">ऑक्सिम</text>
+                </svg>
+            </div>
+
+            <div class="formula">
+                <svg class="chemical-reaction" viewBox="0 0 780 210" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(20,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">O</text>
+                </g>
+                <text x="205" y="90" font-size="26">+</text>
+                <text x="320" y="70" text-anchor="middle" font-size="18">H₂N-OH</text><text x="320" y="112" text-anchor="middle" font-size="14">(&#8722; H&#8322;O)</text>
+                <line x1="240" y1="90" x2="400" y2="90" stroke="black" stroke-width="2.5"/>
+                <polygon points="400,90 387,83 387,97" fill="black"/>
+                <g transform="translate(430,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">N</text>
+                <line x1="128" y1="60" x2="152" y2="60" stroke="black" stroke-width="2"/>
+                <text x="172.0" y="67" text-anchor="middle" font-size="20">OH</text>
+                </g>
+                <text x="90" y="195" text-anchor="middle" font-size="17">ऐसीटोन</text>
+                <text x="560" y="195" text-anchor="middle" font-size="17">ऑक्सिम</text>
+                </svg>
+            </div>
+
+            <div class="formula">
+                <svg class="chemical-reaction" viewBox="0 0 780 210" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(20,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">C₆H₅</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">H</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">O</text>
+                </g>
+                <text x="205" y="90" font-size="26">+</text>
+                <text x="320" y="70" text-anchor="middle" font-size="18">H₂N-OH</text><text x="320" y="112" text-anchor="middle" font-size="14">(&#8722; H&#8322;O)</text>
+                <line x1="240" y1="90" x2="400" y2="90" stroke="black" stroke-width="2.5"/>
+                <polygon points="400,90 387,83 387,97" fill="black"/>
+                <g transform="translate(430,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">C₆H₅</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">H</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">N</text>
+                <line x1="128" y1="60" x2="152" y2="60" stroke="black" stroke-width="2"/>
+                <text x="172.0" y="67" text-anchor="middle" font-size="20">OH</text>
+                </g>
+                <text x="90" y="195" text-anchor="middle" font-size="17">बेन्ज़ैल्डिहाइड</text>
+                <text x="560" y="195" text-anchor="middle" font-size="17">ऑक्सिम</text>
+                </svg>
+            </div>
+
+            <p><b>2. हाइड्रेज़ीन से क्रिया:</b> एल्डिहाइड तथा कीटोन हाइड्रेज़ीन
+                से क्रिया करके हाइड्रेज़ोन बनाते हैं।</p>
+
+            <div class="formula">
+                <svg class="chemical-reaction" viewBox="0 0 800 210" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(20,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">H</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">H</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">O</text>
+                </g>
+                <text x="205" y="90" font-size="26">+</text>
+                <text x="320" y="70" text-anchor="middle" font-size="18">H₂N-NH₂</text><text x="320" y="112" text-anchor="middle" font-size="14">(&#8722; H&#8322;O)</text>
+                <line x1="240" y1="90" x2="400" y2="90" stroke="black" stroke-width="2.5"/>
+                <polygon points="400,90 387,83 387,97" fill="black"/>
+                <g transform="translate(430,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">H</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">H</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">N</text>
+                <line x1="128" y1="60" x2="152" y2="60" stroke="black" stroke-width="2"/>
+                <text x="177.0" y="67" text-anchor="middle" font-size="20">NH₂</text>
+                </g>
+                <text x="90" y="195" text-anchor="middle" font-size="17">फॉर्मेल्डिहाइड</text>
+                <text x="560" y="195" text-anchor="middle" font-size="17">हाइड्रेज़ोन</text>
+                </svg>
+            </div>
+
+            <div class="formula">
+                <svg class="chemical-reaction" viewBox="0 0 800 210" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(20,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">H</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">O</text>
+                </g>
+                <text x="205" y="90" font-size="26">+</text>
+                <text x="320" y="70" text-anchor="middle" font-size="18">H₂N-NH₂</text><text x="320" y="112" text-anchor="middle" font-size="14">(&#8722; H&#8322;O)</text>
+                <line x1="240" y1="90" x2="400" y2="90" stroke="black" stroke-width="2.5"/>
+                <polygon points="400,90 387,83 387,97" fill="black"/>
+                <g transform="translate(430,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">H</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">N</text>
+                <line x1="128" y1="60" x2="152" y2="60" stroke="black" stroke-width="2"/>
+                <text x="177.0" y="67" text-anchor="middle" font-size="20">NH₂</text>
+                </g>
+                <text x="90" y="195" text-anchor="middle" font-size="17">ऐसीटैल्डिहाइड</text>
+                <text x="560" y="195" text-anchor="middle" font-size="17">हाइड्रेज़ोन</text>
+                </svg>
+            </div>
+
+            <div class="formula">
+                <svg class="chemical-reaction" viewBox="0 0 800 210" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(20,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">O</text>
+                </g>
+                <text x="205" y="90" font-size="26">+</text>
+                <text x="320" y="70" text-anchor="middle" font-size="18">H₂N-NH₂</text><text x="320" y="112" text-anchor="middle" font-size="14">(&#8722; H&#8322;O)</text>
+                <line x1="240" y1="90" x2="400" y2="90" stroke="black" stroke-width="2.5"/>
+                <polygon points="400,90 387,83 387,97" fill="black"/>
+                <g transform="translate(430,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">N</text>
+                <line x1="128" y1="60" x2="152" y2="60" stroke="black" stroke-width="2"/>
+                <text x="177.0" y="67" text-anchor="middle" font-size="20">NH₂</text>
+                </g>
+                <text x="90" y="195" text-anchor="middle" font-size="17">ऐसीटोन</text>
+                <text x="560" y="195" text-anchor="middle" font-size="17">हाइड्रेज़ोन</text>
+                </svg>
+            </div>
+
+            <div class="formula">
+                <svg class="chemical-reaction" viewBox="0 0 800 210" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(20,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">C₆H₅</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">H</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">O</text>
+                </g>
+                <text x="205" y="90" font-size="26">+</text>
+                <text x="320" y="70" text-anchor="middle" font-size="18">H₂N-NH₂</text><text x="320" y="112" text-anchor="middle" font-size="14">(&#8722; H&#8322;O)</text>
+                <line x1="240" y1="90" x2="400" y2="90" stroke="black" stroke-width="2.5"/>
+                <polygon points="400,90 387,83 387,97" fill="black"/>
+                <g transform="translate(430,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">C₆H₅</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">H</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">N</text>
+                <line x1="128" y1="60" x2="152" y2="60" stroke="black" stroke-width="2"/>
+                <text x="177.0" y="67" text-anchor="middle" font-size="20">NH₂</text>
+                </g>
+                <text x="90" y="195" text-anchor="middle" font-size="17">बेन्ज़ैल्डिहाइड</text>
+                <text x="560" y="195" text-anchor="middle" font-size="17">हाइड्रेज़ोन</text>
+                </svg>
+            </div>
+
+            <p><b>3. फ़ेनिल हाइड्रेज़ीन से क्रिया:</b> एल्डिहाइड तथा कीटोन
+                फ़ेनिल हाइड्रेज़ीन से क्रिया करके फ़ेनिल हाइड्रेज़ोन बनाते हैं।</p>
+
+            <div class="formula">
+                <svg class="chemical-reaction" viewBox="0 0 880 210" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(20,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">H</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">H</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">O</text>
+                </g>
+                <text x="205" y="90" font-size="26">+</text>
+                <text x="320" y="70" text-anchor="middle" font-size="18">H₂N-NH-C₆H₅</text><text x="320" y="112" text-anchor="middle" font-size="14">(&#8722; H&#8322;O)</text>
+                <line x1="240" y1="90" x2="400" y2="90" stroke="black" stroke-width="2.5"/>
+                <polygon points="400,90 387,83 387,97" fill="black"/>
+                <g transform="translate(430,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">H</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">H</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">N</text>
+                <line x1="128" y1="60" x2="152" y2="60" stroke="black" stroke-width="2"/>
+                <text x="202.0" y="67" text-anchor="middle" font-size="20">NH-C₆H₅</text>
+                </g>
+                <text x="90" y="195" text-anchor="middle" font-size="17">फॉर्मेल्डिहाइड</text>
+                <text x="560" y="195" text-anchor="middle" font-size="17">फ़ेनिल हाइड्रेज़ोन</text>
+                </svg>
+            </div>
+
+            <div class="formula">
+                <svg class="chemical-reaction" viewBox="0 0 880 210" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(20,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">H</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">O</text>
+                </g>
+                <text x="205" y="90" font-size="26">+</text>
+                <text x="320" y="70" text-anchor="middle" font-size="18">H₂N-NH-C₆H₅</text><text x="320" y="112" text-anchor="middle" font-size="14">(&#8722; H&#8322;O)</text>
+                <line x1="240" y1="90" x2="400" y2="90" stroke="black" stroke-width="2.5"/>
+                <polygon points="400,90 387,83 387,97" fill="black"/>
+                <g transform="translate(430,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">H</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">N</text>
+                <line x1="128" y1="60" x2="152" y2="60" stroke="black" stroke-width="2"/>
+                <text x="202.0" y="67" text-anchor="middle" font-size="20">NH-C₆H₅</text>
+                </g>
+                <text x="90" y="195" text-anchor="middle" font-size="17">ऐसीटैल्डिहाइड</text>
+                <text x="560" y="195" text-anchor="middle" font-size="17">फ़ेनिल हाइड्रेज़ोन</text>
+                </svg>
+            </div>
+
+            <div class="formula">
+                <svg class="chemical-reaction" viewBox="0 0 880 210" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(20,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">O</text>
+                </g>
+                <text x="205" y="90" font-size="26">+</text>
+                <text x="320" y="70" text-anchor="middle" font-size="18">H₂N-NH-C₆H₅</text><text x="320" y="112" text-anchor="middle" font-size="14">(&#8722; H&#8322;O)</text>
+                <line x1="240" y1="90" x2="400" y2="90" stroke="black" stroke-width="2.5"/>
+                <polygon points="400,90 387,83 387,97" fill="black"/>
+                <g transform="translate(430,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">N</text>
+                <line x1="128" y1="60" x2="152" y2="60" stroke="black" stroke-width="2"/>
+                <text x="202.0" y="67" text-anchor="middle" font-size="20">NH-C₆H₅</text>
+                </g>
+                <text x="90" y="195" text-anchor="middle" font-size="17">ऐसीटोन</text>
+                <text x="560" y="195" text-anchor="middle" font-size="17">फ़ेनिल हाइड्रेज़ोन</text>
+                </svg>
+            </div>
+
+            <div class="formula">
+                <svg class="chemical-reaction" viewBox="0 0 880 210" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(20,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">C₆H₅</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">H</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">O</text>
+                </g>
+                <text x="205" y="90" font-size="26">+</text>
+                <text x="320" y="70" text-anchor="middle" font-size="18">H₂N-NH-C₆H₅</text><text x="320" y="112" text-anchor="middle" font-size="14">(&#8722; H&#8322;O)</text>
+                <line x1="240" y1="90" x2="400" y2="90" stroke="black" stroke-width="2.5"/>
+                <polygon points="400,90 387,83 387,97" fill="black"/>
+                <g transform="translate(430,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">C₆H₅</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">H</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">N</text>
+                <line x1="128" y1="60" x2="152" y2="60" stroke="black" stroke-width="2"/>
+                <text x="202.0" y="67" text-anchor="middle" font-size="20">NH-C₆H₅</text>
+                </g>
+                <text x="90" y="195" text-anchor="middle" font-size="17">बेन्ज़ैल्डिहाइड</text>
+                <text x="560" y="195" text-anchor="middle" font-size="17">फ़ेनिल हाइड्रेज़ोन</text>
+                </svg>
+            </div>
+
+            <p><b>4. सेमीकार्बेज़ाइड से क्रिया:</b> एल्डिहाइड तथा कीटोन
+                सेमीकार्बेज़ाइड से क्रिया करके सेमीकार्बेज़ोन बनाते हैं।</p>
+
+            <div class="formula">
+                <svg class="chemical-reaction" viewBox="0 0 900 210" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(20,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">H</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">H</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">O</text>
+                </g>
+                <text x="205" y="90" font-size="26">+</text>
+                <text x="320" y="70" text-anchor="middle" font-size="18">H₂N-NHCONH₂</text><text x="320" y="112" text-anchor="middle" font-size="14">(&#8722; H&#8322;O)</text>
+                <line x1="240" y1="90" x2="400" y2="90" stroke="black" stroke-width="2.5"/>
+                <polygon points="400,90 387,83 387,97" fill="black"/>
+                <g transform="translate(430,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">H</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">H</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">N</text>
+                <line x1="128" y1="60" x2="152" y2="60" stroke="black" stroke-width="2"/>
+                <text x="217.0" y="67" text-anchor="middle" font-size="20">NH-CO-NH₂</text>
+                </g>
+                <text x="90" y="195" text-anchor="middle" font-size="17">फॉर्मेल्डिहाइड</text>
+                <text x="560" y="195" text-anchor="middle" font-size="17">सेमीकार्बेज़ोन</text>
+                </svg>
+            </div>
+
+            <div class="formula">
+                <svg class="chemical-reaction" viewBox="0 0 900 210" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(20,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">H</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">O</text>
+                </g>
+                <text x="205" y="90" font-size="26">+</text>
+                <text x="320" y="70" text-anchor="middle" font-size="18">H₂N-NHCONH₂</text><text x="320" y="112" text-anchor="middle" font-size="14">(&#8722; H&#8322;O)</text>
+                <line x1="240" y1="90" x2="400" y2="90" stroke="black" stroke-width="2.5"/>
+                <polygon points="400,90 387,83 387,97" fill="black"/>
+                <g transform="translate(430,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">H</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">N</text>
+                <line x1="128" y1="60" x2="152" y2="60" stroke="black" stroke-width="2"/>
+                <text x="217.0" y="67" text-anchor="middle" font-size="20">NH-CO-NH₂</text>
+                </g>
+                <text x="90" y="195" text-anchor="middle" font-size="17">ऐसीटैल्डिहाइड</text>
+                <text x="560" y="195" text-anchor="middle" font-size="17">सेमीकार्बेज़ोन</text>
+                </svg>
+            </div>
+
+            <div class="formula">
+                <svg class="chemical-reaction" viewBox="0 0 900 210" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(20,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">O</text>
+                </g>
+                <text x="205" y="90" font-size="26">+</text>
+                <text x="320" y="70" text-anchor="middle" font-size="18">H₂N-NHCONH₂</text><text x="320" y="112" text-anchor="middle" font-size="14">(&#8722; H&#8322;O)</text>
+                <line x1="240" y1="90" x2="400" y2="90" stroke="black" stroke-width="2.5"/>
+                <polygon points="400,90 387,83 387,97" fill="black"/>
+                <g transform="translate(430,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">N</text>
+                <line x1="128" y1="60" x2="152" y2="60" stroke="black" stroke-width="2"/>
+                <text x="217.0" y="67" text-anchor="middle" font-size="20">NH-CO-NH₂</text>
+                </g>
+                <text x="90" y="195" text-anchor="middle" font-size="17">ऐसीटोन</text>
+                <text x="560" y="195" text-anchor="middle" font-size="17">सेमीकार्बेज़ोन</text>
+                </svg>
+            </div>
+
+            <div class="formula">
+                <svg class="chemical-reaction" viewBox="0 0 900 210" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(20,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">C₆H₅</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">H</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">O</text>
+                </g>
+                <text x="205" y="90" font-size="26">+</text>
+                <text x="320" y="70" text-anchor="middle" font-size="18">H₂N-NHCONH₂</text><text x="320" y="112" text-anchor="middle" font-size="14">(&#8722; H&#8322;O)</text>
+                <line x1="240" y1="90" x2="400" y2="90" stroke="black" stroke-width="2.5"/>
+                <polygon points="400,90 387,83 387,97" fill="black"/>
+                <g transform="translate(430,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">C₆H₅</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">H</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">N</text>
+                <line x1="128" y1="60" x2="152" y2="60" stroke="black" stroke-width="2"/>
+                <text x="217.0" y="67" text-anchor="middle" font-size="20">NH-CO-NH₂</text>
+                </g>
+                <text x="90" y="195" text-anchor="middle" font-size="17">बेन्ज़ैल्डिहाइड</text>
+                <text x="560" y="195" text-anchor="middle" font-size="17">सेमीकार्बेज़ोन</text>
+                </svg>
+            </div>
+
+            <p><b>5. ग्रिगनार्ड अभिकर्मक से क्रिया:</b> एल्डिहाइड तथा कीटोन
+                ग्रिगनार्ड अभिकर्मक से क्रिया करके एक मध्यवर्ती यौगिक बनाते हैं
+                जिसका जलअपघटन करने पर अल्कोहल प्राप्त होता है।</p>
+
+            <div class="formula">
+                <svg class="chemical-reaction" viewBox="0 0 860 210" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(20,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">H</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">H</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">O</text>
+                </g>
+                <text x="210" y="70" font-size="26">+</text>
+                <text x="245" y="55" font-size="18">(i) CH₃MgBr</text><text x="245" y="80" font-size="18">(ii) H₂O/H⁺</text>
+                <line x1="360" y1="65" x2="430" y2="65" stroke="black" stroke-width="2.5"/>
+                <polygon points="430,65 417,58 417,72" fill="black"/>
+                <g transform="translate(460,10)">
+                <text x="70" y="81" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="61" y1="67" x2="42" y2="51" stroke="black" stroke-width="2"/>
+                <text x="36" y="47" text-anchor="middle" font-size="20">H</text>
+                <line x1="79" y1="67" x2="98" y2="51" stroke="black" stroke-width="2"/>
+                <text x="104" y="47" text-anchor="middle" font-size="20">OH</text>
+                <line x1="61" y1="83" x2="42" y2="99" stroke="black" stroke-width="2"/>
+                <text x="36" y="115" text-anchor="middle" font-size="20">H</text>
+                <line x1="79" y1="83" x2="98" y2="99" stroke="black" stroke-width="2"/>
+                <text x="104" y="115" text-anchor="middle" font-size="20">CH₃</text>
+                </g>
+                <text x="90" y="195" text-anchor="middle" font-size="17">फॉर्मेल्डिहाइड</text>
+                <text x="580" y="195" text-anchor="middle" font-size="17">एथेनॉल</text>
+                </svg>
+            </div>
+
+            <div class="formula">
+                <svg class="chemical-reaction" viewBox="0 0 860 210" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(20,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">H</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">O</text>
+                </g>
+                <text x="210" y="70" font-size="26">+</text>
+                <text x="245" y="55" font-size="18">(i) CH₃MgBr</text><text x="245" y="80" font-size="18">(ii) H₂O/H⁺</text>
+                <line x1="360" y1="65" x2="430" y2="65" stroke="black" stroke-width="2.5"/>
+                <polygon points="430,65 417,58 417,72" fill="black"/>
+                <g transform="translate(460,10)">
+                <text x="70" y="81" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="61" y1="67" x2="42" y2="51" stroke="black" stroke-width="2"/>
+                <text x="36" y="47" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="79" y1="67" x2="98" y2="51" stroke="black" stroke-width="2"/>
+                <text x="104" y="47" text-anchor="middle" font-size="20">OH</text>
+                <line x1="61" y1="83" x2="42" y2="99" stroke="black" stroke-width="2"/>
+                <text x="36" y="115" text-anchor="middle" font-size="20">H</text>
+                <line x1="79" y1="83" x2="98" y2="99" stroke="black" stroke-width="2"/>
+                <text x="104" y="115" text-anchor="middle" font-size="20">CH₃</text>
+                </g>
+                <text x="90" y="195" text-anchor="middle" font-size="17">ऐसीटैल्डिहाइड</text>
+                <text x="580" y="195" text-anchor="middle" font-size="17">आइसोप्रोपेनॉल</text>
+                </svg>
+            </div>
+
+            <div class="formula">
+                <svg class="chemical-reaction" viewBox="0 0 860 210" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(20,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">O</text>
+                </g>
+                <text x="210" y="70" font-size="26">+</text>
+                <text x="245" y="55" font-size="18">(i) CH₃MgBr</text><text x="245" y="80" font-size="18">(ii) H₂O/H⁺</text>
+                <line x1="360" y1="65" x2="430" y2="65" stroke="black" stroke-width="2.5"/>
+                <polygon points="430,65 417,58 417,72" fill="black"/>
+                <g transform="translate(460,10)">
+                <text x="70" y="81" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="61" y1="67" x2="42" y2="51" stroke="black" stroke-width="2"/>
+                <text x="36" y="47" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="79" y1="67" x2="98" y2="51" stroke="black" stroke-width="2"/>
+                <text x="104" y="47" text-anchor="middle" font-size="20">OH</text>
+                <line x1="61" y1="83" x2="42" y2="99" stroke="black" stroke-width="2"/>
+                <text x="36" y="115" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="79" y1="83" x2="98" y2="99" stroke="black" stroke-width="2"/>
+                <text x="104" y="115" text-anchor="middle" font-size="20">CH₃</text>
+                </g>
+                <text x="90" y="195" text-anchor="middle" font-size="17">ऐसीटोन</text>
+                <text x="580" y="195" text-anchor="middle" font-size="17">टर्ट-ब्यूटेनॉल</text>
+                </svg>
+            </div>
+</div>
+    <div class="qa-box">
+            <p class="sub-heading">[C] क्लोरीन के साथ अभिक्रिया</p>
+
+            <p>
+                फॉर्मल्डिहाइड क्लोरीन से कोई क्रिया नहीं करता है। एसीटैल्डिहाइड
+                क्लोरीन से क्रिया करके ट्राई क्लोरो एसीटैल्डिहाइड बनाता है
+                जिसे <b>क्लोरल</b> कहते हैं।
+            </p>
+
+            <div class="formula">
+                \[
+                CH_3CHO + 3Cl_2 \rightarrow CCl_3CHO + 3HCl
+                \]
+            </div>
+
+            <p>एसीटोन क्लोरीन से क्रिया करके ट्राई क्लोरो एसीटोन बनाता है।</p>
+
+            <div class="formula">
+                \[
+                CH_3COCH_3 + 3Cl_2 \rightarrow CCl_3COCH_3 + 3HCl
+                \]
+            </div>
+
+            <p>
+                जब उबलते हुए बेन्ज़ैल्डिहाइड पर क्लोरीन प्रवाहित की जाती है, तो
+                बेन्ज़ोयल क्लोराइड बनता है।
+            </p>
+
+            <div class="formula">
+                \[
+                C_6H_5CHO + Cl_2 \rightarrow C_6H_5COCl + HCl
+                \]
+            </div>
+      </div>
+    <div class="qa-box">
+
+            <p class="sub-heading">[D] अपचयन अभिक्रियाएं</p>
+      <strong>
+    <small>• फॉर्मेल्डिहाइड से मेथेनॉल कैसे प्राप्त किया जाता है?</small>
+</strong><br>
+
+            <p><b>1. LiAlH₄ द्वारा अपचयन:</b> LiAlH₄ द्वारा अपचयन पर ऐल्डिहाइड
+                प्राथमिक एल्कोहल और कीटोन द्वितीयक एल्कोहल बनाते हैं।</p>
+
+            <div class="formula">
+                \[
+                HCHO + 2[H] \xrightarrow{LiAlH_4} CH_3OH
+                \]
+                \[
+                CH_3CHO + 2[H] \xrightarrow{LiAlH_4} CH_3-CH_2OH
+                \]
+                \[
+                CH_3COCH_3 + 2[H] \xrightarrow{LiAlH_4} CH_3CH(OH)CH_3
+                \]
+            </div>
+
+            <p><b>2. सोडियम अमलगम और जल के साथ अपचयन:</b> Na-Hg तथा HCl अम्ल
+                द्वारा अपचयन पर ऐल्डिहाइड प्राथमिक एल्कोहल और कीटोन द्वितीयक
+                एल्कोहल बनाते हैं।</p>
+
+            <div class="formula">
+                \[
+                HCHO + 2[H] \xrightarrow{Na\text{-}Hg/HCl} CH_3OH
+                \]
+                \[
+                CH_3CHO + 2[H] \xrightarrow{Na\text{-}Hg/HCl} CH_3-CH_2OH
+                \]
+                \[
+                CH_3COCH_3 + 2[H] \xrightarrow{Na\text{-}Hg/HCl} CH_3CH(OH)CH_3
+                \]
+            </div>
+
+            <p>
+                सोडियम अमलगम और जल के साथ अपचयन पर बेन्ज़ैल्डिहाइड
+                <b>बेन्ज़ो-पिनैकोल</b> देता है, जिसे हाइड्राबेंज़ोइन भी कहते
+                हैं।
+            </p>
+<div class="formula">
+    \[
+    2C_6H_5CHO + 2[H]
+    \xrightarrow{Na\text{-}Hg/H_2O}
+    C_6H_5-CHOH-CHOH-C_6H_5
+    \]
+</div>
+            <p><b>3. क्लीमेन्सन अपचयन:</b> ऐल्डिहाइड और कीटोन जिंक अमलगम और
+                सान्द्र HCl की उपस्थिति में अपचयित होकर एल्केन बनाते हैं। इसे
+                क्लीमेन्सन अपचयन कहते हैं।</p>
+
+            <div class="formula">
+                \[
+                HCHO + 4[H] \xrightarrow{Zn\text{-}Hg/HCl} CH_4 + H_2O
+                \]
+                \[
+                CH_3CHO + 4[H] \xrightarrow{Zn\text{-}Hg/HCl} CH_3-CH_3 + H_2O
+                \]
+                \[
+                CH_3COCH_3 + 4[H] \xrightarrow{Zn\text{-}Hg/HCl} CH_3CH_2CH_3 + H_2O
+                \]
+            </div>
+
+            <p><b>4. वोल्फ-किशनर अपचयन:</b> जब एल्डिहाइड या कीटोन को
+                हाइड्रैज़ीन के साथ गर्म किया जाता है, उसके बाद प्रबल क्षार जैसे
+                KOH तथा उच्च क्वथनांक वाले विलायक जैसे ग्लाइकॉल द्वारा अपचयित
+                किया जाता है तब एल्केन प्राप्त होता है।</p>
+
+            <div class="formula">
+                \[
+                HCHO + H_2NNH_2 \rightarrow HCH=NNH_2
+                \xrightarrow{450K/KOH/\text{ग्लाइकॉल}} CH_4 + N_2
+                \]
+                \[
+                CH_3CHO + H_2NNH_2 \rightarrow CH_3CH=NNH_2
+                \xrightarrow{450K/KOH/\text{ग्लाइकॉल}} CH_3-CH_3 + N_2
+                \]
+                \[
+                (CH_3)_2CO + H_2NNH_2 \rightarrow (CH_3)_2C=NNH_2
+                \xrightarrow{450K/KOH/\text{ग्लाइकॉल}} (CH_3)_2CH_2 + N_2
+                \]
+            </div>
+
+            <p>
+                एसीटोन उदासीन या क्षारीय विलयन में अपचयित होने पर
+                <b>पिनाकोल</b> बनाता है।
+            </p>
+    </div>
+    <div class="qa-box">
+            <p class="sub-heading">[E] ऑक्सीकरण अभिक्रियाएं</p>
+      <strong>
+    <small>
+        टॉलेन्स अभिकर्मक क्या है? यह कैसे बनाया जाता है?
+    </small>
+</strong><br>
+
+<strong>
+    <small>
+        फैहलिंग अभिकर्मक क्या है? यह कैसे तैयार किया जाता है?
+    </small>
+</strong><br>
+
+            <p><b>1. टॉलेन्स अभिकर्मक के साथ अभिक्रिया:</b> सिल्वर नाइट्रेट के
+                अमोनिकल विलयन को टॉलेन्स अभिकर्मक कहते हैं। इसमें सक्रिय रूप से
+                Ag₂O मौजूद रहता है।</p>
+
+            <div class="formula">
+                \[
+                AgNO_3 + NH_4OH \rightarrow AgOH + NH_4NO_3
+                \]
+            </div>
+
+            <p>
+                AgOH शीघ्र ही जल का एक अणु त्याग कर सिल्वर ऑक्साइड में बदल
+                जाता है, जिसे टोलेंस अभिकर्मक कहते हैं।
+            </p>
+
+            <div class="formula">
+                \[
+                2AgOH \rightarrow Ag_2O + H_2O \quad (\text{टोलेंस अभिकर्मक})
+                \]
+            </div>
+
+            <p>
+                टोलेंस अभिकर्मक एल्डिहाइड को अम्ल में ऑक्सीकरण करके स्वयं रजत
+                दर्पण में अपचयित हो जाता है।
+            </p>
+
+            <div class="formula">
+                \[
+                HCHO + Ag_2O \rightarrow HCOOH + 2Ag
+                \]
+                \[
+                CH_3CHO + Ag_2O \rightarrow CH_3COOH + 2Ag
+                \]
+                \[
+                C_6H_5CHO + Ag_2O \rightarrow C_6H_5COOH + 2Ag
+                \]
+            </div>
+
+            <p>
+                साधारण कीटोन आम तौर पर टॉलेन्स अभिकर्मक से अभिक्रिया नहीं करते,
+                इसलिए रजत दर्पण नहीं बनता।
+            </p>
+
+            <p><b>2. फैहलिंग अभिकर्मक से क्रिया:</b> फैहलिंग विलयन दो प्रकार
+                के होते हैं — 
+              <p><b>फैहलिंग विलयन A:</b> कॉपर सल्फेट (CuSO₄) का नीला
+                विलयन।</p>
+              <p><b>फैहलिंग विलयन B:</b> सोडियम पोटैशियम टार्ट्रेट (रोशेल नमक)
+                का NaOH में क्षारीय विलयन। 
+              </p>
+      <p>
+                जब दोनों विलयनों को मिलाया जाता है
+                तो गहरे नीले रंग का CuO का विलयन प्राप्त होता है, यही फैहलिंग
+                अभिकर्मक कहलाता है।</p>
+
+            <div class="formula">
+                \[
+                CuSO_4 + 2NaOH \rightarrow Cu(OH)_2 + Na_2SO_4
+                \]
+                \[
+                Cu(OH)_2 \rightarrow CuO + H_2O \quad (\text{फैहलिंग अभिकर्मक})
+                \]
+            </div>
+
+            <p>
+                जब फैहलिंग विलयन को एल्डिहाइड के साथ गर्म किया जाता है, तो यह
+                एल्डिहाइड को कार्बोक्सिलिक अम्ल में ऑक्सीकरण कर देता है तथा
+                स्वयं अपचयित होकर Cu₂O का ईंट जैसा लाल अवक्षेप देता है।
+            </p>
+
+            <div class="formula">
+                \[
+                HCHO + 2CuO \rightarrow HCOOH + Cu_2O\,(\text{लाल अवक्षेप})
+                \]
+                \[
+                CH_3CHO + 2CuO \rightarrow CH_3COOH + Cu_2O\,(\text{लाल अवक्षेप})
+                \]
+            </div>
+
+            <p>
+                बेंजैल्डिहाइड और कीटोन का ऑक्सीकरण फैहलिंग विलयन द्वारा नहीं
+                होता।
+            </p>
+
+            <p><b>3. एसीटोन का ऑक्सीकरण:</b> एसीटोन अम्लीय पोटैशियम डाइक्रोमेट
+                से ऑक्सीकृत होकर एसिटिक अम्ल बनाता है।</p>
+
+            <div class="formula">
+                \[
+                CH_3COCH_3 + 4[O]
+                \xrightarrow{\text{अम्लीय } K_2Cr_2O_7}
+                CH_3COOH + H_2O + CO_2
+                \]
+            </div>
+</div>
+    <div class="qa-box">
+            <p class="sub-heading">[F] शिफ अभिकर्मक से क्रिया</p>
+      <strong>
+    <small>
+        शिफ अभिकर्मक किसे कहते हैं? इसके अनुसार एल्डिहाइड तथा कीटोन में
+        कैसे भेद किया जाता है?
+    </small>
+</strong><br>
+
+            <p>
+                फ्यूशिन का सल्फर डाइऑक्साइड में बना विलयन शिफ अभिकर्मक कहलाता
+                है। यह रंगहीन होता है।
+            </p>
+
+            <p>शिफ अभिकर्मक = फ्यूशिन + SO₂</p>
+
+            <p>
+                इसका उपयोग एल्डिहाइड और कीटोन में अंतर करने के लिए किया जाता
+                है।
+            </p>
+
+            <p>
+                एल्डिहाइड शिफ अभिकर्मक के साथ अभिक्रिया कर उसे गुलाबी/बैंगनी
+                रंग दे देता है — यह एल्डिहाइड की विशेष पहचान है।
+            </p>
+
+            <p>कीटोन सामान्यतः शिफ अभिकर्मक से कोई रंग परिवर्तन नहीं दिखाते।</p>
+
+          
+</div>
+    <div class="qa-box">
+            <p class="sub-heading">[G] अमोनिया से अभिक्रियाएं</p>
+    <strong>
+    <small>
+        यूरोट्रोपिन क्या है? इसका पूरा नाम, बनाने की विधि,
+        संरचना तथा उपयोग लिखिए।
+    </small>
+</strong><br>
+
+<strong>
+    <small>
+        क्या होता है जब अमोनिया के साथ फॉर्मेल्डिहाइड की अभिक्रिया होती है?
+    </small>
+</strong><br>
+
+<strong>
+    <small>
+        फॉर्मेल्डिहाइड से यूरोट्रोपिन को प्राप्त करने के लिए केवल
+        रासायनिक समीकरण लिखिए:
+    </small>
+</strong><br>
+
+            <p><b>1. फॉर्मेल्डिहाइड की अमोनिया से क्रिया:</b> फॉर्मल्डिहाइड
+                तथा अमोनिया एक विशेष प्रकार की अभिक्रिया करके यूरोट्रोपिन
+                बनाते हैं। यह एक विषमचक्रीय यौगिक है।</p>
+
+            <div class="formula">
+                \[
+                6HCHO + 4NH_3 \longrightarrow (CH_2)_6N_4 + 6H_2O
+                \]
+            </div>
+
+            <p><b>पूरा नाम:</b> यूरोट्रोपिन का रासायनिक नाम हेक्सामिथिलीन
+                टेट्रा ऐमीन है।</p>
+
+            <p><b>सूत्र:</b> (CH₂)₆N₄ अथवा (C₆H₁₂N₄)</p>
+
+            <p><b>संरचना:</b> इसमें चार नाइट्रोजन परमाणु पिंजरे जैसी संरचना में
+                स्थित रहते हैं और –CH₂– समूहों द्वारा जुड़े होते हैं।</p>
+
+            <div class="formula">
+                <img src="images/image3.png" alt="यूरोट्रोपिन की पिंजरे जैसी संरचना">
+            </div>
+
+            <p><b>उपयोग:</b></p>
+
+            <ul>
+                <li>मूत्र मार्ग की बीमारियों और गठिया के उपचार में औषधि बनाने
+                    में।</li>
+                <li>परिरक्षक और कीटाणुनाशक के रूप में।</li>
+                <li>फिनॉलिक रेज़िन और विस्फोटक (जैसे RDX) बनाने में।</li>
+            </ul>
+
+            <p><b>2. एसीटैल्डिहाइड की अमोनिया से क्रिया:</b> एसीटैल्डिहाइड,
+                अमोनिया के साथ अभिक्रिया करके एक योगात्मक यौगिक एसीटैल्डिहाइड
+                अमोनिया बनाता है।</p>
+
+            <div class="formula">
+                <svg class="chemical-reaction" viewBox="0 0 800 210" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(20,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">H</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">O</text>
+                </g>
+                <text x="210" y="85" font-size="26">+</text>
+                <text x="245" y="85" font-size="22">NH₃</text>
+                <line x1="310" y1="80" x2="410" y2="80" stroke="black" stroke-width="2.5"/>
+                <polygon points="410,80 397,73 397,87" fill="black"/>
+                <g transform="translate(430,10)">
+                <text x="70" y="81" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="61" y1="67" x2="42" y2="51" stroke="black" stroke-width="2"/>
+                <text x="36" y="47" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="79" y1="67" x2="98" y2="51" stroke="black" stroke-width="2"/>
+                <text x="104" y="47" text-anchor="middle" font-size="20">OH</text>
+                <line x1="61" y1="83" x2="42" y2="99" stroke="black" stroke-width="2"/>
+                <text x="36" y="115" text-anchor="middle" font-size="20">H</text>
+                <line x1="79" y1="83" x2="98" y2="99" stroke="black" stroke-width="2"/>
+                <text x="104" y="115" text-anchor="middle" font-size="20">NH₂</text>
+                </g>
+                <text x="90" y="195" text-anchor="middle" font-size="17">ऐसीटैल्डिहाइड (CH₃CHO)</text>
+                <text x="540" y="195" text-anchor="middle" font-size="17">ऐसीटैल्डिहाइड अमोनिया</text>
+                </svg>
+            </div>
+
+            <p><b>3. एसीटोन की अमोनिया से क्रिया:</b> एसीटोन, अमोनिया के साथ
+                अभिक्रिया करके एक योगात्मक यौगिक एसीटोन अमोनिया बनाता है।</p>
+
+            <div class="formula">
+                <svg class="chemical-reaction" viewBox="0 0 800 210" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(20,20)">
+                <text x="60" y="66" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="40" y1="40" x2="51" y2="52" stroke="black" stroke-width="2"/>
+                <text x="34" y="30" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="40" y1="80" x2="51" y2="68" stroke="black" stroke-width="2"/>
+                <text x="34" y="96" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="71" y1="56" x2="98" y2="56" stroke="black" stroke-width="2"/>
+                <line x1="71" y1="64" x2="98" y2="64" stroke="black" stroke-width="2"/>
+                <text x="114" y="67" text-anchor="middle" font-size="21">O</text>
+                </g>
+                <text x="210" y="85" font-size="26">+</text>
+                <text x="245" y="85" font-size="22">NH₃</text>
+                <line x1="310" y1="80" x2="410" y2="80" stroke="black" stroke-width="2.5"/>
+                <polygon points="410,80 397,73 397,87" fill="black"/>
+                <g transform="translate(430,10)">
+                <text x="70" y="81" text-anchor="middle" font-size="22" font-style="italic">C</text>
+                <line x1="61" y1="67" x2="42" y2="51" stroke="black" stroke-width="2"/>
+                <text x="36" y="47" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="79" y1="67" x2="98" y2="51" stroke="black" stroke-width="2"/>
+                <text x="104" y="47" text-anchor="middle" font-size="20">OH</text>
+                <line x1="61" y1="83" x2="42" y2="99" stroke="black" stroke-width="2"/>
+                <text x="36" y="115" text-anchor="middle" font-size="20">CH₃</text>
+                <line x1="79" y1="83" x2="98" y2="99" stroke="black" stroke-width="2"/>
+                <text x="104" y="115" text-anchor="middle" font-size="20">NH₂</text>
+                </g>
+                <text x="90" y="195" text-anchor="middle" font-size="17">ऐसीटोन ((CH₃)₂CO)</text>
+                <text x="540" y="195" text-anchor="middle" font-size="17">ऐसीटोन अमोनिया</text>
+                </svg>
+            </div>
+
+            <p><b>4. बेंजाल्डिहाइड की अमोनिया से क्रिया:</b> बेंजाल्डिहाइड
+                अमोनिया से अभिक्रिया करके हाइड्रोबेंजामाइड बनाता है।</p>
+
+            <div class="formula">
+                \[
+                3C_6H_5CHO + 2NH_3 \rightarrow (C_6H_5CH)_3N_2 + 3H_2O
+                \]
+            </div>
+</div>
+    <div class="qa-box">
+            <p class="sub-heading">[H] अल्फा हाइड्रोजन की अभिक्रियाएं</p>
+      <strong>
+    <small>
+        अथवा — कैनिज़ारो अभिक्रिया लिखिए।
+    </small>
+</strong><br>
+
+<strong>
+    <small>
+        अथवा — क्या होता है जब बेन्जैल्डिहाइड 45% NaOH के साथ उबलता है?
+    </small>
+</strong><br>
+
+            <p><b>1. कैनिज़ारो अभिक्रिया:</b> जब α-हाइड्रोजन विहीन ऐल्डिहाइड
+                जैसे फॉर्मैल्डिहाइड या बेंज़ैल्डिहाइड के दो अणु प्रबल क्षार
+                (NaOH) की उपस्थिति में आपस में अभिक्रिया करते हैं तब एक अणु
+                ऑक्सीकृत होकर कार्बोक्सिलिक अम्ल का सोडियम लवण बनाता है और
+                दूसरा अणु अपचयित होकर अल्कोहल बनाता है। यह एक रेडॉक्स अभिक्रिया
+                है।</p>
+
+            <div class="formula">
+                \[
+                HCHO + HCHO + NaOH \longrightarrow CH_3OH + HCOONa
+                \]
+                \[
+                C_6H_5CHO + C_6H_5CHO + NaOH \longrightarrow C_6H_5CH_2OH + C_6H_5COONa
+                \]
+            </div>
+
+            <p><b>2. टिशेंको अभिक्रिया:</b> जब α-हाइड्रोजन युक्त ऐल्डिहाइड
+                जैसे एसीटैल्डिहाइड के दो अणु एल्युमिनियम ऐल्कॉक्साइड की
+                उपस्थिति में आपस में अभिक्रिया करते हैं तब एक अणु ऑक्सीकृत होकर
+                कार्बोक्सिलिक अम्ल बनाता है और दूसरा अणु अपचयित होकर अल्कोहल
+                बनाता है। ये दोनों संघनित होकर एस्टर बनाते हैं।</p>
+
+            <div class="formula">
+                \[
+                CH_3CHO + CH_3CHO \rightarrow CH_3COOC_2H_5
+                \]
+            </div>
+</div>
+    <div class="qa-box">
+            <p class="sub-heading">[I] संघनन अभिक्रिया</p>
+            <p><i>(2009/11/12/16/18/20/23)</i></p>
+
+            <p><b>1. एल्डोल संघनन:</b> जब α-हाइड्रोजन युक्त एल्डिहाइड या कीटोन
+                के दो अणु तनु NaOH की उपस्थिति में संघनित होकर β-हाइड्रॉक्सी
+                एल्डिहाइड (एल्डोल) अथवा β-हाइड्रॉक्सी कीटोन (कीटोल) बनाते हैं।
+                इन्हें गर्म करने पर निर्जलीकरण होकर α,β-असंतृप्त यौगिक बनते
+                हैं।</p>
+
+            <div class="formula">
+                \[
+                2CH_3CHO \rightarrow CH_3\text{-}CH(OH)\text{-}CH_2\text{-}CHO
+                \xrightarrow{\Delta} CH_3\text{-}CH=CH\text{-}CHO
+                \]
+                \[
+                2CH_3COCH_3 \rightarrow CH_3\text{-}C(OH)\text{-}CH_2\text{-}COCH_3
+                \xrightarrow{\Delta} CH_3\text{-}C=CH\text{-}COCH_3
+                \]
+            </div>
+
+            <p><b>2. क्रॉस एल्डोल संघनन:</b> जब दो भिन्न एल्डिहाइड या कीटोन
+                आपस में एल्डोल संघनन करते हैं तो इसे क्रॉस एल्डोल संघनन कहते
+                हैं; जैसे एसीटैल्डिहाइड और एसीटोन में एल्डोल संघनन।</p>
+
+            <div class="formula">
+                \[
+                CH_3CHO + CH_3COCH_3 \rightarrow CH_3\text{-}CH(OH)\text{-}CH_2\text{-}COCH_3
+                \rightarrow CH_3\text{-}CH=CH\text{-}COCH_3
+                \]
+            </div>
+
+            <p><b>3. क्लेजन-श्मिट (क्लेजन) संघनन:</b> बेंजैल्डिहाइड को
+                α-हाइड्रोजन युक्त ऐल्डिहाइड जैसे एसीटैल्डिहाइड के साथ तनु क्षार
+                NaOH की उपस्थिति में गर्म करने पर सिनेमल्डिहाइड बनता है।</p>
+
+            <div class="formula">
+                \[
+                C_6H_5CHO + H_2CHCHO
+                \xrightarrow{NaOH}
+                C_6H_5CH=CHCHO + H_2O
+                \]
+            </div>
+
+            <p><b>4. मेसिटीलीन का निर्माण:</b> जब एसीटोन के तीन अणुओं को
+                सांद्र सल्फ्यूरिक अम्ल के साथ गर्म किया जाता है तो ट्राई मैथिल
+                बेंजीन बनती है जिसे मेसिटीलीन कहते हैं।</p>
+
+            <div class="formula">
+                \[
+                3CH_3COCH_3
+                \xrightarrow{\text{सान्द्र } H_2SO_4}
+                C_6H_3(CH_3)_3 + 3H_2O
+                \]
+            </div>
+
+            <p><b>5. एसीटोन का क्लोरोफॉर्म के साथ संघनन:</b> एसीटोन, कास्टिक
+                पोटाश की उपस्थिति में क्लोरोफॉर्म के साथ संघनित होकर क्लोरोटोन
+                बनाता है।</p>
+
+            <div class="formula">
+                \[
+                (CH_3)_2CO + CHCl_3
+                \xrightarrow{KOH}
+                (CH_3)_2C(OH)CCl_3
+                \]
+            </div>
+            <p><i>(2008/09/14/17/18/19)</i></p>
+
+            <p><b>6. बेंज़ोइन संघनन:</b> बेंजैल्डिहाइड के दो अणु KCN की
+                उपस्थिति में आपस में संघनन करके एक α-हाइड्रॉक्सी कीटोन बनाते
+                हैं जिसे बेंज़ोइन कहते हैं।</p>
+
+            <div class="formula">
+                \[
+                2C_6H_5CHO \xrightarrow{KCN} C_6H_5CH(OH)COC_6H_5
+                \]
+            </div>
+</div>
+    <div class="qa-box">
+            <p class="sub-heading">[J] बहुलीकरण अभिक्रियाएं</p>
+
+            <p>
+                वह प्रक्रिया जिसमें समान या भिन्न प्रकार के छोटे-छोटे अणु
+                (एकलक) आपस में मिलकर बड़े अणु (बहुलक) का निर्माण करते हैं, उसे
+                बहुलीकरण अभिक्रिया कहते हैं।
+            </p>
+
+            <p><b>फॉर्मल्डिहाइड में बहुलीकरण:</b></p>
+
+            <div class="formula">
+                \[
+                n\,HCHO \xrightarrow{\text{विलयन को वाष्पित करने पर}} (HCHO)_n\,H_2O
+                \]
+                \[
+                3\,HCHO \xrightarrow{\text{कमरे के ताप पर रखने पर}} (HCHO)_3
+                \]
+            </div>
+
+            <p><b>एसीटैल्डिहाइड में बहुलीकरण:</b></p>
+
+            <div class="formula">
+                \[
+                3CH_3CHO \xrightarrow{\text{सान्द्र } H_2SO_4 \text{ की बूँदों के साथ गरम करने पर}} (CH_3CHO)_3
+                \]
+                \[
+                4CH_3CHO \xrightarrow{0^\circ C \text{ पर सान्द्र } H_2SO_4} (CH_3CHO)_4
+                \]
+            </div>
+
+            <p>एसीटोन में बहुलीकरण नहीं होती है। बेंजैल्डिहाइड में भी
+                बहुलीकरण नहीं होती है।</p>
+</div>
+    <div class="qa-box">
+            <p class="sub-heading">[K] बेंजैल्डिहाइड की अभिक्रियाएं</p>
+
+            <p><b>1. पर्किन अभिक्रिया:</b> जब बेंजैल्डिहाइड को सोडियम एसिटेट
+                की उपस्थिति में एसिटिक ऐनहाइड्राइड के साथ गर्म किया जाता है तो
+                सिनैमिक अम्ल बनता है।</p>
+
+            <div class="formula">
+                \[
+                C_6H_5CHO + (CH_3CO)_2O
+                \xrightarrow{CH_3COONa}
+                C_6H_5CH=CHCOOH + CH_3COOH
+                \]
+            </div>
+
+            <p><b>2. नोएवेनेजेल अभिक्रिया:</b> जब बेन्ज़ैल्डिहाइड, पाइरीडीन की
+                उपस्थिति में मैलोनिक एस्टर के साथ अभिक्रिया करता है तो सिनैमिक
+                अम्ल बनता है।</p>
+
+            <div class="formula">
+                \[
+                C_6H_5CHO + H_2C(COOC_2H_5)_2
+                \xrightarrow{\text{पाइरीडीन}}
+                C_6H_5CH=CHCOOH + CO_2 + H_2O
+                \]
+            </div>
+
+            <p><b>3. एनिलीन के साथ अभिक्रिया:</b> बेन्ज़ैल्डिहाइड तथा एनिलीन
+                की अभिक्रिया से बेन्ज़ैल्डिहाइड एनिलीन (शिफ़ बेस) बनता है।</p>
+
+            <div class="formula">
+                \[
+                C_6H_5CHO + H_2NC_6H_5 \rightarrow C_6H_5CH=NC_6H_5 + H_2O
+                \]
+            </div>
+
+        </div>
+
+
+    <!-- ================= प्रश्न 11 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            प्रश्न: ऐसे अभिकर्मकों के नाम लिखिए जो एल्डिहाइड से अभिक्रिया
+            करते हैं लेकिन कीटोन से नहीं।
+        </div>
+
+        <div class="answer">
+
+            <p>ऐसे अभिकर्मक जो एल्डिहाइड से अभिक्रिया करते हैं लेकिन कीटोन से
+                नहीं, निम्न हैं।</p>
+
+            <ol>
+                <li><b>टोलेंस अभिकर्मक →</b> एल्डिहाइड रजत दर्पण बनाते हैं।</li>
+                <li><b>फैहलिंग अभिकर्मक →</b> एल्डिहाइड लाल रंग का Cu₂O
+                    अवक्षेप देते हैं।</li>
+                <li><b>शिफ अभिकर्मक →</b> एल्डिहाइड गुलाबी रंग देते हैं।</li>
+            </ol>
+
+            <p>किन्तु कीटोन इनसे कोई अभिक्रिया नहीं करते हैं।</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= प्रश्न 12 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            प्रश्न: फॉर्मल्डिहाइड कैनिज़ारो अभिक्रिया देता है जबकि
+            एसीटैल्डिहाइड नहीं देता, क्यों?
+        </div>
+
+        <div class="answer">
+
+            <p>
+                फॉर्मल्डिहाइड में α-हाइड्रोजन परमाणु नहीं होता, इसलिए यह
+                कैनिज़ारो अभिक्रिया करता है। जबकि एसीटैल्डिहाइड में α-हाइड्रोजन
+                परमाणु होता है, इसलिए यह एल्डोल संघनन करता है।
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= प्रश्न 13 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            प्रश्न: बेंजैल्डिहाइड, एसीटैल्डिहाइड की तुलना में कम सक्रिय क्यों
+            है?
+        </div>
+
+        <div class="answer">
+
+            <p>
+                बेंजैल्डिहाइड में –CHO समूह प्रत्यक्ष रूप से बेंजीन रिंग से
+                जुड़ा होता है। एरोमैटिक रिंग का अनुनाद प्रभाव कार्बोनिल समूह
+                की सक्रियता को कम कर देता है। इसलिए बेंजैल्डिहाइड, एसीटैल्डिहाइड
+                से कम सक्रिय होता है।
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= प्रश्न 14 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            प्रश्न: मेथेनल से एथेनल तथा एथेनल से मेथेनल परिवर्तनों के समीकरण
+            लिखिए। <i>(2008/10/11/12/14/15/18)</i><br>
+            <small>(अथवा — निम्नलिखित को कैसे परिवर्तित करोगे: फॉर्मेल्डिहाइड
+            से ऐसीटैल्डिहाइड, ऐसीटैल्डिहाइड से फॉर्मेल्डिहाइड? अथवा — निम्न
+            यौगिकों की प्राप्ति कैसे करेंगे — फॉर्मेल्डिहाइड से एसीटैल्डिहाइड
+            (मेथेनल से एथेनल)?)</small>
+        </div>
+
+        <div class="answer">
+
+            <p class="sub-heading">1. फॉर्मेल्डिहाइड से एसीटैल्डिहाइड (मेथेनल से एथेनल)</p>
+
+            <div class="formula">
+                \[
+                HCHO \xrightarrow{+H_2/LiAlH_4} CH_3OH
+                \xrightarrow{+P/I_2} CH_3I
+                \xrightarrow{+Na} CH_3CH_3
+                \xrightarrow{+I_2} CH_3CH_2I
+                \xrightarrow{+aq.\,KOH} CH_3CH_2OH
+                \]
+                \[
+                CH_3CH_2OH
+                \xrightarrow{+O/\text{अम्लीय } K_2Cr_2O_7}
+                CH_3CHO
+                \]
+            </div>
+
+            <p class="sub-heading">2. एसीटैल्डिहाइड से फॉर्मेल्डिहाइड (एथेनल से मेथेनल)</p>
+
+            <div class="formula">
+                \[
+                CH_3CHO
+                \xrightarrow{+O/\text{अम्लीय } K_2Cr_2O_7}
+                CH_3COOH
+                \xrightarrow{+NaOH/CaO} CH_4
+                \xrightarrow{+Cl_2} CH_3Cl
+                \xrightarrow{+aq.\,KOH} CH_3OH
+                \]
+                \[
+                CH_3OH
+                \xrightarrow{+O/\text{अम्लीय } K_2Cr_2O_7}
+                HCHO
+                \]
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- ================= प्रश्न 15 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            प्रश्न: फॉर्मल्डिहाइड, एसीटैल्डिहाइड और एसीटोन में अंतर लिखिए।<br>
+            <small>(अथवा — एल्डिहाइड समूह और कीटोनिक समूह वाले यौगिकों के बीच
+            अंतर लिखिए।)</small>
+        </div>
+
+        <div class="answer">
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>क्र.सं.</th>
+                        <th>गुण / बिंदु</th>
+                        <th>फॉर्मल्डिहाइड</th>
+                        <th>एसीटैल्डिहाइड</th>
+                        <th>एसीटोन</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>रासायनिक सूत्र</td>
+                        <td>HCHO</td>
+                        <td>CH₃CHO</td>
+                        <td>CH₃COCH₃</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>संरचना</td>
+                        <td>सबसे सरल ऐल्डिहाइड</td>
+                        <td>द्वितीय ऐल्डिहाइड</td>
+                        <td>सबसे सरल कीटोन</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>भौतिक अवस्था</td>
+                        <td>गैस (37% विलयन — फॉर्मालिन के रूप में)</td>
+                        <td>द्रव</td>
+                        <td>द्रव</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>गंध</td>
+                        <td>तीखी चुभने वाली</td>
+                        <td>तीखी फलों जैसी</td>
+                        <td>मीठी तीखी गंध</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>उबाल बिंदु</td>
+                        <td>-21°C</td>
+                        <td>21°C</td>
+                        <td>56°C</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>घुलनशीलता / अभिक्रियाएं</td>
+                        <td>जल में अत्यधिक घुलनशील; टोलेंस अभिकर्मक से फार्मिक
+                            अम्ल तथा रजत दर्पण; फेहलिंग अभिकर्मक से फार्मिक
+                            अम्ल तथा क्यूप्रस ऑक्साइड का रक्त जैसा लाल रंग।</td>
+                        <td>जल में घुलनशील; टोलेंस अभिकर्मक से एसिटिक अम्ल तथा
+                            रजत दर्पण; फेहलिंग अभिकर्मक से एसिटिक अम्ल तथा
+                            क्यूप्रस ऑक्साइड का रक्त जैसा लाल रंग।</td>
+                        <td>जल में घुलनशील; टोलेंस/फेहलिंग अभिकर्मक से कोई
+                            क्रिया नहीं करता।</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= प्रश्न 16 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            प्रश्न: फॉर्मल्डिहाइड की प्रयोगशाला विधि तैयारी लिखिए।
+        </div>
+
+        <div class="answer">
+
+            <p><b>सिद्धांत:</b> मेथनॉल का ऑक्सीकरण एस्बेस्टॉस पर प्लेटिनम
+                उत्प्रेरक की उपस्थिति में कर फॉर्मल्डिहाइड प्राप्त किया जाता
+                है।</p>
+
+            <p><b>समीकरण:</b></p>
+
+            <div class="formula">
+                \[
+                CH_3OH + \tfrac{1}{2}O_2 \longrightarrow HCHO + H_2O
+                \]
+            </div>
+
+            <div class="formula">
+                <img src="images/image4.png" alt="प्रयोगशाला में फॉर्मेल्डिहाइड बनाने की विधि">
+            </div>
+
+            <p><b>भौतिक गुण:</b></p>
+
+            <ul>
+                <li>यह एक रंगहीन, विशिष्ट तीखी गंध वाली गैस है। जल में बहुत
+                    घुलनशील है।</li>
+            </ul>
+
+            <p><b>उपयोग:</b></p>
+
+            <ol>
+                <li>फॉर्मेल्डिहाइड का उपयोग फिनोल के साथ बैकेलाइट व अन्य
+                    प्रकार की प्लास्टिक बनाने में किया जाता है।</li>
+                <li>यूरोट्रोपिन बनाने में, जिसका उपयोग मूत्र रोगों और गठिया
+                    आदि की औषधि के रूप में किया जाता है।</li>
+                <li>सांश्लेषिक रंजकों (जैसे नील) के निर्माण में।</li>
+            </ol>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= प्रश्न 17 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            प्रश्न: फॉर्मलिन क्या है? इसके उपयोग लिखिए।
+        </div>
+
+        <div class="answer">
+
+            <p>फॉर्मल्डिहाइड का 40% जलीय विलयन <b>फॉर्मलिन</b> कहलाता है।</p>
+
+            <p><b>उपयोग:</b> फॉर्मलिन का उपयोग निःसंक्रामक मृत शरीरों के
+                परिरक्षण में किया जाता है।</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= प्रश्न 18 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            प्रश्न: एसीटैल्डिहाइड की प्रयोगशाला विधि लिखिए।
+        </div>
+
+        <div class="answer">
+
+            <p><b>सिद्धांत:</b> एथेनॉल का ऑक्सीकरण अम्लीय K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub>
+                से करके एसीटैल्डिहाइड प्राप्त किया जाता है।</p>
+
+            <p><b>समीकरण:</b></p>
+
+            <div class="formula">
+                \[
+                CH_3CH_2OH + [O]
+                \xrightarrow{\text{अम्लीय } K_2Cr_2O_7}
+                CH_3CHO
+                \]
+            </div>
+
+            <div class="formula">
+                <img src="images/image2.png" alt="प्रयोगशाला में एसीटैल्डिहाइड बनाने की विधि">
+            </div>
+
+            <p><b>भौतिक गुण:</b></p>
+
+            <ul>
+                <li>यह एक रंगहीन तथा वाष्पशील द्रव है। इसमें तीक्ष्ण गंध होती
+                    है, किन्तु जलीय विलयन में सेब जैसी सुगंध होती है।</li>
+                <li>इसका क्वथनांक 21°C होता है।</li>
+            </ul>
+
+            <p><b>उपयोग:</b></p>
+
+            <ol>
+                <li>निद्राकारी दवा के रूप में।</li>
+                <li>मैटा-ऐल्डिहाइड का उपयोग लैम्पों में ठोस ईंधन के रूप में।</li>
+            </ol>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= प्रश्न 19 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            प्रश्न: एसीटोन की प्रयोगशाला तैयारी लिखिए (कैल्शियम एसीटेट का
+            शुष्क आसवन)।
+        </div>
+
+        <div class="answer">
+
+            <p><b>सिद्धांत:</b> कैल्शियम एसीटेट का शुष्क आसवन करने पर एसीटोन
+                बनता है।</p>
+
+            <p><b>समीकरण:</b></p>
+
+            <div class="formula">
+                \[
+                (CH_3COO)_2Ca
+                \xrightarrow{\text{शुष्क आसवन}}
+                CH_3COCH_3 + CaCO_3
+                \]
+            </div>
+
+            <div class="formula">
+                <img src="images/image5.png" alt="एसीटोन बनाने की प्रयोगशाला विधि">
+            </div>
+
+            <p><b>भौतिक गुण:</b></p>
+
+            <ul>
+                <li>यह रंगहीन, मीठे स्वाद वाला द्रव पदार्थ है। यह पानी तथा
+                    कार्बनिक विलायकों में विलेय होता है।</li>
+                <li>इसका क्वथनांक 56°C होता है।</li>
+                <li>यह एक विषैला पदार्थ होता है।</li>
+            </ul>
+
+            <p><b>उपयोग:</b></p>
+
+            <ol>
+                <li>सांश्लेषिक रबर बनाने में।</li>
+                <li>आड्रोन कृत्रिम इत्र बनाने में।</li>
+                <li>कृत्रिम रेशम, सेलूलोज, वार्निश आदि के विलायक के रूप में।</li>
+                <li>एसीटिक ऐनहाइड्राइड बनाने में, जिसका उपयोग विभिन्न प्रकार
+                    के कृत्रिम पदार्थों में होता है।</li>
+            </ol>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= प्रश्न 20 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            प्रश्न: निम्नलिखित यौगिकों को उनके क्वथनांक के बढ़ते क्रम में
+            व्यवस्थित करें: CH<sub>3</sub>CHO, CH<sub>3</sub>CH<sub>2</sub>OH,
+            CH<sub>3</sub>OCH<sub>2</sub>CH<sub>2</sub>CH<sub>2</sub>CH<sub>2</sub>
+        </div>
+
+        <div class="answer">
+
+            <div class="formula">
+                \[
+                CH_3OCH_2CH_2CH_2CH_3 \;<\; CH_3CHO \;<\; CH_3CH_2OH
+                \]
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= वस्तुनिष्ठ प्रश्न (MCQ) ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            वस्तुनिष्ठ प्रश्न
+        </div>
+
+        <div class="answer">
+
+            <ol>
+                <li>कीटोन द्वारा सायनोहाइड्रिन का निर्माण किसका उदाहरण है?
+                    <br><b>उत्तर:</b> न्यूक्लियोफिलिक अभिवर्धन</li>
+                <li>कौन-सी अभिक्रिया संकेंद्रित क्षार विलयन के साथ Cannizzaro
+                    अभिक्रिया देती है?
+                    <br><b>उत्तर:</b> बेंजाल्डिहाइड</li>
+                <li>ऐल्डिहाइड तथा कीटोन निम्न में से किसके साथ अभिक्रिया कर
+                    ऑक्सीम बनाते हैं?
+                    <br><b>उत्तर:</b> NH₂OH</li>
+                <li>एरोमैटिक ऐल्डिहाइड प्राथमिक ऐमाइन के साथ क्या देता है?
+                    <br><b>उत्तर:</b> शिफ़ का आधार</li>
+                <li>ऐसीटैल्डिहाइड की क्षारीय माध्यम में अभिक्रिया है —
+                    <br><b>उत्तर:</b> एल्डोल संघनन</li>
+                <li>इनमें से कौन आयोडोफॉर्म अभिक्रिया नहीं देता?
+                    <br><b>उत्तर:</b> CH₃COCH₃ (कीटोन)</li>
+                <li>एथेनॉल के साथ फेलिंग विलयन से प्राप्त अवक्षेप है —
+                    <br><b>उत्तर:</b> Cu₂O</li>
+                <li>ऐल्डिहाइड और कीटोन का हाइड्रोकार्बन में अपचयन किसकी
+                    उपस्थिति में होता है?
+                    <br><b>उत्तर:</b> Zn/Hg और HCl</li>
+                <li>ऐल्डिहाइड में α-हाइड्रोजन का स्वभाव कैसा होता है?
+                    <br><b>उत्तर:</b> अम्लीय</li>
+                <li>बेंजाल्डिहाइड को अल्कोहॉलिक KCN के साथ गर्म करने पर क्या
+                    बनता है?
+                    <br><b>उत्तर:</b> बेंज़ोइन</li>
+                <li>कौन-सा यौगिक अमोनियाकीय AgNO₃ के साथ सिल्वर मिरर नहीं
+                    देता?
+                    <br><b>उत्तर:</b> CH₃COOH</li>
+                <li>कौन-सा अभिकर्मक ऐल्डिहाइड और कीटोन दोनों से सरलता से
+                    अभिक्रिया करता है?
+                    <br><b>उत्तर:</b> शिफ़ का अभिकर्मक</li>
+                <li>मिथाइल कीटोन की पहचान किससे होती है?
+                    <br><b>उत्तर:</b> आयोडोफॉर्म परीक्षण</li>
+                <li>किस अभिकर्मक द्वारा ऐल्डिहाइड और कीटोन में भेद किया जा
+                    सकता है?
+                    <br><b>उत्तर:</b> NaHSO₃ विलयन</li>
+                <li>कौन-सा यौगिक Cannizzaro अभिक्रिया देगा?
+                    <br><b>उत्तर:</b> बेंजाल्डिहाइड</li>
+                <li>टोलेंस अभिकर्मक है —
+                    <br><b>उत्तर:</b> अमोनियाकीय सिल्वर नाइट्रेट</li>
+                <li>फॉर्मल्डिहाइड और KOH की अभिक्रिया में मेथनॉल व पोटैशियम
+                    फॉर्मेट बनता है — यह किस नाम से जानी जाती है?
+                    <br><b>उत्तर:</b> Cannizzaro अभिक्रिया</li>
+                <li>बेंजाल्डिहाइड है —
+                    <br><b>उत्तर:</b> C₆H₅CHO</li>
+                <li>शिफ़ का अभिकर्मक बेंजाल्डिहाइड के साथ कौन-सा रंग देता है?
+                    <br><b>उत्तर:</b> गुलाबी</li>
+                <li>ग्लेशियल एसीटिक अम्ल का IUPAC नाम क्या है?
+                    <br><b>उत्तर:</b> एथेनोइक अम्ल</li>
+                <li>सोडियम पोटैशियम टार्ट्रेट और क्षारीय कॉपर सल्फेट का
+                    विलयन कहलाता है —
+                    <br><b>उत्तर:</b> फेलिंग विलयन</li>
+                <li>कार्बोक्सिलिक अम्ल चक्रीय डाइमर क्यों बनाते हैं?
+                    <br><b>उत्तर:</b> अंतःअणुक हाइड्रोजन बंधन</li>
+                <li>एरोमैटिक ऐल्डिहाइड और एसिड एनहाइड्राइड की अभिक्रिया से
+                    कौन-सा यौगिक बनता है?
+                    <br><b>उत्तर:</b> सिनामिक अम्ल</li>
+                <li>फॉर्मेलिन की परिभाषा दीजिए —
+                    <br><b>उत्तर:</b> फॉर्मल्डिहाइड का 40% जलीय विलयन</li>
+                <li>फॉर्मल्डिहाइड का सूत्र —
+                    <br><b>उत्तर:</b> CH₂O</li>
+                <li>बेंजाल्डिहाइड और KCN की संघनन अभिक्रिया कहलाती है —
+                    <br><b>उत्तर:</b> बेंज़ोइन संघनन</li>
+            </ol>
+
+            <div class="important">
+                <b>नोट:</b> स्रोत में प्रश्न 6 ("आयोडोफॉर्म अभिक्रिया नहीं
+                देता") का उत्तर CH₃COCH₃ (एसीटोन) दिया गया है, जबकि रासायनिक
+                रूप से एसीटोन स्वयं आयोडोफॉर्म परीक्षण देता है (यह मेथिल कीटोन
+                है); तथा प्रश्न 7 का उत्तर बताता है कि एथेनॉल फेलिंग विलयन से
+                Cu₂O अवक्षेप देता है, जबकि फेलिंग परीक्षण केवल ऐल्डिहाइड के
+                लिए विशिष्ट है, अल्कोहल के लिए नहीं। प्रश्न 12 का उत्तर ("शिफ़
+                का अभिकर्मक दोनों से अभिक्रिया करता है") भी ऊपर [F] खंड की
+                सामग्री से असंगत है (जहाँ कीटोन शिफ अभिकर्मक से रंग परिवर्तन
+                नहीं दिखाते बताया गया है)। ये सभी स्रोत-दस्तावेज़ की मूल
+                असंगतियाँ हैं, जिन्हें यहाँ बिना बदले ज्यों का त्यों रखा गया है।
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= रिक्त स्थान भरिए ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            रिक्त स्थान भरिए
+        </div>
+
+        <div class="answer">
+
+            <ol>
+                <li>पोटैशियम एसीटेट के विद्युत अपघटन से <b>एथेन</b> प्राप्त
+                    होता है।</li>
+                <li>जिंक-अमलगम और संकेंद्रित हाइड्रोक्लोरिक अम्ल का मिश्रण
+                    <b>क्लेमेन्सन अभिकर्मक</b> कहलाता है।</li>
+                <li>बेकलाइट <b>फिनॉल और फॉर्मल्डिहाइड</b> का बहुलक है।</li>
+                <li>बेंजाल्डिहाइड को <b>कड़वे बादाम का तेल</b> कहा जाता है।</li>
+                <li>कीटोन <b>टोलेंस अभिकर्मक</b> से अभिक्रिया नहीं करते।</li>
+                <li>फॉर्मिक अम्ल का 40% जलीय विलयन <b>फॉर्मेलिन</b> कहलाता है।</li>
+                <li>ऐल्डिहाइड फेलिंग विलयन से <b>लाल अवक्षेप</b> देता है।</li>
+                <li>C₆H₅COOH + NH₂NH₂ → <b>C₆H₅CONHNH₂ + H₂O</b></li>
+                <li>पैराल्डिहाइड एक <b>नींद की दवा</b> है।</li>
+                <li>रोसेनमुंड अभिक्रिया में BaSO₄, <b>प्रेरक (catalyst
+                    modifier)</b> का कार्य करता है।</li>
+                <li>टोल्यून का ऑक्सीकरण क्रोमिल क्लोराइड द्वारा <b>एटार्ड
+                    अभिक्रिया</b> कहलाती है।</li>
+                <li>अम्ल क्लोराइड का Pd/BaSO₄ द्वारा अपचयन कर <b>ऐल्डिहाइड</b>
+                    बनता है।</li>
+                <li>ऐल्डिहाइड जिसमें α-हाइड्रोजन हो, का NaOH के साथ संघनन
+                    <b>एल्डोल</b> कहलाता है।</li>
+                <li>कैल्शियम एसीटेट का शुष्क आसवन करने से <b>एसीटोन</b> बनता
+                    है।</li>
+                <li>फेलिंग अभिकर्मक में दो विलयन होते हैं — <b>फेलिंग A और
+                    फेलिंग B</b>।</li>
+            </ol>
+
+          
+        </div>
+
+    </div>
+
+
+    <!-- ================= सत्य / असत्य ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            सत्य / असत्य
+        </div>
+
+        <div class="answer">
+
+            <ol>
+                <li>डाय-एथिल ईथर संज्ञाहरण हेतु प्रयुक्त होता है — <b>सत्य</b></li>
+                <li>अमोनियाकीय सिल्वर नाइट्रेट को टोलेंस अभिकर्मक कहते हैं —
+                    <b>सत्य</b></li>
+                <li>यूरोट्रोपिन को हेक्सामेथिलीन टेट्रामीन भी कहते हैं —
+                    <b>सत्य</b></li>
+                <li>कीटोन स्टीफ़न अभिक्रिया से तैयार किए जाते हैं —
+                    <b>असत्य</b></li>
+                <li>कीटोन में कार्बोनिल समूह उपस्थित होता है — <b>सत्य</b></li>
+            </ol>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= मिलान कीजिए ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            मिलान कीजिए
+        </div>
+
+        <div class="answer">
+
+            <p class="sub-heading">समूह 1</p>
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr><th>'A'</th><th>'B'</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>1. सोडियम बेंजोएट</td><td>प्रिज़र्वेटिव</td></tr>
+                    <tr><td>2. HCHO + NaOH</td><td>मिथाइल ऐल्कोहॉल</td></tr>
+                    <tr><td>3. RCOOH + HN₃</td><td>श्मिट अभिक्रिया</td></tr>
+                    <tr><td>4. CHO + Alc. KCN</td><td>बेंज़ोइन</td></tr>
+                    <tr><td>5. फॉर्मिक अम्ल</td><td>चींटियाँ (Red ants)</td></tr>
+                </tbody>
+            </table>
+
+            <p class="sub-heading">समूह 2</p>
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr><th>'A'</th><th>'B'</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>1. टोलेंस अभिकर्मक</td><td>अमोनियाकीय AgNO₃</td></tr>
+                    <tr><td>2. Zn–Hg/HCl</td><td>क्लेमेन्सन अपचयन</td></tr>
+                    <tr><td>3. फॉर्मेलिन</td><td>शव संरक्षण हेतु</td></tr>
+                    <tr><td>4. क्लोरोफॉर्म</td><td>सम्मोहन औषधि (Hypnotic)</td></tr>
+                    <tr><td>5. ऐल्डिहाइड</td><td>कीटोन</td></tr>
+                </tbody>
+            </table>
+
+            <p class="sub-heading">समूह 3</p>
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr><th>'A'</th><th>'B'</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>1. रोसेनमुंड अभिक्रिया</td><td>ऐल्डिहाइड</td></tr>
+                    <tr><td>2. Cannizzaro अभिक्रिया</td><td>अम्ल एवं ऐल्कोहॉल का सोडियम लवण</td></tr>
+                    <tr><td>3. एटार्ड अभिक्रिया</td><td>बेंजाल्डिहाइड</td></tr>
+                    <tr><td>4. पायरोलिग्निक अम्ल</td><td>एसीटिक अम्ल</td></tr>
+                    <tr><td>5. परकिन अभिक्रिया</td><td>सिनामिक अम्ल</td></tr>
+                </tbody>
+            </table>
+
+
+        </div>
+
+    </div>
+
+
+
+
+<!-- PROTECTION -->
+
+<script>
+
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+document.addEventListener("selectstart", e => e.preventDefault());
+
+document.addEventListener("copy", e => {
+
+    e.preventDefault();
+
+    alert("Copying content is not allowed");
+
+});
+
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

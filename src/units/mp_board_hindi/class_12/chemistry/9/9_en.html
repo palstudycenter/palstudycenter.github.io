@@ -1,0 +1,1753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | Amines</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- MathJax -->
+<script>
+window.MathJax = {
+    tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+    },
+    svg: {
+        fontCache: 'global'
+    }
+};
+</script>
+
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    line-height:1.7;
+}
+
+/* NAVBAR */
+
+.navbar{
+    background:rgba(15,23,42,0.90);
+    backdrop-filter:blur(10px);
+    box-shadow:0 4px 18px rgba(0,0,0,.18);
+    padding:10px 0;
+}
+
+.navbar-brand{
+    font-size:30px;
+    font-weight:700;
+    color:white !important;
+}
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+
+/* NOTES CONTAINER */
+
+.notes-container{
+    max-width:900px;
+    margin:100px auto 50px;
+    padding:20px;
+}
+
+/* CHAPTER TITLE */
+
+.notes-title{
+    background:#e3f2fd;
+    color:#1565c0;
+    padding:15px 20px;
+    border-left:6px solid #1565c0;
+    border-radius:50px;
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:30px;
+    text-align:center;
+}
+
+/* QUESTION ANSWER BOX */
+
+.qa-box{
+    background:white;
+    padding:22px;
+    margin-bottom:18px;
+    border-radius:14px;
+    border-left:6px solid #1565c0;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    transition:.25s;
+}
+
+.qa-box:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.question{
+    font-weight:bold;
+    color:#1b3a57;
+    margin-bottom:10px;
+    font-size:19px;
+}
+
+.answer{
+    color:#2c3e50;
+    text-align:justify;
+}
+
+.answer ul,
+.answer ol{
+    margin-left:25px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.answer li{
+    margin-bottom:7px;
+}
+
+/* FORMULA */
+
+.formula{
+    background:#f8fafc;
+    padding:12px;
+    margin:14px 0;
+    border-radius:8px;
+    text-align:center;
+    overflow-x:auto;
+    font-size:19px;
+}
+
+/* IMPORTANT */
+
+.important{
+    background:#fff8e1;
+    border-left:5px solid #ffb300;
+    padding:12px 15px;
+    margin-top:12px;
+    border-radius:8px;
+}
+
+/* SUB HEADING */
+
+.sub-heading{
+    color:#1565c0;
+    font-weight:bold;
+    margin-top:15px;
+    margin-bottom:8px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .navbar-brand{
+        font-size:24px;
+    }
+
+    .notes-container{
+        margin-top:85px;
+        padding:12px;
+    }
+
+    .notes-title{
+        font-size:22px;
+        border-radius:20px;
+    }
+
+    .qa-box{
+        padding:17px;
+    }
+
+    .question{
+        font-size:17px;
+    }
+
+    .formula{
+        font-size:16px;
+    }
+
+}
+.reaction-box {
+    width: 100%;
+    max-width: 1000px;
+    margin: 15px auto;
+    padding: 5px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.chemical-reaction {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar fixed-top">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="../index.html">
+            Pal <span>Study Center</span>
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- NOTES -->
+
+<div class="notes-container">
+
+    <div class="notes-title">
+        📘 Chapter — Amines
+    </div>
+
+
+    <!-- ================= Question 1 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            Question: What are amines called? Write their types.
+        </div>
+
+        <div class="answer">
+
+            <p>
+                Alkyl derivatives of ammonia (NH<sub>3</sub>) are called
+                <b>amines</b>.
+            </p>
+
+            <p>
+                Based on the number of hydrogen atoms of ammonia that have
+                been replaced, amines are of the following types.
+            </p>
+
+            <p class="sub-heading">1. Primary amine</p>
+
+            <p>
+                When one hydrogen atom of ammonia is replaced by one alkyl
+                group, it is called a primary amine.
+            </p>
+
+            <div class="formula">
+                \[
+                NH_3 \xrightarrow{-H,\;+R} R\text{-}NH_2
+                \]
+            </div>
+
+            <p class="sub-heading">2. Secondary amine</p>
+
+            <p>
+                When two hydrogen atoms of ammonia are replaced by two
+                alkyl groups, it is called a secondary amine.
+            </p>
+
+            <div class="formula">
+                \[
+                NH_3 \xrightarrow{-2H,\;+2R} R_2NH
+                \]
+            </div>
+
+            <p class="sub-heading">3. Tertiary amine</p>
+
+            <p>
+                When all three hydrogen atoms of ammonia are replaced by
+                three alkyl groups, it is called a tertiary amine.
+            </p>
+
+            <div class="formula">
+                \[
+                NH_3 \xrightarrow{-3H,\;+3R} R_3N
+                \]
+            </div>
+
+            <p class="sub-heading">4. Quaternary ammonium salts</p>
+
+            <p>
+                Besides these three types of amines, quaternary ammonium
+                salts are also known, which may be regarded as tetra-alkyl
+                derivatives of ammonium salts.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= Question 2 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            Question: Give one example each of primary, secondary and
+            tertiary amines. <i>(2022)</i><br>
+            <small>(Or — Write examples of primary and secondary amines.)</small>
+        </div>
+
+        <div class="answer">
+
+            <ul>
+                <li><b>Primary amine:</b> CH<sub>3</sub>NH<sub>2</sub>
+                    (methylamine)</li>
+                <li><b>Secondary amine:</b> (CH<sub>3</sub>)<sub>2</sub>NH
+                    (dimethylamine)</li>
+                <li><b>Tertiary amine:</b> (CH<sub>3</sub>)<sub>3</sub>N
+                    (trimethylamine)</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= Question 3 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            Question: Explain the nomenclature of amines.
+        </div>
+
+        <div class="answer">
+
+            <p class="sub-heading">1. Common/trivial system</p>
+
+            <p>
+                In this system, the suffix 'amine' is added at the end of
+                the name of the alkyl group. In mixed amines, the name of
+                the smaller alkyl group is written first, followed by the
+                name of the larger group.
+            </p>
+
+            <p class="sub-heading">2. IUPAC system</p>
+
+            <p>
+                Aliphatic amines are called <b>alkanamines</b>. In this
+                system, the final 'e' of the corresponding alkane is
+                replaced by the suffix 'amine'.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= Question 4 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            Question: What different types of isomerism are found in
+            amines?
+        </div>
+
+        <div class="answer">
+
+            <p>The following types of isomerism are found in amines.</p>
+
+            <p class="sub-heading">1. Chain isomerism</p>
+
+            <p>
+                When amines having the same molecular formula exist with
+                different types of carbon chains (straight or branched),
+                it is called chain isomerism.
+            </p>
+
+            <p><b>Example:</b></p>
+
+            <div class="formula">
+                \[
+                CH_3\text{-}CH_2\text{-}CH_2\text{-}CH_2\text{-}NH_2
+                \quad (\text{n-butylamine})
+                \]
+                \[
+                (CH_3)_2CH\text{-}CH_2\text{-}NH_2
+                \quad (\text{2-methylpropan-1-amine})
+                \]
+            </div>
+
+            <p class="sub-heading">2. Position isomerism</p>
+
+            <p>
+                When the –NH<sub>2</sub> group is attached at different
+                positions of the carbon chain, it is called position
+                isomerism.
+            </p>
+
+            <p><b>Example:</b></p>
+
+            <div class="formula">
+                \[
+                CH_3\text{-}CH_2\text{-}CH_2\text{-}NH_2
+                \quad (\text{propan-1-amine})
+                \]
+                \[
+                CH_3\text{-}CH(NH_2)\text{-}CH_3
+                \quad (\text{propan-2-amine})
+                \]
+            </div>
+
+            <p class="sub-heading">3. Metamerism</p>
+
+            <p>
+                In this type of isomerism, the functional group is the
+                same, but two identical or different alkyl groups are
+                attached to the nitrogen atom. For example — the two
+                metamers of secondary amine:
+            </p>
+
+            <div class="formula">
+                \[
+                CH_3CH_2\text{-}NH\text{-}CH_2CH_3
+                \quad (\text{diethylamine})
+                \]
+                \[
+                CH_3\text{-}NH\text{-}CH_2CH_2CH_3
+                \quad (\text{methyl-propylamine})
+                \]
+            </div>
+
+            <div class="important">
+                <b>Note:</b> In the source notes, the examples throughout
+                this question were originally written as examples of
+                <b>alcohol/ether</b> isomerism — even though the
+                structures carry a –NH<sub>2</sub> group, the labels
+                "for C₄H₉OH", "for C₃H₇OH", "...ol", "...ether", and
+                phrases like "two types of ethers can be shown" have been
+                used, which clearly appear to have been copied without
+                modification from the alcohols/ethers chapter. Here, the
+                original structures and the classification of isomerism
+                (chain/position/metamerism) have been kept exactly as they
+                are — only the names of the compounds have been corrected
+                to amine-appropriate names so that this question (which
+                belongs to the amines chapter) remains consistent.
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= Question 5 (mega) ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            Question: Write the general methods of preparing amines.
+        </div>
+
+        <div class="answer">
+
+            <p>The general methods of preparing amines are as follows.</p>
+
+            <p class="sub-heading">1. Ammonolysis <i>(2024)</i></p>
+
+            <p>
+                This is the process of replacing the halogen atom in alkyl
+                halides, or the hydroxyl group in alcohols (or phenols),
+                by an amino group. The reagent used for ammonolysis is
+                ammoniacal alcohol. Generally a mixture of primary,
+                secondary and tertiary amines is formed.
+            </p>
+
+            <p><b>(a) Hofmann's method:</b> When an alkyl halide is heated
+                with an aqueous or alcoholic solution of ammonia in a
+                sealed tube at 100°C, a mixture of primary, secondary and
+                tertiary amines is obtained.</p>
+
+            <div class="formula">
+                \[
+                CH_3I + NH_3 \rightarrow CH_3NH_2 + HI
+                \]
+                \[
+                2CH_3I + NH_3 \rightarrow (CH_3)_2NH + 2HI
+                \]
+                \[
+                3CH_3I + NH_3 \rightarrow (CH_3)_3N + 3HI
+                \]
+            </div>
+
+            <p><b>(b) Sabatier's method:</b> When a mixture of alcohol
+                vapour and ammonia gas is passed over alumina or thoria
+                heated to 350°C, a mixture of primary, secondary and
+                tertiary amines is obtained.</p>
+
+            <div class="formula">
+                \[
+                CH_3OH + NH_3 \xrightarrow{\text{Alumina}/350^\circ C} CH_3NH_2 + H_2O
+                \]
+                \[
+                2CH_3OH + NH_3 \xrightarrow{\text{Alumina}/350^\circ C} (CH_3)_2NH + 2H_2O
+                \]
+                \[
+                3CH_3OH + NH_3 \xrightarrow{\text{Alumina}/350^\circ C} (CH_3)_3N + 3H_2O
+                \]
+            </div>
+
+            <p class="sub-heading">2. Reduction of nitro compounds</p>
+
+            <p>
+                When nitro compounds are reduced by tin and hydrochloric
+                acid, or by lithium aluminium hydride, primary amines are
+                obtained.
+            </p>
+
+            <div class="formula">
+                \[
+                CH_3NO_2 + 6[H] \xrightarrow{Sn/HCl} CH_3NH_2 + 2H_2O
+                \]
+            </div>
+
+            <p class="sub-heading">3. Mendius reaction</p>
+
+            <p>
+                When an alkyl cyanide is reduced by sodium and ethanol, or
+                by lithium aluminium hydride, a primary amine is obtained.
+            </p>
+
+            <div class="formula">
+                \[
+                CH_3CN + 4[H] \xrightarrow{LiAlH_4} CH_3CH_2NH_2
+                \]
+            </div>
+
+            <p>
+                When an alkyl isocyanide is reduced by sodium and ethanol,
+                or by lithium aluminium hydride, a secondary amine is
+                obtained.
+            </p>
+
+            <div class="formula">
+                \[
+                CH_3NC + 4[H] \xrightarrow{LiAlH_4} CH_3\text{-}NH\text{-}CH_3
+                \]
+            </div>
+
+            <p class="sub-heading">4. Hofmann bromamide reaction <i>(2019)</i></p>
+
+            <p>
+                When an amide is reacted with Br<sub>2</sub> and KOH, a
+                primary amine is formed. This is called the Hofmann
+                bromamide reaction.
+            </p>
+
+            <div class="formula">
+                \[
+                CH_3CONH_2 + Br_2 + 4KOH \rightarrow CH_3NH_2 + K_2CO_3 + 2KBr + H_2O
+                \]
+            </div>
+
+            <p class="sub-heading">5. Schmidt reaction</p>
+
+            <p>
+                When hydrazoic acid dissolved in an inert solvent such as
+                CHCl<sub>3</sub> reacts with fatty acids in the presence
+                of sulfuric acid at 50–55°C, primary amines are formed.
+            </p>
+
+            <div class="formula">
+                \[
+                CH_3COOH + HN_3 \xrightarrow{\text{Conc. } H_2SO_4/50\text{-}55^\circ C} CH_3NH_2 + CO_2 + N_2
+                \]
+            </div>
+
+            <p class="sub-heading">6. Gabriel phthalimide synthesis</p>
+
+            <p>
+                Phthalimide reacts with KOH in an alkaline medium to form
+                potassium phthalimide. This potassium phthalimide further
+                reacts with an alkyl halide (R–X) to give N-alkyl
+                phthalimide. Acidic hydrolysis of N-alkyl phthalimide with
+                20% HCl gives a primary amine (R–NH<sub>2</sub>).
+            </p>
+
+            <div class="formula">
+                <img src="images/image3.png" alt="Reaction of Gabriel phthalimide synthesis">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= Question 6 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            Question: Why can aromatic primary amines (from aryl halides)
+            not be prepared by Gabriel phthalimide synthesis?
+        </div>
+
+        <div class="answer">
+
+            <p>
+                In Gabriel phthalimide synthesis, nucleophilic substitution
+                of the phthalimide ion with the alkyl halide occurs via an
+                S<sub>N</sub>2 reaction.
+            </p>
+
+            <p>
+                In aromatic halides (aryl halides), the C–X bond acquires
+                partial double-bond character due to resonance, and
+                therefore the S<sub>N</sub>2 reaction does not occur.
+            </p>
+
+            <p>
+                Hence, aromatic primary amines cannot be prepared by
+                Gabriel phthalimide synthesis.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= Question 7 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            Question: Write the ammonolysis of alkyl halides with the
+            chemical equation. <i>(2024)</i>
+        </div>
+
+        <div class="answer">
+
+            <p>
+                Ammonolysis of alkyl halides is a nucleophilic substitution
+                reaction in which the halogen atom is replaced by an amino
+                (–NH<sub>2</sub>) group. This reaction is called
+                ammonolysis.
+            </p>
+
+            <div class="formula">
+                \[
+                CH_3I + NH_3 \rightarrow CH_3NH_2 + HI
+                \]
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= Question 8 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            Question: Why is it difficult to prepare a pure amine by
+            ammonolysis of an alkyl halide?
+        </div>
+
+        <div class="answer">
+
+            <p>
+                Ammonolysis of an alkyl halide does not give the
+                corresponding pure amine, because the primary amine formed
+                in the first step further reacts with the alkyl halide to
+                form secondary and tertiary amines. Subsequently it also
+                forms a quaternary ammonium salt.
+            </p>
+
+            <p>
+                Hence, this reaction gives us a mixture of amines, not a
+                pure amine.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= Question 9 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            Question: Write the physical properties of amines.
+        </div>
+
+        <div class="answer">
+
+            <p>The physical properties of amines are as follows.</p>
+
+            <ul>
+                <li>The lower members are flammable gases. Members from
+                    C<sub>3</sub> to C<sub>11</sub> are volatile liquids.
+                    Higher members are solids.</li>
+                <li>They are polar and soluble in water. Solubility
+                    decreases as molecular weight increases.</li>
+                <li>Aromatic amines are insoluble in water, but soluble in
+                    benzene, ether and alcohol.</li>
+                <li>Their boiling points are lower than those of alcohols
+                    and carboxylic acids.</li>
+                <li>Lower members have a strong fish-like odour. This
+                    odour decreases as the molecular weight increases.</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= Question 10 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            Question: Why are amines soluble in water? <i>(2022)</i>
+        </div>
+
+        <div class="answer">
+
+            <p>
+                In amines, the nitrogen atom has high electronegativity.
+                Hence it forms hydrogen bonds with water molecules. Due to
+                the association of water and amine, the amine becomes
+                soluble in water.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= Question 11 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            Question: Why are the boiling points of amines lower than
+            those of alcohols and carboxylic acids?
+        </div>
+
+        <div class="answer">
+
+            <p>
+                The electronegativity of nitrogen is lower than that of
+                oxygen, due to which amines have weaker hydrogen bonds
+                compared to alcohols and carboxylic acids. Hence the
+                boiling points of amines are lower than those of alcohols
+                and carboxylic acids.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= Question 12 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            Question: Methylamine is more basic than ammonia, why? Explain
+            the reason.
+        </div>
+
+        <div class="answer">
+
+            <p>
+                Amines are basic due to the presence of a lone pair of
+                electrons. Due to the positive inductive effect (+I) of
+                the methyl group, the electron density on the nitrogen
+                atom of methylamine increases. It can now accept a proton
+                more easily, hence it is more basic than ammonia.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= Question 13 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            Question: Give reasons why ethylamine is more basic than
+            ammonia. <i>(2023)</i>
+        </div>
+
+        <div class="answer">
+
+            <p>
+                Amines are basic due to the presence of a lone pair of
+                electrons. Due to the positive inductive effect of the
+                ethyl group, the electron density on the nitrogen atom of
+                ethylamine increases. It can now accept a proton more
+                easily. Hence it is more basic than ammonia.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= Question 14 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            Question: Among primary, secondary and tertiary amines, which
+            amine is the most basic and why? Write the order of their
+            decreasing basicity.
+        </div>
+
+        <div class="answer">
+
+            <p>
+                The basicity of amines depends on the availability of the
+                lone pair of electrons present on the nitrogen atom, by
+                which they accept a proton (H<sup>+</sup>). The +I effect
+                (electron-donating effect) of alkyl groups increases the
+                electron density on nitrogen, which increases basicity.
+            </p>
+
+            <p>
+                A primary amine (R–NH<sub>2</sub>) has one alkyl group, a
+                secondary amine (R<sub>2</sub>NH) has two alkyl groups, and
+                a tertiary amine (R<sub>3</sub>N) has three alkyl groups.
+            </p>
+
+            <p>
+                However, in a tertiary amine, hydrogen bonds cannot form
+                with water, so its conjugate acid (R<sub>3</sub>NH<sup>+</sup>)
+                is not stable. For this reason, in aqueous solution the
+                secondary amine is the most basic.
+            </p>
+
+            <p>
+                <b>Decreasing order of basicity:</b> Secondary amine &gt;
+                Primary amine &gt; Tertiary amine &gt; Ammonia (NH<sub>3</sub>)
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= Question 15 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            Question: Write the order of basicity of ammonia, methylamine
+            and aniline.
+        </div>
+
+        <div class="answer">
+
+            <div class="formula">
+                \[
+                R\text{-}NH_2 \;>\; NH_3 \;>\; C_6H_5NH_2
+                \]
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= Question 16 (mega) ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            Question: Describe the chemical properties of amines.
+        </div>
+
+        <div class="answer">
+
+            <p>The chemical properties of amines are as follows.</p>
+
+            <p class="sub-heading">1. Basic nature</p>
+
+            <p>
+                An aqueous solution of an amine ionizes to give
+                OH<sup>−</sup> ions. The basic properties of amines are
+                revealed by the following reactions.
+            </p>
+
+            <p><b>Reaction with water:</b> Soluble amines dissolve in
+                water to form alkyl ammonium hydroxide, which dissociates
+                to give OH<sup>−</sup> ions.</p>
+
+            <div class="formula">
+                \[
+                CH_3NH_2 + H_2O \rightarrow [CH_3NH_3]^+OH^-
+                \]
+            </div>
+
+            <p><b>Reaction with acids:</b> forms salts.</p>
+
+            <div class="formula">
+                \[
+                CH_3NH_2 + HCl \rightarrow [CH_3NH_3]^+Cl^-
+                \]
+            </div>
+
+            <p class="sub-heading">2. Alkylation</p>
+
+            <p>
+                All amines react with alkyl halides, and a quaternary
+                ammonium salt is formed as the final product.
+            </p>
+
+            <div class="formula">
+                \[
+                CH_3NH_2 + CH_3I \rightarrow (CH_3)_2NH + HI
+                \]
+                \[
+                (CH_3)_2NH + CH_3I \rightarrow (CH_3)_3N + HI
+                \]
+                \[
+                (CH_3)_3N + CH_3I \rightarrow (CH_3)_4N^+I^-
+                \]
+            </div>
+
+            <p class="sub-heading">3. Acylation</p>
+
+            <p>
+                Primary amines react with acid chlorides to form
+                substituted amides.
+            </p>
+
+            <div class="formula">
+                \[
+                CH_3NH_2 + CH_3COCl \rightarrow CH_3NHCOCH_3 + HCl
+                \]
+            </div>
+
+            <div class="important">
+                <b>Note:</b> In the source, the reagent in this equation
+                is written as "CH₃OCl", which is chemically inconsistent
+                (there is no such common reagent that would give the
+                product CH₃NHCOCH₃); to match the product, it has been
+                corrected here as <b>acetyl chloride (CH₃COCl)</b>.
+                Also, in the source, item number "4." is missing — the
+                numbering jumps directly from "3." to "5." (Liebermann's
+                test); this is the source's original numbering error,
+                which has been kept here exactly as is (the next
+                sub-heading is also given with the original number "5.").
+            </div>
+
+            <p class="sub-heading">5. Liebermann's nitrosoamine test (reaction with nitrous acid)</p>
+
+            <p>
+                Nitrous acid reacts differently with different types of
+                amines.
+            </p>
+
+            <p>When a <b>primary amine</b> is treated with nitrous acid,
+                alcohol and nitrogen gas are formed.</p>
+
+            <div class="formula">
+                \[
+                CH_3NH_2 + HONO \rightarrow CH_3OH + N_2 + H_2O
+                \]
+            </div>
+
+            <p>When a <b>secondary amine</b> is treated with nitrous acid,
+                an oily liquid nitrosoamine is formed.</p>
+
+            <div class="formula">
+                \[
+                (CH_3)_2NH + HONO \rightarrow (CH_3)_2N\text{-}N{=}O + H_2O
+                \]
+            </div>
+
+            <p>
+                When the nitrosoamine is heated with a small amount of
+                phenol and a few drops of concentrated H<sub>2</sub>SO<sub>4</sub>,
+                a green-coloured solution is formed, which turns blue on
+                adding NaOH. This reaction is called the <b>Liebermann
+                nitrosoamine reaction</b> and is used for testing secondary
+                amines.
+            </p>
+
+            <p><b>Tertiary amine</b> does not react with cold nitrous
+                acid.</p>
+
+            <p class="sub-heading">6. Carbylamine reaction</p>
+
+            <p>
+                When a primary aliphatic amine or aniline is heated with
+                chloroform in the presence of alcoholic KOH, an extremely
+                unpleasant-smelling compound, isocyanide (carbylamine), is
+                formed.
+            </p>
+
+            <div class="formula">
+                \[
+                CH_3NH_2 + CHCl_3 + 3KOH \rightarrow CH_3NC + 3KCl + H_2O
+                \]
+            </div>
+
+            <p>
+                This reaction is given only by primary amines. Secondary
+                and tertiary amines do not give this reaction.
+            </p>
+
+            <p class="sub-heading">7. Mustard oil reaction</p>
+
+            <p>
+                When a primary amine is treated with carbon disulphide and
+                then heated with mercuric chloride, an alkyl
+                isothiocyanate is formed, which has a mustard-oil-like
+                odour.
+            </p>
+
+            <div class="formula">
+                \[
+                CS_2 + CH_3NH_2 \rightarrow CH_3NHCS\text{-}SH
+                \xrightarrow{HgCl_2} CH_3NCS + HgS + 2HCl + CH_3NH_2
+                \]
+            </div>
+
+            <p>
+                Secondary amines react with carbon disulphide to form a
+                salt of dialkyl dithiocarbamic acid; this salt is not
+                decomposed by mercuric chloride.
+            </p>
+
+            <div class="formula">
+                \[
+                CS_2 + (CH_3)_2NH \rightarrow (CH_3)_2N\text{-}CS\text{-}SH
+                \xrightarrow{HgCl_2} \text{No reaction}
+                \]
+            </div>
+
+            <p>Tertiary amines do not react with carbon disulphide at
+                all.</p>
+
+            <p class="sub-heading">8. Reaction with Hinsberg's reagent</p>
+
+            <p>
+                Benzenesulfonyl chloride (C<sub>6</sub>H<sub>5</sub>SO<sub>2</sub>Cl)
+                is called <b>Hinsberg's reagent</b>.
+            </p>
+
+            <p>
+                Primary amines react with Hinsberg's reagent to form
+                monoalkyl sulfonamide, which is soluble in KOH. Secondary
+                amines also react with Hinsberg's reagent to form dialkyl
+                sulfonamide, which is insoluble in KOH. Tertiary amines do
+                not react with Hinsberg's reagent at all. Based on this
+                difference, the Hinsberg test is used to distinguish
+                between 1°, 2° and 3° amines.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= Question 17 (table) ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            Question: Distinguish between primary, secondary and tertiary
+            amines on the basis of the following points — (1) reaction
+            with nitrous acid, (2) carbylamine test, (3) reaction with
+            halides, (4) mustard oil reaction (CS₂ and HgCl₂), (5)
+            Hinsberg's reagent test. <i>(2019)</i>
+        </div>
+
+        <div class="answer">
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Reaction</th>
+                        <th>Primary (1°) amine</th>
+                        <th>Secondary (2°) amine</th>
+                        <th>Tertiary (3°) amine</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Reaction with nitrous acid (HNO₂)</td>
+                        <td>Alcohol is formed and N₂ gas is evolved.</td>
+                        <td>Nitrosoamine is formed (Liebermann-nitroso
+                            reaction).</td>
+                        <td>Only a salt is formed; Liebermann-nitroso
+                            reaction does not occur.</td>
+                    </tr>
+                    <tr>
+                        <td>Carbylamine reaction</td>
+                        <td>An unpleasant-smelling isocyanide is formed.</td>
+                        <td>No reaction.</td>
+                        <td>No reaction.</td>
+                    </tr>
+                    <tr>
+                        <td>Reaction with halides</td>
+                        <td>Combines with three molecules of alkyl halide
+                            to form a quaternary salt.</td>
+                        <td>Combines with two molecules of alkyl halide to
+                            form a quaternary salt.</td>
+                        <td>Combines with one molecule of alkyl halide to
+                            form a quaternary salt.</td>
+                    </tr>
+                    <tr>
+                        <td>Mustard oil reaction (with CS₂ and HgCl₂)</td>
+                        <td>Alkyl isothiocyanate is formed, which has a
+                            foul odour.</td>
+                        <td>No reaction.</td>
+                        <td>No reaction.</td>
+                    </tr>
+                    <tr>
+                        <td>Reaction with Hinsberg's reagent (C₆H₅SO₂Cl)</td>
+                        <td>Forms monoalkyl sulfonamide, which is soluble
+                            in KOH.</td>
+                        <td>Forms dialkyl sulfonamide, which is insoluble
+                            in KOH.</td>
+                        <td>No reaction.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= Question 18 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            Question: Explain the laboratory method of preparing
+            ethylamine.
+        </div>
+
+        <div class="answer">
+
+            <p><b>Principle:</b> In the laboratory, ethylamine is obtained
+                by reacting propanamide with a solution of bromine and
+                caustic potash.</p>
+
+            <p><b>Equation:</b></p>
+
+            <div class="formula">
+                \[
+                CH_3CH_2CONH_2 + Br_2 + 4KOH
+                \rightarrow CH_3CH_2NH_2 + K_2CO_3 + 2KBr + H_2O
+                \]
+            </div>
+
+            <div class="formula">
+                <img src="images/image8.png" alt="Laboratory method of preparing ethylamine">
+            </div>
+
+            <p><b>Procedure:</b> Equivalent amounts of bromine and
+                propanamide are taken in a round-bottomed distillation
+                flask. A 10% KOH solution is added to it. After this, an
+                excess of 50% KOH solution is added and the mixture is
+                heated on a water bath to 57–67°C.</p>
+
+            <p>
+                On heating, when the colour of the solution is completely
+                removed (colourless), ethylamine starts distilling out.
+                The ethylamine produced is absorbed in dilute HCl.
+            </p>
+
+            <p><b>Physical properties:</b></p>
+
+            <ul>
+                <li>It is a colourless liquid with an ammonia-like odour.
+                    Its boiling point is 19°C.</li>
+                <li>It is soluble in water and organic solvents.</li>
+                <li>It is a flammable substance.</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= Question 19 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            Question: What is aniline?
+        </div>
+
+        <div class="answer">
+
+            <p>
+                Aniline is an aromatic amine. Its formula is
+                C<sub>6</sub>H<sub>5</sub>NH<sub>2</sub>.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= Question 20 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            Question: Write the general methods of preparing aniline.
+        </div>
+
+        <div class="answer">
+
+            <p>The general methods of preparing aniline are as follows.</p>
+
+            <p class="sub-heading">1. Reduction of nitro compounds</p>
+
+            <p>
+                When nitrobenzene is reduced by tin and hydrochloric acid,
+                or by lithium aluminium hydride, aniline is obtained.
+            </p>
+
+            <div class="formula">
+                \[
+                C_6H_5NO_2 + 6[H] \xrightarrow{Sn/HCl} C_6H_5NH_2 + 2H_2O
+                \]
+            </div>
+
+            <p class="sub-heading">2. Hofmann bromamide reaction <i>(2019)</i></p>
+
+            <p>
+                When benzamide is reacted with Br<sub>2</sub> and KOH,
+                aniline is formed.
+            </p>
+
+            <div class="formula">
+                \[
+                C_6H_5CONH_2 + Br_2 + 4KOH \rightarrow C_6H_5NH_2 + K_2CO_3 + 2KBr + H_2O
+                \]
+            </div>
+
+            <p class="sub-heading">3. Schmidt reaction</p>
+
+            <p>
+                When hydrazoic acid dissolved in an inert solvent such as
+                CHCl<sub>3</sub> reacts with benzoic acid in the presence
+                of sulfuric acid at 50–55°C, aniline is formed.
+            </p>
+
+            <div class="formula">
+                \[
+                C_6H_5COOH + HN_3 \xrightarrow{\text{Conc. } H_2SO_4/50\text{-}55^\circ C} C_6H_5NH_2 + CO_2 + N_2
+                \]
+            </div>
+
+            <p class="sub-heading">4. From phenol</p>
+
+            <p>
+                Aniline is obtained by heating phenol with ammonia at
+                300°C in the presence of Al<sub>2</sub>O<sub>3</sub>.
+            </p>
+
+            <div class="formula">
+                \[
+                C_6H_5OH + NH_3 \xrightarrow{Al_2O_3/300^\circ C} C_6H_5NH_2 + H_2O
+                \]
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= Question 21 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            Question: Write the physical properties of aniline.
+        </div>
+
+        <div class="answer">
+
+            <ul>
+                <li>Aniline is an oily liquid, colourless to pale yellow
+                    in colour. It has a mild, characteristic and unpleasant
+                    odour.</li>
+                <li>Its boiling point is about 184°C.</li>
+                <li>Aniline is less soluble in water, but more soluble in
+                    organic solvents.</li>
+                <li>On standing in air, it slowly turns from brown to dark
+                    brown due to oxidation.</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= Question 22 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            Question: Aniline is insoluble in water but soluble in HCl,
+            why? <i>(2021)</i>
+        </div>
+
+        <div class="answer">
+
+            <p>
+                Aniline has a water-repelling phenyl group. This group
+                reduces its ability to form hydrogen bonds with water
+                molecules, due to which it does not dissolve in water.
+            </p>
+
+            <p>
+                Aniline is basic in nature. When it is mixed with HCl, it
+                reacts with the acid to form a salt called anilinium
+                chloride.
+            </p>
+
+            <div class="formula">
+                \[
+                C_6H_5NH_2 + HCl \rightarrow C_6H_5NH_3^+Cl^-
+                \]
+            </div>
+
+            <p>Hence aniline is insoluble in water, but soluble in HCl.</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= Question 23 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            Question: Aniline is a weaker base compared to ammonia, why?
+        </div>
+
+        <div class="answer">
+
+            <p>
+                In aniline, the lone pair of electrons on nitrogen
+                participates in resonance with the benzene ring, due to
+                which this electron pair is not easily able to accept a
+                proton (H<sup>+</sup>).
+            </p>
+
+            <p>
+                Whereas in ammonia there is no such resonance, so the lone
+                pair of electrons on nitrogen remains fully available.
+            </p>
+
+            <p>Hence aniline is a weaker base than ammonia.</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= Question 24 (mega) ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            Question: Describe the chemical properties of aniline.
+        </div>
+
+        <div class="answer">
+
+            <p>The chemical properties of aniline are as follows.</p>
+
+            <p class="sub-heading">1. Basic nature</p>
+
+            <p>Aniline reacts with acids to form a salt called anilinium
+                chloride.</p>
+
+            <div class="formula">
+                \[
+                C_6H_5NH_2 + HCl \rightarrow C_6H_5NH_3Cl
+                \]
+            </div>
+
+            <p class="sub-heading">2. Alkylation</p>
+
+            <p>
+                Aniline reacts with alkyl halides, and a quaternary
+                ammonium salt is formed as the final product.
+            </p>
+
+            <div class="formula">
+                \[
+                C_6H_5NH_2 + CH_3I \rightarrow C_6H_5NHCH_3 + HI
+                \]
+                \[
+                C_6H_5NHCH_3 + CH_3I \rightarrow C_6H_5N(CH_3)_2 + HI
+                \]
+                \[
+                C_6H_5N(CH_3)_2 + CH_3I \rightarrow [C_6H_5N(CH_3)_3]^+I^-
+                \]
+            </div>
+
+            <p class="sub-heading">3. Acylation</p>
+
+            <p>Aniline reacts with acid chloride to form acetanilide.</p>
+
+            <div class="formula">
+                \[
+                C_6H_5NH_2 + CH_3COCl \rightarrow C_6H_5NHCOCH_3 + HCl
+                \]
+            </div>
+
+            <p class="sub-heading">4. Schotten-Baumann reaction</p>
+
+            <p>
+                When aniline is heated with benzoyl chloride, benzanilide
+                is formed. This reaction is called the Schotten-Baumann
+                reaction.
+            </p>
+
+            <div class="formula">
+                \[
+                C_6H_5NH_2 + C_6H_5COCl \rightarrow C_6H_5NHCOC_6H_5 + HCl
+                \]
+            </div>
+
+            <p class="sub-heading">5. Carbylamine reaction</p>
+
+            <p>
+                When aniline is heated with chloroform in the presence of
+                alcoholic KOH, an extremely unpleasant-smelling phenyl
+                isocyanide is formed.
+            </p>
+
+            <div class="formula">
+                \[
+                C_6H_5NH_2 + CHCl_3 + 3KOH \rightarrow C_6H_5NC + 3KCl + H_2O
+                \]
+            </div>
+
+            <p class="sub-heading">6. Reaction with Hinsberg's reagent</p>
+
+            <p>
+                Benzenesulfonyl chloride (C<sub>6</sub>H<sub>5</sub>SO<sub>2</sub>Cl)
+                is called Hinsberg's reagent. With aniline, this reagent
+                forms phenyl benzenesulfonamide.
+            </p>
+
+            <div class="formula">
+                <img src="images/image5.png" alt="Reaction of Hinsberg's reagent with aniline — N-phenyl benzenesulfonamide">
+            </div>
+
+            <p class="sub-heading">7. Coupling reaction <i>(2023/24)</i></p>
+
+            <p>
+                Aniline reacts with diazonium chloride at ice-cold
+                temperature to give a bright yellow colour of
+                p-aminoazobenzene. This is called the coupling reaction.
+            </p>
+
+            <div class="formula">
+                <img src="images/image10.png" alt="Coupling reaction of diazonium chloride with aniline — p-aminoazobenzene">
+            </div>
+
+            <p class="sub-heading">8. Diazotisation <i>(2025)</i></p>
+
+            <p>
+                When aniline reacts with nitrous acid at a cold temperature
+                (0–5°C), a diazonium salt is formed. This reaction is
+                called diazotisation.
+            </p>
+
+            <div class="formula">
+                <img src="images/image6.jpg" alt="Diazotisation of aniline — formation of benzenediazonium chloride">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= Question 25 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            Question: Why are diazonium salts generally not stored?
+        </div>
+
+        <div class="answer">
+
+            <p>
+                Diazonium salts are generally not stored, because they are
+                highly unstable. At ordinary temperature they easily
+                decompose to form nitrogen gas (N<sub>2</sub>) and other
+                stable substances. There is also a risk of explosion during
+                this decomposition.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= Question 26 (Reactions of the benzene ring in aniline) ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            Question: Write the reactions of the benzene ring in aniline.
+        </div>
+
+        <div class="answer">
+
+            <p class="sub-heading">1. Halogenation</p>
+
+            <p>
+                <i>(Question: Write the reaction of aniline with bromine
+                water in an aqueous medium.)</i>
+            </p>
+
+            <p>
+                Aniline reacts with bromine water in an aqueous medium to
+                form a white precipitate of 2,4,6-tribromoaniline.
+            </p>
+
+            <div class="formula">
+                <img src="images/image9.png" alt="Reaction of aniline with bromine water — 2,4,6-tribromoaniline">
+            </div>
+
+            <p class="sub-heading">2. Nitration</p>
+
+            <p>
+                Due to the formation of the anilinium ion in a strongly
+                acidic medium, aniline forms meta-nitroaniline along with
+                ortho and para.
+            </p>
+
+            <div class="formula">
+                <img src="images/image7.png" alt="Nitration of aniline — ortho, meta and para nitroaniline">
+            </div>
+
+            <p class="sub-heading">3. Sulfonation</p>
+
+            <p>
+                On heating with concentrated H<sub>2</sub>SO<sub>4</sub>,
+                aniline forms sulfanilic acid. This molecule exists as a
+                zwitterion.
+            </p>
+
+            <div class="formula">
+                <img src="images/image2.png" alt="Sulfonation of aniline — sulfanilic acid and zwitterion">
+            </div>
+
+            <p class="sub-heading">4. Friedel-Crafts reaction</p>
+
+            <p>
+                Aniline does not show the Friedel-Crafts reaction, because
+                the catalyst AlCl<sub>3</sub> (a Lewis acid) forms a salt
+                with aniline, which deactivates the benzene ring.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= Question 27 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            Question: Write the laboratory method of preparing aniline.<br>
+            <small>(Or — Describe the commercial method of manufacturing
+            aniline.)</small>
+        </div>
+
+        <div class="answer">
+
+            <p><b>Principle:</b> In the laboratory, aniline is obtained by
+                heating nitrobenzene with tin and hydrochloric acid.</p>
+
+            <p><b>Equation:</b></p>
+
+            <div class="formula">
+                \[
+                C_6H_5NO_2 + 6[H] \xrightarrow{Sn/HCl} C_6H_5NH_2 + 2H_2O
+                \]
+            </div>
+
+            <div class="formula">
+                <img src="images/image4.png" alt="Laboratory method of preparing aniline (distillation apparatus)">
+            </div>
+
+            <p><b>Procedure:</b> 20 grams of nitrobenzene and 40 grams of
+                granulated tin are taken in a round-bottomed flask. A
+                reflux condenser is fitted to the flask and 100 ml of
+                hydrochloric acid is added slowly (about 10 ml at a time).
+                After each addition of acid, the flask is shaken and the
+                temperature is not allowed to exceed 90°C.</p>
+
+            <p>
+                After this, the flask is heated on a water bath until the
+                characteristic odour of nitrobenzene disappears. On
+                cooling, a solid mass with the formula
+                (C<sub>6</sub>H<sub>5</sub>NH<sub>2</sub>·HCl)<sub>2</sub>·SnCl<sub>4</sub>
+                separates out.
+            </p>
+
+            <p>
+                On treating this solid mass with concentrated NaOH
+                solution, a clear alkaline solution is obtained. From this
+                solution, aniline is liberated and floats on top as a dark
+                brown oily layer.
+            </p>
+
+            <div class="important">
+                <b>Note:</b> In the source document, the diagram
+                (image4.png) given under this "aniline laboratory method"
+                question is actually the same apparatus figure with
+                English labels whose own title in the figure reads
+                "Making ethyl amine in the laboratory" — that is, this is
+                the apparatus figure for the propanamide + Br₂ + KOH
+                (Hofmann bromamide degradation) ethylamine experiment, not
+                for the tin/HCl reduction of nitrobenzene (aniline
+                experiment). This appears to be an original error in the
+                source (the figure was possibly duplicated by mistake); it
+                has been presented here exactly as is. The source also does
+                not provide a separate commercial method for the "Or —
+                commercial method" part of this question — only the
+                laboratory method is available; this is a gap in the
+                source, which has been left as is here without adding
+                fictitious content.
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= Question 28 ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            Question: Write the uses of aniline.
+        </div>
+
+        <div class="answer">
+
+            <p>The uses of aniline are as follows.</p>
+
+            <ol>
+                <li>In the preparation of many drugs, such as sulpha
+                    drugs.</li>
+                <li>In making artificial dyes.</li>
+                <li>In the rubber industry.</li>
+            </ol>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= Question 29 (table) ================= -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            Question: Write the differences between ethylamine and
+            aniline.
+        </div>
+
+        <div class="answer">
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>Ethylamine</th>
+                        <th>Aniline</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1. Boiling point</td>
+                        <td>19°C</td>
+                        <td>184°C</td>
+                    </tr>
+                    <tr>
+                        <td>2. Odour</td>
+                        <td>Sharp, ammonia-like odour</td>
+                        <td>Mild, characteristic type of odour</td>
+                    </tr>
+                    <tr>
+                        <td>3. Reaction with nitrous acid</td>
+                        <td>With cold dilute nitrous acid, alcohol is
+                            formed and nitrogen gas is evolved.</td>
+                        <td>Forms benzenediazonium chloride.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<!-- PROTECTION -->
+
+<script>
+
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+document.addEventListener("selectstart", e => e.preventDefault());
+
+document.addEventListener("copy", e => {
+
+    e.preventDefault();
+
+    alert("Copying content is not allowed");
+
+});
+
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
