@@ -44,9 +44,9 @@ const PAL_STUDY_DATA = {
         "यूनिट 7(A) अल्कोहल",
         "यूनिट 7(B) फिनोल",
         "यूनिट 7(C) ईथर",
-        "यूनिट 8(A) एल्डिहाइड एवं कीटोन",
+        "यूनिट 8(A) एल्डिहाइड तथा कीटोन",
         "यूनिट 8(B) कार्बोक्सिलिक अम्ल",
-        "यूनिट 9 अमीन",
+        "यूनिट 9 एमिन",
         "यूनिट 10 जैव-अणु"
       ],
       "जीवविज्ञान": [
@@ -214,20 +214,20 @@ const UNIT_FILE_PATHS = {
         "यूनिट 14 अर्धचालक इलेक्ट्रॉनिक्स": "../units/mp_board_hindi/class_12/physics/unit14/MP_Hindi_12th_Physics_unit14.html"
       },
       "रसायन शास्त्र ":{
-          "यूनिट 1 विलयन": "../units/mp_board_hindi/class_12/chemistry/unit1/c1/1_formatted.html",
-          "यूनिट 2 विद्युत रसायन": "../units/mp_board_hindi/class_12/chemistry/unit1/c2/2_formatted.html",
-          "यूनिट 3 रासायनिक गतिकी": "../units/mp_board_hindi/class_12/chemistry/unit1/c3/mphc3.html",
-          "यूनिट 4 d और f ब्लॉक के तत्व": "../units/mp_board_hindi/class_12/chemistry/unit1/c4/4_formatted.html",
-          "यूनिट 5 समन्वय यौगिक": "../units/mp_board_hindi/class_12/chemistry/unit1/c5/5_formatted.html",
-          "यूनिट 6(A) हैलोएल्केन": "../units/mp_board_hindi/class_12/chemistry/unit1/6.html",
-          "यूनिट 6(B) हैलोएरीन": "../units/mp_board_hindi/class_12/chemistry/unit1/6b.html",
-          "यूनिट 7(A) अल्कोहल": "../units/mp_board_hindi/class_12/chemistry/unit1/c7/7_formatted.html",
-          "यूनिट 8(B) फिनोल": "../units/mp_board_hindi/class_12/chemistry/unit1/c8/8_formatted.html",
-          "यूनिट 9(C) ईथर": "../units/mp_board_hindi/class_12/chemistry/unit1/c9/9_formatted.html",
-          "यूनिट 10(A) एल्डिहाइड एवं कीटोन": "../units/mp_board_hindi/class_12/chemistry/unit1/c10/10_formatted.html",
-          "यूनिट 11(B) कार्बोक्सिलिक अम्ल": "../units/mp_board_hindi/class_12/chemistry/unit1/c11/11_formatted.html",
-          "यूनिट 9(C) अमीन": "../units/mp_board_hindi/class_12/chemistry/unit1/c12/12_formatted.html",
-          "यूनिट 10 जैव-अणु": "../units/mp_board_hindi/class_12/chemistry/unit1/c10/10_formatted.html"
+          "यूनिट 1 विलयन": "../units/mp_board_hindi/class_12/chemistry/1/1.html",
+          "यूनिट 2 विद्युत रसायन": "../units/mp_board_hindi/class_12/chemistry/2/2.html",
+          "यूनिट 3 रासायनिक गतिकी": "../units/mp_board_hindi/class_12/chemistry/3/3.html",
+          "यूनिट 4 d और f ब्लॉक के तत्व": "../units/mp_board_hindi/class_12/chemistry/4/4.html",
+          "यूनिट 5 समन्वय यौगिक": "../units/mp_board_hindi/class_12/chemistry/5/5.html",
+          "यूनिट 6(A) हैलोएल्केन": "../units/mp_board_hindi/class_12/chemistry/6a/6a.html",
+          "यूनिट 6(B) हैलोएरीन": "../units/mp_board_hindi/class_12/chemistry/6b/6b.html",
+          "यूनिट 7(A) अल्कोहल": "../units/mp_board_hindi/class_12/chemistry/7a/7a.html",
+          "यूनिट 7(B) फिनोल": "../units/mp_board_hindi/class_12/chemistry/7b/7b.html",
+          "यूनिट 7(C) ईथर": "../units/mp_board_hindi/class_12/chemistry/7c/7c.html",
+          "यूनिट 8(A) एल्डिहाइड तथा कीटोन": "../units/mp_board_hindi/class_12/chemistry/8a/8a.html",
+          "यूनिट 8(B) कार्बोक्सिलिक अम्ल": "../units/mp_board_hindi/class_12/chemistry/8b/8b.html",
+          "यूनिट 9 एमिन": "../units/mp_board_hindi/class_12/chemistry/9/9.html",
+          "यूनिट 10 जैव-अणु": "../units/mp_board_hindi/class_12/chemistry/10/10.html"
       },
       "जीवविज्ञान": {
         "यूनिट 1 (A) पुष्पीय पौधों में लैंगिक जनन" : "../units/mp_board_hindi/class_12/biology/unit1/b1/1_formatted.html",
