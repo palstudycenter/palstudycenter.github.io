@@ -1,0 +1,2145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | Unit 2 Notes</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<script>
+window.MathJax = {
+    tex: {
+        inlineMath: [
+            ['$', '$'],
+            ['\\(', '\\)']
+        ]
+    }
+};
+</script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    line-height:1.7;
+}
+
+/* NAVBAR */
+.navbar{
+    background:rgba(15,23,42,0.45);
+    backdrop-filter:blur(10px);
+    box-shadow:0 4px 18px rgba(0,0,0,.18);
+    padding:10px 0;
+}
+
+.navbar-brand{
+    font-size:40px;
+    font-weight:700;
+    color:white !important;
+}
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+
+/* CONTENT */
+.notes-container{
+    max-width:900px;
+    margin:100px auto 50px;
+    padding:20px;
+}
+
+.notes-title{
+    background:#e3f2fd;
+    color:#1565c0;
+    padding:10px 20px;
+    border-left:5px solid #1565c0;
+    border-radius:50px;
+    font-size:30px;
+    font-weight:bold;
+    margin-bottom:35px;
+}
+
+.qa-box{
+    background:white;
+    padding:22px;
+    margin-bottom:18px;
+    border-radius:14px;
+    border-left:6px solid #1565c0;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    transition:.25s;
+}
+
+.qa-box:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.question{
+    font-weight:bold;
+    color:#1b3a57;
+    margin-bottom:8px;
+    font-size:20px;
+}
+
+.answer{
+    color:#2c3e50;
+    text-align:justify;
+}
+
+.formula{
+    overflow-x:auto;
+    overflow-y:hidden;
+    margin:12px 0;
+    padding:10px;
+    background:#f8fafc;
+    border-radius:8px;
+}
+
+.answer table{
+    width:100%;
+    border-collapse:collapse;
+    margin:12px 0;
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    display:block;
+    overflow-x:auto;
+    box-shadow:0 2px 8px rgba(0,0,0,0.06);
+}
+
+.answer table td,
+.answer table th{
+    border:1px solid #ddd;
+    padding:10px 12px;
+    text-align:left;
+    vertical-align:top;
+}
+
+.answer table th{
+    background:#eaf2fb;
+    font-weight:bold;
+    color:#1b3a57;
+}
+
+.answer ol,
+.answer ul{
+    margin-left:20px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.answer li{ margin-bottom:8px; }
+
+.sub-heading{
+    color:#1565c0;
+    font-weight:bold;
+    margin-top:15px;
+}
+
+@media(max-width:768px){
+
+    .navbar-brand{
+        font-size:28px;
+    }
+
+    .notes-container{
+        margin-top:80px;
+        padding:12px;
+    }
+
+    .notes-title{
+        font-size:23px;
+    }
+
+    .qa-box{
+        padding:17px;
+    }
+
+    .question{
+        font-size:18px;
+    }
+}
+
+.formula{
+    width:100%;
+    max-width:900px;
+    margin:15px auto;
+    padding:16px 20px;
+    background:#f8fafc;
+    border:1px solid #dbe3ec;
+    border-left:5px solid #2563eb;
+    border-radius:10px;
+
+    /* Responsive */
+    overflow-x:auto;
+    overflow-y:hidden;
+
+    text-align:center;
+    font-size:clamp(16px, 3vw, 22px);
+    font-weight:600;
+    line-height:1.8;
+
+    white-space:nowrap;
+    -webkit-overflow-scrolling:touch;
+}
+
+/* Mobile */
+@media (max-width:600px){
+
+    .formula{
+        margin:12px 0;
+        padding:12px 10px;
+        font-size:16px;
+        border-radius:8px;
+        text-align:left;
+    }
+
+}
+.formula{
+    width:100%;
+    max-width:900px;
+    margin:15px auto;
+    padding:15px 10px;
+    text-align:center;
+    overflow-x:auto;
+    white-space:nowrap;
+    font-size:clamp(16px,4vw,22px);
+    line-height:1.5;
+}
+
+.reaction{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+}
+
+.arrow-box{
+    display:inline-flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    line-height:1;
+    min-width:100px;
+}
+
+.catalyst{
+    font-size:0.7em;
+    white-space:nowrap;
+}
+
+.arrow{
+    font-size:2em;
+    line-height:0.7;
+    font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="../index.html">
+            PAL <span>STUDY CENTER</span>
+        </a>
+
+        <button class="navbar-toggler bg-light"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+    </div>
+
+</nav>
+
+
+<!-- NOTES -->
+<div class="notes-container">
+
+<div class="notes-title">
+    📘 Unit 6 -(Haloalkanes)
+</div>
+
+
+<!-- Q1 -->
+<div class="qa-box">
+
+    <div class="question">
+        Question: What are haloalkanes?
+    </div>
+
+    <div class="answer">
+
+        Organic compounds in which one or more hydrogen atoms of an alkane are
+        replaced by halogen atoms (F, Cl, Br or I) are
+        called <b>haloalkanes</b>.
+   <p>Based on the number of halogen atoms, haloalkanes are mainly of the following types:</p>
+
+
+
+<ol>
+    <li>
+        <b>Monohaloalkanes</b> – These contain one halogen atom.
+        Their general formula is RX.
+    </li>
+
+    <li>
+        <b>Dihaloalkanes</b> – These contain two halogen atoms.
+        Their general formula is RX₂.
+    </li>
+
+    <li>
+        <b>Trihaloalkanes</b> – These contain three halogen atoms.
+        Their general formula is RX₃.
+    </li>
+
+    <li>
+        <b>Polyhaloalkanes</b> – These contain more than three halogen atoms.
+        Their general formula is RXₙ.
+    </li>
+</ol>
+
+
+
+        Where,<br>
+        <b>R</b> = alkyl group<br>
+        <b>X</b> = halogen atom (F, Cl, Br or I)
+
+    </div>
+</div>
+
+
+<!-- Q2 -->
+<div class="qa-box">
+
+    <div class="question">
+        Question: How many types of monohaloalkanes are there?
+    </div>
+
+  <div  class="answer">
+
+        Based on the nature of the carbon atom, monohaloalkanes are of three types:
+
+        <ol>
+            <li>
+                <b>Primary haloalkane (1°)</b> – The carbon atom to which the halogen is attached
+                is bonded to only one other carbon atom.<br>
+                <p>Example:</p> <p>CH₃–CH₂–Cl</p> Ethyl chloride
+            </li>
+
+            <li>
+                <b>Secondary haloalkane (2°)</b> – The carbon atom to which the halogen is attached
+                is bonded to two other carbon atoms.<br>
+                <p>Example:</p> <p>(CH<sub>3</sub>)<sub>2</sub>CH–Cl</p> Isopropyl chloride
+            </li>
+
+            <li>
+                <b>Tertiary haloalkane (3°)</b> – The carbon atom to which the halogen is attached
+                is bonded to three other carbon atoms.<br>
+                <p>Example:</p> <p>(CH₃)₃C–Cl</p> Tert-butyl chloride
+            </li>
+        </ol>
+</div>
+  </div>
+
+
+<!-- Q3 -->
+<div class="qa-box">
+
+    <div class="question">
+        Question: Write the general methods of preparation of haloalkanes.
+    </div>
+
+    <div class="answer">
+
+        The main methods of preparing haloalkanes are as follows:
+
+        <ol>
+
+            <li>
+                <b>Halogenation of alkanes</b><br>
+                In the presence of light or heat, when an alkane reacts with chlorine or bromine,
+                haloalkanes are obtained.
+
+                <div class="formula">
+
+    <span>CH₄ + Cl₂</span>
+
+    <span class="arrow-box">
+        <small>Light</small>
+        <span class="arrow">⟶</span>
+    </span>
+
+    <span>CH₃Cl + HCl</span>
+
+                </div>
+            </li>
+
+
+            <li>
+                <b>Addition of hydrogen halide to alkenes</b><br>
+                Addition of HCl, HBr or HI to alkenes gives haloalkanes.
+                In an unsymmetrical alkene, the addition generally follows Markovnikov's rule.
+
+                <div class="formula">
+                    CH₂=CH₂ + HBr → CH₃–CH₂Br
+                </div>
+            </li>
+
+
+            <li>
+                <b>Preparation of haloalkanes from alcohols</b><br>
+                Reacting alcohols with various halogenating reagents
+                gives haloalkanes.
+
+                <div class="sub-heading">(a) With hydrogen halide</div>
+
+                <div class="formula">
+                    C₂H₅OH + HCl → C₂H₅Cl + H₂O
+                </div>
+
+                <div class="sub-heading">(b) With phosphorus trichloride</div>
+
+                <div class="formula">
+                    3C₂H₅OH + PCl₃ → 3C₂H₅Cl + H₃PO₃
+                </div>
+
+                <div class="sub-heading">(c) With phosphorus pentachloride</div>
+
+                <div class="formula">
+                    C₂H₅OH + PCl₅ → C₂H₅Cl + POCl₃ + HCl
+                </div>
+
+                <div class="sub-heading">(d) With thionyl chloride</div>
+
+                <div class="formula">
+                    C₂H₅OH + SOCl₂ → C₂H₅Cl + SO₂ + HCl
+                </div>
+            </li>
+
+
+            <li>
+                <b>Hunsdiecker Reaction</b><br>
+                Heating silver salts of fatty acids with bromine or chlorine
+                in a suitable solvent gives a haloalkane with one carbon atom
+                less than the original acid.
+
+                <div class="formula">
+                    CH₃COOAg + Br₂
+                    <span>→</span>
+                    CH₃Br + CO₂ + AgBr
+                </div>
+
+            </li>
+
+        </ol>
+
+    </div>
+</div>
+
+
+<!-- Q4 -->
+<div class="qa-box">
+
+    <div class="question">
+        Question: Write the physical properties of haloalkanes.
+    </div>
+
+    <div class="answer">
+
+        The main physical properties of haloalkanes are as follows:
+
+        <ol>
+
+            <li>
+                <b>Physical state:</b>
+                Lower members are generally gases or volatile liquids,
+                while members with higher molecular mass can be liquids or solids.
+            </li>
+
+            <li>
+                <b>Colour and odour:</b>
+                Most pure haloalkanes are colourless and may have a characteristic odour.
+            </li>
+
+            <li>
+                <b>Boiling point:</b>
+                In general, the boiling point increases as molecular mass increases.
+            </li>
+
+            <li>
+                <b>Density:</b>
+                Many chloro-, bromo- and iodoalkanes have a higher density than water,
+                although this is not a universal rule for all haloalkanes.
+            </li>
+
+            <li>
+                <b>Solubility in water:</b>
+                Most haloalkanes are only very slightly soluble in water.
+            </li>
+
+        </ol>
+
+    </div>
+</div>
+
+
+<!-- Q5 -->
+<div class="qa-box">
+
+    <div class="question">
+        Question: Why are alkyl halides immiscible with water?
+    </div>
+
+    <div class="answer">
+
+        Although the C–X bond in alkyl halides is polar, they are generally
+        only very slightly soluble in water. The main reason for this is that
+        strong hydrogen bonds exist between water molecules.
+
+        The attractive forces formed between alkyl halides and water are not
+        strong enough to sufficiently break the strong hydrogen bonds of water.
+        Therefore, most alkyl halides are immiscible with, or very slightly soluble in, water.
+
+    </div>
+</div>
+
+
+<!-- Q6 -->
+<div class="qa-box">
+
+    <div class="question">
+        Question: Into how many groups are the chemical properties of alkyl halides divided?
+    </div>
+
+    <div class="answer">
+
+        The main chemical reactions of alkyl halides can be divided into three groups:
+
+        <ol>
+            <li>Nucleophilic substitution reaction</li>
+            <li>Elimination reaction</li>
+            <li>Reaction with metals</li>
+        </ol>
+
+    </div>
+</div>
+
+
+<!-- Q7 -->
+<div class="qa-box">
+
+    <div class="question">
+        Question: What are nucleophilic substitution reactions?
+        Explain SN¹ and SN² with examples.
+    </div>
+
+    <div class="answer">
+
+        The reaction in which the halogen atom of an alkyl halide is
+        replaced by a nucleophile (Nu⁻) is called a
+        <b>nucleophilic substitution reaction</b>.
+
+        <div class="formula">
+            R–X + Nu⁻ → R–Nu + X⁻
+        </div>
+
+        Because the C–X bond is polar, a partial
+        positive charge ($\delta^+$) develops on the carbon attached to the halogen. The nucleophile
+        attacks this electron-deficient carbon and the halide ion is displaced.
+
+        <div class="sub-heading">
+            1. SN¹ reaction
+        </div>
+
+        SN¹ is a <b>unimolecular nucleophilic substitution reaction</b>.
+        Its rate depends only on the concentration of the substrate.
+
+        <div class="formula">
+            Rate ∝ [R–X]
+        </div>
+
+        This reaction mainly occurs in two steps:
+
+        <p>
+            <b>First step:</b> Heterolytic cleavage of the C–X bond occurs, forming
+            a carbocation. This is the slow step.
+        </p>
+
+        <div class="formula">
+            R–X → R⁺ + X⁻
+        </div>
+
+        <p>
+            <b>Second step:</b> The nucleophile attacks the carbocation and
+            the substitution product is formed.
+        </p>
+
+        <div class="formula">
+            R⁺ + Nu⁻ → R–Nu
+        </div>
+
+        <div class="sub-heading">
+            2. SN² reaction
+        </div>
+
+        SN² is a <b>bimolecular nucleophilic substitution reaction</b>.
+        Its rate depends on the concentration of both the substrate and the nucleophile.
+
+        <div class="formula">
+            Rate ∝ [R–X][Nu⁻]
+        </div>
+
+        This reaction occurs in a single step. The nucleophile attacks the carbon atom
+        from the side opposite to the halogen, and a transition state is formed.
+
+        <div class="formula">
+            Nu⁻ + R–X → [Nu···R···X] → R–Nu + X⁻
+        </div>
+
+
+    </div>
+</div>
+
+<!-- Difference between SN¹ and SN² -->
+
+<div class="qa-box">
+
+    <div class="question">
+        Question: Write the difference between the SN¹ and SN² reactions.
+    </div>
+
+    <div class="answer">
+
+         <table>
+        <thead>
+            <tr>
+                <th>SN¹ reaction</th>
+                <th>SN² reaction</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1. It occurs in two steps.</td>
+                <td>1. It occurs in a single step.</td>
+            </tr>
+
+            <tr>
+                <td>
+                    2. Its rate depends only on the concentration of the substrate.
+                </td>
+                <td>
+                    2. Its rate depends on the concentration of both the substrate and the nucleophile.
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    3. A carbocation is formed first.
+                </td>
+                <td>
+                    3. No carbocation is formed.
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    4. Tertiary alkyl halides generally react easily in this reaction.
+                </td>
+                <td>
+                    4. Primary alkyl halides generally react easily in this reaction.
+                </td>
+            </tr>
+        </tbody>
+         </table>
+    </div>
+</div>
+<!-- =========================
+     UNIT 2 : HALOALKANES
+     CORRECTED NOTES
+========================= -->
+
+
+<!-- Q8 -->
+<div class="qa-box">
+
+    <div class="question">
+        Question: Give some examples of nucleophilic substitution reactions.
+    </div>
+
+    <div class="answer">
+
+        Alkyl halides ($R-X$) react with various nucleophilic reagents ($Nu^-$)
+        to form new compounds. The main examples are as follows:
+
+        <ol>
+
+            <li>
+                <b>Reaction with aqueous alkalis</b><br>
+                Reacting an alkyl halide with aqueous $KOH$ or $NaOH$
+                gives an alcohol.
+
+                <div class="formula">
+                    C₂H₅Br + KOH(aq) → C₂H₅OH + KBr
+                </div>
+            </li>
+
+
+            <li>
+                <b>Reaction with sodium alkoxide</b><br>
+                This is an important $S_N2$ reaction.
+
+                <div class="formula">
+                    C₂H₅I + NaOC₂H₅ → C₂H₅OC₂H₅ + NaI
+                </div>
+
+                It is used in the <b>Williamson ether synthesis</b>.
+            </li>
+
+
+            <li>
+                <b>Reaction with silver oxide ($Ag₂O$)</b>
+
+                <div class="formula">
+                    2C₂H₅I + Ag₂O → C₂H₅OC₂H₅ + 2AgI
+                </div>
+            </li>
+
+
+            <li>
+                <b>Reaction with sodium alkynide</b><br>
+                This is an $S_N2$ reaction.
+
+                <div class="formula">
+                    HC≡CNa + CH₃I → HC≡C–CH₃ + NaI
+                </div>
+            </li>
+
+
+            <li>
+                <b>Reaction with potassium cyanide (KCN)</b>
+
+                <div class="formula">
+                    R–X + KCN → R–C≡N + KX
+                </div>
+
+                This mainly gives an <b>alkyl cyanide</b>.
+            </li>
+
+
+            <li>
+                <b>Reaction with silver nitrite ($AgNO₂$)</b>
+
+                <div class="formula">
+                    R–X + AgNO₂ → R–NO₂ + AgX
+                </div>
+
+                This mainly gives a <b>nitroalkane</b>.
+            </li>
+
+
+            <li>
+                <b>Reaction with the silver salt of a fatty acid</b>
+
+                <div class="formula">
+                    RCOOAg + R'X → RCOOR' + AgX
+                </div>
+
+                This reaction gives an <b>ester</b>.
+            </li>
+
+        </ol>
+
+    </div>
+</div>
+
+
+<!-- Q9 -->
+<div class="qa-box">
+
+    <div class="question">
+        Question: When a haloalkane reacts with KCN, the main product formed is
+        alkyl cyanide, whereas its reaction with AgCN gives isocyanide
+        as the major product. Explain. (2023)
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>KCN</b> is an ionic compound. In solution it gives $K^+$ and $CN^-$ ions.
+            In the $CN^-$ ion, both carbon and nitrogen can act as nucleophilic centres,
+            but under normal conditions attack from the carbon end predominates.
+            Therefore, an alkyl halide mainly gives an alkyl cyanide.
+        </p>
+
+        <div class="formula">
+            R–X + KCN → R–C≡N + KX
+        </div>
+
+        <p>
+            <b>AgCN</b> is mainly covalent in nature, and the $CN$ group
+            is attached to silver in such a way that attack from the nitrogen end
+            is more favourable. Hence alkyl isocyanide is the major product.
+        </p>
+
+        <div class="formula">
+            R–X + AgCN → R–N≡C + AgX
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Q10 -->
+<div class="qa-box">
+
+    <div class="question">
+        Question: What is an elimination reaction? State the Saytzeff rule related to it. (2019)
+    </div>
+
+    <div class="answer">
+
+        <p>
+            When two atoms/groups, in the form of a small molecule or group,
+            are removed from an organic compound and an unsaturated compound
+            is formed in their place, such a reaction is called an
+            <b>elimination reaction</b>.
+        </p>
+
+        <p>
+            When a haloalkane containing a $\beta$-hydrogen is heated with alcoholic
+            $KOH$, elimination of hydrogen from the $\beta$-carbon and halogen from
+            the $\alpha$-carbon occurs, forming an alkene.
+        </p>
+
+        <div class="formula">
+            CH₃CH₂Cl + KOH(alc.) → CH₂=CH₂ + KCl + H₂O
+        </div>
+
+        <div class="sub-heading">
+            Saytzeff Rule
+        </div>
+
+        <p>
+            When more than one alkene can possibly be formed in an elimination reaction,
+            the more stable and more substituted alkene is generally formed as the
+            major product. This is called the <b>Saytzeff rule</b>.
+        </p>
+
+        <div class="formula">
+            CH₃CHBrCH₂CH₃ + KOH(alc.)
+            → CH₃CH=CHCH₃ + KBr + H₂O
+        </div>
+
+        <p>
+            In this example, <b>but-2-ene</b> is the major product.
+        </p>
+
+    </div>
+</div>
+
+
+<!-- Q11 -->
+<div class="qa-box">
+
+    <div class="question">
+        Question: Write the reactions of alkyl halides with metals.
+    </div>
+
+    <div class="answer">
+
+        Alkyl halides react with certain metals to form
+        <b>organometallic compounds</b>.
+
+        <ol>
+
+            <li>
+                <b>Reaction with magnesium</b><br>
+                In the presence of dry ether, an alkyl halide reacts with magnesium
+                to form a Grignard reagent.
+
+                <div class="formula">
+
+    <span>CH₃Cl + Mg</span>
+
+    <span class="arrow-box">
+        <small>Dry ether</small>
+        <span class="arrow">⟶</span>
+    </span>
+
+    <span>CH₃MgCl</span>
+
+                </div>
+            </li>
+
+
+            <li>
+                <b>Wurtz reaction</b><br>
+                Reacting an alkyl halide with sodium in dry ether gives
+                a higher alkane.
+
+                <div class="formula">
+                    2CH₃Cl + 2Na
+                    → CH₃–CH₃ + 2NaCl
+                </div>
+            </li>
+
+
+            <li>
+                <b>Frankland reaction</b><br>
+                Reaction of an alkyl halide with zinc gives a
+                dialkyl zinc compound.
+
+                <div class="formula">
+                    2R–X + 2Zn → R₂Zn + ZnX₂
+                </div>
+            </li>
+
+
+            <li>
+                <b>Formation of zinc alkyl</b><br>
+                Dialkyl zinc compounds are traditionally regarded
+                as related to the <b>Frankland reagent</b>.
+
+                <div class="formula">
+                    2CH₃Cl + 2Zn → (CH₃)₂Zn + ZnCl₂
+                </div>
+            </li>
+
+
+            <li>
+                <b>Reaction with lead-sodium alloy</b><br>
+                Reaction of ethyl halide with lead-sodium alloy can be used
+                to prepare tetraethyl lead.
+
+                <div class="formula">
+                    4C₂H₅Cl + 4Na + Pb
+                    → (C₂H₅)₄Pb + 4NaCl
+                </div>
+            </li>
+
+
+            <li>
+                <b>Reaction with lithium</b><br>
+                An alkyl halide reacts with lithium to form an alkyl lithium.
+
+                <div class="formula">
+                    R–X + 2Li → R–Li + LiX
+                </div>
+
+            </li>
+
+        </ol>
+
+    </div>
+</div>
+
+
+<!-- Q12 -->
+<div class="qa-box">
+
+    <div class="question">
+        Question: Give one example of a dihaloalkane.
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>Formula:</b> CH₂Cl₂
+        </p>
+
+        <p>
+            <b>Common name:</b> Methylene chloride
+        </p>
+
+        <p>
+            <b>IUPAC name:</b> Dichloromethane
+        </p>
+
+    </div>
+</div>
+
+
+<!-- Q13 -->
+<div class="qa-box">
+
+    <div class="question">
+        Question: Write any three effects of dichloromethane (methylene chloride)
+        on humans. (2025)
+    </div>
+
+    <div class="answer">
+
+        Excessive exposure to dichloromethane can have the following effects:
+
+        <ol>
+            <li>
+                Exposure to large amounts of vapour can cause headache, dizziness and nausea.
+            </li>
+
+            <li>
+                At high concentrations, its vapours can cause irritation of the
+                respiratory tract and respiratory distress.
+            </li>
+
+            <li>
+                Prolonged skin contact can cause irritation and dryness of the skin.
+            </li>
+        </ol>
+
+    </div>
+</div>
+  <div class="qa-box">
+
+    <div class="question">
+        Question: What is haloform? How many types are there?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            Organic compounds in which three halogen atoms are attached to
+            the same carbon atom are called <b>haloforms</b>.
+            Their general formula is <b>CHX₃</b>.
+        </p>
+
+        <p>
+            where <b>X = F, Cl, Br or I</b>.
+        </p>
+
+        <p>Haloforms are of four types—</p>
+
+        <ol>
+            <li>
+                Fluoroform — CHF₃
+            </li>
+
+            <li>
+                Chloroform — CHCl₃
+            </li>
+
+            <li>
+                Bromoform — CHBr₃
+            </li>
+
+            <li>
+                Iodoform — CHI₃
+            </li>
+        </ol>
+
+    </div>
+
+  </div>
+<!-- Q20 -->
+<div class="qa-box">
+
+    <div class="question">
+        Question: What is the haloform reaction? Write its use.
+    </div>
+
+    <div class="answer">
+
+        When a methyl ketone ($RCOCH₃$) reacts with a halogen ($X₂$) and an alkali
+        ($NaOH/KOH$), a haloform ($CHX₃$)
+        and a carboxylate salt are formed. This is called the <b>haloform reaction</b>.
+
+        <div class="formula">
+            RCOCH₃ + 3X₂ + 4NaOH
+            → RCOONa + CHX₃ + 3NaX + 3H₂O
+        </div>
+
+        <p>
+            It is used to identify the methyl ketone group ($–COCH₃$).
+        </p>
+
+    </div>
+</div>
+
+
+<!-- Q14 -->
+<<div class="qa-box">
+
+    <div class="question">
+        Question: What is chloroform?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>Chloroform</b> is a colourless, volatile organic compound with
+            a characteristic odour. Its chemical formula is
+            <b>CHCl₃</b>.
+        </p>
+
+        <p>
+            Its IUPAC name is <b>trichloromethane</b>.
+        </p>
+
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        Question: Write the haloform method of preparing chloroform.
+    </div>
+
+    <div class="answer">
+
+        <p>In this reaction, acetone \((CH₃COCH₃)\) is reacted with chlorine and
+            sodium hydroxide to obtain
+            <b>chloroform \((CHCl₃)\)</b>.
+        </p>
+
+
+        <p><b>Reaction:</b></p>
+
+        <div class="formula">
+            CH₃COCH₃ + 3Cl₂ + 4NaOH
+            → CHCl₃ + CH₃COONa + 3NaCl + 3H₂O
+        </div>
+
+
+        <p>
+            The chloroform obtained is separated from the mixture and purified.
+        </p>
+
+
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+      Question: Write the laboratory method of preparing chloroform.
+
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>Principle:</b>
+            In the laboratory, chloroform is obtained by reacting ethyl alcohol
+            with bleaching powder and water.
+        </p>
+
+        <p><b>Equations:</b></p>
+
+        <p>1. Reaction of bleaching powder with water:</p>
+
+        <div class="formula">
+            CaOCl₂ + H₂O → Ca(OH)₂ + Cl₂
+        </div>
+
+
+        <p>2. Oxidation of ethyl alcohol:</p>
+
+        <div class="formula">
+            CH₃CH₂OH + Cl₂→ CH₃CHO + 2HCl
+        </div>
+
+        <p>3. Formation of chloral by chlorination:</p>
+
+        <div class="formula">
+            CH₃CHO + 3Cl₂ → CCl₃CHO + 3HCl
+        </div>
+
+        <p>5. Reaction of chloral with calcium hydroxide:</p>
+
+        <div class="formula">
+            2CCl₃CHO + Ca(OH)₂ → 2CHCl₃ + Ca(HCOO)₂
+        </div>
+
+        <p>
+            In this way <b>chloroform (CHCl₃)</b> is obtained.
+        </p>
+
+
+        <p>
+        <b>Method:</b> Ethyl alcohol and bleaching powder are taken in a
+        distillation flask, and water is added to it. On slowly heating the
+        mixture, the chlorine produced from the bleaching powder reacts with
+        the ethyl alcohol to form chloral. Reaction of chloral with calcium
+        hydroxide gives chloroform (CHCl₃). The chloroform obtained is
+        separated by distillation and purified.
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- Q16 -->
+<div class="qa-box">
+
+    <div class="question">
+        Question: Write the physical properties of chloroform (CHCl₃).
+    </div>
+
+    <div class="answer">
+
+        <ul>
+            <li>It is a colourless and volatile liquid.</li>
+            <li>It has a characteristic sweet odour.</li>
+            <li>Its density is about 1.49 g/cm³ (around 20°C).</li>
+            <li>It is slightly soluble in water.</li>
+            <li>It is soluble in organic solvents such as alcohol and ether.</li>
+            <li>It is a good solvent for many organic substances.</li>
+        </ul>
+
+    </div>
+</div>
+
+
+<!-- Q17 -->
+<div class="qa-box">
+
+    <div class="question">
+        Question: Write the chemical properties of chloroform (CHCl₃).
+    </div>
+
+    <div class="answer">
+
+        <ol>
+
+            <li>
+                <b>Oxidation:</b><br>
+                In the presence of light and air, chloroform slowly
+                forms phosgene.
+
+                <div class="formula">
+                    <span>2CHCl₃ + O₂</span> <span class="arrow-box">
+        <small>Light</small>
+        <span class="arrow">⟶</span>
+                    </span> <span>2COCl₂ + 2HCl</span>
+                </div>
+            </li>
+
+
+            <li>
+                <b>Reduction:</b><br>
+                In the presence of a suitable reducing agent, chloroform can give
+                methylene chloride or other further reduced products.
+            </li>
+
+
+            <li>
+                <b>Reaction with alkali:</b><br>
+                With hot aqueous KOH, chloroform forms potassium formate.
+
+                <div class="formula">
+                    CHCl₃ + 4KOH → HCOOK + 3KCl + 2H₂O
+                </div>
+            </li>
+
+
+            <li>
+                <b>Carbylamine reaction:</b><br>
+                When a primary amine is heated with chloroform and alcoholic KOH, an
+ extremely foul-smelling substance, alkyl isocyanide, is formed. This is called the carbylamine reaction.
+
+                <div class="formula">
+                    CH₃NH₂ + CHCl₃ + 3KOH
+                    → CH₃NC + 3KCl + 3H₂O
+                </div>
+
+                It is used to test for primary amines.
+            </li>
+
+
+            <li>
+                <b>Chlorination:</b><br> Chloroform reacts with chlorine to form carbon tetrachloride.
+
+                <div class="formula">
+                    CHCl₃ + Cl₂ → CCl₄ + HCl
+                </div>
+            </li>
+
+
+            <li>
+                <b>Nitration:</b><br> Chloroform reacts with nitric acid to form picric acid.
+
+                <div class="formula">
+                    CHCl₃ + HNO₃ → CCl₃NO₂ + H₂O
+                </div>
+            </li>
+
+
+            <li>
+                <b>Reimer-Tiemann reaction:</b><br>
+
+        <p>
+            When phenol is heated with chloroform and aqueous NaOH,
+            o-hydroxybenzaldehyde (salicylaldehyde) is obtained as the main
+            product. This reaction is called the Reimer-Tiemann reaction.
+        </p>
+<div class="formula">
+<div class="reaction-box">
+
+    <svg class="chemical-reaction"
+         viewBox="0 0 1000 280"
+         preserveAspectRatio="xMidYMid meet">
+
+        <!-- Phenol -->
+        <g transform="translate(45,80)">
+
+            <!-- Benzene ring -->
+            <polygon points="50,0 93,25 93,75 50,100 7,75 7,25"
+                     fill="none"
+                     stroke="black"
+                     stroke-width="2.5"/>
+
+            <!-- Benzene circle -->
+            <circle cx="50" cy="50" r="25"
+                    fill="none"
+                    stroke="black"
+                    stroke-width="2"/>
+
+            <!-- OH bond -->
+            <line x1="50" y1="0"
+                  x2="50" y2="-30"
+                  stroke="black"
+                  stroke-width="2.5"/>
+
+            <text x="50" y="-38"
+                  text-anchor="middle"
+                  font-size="21">OH</text>
+        </g>
+
+
+        <!-- + CHCl3 -->
+        <text x="155" y="135" font-size="28">+</text>
+        <text x="195" y="135" font-size="22">CHCl₃</text>
+
+
+        <!-- + NaOH -->
+        <text x="280" y="135" font-size="28">+</text>
+        <text x="320" y="135" font-size="22">3NaOH</text>
+
+
+        <!-- Reaction Arrow -->
+        <line x1="425" y1="115"
+              x2="545" y2="115"
+              stroke="black"
+              stroke-width="2.5"/>
+
+        <polygon points="545,115 532,108 532,122"
+                 fill="black"/>
+
+        <!-- Heat -->
+        <text x="485" y="85"
+              text-anchor="middle"
+              font-size="18">Heat</text>
+
+
+        <!-- Salicylaldehyde -->
+        <g transform="translate(585,80)">
+
+            <!-- Benzene ring -->
+            <polygon points="50,0 93,25 93,75 50,100 7,75 7,25"
+                     fill="none"
+                     stroke="black"
+                     stroke-width="2.5"/>
+
+            <!-- Benzene circle -->
+            <circle cx="50" cy="50" r="25"
+                    fill="none"
+                    stroke="black"
+                    stroke-width="2"/>
+
+            <!-- OH bond -->
+            <line x1="50" y1="0"
+                  x2="50" y2="-30"
+                  stroke="black"
+                  stroke-width="2.5"/>
+
+            <text x="50" y="-38"
+                  text-anchor="middle"
+                  font-size="20">OH</text>
+
+
+            <!-- CHO bond : ortho position -->
+            <line x1="93" y1="25"
+                  x2="122" y2="8"
+                  stroke="black"
+                  stroke-width="2.5"/>
+
+            <text x="130" y="13"
+                  font-size="20">CHO</text>
+
+            <text x="50" y="145"
+                  text-anchor="middle"
+                  font-size="16">
+                o-hydroxybenzaldehyde
+            </text>
+
+        </g>
+
+
+        <!-- + -->
+        <text x="790" y="135" font-size="28">+</text>
+
+        <!-- By-products -->
+        <text x="830" y="125"
+              font-size="20">NaCl + H₂O</text>
+
+    </svg>
+
+</div>
+    </div>
+</div>
+</div>
+
+<!-- Q18 -->
+<div class="qa-box">
+
+    <div class="question">
+        Question: Why is chloroform stored filled up to the neck in brown bottles?
+        Or, how is chloroform stored safely? (2020)
+    </div>
+
+    <div class="answer">
+
+        <p>
+            In the presence of light and air, chloroform slowly oxidises to form
+            <b>phosgene (COCl₂)</b>, which is an extremely toxic gas.
+        </p>
+    <div class="formula">
+                    <span>2CHCl₃ + O₂</span> <span class="arrow-box">
+        <small>Light</small>
+        <span class="arrow">⟶</span>
+                    </span> <span>2COCl₂ + 2HCl</span>
+    </div>
+        <p>
+            Hence chloroform is protected from light and kept in a well-sealed bottle.
+            A small amount of <b>ethanol</b> is added to commercial chloroform as
+            a stabiliser.
+        </p>
+
+    </div>
+</div>
+
+
+<!-- Q19 -->
+<div class="qa-box">
+
+    <div class="question">
+        Question: Write the uses of chloroform.
+    </div>
+
+    <div class="answer">
+
+        <ul>
+            <li>As a solvent for organic compounds.</li>
+            <li>As a solvent in laboratory and industrial chemical processes.</li>
+            <li>As a raw material in the manufacture of certain pharmaceutical and chemical substances.</li>
+            <li>Used in chlorination and other organic syntheses.</li>
+        </ul>
+
+        <b>Note:</b> It was historically used as an anaesthetic,
+        but due to its toxicity it is not used in modern medicine.
+
+    </div>
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        Question: What is iodoform?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>Iodoform</b> is a yellow crystalline organic compound
+            with the chemical formula <b>CHI₃</b>.
+        </p>
+
+        <p>
+            Its IUPAC name is <b>triiodomethane</b>.
+        </p>
+
+        <p>
+            It is distinctly identified by its <b>characteristic odour</b> and
+            <b>yellow colour</b>.
+        </p>
+
+    </div>
+
+</div>
+
+<!-- Q21 -->
+<div class="qa-box">
+
+    <div class="question">
+        Question: What do you understand by the iodoform test?
+        Or, what happens when acetone is heated with an alkaline solution of iodine?
+    </div>
+
+    <div class="answer">
+
+        When acetone is reacted with an alkaline solution of iodine ($I₂$) and
+        NaOH, a bright yellow precipitate of <b>iodoform (CHI₃)</b>
+        is obtained.
+
+        <div class="formula">
+            CH₃COCH₃ + 3I₂ + 4NaOH
+            → CH₃COONa + CHI₃ + 3NaI + 3H₂O
+        </div>
+
+        <p>
+            The formation of the yellow iodoform precipitate is called the
+            <b>iodoform test</b>.
+        </p>
+
+    </div>
+</div>
+
+
+<!-- Q22 -->
+<div class="qa-box">
+
+    <div class="question">
+        Question: Write the laboratory method of preparation, properties, and uses of iodoform.
+    </div>
+
+    <div class="answer">
+
+        <div class="sub-heading">Principle</div>
+
+        Iodoform is obtained by reacting acetone with iodine and an alkali.
+
+        <div class="formula">
+            CH₃COCH₃ + 3I₂ + 4NaOH
+            → CH₃COONa + CHI₃ + 3NaI + 3H₂O
+        </div>
+
+        <div class="sub-heading">Method</div>
+
+        <p>
+            Iodine and alkali are used in the laboratory preparation of iodoform.
+            This process should be carried out only in a trained laboratory with
+            proper safety precautions.
+        </p>
+
+        <div class="sub-heading">Physical properties</div>
+
+        <ul>
+            <li>It is a bright yellow solid.</li>
+            <li>It has a characteristic pungent/medicinal odour.</li>
+            <li>It is only very slightly soluble in water.</li>
+            <li>It is soluble in certain organic solvents.</li>
+            <li>Its melting point is about 119°C.</li>
+        </ul>
+
+        <div class="sub-heading">Uses</div>
+
+        <ul>
+            <li>For the iodoform test in organic chemistry.</li>
+            <li>Historically, in certain medicinal/antiseptic uses.</li>
+        </ul>
+
+    </div>
+</div>
+
+
+<!-- Q23 -->
+<div class="qa-box">
+
+    <div class="question">
+        Question: What is carbon tetrachloride?
+    Write the method of preparation, properties, and uses of carbon tetrachloride.
+</div>
+
+    <div class="answer">
+
+        <p>
+            <b>Carbon tetrachloride</b> is a colourless, volatile
+            organic compound with a characteristic odour. Its chemical formula is
+            <b>CCl₄</b>.
+        </p>
+
+        <p>
+            Its IUPAC name is <b>tetrachloromethane</b>.
+        </p>
+
+
+        <div class="sub-heading">Method of preparation</div>
+
+        <p><b>(1) Chlorination of methane</b></p>
+
+        <div class="formula">
+            CH₄ + 4Cl₂ → CCl₄ + 4HCl
+        </div>
+
+        <p><b>(2) Chlorination of carbon disulphide</b></p>
+
+        <div class="formula">
+            CS₂ + 3Cl₂ → CCl₄ + S₂Cl₂
+        </div>
+
+        <div class="sub-heading">Properties</div>
+
+        <ul>
+            <li>It is a colourless and volatile liquid.</li>
+            <li>It is non-flammable.</li>
+            <li>It is insoluble in water.</li>
+            <li>It is soluble in organic solvents.</li>
+            <li>Its boiling point is about 76.7°C.</li>
+            <li>It is a toxic substance.</li>
+        </ul>
+
+        <div class="sub-heading">Uses (2024)</div>
+
+        <ul>
+            <li>Historically as an organic solvent.</li>
+            <li>In the manufacture of certain chemical substances.</li>
+            <li>Historically it was also used in fire extinguishers.</li>
+        </ul>
+
+        <b>Note:</b> Due to its toxicity and environmental effects,
+        many of its earlier uses are now restricted or banned.
+
+    </div>
+</div>
+
+
+<!-- Q25 -->
+<div class="qa-box">
+
+    <div class="question">
+        Question: Write any three effects of tetrachloromethane (carbon tetrachloride)
+        on humans.
+    </div>
+
+    <div class="answer">
+
+        <ol>
+            <li>
+                It is toxic to the liver, and excessive exposure can cause liver damage.
+            </li>
+
+            <li>
+                It can damage the kidneys.
+            </li>
+
+            <li>
+                Exposure to large amounts can affect the central nervous system,
+                causing effects such as headache, dizziness and weakness.
+            </li>
+        </ol>
+
+    </div>
+</div>
+
+
+<!-- Q26 -->
+<div class="qa-box">
+
+    <div class="question">
+        Question: What is Freon?
+    </div>
+
+    <div class="answer">
+
+        Chlorofluoro derivatives of methane and ethane are generally called
+        <b>chlorofluorocarbons (CFCs) or Freons</b>.
+
+    <p>
+        The names and formulas of various Freons are as follows.
+    </p>
+        <ul>
+            <li>Freon-11 — CCl₃F</li>
+            <li>Freon-12 — CCl₂F₂</li>
+            <li>Freon-22 — CHClF₂</li>
+            <li>Freon-113 — C₂Cl₃F₃</li>
+        </ul>
+
+
+        <p><b>Method of preparing Freon:</b></p>
+
+        <p>
+            Freon-12 ($CF₂Cl₂$) was historically prepared by the
+            fluorination of carbon tetrachloride.
+        </p>
+
+        <div class="formula">
+            3CCl₄ + 2SbF₃
+            → 3CF₂Cl₂ + 2SbC
+        </div>
+
+
+        <p>
+            The <b>CF₂Cl₂</b> obtained is called <b>Freon-12</b>.
+        </p>
+
+        <p><b>Properties of Freon:</b></p>
+
+        <ol>
+            <li>It is a colourless and almost odourless gas.</li>
+            <li>It is only very slightly soluble in water.</li>
+            <li>It is relatively stable under normal conditions.</li>
+            <li>It is not easily flammable.</li>
+        </ol>
+
+        <p><b>Uses of Freon:</b></p>
+
+        <ol>
+            <li>As a coolant in refrigerators.</li>
+            <li>As a coolant in air-conditioning equipment.</li>
+            <li>Formerly as a propellant in aerosol sprays.</li>
+        </ol>
+
+
+    </div>
+
+  </div>
+  <div class="qa-box">
+
+    <div class="question">
+        Question: What effect does Freon have on the environment?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            Certain Freon compounds reach the atmosphere and damage
+            the ozone layer. This allows more of the sun's harmful
+            ultraviolet rays to reach the earth. Some Freons also
+            contribute to the greenhouse effect and global warming.
+            Therefore, the use of harmful Freons has been regulated
+            to protect the environment.
+        </p>
+
+    </div>
+
+  </div>
+
+<!-- DDT -->
+
+<div class="qa-box">
+
+    <div class="question">
+        Question: Write the full name of DDT. How is it prepared?
+        Write its uses. Or, what happens when chlorobenzene is
+        heated with chloral in the presence of concentrated H₂SO₄?
+        (2013/14/16/20/24)
+    </div>
+
+    <div class="answer">
+
+        <p>
+            The full name of <b>DDT</b> is
+            <b>dichlorodiphenyltrichloroethane</b>.
+        </p>
+
+        <div class="sub-heading">
+            Method of preparing DDT
+        </div>
+
+        <p>
+            Reacting benzene and chloral in the presence of concentrated
+            sulphuric acid gives <b>DDT</b>.
+        </p>
+
+
+<p><b>Equation:</b></p>
+
+ <div class="reaction-box">
+
+    <svg class="chemical-reaction"
+         viewBox="0 0 1000 300"
+         preserveAspectRatio="xMidYMid meet">
+
+        <!-- Chlorobenzene -->
+        <g transform="translate(35,80)">
+
+            <polygon points="50,0 93,25 93,75 50,100 7,75 7,25"
+                     fill="none" stroke="black" stroke-width="2.5"/>
+
+            <circle cx="50" cy="50" r="25"
+                    fill="none" stroke="black" stroke-width="2"/>
+
+            <line x1="50" y1="0" x2="50" y2="-30"
+                  stroke="black" stroke-width="2.5"/>
+
+            <text x="50" y="-38"
+                  text-anchor="middle"
+                  font-size="21">Cl</text>
+        </g>
+
+        <!-- + -->
+        <text x="155" y="140" font-size="28">+</text>
+
+        <!-- Chloral -->
+        <text x="195" y="140" font-size="22">CCl₃CHO</text>
+
+
+        <!-- Arrow -->
+        <line x1="325" y1="115"
+              x2="475" y2="115"
+              stroke="black"
+              stroke-width="2.5"/>
+
+        <polygon points="475,115 462,108 462,122"
+                 fill="black"/>
+
+        <!-- Catalyst -->
+        <text x="400" y="82"
+              text-anchor="middle"
+              font-size="17">
+            Conc. H₂SO₄
+        </text>
+
+
+        
+
+    <svg class="chemical-reaction"
+         viewBox="0 0 1000 650"
+         preserveAspectRatio="xMidYMid meet"
+         style="width:100%; height:auto; display:block;">
+
+        <!-- ================= LEFT BENZENE RING ================= -->
+
+        <g>
+
+            <!-- Benzene ring -->
+            <polygon points="230,120 310,165 310,255 230,300 150,255 150,165"
+                     fill="none"
+                     stroke="black"
+                     stroke-width="3"/>
+
+            <!-- Aromatic circle -->
+            <circle cx="230" cy="210" r="48"
+                    fill="none"
+                    stroke="black"
+                    stroke-width="2.5"/>
+
+            <!-- Cl at para position -->
+            <line x1="230" y1="120"
+                  x2="230" y2="65"
+                  stroke="black"
+                  stroke-width="3"/>
+
+            <text x="230" y="45"
+                  text-anchor="middle"
+                  font-size="32">
+                Cl
+            </text>
+
+            <!-- Bond from para carbon to central CH -->
+            <line x1="230" y1="300"
+                  x2="230" y2="365"
+                  stroke="black"
+                  stroke-width="3"/>
+
+            <line x1="230" y1="365"
+                  x2="445" y2="365"
+                  stroke="black"
+                  stroke-width="3"/>
+
+        </g>
+
+
+        <!-- ================= CENTRAL GROUP ================= -->
+
+        <text x="500" y="378"
+              text-anchor="middle"
+              font-size="38"
+              font-weight="bold">
+            CH
+        </text>
+
+
+        <!-- ================= RIGHT BENZENE RING ================= -->
+
+        <g>
+
+            <!-- Bond from central CH to para carbon -->
+            <line x1="555" y1="365"
+                  x2="770" y2="365"
+                  stroke="black"
+                  stroke-width="3"/>
+
+            <line x1="770" y1="365"
+                  x2="770" y2="300"
+                  stroke="black"
+                  stroke-width="3"/>
+
+            <!-- Benzene ring -->
+            <polygon points="770,120 850,165 850,255 770,300 690,255 690,165"
+                     fill="none"
+                     stroke="black"
+                     stroke-width="3"/>
+
+            <!-- Aromatic circle -->
+            <circle cx="770" cy="210" r="48"
+                    fill="none"
+                    stroke="black"
+                    stroke-width="2.5"/>
+
+            <!-- Cl at para position -->
+            <line x1="770" y1="120"
+                  x2="770" y2="65"
+                  stroke="black"
+                  stroke-width="3"/>
+
+            <text x="770" y="45"
+                  text-anchor="middle"
+                  font-size="32">
+                Cl
+            </text>
+
+        </g>
+
+
+        <!-- ================= CCl3 GROUP ================= -->
+
+        <line x1="500" y1="400"
+              x2="500" y2="490"
+              stroke="black"
+              stroke-width="3"/>
+
+        <text x="500" y="535"
+              text-anchor="middle"
+              font-size="36">
+            CCl₃
+        </text>
+
+
+        <!-- Compound name -->
+        <text x="500" y="610"
+              text-anchor="middle"
+              font-size="28"
+              font-weight="bold">
+            DDT
+        </text>
+
+    </svg>
+
+
+        <!-- + H2O -->
+        <text x="800" y="140" font-size="28">+</text>
+        <text x="845" y="140" font-size="22">H₂O</text>
+
+    </svg>
+
+</div>
+      
+
+<style>
+.reaction-box {
+    width: 100%;
+    max-width: 1000px;
+    margin: 15px auto;
+    padding: 5px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.chemical-reaction {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+</style>  
+      
+
+<div class="formula">
+    <div class="reaction">
+
+        <span>C₆H₅Cl + CCl₃CHO</span>
+
+        <span class="arrow-box">
+            <span class="catalyst">Conc. H₂SO₄</span>
+            <span class="arrow">⟶</span>
+        </span>
+
+        <span>C₁₄H₉Cl₅ + H₂O</span>
+
+    </div>
+</div>
+      
+
+        <div class="sub-heading">
+            Uses
+        </div>
+
+        <ul>
+            <li>
+                DDT was historically used as a powerful insecticide.
+            </li>
+
+            <li>
+                It has been used to control mosquitoes and other harmful insects.
+            </li>
+
+            <li>
+                It has had widespread historical use in agriculture.
+            </li>
+        </ul>
+
+        <p>
+            <b>Note:</b> DDT persists in the environment for a long time and
+            can bioaccumulate. Therefore, its use has been banned or
+            strictly regulated in many countries.
+        </p>
+
+    </div>
+</div>
+
+
+<!-- BHC -->
+
+<div class="qa-box">
+
+    <div class="question">
+        Question: Write the full name of BHC. How is it prepared?
+        Write its uses.
+    </div>
+
+    <div class="answer">
+
+        <p>
+            The full name of <b>BHC</b> is
+            <b>benzene hexachloride</b>.
+        </p>
+
+
+      <div class="sub-heading">
+            Method of preparing BHC
+        </div>
+
+        <p>
+            Addition of chlorine to benzene in the presence of light
+            gives hexachlorocyclohexane (HCH).
+        </p>
+
+        <div class="formula">
+
+    <span>C₆H₆ + 3Cl₂</span>
+
+    <span class="arrow-box">
+        <small>UV Light</small>
+        <span class="arrow">⟶</span>
+    </span>
+
+    <span>C₆H₆Cl₆</span>
+
+        </div>
+
+        <p>
+            This reaction gives various stereoisomers of HCH.
+            The γ-isomer is called <b>lindane</b>.
+        </p>
+
+        <div class="sub-heading">
+            Other names
+        </div>
+
+        <ul>
+
+            <li>HCH (hexachlorocyclohexane)</li>
+            <li>Lindane — γ-HCH</li>
+            <li>Gammexane</li>
+        </ul>
+
+        <div class="sub-heading">
+            Uses
+        </div>
+
+        <ul>
+            <li>
+                BHC was historically used as an insecticide.
+            </li>
+
+            <li>
+                Its γ-isomer (lindane) has been used in certain specific
+                pest control applications.
+            </li>
+        </ul>
+
+        <p>
+            <b>Note:</b> Due to the health and environmental effects of
+            BHC/HCH, and lindane in particular, their use is banned or
+            strictly regulated in many places.
+        </p>
+
+    </div>
+</div>
+
+</div>
+
+<!-- PROTECTION -->
+
+<script>
+
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+document.addEventListener("selectstart", e => e.preventDefault());
+
+document.addEventListener("copy", e => {
+
+    e.preventDefault();
+
+    alert("Copying content is not allowed");
+
+});
+
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- PROTECTION -->
+
+
+<script>
+
+
+document.addEventListener("contextmenu",
+e=>e.preventDefault());
+
+
+document.addEventListener("selectstart",
+e=>e.preventDefault());
+
+
+document.addEventListener("copy",
+e=>{
+
+e.preventDefault();
+
+alert("Copying content is not allowed");
+
+});
+
+
+</script>
+
+<!-- BOOTSTRAP JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1759 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | Ethers</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background: #f5f7fb;
+        line-height: 1.7;
+    }
+
+    /* NAVBAR */
+
+    .navbar {
+        background: rgba(15, 23, 42, 0.90);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 18px rgba(0, 0, 0, .18);
+        padding: 10px 0;
+    }
+
+    .navbar-brand {
+        font-size: 30px;
+        font-weight: 700;
+        color: white !important;
+    }
+
+    .navbar-brand span {
+        color: #93c5fd;
+    }
+
+    /* NOTES CONTAINER */
+
+    .notes-container {
+        max-width: 900px;
+        margin: 100px auto 50px;
+        padding: 20px;
+    }
+
+    /* CHAPTER TITLE */
+
+    .notes-title {
+        background: #e3f2fd;
+        color: #1565c0;
+        padding: 15px 20px;
+        border-left: 6px solid #1565c0;
+        border-radius: 50px;
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    /* QUESTION ANSWER BOX */
+
+    .qa-box {
+        background: white;
+        padding: 22px;
+        margin-bottom: 18px;
+        border-radius: 14px;
+        border-left: 6px solid #1565c0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+        transition: .25s;
+    }
+
+    .qa-box:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
+    }
+
+    .question {
+        font-weight: bold;
+        color: #1b3a57;
+        margin-bottom: 10px;
+        font-size: 19px;
+    }
+
+    .answer {
+        color: #2c3e50;
+        text-align: justify;
+    }
+
+    .answer ul,
+    .answer ol {
+        margin-left: 25px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .answer li { margin-bottom: 8px; }
+
+    /* FORMULA */
+
+    .formula {
+        background: #f8fafc;
+        border: 1px solid #dbe5ef;
+        border-radius: 10px;
+        padding: 12px 15px;
+        margin: 12px 0;
+        text-align: center;
+        font-size: 21px;
+        font-weight: bold;
+        color: #123b5d;
+        overflow-x: auto;
+    }
+
+    /* CHEMICAL REACTION */
+
+    .reaction-box {
+        width: 100%;
+        overflow-x: auto;
+        margin: 15px 0;
+        padding: 5px 0;
+    }
+
+    .chemical-reaction {
+        width: 100%;
+        min-width: 700px;
+        height: auto;
+    }
+
+    .chemical-reaction text {
+        font-family: Arial, sans-serif;
+    }
+
+    /* IMPORTANT POINT */
+
+    .important {
+        background: #fff8e1;
+        border-left: 5px solid #ffb300;
+        padding: 12px 15px;
+        margin-top: 12px;
+        border-radius: 8px;
+    }
+
+    /* TABLE */
+
+    .answer table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 12px 0;
+        background: #fff;
+    }
+
+    .answer table td,
+    .answer table th {
+        border: 1px solid #ddd;
+        padding: 10px 12px;
+        text-align: left;
+        vertical-align: top;
+    }
+
+    .answer table th {
+        background: #eaf2fb;
+        font-weight: bold;
+        color: #1b3a57;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 768px) {
+
+        .navbar-brand {
+            font-size: 24px;
+        }
+
+        .notes-container {
+            margin-top: 85px;
+            padding: 12px;
+        }
+
+        .notes-title {
+            font-size: 22px;
+            border-radius: 20px;
+            padding: 12px 15px;
+        }
+
+        .qa-box {
+            padding: 17px;
+        }
+
+        .question {
+            font-size: 17px;
+        }
+
+        .answer {
+            text-align: left;
+        }
+
+        .formula {
+            font-size: 18px;
+        }
+    }
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar fixed-top">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="../index.html">
+            PAL <span>STUDY CENTER</span>
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- NOTES -->
+
+<div class="notes-container">
+  <div class="notes-title">
+    📘 Unit 6 - (Haloalkanes)
+</div>
+
+
+    <div class="notes-title">
+        📘 Ethers — Questions and Answers
+    </div>
+
+
+    <!-- QUESTION 1 -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            Question: What are ethers?
+        </div>
+
+        <div class="answer">
+
+            <p>
+                Organic compounds in which two alkyl or aryl groups are
+                joined to the same oxygen atom are called <b>ethers</b>.
+                The general formula of an ether is <b>R–O–R′</b>.
+            </p>
+
+            <p>
+                They may also be regarded as the <b>anhydride</b> of an
+                alcohol or as a <b>dialkyl derivative</b> of water.
+            </p>
+
+            <div class="reaction-box">
+
+                <svg class="chemical-reaction"
+                     viewBox="0 0 950 150"
+                     preserveAspectRatio="xMidYMid meet">
+
+                    <text x="30" y="95" font-size="30">
+                        R–OH + HO–R
+                    </text>
+
+                    <line x1="280" y1="75"
+                          x2="450" y2="75"
+                          stroke="black"
+                          stroke-width="3"/>
+
+                    <polygon points="450,75 435,66 435,84"
+                             fill="black"/>
+
+                    <text x="500" y="95" font-size="30">
+                        R–O–R + H₂O
+                    </text>
+
+                </svg>
+
+            </div>
+
+            <p style="text-align:center;">
+                <b>Alcohol → Ether</b>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- QUESTION 2 -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            Question: How many types of ethers are there?
+        </div>
+
+        <div class="answer">
+
+            <p>
+                Ethers are mainly of <b>two types</b>—
+            </p>
+
+            <p>
+                <b>1. Simple (symmetrical) ethers:</b> When the two alkyl
+                or aryl groups attached to the oxygen atom are the same,
+                they are called simple ethers.
+            </p>
+
+            <div class="formula">
+                R–O–R
+            </div>
+
+            <div class="formula">
+                CH₃–O–CH₃ — Dimethyl ether
+            </div>
+
+            <div class="formula">
+                C₆H₅–O–C₆H₅ — Diphenyl ether
+            </div>
+
+            <p>
+                <b>2. Mixed (unsymmetrical) ethers:</b> When the two
+                groups attached to the oxygen atom are different, they
+                are called mixed ethers.
+            </p>
+
+            <div class="formula">
+                CH₃–O–C₂H₅ — Ethyl methyl ether
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- QUESTION 3 -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            Question: Explain the nomenclature of ethers.
+        </div>
+
+        <div class="answer">
+
+            <p>
+                There are two main systems for naming ethers—
+            </p>
+
+            <p>
+                <b>(i) Common (trivial) system:</b> In this method, the
+                names of the two alkyl or aryl groups attached to the
+                oxygen are written followed by the word <b>ether</b>.
+            </p>
+
+            <div class="formula">
+                CH₃–O–CH₃ — Dimethyl ether
+            </div>
+
+            <div class="formula">
+                CH₃–O–C₂H₅ — Ethyl methyl ether
+            </div>
+
+            <p>
+                <b>(ii) IUPAC system:</b> In this system, an ether is
+                regarded as an <b>alkoxyalkane</b>. The smaller alkyl
+                group is treated as the alkoxy group, and the larger
+                group is treated as part of the alkane.
+            </p>
+
+            <div class="formula">
+                CH₃–O–CH₃ — Methoxymethane
+            </div>
+
+            <div class="formula">
+                CH₃–O–C₂H₅ — Methoxyethane
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- QUESTION 4 -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            Question: What different types of isomerism are found in ethers?
+        </div>
+
+        <div class="answer">
+
+            <p>
+                Ethers mainly exhibit <b>functional isomerism</b> and
+                <b>metamerism</b>.
+            </p>
+
+            <p>
+                <b>1. Functional isomerism:</b> When compounds with the
+                same molecular formula have different functional groups,
+                it is called functional isomerism.
+            </p>
+
+            <p>
+                Alcohols and ethers exhibit functional isomerism.
+            </p>
+
+            <div class="formula">
+                C₂H₆O
+            </div>
+
+            <div class="formula">
+                CH₃–CH₂–OH — Ethyl alcohol
+            </div>
+
+            <div class="formula">
+                CH₃–O–CH₃ — Dimethyl ether
+            </div>
+
+            <p>
+                <b>2. Metamerism:</b> When compounds have the same
+                functional group, but the distribution of the carbon
+                groups attached on either side of the functional group
+                differs, it is called metamerism.
+            </p>
+
+            <p>
+                For example, the two ethers with formula <b>C₄H₁₀O</b>—
+            </p>
+
+            <div class="formula">
+                CH₃CH₂–O–CH₂CH₃ — Diethyl ether
+            </div>
+
+            <div class="formula">
+                CH₃–O–CH₂CH₂CH₃ — Methyl propyl ether
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- QUESTION 5 -->
+
+    <div class="qa-box">
+
+        <div class="question">
+            Question: Write the general methods of preparing ethers.
+        </div>
+
+        <div class="answer">
+
+            <p>The general methods of preparing ethers
+                are as follows—
+            </p>
+
+
+            <p>
+                <b>1. By dehydration of alcohols:</b>
+            </p>
+
+            <p>
+                When a primary alcohol is heated with concentrated H₂SO₄
+                at about 140°C, one molecule of water is eliminated and
+                an ether is formed.
+            </p>
+
+            <div class="reaction-box">
+
+                <svg class="chemical-reaction"
+                     viewBox="0 0 1200 160"
+                     preserveAspectRatio="xMidYMid meet">
+
+                    <text x="20" y="105" font-size="36">
+                        2CH₃CH₂–OH
+                    </text>
+
+                    <line x1="260" y1="80"
+                          x2="560" y2="80"
+                          stroke="black"
+                          stroke-width="3"/>
+
+                    <polygon points="560,80 545,71 545,89"
+                             fill="black"/>
+
+                    <text x="410" y="48"
+                          text-anchor="middle"
+                          font-size="25">
+                        conc. H₂SO₄ / 140°C
+                    </text>
+
+                    <text x="600" y="105" font-size="36">
+                        CH₃CH₂–O–CH₂CH₃ + H₂O
+                    </text>
+
+                </svg>
+
+            </div>
+
+
+            <p>
+                <b>(ii) By alumina or thoria:</b>
+            </p>
+
+            <div class="reaction-box">
+
+                <svg class="chemical-reaction"
+                     viewBox="0 0 1200 160"
+                     preserveAspectRatio="xMidYMid meet">
+
+                    <text x="20" y="105" font-size="36">
+                        2CH₃CH₂–OH
+                    </text>
+
+                    <line x1="260" y1="80"
+                          x2="560" y2="80"
+                          stroke="black"
+                          stroke-width="3"/>
+
+                    <polygon points="560,80 545,71 545,89"
+                             fill="black"/>
+
+                    <text x="410" y="48"
+                          text-anchor="middle"
+                          font-size="25">
+                        Al₂O₃ / 520 K
+                    </text>
+
+                    <text x="600" y="105" font-size="36">
+                        CH₃CH₂–O–CH₂CH₃ + H₂O
+                    </text>
+
+                </svg>
+
+            </div>
+
+
+            <p>
+                <b>2. By Williamson synthesis:</b>
+            </p>
+
+            <p>
+                Reacting sodium alkoxide with an alkyl halide gives an
+                ether.
+            </p>
+
+            <div class="reaction-box">
+
+                <svg class="chemical-reaction"
+                     viewBox="0 0 1200 160"
+                     preserveAspectRatio="xMidYMid meet">
+
+                    <text x="20" y="105" font-size="36">
+                        CH₃CH₂–ONa + Br–CH₂CH₃
+                    </text>
+
+                    <line x1="480" y1="80"
+                          x2="610" y2="80"
+                          stroke="black"
+                          stroke-width="3"/>
+
+                    <polygon points="610,80 595,71 595,89"
+                             fill="black"/>
+
+                    <text x="650" y="105" font-size="36">
+                        CH₃CH₂–O–CH₂CH₃ + NaBr
+                    </text>
+
+                </svg>
+
+            </div>
+
+            <div class="important">
+                <b>Important:</b> Williamson synthesis is an important
+                method for preparing ethers, in which the alkoxide ion
+                reacts with an alkyl halide.
+            </div>
+
+        </div>
+
+    </div>
+
+
+<!-- QUESTION: Physical properties of ethers -->
+
+<div class="qa-box">
+
+    <div class="question">
+        Question: Write the physical properties of ethers.
+    </div>
+
+    <div class="answer">
+
+        <p>The main physical properties of ethers are as follows—
+        </p>
+
+        <ol>
+            <li>
+                Ethers are generally <b>colorless, volatile liquids</b>.
+            </li>
+
+            <li>
+                They generally have a <b>characteristic odor</b>.
+            </li>
+
+            <li>
+                The <b>boiling points of ethers are lower than those of alcohols</b>.
+            </li>
+
+            <li>
+                Ethers are <b>sparingly soluble in water</b>, while they
+                dissolve well in most organic solvents.
+            </li>
+
+            <li>
+                The density of ethers is generally <b>lower than that of water</b>.
+            </li>
+
+            <li>
+                Ethers are <b>highly inflammable</b>.
+            </li>
+
+            <li>
+                Ether molecules do not form <b>hydrogen bonds</b> with
+                one another. Hence their boiling points are lower than
+                those of alcohols of similar molecular mass.
+            </li>
+
+            <li>
+                Ethers of low molecular mass are generally
+                <b>more volatile</b>.
+            </li>
+        </ol>
+
+        <div class="important">
+            <b>Important:</b> Because ether molecules do not form
+            hydrogen bonds with one another, their boiling points are
+            lower compared to the corresponding alcohols.
+        </div>
+
+    </div>
+
+</div>
+  <!-- QUESTION: Why are ethers soluble in water? -->
+
+<div class="qa-box">
+
+<div class="question">
+    Question: Lower ethers are soluble in water, why?
+</div>
+
+<div class="answer">
+
+    <p>Ethers form <b>hydrogen bonds</b> with water
+        molecules, which is why they are soluble in water.
+    </p>
+
+    <p>
+        As the molecular mass increases, the
+        <b>solubility of ethers in water decreases.</b>
+    </p>
+
+</div>
+
+</div>
+
+<!-- QUESTION: Why are ethers volatile? -->
+
+<div class="qa-box">
+
+<div class="question">
+    Question: Ethers are volatile, why?
+</div>
+
+<div class="answer">
+
+    <p>Ether molecules do not form
+        <b>hydrogen bonds</b> with one another, so they do not remain
+        associated.
+    </p>
+
+    <p>
+        Hence they are <b>more volatile</b> than the corresponding
+        alcohol.
+    </p>
+
+</div>
+
+</div>
+<!-- QUESTION: Chemical reactions of ethers -->
+
+<div class="qa-box">
+
+    <div class="question">
+        Question: Describe the chemical reactions of ethers.
+    </div>
+
+    <div class="answer">
+
+        <p>
+            The chemical reactions of ethers are mainly of the following types—
+        </p>
+
+
+        <!-- (a) Reactions due to the alkyl group -->
+
+        <p>
+            <b>(a) Reactions due to the alkyl group</b>
+        </p>
+
+
+        <!-- 1. Combustion -->
+
+        <p>
+            <b>1. Combustion —</b>
+            Being highly volatile and inflammable, ethers burn very
+            readily. Their vapors form inflammable mixtures with air.
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1200 160"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="105" font-size="36">
+                    CH₃CH₂–O–CH₂CH₃ + 6O₂
+                </text>
+
+                <line x1="470" y1="80"
+                      x2="650" y2="80"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="650,80 635,71 635,89"
+                         fill="black"/>
+
+                <text x="700" y="105" font-size="36">
+                    4CO₂ + 5H₂O
+                </text>
+
+            </svg>
+
+        </div>
+
+
+        <!-- 2. Halogenation -->
+
+        <p>
+            <b>2. Halogenation —</b>
+            Ether reacts with chlorine in the dark to form dichloro
+            diethyl ether.
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1500 180"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="115" font-size="34">
+                    CH₃CH₂–O–CH₂CH₃ + Cl₂
+                </text>
+
+                <line x1="410" y1="90"
+                      x2="570" y2="90"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="570,90 555,81 555,99"
+                         fill="black"/>
+
+                <text x="490" y="55"
+                      text-anchor="middle"
+                      font-size="25">
+                    in the dark
+                </text>
+
+                <text x="610" y="115" font-size="34">
+                    CH₃CHCl–O–CH₂CH₃
+                </text>
+
+                <text x="930" y="115" font-size="34">
+                    + Cl₂
+                </text>
+
+                <line x1="1050" y1="90"
+                      x2="1170" y2="90"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="1170,90 1155,81 1155,99"
+                         fill="black"/>
+
+                <text x="1190" y="115" font-size="34">
+                    CH₃CHCl–O–CHClCH₃
+                </text>
+
+            </svg>
+
+        </div>
+
+        <p style="text-align:center;">
+            <b>Dichloro diethyl ether</b>
+        </p>
+
+
+        <p>
+            In the presence of sunlight, perchloro diethyl ether is formed.
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1450 180"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="115" font-size="34">
+                    CH₃CH₂–O–CH₂CH₃ + 10Cl₂
+                </text>
+
+                <line x1="450" y1="90"
+                      x2="650" y2="90"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="650,90 635,81 635,99"
+                         fill="black"/>
+
+                <text x="550" y="55"
+                      text-anchor="middle"
+                      font-size="25">
+                    sunlight
+                </text>
+
+                <text x="690" y="115" font-size="34">
+                    CCl₃CCl₂–O–CCl₂CCl₃
+                </text>
+
+            </svg>
+
+        </div>
+
+        <p style="text-align:center;">
+            <b>Perchloro diethyl ether</b>
+        </p>
+
+
+        <!-- (b) C-O-C bond -->
+
+        <p>
+            <b>(b) Reactions due to the C–O–C ether linkage</b>
+        </p>
+
+
+        <!-- 1. Sulfuric acid -->
+
+        <p>
+            <b>1. Action of sulfuric acid —</b>
+            Different compounds are formed from ethers under different conditions.
+        </p>
+
+
+        <p>
+            <b>(i) On heating with dilute H₂SO₄ under high pressure:</b>
+            The ether undergoes hydrolysis and alcohols are formed.
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1250 180"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="115" font-size="36">
+                    CH₃CH₂–O–CH₂CH₃ + H₂O
+                </text>
+
+                <line x1="450" y1="90"
+                      x2="650" y2="90"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="650,90 635,81 635,99"
+                         fill="black"/>
+
+                <text x="550" y="55"
+                      text-anchor="middle"
+                      font-size="25">
+                    dil. H₂SO₄ / high pressure
+                </text>
+
+                <text x="690" y="115" font-size="36">
+                    2CH₃CH₂OH
+                </text>
+
+            </svg>
+
+        </div>
+
+
+        <p>
+            <b>(ii) On heating with concentrated H₂SO₄:</b>
+            The ether decomposes to form alkyl hydrogen sulfate and alcohol.
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1350 180"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="115" font-size="34">
+                    CH₃CH₂–O–CH₂CH₃ + H₂SO₄
+                </text>
+
+                <line x1="470" y1="90"
+                      x2="650" y2="90"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="650,90 635,81 635,99"
+                         fill="black"/>
+
+                <text x="560" y="55"
+                      text-anchor="middle"
+                      font-size="25">
+                    conc. H₂SO₄
+                </text>
+
+                <text x="690" y="115" font-size="34">
+                    CH₃CH₂HSO₄ + CH₃CH₂OH
+                </text>
+
+            </svg>
+
+        </div>
+
+
+        <!-- 2. HI -->
+
+        <p>
+            <b>2. Action of hydrogen iodide (HI) —</b>
+        </p>
+
+
+        <p>
+            <b>(i) With cold HI:</b>
+            The ether decomposes to give an alcohol and an alkyl iodide.
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1250 180"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="115" font-size="36">
+                    CH₃CH₂–O–CH₂CH₃ + HI
+                </text>
+
+                <line x1="410" y1="90"
+                      x2="600" y2="90"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="600,90 585,81 585,99"
+                         fill="black"/>
+
+                <text x="505" y="55"
+                      text-anchor="middle"
+                      font-size="25">
+                    cold HI
+                </text>
+
+                <text x="640" y="115" font-size="36">
+                    CH₃CH₂I + CH₃CH₂OH
+                </text>
+
+            </svg>
+
+        </div>
+
+
+        <p>
+            <b>(ii) With concentrated HI at high temperature:</b>
+            On heating, two molecules of alkyl iodide are formed.
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1250 180"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="115" font-size="36">
+                    CH₃CH₂–O–CH₂CH₃ + 2HI
+                </text>
+
+                <line x1="440" y1="90"
+                      x2="630" y2="90"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="630,90 615,81 615,99"
+                         fill="black"/>
+
+                <text x="535" y="55"
+                      text-anchor="middle"
+                      font-size="25">
+                    conc. HI / high temp.
+                </text>
+
+                <text x="670" y="115" font-size="36">
+                    2CH₃CH₂I + H₂O
+                </text>
+
+            </svg>
+
+        </div>
+
+
+        <!-- 3. Acid chloride -->
+
+        <p>
+            <b>3. Action of acid chloride —</b>
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1450 180"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="115" font-size="32">
+                    CH₃CH₂–O–CH₂CH₃ + CH₃COCl
+                </text>
+
+                <line x1="540" y1="90"
+                      x2="760" y2="90"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="760,90 745,81 745,99"
+                         fill="black"/>
+
+                <text x="650" y="55"
+                      text-anchor="middle"
+                      font-size="24">
+                    anhyd. ZnCl₂
+                </text>
+
+                <text x="800" y="115" font-size="32">
+                    CH₃CH₂Cl + CH₃COOCH₂CH₃
+                </text>
+
+            </svg>
+
+        </div>
+
+
+        <!-- 4. Dehydration -->
+
+        <p>
+            <b>4. Dehydration —</b>
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1200 180"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="115" font-size="36">
+                    CH₃CH₂–O–CH₂CH₃
+                </text>
+
+                <line x1="370" y1="90"
+                      x2="610" y2="90"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="610,90 595,81 595,99"
+                         fill="black"/>
+
+                <text x="490" y="55"
+                      text-anchor="middle"
+                      font-size="25">
+                    Al₂O₃ / 350°C
+                </text>
+
+                <text x="650" y="115" font-size="36">
+                    2CH₂=CH₂ + H₂O
+                </text>
+
+            </svg>
+
+        </div>
+
+
+        <!-- 5. Reduction -->
+
+        <p>
+            <b>5. Reduction —</b>
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1200 180"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="115" font-size="36">
+                    CH₃CH₂–O–CH₂CH₃
+                </text>
+
+                <line x1="370" y1="90"
+                      x2="610" y2="90"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="610,90 595,81 595,99"
+                         fill="black"/>
+
+                <text x="490" y="55"
+                      text-anchor="middle"
+                      font-size="25">
+                    red P / HI
+                </text>
+
+                <text x="650" y="115" font-size="36">
+                    2CH₃CH₃ + H₂O
+                </text>
+
+            </svg>
+
+        </div>
+
+
+        <!-- 6. PCl5 -->
+
+        <p>
+            <b>6. Action of PCl₅ —</b>
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1250 180"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="115" font-size="36">
+                    CH₃CH₂–O–CH₂CH₃ + PCl₅
+                </text>
+
+                <line x1="430" y1="90"
+                      x2="630" y2="90"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="630,90 615,81 615,99"
+                         fill="black"/>
+
+                <text x="675" y="115" font-size="36">
+                    2CH₃CH₂Cl + POCl₃
+                </text>
+
+            </svg>
+
+        </div>
+
+
+        <!-- IMPORTANT -->
+
+        <div class="important">
+            <b>Important:</b>
+            Some reactions of ethers occur because of the alkyl group,
+            while others occur because of the C–O–C ether linkage.
+        </div>
+
+    </div>
+
+</div>
+  <!-- QUESTION: Laboratory preparation of diethyl ether -->
+
+<div class="qa-box">
+
+    <div class="question">
+        Question: Describe the laboratory method of preparing diethyl ether under the following points.
+    </div>
+
+    <div class="answer">
+
+        <!-- Principle -->
+
+        <p>
+            <b>Principle —</b>
+            Diethyl ether is prepared by the dehydration of ethyl
+            alcohol. In this process, the reaction in the presence of
+            sulfuric acid is understood to occur in two steps.
+        </p>
+
+
+        <!-- Equations -->
+
+        <p>
+            <b>Equations —</b>
+        </p>
+
+        <p>
+            <b>(i) First step:</b>
+            Ethyl hydrogen sulfate is formed.
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1200 160"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="105" font-size="34">
+                    C₂H₅OH + H₂SO₄
+                </text>
+
+                <line x1="360" y1="80"
+                      x2="570" y2="80"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="570,80 555,71 555,89"
+                         fill="black"/>
+
+                <text x="465" y="48"
+                      text-anchor="middle"
+                      font-size="24">
+                    reaction
+                </text>
+
+                <text x="610" y="105" font-size="34">
+                    C₂H₅HSO₄ + H₂O
+                </text>
+
+            </svg>
+
+        </div>
+
+
+        <p>
+            <b>(ii) Second step:</b>
+            Ethyl hydrogen sulfate reacts with ethyl alcohol to form
+            diethyl ether, and sulfuric acid is regenerated.
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1350 160"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="105" font-size="34">
+                    C₂H₅HSO₄ + C₂H₅OH
+                </text>
+
+                <line x1="450" y1="80"
+                      x2="650" y2="80"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="650,80 635,71 635,89"
+                         fill="black"/>
+
+                <text x="550" y="48"
+                      text-anchor="middle"
+                      font-size="24">
+                    reaction
+                </text>
+
+                <text x="690" y="105" font-size="34">
+                    C₂H₅–O–C₂H₅ + H₂SO₄
+                </text>
+
+            </svg>
+
+        </div>
+
+
+        <!-- Overall equation -->
+
+        <p>
+            <b>Overall reaction:</b>
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1250 160"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="105" font-size="34">
+                    2C₂H₅OH
+                </text>
+
+                <line x1="250" y1="80"
+                      x2="520" y2="80"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="520,80 505,71 505,89"
+                         fill="black"/>
+
+                <text x="385" y="48"
+                      text-anchor="middle"
+                      font-size="24">
+                    H₂SO₄
+                </text>
+
+                <text x="560" y="105" font-size="34">
+                    C₂H₅–O–C₂H₅ + H₂O
+                </text>
+
+            </svg>
+
+        </div>
+<div class="important">
+            <b>Schematic apparatus sequence:</b>
+            After the ether is formed from the mixture of alcohol and
+            acid, the product is condensed and collected. In an actual
+            laboratory, this process is carried out only under the
+            supervision of a trained teacher, since ether is highly
+            inflammable.
+        </div>
+
+
+        <!-- Method -->
+
+        <p>
+            <b>Method —</b>
+            Diethyl ether is obtained by the acidic dehydration of
+            alcohol. In this process, the ether is separated by
+            condensation. This process, based on the principle of a
+            continuous supply of alcohol, is called the
+            <b>continuous etherification method</b>.
+        </p>
+
+
+        <!-- Purification -->
+
+        <p>
+            <b>Purification —</b>
+            The ether obtained may contain small amounts of alcohol,
+            water, and acidic impurities. Hence, for purification, the
+            acidic impurities are first removed using an alkaline
+            medium, then moisture is removed using a suitable drying
+            agent. Finally, pure and dry ether is obtained by
+            distillation.
+        </p>
+
+    </div>
+
+</div>
+  <!-- QUESTION: Continuous etherification method -->
+
+<div class="qa-box">
+
+    <div class="question">
+        Question: What is called the continuous etherification method? Is it truly a continuous process?
+    </div>
+
+    <div class="answer">
+
+        <p>Diethyl ether is prepared by heating ethyl alcohol in
+            excess in the presence of concentrated H₂SO₄ at about
+            140°C. This reaction occurs in two steps.
+        </p>
+
+
+        <p>
+            <b>First step:</b>
+            Ethyl alcohol reacts with sulfuric acid to form ethyl
+            hydrogen sulfate.
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1200 160"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="105" font-size="34">
+                    C₂H₅OH + H₂SO₄
+                </text>
+
+                <line x1="370" y1="80"
+                      x2="570" y2="80"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="570,80 555,71 555,89"
+                         fill="black"/>
+
+                <text x="470" y="48"
+                      text-anchor="middle"
+                      font-size="24">
+                    140°C
+                </text>
+
+                <text x="610" y="105" font-size="34">
+                    C₂H₅HSO₄ + H₂O
+                </text>
+
+            </svg>
+
+        </div>
+
+
+        <p>
+            <b>Second step:</b>
+            Ethyl hydrogen sulfate reacts with ethyl alcohol to form
+            diethyl ether, and H₂SO₄ is regenerated.
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1350 160"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="105" font-size="34">
+                    C₂H₅HSO₄ + C₂H₅OH
+                </text>
+
+                <line x1="450" y1="80"
+                      x2="650" y2="80"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="650,80 635,71 635,89"
+                         fill="black"/>
+
+                <text x="550" y="48"
+                      text-anchor="middle"
+                      font-size="24">
+                    140°C
+                </text>
+
+                <text x="690" y="105" font-size="34">
+                    C₂H₅–O–C₂H₅ + H₂SO₄
+                </text>
+
+            </svg>
+
+        </div>
+
+
+        <p>
+            The above equations make it clear that <b>H₂SO₄ is
+            regenerated</b>, which helps convert ethyl alcohol into
+            ether. This sequence keeps repeating. Hence this method is
+            called the
+            <b>continuous etherification method</b>.
+        </p>
+
+
+        <p>
+            <b>Is this really a continuous process?</b>
+        </p>
+
+        <p>
+            In reality, ether cannot be produced continuously for an
+            indefinite time by this method. The main reasons for this
+            are as follows—
+        </p>
+
+
+        <p>
+            <b>1. Formation of water:</b>
+            The water formed in the reaction dilutes the sulfuric
+            acid, reducing its reactivity.
+        </p>
+
+
+        <p>
+            <b>2. Reduction of sulfuric acid:</b>
+            At high temperature, some of the sulfuric acid may be
+            reduced by the alcohol and converted into sulfur dioxide
+            (SO₂).
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1250 160"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="105" font-size="34">
+                    H₂SO₄
+                </text>
+
+                <line x1="180" y1="80"
+                      x2="400" y2="80"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="400,80 385,71 385,89"
+                         fill="black"/>
+
+                <text x="290" y="48"
+                      text-anchor="middle"
+                      font-size="24">
+                    high temp. / C₂H₅OH
+                </text>
+
+                <text x="450" y="105" font-size="34">
+                    SO₂
+                </text>
+
+            </svg>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Question: Sulfuric ether -->
+
+<div class="qa-box">
+
+    <div class="question">
+        Question: What is called sulfuric ether?
+    </div>
+
+    <div class="answer">
+
+        <p>Ethyl ether, i.e. diethyl ether, is also called
+            <b>sulfuric ether</b>, because concentrated H₂SO₄ is used
+            in its preparation.
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- Question: Uses of diethyl ether -->
+
+<div class="qa-box">
+
+    <div class="question">
+        Question: Write the uses of diethyl ether.
+    </div>
+
+    <div class="answer">
+
+        <p>The main uses of diethyl ether are as follows—
+        </p>
+
+        <ol>
+
+            <li>
+                It was historically used, mixed with chloroform and
+                alcohols, as an <b>anesthetic</b>.
+            </li>
+
+            <li>
+                It is used as a <b>solvent</b> for substances such as
+                resins, fats, oils, and gums.
+            </li>
+
+            <li>
+                It is also used as a <b>refrigerant</b>.
+            </li>
+
+            <li>
+                Because of its relatively inert nature, it is used as
+                a <b>solvent for Grignard reagents</b>.
+            </li>
+
+        </ol>
+
+    </div>
+
+</div>
+
+
+<!-- Question: Difference between alcohol and diethyl ether -->
+
+<div class="qa-box">
+
+    <div class="question">
+        Question: How can you distinguish between alcohol and diethyl ether? (2019)
+    </div>
+
+    <div class="answer">
+
+        <p>Alcohol and diethyl ether can be distinguished by the
+            following tests—
+        </p>
+
+
+        <p>
+            <b>1. Sodium test:</b>
+        </p>
+
+        <p>
+            Alcohol reacts with sodium to give <b>hydrogen gas</b>.
+            This hydrogen gas burns with a pop sound when ignited,
+            whereas diethyl ether generally does not give this test.
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1200 160"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="105" font-size="36">
+                    2C₂H₅OH + 2Na
+                </text>
+
+                <line x1="390" y1="80"
+                      x2="600" y2="80"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="600,80 585,71 585,89"
+                         fill="black"/>
+
+                <text x="495" y="48"
+                      text-anchor="middle"
+                      font-size="24">
+                    reaction
+                </text>
+
+                <text x="640" y="105" font-size="36">
+                    2C₂H₅ONa + H₂↑
+                </text>
+
+            </svg>
+
+        </div>
+
+
+        <p>
+            <b>2. Iodoform test:</b>
+        </p>
+
+        <p>
+            If the alcohol is <b>ethanol (C₂H₅OH)</b>, it gives the
+            <b>iodoform test</b> and yellow-colored iodoform (CHI₃) is
+            obtained, whereas diethyl ether does not give the iodoform
+            test.
+        </p>
+
+        <div class="reaction-box">
+
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1300 160"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="105" font-size="34">
+                    C₂H₅OH + I₂ + NaOH
+                </text>
+
+                <line x1="390" y1="80"
+                      x2="610" y2="80"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="610,80 595,71 595,89"
+                         fill="black"/>
+
+                <text x="500" y="48"
+                      text-anchor="middle"
+                      font-size="24">
+                    iodoform test
+                </text>
+
+                <text x="650" y="105" font-size="34">
+                    CHI₃↓ + other products
+                </text>
+
+            </svg>
+
+        </div>
+
+
+    </div>
+
+</div>
+  
+<!-- ETHER MCQs -->
+
+<div class="qa-box">
+
+    <div class="question">
+        Question: What is the general formula of ethers?
+    </div>
+
+    <div class="answer">
+        <p>R–O–R′
+        </p>
+    </div>
+
+</div>
+
+
+<div class="qa-box">
+
+    <div class="question">
+        Question: Which bond is found in ethers?
+    </div>
+
+    <div class="answer">
+        <p>Ether linkage (C–O–C)
+        </p>
+    </div>
+
+</div>
+
+</div>
+<!-- BOOTSTRAP JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- BASIC PROTECTION -->
+
+<script>
+
+    document.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+    });
+
+    document.addEventListener("selectstart", function (e) {
+        e.preventDefault();
+    });
+
+    document.addEventListener("copy", function (e) {
+        e.preventDefault();
+        alert("Copying content is not allowed");
+    });
+
+</script>
+
+</body>
+
+</html>

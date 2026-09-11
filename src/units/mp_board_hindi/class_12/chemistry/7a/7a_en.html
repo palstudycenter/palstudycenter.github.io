@@ -1,0 +1,2294 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | Biology Chapter 7</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    line-height:1.7;
+}
+
+/* NAVBAR */
+
+.navbar{
+    background:rgba(15,23,42,0.90);
+    backdrop-filter:blur(10px);
+    box-shadow:0 4px 18px rgba(0,0,0,.18);
+    padding:10px 0;
+}
+
+.navbar-brand{
+    font-size:30px;
+    font-weight:700;
+    color:white !important;
+}
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+
+/* NOTES CONTAINER */
+
+.notes-container{
+    max-width:900px;
+    margin:100px auto 50px;
+    padding:20px;
+}
+
+/* CHAPTER TITLE */
+
+.notes-title{
+    background:#e3f2fd;
+    color:#1565c0;
+    padding:15px 20px;
+    border-left:6px solid #1565c0;
+    border-radius:50px;
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:30px;
+    text-align:center;
+}
+
+/* QUESTION ANSWER BOX */
+
+.qa-box{
+    background:white;
+    padding:22px;
+    margin-bottom:18px;
+    border-radius:14px;
+    border-left:6px solid #1565c0;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    transition:.25s;
+}
+
+.qa-box:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.question{
+    font-weight:bold;
+    color:#1b3a57;
+    margin-bottom:10px;
+    font-size:19px;
+}
+
+.answer{
+    color:#2c3e50;
+    text-align:justify;
+}
+
+.answer ul,
+.answer ol{
+    margin-left:25px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.answer li{ margin-bottom:8px; }
+
+/* TABLE */
+
+.answer table{
+    width:100%;
+    border-collapse:collapse;
+    margin:12px 0;
+    background:#fff;
+    overflow-x:auto;
+}
+
+.answer table td,
+.answer table th{
+    border:1px solid #ddd;
+    padding:10px 12px;
+    text-align:left;
+    vertical-align:top;
+}
+
+.answer table th{
+    background:#eaf2fb;
+    font-weight:bold;
+    color:#1b3a57;
+}
+
+/* IMPORTANT POINT */
+
+.important{
+    background:#fff8e1;
+    border-left:5px solid #ffb300;
+    padding:12px 15px;
+    margin-top:12px;
+    border-radius:8px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .navbar-brand{
+        font-size:24px;
+    }
+
+    .notes-container{
+        margin-top:85px;
+        padding:12px;
+    }
+
+    .notes-title{
+        font-size:22px;
+        border-radius:20px;
+    }
+
+    .qa-box{
+        padding:17px;
+    }
+
+    .question{
+        font-size:17px;
+    }
+
+}
+
+.qa-box {
+    width: 100%;
+    max-width: 1000px;
+    margin: 15px auto;
+    box-sizing: border-box;
+}
+
+.question {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.answer {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.sub-heading {
+    font-size: 19px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.reaction-box {
+    width: 100%;
+    max-width: 1000px;
+    margin: 18px auto;
+    padding: 5px;
+    box-sizing: border-box;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.chemical-reaction {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Equation letters */
+.chemical-reaction text {
+    font-family: Arial, "Noto Sans Devanagari", sans-serif;
+}
+
+/* Mobile screen */
+@media (max-width: 600px) {
+
+    .reaction-box {
+        width: 100%;
+        padding: 2px;
+    }
+
+    .chemical-reaction {
+        min-width: 470px;
+    }
+
+    .question {
+        font-size: 19px;
+    }
+
+    .answer {
+        font-size: 17px;
+    }
+
+    .sub-heading {
+        font-size: 18px;
+    }
+}
+.reaction-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    width: 100%;
+    overflow-x: auto;
+    padding: 15px 5px;
+    box-sizing: border-box;
+}
+
+.vertical-reaction {
+    flex: 1 1 0;
+    min-width: 180px;
+    text-align: center;
+    font-size: clamp(16px, 3vw, 22px);
+    line-height: 1.5;
+}
+
+.vertical-reaction > div {
+    margin: 5px 0;
+}
+
+.arrow {
+    font-size: 25px;
+    line-height: 1;
+}
+
+.condition {
+    font-size: clamp(13px, 2.5vw, 17px);
+}
+
+@media (max-width: 600px) {
+    .reaction-container {
+        justify-content: flex-start;
+        gap: 12px;
+    }
+
+    .vertical-reaction {
+        min-width: 155px;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar fixed-top">
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+    Pal <span>Study Center</span>
+</a>
+
+</div>
+
+</nav>
+
+
+<!-- NOTES -->
+
+<div class="notes-container">
+
+<div class="notes-title">
+    📘 7(A) — Alcohols
+</div>
+
+<div class="qa-box">
+
+    <div class="question">
+        Question - What are alcohols? Give their classification.
+    </div>
+
+    <div class="answer">
+<p>
+            Organic compounds in which a hydroxyl group (–OH) is directly
+            attached to a saturated carbon atom (sp³-C) are called
+            <b>alcohols</b>.
+        </p>
+
+        <p class="formula">
+            General formula: R–OH
+        </p>
+
+        <p>
+            <b>Examples -</b>
+      <p>CH₃OH (methyl alcohol)
+        </p>
+      <p>
+            C₂H₅OH (ethyl alcohol)
+      </p>
+
+        <p class="sub-heading">
+            Classification of alcohols
+        </p>
+
+        <p>
+         Based on the number of hydroxyl groups
+        </p>
+
+        <p>
+            <b>(1) Monohydric alcohols -</b>
+            Alcohols that contain only one –OH group.
+        </p>
+
+        <p>
+            Based on the nature of the carbon bearing the –OH group, these are of three types—
+        </p>
+
+        <p>
+            <b>Primary alcohol (1°) -</b>
+            The –OH is attached to a carbon that is attached to only one other carbon.
+        </p>
+
+        <p class="formula">
+            CH₃–CH₂–OH → Ethanol
+        </p>
+
+        <p>
+            <b>Secondary alcohol (2°) -</b>
+            The –OH is attached to a carbon that is attached to two other carbons.
+        </p>
+
+        <p class="formula">
+            (CH₃)₂CH–OH → Isopropanol
+        </p>
+
+        <p>
+            <b>Tertiary alcohol (3°) -</b>
+            The –OH is attached to a carbon that is attached to three other carbons.
+        </p>
+
+        <p class="formula">
+            (CH₃)₃C–OH → tert-Butanol
+        </p>
+
+        <p>
+            <b>(2) Dihydric alcohols -</b>
+            Alcohols that contain two –OH groups.
+        </p>
+
+        <p class="formula">
+            HO–CH₂–CH₂–OH → Ethylene glycol
+        </p>
+
+        <p>
+            <b>(3) Trihydric alcohols -</b>
+            Alcohols that contain three –OH groups.
+        </p>
+
+        <p class="formula">
+            HO–CH₂–CHOH–CH₂–OH → Glycerol
+        </p>
+
+    </div>
+
+</div>
+
+
+<div class="qa-box">
+
+    <div class="question">
+        Question - Explain the nomenclature of alcohols.
+    </div>
+
+    <div class="answer">
+<p>
+            <b>1. Common naming system -</b>
+            In this system, the name of the alcohol is formed from the alkyl group and the word 'alcohol'.
+        </p>
+
+        <p class="formula">
+            Alkyl + alcohol
+        </p>
+
+        <p>
+            <b>Examples -</b>
+        </p>
+
+        <p class="formula">
+            CH₃OH → Methyl alcohol
+            <br>
+            C₂H₅OH → Ethyl alcohol
+        </p>
+
+        <p>
+            <b>2. IUPAC nomenclature -</b>
+            The following steps are followed in the IUPAC nomenclature of alcohols—
+        </p>
+
+        <p>
+            1. Select the longest carbon chain containing the –OH group.
+        </p>
+
+        <p>
+            2. Number the chain from the end that gives the –OH group the lowest locant.
+        </p>
+
+        <p>
+            3. The final <b>–e</b> of the parent hydrocarbon name is removed and
+            <b>–ol</b> is added.
+        </p>
+
+        <p>
+            4. When more than one –OH group is present, suffixes such as <b>diol, triol</b> etc. are used.
+        </p>
+
+        <p>
+            <b>Examples -</b>
+        </p>
+
+        <p class="formula">
+            CH₃OH → Methanol
+            <br>
+            C₂H₅OH → Ethanol
+        </p>
+
+    </div>
+
+</div>
+
+<div class="qa-box">
+
+    <div class="question">
+        Question - What different types of isomerism are found in alcohol compounds? Give examples.
+    </div>
+
+    <div class="answer">
+<p>
+            Alcohol compounds mainly exhibit the following types of isomerism—
+        </p>
+
+        <p>
+            <b>1. Chain isomerism -</b>
+            Chain isomerism occurs when the structure of the carbon chain differs.
+        </p>
+
+        <p class="formula">
+            C₄H₉OH → CH₃–CH₂–CH₂–CH₂OH
+            <br>
+            CH₃–CH(CH₃)–CH₂OH
+        </p>
+
+        <p>
+            <b>2. Position isomerism -</b>
+            The carbon chain is the same, but the position of the –OH group differs.
+        </p>
+
+        <p class="formula">
+            CH₃–CH₂–CH₂OH → Propan-1-ol
+            <br>
+            CH₃–CHOH–CH₃ → Propan-2-ol
+        </p>
+
+        <p>
+            <b>3. Functional group isomerism -</b>
+            This isomerism occurs when the molecular formula is the same but the functional groups differ.
+        </p>
+
+        <p class="formula">
+            C₂H₆O:
+            &nbsp; CH₃CH₂OH → Ethanol
+            <br>
+            CH₃–O–CH₃ → Dimethyl ether
+        </p>
+
+        <p>
+            Thus, alcohols mainly exhibit <b>chain, position, and functional group isomerism</b>.
+        </p>
+
+    </div>
+
+</div>
+  <div class="qa-box">
+
+    <div class="question">
+        Question - Write the general methods of preparing alcohols.
+    </div>
+
+    <div class="answer">
+<p>
+            The general methods of preparing alcohols are as follows—
+        </p>
+
+
+        <!-- Method 1 -->
+        <p class="sub-heading">
+            1. From alkenes
+        </p>
+
+        <p>
+            Alcohols are obtained by the addition of water to alkenes.
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction"
+                 viewBox="0 0 900 190"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="35" y="110" font-size="30">
+                    CH₂=CH₂ + H₂O
+                </text>
+
+                <line x1="280" y1="88"
+                      x2="440" y2="88"
+                      stroke="black"
+                      stroke-width="2.8"/>
+
+                <polygon points="440,88 426,80 426,96"
+                         fill="black"/>
+
+                <text x="360" y="55"
+                      text-anchor="middle"
+                      font-size="22">
+                    H₂SO₄
+                </text>
+
+                <text x="480" y="110" font-size="30">
+                    CH₃–CH₂–OH
+                </text>
+
+            </svg>
+        </div>
+
+
+        <!-- Method 2 -->
+        <p class="sub-heading">
+            2. From alkyl halides
+        </p>
+
+        <p>
+            Alcohols are obtained by reacting alkyl halides with aqueous KOH.
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction"
+                 viewBox="0 0 950 190"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="25" y="110" font-size="30">
+                    CH₃–CH₂–Br + KOH(aq)
+                </text>
+
+                <line x1="350" y1="88"
+                      x2="500" y2="88"
+                      stroke="black"
+                      stroke-width="2.8"/>
+
+                <polygon points="500,88 486,80 486,96"
+                         fill="black"/>
+
+                <text x="530" y="110" font-size="30">
+                    CH₃–CH₂–OH + KBr
+                </text>
+
+            </svg>
+        </div>
+
+
+        <!-- Method 3 -->
+        <p class="sub-heading">
+            3. By reduction of aldehydes and ketones
+        </p>
+
+        <p>
+            Reduction of aldehydes gives primary alcohols, and reduction of
+            ketones gives secondary alcohols.
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1050 300"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <!-- Aldehyde -->
+                <text x="25" y="80" font-size="30">
+                    CH₃–CHO + 2[H]
+                </text>
+
+                <line x1="280" y1="58"
+                      x2="460" y2="58"
+                      stroke="black"
+                      stroke-width="2.8"/>
+
+                <polygon points="460,58 446,50 446,66"
+                         fill="black"/>
+
+                <text x="370" y="30"
+                      text-anchor="middle"
+                      font-size="21">
+                    LiAlH₄ / NaBH₄
+                </text>
+
+                <text x="495" y="80" font-size="30">
+                    CH₃–CH₂OH
+                </text>
+
+
+                <!-- Ketone -->
+                <text x="25" y="210" font-size="30">
+                    CH₃–CO–CH₃ + 2[H]
+                </text>
+
+                <line x1="330" y1="188"
+                      x2="510" y2="188"
+                      stroke="black"
+                      stroke-width="2.8"/>
+
+                <polygon points="510,188 496,180 496,196"
+                         fill="black"/>
+
+                <text x="420" y="160"
+                      text-anchor="middle"
+                      font-size="21">
+                    LiAlH₄ / NaBH₄
+                </text>
+
+                <text x="545" y="210" font-size="30">
+                    CH₃–CHOH–CH₃
+                </text>
+
+            </svg>
+        </div>
+
+
+        <!-- Method 4 -->
+        <p class="sub-heading">
+            4. By reduction of esters
+        </p>
+
+        <p>
+            Reduction of esters gives two alcohols.
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction"
+                 viewBox="0 0 950 190"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="25" y="110" font-size="30">
+                    CH₃–COOCH₃ + 4[H]
+                </text>
+
+                <line x1="315" y1="88"
+                      x2="470" y2="88"
+                      stroke="black"
+                      stroke-width="2.8"/>
+
+                <polygon points="470,88 456,80 456,96"
+                         fill="black"/>
+
+                <text x="392" y="55"
+                      text-anchor="middle"
+                      font-size="22">
+                    LiAlH₄
+                </text>
+
+                <text x="505" y="110" font-size="30">
+                    CH₃–CH₂OH + CH₃OH
+                </text>
+
+            </svg>
+        </div>
+
+
+        <!-- Method 5 -->
+        <p class="sub-heading">
+            5. By fermentation of glucose
+        </p>
+
+        <p>
+            Ethanol is obtained by fermenting glucose in the presence of yeast.
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction"
+                 viewBox="0 0 950 190"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="35" y="110" font-size="30">
+                    C₆H₁₂O₆
+                </text>
+
+                <line x1="190" y1="88"
+                      x2="400" y2="88"
+                      stroke="black"
+                      stroke-width="2.8"/>
+
+                <polygon points="400,88 386,80 386,96"
+                         fill="black"/>
+
+                <text x="295" y="55"
+                      text-anchor="middle"
+                      font-size="22">
+                    Yeast
+                </text>
+
+                <text x="445" y="110" font-size="30">
+                    2CH₃–CH₂OH + 2CO₂
+                </text>
+
+            </svg>
+        </div>
+
+
+        <!-- Method 6 -->
+        <p class="sub-heading">
+            6. From Grignard reagents
+        </p>
+
+        <p>
+            Various alcohols are obtained by the reaction of a Grignard
+            reagent (RMgX) with formaldehyde, aldehydes, or ketones, followed
+            by hydrolysis.
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction"
+                 viewBox="0 0 950 190"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="35" y="110" font-size="30">
+                    HCHO + CH₃MgX
+                </text>
+
+                <line x1="280" y1="88"
+                      x2="440" y2="88"
+                      stroke="black"
+                      stroke-width="2.8"/>
+
+                <polygon points="440,88 426,80 426,96"
+                         fill="black"/>
+
+                <text x="360" y="55"
+                      text-anchor="middle"
+                      font-size="22">
+                    H₂O
+                </text>
+
+                <text x="485" y="110" font-size="30">
+                    CH₃–CH₂OH
+                </text>
+
+            </svg>
+        </div>
+
+
+        <!-- Method 7 -->
+        <p class="sub-heading">
+            7. Hydroboration–oxidation reaction
+        </p>
+
+        <p>
+            Alcohols are obtained by first hydroborating an alkene with BH₃
+            and then oxidizing it with H₂O₂ in an alkaline medium.
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1000 200"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="30" y="120" font-size="30">
+                    R–CH=CH₂
+                </text>
+
+                <line x1="200" y1="98"
+                      x2="520" y2="98"
+                      stroke="black"
+                      stroke-width="2.8"/>
+
+                <polygon points="520,98 506,90 506,106"
+                         fill="black"/>
+
+                <text x="360" y="55"
+                      text-anchor="middle"
+                      font-size="21">
+                    1. BH₃/THF
+                </text>
+
+                <text x="360" y="82"
+                      text-anchor="middle"
+                      font-size="21">
+                    2. H₂O₂/OH⁻
+                </text>
+
+                <text x="560" y="120" font-size="30">
+                    R–CH₂–CH₂OH
+                </text>
+
+            </svg>
+        </div>
+
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        Question - Write the physical properties of alcohols.
+    </div>
+
+    <div class="answer">
+<p>
+            1. The lower members are generally colorless liquids, while the
+            higher members can be solids.
+        </p>
+
+        <p>
+            2. Alcohols of low molecular mass are soluble in water. Solubility
+            in water decreases as molecular mass increases.
+        </p>
+
+        <p>
+            3. The boiling points of alcohols are higher than those of
+            hydrocarbons of comparable molecular mass, because alcohols form
+            hydrogen bonds.
+        </p>
+
+        <p>
+            4. The melting point and boiling point of alcohols generally
+            increase as molecular mass increases.
+        </p>
+
+        <p>
+            5. Alcohols are polar compounds, and hydrogen bonds are found
+            between their molecules.
+        </p>
+
+        <p>
+            6. Lower alcohols have a characteristic odor, while higher
+            alcohols have a relatively less intense odor.
+        </p>
+
+    </div>
+
+</div>
+  <div class="qa-box">
+
+    <!-- Question 1 -->
+    <div class="question">
+        Question - Why is the boiling point of propanol higher than that of the corresponding alkane?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>Intermolecular hydrogen bonds</b> are found between molecules
+            of propanol. Because of this, propanol molecules undergo
+            association. Hence, more energy is required to separate the
+            molecules. Therefore, its boiling point is higher than that of
+            the corresponding alkane.
+        </p>
+</div>
+  </div>
+  <div class="qa-box">
+
+        <!-- Question 2 -->
+        <div class="question">
+            Question - Why is the boiling point of alcohols higher than that of ethers?
+        </div>
+    <div class="answer">
+        <p>
+            Alcohol molecules are associated with each other through
+            <b>hydrogen bonds</b>. Hence, more energy is required to separate
+            these molecules.
+        </p>
+
+        <p>
+            Ether molecules do not form hydrogen bonds with each other.
+            Hence, their boiling points are lower than those of alcohols.
+        </p>
+    </div>
+</div>
+
+ <div class="qa-box">
+
+    <div class="question">
+        Question: Describe the chemical properties of alcohols.
+    </div>
+
+    <div class="answer">
+
+        <p><b>(A) Reactions due to the R–O–H bond (acidic nature)</b></p>
+
+        <p><b>1. Reaction with sodium:</b></p>
+        <p>
+            Alcohols react with reactive metals such as sodium and potassium
+            to form alkoxides, releasing hydrogen gas.
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction" viewBox="0 0 950 150"
+                 preserveAspectRatio="xMidYMid meet">
+                <text x="30" y="95" font-size="30">
+                    2CH₃–CH₂–OH + 2Na
+                </text>
+                <line x1="430" y1="75" x2="555" y2="75"
+                      stroke="black" stroke-width="2.8"/>
+                <polygon points="555,75 541,67 541,83" fill="black"/>
+                <text x="585" y="95" font-size="30">
+                    2CH₃–CH₂–ONa + H₂↑
+                </text>
+            </svg>
+        </div>
+
+        <p><b>2. Reaction with metal oxides:</b></p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction" viewBox="0 0 950 150"
+                 preserveAspectRatio="xMidYMid meet">
+                <text x="40" y="95" font-size="30">
+                    2CH₃–OH + Na₂O
+                </text>
+                <line x1="390" y1="75" x2="515" y2="75"
+                      stroke="black" stroke-width="2.8"/>
+                <polygon points="515,75 501,67 501,83" fill="black"/>
+                <text x="545" y="95" font-size="30">
+                    2CH₃–ONa + H₂O
+                </text>
+            </svg>
+        </div>
+
+        <p>
+            These reactions demonstrate the <b>acidic nature</b> of alcohols.
+        </p>
+
+        <p><b>3. Esterification:</b></p>
+        <p>
+            Alcohols react with carboxylic acids in the presence of
+            concentrated H₂SO₄ to form esters.
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction" viewBox="0 0 1100 170"
+                 preserveAspectRatio="xMidYMid meet">
+                <text x="20" y="110" font-size="28">
+                    CH₃–CH₂–OH + CH₃–COOH
+                </text>
+                <line x1="430" y1="90" x2="625" y2="90"
+                      stroke="black" stroke-width="2.8"/>
+                <polygon points="625,90 611,82 611,98" fill="black"/>
+                <text x="527" y="58" text-anchor="middle" font-size="21">
+                    H₂SO₄
+                </text>
+                <text x="655" y="110" font-size="28">
+                    CH₃–COO–CH₂–CH₃ + H₂O
+                </text>
+            </svg>
+        </div>
+
+        <p><b>4. Acylation:</b></p>
+        <p>
+            Alcohols react with acid chlorides or acid anhydrides to form
+            esters.
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction" viewBox="0 0 1000 150"
+                 preserveAspectRatio="xMidYMid meet">
+                <text x="30" y="95" font-size="28">
+                    CH₃–CH₂–OH + CH₃–COCl
+                </text>
+                <line x1="455" y1="75" x2="575" y2="75"
+                      stroke="black" stroke-width="2.8"/>
+                <polygon points="575,75 561,67 561,83" fill="black"/>
+                <text x="610" y="95" font-size="28">
+                    CH₃–COO–CH₂–CH₃ + HCl
+                </text>
+            </svg>
+        </div>
+
+        <p><b>5. Reaction with Grignard reagent:</b></p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction" viewBox="0 0 1000 150"
+                 preserveAspectRatio="xMidYMid meet">
+                <text x="25" y="95" font-size="28">
+                    CH₃–CH₂–OH + CH₃–MgBr
+                </text>
+                <line x1="430" y1="75" x2="555" y2="75"
+                      stroke="black" stroke-width="2.8"/>
+                <polygon points="555,75 541,67 541,83" fill="black"/>
+                <text x="585" y="95" font-size="28">
+                    CH₃–CH₂–OMgBr + CH₄
+                </text>
+            </svg>
+        </div>
+
+        <p><b>(B) Reactions due to the R–OH bond</b></p>
+
+        <p><b>1. Reaction with PCl₅:</b></p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction" viewBox="0 0 1050 150"
+                 preserveAspectRatio="xMidYMid meet">
+                <text x="20" y="95" font-size="27">
+                    CH₃–CH₂–OH + PCl₅
+                </text>
+                <line x1="385" y1="75" x2="510" y2="75"
+                      stroke="black" stroke-width="2.8"/>
+                <polygon points="510,75 496,67 496,83" fill="black"/>
+                <text x="540" y="95" font-size="27">
+                    CH₃–CH₂–Cl + POCl₃ + HCl
+                </text>
+            </svg>
+        </div>
+
+        <p><b>2. Reaction with PCl₃:</b></p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction" viewBox="0 0 1050 150"
+                 preserveAspectRatio="xMidYMid meet">
+                <text x="20" y="95" font-size="27">
+                    3CH₃–CH₂–OH + PCl₃
+                </text>
+                <line x1="430" y1="75" x2="555" y2="75"
+                      stroke="black" stroke-width="2.8"/>
+                <polygon points="555,75 541,67 541,83" fill="black"/>
+                <text x="585" y="95" font-size="27">
+                    3CH₃–CH₂–Cl + H₃PO₃
+                </text>
+            </svg>
+        </div>
+
+        <p><b>3. Reaction with thionyl chloride:</b></p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction" viewBox="0 0 1050 150"
+                 preserveAspectRatio="xMidYMid meet">
+                <text x="20" y="95" font-size="27">
+                    CH₃–CH₂–OH + SOCl₂
+                </text>
+                <line x1="400" y1="75" x2="525" y2="75"
+                      stroke="black" stroke-width="2.8"/>
+                <polygon points="525,75 511,67 511,83" fill="black"/>
+                <text x="555" y="95" font-size="27">
+                    CH₃–CH₂–Cl + SO₂ + HCl
+                </text>
+            </svg>
+        </div>
+
+        <p><b>4. Reaction with ammonia:</b></p>
+
+        <p>
+            Passing vapors of alcohol and ammonia over heated Al₂O₃ gives
+            primary, secondary, and tertiary amines.
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction" viewBox="0 0 1050 150"
+                 preserveAspectRatio="xMidYMid meet">
+                <text x="30" y="100" font-size="28">
+                    CH₃OH + NH₃
+                </text>
+                <line x1="300" y1="78" x2="480" y2="78"
+                      stroke="black" stroke-width="2.8"/>
+                <polygon points="480,78 466,70 466,86" fill="black"/>
+                <text x="390" y="48" text-anchor="middle" font-size="20">
+                    Al₂O₃ / 630 K
+                </text>
+                <text x="515" y="100" font-size="28">
+                    CH₃NH₂ + H₂O
+                </text>
+            </svg>
+        </div>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction" viewBox="0 0 900 130"
+                 preserveAspectRatio="xMidYMid meet">
+                <text x="30" y="85" font-size="27">
+                    2CH₃OH + NH₃
+                </text>
+                <line x1="310" y1="65" x2="440" y2="65"
+                      stroke="black" stroke-width="2.8"/>
+                <polygon points="440,65 426,57 426,73" fill="black"/>
+                <text x="475" y="85" font-size="27">
+                    (CH₃)₂NH + 2H₂O
+                </text>
+            </svg>
+        </div>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction" viewBox="0 0 900 130"
+                 preserveAspectRatio="xMidYMid meet">
+                <text x="30" y="85" font-size="27">
+                    3CH₃OH + NH₃
+                </text>
+                <line x1="310" y1="65" x2="440" y2="65"
+                      stroke="black" stroke-width="2.8"/>
+                <polygon points="440,65 426,57 426,73" fill="black"/>
+                <text x="475" y="85" font-size="27">
+                    (CH₃)₃N + 3H₂O
+                </text>
+            </svg>
+        </div>
+
+        <p><b>5. Reaction with hydrogen halides:</b></p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction" viewBox="0 0 750 130"
+                 preserveAspectRatio="xMidYMid meet">
+                <text x="30" y="85" font-size="28">
+                    R–OH + HX
+                </text>
+                <line x1="220" y1="65" x2="350" y2="65"
+                      stroke="black" stroke-width="2.8"/>
+                <polygon points="350,65 336,57 336,73" fill="black"/>
+                <text x="385" y="85" font-size="28">
+                    R–X + H₂O
+                </text>
+            </svg>
+        </div>
+
+        <p>
+            Order of reactivity of the hydrohalic acids:
+            <b>HI &gt; HBr &gt; HCl</b>
+        </p>
+
+        <p>
+            Order of reactivity of the alcohols:
+            <b>Tertiary &gt; Secondary &gt; Primary</b>
+        </p>
+
+    </div>
+
+</div>
+  <div class="qa-box">
+
+    <div class="question">
+        Question: What are the methods used to distinguish between primary,
+        secondary, and tertiary alcohols?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            The following are the major methods used to distinguish between
+            primary, secondary, and tertiary alcohols—
+        </p>
+
+        <ol>
+            <li><b>Lucas test</b></li>
+            <li><b>Victor Meyer test</b></li>
+            <li><b>Oxidation test</b></li>
+            <li><b>Dehydrogenation test</b></li>
+        </ol>
+
+    </div>
+
+  </div>
+
+<div class="qa-box">
+
+    <div class="question">
+        Question: What is Lucas reagent? Describe the Lucas test.
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>Lucas reagent:</b> A mixture of concentrated HCl and anhydrous
+            ZnCl₂ is called <b>Lucas reagent</b>.
+        </p>
+
+        <p>
+          <p><b>Lucas test:</b></p>
+
+            <p>When Lucas reagent is added to an alcohol, turbidity due to
+           the formation of an alkyl halide is produced.
+        </p>
+<p><b>Reaction:</b></p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction"
+                 viewBox="0 0 800 150"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="30" y="95" font-size="30">
+                    R–OH + HCl
+                </text>
+
+                <line x1="235" y1="75"
+                      x2="400" y2="75"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="400,75 385,66 385,84"
+                         fill="black"/>
+
+                <text x="317" y="48"
+                      text-anchor="middle"
+                      font-size="22">
+                    ZnCl₂
+                </text>
+
+                <text x="435" y="95" font-size="30">
+                    R–Cl + H₂O
+                </text>
+
+            </svg>
+        </div>
+
+<ul>
+    <li>
+        <b>Tertiary (3°) alcohol</b> — turbidity is produced immediately.
+    </li>
+
+    <li>
+        <b>Secondary (2°) alcohol</b> — turbidity is produced after a few minutes.
+    </li>
+
+    <li>
+        <b>Primary (1°) alcohol</b> — turbidity is produced very slowly at
+        room temperature.
+    </li>
+</ul>
+        <p>
+            Thus, the Lucas test is used to identify primary, secondary, and
+            tertiary alcohols.
+        </p>
+
+    
+    </div>
+
+</div>
+
+<div class="qa-box">
+  
+   <div class="question">
+        Question: How are primary, secondary, and tertiary alcohols
+        distinguished by the Victor Meyer method?
+    </div>
+
+    <div class="answer">
+
+        <p>
+           The Victor Meyer method is a chemical test used to distinguish
+           between primary (1°), secondary (2°), and tertiary (3°) alcohols. </p>
+     <p> In this method, the alcohol is first converted into an iodoalkane
+            by reaction with PI₃, and then into a nitroalkane by reaction
+            with AgNO₂. Reacting the nitroalkane with nitrous acid and
+            alkali produces different colors.
+        </p>
+
+        <ul>
+            <li>
+                <b>Primary (1°) alcohol:</b> gives a red color.
+            </li>
+
+            <li>
+                <b>Secondary (2°) alcohol:</b> gives a blue color.
+            </li>
+
+            <li>
+                <b>Tertiary (3°) alcohol:</b> produces no color.
+            </li>
+        </ul>
+
+        <p>
+            Thus, the nature of the alcohol can be identified based on the
+            color produced.
+        </p>
+
+    </div>
+  
+<div class="reaction-container">
+
+    <!-- Primary -->
+    <div class="vertical-reaction">
+
+        <b>Primary (1°)</b>
+
+        <div>R–CH₂OH</div>
+        <div class="arrow">↓</div>
+        <div class="condition">PI₃</div>
+        <div class="arrow">↓</div>
+        <div>R–CH₂I</div>
+        <div class="arrow">↓</div>
+        <div class="condition">AgNO₂</div>
+        <div class="arrow">↓</div>
+        <div>R–CH₂NO₂</div>
+        <div class="arrow">↓</div>
+        <div class="condition">HNO₂ / NaOH</div>
+        <div class="arrow">↓</div>
+        <div><b>Red color</b></div>
+    </div>
+
+
+    <!-- Secondary -->
+    <div class="vertical-reaction">
+        <b>Secondary (2°)</b>
+
+        <div>R₂CHOH</div>
+        <div class="arrow">↓</div>
+        <div class="condition">PI₃</div>
+        <div class="arrow">↓</div>
+        <div>R₂CHI</div>
+        <div class="arrow">↓</div>
+        <div class="condition">AgNO₂</div>
+        <div class="arrow">↓</div>
+        <div>R₂CHNO₂</div>
+        <div class="arrow">↓</div>
+        <div class="condition">HNO₂ / NaOH</div>
+        <div class="arrow">↓</div>
+        <div><b>Blue color</b></div>
+    </div>
+
+
+    <!-- Tertiary -->
+    <div class="vertical-reaction">
+        <b>Tertiary (3°)</b>
+
+        <div>R₃COH</div>
+        <div class="arrow">↓</div>
+        <div class="condition">PI₃</div>
+        <div class="arrow">↓</div>
+        <div>R₃CI</div>
+        <div class="arrow">↓</div>
+        <div class="condition">AgNO₂</div>
+        <div class="arrow">↓</div>
+        <div>R₃CNO₂</div>
+        <div class="arrow">↓</div>
+        <div class="condition">HNO₂ / NaOH</div>
+        <div class="arrow">↓</div>
+        <div><b>No color</b></div>
+    </div>
+
+</div>
+
+</div>
+
+<div class="qa-box">
+
+    <div class="question">
+        Question: Explain the differentiation between primary, secondary,
+        and tertiary alcohols by the oxidation method. Give appropriate
+        chemical equations.
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>(3) Oxidation:</b> Different alcohols give different products
+            on oxidation. On this basis, primary, secondary, and tertiary
+            alcohols can be distinguished.
+        </p>
+
+        <p>
+            <b>Primary alcohol (1°):</b>
+            Primary alcohols are readily oxidized by K₂Cr₂O₇ to give first
+            an aldehyde and then a carboxylic acid.
+      </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1000 150"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="25" y="95" font-size="30">
+                    CH₃–CH₂OH + [O]
+                </text>
+
+                <line x1="300" y1="75"
+                      x2="470" y2="75"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="470,75 455,66 455,84"
+                         fill="black"/>
+
+                <text x="385" y="48"
+                      text-anchor="middle"
+                      font-size="21">
+                    K₂Cr₂O₇ / H⁺
+                </text>
+
+                <text x="510" y="95" font-size="30">
+                    CH₃–CHO + H₂O
+                </text>
+
+            </svg>
+        </div>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction"
+                 viewBox="0 0 800 150"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="30" y="95" font-size="30">
+                    CH₃–CHO + [O]
+                </text>
+
+                <line x1="270" y1="75"
+                      x2="450" y2="75"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="450,75 435,66 435,84"
+                         fill="black"/>
+
+                <text x="360" y="48"
+                      text-anchor="middle"
+                      font-size="21">
+                    K₂Cr₂O₇ / H⁺
+                </text>
+
+                <text x="490" y="95" font-size="30">
+                    CH₃–COOH
+                </text>
+
+            </svg>
+        </div>
+
+
+        <p>
+            <b>Secondary alcohol (2°):</b>
+            Secondary alcohols give a ketone on oxidation by K₂Cr₂O₇.
+            Ketones are not easily oxidized further by K₂Cr₂O₇ under
+            ordinary conditions.
+        </p>
+
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction"
+                 viewBox="0 0 850 150"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="25" y="95" font-size="30">
+                    (CH₃)₂CH–OH + [O]
+                </text>
+
+                <line x1="270" y1="75"
+                      x2="450" y2="75"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="450,75 435,66 435,84"
+                         fill="black"/>
+
+                <text x="360" y="48"
+                      text-anchor="middle"
+                      font-size="21">
+                    K₂Cr₂O₇ / H⁺
+                </text>
+
+                <text x="490" y="95" font-size="30">
+                    CH₃–CO–CH₃
+                </text>
+
+            </svg>
+        </div>
+
+
+        <p>
+            <b>Tertiary alcohol (3°):</b>
+            Tertiary alcohols are not easily oxidized by K₂Cr₂O₇ under
+            ordinary conditions.
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction"
+                 viewBox="0 0 850 150"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="25" y="95" font-size="30">
+                    (CH₃)₃C–OH + [O]
+                </text>
+
+                <line x1="250" y1="75"
+                      x2="450" y2="75"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="450,75 435,66 435,84"
+                         fill="black"/>
+
+                <text x="350" y="48"
+                      text-anchor="middle"
+                      font-size="21">
+                    K₂Cr₂O₇ / H⁺
+                </text>
+
+                <text x="485" y="95" font-size="30">
+                    No oxidation under ordinary conditions
+                </text>
+
+            </svg>
+        </div>
+
+    </div>
+
+</div>
+
+  <div class="qa-box">
+
+    <div class="question">
+        Question: What is meant by dehydrogenation of alcohols? Write the
+        dehydrogenation reactions of primary, secondary, and tertiary
+        alcohols.
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>Dehydrogenation:</b> When the vapor of an alcohol is heated to
+            about <b>570 K</b>, it loses a molecule of hydrogen. This process
+            is called <b>dehydrogenation</b>. Different alcohols give
+            different products on dehydrogenation.
+        </p>
+
+        <p><b>Primary alcohol:</b> Primary alcohols give an aldehyde on
+        dehydrogenation.</p>
+<!-- Primary alcohol -->
+<div class="reaction-box">
+    <svg class="chemical-reaction"
+         viewBox="0 0 900 150"
+         preserveAspectRatio="xMidYMid meet">
+
+        <text x="30" y="95" font-size="30">
+            CH₃–CH₂–OH
+        </text>
+
+        <line x1="240" y1="75"
+              x2="430" y2="75"
+              stroke="black"
+              stroke-width="3"/>
+
+        <polygon points="430,75 415,66 415,84"
+                 fill="black"/>
+
+        <text x="335" y="48"
+              text-anchor="middle"
+              font-size="21">
+            Cu / 300°C
+        </text>
+
+        <text x="470" y="95" font-size="30">
+            CH₃–CHO + H₂
+        </text>
+
+    </svg>
+</div>
+
+
+<!-- Secondary alcohol -->
+<p><b>Secondary alcohol:</b> Secondary alcohols give a ketone on
+        dehydrogenation.</p>
+<div class="reaction-box">
+    <svg class="chemical-reaction"
+         viewBox="0 0 900 150"
+         preserveAspectRatio="xMidYMid meet">
+
+        <text x="30" y="95" font-size="30">
+            (CH₃)₂CH–OH
+        </text>
+
+        <line x1="260" y1="75"
+              x2="450" y2="75"
+              stroke="black"
+              stroke-width="3"/>
+
+        <polygon points="450,75 435,66 435,84"
+                 fill="black"/>
+
+        <text x="355" y="48"
+              text-anchor="middle"
+              font-size="21">
+            Cu / 300°C
+        </text>
+
+        <text x="490" y="95" font-size="30">
+            CH₃–CO–CH₃ + H₂
+        </text>
+
+    </svg>
+</div>
+
+
+<!-- Tertiary alcohol -->
+      <p><b>Tertiary alcohol:</b> Instead of normal dehydrogenation, tertiary
+        alcohols undergo dehydration at high temperature to form an alkene.
+      </p>
+<div class="reaction-box">
+    <svg class="chemical-reaction"
+         viewBox="0 0 900 150"
+         preserveAspectRatio="xMidYMid meet">
+
+        <text x="30" y="95" font-size="30">
+            (CH₃)₃C–OH
+        </text>
+
+        <line x1="250" y1="75"
+              x2="445" y2="75"
+              stroke="black"
+              stroke-width="3"/>
+
+        <polygon points="445,75 430,66 430,84"
+                 fill="black"/>
+
+        <text x="350" y="48"
+              text-anchor="middle"
+              font-size="21">
+            Al₂O₃ / Δ
+        </text>
+
+        <text x="485" y="95" font-size="30">
+            (CH₃)₂C=CH₂ + H₂O
+        </text>
+
+    </svg>
+</div>
+    
+
+    </div>
+
+</div>
+
+
+<div class="qa-box">
+
+    <div class="question">
+        Question: Write the tests for alcohol.
+    </div>
+
+    <div class="answer">
+
+        <p>
+            The following tests are performed to identify alcohol—
+        </p>
+
+        <p>
+            <b>1. Ceric ammonium nitrate test:</b>
+            Mixing alcohol with a solution of ceric ammonium nitrate gives a
+            <b>red-brown color</b>. This is a test for the presence of
+            alcohol.
+        </p>
+
+        <p>
+            <b>2. Ester test:</b>
+            Heating alcohol with acetic acid and concentrated H₂SO₄ forms an
+            ester, giving a <b>sweet, fragrant odor</b>.
+        </p>
+
+    </div>
+
+</div>
+  <div class="qa-box">
+
+    <div class="question">
+        Question: What is wood spirit?
+    </div>
+
+    <div class="answer">
+        <p>
+            <b>Methanol (CH₃OH)</b> obtained by the destructive distillation
+            of wood is called <b>wood spirit</b>.
+        </p>
+    </div>
+
+</div>
+
+
+<div class="qa-box">
+
+    <div class="question">
+        Question: Write the modern method of preparing methanol along with
+        its properties and uses.
+    </div>
+
+    <div class="answer">
+
+        <p><b>Modern method:</b></p>
+
+        <p>
+            Methanol is obtained by passing a mixture of carbon monoxide and
+            hydrogen over a ZnO/Cr₂O₃ catalyst at high pressure and
+            temperature.
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction"
+                 viewBox="0 0 900 150"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="30" y="95" font-size="30">
+                    CO + 2H₂
+                </text>
+
+                <line x1="210" y1="75"
+                      x2="390" y2="75"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="390,75 375,66 375,84"
+                         fill="black"/>
+
+                <text x="300" y="48"
+                      text-anchor="middle"
+                      font-size="21">
+                    ZnO / Cr₂O₃
+                </text>
+
+                <text x="430" y="95" font-size="30">
+                    CH₃OH
+                </text>
+
+            </svg>
+        </div>
+
+        <p><b>Physical properties:</b></p>
+
+        <ul>
+    <li>It is a colorless, flammable liquid, soluble in water.</li>
+    <li>Its boiling point is about <b>338 K</b>.</li>
+    <li>It has a characteristic odor.</li>
+    <li>It is <b>poisonous</b>.</li>
+    <li>Its consumption can cause blindness and death.</li>
+        </ul>
+
+        <p><b>Uses:</b></p>
+
+        <ul>
+    <li>In the manufacture of formaldehyde and formalin.</li>
+    <li>To denature ethyl alcohol.</li>
+    <li>As a solvent for paints, varnishes, and shellac.</li>
+    <li>In the manufacture of methyl salicylate and methyl anthranilate.</li>
+    <li>In the manufacture of dyes and medicines.</li>
+    <li>In the manufacture of plastics (Perspex).</li>
+    <li>As a fuel along with petrol.</li>
+    <li>As an antifreeze in car radiators, etc. in cold countries.</li>
+        </ul>
+
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        Question: What is fermentation? Write its uses.
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>Fermentation:</b> The biochemical process in which sugar is
+            converted into alcohol or acid with the help of enzymes is called
+            fermentation.
+        </p>
+
+        <p><b>Uses:</b></p>
+
+        <ul>
+            <li>In the manufacture of alcoholic beverages such as wine and beer.</li>
+            <li>In the bread and bakery industry, to leaven dough using CO₂.</li>
+            <li>In making curd (yogurt).</li>
+            <li>In making pickles and vinegar.</li>
+        </ul>
+
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        Question: What is molasses (jaggery syrup)?
+    </div>
+
+    <div class="answer">
+        <p>
+            The thick, sweet, and sticky substance left over after making
+            sugar from sugarcane juice is called <b>molasses (jaggery
+            syrup)</b>. It mainly contains sugar and is used <b>to make ethyl
+            alcohol</b>.
+        </p>
+    </div>
+
+</div>
+  <div class="qa-box">
+
+    <div class="question">
+        Question: How is ethyl alcohol obtained from molasses (jaggery syrup)?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            The main method of obtaining ethyl alcohol from jaggery (or
+            molasses) is <b>fermentation</b>. This process is completed in
+            the following steps.
+        </p>
+
+        <p><b>(i) Dilution:</b></p>
+
+        <p>
+            Jaggery is taken in a tank and water is added to it, bringing the
+            sugar content to about <b>8–10%</b>.
+        </p>
+
+        <p><b>(ii) Nutrient mixture:</b></p>
+
+        <p>
+            Ammonium sulfate and ammonium phosphate are added to the dilute
+            solution. These salts act as nutrients for the yeast.
+        </p>
+
+        <p><b>(iii) Addition of dilute H₂SO₄:</b></p>
+
+        <p>
+            A few drops of dilute H₂SO₄ are added to the solution to prevent
+            the growth of unwanted bacteria.
+        </p>
+
+        <p><b>(iv) Adding yeast:</b></p>
+
+        <p>
+            Yeast is now added and the mixture is kept at a temperature of
+            about <b>25–30°C</b>.
+        </p>
+
+        <p><b>(v) Fermentation:</b></p>
+
+        <p>
+            During fermentation, the enzyme invertase converts sucrose into
+            glucose and fructose.
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1050 150"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="95" font-size="28">
+                    C₁₂H₂₂O₁₁ + H₂O
+                </text>
+
+                <line x1="300" y1="75"
+                      x2="540" y2="75"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="540,75 525,66 525,84"
+                         fill="black"/>
+
+                <text x="420" y="48"
+                      text-anchor="middle"
+                      font-size="20">
+                    Invertase / Yeast
+                </text>
+
+                <text x="575" y="95" font-size="28">
+                    C₆H₁₂O₆ + C₆H₁₂O₆
+                </text>
+
+            </svg>
+        </div>
+
+        <p style="text-align:center;">
+            <b>Sucrose → Glucose + Fructose</b>
+        </p>
+
+        <p>
+            After this, the enzyme zymase converts glucose into ethyl alcohol
+            and carbon dioxide.
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction"
+                 viewBox="0 0 950 150"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="25" y="95" font-size="28">
+                    C₆H₁₂O₆
+                </text>
+
+                <line x1="210" y1="75"
+                      x2="430" y2="75"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="430,75 415,66 415,84"
+                         fill="black"/>
+
+                <text x="320" y="48"
+                      text-anchor="middle"
+                      font-size="20">
+                    Zymase / Yeast
+                </text>
+
+                <text x="465" y="95" font-size="28">
+                    2C₂H₅OH + 2CO₂
+                </text>
+
+            </svg>
+        </div>
+
+        <p><b>(vi) Distillation:</b></p>
+
+        <p>
+            When fermentation is complete and CO₂ stops being released, the
+            resulting fermented liquid is purified by distillation. This
+            gives rectified spirit containing about <b>90–95% C₂H₅OH</b>.
+        </p>
+
+    </div>
+
+  </div>
+  
+<div class="qa-box">
+
+    <div class="question">
+        Question: How is ethanol obtained from starch? Explain briefly.
+        Give the reaction equations.
+    </div>
+
+    <div class="answer">
+
+        <p>
+            Ethanol is prepared industrially from starchy materials such as
+            potatoes and barley. The starchy material is heated with
+            superheated steam at about <b>335 K</b> to form a paste, and
+            malt is added to it.
+        </p>
+
+        <p>
+            The enzyme <b>diastase</b> present in malt converts starch into
+            maltose.
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1100 150"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="20" y="95" font-size="27">
+                    2(C₆H₁₀O₅)ₙ + nH₂O
+                </text>
+
+                <line x1="390" y1="75"
+                      x2="590" y2="75"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="590,75 575,66 575,84"
+                         fill="black"/>
+
+                <text x="490" y="48"
+                      text-anchor="middle"
+                      font-size="20">
+                    Diastase
+                </text>
+
+                <text x="625" y="95" font-size="27">
+                    nC₁₂H₂₂O₁₁
+                </text>
+
+            </svg>
+        </div>
+
+        <p style="text-align:center;">
+            <b>Starch → Maltose</b>
+        </p>
+
+        <p>
+            The product obtained is cooled and yeast is added to it. The
+            enzyme <b>maltase</b> present in yeast converts maltose into
+            glucose.
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1000 150"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="25" y="95" font-size="28">
+                    C₁₂H₂₂O₁₁ + H₂O
+                </text>
+
+                <line x1="330" y1="75"
+                      x2="530" y2="75"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="530,75 515,66 515,84"
+                         fill="black"/>
+
+                <text x="430" y="48"
+                      text-anchor="middle"
+                      font-size="20">
+                    Maltase
+                </text>
+
+                <text x="565" y="95" font-size="28">
+                    2C₆H₁₂O₆
+                </text>
+
+            </svg>
+        </div>
+
+        <p style="text-align:center;">
+            <b>Maltose → Glucose</b>
+        </p>
+
+        <p>
+            Finally, the enzyme <b>zymase</b> ferments glucose to form
+            ethanol and carbon dioxide.
+        </p>
+
+        <div class="reaction-box">
+            <svg class="chemical-reaction"
+                 viewBox="0 0 1000 150"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <text x="25" y="95" font-size="28">
+                    C₆H₁₂O₆
+                </text>
+
+                <line x1="210" y1="75"
+                      x2="450" y2="75"
+                      stroke="black"
+                      stroke-width="3"/>
+
+                <polygon points="450,75 435,66 435,84"
+                         fill="black"/>
+
+                <text x="330" y="48"
+                      text-anchor="middle"
+                      font-size="20">
+                    Zymase / Yeast
+                </text>
+
+                <text x="485" y="95" font-size="28">
+                    2C₂H₅OH + 2CO₂
+                </text>
+
+            </svg>
+        </div>
+
+        <p style="text-align:center;">
+            <b>Glucose → Ethanol + Carbon dioxide</b>
+        </p>
+
+    </div>
+
+</div>
+        
+<div class="qa-box">
+
+    <div class="question">
+        Question: Name the products obtained when ethyl alcohol is reacted
+        with the following.
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>1. Bleaching powder</b> — Chloroform
+        </p>
+
+        <p>
+            <b>2. Iodine and caustic soda</b> — Iodoform
+        </p>
+
+        <p>
+            <b>3. Chlorine</b> — Acetaldehyde
+        </p>
+
+        <p>
+            <b>4. Phosphorus pentachloride (PCl₅)</b> — Ethyl chloride
+        </p>
+
+    </div>
+
+</div>
+
+
+<div class="qa-box">
+
+    <div class="question">
+        Question: Write the properties and uses of ethanol.
+    </div>
+
+    <div class="answer">
+
+        <p><b>Properties:</b></p>
+
+        <ul>
+            <li>It is a colorless, transparent, and volatile liquid.</li>
+            <li>It has a characteristic pungent smell and a burning taste.</li>
+            <li>It is completely soluble in water, ether, and benzene.</li>
+            <li>Its boiling point is about <b>78.1°C</b>.</li>
+            <li>It forms hydrogen bonds with water.</li>
+        </ul>
+
+        <p><b>Uses:</b></p>
+
+        <ul>
+            <li>As alcohol in beverages.</li>
+            <li>As a solvent in varnishes, paints, medicines, and perfumes.</li>
+            <li>As a fuel when mixed with gasoline.</li>
+            <li>In disinfectants and pharmaceutical preparations.</li>
+            <li>In the manufacture of acetic acid, chloroform, iodoform, and ether.</li>
+            <li>As a reagent and preservative in laboratories.</li>
+        </ul>
+
+    </div>
+
+</div>
+
+
+<div class="qa-box">
+
+    <div class="question">
+        Question: What is an azeotrope?
+    </div>
+
+    <div class="answer">
+        <p>
+            A constant-boiling mixture of a solution of ethanol and water is
+            called an <b>azeotrope</b>. The ethanol-water azeotrope consists
+            of about <b>95% ethanol and 5% water</b>.
+        </p>
+    </div>
+
+</div>
+
+
+<div class="qa-box">
+
+    <div class="question">
+        Question: What do you understand by absolute alcohol?
+    </div>
+
+    <div class="answer">
+        <p>
+            Nearly completely pure ethyl alcohol is called <b>absolute
+            alcohol</b>. It is obtained by removing water from the
+            azeotrope.
+        </p>
+    </div>
+
+</div>
+
+
+<div class="qa-box">
+
+    <div class="question">
+        Question: What do you understand by denatured spirit?
+    </div>
+
+    <div class="answer">
+        <p>
+            To prevent the misuse of ethyl alcohol, a small amount of
+            methanol or another suitable substance is added to it, rendering
+            it unfit for drinking. The alcohol obtained in this way is called
+            <b>denatured spirit</b>.
+        </p>
+    </div>
+
+</div> 
+  <div class="qa-box">
+
+    <div class="question">
+        Question: Write the difference between methyl alcohol and ethyl alcohol.
+    </div>
+
+    <div class="answer">
+
+        <table>
+            <tr>
+                <th>Methyl alcohol</th>
+                <th>Ethyl alcohol</th>
+            </tr>
+
+            <tr>
+                <td>Its formula is <b>CH₃OH</b>.</td>
+                <td>Its formula is <b>C₂H₅OH</b>.</td>
+            </tr>
+
+            <tr>
+                <td>It is called methanol.</td>
+                <td>It is called ethanol.</td>
+            </tr>
+
+            <tr>
+                <td>It is extremely poisonous.</td>
+                <td>It is less poisonous than methanol, but its consumption can still be harmful to health.</td>
+            </tr>
+
+            <tr>
+                <td>Its consumption can cause blindness and death.</td>
+                <td>It is used as an industrial solvent and fuel, among other applications.</td>
+            </tr>
+        </table>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- PROTECTION -->
+
+<script>
+
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+document.addEventListener("selectstart", e => e.preventDefault());
+
+document.addEventListener("copy", e => {
+
+    e.preventDefault();
+
+    alert("Copying content is not allowed");
+
+});
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- PROTECTION -->
+
+
+<script>
+
+
+document.addEventListener("contextmenu",
+e=>e.preventDefault());
+
+
+document.addEventListener("selectstart",
+e=>e.preventDefault());
+
+
+document.addEventListener("copy",
+e=>{
+
+e.preventDefault();
+
+alert("Copying content is not allowed");
+
+});
+
+
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
