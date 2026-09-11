@@ -50,7 +50,7 @@ line-height:1.7;
 
     .navbar{
 
-      background:rgba(15,23,42,0.45);
+      background:rgba(23,74,126,0.95);
 
       backdrop-filter:blur(10px);
 
@@ -90,26 +90,22 @@ padding:20px;
 
 }
 
-.notes-title{
 
-background:#e3f2fd;
-
-color:#1565c0;
-
-padding:10px;
-
-border-left:5px solid #1565c0;
-
-border-radius:50px;
-
-font-size:30px;
-
-font-weight:bold;
-margin-top:100px;
-
-margin-bottom:50px;
-
+.notes-title {
+    background: #174a7e;
+    color: white;
+    padding: 18px 22px;
+    border-radius: 12px 12px 0 0;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 100px;
+    margin-bottom: 0;
 }
+
+
+
+
+
 
 
 
@@ -245,24 +241,25 @@ margin-top:80px;
     <div class="question">
         प्रश्न: दिष्ट धारा किसे कहते हैं?
     </div>
-    <div class="question-image">
-        <img src="images/image17.jpg" alt="प्रत्यावर्ती धारा तथा दिष्ट धारा के तरंगरूप की तुलना">
-    </div>
     <div class="answer">
         वह धारा जो समय के साथ अपने परिमाण और दिशा को स्थिर बनाए रखती है, उसे <strong>दिष्ट धारा</strong> कहते हैं। यह धारा हमेशा एक ही दिशा में बहती है।<br><br><strong>उदाहरण</strong> – बैटरी, सेल, डी.सी. जनरेटर से प्राप्त धारा।
     </div>
+  <div class="question-image">
+        <img src="images/image14.png" alt="दिष्ट धारा का तरंगरूप">
+  </div>
 </div>
 
 <div class="qa-box">
     <div class="question">
         प्रश्न: प्रत्यावर्ती धारा किसे कहते हैं?
     </div>
-    <div class="question-image">
-        <img src="images/image14.png" alt="प्रत्यावर्ती धारा का तरंगरूप">
-    </div>
+    
     <div class="answer">
         वह धारा जो समय के साथ-साथ अपने परिमाण तथा दिशा दोनों को लगातार बदलती रहती है, उसे <strong>प्रत्यावर्ती धारा</strong> कहते हैं। यह साइन तरंग के रूप में प्रवाहित होती है। इसे निम्न समीकरण से प्रदर्शित करते हैं।<div class="formula">$$ I = I_0 \sin\omega t $$</div>उदाहरण – हमारे घरों में उपयोग होने वाली विद्युत धारा (220 V, 50 Hz)।
     </div>
+  <div class="question-image">
+        <img src="images/image19.png" alt="प्रत्यावर्ती धारा का तरंगरूप (शिखर मान)">
+  </div>
 </div>
 
 <div class="qa-box">
@@ -347,14 +344,56 @@ margin-top:80px;
     </div>
 </div>
 
+
 <div class="qa-box">
+
     <div class="question">
-        प्रश्न: प्रत्यावर्ती धारा दिष्ट धारा से अधिक खतरनाक क्यों होती है? (2025)<br>अथवा<br>समान विभव की प्रत्यावर्ती धारा और दिष्ट धारा में से कौन अधिक सुरक्षित है और क्यों?
+        प्रश्न: प्रत्यावर्ती धारा दिष्ट धारा से अधिक खतरनाक क्यों होती है? (2025)
+        <br>अथवा<br>
+        समान विभव की प्रत्यावर्ती धारा और दिष्ट धारा में से कौन अधिक सुरक्षित है और क्यों?
     </div>
+
     <div class="answer">
-        प्रत्यावर्ती धारा में विभवान्तर लगातार बदलता रहता है। इसका आभासी (rms) मान आमतौर पर 220 वोल्ट होता है।<br><br>अतः इसका वास्तविक <strong>अधिकतम मान अर्थात शिखर मान</strong> -<div class="formula">$$ I_0 = \sqrt{2}\,I_{rms} $$</div><div class="formula">$$ I_0 = 1.41(300) $$</div><div class="formula">$$ I_0 = 331\text{ वोल्ट} $$</div>यानी 220 वोल्ट की AC धारा का वोल्टेज वास्तव में +311 से -311 वोल्ट तक बदलता रहता है।<br><br>जबकि दिष्ट धारा में वोल्टेज हमेशा स्थिर रहता है। यदि DC वोल्टेज 220 वोल्ट है, तो यह हमेशा 220 वोल्ट ही रहेगा।<br><br>इस प्रकार प्रत्यावर्ती धारा दिष्ट धारा से अधिक खतरनाक होती है।
+
+        प्रत्यावर्ती धारा (AC) का विभव समय के साथ लगातार बदलता रहता है।
+        घरेलू AC का प्रभावी (rms) विभव सामान्यतः 220 वोल्ट होता है।
+
+        <br><br>
+
+        इसका शिखर विभव होता है-
+
+        <div class="formula">
+            $$ V_0=\sqrt{2}\,V_{rms} $$
+        </div>
+
+        <div class="formula">
+            $$ V_0=\sqrt{2}\times220\approx311\text{ V} $$
+        </div>
+
+        अर्थात् 220 V की AC का तात्कालिक विभव लगभग
+        \(+311\) V से \(-311\) V के बीच बदलता रहता है।
+
+        <br><br>
+
+        जबकि समान 220 V की दिष्ट धारा (DC) का विभव समय के साथ
+        स्थिर रहता है।
+
+        <br><br>
+
+        इसलिए समान प्रभावी विभव की स्थिति में AC का तात्कालिक विभव
+        लगातार बदलता रहता है और यह शरीर पर अधिक गंभीर प्रभाव डाल सकता है।
+
+        <br><br>
+
+        <strong>
+            अतः समान विभव की AC और DC में, DC अपेक्षाकृत अधिक सुरक्षित
+            मानी जाती है, जबकि AC अधिक खतरनाक होती है।
+        </strong>
+
     </div>
+
 </div>
+
 
 <div class="qa-box">
     <div class="question">
@@ -434,16 +473,107 @@ margin-top:80px;
     </div>
 </div>
 
+
 <div class="qa-box">
+
     <div class="question">
-        प्रश्न: एक प्रत्यावर्ती धारा परिपथ में केवल एक प्रेरकत्व संयोजित है। धारा के लिए व्यंजक ज्ञात कीजिए। परिपथ का प्रतिघात तथा धारा व वोल्टता के बीच कलांतर ज्ञात कीजिए।
+        प्रश्न: एक प्रत्यावर्ती धारा परिपथ में केवल एक प्रेरकत्व संयोजित है।
+        धारा के लिए व्यंजक ज्ञात कीजिए। परिपथ का प्रतिघात तथा धारा व
+        वोल्टता के बीच कलांतर ज्ञात कीजिए।
     </div>
+
     <div class="question-image">
         <img src="images/image7.png" alt="शुद्ध प्रेरकत्व (L) परिपथ">
     </div>
+
     <div class="answer">
-        माना किसी क्षण प्रेरकत्व \(L\) के सिरों पर प्रत्यावर्ती वोल्टता का समीकरण निम्न है-<div class="formula">$$ V = V_0\sin\omega t \quad ...(1) $$</div>यदि उसी क्षण संधारित्र \(C\) की प्लेटो पर आवेश का मान \(Q\) हो, तो<div class="formula">$$ Q = CV $$</div><div class="formula">$$ Q = C(V_0\sin\omega t) $$</div><div class="formula">$$ Q = (CV_0)\sin\omega t $$</div>अतः परिपथ में प्रवाहित धारा का मान<div class="formula">$$ I = \frac{dQ}{dt} $$</div><div class="formula">$$ I = \frac{d(CV_0\sin\omega t)}{dt} $$</div><div class="formula">$$ I = CV_0\,\frac{d(\sin\omega t)}{dt} $$</div><div class="formula">$$ I = CV_0(\omega\cos\omega t) $$</div><div class="formula">$$ I = \omega C V_0\sin\Big(\omega t+\frac{\pi}{2}\Big) $$</div><div class="formula">$$ I = I_0\sin\Big(\omega t+\frac{\pi}{2}\Big) \quad ...(2) $$</div>जहाँ \(I_0 = \omega C V_0\) = प्रत्यावर्ती धारा का शिखर मान है।<br><br><strong>प्रतिघात</strong> - परिपथ का प्रभावी प्रतिरोध<div class="formula">$$ X_c = \frac{V_0}{I_0} $$</div><div class="formula">$$ X_c = \frac{V_0}{\omega C V_0} $$</div><div class="formula">$$ X_c = \frac{1}{\omega C} $$</div><strong>कलांतर</strong> - समी. (1) व (2) से स्पष्ट है, कि धारा, प्रत्यावर्ती विभावांतर से \(\pi/2\) कला में पीछे होती है।<div class="question-image"><img src="images/image16.png" alt="V तथा I के मध्य 90 डिग्री कलांतर का तरंगरूप एवं कलाकृति"></div>
+
+        माना किसी क्षण शुद्ध प्रेरकत्व \(L\) के सिरों पर प्रत्यावर्ती
+        विभवांतर का समीकरण निम्न है-
+
+        <div class="formula">
+            $$ V = V_0\sin\omega t \quad ...(1) $$
+        </div>
+
+        शुद्ध प्रेरकत्व के लिए प्रेरित विद्युत वाहक बल का मान लगाया गया
+        विभवांतर के बराबर और विपरीत होता है। अतः
+
+        <div class="formula">
+            $$ V = L\frac{dI}{dt} $$
+        </div>
+
+        <div class="formula">
+            $$ V_0\sin\omega t = L\frac{dI}{dt} \quad [ By(1)$$
+        </div>
+
+
+        <div class="formula">
+            $$ dI = \frac{V_0}{L}\sin\omega t\,dt $$
+        </div>
+
+        दोनों पक्षों का समाकलन करने पर,
+
+        <div class="formula">
+            $$ I = \frac{V_0}{L}\int\sin\omega t\,dt \quad(\text{∵}\int\sin\omega t\,dt
+            =-\frac{\cos\omega t}{\omega})
+$$
+        </div>
+
+   
+        <div class="formula">
+            $$ I=-\frac{V_0}{\omega L}\cos\omega t $$
+        </div>
+
+        <div class="formula">
+            $$ I=\frac{V_0}{\omega L}
+            \sin\left(\omega t-\frac{\pi}{2}\right) $$
+        </div>
+
+     
+        अतः परिपथ में प्रवाहित धारा का व्यंजक-
+
+        <div class="formula">
+            $$ I=I_0\sin\left(\omega t-\frac{\pi}{2}\right)
+            \quad ...(2) $$
+        </div>
+
+        जहाँ \(I_0=\dfrac{V_0}{\omega L}\) प्रत्यावर्ती धारा का
+        शिखर मान है।
+
+        <br><br>
+
+        <strong>प्रतिघात</strong> -
+
+        परिपथ का प्रेरणिक प्रतिघात \(X_L\) होता है।
+
+        <div class="formula">
+            $$ X_L=\frac{V_0}{I_0} $$
+        </div>
+        <div class="formula">
+            $$ X_L
+            =\frac{V_0}{V_0/(\omega L)} $$
+        </div>
+
+ 
+        <div class="formula">
+            $$ \boxed{X_L=\omega L} $$
+        </div>
+
+        <br>
+
+        <strong>कलांतर</strong> -
+
+        समीकरण (1) तथा (2) से, स्पष्ट है कि शुद्ध प्रेरकत्व वाले प्रत्यावर्ती धारा परिपथ में
+        <strong>धारा, वोल्टता से \(\frac{\pi}{2}\) रेडियन अर्थात \(90^\circ\)
+        पीछे रहती है।</strong>
+
+        <div class="question-image">
+            <img src="images/image16.png"
+                 alt="शुद्ध प्रेरकत्व में V तथा I के मध्य 90 डिग्री कलांतर का तरंगरूप एवं कलाकृति">
+        </div>
+
     </div>
+
 </div>
 
 <div class="qa-box">
@@ -475,7 +605,7 @@ margin-top:80px;
         प्रश्न: एक RL प्रत्यावर्ती धारा परिपथ में प्रतिघात, कलांतर तथा धारा के लिए व्यंजक ज्ञात कीजिए।
     </div>
     <div class="question-image">
-        <img src="images/image2.png" alt="RL परिपथ">
+        <img src="images/image23.png" alt="RL परिपथ">
     </div>
     <div class="answer">
         माना RL परिपथ में किसी समय विभवांतर निम्न है-<div class="formula">$$ V = V_0\sin\omega t \quad ...(1) $$</div>प्रतिरोध \(R\) के सिरों पर विभवांतर \(V_R = IR\)<br>प्रेरकत्व \(L\) के सिरों पर विभवांतर \(V_L = IX_L\)<br><br>हम जानते हैं कि धारा \(I\) और \(V_R\) समान कला में होते हैं। धारा \(I\) विभवांतर \(V_L\) से \(\pi/2\) पीछे रहती है।<div class="question-image"><img src="images/image9.png" alt="RL परिपथ की कलाकृति (VR, VL, V)"></div>यदि \(V_R\) और \(V_L\) का परिणामी विभवांतर \(V\) हो तो पाइथागोरस प्रमेय से<div class="formula">$$ V^2 = V_R^2 + V_L^2 $$</div><div class="formula">$$ V^2 = (IR)^2 + (IX_L)^2 $$</div><div class="formula">$$ V^2 = I^2R^2 + I^2X_L^2 $$</div><div class="formula">$$ V^2 = I^2(R^2 + X_L^2) $$</div><div class="formula">$$ \frac{V^2}{I^2} = R^2 + X_L^2 $$</div><div class="formula">$$ \frac{V}{I} = \sqrt{R^2 + X_L^2} $$</div><strong>प्रतिबाधा</strong> - परिपथ का प्रभावी प्रतिरोध प्रतिबाधा कहलाता है। इसे \(Z_{RL}\) से प्रदर्शित करते हैं।<div class="formula">$$ Z_{RL} = \frac{V}{I} $$</div><div class="formula">$$ Z_{RL} = \sqrt{R^2 + X_L^2} $$</div><strong>कलांतर</strong> - कलांतर \((\theta)\) प्रत्यावर्ती धारा परिपथ में वोल्टेज और धारा के बीच का कोण है। समकोण त्रिभुज में<div class="formula">$$ \tan\theta = \frac{\text{लंब}}{\text{आधार}} $$</div><div class="formula">$$ \tan\theta = \frac{V_L}{V_R} $$</div><div class="formula">$$ \tan\theta = \frac{IX_L}{IR} $$</div><div class="formula">$$ \tan\theta = \frac{X_L}{R} $$</div><div class="formula">$$ \theta = \tan^{-1}\Big(\frac{X_L}{R}\Big) $$</div>अतः परिपथ में प्रवाहित धारा निम्न होगी।<div class="formula">$$ I = I_0\sin(\omega t-\theta) $$</div>जहाँ \(I_0 = V_0/Z_{RL}\) = प्रत्यावर्ती धारा का शिखर मान है।

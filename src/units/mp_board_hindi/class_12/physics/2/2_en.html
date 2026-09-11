@@ -375,6 +375,119 @@ It is denoted by <b>V<sub>d</sub></b>.
 </div>
 
 </div>
+  <div class="qa-box">
+
+  <div class="question">
+    <b>Question:</b> Establish the relationship between drift velocity, current, and current density.
+  </div>
+
+  <div class="answer">
+    <p><b>Answer:</b></p>
+
+    <p>
+      Suppose the number of free electrons per unit volume in a conductor is \(n\),
+      the charge of each electron is \(e\), and the drift velocity is \(v_d\).
+      Let the cross-sectional area of the conductor be \(A\).
+    </p>
+
+    <p>
+      The distance travelled by the electrons in time \(dt\) is:
+    </p>
+
+    <div class="formula">
+      \[
+      dx=v_d\,dt
+      \]
+    </div>
+
+    <p>
+      The volume of the conductor through which the electrons move in time \(dt\) is:
+    </p>
+
+    <div class="formula">
+      \[
+      dV=A\,dx
+      \]
+    </div>
+
+    <div class="formula">
+      \[
+      dV=A\,v_d\,dt
+      \]
+    </div>
+
+    <p>
+      The number of electrons passing through the conductor in time \(dt\) is:
+    </p>
+
+    <div class="formula">
+      \[
+      dN=n\,dV
+      \]
+    </div>
+
+    <div class="formula">
+      \[
+      dN=nA\,v_d\,dt
+      \]
+    </div>
+
+    <p>
+      Therefore, the charge flowing through the conductor in time \(dt\) is:
+    </p>
+
+    <div class="formula">
+      \[
+      dq=dN\times e
+      \]
+    </div>
+
+    <div class="formula">
+      \[
+      dq=nA\,v_d\,dt \times e
+      \]
+    </div>
+
+    <p>
+      Therefore, the electric current is:
+    </p>
+
+    <div class="formula">
+      \[
+      I=\frac{dq}{dt}
+      \]
+    </div>
+
+    <div class="formula">
+      \[
+      \boxed{I=neAv_d}
+      \]
+    </div>
+
+    <p>
+      Now, the current density \(J\) is:
+    </p>
+
+    <div class="formula">
+      \[
+      J=\frac{I}{A}
+      \]
+    </div>
+
+    <div class="formula">
+      \[
+      \boxed{J=nev_d}
+      \]
+    </div>
+
+    <p>
+      <b>Hence, it is proved that</b> the current \(I\) is directly proportional
+      to the drift velocity \(v_d\), and the current density \(J\) is equal to
+      the product of the drift velocity and the number density of charge carriers.
+    </p>
+
+  </div>
+  </div>
 <div class="qa-box">
 
 <div class="question">
@@ -443,7 +556,131 @@ This relationship is called <b>Ohm's Law</b>.
     </div>
 
 </div>
+<div class="qa-box">
 
+  <div class="question">
+    Q. Establish Ohm's law on the basis of the free-electron model of metals.
+  </div>
+
+  <div class="answer">
+    <p><b>Answer:</b></p>
+
+    <p>
+      Suppose that a free electron in a metal wire has charge \(e\), mass \(m\),
+      and the applied electric field is \(E\). The force acting on the electron is:
+    </p>
+
+    <div class="formula">
+      $$
+      F=eE
+      $$
+    </div>
+
+    <p>Therefore, the acceleration of the electron is:</p>
+
+    <div class="formula">
+      $$
+      a=\frac{F}{m}
+      $$
+    </div>
+
+    <div class="formula">
+      $$
+      a=\frac{eE}{m}
+      $$
+    </div>
+
+    <p>
+      If the average time between two successive collisions is \(t\), then the drift velocity is:
+    </p>
+
+    <div class="formula">
+      $$
+      v_d=a\times t
+      $$
+    </div>
+
+    <div class="formula">
+      $$
+      v_d=\frac{eE}{m}\times t
+      $$
+    </div>
+
+    <p>
+      If the length of the conductor is \(l\), its cross-sectional area is \(A\),
+      and the number of free electrons per unit volume is \(n\), then the current is:
+    </p>
+
+    <div class="formula">
+      $$
+      I=neAv_d
+      $$
+    </div>
+
+    <div class="formula">
+      $$
+      I=neA\left(\frac{eEt}{m}\right)
+      $$
+    </div>
+
+    <div class="formula">
+      $$
+      I=\frac{ne^2A\tau}{m}E
+      $$
+    </div>
+
+    <p>Since</p>
+
+    <div class="formula">
+      $$
+      E=\frac{V}{l}
+      $$
+    </div>
+
+    <p>Therefore,</p>
+
+    <div class="formula">
+      $$
+      I=\frac{ne^2A\tau}{m}\frac{V}{l}
+      $$
+    </div>
+
+    <div class="formula">
+      $$
+      I=\frac{ne^2A\tau}{ml}V
+      $$
+    </div>
+
+    <p>Or,</p>
+
+    <div class="formula">
+      $$
+      V=\frac{ml}{ne^2A\tau}I
+      $$
+    </div>
+
+    <p>
+      Therefore, when \(n,e,A,\tau,m\), and \(l\) are constant:
+    </p>
+
+    <div class="formula">
+      $$
+      V\propto I
+      $$
+    </div>
+
+    <div class="formula">
+      $$
+      \boxed{V=RI}
+      $$
+    </div>
+
+    <p>
+      This is known as <b>Ohm's law</b>.
+    </p>
+
+  </div>
+</div>
 <div class="qa-box">
 
     <div class="question">
@@ -824,82 +1061,54 @@ I
 <div class="qa-box">
 
     <div class="question">
-        Question - If the length of a conductor wire is stretched and doubled, by how many times will its resistance increase? Calculate. (M.P. 2013, 2017)
+        Q. If the length of a conductor wire is stretched to twice its original length, by how many times will its resistance increase? Calculate. (M.P. 2013, 2017)
     </div>
 
     <div class="answer">
 
         <p>
-            Let the initial resistance of the conductor wire be <b>R</b>, length <b>L</b>, and cross-sectional area <b>A</b>.
+            Let the initial resistance, length, and cross-sectional area of the conductor be <b>R</b>, <b>L</b>, and <b>A</b>, respectively.
         </p>
 
         <p>
-            Formula for resistance,
+            The formula for resistance is:
         </p>
 
-        <p>
+        <div class="formula">
             \[
-            R=\rho \frac{L}{A}
+            R=\rho\frac{L}{A}
             \]
-        </p>
+        </div>
 
         <p>
-            When the wire is stretched and its length is doubled, then
+            When the wire is stretched to twice its original length, its volume remains constant. Therefore, its cross-sectional area becomes half:
         </p>
 
+    
         <p>
+            Therefore, the new resistance is:
+        </p>
+
+        <div class="formula">
             \[
-            L' = 2L
+            R_1=\rho\frac{2L}{A/2}
             \]
-        </p>
+        </div>
 
-        <p>
-            The volume of the wire remains constant, so
-        </p>
-
-        <p>
+        <div class="formula">
             \[
-            AL = A'L'
+            R_1=4\rho\frac{L}{A}
             \]
-        </p>
+        </div>
 
-        <p>
+        <div class="formula">
             \[
-            A'=\frac{AL}{2L}
-            =\frac{A}{2}
+            \boxed{R_1=4R}
             \]
-        </p>
+        </div>
 
         <p>
-            New resistance,
-        </p>
-
-        <p>
-            \[
-            R'=\rho \frac{L'}{A'}
-            \]
-        </p>
-
-        <p>
-            \[
-            R'=\rho \frac{2L}{A/2}
-            \]
-        </p>
-
-        <p>
-            \[
-            R'=4\rho \frac{L}{A}
-            \]
-        </p>
-
-        <p>
-            \[
-            R'=4R
-            \]
-        </p>
-
-        <p>
-            <b>Therefore, the resistance of the conductor wire increases by 4 times.</b>
+            Hence, the new resistance will be <b>4 times</b> the initial resistance.
         </p>
 
     </div>
@@ -909,80 +1118,55 @@ I
 <div class="qa-box">
 
     <div class="question">
-        Question - What will be the resistance of a conductor wire if its length is halved and its cross-sectional area is doubled? (M.P. 2023)
+        Q. What will be the resistance of a conductor wire if its length is reduced to half of its original length and its cross-sectional area is doubled? (M.P. 2023)
     </div>
 
     <div class="answer">
 
         <p>
-            Let the initial resistance of the conductor wire be <b>R</b>, length <b>L</b>, and cross-sectional area <b>A</b>.
+            Let the initial resistance, length, and cross-sectional area of the conductor be <b>R</b>, <b>L</b>, and <b>A</b>, respectively.
         </p>
 
         <p>
-            Formula for resistance,
+            The formula for resistance is:
         </p>
 
-        <p>
+        <div class="formula">
             \[
-            R=\rho \frac{L}{A}
+            R=\rho\frac{L}{A}
             \]
-        </p>
+        </div>
 
         <p>
-            As per the question,
+            According to the question, when the length is reduced to half and the cross-sectional area is doubled, the new resistance is:
         </p>
 
-        <p>
+        <div class="formula">
             \[
-            L'=\frac{L}{2}
+            R_1=\rho\frac{L/2}{2A}
             \]
-        </p>
+        </div>
 
-        <p>
-            And
-        </p>
-
-        <p>
+        <div class="formula">
             \[
-            A'=2A
+            R_1=\rho\frac{L}{4A}
             \]
-        </p>
+        </div>
 
-        <p>
-            New resistance,
-        </p>
-
-        <p>
+        <div class="formula">
             \[
-            R'=\rho \frac{L'}{A'}
+            R_1=\frac{R}{4}
             \]
-        </p>
+        </div>
 
         <p>
-            \[
-            R'=\rho \frac{L/2}{2A}
-            \]
-        </p>
-
-        <p>
-            \[
-            R'=\rho \frac{L}{4A}
-            \]
-        </p>
-
-        <p>
-            \[
-            R'=\frac{R}{4}
-            \]
-        </p>
-
-        <p>
-            <b>Therefore, the new resistance will be 1/4 (one-fourth) of the initial resistance.</b>
+            Hence, the new resistance will be <b>one-fourth (1/4)</b> of the initial resistance.
         </p>
 
     </div>
 
 </div>
+
 <div class="qa-box">
 
   <div class="question">
@@ -1311,7 +1495,59 @@ I
         <p>
             Currents flowing towards the junction are taken as positive, and currents flowing away from the junction are taken as negative.
         </p>
+<div class="diagram-box" style="width:100%; max-width:600px; margin:20px auto; text-align:center;">
 
+  <svg width="100%" viewBox="0 0 600 360"
+       xmlns="http://www.w3.org/2000/svg"
+       style="width:100%; height:auto;">
+
+    <!-- Junction -->
+    <circle cx="300" cy="180" r="6" fill="#000"/>
+    <text x="310" y="165" font-size="20" font-weight="bold">J</text>
+
+    <!-- I1 line -->
+    <line x1="80" y1="70" x2="300" y2="180"
+          stroke="#000" stroke-width="3"/>
+
+    <!-- I1 arrow on line -->
+    <polygon points="270,165 292,176 268,178" fill="#000"/>
+    <text x="145" y="95" font-size="20" font-weight="bold">I₁</text>
+
+    <!-- I2 line -->
+    <line x1="80" y1="290" x2="300" y2="180"
+          stroke="#000" stroke-width="3"/>
+
+    <!-- I2 arrow on line -->
+    <polygon points="270,195 292,184 268,182" fill="#000"/>
+    <text x="145" y="270" font-size="20" font-weight="bold">I₂</text>
+
+    <!-- I3 line -->
+    <line x1="300" y1="180" x2="520" y2="70"
+          stroke="#000" stroke-width="3"/>
+
+    <!-- I3 arrow on line -->
+    <polygon points="485,88 510,75 490,73" fill="#000"/>
+    <text x="445" y="95" font-size="20" font-weight="bold">I₃</text>
+
+    <!-- I4 line -->
+    <line x1="300" y1="180" x2="520" y2="180"
+          stroke="#000" stroke-width="3"/>
+
+    <!-- I4 arrow on line -->
+    <polygon points="490,180 515,180 500,172" fill="#000"/>
+    <text x="450" y="170" font-size="20" font-weight="bold">I₄</text>
+
+    <!-- I5 line -->
+    <line x1="300" y1="180" x2="520" y2="290"
+          stroke="#000" stroke-width="3"/>
+
+    <!-- I5 arrow on line -->
+    <polygon points="490,275 515,287 492,289" fill="#000"/>
+    <text x="445" y="275" font-size="20" font-weight="bold">I₅</text>
+
+  </svg>
+
+</div>
         <p>
             If currents \(I_1\) and \(I_2\) are entering a junction, and
             \(I_3\), \(I_4\) and \(I_5\) are leaving the junction, then
@@ -1351,6 +1587,171 @@ I
             \]
         </p>
 
+  <svg width="100%" viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg"
+       style="max-width:900px;height:auto;display:block;margin:auto;">
+
+    <!-- Left vertical conductor -->
+    <line x1="150" y1="90" x2="150" y2="410"
+          stroke="black" stroke-width="3"/>
+
+    <!-- Right vertical conductor -->
+    <line x1="750" y1="90" x2="750" y2="410"
+          stroke="black" stroke-width="3"/>
+
+    <!-- ================= TOP BRANCH ================= -->
+
+    <!-- Wire before E1 -->
+    <line x1="150" y1="90" x2="255" y2="90"
+          stroke="black" stroke-width="3"/>
+
+    <!-- i1 arrow -->
+    <line x1="245" y1="90" x2="210" y2="90"
+          stroke="black" stroke-width="3"/>
+    <polygon points="210,90 222,84 222,96" fill="black"/>
+
+    <text x="205" y="65" font-size="25" font-family="Arial">i₁</text>
+
+    <!-- E1 cell -->
+    <line x1="270" y1="68" x2="270" y2="112"
+          stroke="black" stroke-width="3"/>
+    <line x1="285" y1="76" x2="285" y2="104"
+          stroke="black" stroke-width="3"/>
+
+    <!-- E1 wires -->
+    <line x1="255" y1="90" x2="270" y2="90"
+          stroke="black" stroke-width="3"/>
+    <line x1="285" y1="90" x2="310" y2="90"
+          stroke="black" stroke-width="3"/>
+
+    <text x="258" y="145" font-size="25" font-family="Arial">E₁</text>
+
+    <!-- R1 resistor -->
+    <polyline
+      points="310,90 325,90 335,78 350,102 365,78 380,102
+              395,78 410,102 425,78 440,102 450,90"
+      fill="none" stroke="black" stroke-width="3"/>
+
+    <text x="355" y="55" font-size="25" font-family="Arial">R₁</text>
+
+    <!-- Top wire to B -->
+    <line x1="450" y1="90" x2="750" y2="90"
+          stroke="black" stroke-width="3"/>
+
+    <!-- Top right arrow -->
+    <line x1="700" y1="90" x2="665" y2="90"
+          stroke="black" stroke-width="3"/>
+    <polygon points="665,90 677,84 677,96" fill="black"/>
+
+    <!-- ================= MIDDLE BRANCH ================= -->
+
+    <!-- Wire before E2 -->
+    <line x1="150" y1="250" x2="255" y2="250"
+          stroke="black" stroke-width="3"/>
+
+    <!-- i2 arrow -->
+    <line x1="245" y1="250" x2="210" y2="250"
+          stroke="black" stroke-width="3"/>
+    <polygon points="210,250 222,244 222,256" fill="black"/>
+
+    <text x="205" y="225" font-size="25" font-family="Arial">i₂</text>
+
+    <!-- E2 cell -->
+    <line x1="270" y1="228" x2="270" y2="272"
+          stroke="black" stroke-width="3"/>
+    <line x1="285" y1="236" x2="285" y2="264"
+          stroke="black" stroke-width="3"/>
+
+    <!-- E2 wires -->
+    <line x1="255" y1="250" x2="270" y2="250"
+          stroke="black" stroke-width="3"/>
+    <line x1="285" y1="250" x2="310" y2="250"
+          stroke="black" stroke-width="3"/>
+
+    <text x="258" y="305" font-size="25" font-family="Arial">E₂</text>
+
+    <!-- R2 resistor -->
+    <polyline
+      points="310,250 325,250 335,238 350,262 365,238 380,262
+              395,238 410,262 425,238 440,262 450,250"
+      fill="none" stroke="black" stroke-width="3"/>
+
+    <text x="355" y="215" font-size="25" font-family="Arial">R₂</text>
+
+    <!-- Middle wire to B -->
+    <line x1="450" y1="250" x2="750" y2="250"
+          stroke="black" stroke-width="3"/>
+
+    <!-- Middle right arrow -->
+    <line x1="700" y1="250" x2="665" y2="250"
+          stroke="black" stroke-width="3"/>
+    <polygon points="665,250 677,244 677,256" fill="black"/>
+
+    <!-- ================= BOTTOM BRANCH ================= -->
+
+    <!-- Bottom wire -->
+    <line x1="150" y1="410" x2="310" y2="410"
+          stroke="black" stroke-width="3"/>
+
+    <!-- Bottom current arrow -->
+    <line x1="205" y1="410" x2="250" y2="410"
+          stroke="black" stroke-width="3"/>
+    <polygon points="250,410 238,404 238,416" fill="black"/>
+
+    <text x="205" y="450" font-size="25" font-family="Arial">
+      (i₁ + i₂)
+    </text>
+
+    <!-- R3 resistor -->
+    <polyline
+      points="310,410 325,410 335,398 350,422 365,398 380,422
+              395,398 410,422 425,398 440,422 450,410"
+      fill="none" stroke="black" stroke-width="3"/>
+
+    <text x="355" y="380" font-size="25" font-family="Arial">R₃</text>
+
+    <!-- Bottom wire to B -->
+    <line x1="450" y1="410" x2="750" y2="410"
+          stroke="black" stroke-width="3"/>
+
+    <!-- ================= POINTS A AND B ================= -->
+
+    <text x="115" y="260" font-size="27" font-family="Arial">A</text>
+    <text x="765" y="260" font-size="27" font-family="Arial">B</text>
+
+    <!-- ================= LOOP 1 ================= -->
+
+    <circle cx="585" cy="155" r="30"
+            fill="white" stroke="black" stroke-width="2"/>
+    <text x="577" y="164" font-size="25" font-family="Arial">1</text>
+
+    <!-- Curved arrow for loop 1 -->
+    <path d="M 620 105 A 75 75 0 0 1 670 155"
+          fill="none" stroke="black" stroke-width="3"/>
+    <polygon points="670,155 657,151 662,164" fill="black"/>
+
+    <!-- ================= LOOP 2 ================= -->
+
+    <circle cx="585" cy="325" r="30"
+            fill="white" stroke="black" stroke-width="2"/>
+    <text x="577" y="334" font-size="25" font-family="Arial">2</text>
+
+    <!-- Curved arrow for loop 2 -->
+    <path d="M 620 275 A 75 75 0 0 1 670 325"
+          fill="none" stroke="black" stroke-width="3"/>
+    <polygon points="670,325 657,321 662,334" fill="black"/>
+
+    <!-- Left curved arrows -->
+    <path d="M 185 120 A 65 65 0 0 0 185 200"
+          fill="none" stroke="black" stroke-width="3"/>
+    <polygon points="185,200 179,188 191,188" fill="black"/>
+
+    <path d="M 185 280 A 65 65 0 0 0 185 360"
+          fill="none" stroke="black" stroke-width="3"/>
+    <polygon points="185,360 179,348 191,348" fill="black"/>
+
+  </svg>
+
+</div>
         <p>
             For the closed loop (1) as per the diagram,
         </p>
@@ -1935,6 +2336,7 @@ Question - How are cells connected in parallel? Derive the expression for the cu
 <p>
 When all positive terminals of several cells are connected together and all negative terminals are connected together, this combination is called a <b>parallel combination</b>.
 </p>
+  
   <div class="question-image">
     <img src="20.png" alt="parallel cell"> 
     </div>
@@ -1955,13 +2357,43 @@ E_p = E
 <p>
 And the equivalent internal resistance is
 </p>
-
+<p>
+      \[
+      \frac{1}{r_p}
+      =
+      \frac{1}{r}
+      +
+      \frac{1}{r}
+      +
+      \frac{1}{r} + .......n cell
+      \]
+</p>
+  <p>
+      \[
+      \frac{1}{r_p}
+      =
+      \frac{n}{r}
+      \]
+  </p>
 <p class="formula">
 \[
 r_p=\frac{r}{n}
 \]
 </p>
+<p>
+Total resistance
+</p>
 
+<p class="formula">
+\[
+R_t= R + r_p
+\]
+</p>
+    <p class="formula">
+\[
+R_t= R + \frac{r}{n}
+\]
+    </p>
 <p>
 Therefore, by Ohm's law, the current flowing in the external circuit is
 </p>
@@ -1970,10 +2402,6 @@ Therefore, by Ohm's law, the current flowing in the external circuit is
 \[
 I=\frac{E}{R+\frac{r}{n}}
 \]
-</p>
-
-<p>
-Or
 </p>
 
 <p class="formula">
@@ -1985,7 +2413,9 @@ I=\frac{nE}{nR+r}
 <p>
 This is the expression for the current flowing in the external circuit.
 </p>
-
+<p>
+Therefore, parallel combination is advantageous when the external resistance is low and high current is required.
+</p>
 <p><b>Utility of Parallel Combination :</b></p>
 
 <ol>
@@ -2008,10 +2438,6 @@ In this combination, the operating life of the cells increases.
 
 </ol>
 
-<p>
-<b>Therefore, parallel combination is advantageous when the external resistance is low and high current is required.</b>
-</p>
-
 </div>
 
 </div>
@@ -2028,9 +2454,116 @@ Question - How are cells connected in series? Derive the expression for the curr
 <p>
 When the positive terminal of one cell is connected to the negative terminal of the next cell, and so on, this type of combination is called a <b>Series Combination</b>.
 </p>
-  <div class="question-image">
-    <img src="21.png" alt="seriese cell"> 
-    </div>
+  <svg
+  width="100%"
+  viewBox="0 0 400 240"
+  xmlns="http://www.w3.org/2000/svg"
+  style="max-width:400px;height:auto;display:block;"
+>
+  <!-- Left wire -->
+  <line x1="55" y1="55" x2="55" y2="185"
+        stroke="black" stroke-width="2"/>
+  <line x1="55" y1="185" x2="150" y2="185"
+        stroke="black" stroke-width="2"/>
+
+  <!-- Right wire -->
+  <line x1="345" y1="55" x2="345" y2="185"
+        stroke="black" stroke-width="2"/>
+  <line x1="250" y1="185" x2="345" y2="185"
+        stroke="black" stroke-width="2"/>
+
+  <!-- Battery cells -->
+  <g stroke="black" stroke-width="2">
+
+    <!-- Cell 1: long plate first, short plate second -->
+    <line x1="82" y1="43" x2="82" y2="77"/>
+    <line x1="96" y1="49" x2="96" y2="71"/>
+
+    <!-- Cell 2 -->
+    <line x1="115" y1="43" x2="115" y2="77"/>
+    <line x1="129" y1="49" x2="129" y2="71"/>
+
+    <!-- Cell 3 -->
+    <line x1="148" y1="43" x2="148" y2="77"/>
+    <line x1="162" y1="49" x2="162" y2="71"/>
+
+    <!-- Cell 4 -->
+    <line x1="181" y1="43" x2="181" y2="77"/>
+    <line x1="195" y1="49" x2="195" y2="71"/>
+
+    <!-- Cell 5 -->
+    <line x1="264" y1="43" x2="264" y2="77"/>
+    <line x1="278" y1="49" x2="278" y2="71"/>
+
+    <!-- Cell 6 -->
+    <line x1="297" y1="43" x2="297" y2="77"/>
+    <line x1="311" y1="49" x2="311" y2="71"/>
+
+  </g>
+
+  <!-- Battery connecting wires -->
+  <g stroke="black" stroke-width="2">
+
+    <line x1="55" y1="60" x2="82" y2="60"/>
+    <line x1="96" y1="60" x2="115" y2="60"/>
+    <line x1="129" y1="60" x2="148" y2="60"/>
+    <line x1="162" y1="60" x2="181" y2="60"/>
+
+    <line x1="195" y1="60" x2="264" y2="60"
+          stroke-dasharray="4,4"/>
+
+    <line x1="278" y1="60" x2="297" y2="60"/>
+    <line x1="311" y1="60" x2="345" y2="60"/>
+
+  </g>
+
+  <!-- E labels -->
+  <g font-family="Arial" font-size="14">
+    <text x="79" y="27">E</text>
+    <text x="112" y="27">E</text>
+    <text x="145" y="27">E</text>
+    <text x="178" y="27">E</text>
+    <text x="261" y="27">E</text>
+    <text x="294" y="27">E</text>
+  </g>
+
+  <!-- Current arrows -->
+  <text x="42" y="110"
+        font-family="Arial" font-size="15">I</text>
+  <text x="40" y="130"
+        font-family="Arial" font-size="18">↓</text>
+
+  <text x="350" y="130"
+        font-family="Arial" font-size="18">↑</text>
+  <text x="358" y="110"
+        font-family="Arial" font-size="15">I</text>
+
+  <!-- Resistor -->
+  <polyline
+    points="
+      150,185
+      157,177 164,193
+      171,177 178,193
+      185,177 192,193
+      199,177 206,193
+      213,177 220,193
+      227,177 234,193
+      241,177 250,185"
+    fill="none"
+    stroke="black"
+    stroke-width="2"
+  />
+
+  <!-- R label -->
+  <text
+    x="195"
+    y="218"
+    font-family="Arial"
+    font-size="15"
+    text-anchor="middle"
+  >R</text>
+
+  </svg>
 <p>
 Let's assume that each cell has an electromotive force <b>E</b> and internal resistance <b>r</b>, and <b>n</b> such identical cells are connected in series. The external resistance is <b>R</b>.
 </p>
@@ -2038,7 +2571,11 @@ Let's assume that each cell has an electromotive force <b>E</b> and internal res
 <p>
 When connected in series, the total electromotive force of the battery is
 </p>
-
+<p class="formula">
+\[
+E_s= E + E + E + ......n   cell
+\]
+</p>
 <p class="formula">
 \[
 E_s=nE
@@ -2049,13 +2586,30 @@ E_s=nE
 
 And the total internal resistance is
 </p>
-
+<p class="formula">
+\[
+r_s= r + r + r + ......n   cell
+\]
+</p>
 <p class="formula">
 \[
 r_s=nr
 \]
 </p>
+<p>
+Total resistance
+</p>
 
+<p class="formula">
+\[
+R_t= R + r_s
+\]
+</p>
+    <p class="formula">
+\[
+R_t= R + nr
+\]
+    </p>
 <p>
 Therefore, according to Ohm's law, the current flowing in the external circuit is
 </p>
@@ -2069,7 +2623,9 @@ I=\frac{nE}{R+nr}
 <p>
 This is the expression for the current flowing in the external circuit.
 </p>
-
+<p>
+Therefore, series combination is advantageous when the external resistance is high compared to the internal resistance, and a higher potential difference is required.
+</p>
 <p><b>Utility of Series Combination :</b></p>
 
 <ol>
@@ -2088,17 +2644,276 @@ When low current and high voltage are required.
 
 </ol>
 
-<p>
-<b>Therefore, series combination is advantageous when the external resistance is high compared to the internal resistance, and a higher potential difference is required.</b>
-</p>
-
 </div>
 
 </div>
+<div class="qa-box">
 
+    <div class="question">
+        <b>Objective Questions</b><br><br>
 
+        <b>Question 1.</b> On which of the following does the resistance of a conductor not depend?
+        <span class="year">(M.P. 2016 Supplementary)</span>
+    </div>
+    <div class="answer">
+        <b>Answer:</b> Applied potential difference
+    </div>
 
+    <div class="question">
+        <b>Question 2.</b> What is the unit of specific resistance (resistivity)?
+        <span class="year">(M.P. 2009, 2011, 2013, 2016, 2016 Supplementary, 2024 Supplementary, Question Bank)</span>
+    </div>
+    <div class="answer">
+        <b>Answer:</b> Ohm-metre (Ω m)
+    </div>
 
+    <div class="question">
+        <b>Question 3.</b> On which factors does the resistance of a conductor depend?
+        <span class="year">(M.P. 2023 Supplementary)</span>
+    </div>
+    <div class="answer">
+        <b>Answer:</b> Length of the conductor, cross-sectional area and temperature
+    </div>
+
+    <div class="question">
+        <b>Question 4.</b> Which of the following has its resistivity decreased when temperature is increased?
+        <span class="year">(M.P. 2023 Supplementary)</span>
+    </div>
+    <div class="answer">
+        <b>Answer:</b> Silicon
+    </div>
+
+    <div class="question">
+        <b>Question 5.</b> Kirchhoff's first law of current distribution follows which conservation law?
+        <span class="year">(M.P. 2025)</span>
+    </div>
+    <div class="answer">
+        <b>Answer:</b> Law of conservation of charge
+    </div>
+
+    <div class="question">
+        <b>Question 6.</b> What is the SI unit of potential gradient?
+        <span class="year">(Question Bank)</span>
+    </div>
+    <div class="answer">
+        <b>Answer:</b> Volt/metre (V/m)
+    </div>
+
+    <div class="question">
+        <b>Question 7.</b> What is the dimensional formula of resistivity?
+        <span class="year">(M.P. 2022 Supplementary, Question Bank)</span>
+    </div>
+    <div class="answer">
+        <b>Answer:</b> [ML<sup>3</sup>T<sup>−3</sup>A<sup>−2</sup>]
+    </div>
+
+    <div class="question">
+        <b>Question 8.</b> On what does the specific resistance or resistivity of a wire depend?
+        <span class="year">(M.P. 2015, 2019)</span>
+        <br>
+        <b>Or</b>
+        <br>
+        On which factor does the specific resistance of a wire depend?
+        <span class="year">(M.P. 2024)</span>
+    </div>
+    <div class="answer">
+        <b>Answer:</b> Nature of the material of the wire
+    </div>
+
+    <div class="question">
+        <b>Question 9.</b> What is the conductivity of a superconducting material?
+        <span class="year">(M.P. 2011, 2014, Question Bank)</span>
+    </div>
+    <div class="answer">
+        <b>Answer:</b> Infinite
+    </div>
+
+    <div class="question">
+        <b>Question 10.</b> What is the SI unit of current density?
+        <span class="year">(M.P. 2020, 2023)</span>
+    </div>
+    <div class="answer">
+        <b>Answer:</b> Ampere/metre<sup>2</sup> (A/m<sup>2</sup>)
+    </div>
+
+    <div class="question">
+        <b>Question 11.</b> Which cell is used as a standard cell?
+        <span class="year">(M.P. 2013 Supplementary)</span>
+    </div>
+    <div class="answer">
+        <b>Answer:</b> Daniell cell
+    </div>
+
+    <div class="question">
+        <b>Question 12.</b> Which is an example of an ohmic resistance?
+        <span class="year">(M.P. 2012 Supplementary, 2022)</span>
+    </div>
+    <div class="answer">
+        <b>Answer:</b> Copper wire
+    </div>
+
+    <div class="question">
+        <b>Question 13.</b> What material is used for the wire of a potentiometer?
+        <span class="year">(M.P. 2017 Supplementary)</span>
+    </div>
+    <div class="answer">
+        <b>Answer:</b> Manganin
+    </div>
+
+    <div class="question">
+        <b>Question 14.</b> If a wire is stretched so that its length becomes twice its original length, what will happen to its resistance?
+        <span class="year">(M.P. 2019 Supplementary, Question Bank)</span>
+    </div>
+    <div class="answer">
+        <b>Answer:</b> It becomes four times
+    </div>
+
+</div>
+<div class="qa-box">
+    <div class="question">
+        <b>Question 2. Fill in the blanks -</b>
+    </div>
+
+    <div class="answer">
+        <p><b>1.</b> An ammeter is connected in <b>series</b> in a circuit.</p>
+
+        <p><b>2.</b> The resistance of an ideal voltmeter is <b>infinite</b>.</p>
+
+        <p><b>3.</b> The Ni-Fe cell was invented by <b>Edison</b>.</p>
+
+        <p><b>4.</b> A potentiometer can be regarded as an <b>ideal voltmeter</b>.</p>
+
+        <p><b>5.</b> Electric current is a <b>scalar quantity</b>.</p>
+
+        <p><b>6.</b> In metallic conductors, <b>electrons</b> carry electric current.</p>
+
+        <p><b>7.</b> The resistance of a semiconductor <b>decreases</b> with increase in temperature.</p>
+
+        <p><b>8.</b> The SI unit of conductivity is <b>Ω⁻¹ m⁻¹</b>.</p>
+
+        <p><b>9.</b> The dimensional formula of resistivity is <b>[M L³ T⁻³ A⁻²]</b>.</p>
+
+        <p><b>10.</b> In a water voltameter, <b>oxygen</b> is liberated at the anode.</p>
+
+        <p><b>11.</b> The temperature coefficient of a semiconductor is <b>negative</b>.</p>
+
+        <p><b>12.</b> The potential drop per unit length of a potentiometer wire is called <b>potential gradient</b>.</p>
+
+        <p><b>13.</b> Kirchhoff's first law is based on the principle of <b>conservation of charge</b>.</p>
+
+        <p><b>14.</b> Kirchhoff's second law is based on the principle of <b>conservation of energy</b>.</p>
+
+        <p><b>15.</b> Current density is a <b>vector quantity</b>.</p>
+
+        <p><b>16.</b> The phenomenon in which a change of current in one circuit induces an emf in another circuit is called <b>mutual induction</b>.</p>
+
+        <p><b>17.</b> For a metallic conductor, the V-I graph is a <b>straight line</b>.</p>
+
+        <p><b>18.</b> With an increase in the concentration of an electrolyte, its internal resistance generally <b>decreases</b>.</p>
+
+        <p><b>19.</b> A time-varying electric field produces <b>displacement current</b>.</p>
+
+        <p><b>20.</b> The material commonly used for the wire of a potentiometer is <b>manganin</b>.</p>
+    </div>
+</div>
+
+  <div class="qa-box">
+    <div class="question">
+        <b>Question 4. Match the following correctly:</b>
+    </div>
+
+    <div class="answer">
+        <table style="width:100%; border-collapse:collapse;">
+            <thead>
+                <tr>
+                    <th style="width:50%; border:1px solid #000; padding:8px;">
+                        Column A
+                    </th>
+                    <th style="width:50%; border:1px solid #000; padding:8px;">
+                        Column B
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">1. Ohm's Law</td>
+                    <td style="border:1px solid #000; padding:8px;">V = IR</td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">2. Kirchhoff's Second Law</td>
+                    <td style="border:1px solid #000; padding:8px;">Principle of Conservation of Energy</td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">3. Resistance of a semiconductor on increasing temperature</td>
+                    <td style="border:1px solid #000; padding:8px;">Decreases</td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">4. Internal Resistance</td>
+                    <td style="border:1px solid #000; padding:8px;">R(E/V − 1)</td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">5. Current Density</td>
+                    <td style="border:1px solid #000; padding:8px;">J = σE</td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">6. Unit of Current</td>
+                    <td style="border:1px solid #000; padding:8px;">Ampere</td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">7. Current Distribution</td>
+                    <td style="border:1px solid #000; padding:8px;">Kirchhoff's First Law</td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">8. Resistance</td>
+                    <td style="border:1px solid #000; padding:8px;">Depends on Temperature</td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">9. Non-ohmic Resistance</td>
+                    <td style="border:1px solid #000; padding:8px;">Semiconductor</td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">10. Unit of Current Density</td>
+                    <td style="border:1px solid #000; padding:8px;">Ampere per Square Metre</td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">11. Relation between Resistivity and Resistance</td>
+                    <td style="border:1px solid #000; padding:8px;">ρ = RA/l</td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">12. Unit of Potential Gradient</td>
+                    <td style="border:1px solid #000; padding:8px;">Volt per Metre</td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">13. Unit of Resistivity</td>
+                    <td style="border:1px solid #000; padding:8px;">Ohm × Metre</td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">14. At a junction in an electric circuit, ΣI = 0</td>
+                    <td style="border:1px solid #000; padding:8px;">Kirchhoff's First Law</td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">15. Nichrome</td>
+                    <td style="border:1px solid #000; padding:8px;">Resistance Wire</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
 <!-- PROTECTION -->
 
 

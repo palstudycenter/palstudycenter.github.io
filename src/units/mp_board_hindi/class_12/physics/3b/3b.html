@@ -49,7 +49,7 @@ line-height:1.7;
 
     .navbar{
 
-      background:rgba(15,23,42,0.45);
+      background:rgba(23,74,126,0.95);
 
       backdrop-filter:blur(10px);
 
@@ -89,26 +89,22 @@ padding:20px;
 
 }
 
-.notes-title{
 
-background:#e3f2fd;
-
-color:#1565c0;
-
-padding:10px;
-
-border-left:5px solid #1565c0;
-
-border-radius:50px;
-
-font-size:30px;
-
-font-weight:bold;
-margin-top:100px;
-
-margin-bottom:50px;
-
+.notes-title {
+    background: #174a7e;
+    color: white;
+    padding: 18px 22px;
+    border-radius: 12px 12px 0 0;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 100px;
+    margin-bottom: 0;
 }
+
+
+
+
+
 
 
 
@@ -269,7 +265,7 @@ margin-top:80px;
 
 <div class="qa-box">
   <div class="container">
- <div class="notes-title">📘 चुंबकत्व </div>  
+ <div class="notes-title">📘 3(B) चुंबकत्व </div>  
 </div>
 </div>
 <div class="qa-box">
@@ -695,7 +691,7 @@ margin-top:80px;
 </div>
 
 <div class="answer">
-माना \(NS\) एक दण्ड चुंबक है, जिसके उत्तरीय एवं दक्षिणीय ध्रुवों का ध्रुव प्रबल्य \(m\) है तथा ध्रुवों के बीच की प्रभावी दूरी \(2d\) है। चुंबक के केन्द्र \(O\) से \(r\) दूरी पर अक्षीय स्थिति में स्थित बिन्दु \(P\) पर चुंबकीय क्षेत्र की तीव्रता ज्ञात करनी है।
+माना \(NS\) एक दण्ड चुंबक है, जिसके उत्तरीय एवं दक्षिणीय ध्रुवों का ध्रुव प्रबल्य \(m\) है तथा ध्रुवों के बीच की प्रभावी दूरी \(2l\) है। चुंबक के केन्द्र \(O\) से \(r\) दूरी पर अक्षीय स्थिति में स्थित बिन्दु \(P\) पर चुंबकीय क्षेत्र की तीव्रता ज्ञात करनी है।
 </div>
 
 <div class="answer">
@@ -705,18 +701,28 @@ margin-top:80px;
 <div class="answer">
 चित्रानुसार,
 \[
-NP=r-d \qquad तथा \qquad SP=r+d
+NP=r-l \qquad 
+\]
+\[
+SP=r+l
 \]
 </div>
 
 <div class="answer">
 उत्तरीय ध्रुव \(N\) के कारण बिन्दु \(P\) पर चुंबकीय क्षेत्र
 </div>
+  <div class="formula">
+
+\[
+B_1=\frac{\mu_0}{4\pi}\cdot\frac{m}{(NP)^2}
+\]
+
+  </div>
 
 <div class="formula">
 
 \[
-B_1=\frac{\mu_0}{4\pi}\cdot\frac{m}{(r-d)^2}
+B_1=\frac{\mu_0}{4\pi}\cdot\frac{m}{(r-l)^2}
 \]
 
 </div>
@@ -728,11 +734,19 @@ B_1=\frac{\mu_0}{4\pi}\cdot\frac{m}{(r-d)^2}
 <div class="answer">
 दक्षिणीय ध्रुव \(S\) के कारण बिन्दु \(P\) पर चुंबकीय क्षेत्र
 </div>
+  <div class="formula">
+
+\[
+B_2=\frac{\mu_0}{4\pi}\cdot\frac{m}{(SP)^2}
+\]
+
+</div>
+
 
 <div class="formula">
 
 \[
-B_2=\frac{\mu_0}{4\pi}\cdot\frac{m}{(r+d)^2}
+B_2=\frac{\mu_0}{4\pi}\cdot\frac{m}{(r+l)^2}
 \]
 
 </div>
@@ -756,7 +770,7 @@ B=B_1-B_2
 <div class="formula">
 
 \[
-B=\frac{\mu_0m}{4\pi(r-d)^2}-\frac{\mu_0m}{4\pi(r+d)^2}
+B=\frac{\mu_0m}{4\pi(r-l)^2}-\frac{\mu_0m}{4\pi(r+l)^2}
 \]
 
 </div>
@@ -766,7 +780,7 @@ B=\frac{\mu_0m}{4\pi(r-d)^2}-\frac{\mu_0m}{4\pi(r+d)^2}
 \[
 B=\frac{\mu_0m}{4\pi}
 \left[
-\frac{1}{(r-d)^2}-\frac{1}{(r+d)^2}
+\frac{1}{(r-l)^2}-\frac{1}{(r+l)^2}
 \right]
 \]
 
@@ -777,7 +791,7 @@ B=\frac{\mu_0m}{4\pi}
 \[
 B=\frac{\mu_0m}{4\pi}
 \left[
-\frac{(r+d)^2-(r-d)^2}{(r^2-d^2)^2}
+\frac{(r+l)^2-(r-l)^2}{(r^2-l^2)^2}
 \right]
 \]
 
@@ -788,7 +802,7 @@ B=\frac{\mu_0m}{4\pi}
 \[
 B=\frac{\mu_0m}{4\pi}
 \cdot
-\frac{4rd}{(r^2-d^2)^2}
+\frac{4rl}{(r^2-l^2)^2}
 \]
 
 </div>
@@ -796,17 +810,16 @@ B=\frac{\mu_0m}{4\pi}
 <div class="answer">
 यदि दण्ड चुंबक बहुत छोटा हो, अर्थात्
 
-\[
-d^2\ll r^2
+\l^2\ll r^2
 \]
 
-तो \(d^2\) को नगण्य माना जाता है।
+तो \(l^2\) को नगण्य माना जाता है।
 </div>
 
 <div class="formula">
 
 \[
-B=\frac{\mu_0}{4\pi}\cdot\frac{4mrd}{r^4}
+B=\frac{\mu_0}{4\pi}\cdot\frac{4mrl}{r^4}
 \]
 
 </div>
@@ -814,7 +827,7 @@ B=\frac{\mu_0}{4\pi}\cdot\frac{4mrd}{r^4}
 <div class="formula">
 
 \[
-B=\frac{\mu_0}{4\pi}\cdot\frac{2(2md)}{r^3}
+B=\frac{\mu_0}{4\pi}\cdot\frac{2(2ml)}{r^3}
 \]
 
 </div>
@@ -823,7 +836,7 @@ B=\frac{\mu_0}{4\pi}\cdot\frac{2(2md)}{r^3}
 चूँकि,
 
 \[
-M=m\times2d
+M=m\times2l
 \]
 
 जहाँ \(M\) दण्ड चुंबक का चुंबकीय आघूर्ण है।
@@ -1024,6 +1037,7 @@ B=\frac{\mu_0}{4\pi}\cdot\frac{M}{r^3}
 
     </div>
 </div>
+  
 <div class="qa-box">
     <div class="question">
         प्रश्न: चुंबकीय क्षेत्र रेखाओं के प्रारंभिक तथा अंतिम सिरे नहीं होते हैं, क्यों?
@@ -1235,7 +1249,115 @@ B=\frac{\mu_0}{4\pi}\cdot\frac{M}{r^3}
 
     </div>
 </div>
+  <div class="qa-box">
+    <div class="question">
+        <b>प्रश्न. सही जोड़ियाँ बनाइए -</b>
+    </div>
 
+    <div class="answer">
+        <table style="width:100%; border-collapse:collapse;">
+            <thead>
+            <tbody>  
+              <tr>
+                    <td style="border:1px solid #000; padding:8px;">
+                        1. छोटा दण्ड चुम्बक
+                    </td>
+                    <td style="border:1px solid #000; padding:8px;">
+                        चुम्बकीय द्विध्रुव
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">
+                        2. चुम्बकीय आघूर्ण (M)
+                    </td>
+                    <td style="border:1px solid #000; padding:8px;">
+                        m × 2l
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">
+                        3. चल कुण्डली धारामापी
+                    </td>
+                    <td style="border:1px solid #000; padding:8px;">
+                        धारा का चुम्बकीय प्रभाव
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">
+                        4. स्थायी चुम्बक
+                    </td>
+                    <td style="border:1px solid #000; padding:8px;">
+                        इस्पात (फौलाद)
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">
+                        5. ट्रांसफॉर्मर का क्रोड
+                    </td>
+                    <td style="border:1px solid #000; padding:8px;">
+                        नर्म लोहा
+                    </td>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">
+                        6. साइक्लोट्रोन
+                    </td>
+                    <td style="border:1px solid #000; padding:8px;">
+                        त्वरक यंत्र
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">
+                        7. चुम्बकीय आघूर्ण का मात्रक
+                    </td>
+                    <td style="border:1px solid #000; padding:8px;">
+                        ऐम्पियर-मीटर² (A·m²)
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">
+                        8. चुम्बकीय क्षेत्र
+                    </td>
+                    <td style="border:1px solid #000; padding:8px;">
+                        टेसला
+                    </td>
+                </tr>
+              <tr>
+                    <td style="border:1px solid #000; padding:8px;">
+                        9. ध्रुव प्राबल्य का मात्रक
+                    </td>
+                    <td style="border:1px solid #000; padding:8px;">
+                        ऐम्पियर-मीटर (A·m)
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">
+                        10. चुम्बकीय फ्लक्स का मात्रक
+                    </td>
+                    <td style="border:1px solid #000; padding:8px;">
+                        वेबर (Wb)
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">
+                        11. वायु की चुम्बकनशीलता का मात्रक
+                    </td>
+                    <td style="border:1px solid #000; padding:8px;">
+                        न्यूटन/ऐम्पियर² (N/A²)
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
 
 
 

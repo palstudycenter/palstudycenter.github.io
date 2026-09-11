@@ -245,24 +245,25 @@ Pal <span>Study Center</span>
     <div class="question">
         Q: What is direct current?
     </div>
-    <div class="question-image">
-        <img src="images/image17.jpg" alt="Comparison of alternating current and direct current waveforms">
-    </div>
     <div class="answer">
         The current whose magnitude and direction remain constant with time is called <strong>direct current</strong>. This current always flows in one direction only.<br><br><strong>Example</strong> – current obtained from a battery, cell, or DC generator.
     </div>
+  <div class="question-image">
+        <img src="images/image14.png" alt="दिष्ट धारा का तरंगरूप">
+  </div>
 </div>
 
 <div class="qa-box">
     <div class="question">
         Q: What is alternating current?
     </div>
-    <div class="question-image">
-        <img src="images/image14.png" alt="Waveform of alternating current">
-    </div>
+    
     <div class="answer">
         The current whose magnitude as well as direction keep changing continuously with time is called <strong>alternating current</strong>. It flows in the form of a sine wave. It is represented by the following equation.<div class="formula">$$ I = I_0 \sin\omega t $$</div>Example – the electric current used in our homes (220 V, 50 Hz).
     </div>
+  <div class="question-image">
+        <img src="images/image19.png" alt="प्रत्यावर्ती धारा का तरंगरूप (शिखर मान)">
+  </div>
 </div>
 
 <div class="qa-box">
@@ -352,7 +353,7 @@ Pal <span>Study Center</span>
         Q: Why is alternating current more dangerous than direct current? (2025)<br>Or<br>Between alternating current and direct current of the same potential, which is safer and why?
     </div>
     <div class="answer">
-        In alternating current the potential difference keeps changing continuously. Its virtual (rms) value is usually 220 volts.<br><br>Hence its actual <strong>maximum value, i.e. peak value</strong> -<div class="formula">$$ I_0 = \sqrt{2}\,I_{rms} $$</div><div class="formula">$$ I_0 = 1.41(300) $$</div><div class="formula">$$ I_0 = 331\text{ volts} $$</div>That is, the voltage of a 220-volt AC supply actually keeps changing between +311 volts and −311 volts.<br><br>Whereas in direct current the voltage always remains constant. If the DC voltage is 220 volts, it will always remain 220 volts.<br><br>Thus alternating current is more dangerous than direct current.
+        In alternating current the potential difference keeps changing continuously. Its virtual (rms) value is usually 220 volts.<br><br>Hence its actual <strong>maximum value, i.e. peak value</strong> -<div class="formula">$$ I_0 = \sqrt{2}\,I_{rms} $$</div><div class="formula">$$ I_0 = 1.41220) $$</div><div class="formula">$$ I_0 = 331\text{ volts} $$</div>That is, the voltage of a 220-volt AC supply actually keeps changing between +311 volts and −311 volts.<br><br>Whereas in direct current the voltage always remains constant. If the DC voltage is 220 volts, it will always remain 220 volts.<br><br>Thus alternating current is more dangerous than direct current.
     </div>
 </div>
 
@@ -435,16 +436,112 @@ Pal <span>Study Center</span>
 </div>
 
 <div class="qa-box">
+
     <div class="question">
-        Q: An AC circuit contains only an inductor. Find the expression for the current. Find the reactance of the circuit and the phase difference between the current and the voltage.
+        Q. In an alternating current circuit, only an inductance is connected.
+        Derive the expression for the current. Find the reactance of the
+        circuit and the phase difference between current and voltage.
     </div>
+
     <div class="question-image">
-        <img src="images/image7.png" alt="Pure inductance (L) circuit">
+        <img src="images/image7.png" alt="Pure inductive (L) circuit">
     </div>
+
     <div class="answer">
-        Let the equation of the alternating voltage across the inductor \(L\) at some instant be-<div class="formula">$$ V = V_0\sin\omega t \quad ...(1) $$</div>If the charge on the plates of the capacitor \(C\) at the same instant is \(Q\), then<div class="formula">$$ Q = CV $$</div><div class="formula">$$ Q = C(V_0\sin\omega t) $$</div><div class="formula">$$ Q = (CV_0)\sin\omega t $$</div>Hence the current flowing in the circuit<div class="formula">$$ I = \frac{dQ}{dt} $$</div><div class="formula">$$ I = \frac{d(CV_0\sin\omega t)}{dt} $$</div><div class="formula">$$ I = CV_0\,\frac{d(\sin\omega t)}{dt} $$</div><div class="formula">$$ I = CV_0(\omega\cos\omega t) $$</div><div class="formula">$$ I = \omega C V_0\sin\Big(\omega t+\frac{\pi}{2}\Big) $$</div><div class="formula">$$ I = I_0\sin\Big(\omega t+\frac{\pi}{2}\Big) \quad ...(2) $$</div>where \(I_0 = \omega C V_0\) = the peak value of the alternating current.<br><br><strong>Reactance</strong> - The effective resistance of the circuit<div class="formula">$$ X_c = \frac{V_0}{I_0} $$</div><div class="formula">$$ X_c = \frac{V_0}{\omega C V_0} $$</div><div class="formula">$$ X_c = \frac{1}{\omega C} $$</div><strong>Phase difference</strong> - From equations (1) and (2) it is clear that the current lags the alternating potential difference by a phase of \(\pi/2\).<div class="question-image"><img src="images/image16.png" alt="Waveform and phasor diagram of the 90-degree phase difference between V and I"></div>
+
+        Let the equation of the alternating potential difference across a
+        pure inductance \(L\) at any instant be-
+
+        <div class="formula">
+            $$ V = V_0\sin\omega t \quad ...(1) $$
+        </div>
+
+        For a pure inductance, the induced electromotive force is equal and
+        opposite to the applied potential difference. Therefore,
+
+        <div class="formula">
+            $$ V = L\frac{dI}{dt} $$
+        </div>
+
+        <div class="formula">
+            $$ V_0\sin\omega t = L\frac{dI}{dt} \quad \text{(By (1))} $$
+        </div>
+
+        <div class="formula">
+            $$ dI = \frac{V_0}{L}\sin\omega t\,dt $$
+        </div>
+
+        On integrating both sides,
+
+        <div class="formula">
+            $$ I = \frac{V_0}{L}\int\sin\omega t\,dt
+            \quad
+            \left(
+            \because\int\sin\omega t\,dt
+            =-\frac{\cos\omega t}{\omega}
+            \right)
+            $$
+        </div>
+
+        <div class="formula">
+            $$ I=-\frac{V_0}{\omega L}\cos\omega t $$
+        </div>
+
+        <div class="formula">
+            $$ I=\frac{V_0}{\omega L}
+            \sin\left(\omega t-\frac{\pi}{2}\right) $$
+        </div>
+
+        Therefore, the expression for the current flowing through the
+        circuit is-
+
+        <div class="formula">
+            $$ I=I_0\sin\left(\omega t-\frac{\pi}{2}\right)
+            \quad ...(2) $$
+        </div>
+
+        Where \(I_0=\dfrac{V_0}{\omega L}\) is the peak value of the
+        alternating current.
+
+        <br><br>
+
+        <strong>Reactance</strong> -
+
+        The inductive reactance of the circuit is \(X_L\).
+
+        <div class="formula">
+            $$ X_L=\frac{V_0}{I_0} $$
+        </div>
+
+        <div class="formula">
+            $$ X_L
+            =\frac{V_0}{V_0/(\omega L)} $$
+        </div>
+
+        <div class="formula">
+            $$ \boxed{X_L=\omega L} $$
+        </div>
+
+        <br>
+
+        <strong>Phase Difference</strong> -
+
+        From equations (1) and (2), it is clear that in a pure inductive
+        alternating current circuit, the
+        <strong>
+            current lags behind the voltage by
+            \(\frac{\pi}{2}\) radians or \(90^\circ\).
+        </strong>
+
+        <div class="question-image">
+            <img src="images/image16.png"
+                 alt="Waveform and phasor diagram showing 90 degree phase difference between V and I in a pure inductive circuit">
+        </div>
+
     </div>
+
 </div>
+
 
 <div class="qa-box">
     <div class="question">

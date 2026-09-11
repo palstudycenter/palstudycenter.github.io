@@ -50,7 +50,7 @@ line-height:1.7;
 
     .navbar{
 
-      background:rgba(15,23,42,0.45);
+      background:rgba(23, 74, 126, 0.95);
 
       backdrop-filter:blur(10px);
 
@@ -90,25 +90,15 @@ padding:20px;
 
 }
 
-.notes-title{
-
-background:#e3f2fd;
-
-color:#1565c0;
-
-padding:10px;
-
-border-left:5px solid #1565c0;
-
-border-radius:50px;
-
-font-size:30px;
-
-font-weight:bold;
-margin-top:100px;
-
-margin-bottom:50px;
-
+.notes-title {
+    background: #174a7e;
+    color: white;
+    padding: 18px 22px;
+    border-radius: 12px 12px 0 0;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 100px;
+    margin-bottom: 0;
 }
 
 
@@ -391,7 +381,7 @@ margin-top:80px;
 <div class="answer">
            <img src="images/voltmeter-construction.png" alt="चित्र">
 
-    माना कि वृत्तीय कुण्डली की त्रिज्या \(r\) है, कुण्डली में प्रवाहित धारा \(I\) है तथा कुण्डली में चक्करों की संख्या \(N\) है। इस वृत्ताकार कुण्डली के केन्द्र \(O\) पर चुम्बकीय क्षेत्र ज्ञात करने के लिए कुण्डली की परिधि को अनेक समान अल्पांशों में बाँटते हैं। माना ऐसा ही एक अल्पांश \(AB\) है जिसकी लंबाई \(dl\) है।
+    माना कि वृत्तीय कुण्डली की त्रिज्या \(r\) है, कुण्डली में प्रवाहित धारा \(I\) है तथा कुण्डली में चक्करों की संख्या \(n\) है। इस वृत्ताकार कुण्डली के केन्द्र \(O\) पर चुम्बकीय क्षेत्र ज्ञात करने के लिए कुण्डली की परिधि को अनेक समान अल्पांशों में बाँटते हैं। माना ऐसा ही एक अल्पांश \(AB\) है जिसकी लंबाई \(dl\) है।
 
     <br><br>
 
@@ -419,28 +409,19 @@ margin-top:80px;
     $$
     B=\frac{\mu_0 I}{4\pi r^2}\int dl
     $$
-
+        $$
+        B=\frac{\mu_0 I}{4\pi r^2}(2\pi rn)
+        \quad
+        \left(\because\ \int dl=2\pi rn\right)
+        $$
+  
     $$
-    B=\frac{\mu_0 I}{4\pi r^2}(2\pi r)      
+    B=\frac{\mu_0 I}{4\pi r^2}(2\pi rn)      
     $$
-    <div style="margin-left:20px;">
-        (\(\because \int dl=2\pi r\))
-    </div>
-    <br>
-
-    $$
-    B=\frac{\mu_0 I}{2r}
-    $$
-
-    <br>
-
-    यदि कुण्डली म \(n\) फेरे हों, तो
-
+    
     $$
     B=\frac{\mu_0 nI}{2r}
     $$
-
-    <br>
 
     यही धारावाही वृत्तीय कुण्डली के केन्द्र पर चुम्बकीय क्षेत्र की तीव्रता का सूत्र है।
 
@@ -485,76 +466,7 @@ margin-top:80px;
 </div>
 
 </div>
-<div class="qa-box">
-    <div class="question">
-        प्रश्न: दो समान्तर धारावाही चालकों के मध्य लगने वाले बल के लिए व्यंजक प्राप्त कीजिए। यह बल कब आकर्षणात्मक तथा कब प्रतिकर्षणात्मक होगा?
-    </div>
 
-    <div class="answer">
-           <img src="images/voltmeter-construction.png" alt="चित्र">
-        माना दो लंबे, सीधे एवं समान्तर चालक \(A\) तथा \(B\) एक-दूसरे से \(r\) दूरी पर स्थित हैं। इनमें क्रमशः \(I_1\) तथा \(I_2\) धारा प्रवाहित हो रही है।
-
-        <br><br>
-
-        चालक \(A\) के कारण चालक \(B\) की स्थिति पर उत्पन्न चुंबकीय क्षेत्र,
-
-        <div class="formula">
-
-        \[
-        B=\frac{\mu_0 I_1}{2\pi r}
-        \]
-
-        </div>
-
-        यदि चालक \(B\) की लंबाई \(l\) है, तो उस पर लगने वाला चुंबकीय बल,
-
-        <div class="formula">
-
-        \[
-        F=BI_2l
-        \]
-
-        </div>
-
-        <div class="formula">
-
-        \[
-        F=\frac{\mu_0 I_1}{2\pi r}\times I_2l
-        \]
-
-        </div>
-        <div class="formula">
-
-        \[
-        F=\frac{\mu_0 I_1I_2l}{2\pi r}
-        \]
-
-        </div>
-
-        इसलिए प्रति इकाई लंबाई पर लगने वाला बल,
-
-        <div class="formula">
-
-        \[
-        \boxed{\frac{F}{l}=\frac{\mu_0 I_1I_2}{2\pi r}}
-        \]
-
-        </div>
-
-        <strong>आकर्षणात्मक एवं प्रतिकर्षणात्मक बल</strong>
-
-        <ol>
-            <li>यदि दोनों चालकों में धाराएँ <strong>एक ही दिशा</strong> में प्रवाहित होती हैं, तो उनके मध्य <strong>आकर्षणात्मक (Attractive)</strong> बल लगता है।</li>
-
-            <li>यदि दोनों चालकों में धाराएँ <strong>विपरीत दिशाओं</strong> में प्रवाहित होती हैं, तो उनके मध्य <strong>प्रतिकर्षणात्मक (Repulsive)</strong> बल लगता है।</li>
-        </ol>
-
-        <strong>निष्कर्ष:</strong>
-
-        दो समान्तर धारावाही चालकों के मध्य लगने वाला बल धाराओं के गुणनफल के समानुपाती तथा उनके बीच की दूरी के व्युत्क्रमानुपाती होता है।
-
-    </div>
-</div>
 <div class="qa-box">
     <div class="question">
         प्रश्न: ऐम्पियर का परिपथीय नियम लिखिए तथा इसे सिद्ध कीजिए। (2026)
@@ -1048,7 +960,96 @@ margin-top:80px;
 
     </div>
 </div>
+<div class="qa-box">
 
+    <div class="question">
+        प्र. दो समांतर धारावाही चालकों के बीच प्रति एकांक लंबाई पर लगने वाले बल का सूत्र व्युत्पन्न कीजिए। बल की प्रकृति क्या होगी यदि—
+    
+
+    <p>
+        (i) दोनों चालकों में समान दिशा में धारा प्रवाहित हो?
+    </p>
+
+    <p>
+        (ii) दोनों चालकों में धारा विपरीत दिशा में प्रवाहित हो?
+    </p>
+</div>
+    <div class="answer">
+
+        <img src="images/voltmeter-construction.png" alt="चित्र">
+
+        माना दो लंबे, सीधे एवं समान्तर चालक \(X\) तथा \(Y\) एक-दूसरे से \(r\) दूरी पर स्थित हैं।
+        इनमें क्रमशः \(I_1\) तथा \(I_2\) धारा प्रवाहित हो रही है।
+
+        <br><br>
+
+        चालक \(X\) के कारण चालक \(Y\) की स्थिति पर उत्पन्न चुंबकीय क्षेत्र,
+
+        <div class="formula">
+            \[
+            B_1=\frac{\mu_0 I_1}{2\pi r}
+            \]
+        </div>
+
+        यदि चालक \(Y\) की लंबाई \(l\) है, तो इस पर चालक \(X\) के कारण लगने वाला लोरेंज बल,
+
+        <div class="formula">
+            \[
+            F_{12}=B_1I_2l
+            \]
+        </div>
+
+        <div class="formula">
+            \[
+            F_{12}
+            =\frac{\mu_0 I_1}{2\pi r}\times I_2l
+            \]
+        </div>
+
+        <div class="formula">
+            \[
+            F_{12}
+            =\frac{\mu_0 I_1I_2l}{2\pi r}
+            \]
+        </div>
+
+        इसलिए प्रति इकाई लंबाई पर लगने वाला बल,
+
+        <div class="formula">
+            \[
+            \boxed{
+            \frac{F_{12}}{l}
+            =\frac{\mu_0 I_1I_2}{2\pi r}
+            }
+            \]
+        </div>
+
+        इसी प्रकार यदि चालक \(X\) की लंबाई \(l\) है, तो इस पर चालक \(Y\) के कारण लगने वाला बल,
+
+        <div class="formula">
+            \[
+            \boxed{
+            \frac{F_{21}}{l}
+            =\frac{\mu_0 I_1I_2}{2\pi r}
+            }
+            \]
+        </div>
+
+        <ol>
+            <li>
+                यदि दोनों चालकों में धाराएँ <strong>एक ही दिशा</strong> में प्रवाहित होती हैं,
+                तो उनके मध्य <strong>आकर्षणात्मक</strong> बल लगता है।
+            </li>
+
+            <li>
+                यदि दोनों चालकों में धाराएँ <strong>विपरीत दिशाओं</strong> में प्रवाहित होती हैं,
+                तो उनके मध्य <strong>प्रतिकर्षणात्मक</strong> बल लगता है।
+            </li>
+        </ol>
+
+    </div>
+
+</div>
   <div class="qa-box">
     <div class="question">
         प्रश्न: धारामापी किसे कहते हैं?
@@ -1845,6 +1846,75 @@ margin-top:80px;
 
     </div>
 </div>
+  <div class="qa-box">
+    <div class="question">
+        <b>प्रश्न. सही जोड़ियाँ बनाइए -</b>
+    </div>
+
+    <div class="answer">
+        <table style="width:100%; border-collapse:collapse;">
+            <thead>
+                <tr>
+                    <th style="width:50%; border:1px solid #000; padding:8px;">
+                        कॉलम A
+                    </th>
+                    <th style="width:50%; border:1px solid #000; padding:8px;">
+                        कॉलम B
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">
+                        1. चुम्बकीय क्षेत्र की तीव्रता
+                    </td>
+                    <td style="border:1px solid #000; padding:8px;">
+                        ऐम्पियर/मीटर (A/m)
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">
+                        2. चुम्बकीय आघूर्ण का SI मात्रक
+                    </td>
+                    <td style="border:1px solid #000; padding:8px;">
+                        न्यूटन मीटर/ऐम्पियर (N·m/A)
+                    </td>
+                </tr>
+
+      
+              <tr>
+                    <td style="border:1px solid #000; padding:8px;">
+                        3. बायो-सावर्ट का नियम
+                    </td>
+                    <td style="border:1px solid #000; padding:8px;">
+                        dB = μ₀I dl sinθ / 4πr²
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">
+                        4. धारावाही परिनालिका के केन्द्र पर चुम्बकीय क्षेत्र की तीव्रता
+                    </td>
+                    <td style="border:1px solid #000; padding:8px;">
+                        B = μ₀nI
+                    </td>
+                </tr>
+              <tr>
+                    <td style="border:1px solid #000; padding:8px;">
+                        5. ऐम्पियर का परिपथीय नियम
+                    </td>
+                    <td style="border:1px solid #000; padding:8px;">
+                        ∮B·dl = μ₀I
+                    </td>
+              </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+  
+                
 
 <!-- SCRIPT -->
 <script>

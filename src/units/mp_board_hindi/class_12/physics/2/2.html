@@ -49,7 +49,7 @@ line-height:1.7;
 
     .navbar{
 
-      background:rgba(15,23,42,0.45);
+      background:rgba(23, 74, 126, 0.95);
 
       backdrop-filter:blur(10px);
 
@@ -89,25 +89,15 @@ padding:20px;
 
 }
 
-.notes-title{
-
-background:#e3f2fd;
-
-color:#1565c0;
-
-padding:10px;
-
-border-left:5px solid #1565c0;
-
-border-radius:50px;
-
-font-size:30px;
-
-font-weight:bold;
-margin-top:100px;
-
-margin-bottom:50px;
-
+.notes-title {
+    background: #174a7e;
+    color: white;
+    padding: 18px 22px;
+    border-radius: 12px 12px 0 0;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 100px;
+    margin-bottom: 0;
 }
 
 
@@ -329,16 +319,6 @@ J=\frac{I}{A}
 
 <p class="formula">
 \[
-Ampere\; per\; metre^2
-\]
-</p>
-
-<p>
-अथवा
-</p>
-
-<p class="formula">
-\[
 A/m^2
 \]
 </p>
@@ -375,6 +355,111 @@ A/m^2
 </div>
 
 </div>
+  <div class="qa-box">
+
+  <div class="question">
+    <b>प्रश्न:</b> अनुगमन वेग, धारा तथा धारा घनत्व में संबंध स्थापित कीजिए।
+  </div>
+
+  <div class="answer">
+    <p><b>उत्तर:</b></p>
+
+    <p>
+      माना किसी चालक में मुक्त इलेक्ट्रॉनों की संख्या प्रति इकाई आयतन \(n\) है,
+      प्रत्येक इलेक्ट्रॉन का आवेश \(e\) तथा अनुगमन वेग \(v_d\) है।
+      चालक का अनुप्रस्थ काट क्षेत्रफल \(A\) है।
+    </p>
+
+    <p>
+      समय \(dt\) में इलेक्ट्रॉन द्वारा तय की गई दूरी:
+    </p>
+
+    <div class="formula">
+      \[
+      dx=v_d\,dt
+      \]
+    </div>
+  <p>
+      समय \(dt\) में चालक का आयतन :
+    </p>
+
+    <div class="formula">
+      \[
+      dV=A\,dx 
+      \]
+    </div>
+ <div class="formula">
+      \[
+      dV=A\,v_d\,dt
+      \]
+    </div>
+
+    <p>
+      इस समय \(dt\) में चालक से गुजरने वाले इलेक्ट्रॉनों की संख्या:
+    </p>
+
+    <div class="formula">
+      \[
+      dN=n\,dV 
+      \]
+    </div>
+<div class="formula">
+      \[
+      dN=nA\,v_d\,dt
+      \]
+    </div>
+    <p>
+      अतः \(dt\) समय में प्रवाहित आवेश:
+    </p>
+
+    <div class="formula">
+      \[
+      dq=dN\times e 
+      \]
+    </div>
+<div class="formula">
+      \[
+      dq=nA\,v_d\,dt \times e 
+      \]
+    </div>
+
+    <p>
+      अतः विद्युत धारा:
+    </p>
+
+    <div class="formula">
+      \[
+      I=\frac{dq}{dt}
+      \]
+    </div>
+<div class="formula">
+      \[
+      \boxed{I=neAv_d}
+      \]
+    </div>
+    <p>
+      अब धारा घनत्व \(J\) का मान:
+    </p>
+
+    <div class="formula">
+      \[
+      J=\frac{I}{A}
+      \]
+    </div>
+
+    <div class="formula">
+      \[
+      \boxed{J=nev_d}
+      \]
+    </div>
+
+    <p>
+      <b>अतः सिद्ध हुआ कि</b> धारा \(I\), अनुगमन वेग \(v_d\) के समानुपाती होती है तथा
+      धारा घनत्व \(J\), अनुगमन वेग और आवेश वाहकों की संख्या घनत्व के गुणनफल के बराबर होता है।
+    </p>
+
+  </div>
+  </div>
 <div class="qa-box">
 
 <div class="question">
@@ -386,7 +471,7 @@ A/m^2
 <p><b>उत्तर -</b></p>
 
 <p>
-स्थिर ताप पर किसी चालक के सिरों के बीच उत्पन्न विभवान्तर (V), उसमें प्रवाहित धारा (I) के समानुपाती होता है।
+ओम के अनुसार स्थिर ताप पर किसी चालक के सिरों के बीच उत्पन्न विभवान्तर (V), उसमें प्रवाहित धारा (I) के समानुपाती होता है।
 </p>
 
 <p>
@@ -397,10 +482,6 @@ A/m^2
 \[
 V \propto I
 \]
-</p>
-
-<p>
-या
 </p>
 
 <p class="formula">
@@ -414,7 +495,7 @@ V = RI
 </p>
 
 <p>
-इसी संबंध को <b>ओह्म का नियम (Ohm's Law)</b> कहते हैं।
+इसी संबंध को ओह्म का नियम कहते हैं।
 </p>
 
 </div>
@@ -443,6 +524,105 @@ V = RI
     </div>
 
 </div>
+  
+<div class="qa-box">
+
+  <div class="question">
+    Q. धातुओं के मुक्त इलेक्ट्रॉन मॉडल के आधार पर ओम के नियम की स्थापना कीजिए।
+  </div>
+
+    <b>उत्तर:</b> 
+  
+  <div class="answer">
+    माना कि धातु के तार में मुक्त इलेक्ट्रॉन का आवेश \(e\), द्रव्यमान \(m\)
+    तथा आरोपित विद्युत क्षेत्र \(E\) है। इलेक्ट्रॉन पर लगने वाला बल
+  </div>
+
+  <div class="formula">
+    $$
+    F=eE
+    $$
+  </div>
+
+  <div class="answer">
+    अतः इलेक्ट्रॉन का त्वरण
+  </div>
+
+  <div class="formula">
+    $$
+    a=\frac{F}{m}
+    $$
+      $$
+    a=\frac{eE}{m}
+    $$
+  </div>
+  <div class="answer">
+    यदि दो क्रमिक टक्करों के बीच का औसत समय \(t\) हो, तो अपवाह वेग
+  </div>
+
+  <div class="formula">
+    $$
+    v_d=a\times t
+    $$
+    $$
+    v_d=\frac{eE}{m}\times t
+    $$
+  </div>
+
+  <div class="answer">
+    यदि चालक की लंबाई \(l\), अनुप्रस्थ काट का क्षेत्रफल \(A\) तथा
+    मुक्त इलेक्ट्रॉनों की संख्या प्रति इकाई आयतन \(n\) हो, तो धारा
+  </div>
+
+  <div class="formula">
+    $$
+    I=neAv_d
+    $$
+  </div>
+
+
+  <div class="formula">
+    $$
+    I=neA\left(\frac{eEt}{m}\right)
+    $$
+    $$
+    I=\frac{ne^2A\tau}{m}E
+    $$
+  </div>
+  <div class="formula">
+    $$
+    I=\frac{ne^2A\tau}{m}\frac{V}{l}
+    $$
+    $$
+    I=\frac{ne^2A\tau}{ml}V
+    $$
+  </div>
+<div class="answer">
+    अथवा
+  </div>
+<div class="formula">
+      $$
+      V=\frac{ml}{ne^2A\tau}I
+      $$
+    </div>
+<div class="answer">
+    अतः \(n,e,A,\tau,m\) तथा \(l\) नियत होने पर
+  </div>
+  <div class="formula">
+    $$
+    V\propto I
+    $$
+    $$
+    \boxed{V=RI}
+    $$
+  </div>
+
+  <div class="answer">
+    यही <b>ओम का नियम</b> है। 
+  </div>
+
+</div>
+ 
 
 <div class="qa-box">
 
@@ -458,32 +638,14 @@ V = RI
         </p>
 
         <p>
-            अर्थात्
-        </p>
-
-        <p>
             \[
             V \propto I
             \]
         </p>
 
         <p>
-            अथवा
-        </p>
-
-        <p>
-            \[
-            V = IR
-            \]
-        </p>
-
-        <p>
             यदि चालक के विभवान्तर तथा धारा के मध्य ग्राफ खींचा जाए तो मूल बिन्दु से
             गुजरने वाली एक <b>सरल रेखा</b> प्राप्त होती है।
-        </p>
-
-        <p>
-            इससे स्पष्ट होता है कि विभवान्तर बढ़ने पर धारा बढ़ती है तथा विभवान्तर घटने पर धारा भी घटती है।
         </p>
 
         <div class="diagram-box">
@@ -502,10 +664,6 @@ I
 
         </div>
 
-        <p>
-            अतः विभवान्तर (V) तथा धारा (I) का ग्राफ एक सीधी रेखा प्राप्त करता है।
-        </p>
-
     </div>
 
 </div>
@@ -519,7 +677,7 @@ I
 
         <p>
             चालक द्वारा विद्युत धारा के प्रवाह में किया गया विरोध
-            <b>प्रतिरोध (Resistance)</b> कहलाता है।
+            <b>प्रतिरोध </b> कहलाता है।
             इसे <b>R</b> से प्रदर्शित करते हैं।
         </p>
 
@@ -539,7 +697,7 @@ I
 
     <div class="answer">
 
-        <p><b>ओह्मीय प्रतिरोध (Ohmic Resistance) :</b></p>
+        <p><b>ओह्मीय प्रतिरोध :</b></p>
 
         <p>
             वे प्रतिरोध जो <b>ओम के नियम</b> का पालन करते हैं,
@@ -559,7 +717,7 @@ I
             <li>धात्विक चालक</li>
         </ul>
 
-        <p><b>अनओह्मीय प्रतिरोध (Non-Ohmic Resistance) :</b></p>
+        <p><b>अनओह्मीय प्रतिरोध :</b></p>
 
         <p>
             वे प्रतिरोध जो ओम के नियम का पालन नहीं करते,
@@ -630,9 +788,9 @@ I
     <div class="answer">
 
         <p>
-            किसी पदार्थ के <b>इकाई लंबाई</b> तथा
-            <b>इकाई अनुप्रस्थ क्षेत्रफल</b> वाले चालक का प्रतिरोध
-            <b>विशिष्ट प्रतिरोध (Specific Resistance)</b> कहलाता है।
+            किसी पदार्थ के इकाई लंबाई तथा
+            इकाई अनुप्रस्थ क्षेत्रफल वाले चालक का प्रतिरोध
+            विशिष्ट प्रतिरोध कहलाता है।
             इसे <b>ρ (रो)</b> से प्रदर्शित करते हैं।
         </p>
 
@@ -767,7 +925,7 @@ I
         </p>
 
         <p>
-            इसकी SI इकाई <b>ओम<sup>-1</sup> (Ω<sup>-1</sup>)</b> अथवा <b>सीमेन्स (S)</b> होती है।
+            इसकी SI इकाई <b>ओम<sup>-1</sup> (Ω<sup>-1</sup>)</b> होती है।
         </p>
 
     </div>
@@ -813,16 +971,6 @@ I
         </p>
 
         <p>
-            अथवा
-        </p>
-
-        <p>
-            \[
-            S\,m^{-1}
-            \]
-        </p>
-
-        <p>
             होती है।
         </p>
 
@@ -852,62 +1000,35 @@ I
         </p>
 
         <p>
-            जब तार को खींचकर उसकी लम्बाई दोगुनी कर दी जाती है, तब
+ प्रश्नानुसार, तार की लंबाई दोगुनी करने पर, आयतन नियत रहने के कारण अनुप्रस्थ काट का क्षेत्रफल आधा हो जाता है। अतः नया प्रतिरोध,
         </p>
 
         <p>
             \[
-            L' = 2L
-            \]
-        </p>
-
-        <p>
-            तार का आयतन स्थिर रहता है, अतः
-        </p>
-
-        <p>
-            \[
-            AL = A'L'
+            R_1=\rho \frac{L'}{A'}
             \]
         </p>
 
         <p>
             \[
-            A'=\frac{AL}{2L}
-            =\frac{A}{2}
-            \]
-        </p>
-
-        <p>
-            नया प्रतिरोध,
-        </p>
-
-        <p>
-            \[
-            R'=\rho \frac{L'}{A'}
+            R_1=\rho \frac{2L}{A/2}
             \]
         </p>
 
         <p>
             \[
-            R'=\rho \frac{2L}{A/2}
+            R_1=4\rho \frac{L}{A}
             \]
         </p>
 
         <p>
             \[
-            R'=4\rho \frac{L}{A}
+            R_1=4R
             \]
         </p>
 
         <p>
-            \[
-            R'=4R
-            \]
-        </p>
-
-        <p>
-            <b>अतः चालक तार का प्रतिरोध 4 गुना हो जाता है।</b>
+        अतः चालक तार का प्रतिरोध 4 गुना हो जाता है।
         </p>
 
     </div>
@@ -937,55 +1058,30 @@ I
         </p>
 
         <p>
-            प्रश्नानुसार,
+  प्रश्नानुसार, तार की लंबाई आधी तथा अनुप्रस्थ काट का क्षेत्रफल दोगुना करने पर नया प्रतिरोध,
         </p>
+
 
         <p>
             \[
-            L'=\frac{L}{2}
-            \]
-        </p>
-
-        <p>
-            तथा
-        </p>
-
-        <p>
-            \[
-            A'=2A
-            \]
-        </p>
-
-        <p>
-            नया प्रतिरोध,
-        </p>
-
-        <p>
-            \[
-            R'=\rho \frac{L'}{A'}
+            R_1=\rho \frac{L/2}{2A}
             \]
         </p>
 
         <p>
             \[
-            R'=\rho \frac{L/2}{2A}
+            R_1=\rho \frac{L}{4A}
             \]
         </p>
 
         <p>
             \[
-            R'=\rho \frac{L}{4A}
+            R_1=\frac{R}{4}
             \]
         </p>
 
         <p>
-            \[
-            R'=\frac{R}{4}
-            \]
-        </p>
-
-        <p>
-            <b>अतः नया प्रतिरोध प्रारम्भिक प्रतिरोध का 1/4 (एक-चौथाई) होगा।</b>
+        अतः नया प्रतिरोध प्रारम्भिक प्रतिरोध का 1/4 (एक-चौथाई) होगा।
         </p>
 
     </div>
@@ -1057,17 +1153,9 @@ I
     </p>
 
     <p>
-      अतः,
-    </p>
-
-    <p>
       \[
       IR = IR_1 + IR_2 + IR_3
       \]
-    </p>
-
-    <p>
-      दोनों पक्षों में I सामान्य होने से,
     </p>
 
     <p>
@@ -1152,10 +1240,6 @@ I
     </p>
 
     <p>
-      अतः,
-    </p>
-
-    <p>
       \[
       \frac{V}{R}
       =
@@ -1167,9 +1251,6 @@ I
       \]
     </p>
 
-    <p>
-      V से भाग देने पर,
-    </p>
 
     <p>
       \[
@@ -1215,8 +1296,8 @@ I
     <ul>
       <li>प्रथम धारी → प्रथम सार्थक अंक दर्शाती है।</li>
       <li>द्वितीय धारी → द्वितीय सार्थक अंक दर्शाती है।</li>
-      <li>तृतीय धारी → गुणक (Multiplier) अर्थात् 10 की घात बताती है।</li>
-      <li>चतुर्थ धारी → सहनशीलता (Tolerance) बताती है।</li>
+      <li>तृतीय धारी → गुणक अर्थात् 10 की घात बताती है।</li>
+      <li>चतुर्थ धारी → सहनशीलता बताती है।</li>
     </ul>
 
     <p><b>प्रतिरोध ज्ञात करने का सूत्र :</b></p>
@@ -1321,7 +1402,59 @@ I
             संधि की ओर आने वाली धाराओं को धनात्मक तथा संधि से दूर जाने वाली
             धाराओं को ऋणात्मक माना जाता है।
         </p>
+<div class="diagram-box" style="width:100%; max-width:600px; margin:20px auto; text-align:center;">
 
+  <svg width="100%" viewBox="0 0 600 360"
+       xmlns="http://www.w3.org/2000/svg"
+       style="width:100%; height:auto;">
+
+    <!-- Junction -->
+    <circle cx="300" cy="180" r="6" fill="#000"/>
+    <text x="310" y="165" font-size="20" font-weight="bold">J</text>
+
+    <!-- I1 line -->
+    <line x1="80" y1="70" x2="300" y2="180"
+          stroke="#000" stroke-width="3"/>
+
+    <!-- I1 arrow on line -->
+    <polygon points="270,165 292,176 268,178" fill="#000"/>
+    <text x="145" y="95" font-size="20" font-weight="bold">I₁</text>
+
+    <!-- I2 line -->
+    <line x1="80" y1="290" x2="300" y2="180"
+          stroke="#000" stroke-width="3"/>
+
+    <!-- I2 arrow on line -->
+    <polygon points="270,195 292,184 268,182" fill="#000"/>
+    <text x="145" y="270" font-size="20" font-weight="bold">I₂</text>
+
+    <!-- I3 line -->
+    <line x1="300" y1="180" x2="520" y2="70"
+          stroke="#000" stroke-width="3"/>
+
+    <!-- I3 arrow on line -->
+    <polygon points="485,88 510,75 490,73" fill="#000"/>
+    <text x="445" y="95" font-size="20" font-weight="bold">I₃</text>
+
+    <!-- I4 line -->
+    <line x1="300" y1="180" x2="520" y2="180"
+          stroke="#000" stroke-width="3"/>
+
+    <!-- I4 arrow on line -->
+    <polygon points="490,180 515,180 500,172" fill="#000"/>
+    <text x="450" y="170" font-size="20" font-weight="bold">I₄</text>
+
+    <!-- I5 line -->
+    <line x1="300" y1="180" x2="520" y2="290"
+          stroke="#000" stroke-width="3"/>
+
+    <!-- I5 arrow on line -->
+    <polygon points="490,275 515,287 492,289" fill="#000"/>
+    <text x="445" y="275" font-size="20" font-weight="bold">I₅</text>
+
+  </svg>
+
+</div>
         <p>
             यदि किसी संधि पर \(I_1\) तथा \(I_2\) धाराएँ प्रवेश कर रही हों तथा
             \(I_3\), \(I_4\) एवं \(I_5\) धाराएँ बाहर जा रही हों, तो
@@ -1364,6 +1497,172 @@ I
             \]
         </p>
 
+
+  <svg width="100%" viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg"
+       style="max-width:900px;height:auto;display:block;margin:auto;">
+
+    <!-- Left vertical conductor -->
+    <line x1="150" y1="90" x2="150" y2="410"
+          stroke="black" stroke-width="3"/>
+
+    <!-- Right vertical conductor -->
+    <line x1="750" y1="90" x2="750" y2="410"
+          stroke="black" stroke-width="3"/>
+
+    <!-- ================= TOP BRANCH ================= -->
+
+    <!-- Wire before E1 -->
+    <line x1="150" y1="90" x2="255" y2="90"
+          stroke="black" stroke-width="3"/>
+
+    <!-- i1 arrow -->
+    <line x1="245" y1="90" x2="210" y2="90"
+          stroke="black" stroke-width="3"/>
+    <polygon points="210,90 222,84 222,96" fill="black"/>
+
+    <text x="205" y="65" font-size="25" font-family="Arial">i₁</text>
+
+    <!-- E1 cell -->
+    <line x1="270" y1="68" x2="270" y2="112"
+          stroke="black" stroke-width="3"/>
+    <line x1="285" y1="76" x2="285" y2="104"
+          stroke="black" stroke-width="3"/>
+
+    <!-- E1 wires -->
+    <line x1="255" y1="90" x2="270" y2="90"
+          stroke="black" stroke-width="3"/>
+    <line x1="285" y1="90" x2="310" y2="90"
+          stroke="black" stroke-width="3"/>
+
+    <text x="258" y="145" font-size="25" font-family="Arial">E₁</text>
+
+    <!-- R1 resistor -->
+    <polyline
+      points="310,90 325,90 335,78 350,102 365,78 380,102
+              395,78 410,102 425,78 440,102 450,90"
+      fill="none" stroke="black" stroke-width="3"/>
+
+    <text x="355" y="55" font-size="25" font-family="Arial">R₁</text>
+
+    <!-- Top wire to B -->
+    <line x1="450" y1="90" x2="750" y2="90"
+          stroke="black" stroke-width="3"/>
+
+    <!-- Top right arrow -->
+    <line x1="700" y1="90" x2="665" y2="90"
+          stroke="black" stroke-width="3"/>
+    <polygon points="665,90 677,84 677,96" fill="black"/>
+
+    <!-- ================= MIDDLE BRANCH ================= -->
+
+    <!-- Wire before E2 -->
+    <line x1="150" y1="250" x2="255" y2="250"
+          stroke="black" stroke-width="3"/>
+
+    <!-- i2 arrow -->
+    <line x1="245" y1="250" x2="210" y2="250"
+          stroke="black" stroke-width="3"/>
+    <polygon points="210,250 222,244 222,256" fill="black"/>
+
+    <text x="205" y="225" font-size="25" font-family="Arial">i₂</text>
+
+    <!-- E2 cell -->
+    <line x1="270" y1="228" x2="270" y2="272"
+          stroke="black" stroke-width="3"/>
+    <line x1="285" y1="236" x2="285" y2="264"
+          stroke="black" stroke-width="3"/>
+
+    <!-- E2 wires -->
+    <line x1="255" y1="250" x2="270" y2="250"
+          stroke="black" stroke-width="3"/>
+    <line x1="285" y1="250" x2="310" y2="250"
+          stroke="black" stroke-width="3"/>
+
+    <text x="258" y="305" font-size="25" font-family="Arial">E₂</text>
+
+    <!-- R2 resistor -->
+    <polyline
+      points="310,250 325,250 335,238 350,262 365,238 380,262
+              395,238 410,262 425,238 440,262 450,250"
+      fill="none" stroke="black" stroke-width="3"/>
+
+    <text x="355" y="215" font-size="25" font-family="Arial">R₂</text>
+
+    <!-- Middle wire to B -->
+    <line x1="450" y1="250" x2="750" y2="250"
+          stroke="black" stroke-width="3"/>
+
+    <!-- Middle right arrow -->
+    <line x1="700" y1="250" x2="665" y2="250"
+          stroke="black" stroke-width="3"/>
+    <polygon points="665,250 677,244 677,256" fill="black"/>
+
+    <!-- ================= BOTTOM BRANCH ================= -->
+
+    <!-- Bottom wire -->
+    <line x1="150" y1="410" x2="310" y2="410"
+          stroke="black" stroke-width="3"/>
+
+    <!-- Bottom current arrow -->
+    <line x1="205" y1="410" x2="250" y2="410"
+          stroke="black" stroke-width="3"/>
+    <polygon points="250,410 238,404 238,416" fill="black"/>
+
+    <text x="205" y="450" font-size="25" font-family="Arial">
+      (i₁ + i₂)
+    </text>
+
+    <!-- R3 resistor -->
+    <polyline
+      points="310,410 325,410 335,398 350,422 365,398 380,422
+              395,398 410,422 425,398 440,422 450,410"
+      fill="none" stroke="black" stroke-width="3"/>
+
+    <text x="355" y="380" font-size="25" font-family="Arial">R₃</text>
+
+    <!-- Bottom wire to B -->
+    <line x1="450" y1="410" x2="750" y2="410"
+          stroke="black" stroke-width="3"/>
+
+    <!-- ================= POINTS A AND B ================= -->
+
+    <text x="115" y="260" font-size="27" font-family="Arial">A</text>
+    <text x="765" y="260" font-size="27" font-family="Arial">B</text>
+
+    <!-- ================= LOOP 1 ================= -->
+
+    <circle cx="585" cy="155" r="30"
+            fill="white" stroke="black" stroke-width="2"/>
+    <text x="577" y="164" font-size="25" font-family="Arial">1</text>
+
+    <!-- Curved arrow for loop 1 -->
+    <path d="M 620 105 A 75 75 0 0 1 670 155"
+          fill="none" stroke="black" stroke-width="3"/>
+    <polygon points="670,155 657,151 662,164" fill="black"/>
+
+    <!-- ================= LOOP 2 ================= -->
+
+    <circle cx="585" cy="325" r="30"
+            fill="white" stroke="black" stroke-width="2"/>
+    <text x="577" y="334" font-size="25" font-family="Arial">2</text>
+
+    <!-- Curved arrow for loop 2 -->
+    <path d="M 620 275 A 75 75 0 0 1 670 325"
+          fill="none" stroke="black" stroke-width="3"/>
+    <polygon points="670,325 657,321 662,334" fill="black"/>
+
+    <!-- Left curved arrows -->
+    <path d="M 185 120 A 65 65 0 0 0 185 200"
+          fill="none" stroke="black" stroke-width="3"/>
+    <polygon points="185,200 179,188 191,188" fill="black"/>
+
+    <path d="M 185 280 A 65 65 0 0 0 185 360"
+          fill="none" stroke="black" stroke-width="3"/>
+    <polygon points="185,360 179,348 191,348" fill="black"/>
+
+  </svg>
+
+</div>
         <p>
             चित्रानुसार बंद जाल (1) के लिए,
         </p>
@@ -1931,8 +2230,8 @@ r=\frac{RE}{V}-R
 </p>
 
 <ol>
-<li>श्रेणी क्रम (Series Combination)</li>
-<li>समान्तर क्रम (Parallel Combination)</li>
+<li>समान्तर क्रम </li>
+<li>श्रेणी क्रम </li>
 </ol>
 
 </div>
@@ -1971,13 +2270,43 @@ E_p = E
 <p>
 तथा तुल्य आन्तरिक प्रतिरोध
 </p>
-
+<p>
+      \[
+      \frac{1}{r_p}
+      =
+      \frac{1}{r}
+      +
+      \frac{1}{r}
+      +
+      \frac{1}{r} + .......n cell
+      \]
+</p>
+  <p>
+      \[
+      \frac{1}{r_p}
+      =
+      \frac{n}{r}
+      \]
+  </p>
 <p class="formula">
 \[
 r_p=\frac{r}{n}
 \]
 </p>
+<p>
+कुल प्रतिरोध
+</p>
 
+<p class="formula">
+\[
+R_t= R + r_p
+\]
+</p>
+  <p class="formula">
+\[
+R_t= R + \frac{r}{n}
+\]
+  </p>
 <p>
 अतः ओह्म के नियम से बाह्य परिपथ में प्रवाहित धारा
 </p>
@@ -1986,10 +2315,6 @@ r_p=\frac{r}{n}
 \[
 I=\frac{E}{R+\frac{r}{n}}
 \]
-</p>
-
-<p>
-या
 </p>
 
 <p class="formula">
@@ -2001,7 +2326,9 @@ I=\frac{nE}{nR+r}
 <p>
 यही बाह्य परिपथ में बहने वाली धारा का व्यंजक है।
 </p>
-
+<p>
+अतः समान्तर क्रम संयोजन तब लाभप्रद होता है जब बाह्य प्रतिरोध कम हो तथा अधिक धारा प्राप्त करनी हो।
+</p>
 <p><b>समान्तर संयोजन की उपयोगिता :</b></p>
 
 <ol>
@@ -2024,10 +2351,6 @@ I=\frac{nE}{nR+r}
 
 </ol>
 
-<p>
-<b>अतः समान्तर क्रम संयोजन तब लाभप्रद होता है जब बाह्य प्रतिरोध कम हो तथा अधिक धारा प्राप्त करनी हो।</b>
-</p>
-
 </div>
 
 </div>
@@ -2044,9 +2367,117 @@ I=\frac{nE}{nR+r}
 <p>
 जब एक सेल के धनात्मक ध्रुव को दूसरे सेल के ऋणात्मक ध्रुव से क्रमशः जोड़ दिया जाता है, तब इस प्रकार के संयोजन को <b>श्रेणी क्रम संयोजन (Series Combination)</b> कहते हैं।
 </p>
-  <div class="question-image">
-    <img src="21.png" alt="seriese cell"> 
-    </div>
+  
+  <svg
+  width="100%"
+  viewBox="0 0 400 240"
+  xmlns="http://www.w3.org/2000/svg"
+  style="max-width:400px;height:auto;display:block;"
+>
+  <!-- Left wire -->
+  <line x1="55" y1="55" x2="55" y2="185"
+        stroke="black" stroke-width="2"/>
+  <line x1="55" y1="185" x2="150" y2="185"
+        stroke="black" stroke-width="2"/>
+
+  <!-- Right wire -->
+  <line x1="345" y1="55" x2="345" y2="185"
+        stroke="black" stroke-width="2"/>
+  <line x1="250" y1="185" x2="345" y2="185"
+        stroke="black" stroke-width="2"/>
+
+  <!-- Battery cells -->
+  <g stroke="black" stroke-width="2">
+
+    <!-- Cell 1: long plate first, short plate second -->
+    <line x1="82" y1="43" x2="82" y2="77"/>
+    <line x1="96" y1="49" x2="96" y2="71"/>
+
+    <!-- Cell 2 -->
+    <line x1="115" y1="43" x2="115" y2="77"/>
+    <line x1="129" y1="49" x2="129" y2="71"/>
+
+    <!-- Cell 3 -->
+    <line x1="148" y1="43" x2="148" y2="77"/>
+    <line x1="162" y1="49" x2="162" y2="71"/>
+
+    <!-- Cell 4 -->
+    <line x1="181" y1="43" x2="181" y2="77"/>
+    <line x1="195" y1="49" x2="195" y2="71"/>
+
+    <!-- Cell 5 -->
+    <line x1="264" y1="43" x2="264" y2="77"/>
+    <line x1="278" y1="49" x2="278" y2="71"/>
+
+    <!-- Cell 6 -->
+    <line x1="297" y1="43" x2="297" y2="77"/>
+    <line x1="311" y1="49" x2="311" y2="71"/>
+
+  </g>
+
+  <!-- Battery connecting wires -->
+  <g stroke="black" stroke-width="2">
+
+    <line x1="55" y1="60" x2="82" y2="60"/>
+    <line x1="96" y1="60" x2="115" y2="60"/>
+    <line x1="129" y1="60" x2="148" y2="60"/>
+    <line x1="162" y1="60" x2="181" y2="60"/>
+
+    <line x1="195" y1="60" x2="264" y2="60"
+          stroke-dasharray="4,4"/>
+
+    <line x1="278" y1="60" x2="297" y2="60"/>
+    <line x1="311" y1="60" x2="345" y2="60"/>
+
+  </g>
+
+  <!-- E labels -->
+  <g font-family="Arial" font-size="14">
+    <text x="79" y="27">E</text>
+    <text x="112" y="27">E</text>
+    <text x="145" y="27">E</text>
+    <text x="178" y="27">E</text>
+    <text x="261" y="27">E</text>
+    <text x="294" y="27">E</text>
+  </g>
+
+  <!-- Current arrows -->
+  <text x="42" y="110"
+        font-family="Arial" font-size="15">I</text>
+  <text x="40" y="130"
+        font-family="Arial" font-size="18">↓</text>
+
+  <text x="350" y="130"
+        font-family="Arial" font-size="18">↑</text>
+  <text x="358" y="110"
+        font-family="Arial" font-size="15">I</text>
+
+  <!-- Resistor -->
+  <polyline
+    points="
+      150,185
+      157,177 164,193
+      171,177 178,193
+      185,177 192,193
+      199,177 206,193
+      213,177 220,193
+      227,177 234,193
+      241,177 250,185"
+    fill="none"
+    stroke="black"
+    stroke-width="2"
+  />
+
+  <!-- R label -->
+  <text
+    x="195"
+    y="218"
+    font-family="Arial"
+    font-size="15"
+    text-anchor="middle"
+  >R</text>
+
+  </svg>
 <p>
 मान लीजिए कि प्रत्येक सेल का विद्युत वाहक बल <b>E</b> तथा आन्तरिक प्रतिरोध <b>r</b> है और ऐसे <b>n</b> समान सेल श्रेणी क्रम में जुड़े हैं। बाह्य प्रतिरोध <b>R</b> है।
 </p>
@@ -2054,7 +2485,11 @@ I=\frac{nE}{nR+r}
 <p>
 श्रेणी क्रम में संयोजन करने पर बैटरी का कुल विद्युत वाहक बल
 </p>
-
+<p class="formula">
+\[
+E_s= E + E + E + ......n   cell
+\]
+</p>
 <p class="formula">
 \[
 E_s=nE
@@ -2065,18 +2500,40 @@ E_s=nE
 
 तथा कुल आन्तरिक प्रतिरोध
 </p>
-
+<p class="formula">
+\[
+r_s= r + r + r + ......n   cell
+\]
+</p>
 <p class="formula">
 \[
 r_s=nr
 \]
 </p>
+<p>
+कुल प्रतिरोध
+</p>
+
+<p class="formula">
+\[
+R_t= R + r_s
+\]
+</p>
+  <p class="formula">
+\[
+R_t= R + nr
+\]
+</p>
+
 
 <p>
 अतः ओह्म के नियम के अनुसार बाह्य परिपथ में प्रवाहित धारा
 </p>
-
 <p class="formula">
+\[
+I=\frac{E_s}{R_t}
+\]
+</p><p class="formula">
 \[
 I=\frac{nE}{R+nr}
 \]
@@ -2085,7 +2542,9 @@ I=\frac{nE}{R+nr}
 <p>
 यही बाह्य परिपथ में बहने वाली धारा का व्यंजक है।
 </p>
-
+<p>
+अतः श्रेणी क्रम संयोजन तब लाभप्रद होता है जब बाह्य प्रतिरोध का मान आन्तरिक प्रतिरोध की तुलना में अधिक हो तथा अधिक विभवान्तर प्राप्त करना हो।
+</p>
 <p><b>श्रेणी क्रम संयोजन की उपयोगिता :</b></p>
 
 <ol>
@@ -2104,16 +2563,279 @@ I=\frac{nE}{R+nr}
 
 </ol>
 
-<p>
-<b>अतः श्रेणी क्रम संयोजन तब लाभप्रद होता है जब बाह्य प्रतिरोध का मान आन्तरिक प्रतिरोध की तुलना में अधिक हो तथा अधिक विभवान्तर प्राप्त करना हो।</b>
-</p>
+
 
 </div>
 
 </div>
 
+<div class="qa-box">
 
+    <div class="question">
+        <b>वस्तुनिष्ठ प्रश्न</b><br><br>
 
+        <b>प्रश्न 1.</b> किसी चालक का प्रतिरोध निम्नलिखित में से किस पर निर्भर नहीं करता है?
+        <span class="year">(म. प्र. 2016 पूरक)</span>
+    </div>
+    <div class="answer">
+        <b>उत्तर:</b> लगाए गए विभवान्तर पर
+    </div>
+
+    <div class="question">
+        <b>प्रश्न 2.</b> विशिष्ट प्रतिरोध (प्रतिरोधकता) का मात्रक क्या है?
+        <span class="year">(म. प्र. 2009, 2011, 2013, 2016, 2016 पूरक, 2024 पूरक, प्रश्न बैंक)</span>
+    </div>
+    <div class="answer">
+        <b>उत्तर:</b> ओह्म-मीटर (Ω m)
+    </div>
+
+    <div class="question">
+        <b>प्रश्न 3.</b> किसी चालक का प्रतिरोध किन-किन कारकों पर निर्भर करता है?
+        <span class="year">(म. प्र. 2023 पूरक)</span>
+    </div>
+    <div class="answer">
+        <b>उत्तर:</b> चालक की लंबाई, अनुप्रस्थ काट के क्षेत्रफल तथा ताप पर
+    </div>
+
+    <div class="question">
+        <b>प्रश्न 4.</b> ताप बढ़ाने पर निम्नलिखित में से किसकी प्रतिरोधकता घटेगी?
+        <span class="year">(म. प्र. 2023 पूरक)</span>
+    </div>
+    <div class="answer">
+        <b>उत्तर:</b> सिलिकॉन की
+    </div>
+
+    <div class="question">
+        <b>प्रश्न 5.</b> किरचॉफ का धारा वितरण का प्रथम नियम किस संरक्षण नियम का पालन करता है?
+        <span class="year">(म. प्र. 2025)</span>
+    </div>
+    <div class="answer">
+        <b>उत्तर:</b> आवेश संरक्षण के नियम का
+    </div>
+
+    <div class="question">
+        <b>प्रश्न 6.</b> विभव प्रवणता का SI मात्रक क्या है?
+        <span class="year">(प्रश्न बैंक)</span>
+    </div>
+    <div class="answer">
+        <b>उत्तर:</b> वोल्ट/मीटर (V/m)
+    </div>
+
+    <div class="question">
+        <b>प्रश्न 7.</b> प्रतिरोधकता का विमीय सूत्र क्या है?
+        <span class="year">(म. प्र. 2022 पूरक, प्रश्न बैंक)</span>
+    </div>
+    <div class="answer">
+        <b>उत्तर:</b> [ML<sup>3</sup>T<sup>−3</sup>A<sup>−2</sup>]
+    </div>
+
+    <div class="question">
+        <b>प्रश्न 8.</b> एक तार का विशिष्ट प्रतिरोध या प्रतिरोधकता किस पर निर्भर करती है?
+        <span class="year">(म. प्र. 2015, 2019)</span>
+        <br>
+        अथवा
+        <br>
+        किसी तार का विशिष्ट प्रतिरोध निम्नलिखित में से किस कारक पर निर्भर करता है?
+        <span class="year">(म. प्र. 2024)</span>
+    </div>
+    <div class="answer">
+        <b>उत्तर:</b> तार के पदार्थ की प्रकृति पर
+    </div>
+
+    <div class="question">
+        <b>प्रश्न 9.</b> अति-चालक पदार्थ की चालकता कितनी होती है?
+        <span class="year">(म. प्र. 2011, 2014, प्रश्न बैंक)</span>
+    </div>
+    <div class="answer">
+        <b>उत्तर:</b> अनन्त
+    </div>
+
+    <div class="question">
+        <b>प्रश्न 10.</b> धारा घनत्व का SI मात्रक क्या है?
+        <span class="year">(म. प्र. 2020, 2023)</span>
+    </div>
+    <div class="answer">
+        <b>उत्तर:</b> ऐम्पियर/मीटर<sup>2</sup> (A/m<sup>2</sup>)
+    </div>
+
+    <div class="question">
+        <b>प्रश्न 11.</b> 'प्रामाणिक सेल' के रूप में उपयोग किया जाने वाला सेल कौन-सा है?
+        <span class="year">(म. प्र. 2013 पूरक)</span>
+    </div>
+    <div class="answer">
+        <b>उत्तर:</b> डेनियल सेल
+    </div>
+
+    <div class="question">
+        <b>प्रश्न 12.</b> ओमीय प्रतिरोध का उदाहरण कौन-सा है?
+        <span class="year">(म. प्र. 2012 पूरक, 2022)</span>
+    </div>
+    <div class="answer">
+        <b>उत्तर:</b> ताँबे का तार
+    </div>
+
+    <div class="question">
+        <b>प्रश्न 13.</b> विभवमापी के तार का पदार्थ कौन-सा होता है?
+        <span class="year">(म. प्र. 2017 पूरक)</span>
+    </div>
+    <div class="answer">
+        <b>उत्तर:</b> मैंगनिन (Manganin)
+    </div>
+
+    <div class="question">
+        <b>प्रश्न 14.</b> एक तार को खींचकर उसकी लंबाई दो गुनी करने पर उसका प्रतिरोध कितना हो जाएगा?
+        <span class="year">(म. प्र. 2019 पूरक, प्रश्न बैंक)</span>
+    </div>
+    <div class="answer">
+        <b>उत्तर:</b> चार गुना
+    </div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        <b>प्रश्न रिक्त स्थानों की पूर्ति कीजिए -</b>
+    </div>
+
+    <div class="answer">
+
+        <p><b>1.</b> किसी विद्युत परिपथ में विद्युत धारा का मापन करने के लिए अमीटर को परिपथ में <b>श्रेणीक्रम</b> में जोड़ा जाता है।</p>
+
+        <p><b>2.</b> एक आदर्श वोल्टमीटर का प्रतिरोध <b>अनन्त</b> होता है। <span>(म. प्र. 2021, 22 पूरक)</span></p>
+
+        <p><b>3.</b> नी-फे सेल का आविष्कार <b>एडीसन</b> ने किया था। <span>(म. प्र. 2009)</span></p>
+
+        <p><b>4.</b> विभवमापी को एक <b>आदर्श वोल्टमीटर</b> कहते हैं। <span>(म. प्र. 2009, 18, प्रश्न बैंक)</span></p>
+
+        <p><b>5.</b> विद्युत धारा <b>अदिश</b> राशि है। <span>(प्रश्न बैंक)</span></p>
+
+        <p><b>6.</b> धात्वीय चालकों में <b>इलेक्ट्रॉन</b> विद्युत धारा के वाहक हैं। <span>(प्रश्न बैंक)</span></p>
+
+        <p><b>7.</b> ताप बढ़ाने पर अर्धचालकों का प्रतिरोध <b>घटता</b> जाता है। <span>(प्रश्न बैंक)</span></p>
+
+        <p><b>8.</b> चालकता का मात्रक <b>ओह्म<sup>−1</sup></b> है। <span>(म. प्र. 2010 पूरक)</span></p>
+
+        <p><b>9.</b> विशिष्ट प्रतिरोध का विमीय सूत्र <b>[ML<sup>3</sup>T<sup>−3</sup>A<sup>−2</sup>]</b> है। <span>(म. प्र. 2010)</span></p>
+
+        <p><b>10.</b> जल वोल्टामीटर के ऐनोड पर <b>ऑक्सीजन</b> मुक्त होती है। <span>(म. प्र. 2011 पूरक)</span></p>
+
+        <p><b>11.</b> अर्धचालक का प्रतिरोध ताप गुणांक <b>ऋणात्मक</b> होता है। <span>(म. प्र. 2011, 17, प्रश्न बैंक)</span></p>
+
+        <p><b>12.</b> विभवमापी के तार के प्रति एकांक लंबाई में विभव का जो पतन होता है, उसे <b>विभव प्रवणता</b> कहते हैं। <span>(म. प्र. 2012)</span></p>
+
+        <p><b>13.</b> किरचॉफ का प्रथम नियम <b>आवेश संरक्षण</b> के सिद्धान्त पर आधारित है। <span>(प्रश्न बैंक)</span></p>
+
+        <p><b>14.</b> किरचॉफ का द्वितीय नियम <b>ऊर्जा संरक्षण</b> के सिद्धान्त पर आधारित है। <span>(प्रश्न बैंक)</span></p>
+
+        <p><b>15.</b> विद्युत धारा घनत्व <b>सदिश</b> राशि है। <span>(प्रश्न बैंक)</span></p>
+
+        <p><b>16.</b> किसी परिपथ में धारा का मान बदलने पर दूसरे परिपथ में प्रेरित वि. वा. बल का उत्पन्न होना <b>अन्योन्य प्रेरण</b> कहलाता है। <span>(म. प्र. 2021)</span></p>
+
+        <p><b>17.</b> धातु चालकों के लिए विभवान्तर और धारा के मध्य <b>सीधा (सरल रेखा)</b> ग्राफ प्राप्त होता है। <span>(म. प्र. 2012 पूरक)</span></p>
+
+        <p><b>18.</b> विद्युत अपघट्य की सान्द्रता बढ़ाने पर सेल का आन्तरिक प्रतिरोध <b>बढ़ता</b> है। <span>(म. प्र. 2013 पूरक)</span></p>
+
+        <p><b>19.</b> परिवर्तनशील विद्युत क्षेत्र <b>विस्थापन</b> धारा उत्पन्न करता है। <span>(म. प्र. 2024)</span></p>
+
+    </div>
+</div>
+  <div class="qa-box">
+    <div class="question">
+        <b>प्रश्न 4. सही जोड़ियाँ बनाइए -</b>
+    </div>
+
+    <div class="answer">
+        <table style="width:100%; border-collapse:collapse;">
+            <thead>
+                <tr>
+                    <th style="width:50%; border:1px solid #000; padding:8px;">
+                        कॉलम A
+                    </th>
+                    <th style="width:50%; border:1px solid #000; padding:8px;">
+                        कॉलम B
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">1. ओम का नियम</td>
+                    <td style="border:1px solid #000; padding:8px;">V = IR</td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">2. किरचॉफ का द्वितीय नियम</td>
+                    <td style="border:1px solid #000; padding:8px;">ऊर्जा संरक्षण का सिद्धांत</td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">3. ताप बढ़ाने पर अर्द्धचालक का प्रतिरोध</td>
+                    <td style="border:1px solid #000; padding:8px;">कम हो जाता है</td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">4. आंतरिक प्रतिरोध</td>
+                    <td style="border:1px solid #000; padding:8px;">R(E/V − 1)</td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">5. धारा घनत्व</td>
+                    <td style="border:1px solid #000; padding:8px;">J = σE</td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">6. धारा का मात्रक</td>
+                    <td style="border:1px solid #000; padding:8px;">ऐम्पियर</td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">7. धारा वितरण</td>
+                    <td style="border:1px solid #000; padding:8px;">किरचॉफ का प्रथम नियम</td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">8. प्रतिरोध</td>
+                    <td style="border:1px solid #000; padding:8px;">ताप पर निर्भर</td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">9. अनओमीय प्रतिरोध</td>
+                    <td style="border:1px solid #000; padding:8px;">अर्द्धचालक</td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">10. धारा घनत्व का मात्रक</td>
+                    <td style="border:1px solid #000; padding:8px;">ऐम्पियर प्रति वर्ग मीटर</td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">11. विशिष्ट प्रतिरोध एवं प्रतिरोध में सम्बन्ध</td>
+                    <td style="border:1px solid #000; padding:8px;">ρ = RA/l</td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">12. विभव प्रवणता का मात्रक</td>
+                    <td style="border:1px solid #000; padding:8px;">वोल्ट/मीटर</td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">13. विशिष्ट प्रतिरोध का मात्रक</td>
+                    <td style="border:1px solid #000; padding:8px;">ओम × मीटर</td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">14. विद्युत परिपथ में किसी संधि पर ΣI = 0</td>
+                    <td style="border:1px solid #000; padding:8px;">किरचॉफ का प्रथम नियम</td>
+                </tr>
+
+                <tr>
+                    <td style="border:1px solid #000; padding:8px;">15. नाइक्रोम</td>
+                    <td style="border:1px solid #000; padding:8px;">प्रतिरोध तार</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
 
 <!-- PROTECTION -->
 
