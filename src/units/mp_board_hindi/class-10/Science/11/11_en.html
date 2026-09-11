@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | Notes</title>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<script>
+window.MathJax={
+ tex:{
+ inlineMath:[
+ ['$','$'],
+ ['\\(','\\)']
+ ]
+}
+};
+</script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<style>
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+
+body{
+background:#f5f7fb;
+line-height:1.7;
+}
+
+
+/* NAVBAR */
+
+    .navbar{
+
+      background:rgba(15,23,42,0.45);
+
+      backdrop-filter:blur(10px);
+
+      box-shadow:0 4px 18px rgba(0,0,0,.18);
+
+      padding:10px 0;
+
+      transition:.3s;
+
+    }
+
+    .navbar-brand{
+
+      font-size:28px;
+
+      font-weight:700;
+
+      color:white !important;
+
+    }
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+      .navbar-brand{
+        font-size:40px;
+      }
+/* CONTENT */
+
+.notes-container{
+
+max-width:900px;
+
+margin:100px auto 50px;
+
+padding:20px;
+
+}
+
+.notes-title{
+
+background:#e3f2fd;
+
+color:#1565c0;
+
+padding:10px;
+
+border-left:5px solid #1565c0;
+
+border-radius:50px;
+
+font-size:30px;
+
+font-weight:bold;
+margin-top:100px;
+
+margin-bottom:50px;
+
+}
+
+
+
+.qa-box{
+
+background:white;
+
+padding:22px;
+
+margin-bottom:18px;
+
+border-radius:14px;
+
+border-left:6px solid #1565c0;
+
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+transition:.25s;
+
+}
+
+
+.qa-box:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+
+.question{
+
+font-weight:bold;
+
+color:#1b3a57;
+
+margin-bottom:8px;
+
+}
+.question-image{
+    text-align:center;
+    margin:15px 0;
+    overflow-x:auto;
+}
+
+.question-image img{
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:8px;
+}
+
+
+.answer{
+
+color:#2c3e50;
+
+text-align:justify;
+
+}
+.answer img{
+    max-width:100%;
+    height:auto;
+    margin:10px 0;
+    border-radius:8px;
+}
+
+.answer table{
+    width:100%;
+    border-collapse:collapse;
+    margin:12px 0;
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    display:block;
+    overflow-x:auto;
+    box-shadow:0 2px 8px rgba(0,0,0,0.06);
+}
+
+.answer table td, .answer table th{
+    border:1px solid #ddd;
+    padding:10px 12px;
+    text-align:left;
+    vertical-align:top;
+    white-space:normal;
+}
+
+.answer table th{
+    background:#eaf2fb;
+    font-weight:bold;
+    color:#1b3a57;
+}
+
+.answer ol, .answer ul{
+    margin-left:20px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.answer li{ margin-bottom:8px; }
+
+
+
+@media(max-width:768px){
+
+.notes-container{
+
+margin-top:80px;
+
+}
+
+
+}
+.formula{
+    overflow-x:auto;
+    overflow-y:hidden;
+    margin:10px 0;
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<!-- NAVBAR -->
+
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+
+Pal <span>Study Center</span>
+
+</a>
+    <button class="navbar-toggler bg-light"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+</div>
+
+</nav>
+
+
+
+<div class="container">
+
+    <div class="notes-title">📘 Unit 11 - Electricity</div>
+
+        <div class="qa-box">
+        <div class="question">What is Electricity?</div>
+        <div class="answer">
+            <p>Electricity is the flow of electric charge through a conductor.</p>
+<p>It is a form of energy that can be used to run various devices like bulbs, fans, motors, and machines.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What is Electric Charge?</div>
+        <div class="answer">
+            <p>Electric charge is a basic property of matter due to which it experiences a force in an electric field.</p>
+<p>Charge is measured in coulomb (C).</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">How many kinds of electric charges?</div>
+        <div class="answer">
+            <p>There are two kinds of electric charges:</p>
+<ol><li>Positive charge (+)</li><li>Negative charge (–) Like charges repel.</li></ol>
+<p>unlike charges attract.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What type of charge do electrons and protons have?</div>
+        <div class="answer">
+            <p>Electrons have negative charge, and protons have positive charge.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">How does an object get charged by friction?</div>
+        <div class="answer">
+            <p>When two neutral objects are rubbed together then due to friction some electrons get transferred from one object to another object.</p>
+<p>Thus, an object which loses electrons becomes positively charged and which receives electrons becomes negatively charged.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What are Conductors?</div>
+        <div class="answer">
+            <p>Those substances through which electricity can flow are called conductors. </p>
+<p>Example – All metals like silver, copper and aluminium, etc are conductors.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What are Insulators?</div>
+        <div class="answer">
+            <p>Those substances through which electricity cannot flow are called insulators. </p>
+<p>Example – Glass, ebonite, rubber, most plastic, paper, dry wood, etc are insulators.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What is electric potential?</div>
+        <div class="answer">
+            <p>The amount of work done in bringing unit positive charge from infinity to that point in an electric field is called electric potential. It is denoted by V.</p>
+<p>If charge q is brought from infinity to a point and W work is done, then 𝑉 = 𝑊/𝑄 It is a scalar quantity.</p>
+<p>The SI UNIT of electric potential is volt.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What is the potential difference?</div>
+        <div class="answer">
+            <p>The amount of work done in bringing a unit positive charge from one point to another point in an electric field is called potential difference. It is denoted by PD.</p>
+<p>If charge q is brought from infinity to a point and W work is done, then PD = 𝑊/𝑄 It is a scalar quantity.</p>
+<p>The SI UNIT of electric potential is volt.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What is Volt ?</div>
+        <div class="answer">
+            <p>Volt is the SI UNIT of electric potential.</p>
+<p>V𝑜𝑙𝑡 = 𝐽𝑜𝑢𝑙𝑒/𝑐𝑜𝑢𝑙𝑜𝑚𝑏 ∴ One joule work done in bringing unit positive charge from infinity to a point is called one volt at that point.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What is Voltmeter?</div>
+        <div class="answer">
+            <p>The potential difference is measured by means of an instrument called Voltmeter. </p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Write the difference between electric potential and potential d.</div>
+        <div class="answer">
+            <table><tr><th><p>Electric Potential</p></th><th><p>Potential Difference</p></th></tr><tr><td><p>1. Electric potential at a point is the work done in bringing a unit positive charge from infinity to that point.</p></td><td><p>1. Potential difference is the work done in moving a unit positive charge from one point to another in an electric field.</p></td></tr><tr><td><p>2. It is denoted by V.</p></td><td><p>2. It is denoted by V₍P.D.₎ or simply V.</p></td></tr><tr><td><p>3. It refers to a single point in an electric field.</p></td><td><p>3. It refers to two points in an electric field.</p></td></tr></table>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Name a device that helps to maintain a potential difference across a conductor.(Q. Bank)</div>
+        <div class="answer">
+            <p>The device that helps to maintain a potential difference across a conductor is known as battery which consist of one or more electric cells.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What is electric current and write its S.</div>
+        <div class="answer">
+            <p>I. Unit.</p>
+<p>(2019/2023 Q. Bank) The rate of flow of electric charges is known as electric current.</p>
+<p>Current = Charge/ Time Its SI unit is Ampere.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What is the SI unit of electric current? And also write its definition. (2023)</div>
+        <div class="answer">
+            <p>Ampere is the SI unit of electric current that is equal to the flow of one coulomb of charge per second.</p>
+<p>1 amp= 1C/1sec</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What is Ohm's law?(2023)</div>
+        <div class="answer">
+            <p>Ohm's law states that the electric current flowing in a conductor is directly proportional to the potential difference across the ends of the conductor, provided the physical conditions (e.g., temperature) of the conductor remains the same.</p>
+<p>If I is the current flowing through a conductor and V is the potential difference across its ends then according to Ohm's law, V ∝ I V = RI Where R is a constant called resistance of the conductor</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What is resistance? Give its unit</div>
+        <div class="answer">
+            <p>Resistance is the property of a conductor that opposes the flow of electric current through it.<br/></p>
+<p>The SI Unit of resistance is Ohm (Ω).</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Define Ohm.</div>
+        <div class="answer">
+            <p>The resistance of a conductor when a potential difference of 1 volt produces a current of 1 ampere through it is called one ohm.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What are the factors affecting the resistance of the conductor?</div>
+        <div class="answer">
+            <p>The resistance of any conducting wire depends on the following factors -</p>
+<ol><li>Length of the wire - The resistance of a uniform conducting wire is directly proportional to its length i.e., R ∝ L</li><li>Cross-section of the wire -  The resistance of a uniform conducting wire is inversely proportional to its Cross-section of the wire i.e., R ∝ 1/A</li><li>Nature of conducting wire-The resistance of the wire depends upon the nature of the substance (matter) of the conducting wire. </li><li>Temperature of wire - Resistance of a metallic wire of uniform thickness increases with the increase of temperature and decreases with the decrease in temperature.</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Will current flow more easily through a thick wire or a thin wire of the same material, when connected to the same source? Why? (Q. Bank)</div>
+        <div class="answer">
+            <p>The current will flow more easily through a thick wire as compared to thin wire because the resistance of thick wire is less than that of thin wire. Less resistance means more current because I = V/R</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What happens to an electric current if resistance is increased?</div>
+        <div class="answer">
+            <p>According to Ohm's law, current and resistance are inversely proportional. Hence, when resistance increases, current is decreased in the circuit.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Which two metal wires are generally used for transmission of electricity? (2023)</div>
+        <div class="answer">
+            <p>Copper and aluminium metal wires are generally used for transmission of electricity.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Why are copper and aluminium wires usually employed for electricity transmission? (Q. Bank)</div>
+        <div class="answer">
+            <ol><li>Copper and aluminium are much more easily and cheaply available than other metals.</li><li>They offer low resistance and do not get heated</li><li>They can be easily made into wires due to high malleability.</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What is the resistivity of material? Give its S.</div>
+        <div class="answer">
+            <p>I. unit.</p>
+<p>(Q. Bank) The resistance offered by a cube of a material of side 1m when current flows perpendicular to its opposite faces.</p>
+<p>S.I.unit of resistivity is ohm metre.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Give differences between resistance and resistivity.</div>
+        <div class="answer">
+            <table><tr><th><p>Resistance</p></th><th><p>Resistivity</p></th></tr></table>
+<table><tr><th><p>1. It is the property of a conductor to resist the flow of electric charges through it.</p></th><th><p>1. It is the resistance of a material per unit length and unit cross-sectional area.</p></th></tr></table>
+<table><tr><th><p>2. Its unit is ohm (Ω).</p></th><th><p>2. Its unit is ohm-metre (Ω·m).</p></th></tr></table>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What do you mean by series combination of Resistances?</div>
+        <div class="answer">
+            <p>In this combination, the second end of first resistance is joined to the first end of the second resistance; second end of second resistance is joined to the first end of third resistance and so on.</p>
+<p>Thus current flow in each resistance will be equal. </p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Derive Equivalent resistance of series combination of Resistances.</div>
+        <div class="answer">
+            <p>Digram The series combination of three resistances 𝑅1, 𝑅2 and 𝑅3 is shown in fig. Let the potential difference developed across the ends of resistance𝑠 𝑅1, 𝑅2 and 𝑅3 are 𝑉1, 𝑉2 and 𝑉3 respectively.When a cell E is connected to this combination current I flow through it.</p>
+<p>Then by Ohm’s law, 𝑉1 = 𝐼𝑅1 𝑉2 = 𝐼𝑅2 𝑉3 = 𝐼𝑅3 Let R be equivalent resistance of circuit, then, Potential difference between A and B will be V = IR 𝑉 = 𝑉1 + 𝑉2 + 𝑉3 𝐼𝑅 = 𝐼𝑅1 + 𝐼𝑅2 + 𝐼𝑅3 𝑅 = 𝑅1 + 𝑅2 + 𝑅3</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What do you mean by parallel combination of Resistances?</div>
+        <div class="answer">
+            <p>In this combination, one end of each resistance is connected by a point A and the second end of each resistance is connected by another point B.</p>
+<p>This potential difference between the ends of each resistance will be equal.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Derive Equivalent resistance of parallel combination of Resistances.</div>
+        <div class="answer">
+            <p>Digram The parallel combination of three resistances 𝑅1, 𝑅2 and 𝑅3 is shown in fig.When a cell E is connected to this combination current I flow through it.This current is divided into three parts at point A if through 𝑅1, 𝑅2 and 𝑅3 currents 𝐼1,𝐼2 and 𝐼3 are respectively flowing.</p>
+<p>As all the resistance are Connected between two points A and B, hence the potential difference between two points will be the same for all.Let it be V.</p>
+<p>Then by ohm's law, 𝐼1 =𝑉𝑅1 𝐼2 =𝑉𝑅2 Let R be equivalent resistance of circuit, then, 𝐼 =𝑉𝑅 But 𝐼 = 𝐼1 + 𝐼2 + 𝐼3 𝑉/𝑅 = 𝑉/𝑅1 + 𝑉/𝑅2 + 𝑉/𝑅3 1/𝑅 = 1/𝑅1 + 1/𝑅2 + 1/𝑅3</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Write difference between Series and Parallel Connections of Resistors</div>
+        <div class="answer">
+            <table><tr><th><p>Series Connection</p></th><th><p>Parallel Connection</p></th></tr><tr><td><p>1. The total potential difference (V) across the combination is equal to the sum of individual potential differences.</p></td><td><p>1. The potential difference (V) across all resistors remains same/constant.</p></td></tr><tr><td><p>2. The current (I) remains the same through all resistors.</p></td><td><p>2. The current (I) through each resistor is different depending on its resistance.</p></td></tr></table>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What is the thermal effect of electric current?</div>
+        <div class="answer">
+            <p>When an electric current flows through a conductor, it produces heat.This heating effect of electric current is called the thermal effect of electric current.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What is Joule’s law of heating?</div>
+        <div class="answer">
+            <p>Joule’s law of heating states that:</p>
+<p>The heat produced (H) in a conductor by an electric current is directly proportional to:</p>
+<ol><li>Square of the current (I²)</li><li>Resistance of the conductor (R)</li><li>Time for which the current flows (t) Mathematically, 𝐻 = 𝐼2𝑅𝑡</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Write the practical applications of heating effects of electric current. (2021) Or</div>
+        <div class="answer">
+            <p>Write two applications of the heating effect of electric current.(Q. Bank)</p>
+<p>Applications of the heating effect of electric current</p>
+<ol><li>It is used in electric heaters. </li><li>It is used in electric iron. </li><li>It is used in electric toasters.</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Why are coils of electric toasters and electric irons made of an alloy rather than a pure metal? (Q. Bank)</div>
+        <div class="answer">
+            <p>Or, Why are the conductors of electric heating devices, such as bread toasters and electric irons, made of an alloy rather than a pure metal? (2022)</p>
+<p>We know that the resistivity of an alloy is much higher than that of a pure metal and an alloy does not undergo oxidation easily even at high temperature when it is even red hot. Therefore, the coils of electric toasters and electric irons are made of an alloy rather than a pure metal.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Why does the cord of an electric heater not glow while the heating element does? Write cause.(2024)</div>
+        <div class="answer">
+            <p>The resistance of the cord is extremely small as compared to that of the heating element, so the heat produced in cord is less as compared to heating element. So, the heating element begins to glow but the cord does not glow.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Why is tungsten used almost exclusively for filament of electric lamps? (2020/22)</div>
+        <div class="answer">
+            <ol><li>It has a special property that it glows on heating.</li><li>It has a high melting point.</li><li>It does not react with the gases present in air and does not get oxidised.</li><li>It has low resistance.</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What is a fuse wire?</div>
+        <div class="answer">
+            <p>A fuse is a metallic wire of low melting point. It is connected in the live line of every section of the building's wiring. </p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">How does fuse wire prevent electrical devices from damage?</div>
+        <div class="answer">
+            <p>If there is any overheating in the circuit the fuse wire melts immediately, thus preventing the accidents and electrical devices from damage</p>
+        </div>
+    </div>
+
+
+</div>
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("show");
+}
+document.addEventListener("click", function(e){
+    if(!e.target.closest(".navbar")){
+        var menu = document.getElementById("menu");
+        if(menu) menu.classList.remove("show");
+    }
+});
+</script>
+<script>
+document.addEventListener("contextmenu", function(e) { e.preventDefault(); return false; }, false);
+document.addEventListener("selectstart", function(e) { e.preventDefault(); return false; }, false);
+document.addEventListener("keydown", function(e) {
+    if (e.key === "PrintScreen" || e.keyCode === 44 ||
+        (e.ctrlKey && e.shiftKey && e.key === "S") ||
+        (e.keyCode === 91 && e.shiftKey && e.key === "5")) { e.preventDefault(); return false; }
+    if ((e.ctrlKey || e.metaKey) && (e.key === "c" || e.keyCode === 67)) {
+        e.preventDefault(); alert("Copying content is not allowed on this page."); return false;
+    }
+    if ((e.ctrlKey || e.metaKey) && (e.key === "a" || e.keyCode === 65)) { e.preventDefault(); return false; }
+    if ((e.ctrlKey || e.metaKey) && (e.key === "x" || e.keyCode === 88)) { e.preventDefault(); return false; }
+    if (e.keyCode === 123) { e.preventDefault(); return false; }
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "i" || e.keyCode === 73)) { e.preventDefault(); return false; }
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "j" || e.keyCode === 74)) { e.preventDefault(); return false; }
+}, false);
+document.addEventListener("mouseup", function() {
+    document.selection && document.selection.empty ? document.selection.empty() : window.getSelection().removeAllRanges();
+}, false);
+document.addEventListener("paste", function(e) {
+    e.preventDefault(); alert("Pasting content is not allowed on this page."); return false;
+}, false);
+document.addEventListener("DOMContentLoaded", function() {
+    document.body.style.userSelect = "none";
+    document.body.style.webkitUserSelect = "none";
+    document.body.style.msUserSelect = "none";
+    document.body.style.mozUserSelect = "none";
+});
+document.addEventListener("dragstart", function(e) { e.preventDefault(); return false; }, false);
+</script>
+
+</body>
+</html>

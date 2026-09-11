@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | Notes</title>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<script>
+window.MathJax={
+ tex:{
+ inlineMath:[
+ ['$','$'],
+ ['\\(','\\)']
+ ]
+}
+};
+</script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<style>
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+
+body{
+background:#f5f7fb;
+line-height:1.7;
+}
+
+
+/* NAVBAR */
+
+    .navbar{
+
+      background:rgba(15,23,42,0.45);
+
+      backdrop-filter:blur(10px);
+
+      box-shadow:0 4px 18px rgba(0,0,0,.18);
+
+      padding:10px 0;
+
+      transition:.3s;
+
+    }
+
+    .navbar-brand{
+
+      font-size:28px;
+
+      font-weight:700;
+
+      color:white !important;
+
+    }
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+      .navbar-brand{
+        font-size:40px;
+      }
+/* CONTENT */
+
+.notes-container{
+
+max-width:900px;
+
+margin:100px auto 50px;
+
+padding:20px;
+
+}
+
+.notes-title{
+
+background:#e3f2fd;
+
+color:#1565c0;
+
+padding:10px;
+
+border-left:5px solid #1565c0;
+
+border-radius:50px;
+
+font-size:30px;
+
+font-weight:bold;
+margin-top:100px;
+
+margin-bottom:50px;
+
+}
+
+
+
+.qa-box{
+
+background:white;
+
+padding:22px;
+
+margin-bottom:18px;
+
+border-radius:14px;
+
+border-left:6px solid #1565c0;
+
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+transition:.25s;
+
+}
+
+
+.qa-box:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+
+.question{
+
+font-weight:bold;
+
+color:#1b3a57;
+
+margin-bottom:8px;
+
+}
+.question-image{
+    text-align:center;
+    margin:15px 0;
+    overflow-x:auto;
+}
+
+.question-image img{
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:8px;
+}
+
+
+.answer{
+
+color:#2c3e50;
+
+text-align:justify;
+
+}
+.answer img{
+    max-width:100%;
+    height:auto;
+    margin:10px 0;
+    border-radius:8px;
+}
+
+.answer table{
+    width:100%;
+    border-collapse:collapse;
+    margin:12px 0;
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    display:block;
+    overflow-x:auto;
+    box-shadow:0 2px 8px rgba(0,0,0,0.06);
+}
+
+.answer table td, .answer table th{
+    border:1px solid #ddd;
+    padding:10px 12px;
+    text-align:left;
+    vertical-align:top;
+    white-space:normal;
+}
+
+.answer table th{
+    background:#eaf2fb;
+    font-weight:bold;
+    color:#1b3a57;
+}
+
+.answer ol, .answer ul{
+    margin-left:20px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.answer li{ margin-bottom:8px; }
+
+
+
+@media(max-width:768px){
+
+.notes-container{
+
+margin-top:80px;
+
+}
+
+
+}
+.formula{
+    overflow-x:auto;
+    overflow-y:hidden;
+    margin:10px 0;
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<!-- NAVBAR -->
+
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+
+Pal <span>Study Center</span>
+
+</a>
+    <button class="navbar-toggler bg-light"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+</div>
+
+</nav>
+
+
+
+<div class="container">
+
+    <div class="notes-title">📘 Unit 9 - Light</div>
+
+        <div class="qa-box">
+        <div class="question">What is light?</div>
+        <div class="answer">
+            <p>Light is a form of energy. </p>
+<ul><li>Light is needed to see things around us. </li><li>Light enables us to see objects from which it comes or from which it is reflected.</li></ul>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What is the nature of light?</div>
+        <div class="answer">
+            <p>Nature of light –</p>
+<ol><li>According to wave theory –The consists of electromagnetic waves which do not require a material medium for their propagation.</li><li>According to particle theory – Light is composed of particles which travel in a straight line at very high speed. The elementary particle that defines light is the “photon”.</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What do you mean by the reflection of light ?</div>
+        <div class="answer">
+            <p>The process of sending back the light rays which fall on the surface of an object, is called reflection of light. </p>
+<img alt="Figure" src="images/image4.jpg" style="max-width:350px; height:auto; margin:10px 0;"/>
+<p>Where -</p>
+<ol><li>The ray of light which falls on the mirror surface is called the incident ray. </li><li>The point at which the incident ray falls on the mirror is called the point of incident.</li><li>The ray of light which is sent back by the mirror is called the reflected ray.</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What is the angle of incidence?</div>
+        <div class="answer">
+            <p>The angle made by the incident ray with the normal at the point of incidence is called the angle of incidence. It is represented by i.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What is the angle of reflection?</div>
+        <div class="answer">
+            <p>The angle made by the reflected ray with the normal at the point of incidence is called angle of reflection. It is represented by r.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Write the laws of reflection of light.</div>
+        <div class="answer">
+            <p>Law of reflection of light –</p>
+<ol><li>The angle of reflection is always equal to the angle of incidence. That is i = r</li><li>The incident ray, the reflected ray, and the normal all lie in the same plane. </li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What is an Object?</div>
+        <div class="answer">
+            <p>Anything which gives out light rays is called an object.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What is an Image? How many kinds of images?</div>
+        <div class="answer">
+            <p>Image is an optical appearance produced when light rays coming from an object are reflected from a mirror. </p>
+<p>There are two types -</p>
+<ol><li>Real image – The image which can be obtained on a screen is called real image.The images formed on a cinema screen is an example of real image.</li><li>Virtual image – The image which cannot be obtained on a screen is called a virtual image. It is also called unreal image.The image of our face in a plane mirror is an example of a virtual image.</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Write difference between Real Image and Virtual Image</div>
+        <div class="answer">
+            <table><tr><th><p>Real Image </p></th><th><p>Virtual Image</p></th></tr><tr><td><p>1. Real images are formed by the actual intersection of two real rays of light.</p></td><td><p>1. Virtual images are formed by the apparent intersection of two rays of light virtually.</p></td></tr><tr><td><p>2. Here, the rays actually meet at the image point.</p></td><td><p>2. Here, the rays appear to diverge from the image point.</p></td></tr><tr><td><p>3. It can be obtained on a screen and is always inverted.</p></td><td><p>3. It cannot be obtained on a screen and is always erect.</p></td></tr><tr><td><p>4. Example: Image formed by a concave mirror when the object is placed beyond the focus.</p></td><td><p>4. Example: Image formed by a plane mirror or convex mirror.</p></td></tr></table>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Draw the formation of an image in a plane mirror.</div>
+        <div class="answer">
+            <img alt="Figure" src="images/image2.png" style="max-width:350px; height:auto; margin:10px 0;"/>
+<p>The nature of the image formed by a plane mirror is virtual and erect and the size of image formed by a plane is equal to that of the object.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What is lateral Inversion?</div>
+        <div class="answer">
+            <p>When an object is placed in front of a plane mirror, then the right side of the object appears to become the left side of the image and the left side of the object appears to become the right side of the image. This change of sides of an object and its mirror image is called lateral inversion.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What are the properties of an image formed by a plane mirror?</div>
+        <div class="answer">
+            <p>Properties image formed by a plane mirror – </p>
+<ol><li>The image formed in a plane mirror is virtual. It cannot be received on a screen.</li><li>The image formed in a plane mirror is erect. It is the same side up as the object.</li><li>The image in a plane mirror is of the same size as the object.</li><li>The image formed by a plane mirror is at the same distance behind the mirror as the object is in front of the mirror.</li><li>The image formed in a plane mirror is laterally inverted.</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Write the uses of the plane mirror.</div>
+        <div class="answer">
+            <p>Uses of plane mirrors – </p>
+<ol><li>Plane mirrors are used to see ourselves. The mirrors on our dressing table and in bathrooms are plane mirrors.</li><li>Plane mirrors are fixed on the inside walls of certain shops to make them look bigger.</li><li>Plane mirrors are fitted at blind turns on some busy roads so that drivers can see the vehicles coming from the other side and prevent accidents.</li><li>Plane mirrors are used in making periscopes.</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What is a Spherical Mirror? How many types of spherical mirror?  2019/20</div>
+        <div class="answer">
+            <p>A spherical mirror is that mirror whose reflecting surface is the part of a hollow sphere of glass.</p>
+<p>The spherical mirrors are of two types –</p>
+<ol><li>Concave mirror – A concave mirror is that spherical mirror in which the reflection of light takes place at the concave surface.</li><li>Convex mirror – A convex mirror is that spherical mirror in which the reflection of light takes place at the convex surface.</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Give definitions of following terms.</div>
+        <div class="answer">
+            <ol><li>Pole – The centre of a spherical mirror is called its pole. It is denoted by P.</li><li>Centre of curvature (2019)– The centre of curvature of a spherical mirror is the centre of the hollow sphere of glass of which the mirror is a part. It is denoted by C.</li><li>Centre of radius(2020)– The radius of curvature of a spherical mirror is the radius of the hollow sphere of glass of which the mirror is a part. It is denoted by R.</li><li>Principle axis(2020)– The straight line passing through the centre of curvature and pole of a spherical mirror is called its principle axis.</li><li>Aperture – That portion of a mirror from which the reflection of light actually takes place is called the aperture of the mirror.</li></ol>
+<p>For concave mirror -</p>
+<ol><li>Principal focus(2019/24)– The principal focus of a concave mirror is a point on its principal axis to which all the light rays which are parallel and close to the axis, converge after reflection from the concave mirror. It is denoted by F.</li></ol>
+<p>A concave mirror has a real focus. </p>
+<p>An image of the sun can be produced by a concave mirror at its focus.</p>
+<ol><li>Focal length(2020)– The focal length of a concave mirror is the distance between its pole and principal focus. It is always negative. It is denoted by f. </li></ol>
+<p>For convex mirror – </p>
+<ol><li>Principal focus – The principal focus of a convex mirror is a point on its principal axis from which a beam of light rays, initially parallel to the axis, appears to diverge after being reflected from the convex mirror. It is denoted by F.</li></ol>
+<p>A convex mirror has a virtual situated focus.</p>
+<ol><li>Focal length - The focal length of a convex mirror is the distance between its pole and principal focus. It is always positive. It is denoted by f.</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Explain the images format by the concave mirrors in different positions with diagrams.</div>
+        <div class="answer">
+            <p>The type of image formed by a concave mirror depends on the position of the object in front of the mirror.</p>
+<ol><li>When the object is at infinity – When the object is at infinity from a concave mirror, the image formed is at focus (F), real and inverted and much smaller than the object.</li></ol>
+<img alt="Figure" src="images/image3.jpg" style="max-width:350px; height:auto; margin:10px 0;"/>
+<ol><li>When the object is beyond the centre of curvature of the concave mirror – When an object is placed beyond the centre of curvature (C) of a concave mirror the image is formed between the focus and centre of curvature, real and inverted and smaller than the object.</li></ol>
+<img alt="Figure" src="images/image5.jpg" style="max-width:350px; height:auto; margin:10px 0;"/>
+<ol><li>When the object is placed at the centre of curvature of a concave mirror – When an object is placed at the centre of curvature (C) of a concave mirror, the image formed is, at the centre of curvature (C), real and inverted and same size as the object.</li><li>When the object is placed between focus and centre of curvature – When an object is placed between the focus(F) and centre of curvature (C) of a concave mirror, the image formed is, beyond the centre of curvature, real and inverted and larger than the object.</li><li>When the object is placed at the focus of a concave mirror – When an object is placed at the focus of a concave mirror, the image is, at infinity, real and inverted and highly magnified.</li><li>When the object is placed between the pole and the focus of the mirror – When an object is placed between the pole (P) and focus (F) of a concave mirror, the image formed is, beyond the mirror, virtual and erect and larger than the object.</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Write uses of concave mirror.</div>
+        <div class="answer">
+            <p> Uses of concave mirror</p>
+<ol><li>It is used for shaving to see a large image of the face.</li><li>It is used by dentists to see the large image of the teeth of patients.</li><li>It is used as reflectors in torches, vehicle head-lights and search lights to get powerful beams of light.</li><li>It is used as doctor's head-mirrors to focus light coming from a lamp onto the body parts of a patient to be examined by the doctor.</li><li>Large concave mirrors are used in the field of solar energy to focus sun’s rays for heating solar furnaces.</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Name the type of mirror used in the following situations:</div>
+        <div class="answer">
+            <p>(a) Headlights of a car.</p>
+<p>(b) Side/rear-view mirror of a vehicle.</p>
+<p>(c) Solar furnaoce.</p>
+<p>(a) For the headlights of a car, a concave mirror is used to get a powerful beam of light after reflection.</p>
+<p>(b) Convex mirror is used for the side/rear view mirror of a vehicle. The convex mirror forms an erect and diminished image of vehicles and gives a wider view of the rear.</p>
+<p>(c) In a solar furnace concave mirror is used as a reflector, it concentrates sunlight at a point where the temperature increases sharply to 180°C to 200°C.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Explain the images format by the convex mirror with diagrams.</div>
+        <div class="answer">
+            <p>When an object is placed anywhere between pole (P) and infinity in front of a convex mirror, the image formed is, beyond the mirror between pole (P) and focus (F) which is virtual and erect and smaller than the object.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Write uses of convex mirror.</div>
+        <div class="answer">
+            <p>Uses of concave mirror </p>
+<ol><li>It is used as rear-view mirrors in vehicles to see the traffic at the rear side.</li><li>Big convex mirrors are used as shop security mirrors.</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Which mirror is used to see the rear view in vehicles?</div>
+        <div class="answer">
+            <p>Convex mirrors are preferred as a rear-view mirror in vehicles because they always give an erect though diminished image. They also have a wider field of view as they are curved outwards.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Write mirror formula.</div>
+        <div class="answer">
+            <p>The mirror formula is a mathematical relationship between the object distance (u), image distance (v), and focal length (f) of a spherical mirror.</p>
+<p>1/f = 1/u + 1/v Where:</p>
+<ul><li>f = focal length of the mirror </li><li>v = image distance</li><li>u = object distance</li></ul>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What is Linear Magnification of a Mirror?</div>
+        <div class="answer">
+            <p>Linear magnification (m) of a mirror is the ratio of the height of the image (I) to the height of the object (O).</p>
+<p>m= I/O = −v/u Where:</p>
+<ul><li>I = height of image<br/></li><li>O = height of object<br/></li><li>v = image distance<br/></li><li>u = object distance</li></ul>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">The magnification produced by a plane mirror is +1. What does this mean?</div>
+        <div class="answer">
+            <ol><li>Object distance (u) is always negative, because the object is placed in front of the mirror.</li><li>Image distance (v) is<br/><ul><li>Negative for real image </li><li>Positive for virtual image </li></ul></li><li>Magnification (m) is<ul><li>Negative for real image </li><li>Positive for virtual image </li></ul></li><li>Focal length (f) is<br/><ul><li>Negative for concave mirror</li><li>Positive for convex mirror</li></ul></li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What do you mean by refraction of light? Write the law of refraction of light.</div>
+        <div class="answer">
+            <p>Refraction of light is the bending of light rays as they pass from one transparent medium to another.</p>
+<ol><li>If light enters a denser medium, it bends toward the normal. </li><li>If light enters a rarer medium, it bends away from the normal.</li></ol>
+<p>Laws of reflection</p>
+<ol><li>The angle of incidence is equal to the angle of reflection,</li><li>The incident ray, the normal to the mirror and the reflected ray at the point of incidence, all lie in the same plane.</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What happens when a ray of light enters a rarer medium to denser medium. (M. P. 2023)</div>
+        <div class="answer">
+            <p>When a ray of light travels from optically rarer medium to optically denser medium it always bends towards the normal.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What happens when a ray of light enters denser medium to rarer medium. (M. P. 2023)</div>
+        <div class="answer">
+            <p>When a ray of light travels from optically denser medium to optically rarer medium it always bends away from the normal.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">A ray of light travelling in air enters obliquely into water. Does the light ray bend towards the normal or away from the normal? Why?</div>
+        <div class="answer">
+            <p>When a ray of light travels from air into water obliquely, it bends towards the normal.</p>
+<p>Reason:<br/>The speed of light decreases when it enters a denser medium (like water) from a rarer medium (like air). Due to this decrease in speed, the ray bends towards the normal.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What is a Lens?</div>
+        <div class="answer">
+            <p>A lens is a transparent piece of glass  having two refracting surfaces, at least one of which is curved.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">How many types of lenses are there?</div>
+        <div class="answer">
+            <p>There are two main types of lenses:</p>
+<ol><li>Convex Lens (Converging Lens): A convex lens is thicker in the middle and thinner at the edges. It converges (brings together) the parallel rays of light.</li><li>Concave Lens (Diverging Lens): A concave lens is thinner in the middle and thicker at the edges.. It diverges (spreads out) the parallel rays of light.</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Why is a convex lens called a converging lens?</div>
+        <div class="answer">
+            <p>When parallel rays of light pass through it, they refract and meet at a single point (focus) on the other side of the lens. Therefore, it is called a converging lens.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Why is  a concave lens called a diverging lens?</div>
+        <div class="answer">
+            <p>When parallel rays of light pass through it, they spread out (diverge) and appear to come from a point (focus) behind the lens. Therefore, it is called a diverging lens.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What is called a biconvex lens? (Μ. Ρ. 2023)</div>
+        <div class="answer">
+            <p>A lens that have two spherical surfaces, buldging outwards is called biconvex or double convex lens.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Define the important terms related to a lens.</div>
+        <div class="answer">
+            <p>The following are the important terms used in the study of lenses:</p>
+<ol><li>Optical Centre (O): The geometrical centre of a lens is called its optical centre.</li></ol>
+<p>A ray of light passing through the optical centre does not deviate from its path.</p>
+<ol><li>Principal Axis: The straight line joining the centres of curvature of the two spherical surfaces of the lens is called the principal axis.</li><li>Principal Focus of convex lens (F): The point on the principal axis where parallel rays of light to the principal axis converge in a convex lens  after refraction is called the principal focus.</li><li>Principal Focus of concave lens (F): The point on the principal axis where parallel rays of light to the principal axis appear to diverge from in a concave lens after refraction is called the principal focus.</li><li>Focal Length (f): The distance between the optical centre (O) and the principal focus (F) of the lens is called the focal length.</li><li>Centre of Curvature (C): The centre of the sphere of which the lens surface is a part is called its centre of curvature.</li></ol>
+<p>A lens has two centres of curvature — one for each surface.</p>
+<ol><li>Aperture: The portion of the lens through which light actually passes is called the aperture of the lens.</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Give Standard ray tracing rules for convex lenses.</div>
+        <div class="answer">
+            <p>Ray 1: A ray of light parallel to the principal axis passes through the focus  on the other side of the lens after refraction.</p>
+<p>Ray 2: A ray of light passing through the optical center (O) goes straight through the lens without any deviation.</p>
+<p>Ray 3: A ray of light passing through the first principal focus (F1) emerges parallel to the principal axis after refraction. </p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Describe the nature, size and position of the image formation for different object positions in convex lenses..</div>
+        <div class="answer">
+            <p>Image formation for different object positions in convex lenses.</p>
+<ol><li>Object at infinity Image location: At the focus .</li></ol>
+<p>Image size: Highly diminished, or point-sized.</p>
+<p>Image nature: Real and inverted. </p>
+<ol><li>Object beyond (2F1) </li></ol>
+<ul><li>Image location: Between the focus (F2) and twice the focal length (2F2) on the opposite side of the lens.</li></ul>
+<p>Image size: Diminished (smaller than the object).</p>
+<p>Image nature: Real and inverted. </p>
+<ol><li>Object at (2F1) Image location: At (2F2) on the opposite side of the lens.</li></ol>
+<p>Image size: Same size as the object.</p>
+<p>Image nature: Real and inverted. </p>
+<ol><li>Object between (F1) and (2F1) Image location: Beyond (2F2) the opposite side of the lens.</li></ol>
+<p>Image size: Magnified (larger than the object).</p>
+<p>Image nature: Real and inverted. </p>
+<ol><li>Object at (F1) Image location: At infinity.</li></ol>
+<p>Image size: Highly magnified.Image nature: Real and inverted. </p>
+<ol><li>Object between the optical center (O) and (F1) Image size: Magnified (larger than the object).</li></ol>
+<p>Image nature: Virtual and erect (cannot be projected onto a screen). This is the principle behind a simple magnifying glass. </p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Write the uses of a Convex Lens.</div>
+        <div class="answer">
+            <p> Convex lenses are used for the following purposes:</p>
+<ol><li>In magnifying glasses – to see enlarged images of small objects.</li><li>In microscopes – as objective and eyepiece lenses.</li><li>In cameras – to focus light and form real images.</li><li>In projectors – to produce enlarged images on a screen.</li><li>In human eyes and spectacles – to correct hypermetropia (farsightedness).</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Give standard ray tracing rules for concave lenses.</div>
+        <div class="answer">
+            <p>The following are the standard rules for drawing ray diagrams for a concave (diverging) lens:</p>
+<p>Rule 1: A ray of light parallel to the principal axis appears to diverge from the focus (F₁) on the same side of the lens after refraction.</p>
+<p>Rule 2: A ray of light passing towards the optical centre (O) of the lens goes undeviated (it passes straight through without bending).</p>
+<p>Rule 3: A ray of light directed towards the focus (F₂) on the opposite side of the lens emerges parallel to the principal axis after refraction.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Describe the nature, size and position of the image formed by a concave lens.</div>
+        <div class="answer">
+            <p>Nature of image.</p>
+<ol><li>Nature of image: Virtual</li><li>Size of image: Smaller than the object (diminished)</li><li>Position of image: Between the lens and the focus on the same side as the object</li><li>Orientation: Upright</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Write the uses of concave lenses.</div>
+        <div class="answer">
+            <p>Uses of concave lenses.</p>
+<ol><li>Correcting myopia (nearsightedness): Concave lenses are used in glasses for people who can see nearby objects clearly but distant objects appear blurry.</li><li>Peepholes in doors: They are used in security peepholes to give a wider field of view.</li><li>In cameras and optical instruments: Concave lenses help in controlling the divergence of light and forming virtual images in some optical devices.</li><li>Laser beams: They are used to diverge laser beams.</li><li>In magnifying devices for smaller objects: Sometimes combined with convex lenses in optical systems to adjust image size</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What do you understand about the power of lenses ? Write its formula. (M. P. 2019 Suppl., 20, 21)</div>
+        <div class="answer">
+            <p>Power of lens is the ability of the lens to converge the rays of light falling on it.</p>
+<p>The power of a lens is defined as the reciprocal of its focal length (in metres). It is represented by letter (P).</p>
+<p>P = 1/f (in m)​ where:</p>
+<ul><li>P = power of the lens<br/></li><li>f = focal length of the lens (in metres) The SI unit of power of a lens is Dioptre (D).</li></ul>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What is a diopter ?</div>
+        <div class="answer">
+            <p>A Diopter  is defined as the power of a lens whose focal length is 1 metre. </p>
+<ul><li>Convex lens → Positive power (f is +ve)<br/></li><li>Concave lens → Negative power (f is –ve)</li></ul>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What is the Lens Formula?</div>
+        <div class="answer">
+            <p>The lens formula gives the relationship between the object distance (u), image distance (v), and focal length (f) of a lens.</p>
+<p>1/f = 1/v - 1/u Where:</p>
+<ul><li>f = focal length of the lens </li><li>v = image distance</li><li>u = object distance</li></ul>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What is Linear Magnification of a lens?</div>
+        <div class="answer">
+            <p>Linear magnification (m) of a lens is the ratio of the height of the image (I) to the height of the object (O).</p>
+<p>m= I/O = v/u Where:</p>
+<ul><li>I = height of image<br/></li><li>O = height of object<br/></li><li>v = image distance<br/></li><li>u = object distance</li></ul>
+<p>Sign convention: For numerical problems involving concave and convex lenses, the Cartesian sign convention is used for using symbols in lens formulas. </p>
+<p>According to this convention, all distances are measured along the principal axis, with the optical center of the lens as the origin.</p>
+<ol><li>Object distance (u) → Always negative (-)</li><li>Image distance (v):<ol><li>If the image is real → Positive (+)</li><li>If the image is virtual → Negative (-)</li></ol></li><li>Magnification (m):<ol><li>If the image is real → negative (-)</li><li>If the image is virtual → positive (+)</li></ol></li><li>Focal length (f):<ol><li>For a convex lens → f Positive (+)</li><li>For a concave lens → f Negative (-)</li></ol></li><li>Object height (O):<ol><li>Above the principal axis → Positive (+)</li><li>Below the principal axis → Negative (-)</li></ol></li><li>Image height (I):<ol><li>Real image → Negative (-)</li><li>Virtual image → Positive (+)</li></ol></li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Multiple Choice Questions</div>
+        <div class="answer">
+            <ol><li>The image formed by a plane mirror is — Virtual and erect<br/></li><li>Focal length of a plane mirror is — Infinite<br/></li><li>The mirror used by dentists is — Concave mirror<br/></li><li>The mirror used in vehicles as rear-view mirror is — Convex mirror<br/></li><li>The centre of a spherical mirror is called — Centre of curvature<br/></li><li>The line passing through the pole and centre of curvature is — Principal axis<br/></li><li>The focal length (f) of a mirror is related to radius of curvature (R) as — f = R/2</li><li>The mirror that can form both real and virtual images is — Concave mirror<br/></li><li>The power of a concave lens is — Negative<br/></li><li>The image formed by a concave lens is always — Virtual, erect, and diminished<br/></li><li>The focal length of a convex lens is — Positive<br/></li><li>A ray passing through the optical centre of a lens — Passes undeviated<br/></li><li>The mirror formula is —  1/f = 1/v + 1/u</li><li>The lens formula is —  1/f = 1/v - 1/u</li><li>Unit of power of lens is — Dioptre (D)</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Fill in the blanks</div>
+        <div class="answer">
+            <ol><li>The image formed by a plane mirror is virtual and erect.<br/></li><li>The focal length of a mirror is half of its radius of curvature.<br/></li><li>The mirror which diverges light is called a convex mirror.<br/></li><li>The SI unit of power of a lens is dioptre.<br/></li><li>A convex lens is also known as a converging lens.</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Match the Following</div>
+        <div class="answer">
+            <table><tr><th><p>Column A</p></th><th><p>Column B</p></th></tr><tr><td><p>1. Concave mirror</p></td><td><p>(a) Used by dentist</p></td></tr><tr><td><p>2. Convex mirror</p></td><td><p>(b) Used as rear-view mirror</p></td></tr><tr><td><p>3. Convex lens</p></td><td><p>(c) Converging lens</p></td></tr><tr><td><p>4. Concave lens</p></td><td><p>(d) Diverging lens</p></td></tr><tr><td><p>5. Plane mirror</p></td><td><p>(e) Image is always virtual</p></td></tr></table>
+        </div>
+    </div>
+
+
+</div>
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("show");
+}
+document.addEventListener("click", function(e){
+    if(!e.target.closest(".navbar")){
+        var menu = document.getElementById("menu");
+        if(menu) menu.classList.remove("show");
+    }
+});
+</script>
+<script>
+document.addEventListener("contextmenu", function(e) { e.preventDefault(); return false; }, false);
+document.addEventListener("selectstart", function(e) { e.preventDefault(); return false; }, false);
+document.addEventListener("keydown", function(e) {
+    if (e.key === "PrintScreen" || e.keyCode === 44 ||
+        (e.ctrlKey && e.shiftKey && e.key === "S") ||
+        (e.keyCode === 91 && e.shiftKey && e.key === "5")) { e.preventDefault(); return false; }
+    if ((e.ctrlKey || e.metaKey) && (e.key === "c" || e.keyCode === 67)) {
+        e.preventDefault(); alert("Copying content is not allowed on this page."); return false;
+    }
+    if ((e.ctrlKey || e.metaKey) && (e.key === "a" || e.keyCode === 65)) { e.preventDefault(); return false; }
+    if ((e.ctrlKey || e.metaKey) && (e.key === "x" || e.keyCode === 88)) { e.preventDefault(); return false; }
+    if (e.keyCode === 123) { e.preventDefault(); return false; }
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "i" || e.keyCode === 73)) { e.preventDefault(); return false; }
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "j" || e.keyCode === 74)) { e.preventDefault(); return false; }
+}, false);
+document.addEventListener("mouseup", function() {
+    document.selection && document.selection.empty ? document.selection.empty() : window.getSelection().removeAllRanges();
+}, false);
+document.addEventListener("paste", function(e) {
+    e.preventDefault(); alert("Pasting content is not allowed on this page."); return false;
+}, false);
+document.addEventListener("DOMContentLoaded", function() {
+    document.body.style.userSelect = "none";
+    document.body.style.webkitUserSelect = "none";
+    document.body.style.msUserSelect = "none";
+    document.body.style.mozUserSelect = "none";
+});
+document.addEventListener("dragstart", function(e) { e.preventDefault(); return false; }, false);
+</script>
+
+</body>
+</html>

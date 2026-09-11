@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | Notes</title>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<script>
+window.MathJax={
+ tex:{
+ inlineMath:[
+ ['$','$'],
+ ['\\(','\\)']
+ ]
+}
+};
+</script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<style>
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+
+body{
+background:#f5f7fb;
+line-height:1.7;
+}
+
+
+/* NAVBAR */
+
+    .navbar{
+
+      background:rgba(15,23,42,0.45);
+
+      backdrop-filter:blur(10px);
+
+      box-shadow:0 4px 18px rgba(0,0,0,.18);
+
+      padding:10px 0;
+
+      transition:.3s;
+
+    }
+
+    .navbar-brand{
+
+      font-size:28px;
+
+      font-weight:700;
+
+      color:white !important;
+
+    }
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+      .navbar-brand{
+        font-size:40px;
+      }
+/* CONTENT */
+
+.notes-container{
+
+max-width:900px;
+
+margin:100px auto 50px;
+
+padding:20px;
+
+}
+
+.notes-title{
+
+background:#e3f2fd;
+
+color:#1565c0;
+
+padding:10px;
+
+border-left:5px solid #1565c0;
+
+border-radius:50px;
+
+font-size:30px;
+
+font-weight:bold;
+margin-top:100px;
+
+margin-bottom:50px;
+
+}
+
+
+
+.qa-box{
+
+background:white;
+
+padding:22px;
+
+margin-bottom:18px;
+
+border-radius:14px;
+
+border-left:6px solid #1565c0;
+
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+transition:.25s;
+
+}
+
+
+.qa-box:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+
+.question{
+
+font-weight:bold;
+
+color:#1b3a57;
+
+margin-bottom:8px;
+
+}
+.question-image{
+    text-align:center;
+    margin:15px 0;
+    overflow-x:auto;
+}
+
+.question-image img{
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:8px;
+}
+
+
+.answer{
+
+color:#2c3e50;
+
+text-align:justify;
+
+}
+.answer img{
+    max-width:100%;
+    height:auto;
+    margin:10px 0;
+    border-radius:8px;
+}
+
+.answer table{
+    width:100%;
+    border-collapse:collapse;
+    margin:12px 0;
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    display:block;
+    overflow-x:auto;
+    box-shadow:0 2px 8px rgba(0,0,0,0.06);
+}
+
+.answer table td, .answer table th{
+    border:1px solid #ddd;
+    padding:10px 12px;
+    text-align:left;
+    vertical-align:top;
+    white-space:normal;
+}
+
+.answer table th{
+    background:#eaf2fb;
+    font-weight:bold;
+    color:#1b3a57;
+}
+
+.answer ol, .answer ul{
+    margin-left:20px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.answer li{ margin-bottom:8px; }
+
+
+
+@media(max-width:768px){
+
+.notes-container{
+
+margin-top:80px;
+
+}
+
+
+}
+.formula{
+    overflow-x:auto;
+    overflow-y:hidden;
+    margin:10px 0;
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<!-- NAVBAR -->
+
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+
+Pal <span>Study Center</span>
+
+</a>
+    <button class="navbar-toggler bg-light"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+</div>
+
+</nav>
+
+
+
+<div class="container">
+
+    <div class="notes-title">📘 Unit 12 - Magnetic effect of the current</div>
+
+        <div class="qa-box">
+        <div class="question">What is Magnet?</div>
+        <div class="answer">
+            <p>The material which can attract the magnetic substances such as cobalt, iron and nickel, is called a magnet.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What is magnetism?</div>
+        <div class="answer">
+            <p>The property of attracting the magnetic substance by a magnet is called magnetism.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What are Magnetic substances?</div>
+        <div class="answer">
+            <p>The substances which are attracted by the magnet, are called the magnetic substances.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What do you mean by Poles of magnet?</div>
+        <div class="answer">
+            <p>The points at the ends of the magnet where the attractive power is maximum, are called the poles of the magnet.</p>
+<p>Each magnet has two poles.</p>
+<ol><li>North pole – The end of a freely suspended magnet which points towards the north direction is called the north pole of the magnet.</li><li>South pole – The end of a freely suspended magnet which points towards the south direction is called the south pole of the magnet.</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Why does a compass needle get deflected when brought near a bar magnet?</div>
+        <div class="answer">
+            <p>A compass needle is a small bar magnet with north and south pole. It deflects due to repulsion/attraction with the bar magnet.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Why pure iron is not used in making permanent magnet?</div>
+        <div class="answer">
+            <p>Pure iron is not used for making permanent magnets because it is easily magnetised and easily demagnetised. It cannot retain its magnetism for a long time.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Write the uses of magnets.</div>
+        <div class="answer">
+            <p>Or, Name two applications in which permanent magnet is used?</p>
+<p>Magnets are used in  making </p>
+<ol><li>Electric generators </li><li>Electric motors.</li><li>Microphone </li><li>Loudspeaker</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Write properties of bar magnet.</div>
+        <div class="answer">
+            <ol><li>It attracts magnetic materials.</li><li>A freely suspended magnet rests always along the north-south direction.</li><li>The like poles of the magnet repel each other while the unlike poles attract.</li><li>A single magnetic pole does not exist.</li><li>A magnet produced magnetism in the magnetic materials by induction.</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What are magnetic lines of force?</div>
+        <div class="answer">
+            <p>A magnetic line of force is a smooth curve in a magnetic field such that the tangent at any point on it gives the direction of the magnetic field at that point.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Write properties of magnetic field lines.</div>
+        <div class="answer">
+            <p>Properties of lines of force –</p>
+<ol><li>They are closed and continuous curves.</li><li>Outside the magnet the direction is from north to south inside the magnet the direction is from south to north.</li><li>The tangent drawn at any point on the curve gives the direction of the resultant force at that  point.</li><li>They do not intersect with each other. </li><li>They are dense near the poles where the magnetic field is strong and get separated where the magnetic field is weak.</li><li>They repel each other in the direction, perpendicular to it, therefore, the like poles repel each other.</li><li>They experience tension along the lines of force therefore, unlike poles attract each other.</li><li>They behave just like a stretched elastic string.</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Why don't two magnetic field lines intersect each other? (2020,23)</div>
+        <div class="answer">
+            <p>The two magnetic field lines never intersect each other as an intersection of the field lines means the magnetic field at that point has two directions, which is not possible.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What is a Magnetic field?</div>
+        <div class="answer">
+            <p>The region around a magnet in which the effect of the magnet is experienced is called the magnetic field.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Name the factors on which force produced due to magnetic field depends.</div>
+        <div class="answer">
+            <p>The factors on which force produced due to magnetic field depends are -</p>
+<ol><li>Length of the conductor.</li><li>The amount of current flowing.</li><li>The strength of the magnetic field.</li><li>Direction of current and magnetic field, if arc at right angles then maximum amount of force is produced.</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What do you mean by magnetic effect of current?</div>
+        <div class="answer">
+            <p>The phenomenon of producing magnetic field on flowing current in a conductor is called the magnetic effect of current.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Write the right hand thumb (Maxwell's cork screw) rule.(2024)</div>
+        <div class="answer">
+            <p>Imagine that you are holding the current carrying wire in your right hand so that your thumb points in the direction of current, then the direction in which your fingers encircle the wire will give the direction of magnetic lines of force around the wire.</p>
+<p>Use-This rule is used to know the direction of magnetic field lines.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What is the right hand palm rule?</div>
+        <div class="answer">
+            <p>If strected the palm of right hand such that the thumb and fingers are perpendicular to each other and the thumb point in the direction of current in conductor, the fingers point towards the point at which the direction of magnetic field is to be known, then the direction of magnetic field is normal to the open palm and outwards from the palm.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What is magnetic force?</div>
+        <div class="answer">
+            <p>When a current carrying conductor is placed in a magnetic field, then the current carrying conductor experiences a force, which is known as magnetic force.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">State Fleming's Left-Hand Rule.(2019/23/24)</div>
+        <div class="answer">
+            <p>According to this rule, stretch the thumb, forefinger and middle finger of your left hand such that they are mutually perpendicular. </p>
+<p>If the fore finger points in the direction of magnetic field and the middle finger in the direction of current, then the thumb will point in the direction of motion or the force acting on the conductor.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">When is the force experienced by a current-carrying conductor placed in a magnetic field largest? (2024)</div>
+        <div class="answer">
+            <p>According to Fleming's left hand rule, the force experienced by a current carrying conductor placed in a magnetic field is largest (maximum) when it is placed perpendicular to the magnetic field.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What is Solenoid?</div>
+        <div class="answer">
+            <p>A coil of many circular turns of insulated copper wire wrapped closely in the shape of a cylinder is called a solenoid.</p>
+<img alt="Figure" src="images/image4.png" style="max-width:350px; height:auto; margin:10px 0;"/>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">How does a solenoid act like a magnet?(Q. Bank)</div>
+        <div class="answer">
+            <p>A solenoid acts like a magnet because when electric current passes through its coil, it produces a magnetic field similar to that of a bar magnet. One end behaves like the north pole and the other like the south pole, creating a strong and uniform magnetic field inside the coil.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What is Electromagnet? Give its uses. (2024)</div>
+        <div class="answer">
+            <p>A temporary magnet formed due to the magnetic field of electric current is called an electromagnet. </p>
+<img alt="Figure" src="images/image2.png" style="max-width:350px; height:auto; margin:10px 0;"/>
+<p>It is made by winding wire over a core made of soft magnetic material. Once the current is switched off, the electromagnet loses its magnetism.</p>
+<p>Uses – </p>
+<ol><li>For electric devices such as electric trains.</li><li>For moving big objects of iron from one place to another.</li><li>For removing small iron splinters from the eye of a patient.</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Steel is not used for making electromagnets. Why?</div>
+        <div class="answer">
+            <p>The core of an electromagnet must be of soft iron because soft iron loses all of its magnetism when current in the coil is switched off. On the other hand, if steel is used for making the core of an electromagnet, the steel does not lose all its magnetism when the current is stopped and it becomes a permanent magnet. This is why steel is not used for making electromagnets.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What are the factors affecting the strength of an electromagnet?</div>
+        <div class="answer">
+            <p>Factors affecting the strength of an electromagnet:</p>
+<ol><li>Number of turns in the coil:</li><li>Increasing the number of turns increases the strength of the electromagnet.</li><li>Current flowing in the coil:</li><li>When the current in the coil is increased, the electromagnet becomes stronger.</li><li>Length of the air gap between the poles:</li><li>Reducing the length of the air gap between the poles increases the strength of the electromagnet.</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Why is an electromagnet better than a permanent magnet?</div>
+        <div class="answer">
+            <p>An electromagnet better than a permanent magnet because:</p>
+<ol><li>An electromagnet can produce a very strong magnetic field.</li><li>Its strength can be easily controlled by changing:<ol><li>the number of turns in the coil, or</li><li>the current flowing through the coil.</li></ol></li><li>It can be switched ON or OFF, which is not possible with a permanent magnet.</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Write differences between Permanent Magnet and Electromagnet.</div>
+        <div class="answer">
+            <table><tr><th><p>Permanent Magnet</p></th><th><p>Electromagnet</p></th></tr><tr><td><p>1. Polarity cannot be changed.</p></td><td><p>1. Polarity can be changed by reversing the current flow.</p></td></tr><tr><td><p>2. Strength remains constant.</p></td><td><p>2. Strength can be changed by varying the magnitude of current.</p></td></tr><tr><td><p>3. These are made of steel.</p></td><td><p>3. These are made of soft iron</p></td></tr></table>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">When does an electric short circuit occur?</div>
+        <div class="answer">
+            <p>Or, How does short circuit occur in an electric circuit?(2023)</p>
+<p>When the insulation of a wire gets damaged and this naked wire comes in contact with other such wire i.e., live wire and neutral wire, the current flowing in the circuit rises and short circuiting occurs.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Name two safety measures commonly used in electric circuits and appliances. (2023)</div>
+        <div class="answer">
+            <ol><li>Using earthing wiring for electrical appliances with metallic bodies.</li><li>Using miniature circuit breakers (MCB) i.e., fuse.</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Draw a labelled diagram of a domestic electric circuit.</div>
+        <div class="answer">
+            <img alt="Figure" src="images/image3.png" style="max-width:350px; height:auto; margin:10px 0;"/>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What precaution should be taken to avoid the overloading of domestic electric circuits?(2024)</div>
+        <div class="answer">
+            <ol><li>To avoid overloading following precautions should be taken</li><li>Two separate circuits should be used,one of 5 A current and other of 15 A current.</li><li>For both 5 A and 15 A circuits, a fuse should be installed.</li><li>Parallel circuits should be used.</li><li>Too many electrical appliances should never be used at one point.</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What is earth wire?</div>
+        <div class="answer">
+            <p>An earth wire is a safety wire that provides a direct path for electric current to flow into the ground in case of a fault.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What is the function of an earth wire?</div>
+        <div class="answer">
+            <p>The earth wire is connected as a safety measure with all electrical appliances that have a metallic body e.g., microwave, electric press, toaster, geyser, cooler, AC, etc.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">Why is earth wire necessary to earth metallic appliances?</div>
+        <div class="answer">
+            <p>Earth wire is necessary because it provides a safe path for leakage current.</p>
+<p>If there is any leakage of current then the user would not get any current because the current flows down into the earth and keeps the potential of the appliance and the earth the same.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What is an electric fuse? What is fuse? Why is it used?</div>
+        <div class="answer">
+            <p>An electric fuse is a device which is used and connected in series with an electric circuit as a safety device to prevent the damage caused by short circuiting or overloading of the circuit.</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">What material is used for fuse wire?</div>
+        <div class="answer">
+            <p>Fuse wire is made of a thin alloy of copper (Cu) and tin (Sn) having a low melting point.</p>
+<p>When excessive current flows, the fuse wire melts and breaks the circuit, protecting the appliances.</p>
+        </div>
+    </div>
+
+
+</div>
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("show");
+}
+document.addEventListener("click", function(e){
+    if(!e.target.closest(".navbar")){
+        var menu = document.getElementById("menu");
+        if(menu) menu.classList.remove("show");
+    }
+});
+</script>
+<script>
+document.addEventListener("contextmenu", function(e) { e.preventDefault(); return false; }, false);
+document.addEventListener("selectstart", function(e) { e.preventDefault(); return false; }, false);
+document.addEventListener("keydown", function(e) {
+    if (e.key === "PrintScreen" || e.keyCode === 44 ||
+        (e.ctrlKey && e.shiftKey && e.key === "S") ||
+        (e.keyCode === 91 && e.shiftKey && e.key === "5")) { e.preventDefault(); return false; }
+    if ((e.ctrlKey || e.metaKey) && (e.key === "c" || e.keyCode === 67)) {
+        e.preventDefault(); alert("Copying content is not allowed on this page."); return false;
+    }
+    if ((e.ctrlKey || e.metaKey) && (e.key === "a" || e.keyCode === 65)) { e.preventDefault(); return false; }
+    if ((e.ctrlKey || e.metaKey) && (e.key === "x" || e.keyCode === 88)) { e.preventDefault(); return false; }
+    if (e.keyCode === 123) { e.preventDefault(); return false; }
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "i" || e.keyCode === 73)) { e.preventDefault(); return false; }
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "j" || e.keyCode === 74)) { e.preventDefault(); return false; }
+}, false);
+document.addEventListener("mouseup", function() {
+    document.selection && document.selection.empty ? document.selection.empty() : window.getSelection().removeAllRanges();
+}, false);
+document.addEventListener("paste", function(e) {
+    e.preventDefault(); alert("Pasting content is not allowed on this page."); return false;
+}, false);
+document.addEventListener("DOMContentLoaded", function() {
+    document.body.style.userSelect = "none";
+    document.body.style.webkitUserSelect = "none";
+    document.body.style.msUserSelect = "none";
+    document.body.style.mozUserSelect = "none";
+});
+document.addEventListener("dragstart", function(e) { e.preventDefault(); return false; }, false);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | Notes</title>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<script>
+window.MathJax={
+ tex:{
+ inlineMath:[
+ ['$','$'],
+ ['\\(','\\)']
+ ]
+}
+};
+</script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<style>
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+
+body{
+background:#f5f7fb;
+line-height:1.7;
+}
+
+
+/* NAVBAR */
+
+    .navbar{
+
+      background:rgba(15,23,42,0.45);
+
+      backdrop-filter:blur(10px);
+
+      box-shadow:0 4px 18px rgba(0,0,0,.18);
+
+      padding:10px 0;
+
+      transition:.3s;
+
+    }
+
+    .navbar-brand{
+
+      font-size:28px;
+
+      font-weight:700;
+
+      color:white !important;
+
+    }
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+      .navbar-brand{
+        font-size:40px;
+      }
+/* CONTENT */
+
+.notes-container{
+
+max-width:900px;
+
+margin:100px auto 50px;
+
+padding:20px;
+
+}
+
+.notes-title{
+
+background:#e3f2fd;
+
+color:#1565c0;
+
+padding:10px;
+
+border-left:5px solid #1565c0;
+
+border-radius:50px;
+
+font-size:30px;
+
+font-weight:bold;
+margin-top:100px;
+
+margin-bottom:50px;
+
+}
+
+
+
+.qa-box{
+
+background:white;
+
+padding:22px;
+
+margin-bottom:18px;
+
+border-radius:14px;
+
+border-left:6px solid #1565c0;
+
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+transition:.25s;
+
+}
+
+
+.qa-box:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+
+.question{
+
+font-weight:bold;
+
+color:#1b3a57;
+
+margin-bottom:8px;
+
+}
+.question-image{
+    text-align:center;
+    margin:15px 0;
+    overflow-x:auto;
+}
+
+.question-image img{
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:8px;
+}
+
+
+.answer{
+
+color:#2c3e50;
+
+text-align:justify;
+
+}
+.answer img{
+    max-width:100%;
+    height:auto;
+    margin:10px 0;
+    border-radius:8px;
+}
+
+.answer table{
+    width:100%;
+    border-collapse:collapse;
+    margin:12px 0;
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    display:block;
+    overflow-x:auto;
+    box-shadow:0 2px 8px rgba(0,0,0,0.06);
+}
+
+.answer table td, .answer table th{
+    border:1px solid #ddd;
+    padding:10px 12px;
+    text-align:left;
+    vertical-align:top;
+    white-space:normal;
+}
+
+.answer table th{
+    background:#eaf2fb;
+    font-weight:bold;
+    color:#1b3a57;
+}
+
+.answer ol, .answer ul{
+    margin-left:20px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.answer li{ margin-bottom:8px; }
+
+
+
+@media(max-width:768px){
+
+.notes-container{
+
+margin-top:80px;
+
+}
+
+
+}
+.formula{
+    overflow-x:auto;
+    overflow-y:hidden;
+    margin:10px 0;
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<!-- NAVBAR -->
+
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+
+Pal <span>Study Center</span>
+
+</a>
+    <button class="navbar-toggler bg-light"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+</div>
+
+</nav>
+
+
+
+<div class="container">
+
+    <div class="notes-title">📘 इकाई 12 - विद्युत धारा का चुंबकीय प्रभाव</div>
+
+        <div class="qa-box">
+        <div class="question">चुंबक क्या है?</div>
+        <div class="answer">
+            <p>वह पदार्थ जो कोबाल्ट, लोहा और निकल जैसे चुंबकीय पदार्थों को आकर्षित कर सकता है, चुंबक कहलाता है।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">चुंबकत्व क्या है?</div>
+        <div class="answer">
+            <p>चुंबक द्वारा चुंबकीय पदार्थ को आकर्षित करने के गुण को चुंबकत्व कहते हैं।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">चुंबकीय पदार्थ क्या हैं?</div>
+        <div class="answer">
+            <p>वे पदार्थ जो चुंबक द्वारा आकर्षित होते हैं, चुंबकीय पदार्थ कहलाते हैं।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">चुंबक के ध्रुवों से आप क्या समझते हैं?</div>
+        <div class="answer">
+            <p>चुंबक के सिरों पर वे बिंदु जहाँ आकर्षण शक्ति अधिकतम होती है, चुंबक के ध्रुव कहलाते हैं।</p>
+<p>प्रत्येक चुंबक के दो ध्रुव होते हैं।</p>
+<ol><li>उत्तरी ध्रुव – स्वतंत्र रूप से लटकाए गए चुंबक का वह सिरा जो उत्तर दिशा की ओर संकेत करता है, चुंबक का उत्तरी ध्रुव कहलाता है।</li><li>दक्षिणी ध्रुव – स्वतंत्र रूप से लटकाए गए चुंबक का वह सिरा जो दक्षिण दिशा की ओर संकेत करता है, चुंबक का दक्षिणी ध्रुव कहलाता है।</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">छड़ चुंबक के पास लाने पर कंपास सूई क्यों विक्षेपित हो जाती है?</div>
+        <div class="answer">
+            <p>कंपास सूई उत्तरी और दक्षिणी ध्रुव वाला एक छोटा छड़ चुंबक होती है। यह छड़ चुंबक के साथ प्रतिकर्षण/आकर्षण के कारण विक्षेपित हो जाती है।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">स्थायी चुंबक बनाने में शुद्ध लोहे का उपयोग क्यों नहीं किया जाता?</div>
+        <div class="answer">
+            <p>शुद्ध लोहे का उपयोग स्थायी चुंबक बनाने में नहीं किया जाता क्योंकि यह आसानी से चुंबकित हो जाता है और आसानी से विचुंबकित भी हो जाता है। यह लंबे समय तक अपने चुंबकत्व को बनाए नहीं रख सकता।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">चुंबकों के उपयोग लिखिए।</div>
+        <div class="answer">
+            <p>अथवा, स्थायी चुंबक का उपयोग जिन दो उपकरणों में होता है, उनके नाम लिखिए?</p>
+<p>चुंबकों का उपयोग निम्नलिखित बनाने में किया जाता है</p>
+<ol><li>विद्युत जनित्र (जनरेटर)</li><li>विद्युत मोटर।</li><li>माइक्रोफोन</li><li>लाउडस्पीकर</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">छड़ चुंबक के गुण लिखिए।</div>
+        <div class="answer">
+            <ol><li>यह चुंबकीय पदार्थों को आकर्षित करता है।</li><li>स्वतंत्र रूप से लटकाया गया चुंबक हमेशा उत्तर-दक्षिण दिशा में स्थिर रहता है।</li><li>चुंबक के समान ध्रुव एक-दूसरे को प्रतिकर्षित करते हैं जबकि असमान ध्रुव आकर्षित करते हैं।</li><li>एक अकेला चुंबकीय ध्रुव अस्तित्व में नहीं होता।</li><li>चुंबक प्रेरण द्वारा चुंबकीय पदार्थों में चुंबकत्व उत्पन्न करता है।</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">चुंबकीय बल रेखाएं क्या हैं?</div>
+        <div class="answer">
+            <p>चुंबकीय बल रेखा चुंबकीय क्षेत्र में एक चिकना वक्र है जिस पर किसी भी बिंदु पर खींची गई स्पर्श रेखा उस बिंदु पर चुंबकीय क्षेत्र की दिशा बताती है।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">चुंबकीय क्षेत्र रेखाओं के गुण लिखिए।</div>
+        <div class="answer">
+            <p>बल रेखाओं के गुण –</p>
+<ol><li>ये बंद और सतत वक्र होती हैं।</li><li>चुंबक के बाहर इनकी दिशा उत्तर से दक्षिण की ओर होती है और चुंबक के अंदर दिशा दक्षिण से उत्तर की ओर होती है।</li><li>वक्र पर किसी भी बिंदु पर खींची गई स्पर्श रेखा उस बिंदु पर परिणामी बल की दिशा बताती है।</li><li>ये एक-दूसरे को नहीं काटतीं।</li><li>ये ध्रुवों के पास सघन होती हैं जहाँ चुंबकीय क्षेत्र प्रबल होता है और जहाँ चुंबकीय क्षेत्र कमजोर होता है वहाँ अलग-अलग हो जाती हैं।</li><li>ये अपने लंबवत दिशा में एक-दूसरे को प्रतिकर्षित करती हैं, इसलिए समान ध्रुव एक-दूसरे को प्रतिकर्षित करते हैं।</li><li>इन रेखाओं के अनुदिश तनाव का अनुभव होता है, इसलिए असमान ध्रुव एक-दूसरे को आकर्षित करते हैं।</li><li>ये ठीक एक तनी हुई इलास्टिक डोरी की तरह व्यवहार करती हैं।</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">दो चुंबकीय क्षेत्र रेखाएं एक-दूसरे को क्यों नहीं काटतीं? (2020,23)</div>
+        <div class="answer">
+            <p>दो चुंबकीय क्षेत्र रेखाएं कभी एक-दूसरे को नहीं काटतीं क्योंकि क्षेत्र रेखाओं के प्रतिच्छेदन का अर्थ होगा कि उस बिंदु पर चुंबकीय क्षेत्र की दो दिशाएं हैं, जो संभव नहीं है।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">चुंबकीय क्षेत्र क्या है?</div>
+        <div class="answer">
+            <p>चुंबक के चारों ओर वह क्षेत्र जिसमें चुंबक का प्रभाव अनुभव किया जाता है, चुंबकीय क्षेत्र कहलाता है।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">उन कारकों के नाम लिखिए जिन पर चुंबकीय क्षेत्र के कारण उत्पन्न बल निर्भर करता है।</div>
+        <div class="answer">
+            <p>चुंबकीय क्षेत्र के कारण उत्पन्न बल जिन कारकों पर निर्भर करता है वे हैं -</p>
+<ol><li>चालक की लंबाई।</li><li>प्रवाहित होने वाली धारा की मात्रा।</li><li>चुंबकीय क्षेत्र की प्रबलता।</li><li>धारा और चुंबकीय क्षेत्र की दिशा, यदि ये समकोण पर हों तो अधिकतम बल उत्पन्न होता है।</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">विद्युत धारा के चुंबकीय प्रभाव से आप क्या समझते हैं?</div>
+        <div class="answer">
+            <p>किसी चालक में धारा प्रवाहित होने पर चुंबकीय क्षेत्र उत्पन्न होने की परिघटना को विद्युत धारा का चुंबकीय प्रभाव कहते हैं।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">दक्षिणावर्त अंगूठा (मैक्सवेल का कॉर्क स्क्रू) नियम लिखिए।(2024)</div>
+        <div class="answer">
+            <p>कल्पना कीजिए कि आपने धारावाही तार को अपने दाहिने हाथ में इस प्रकार पकड़ रखा है कि आपका अंगूठा धारा की दिशा में संकेत करता है, तब जिस दिशा में आपकी उंगलियाँ तार के चारों ओर लिपटती हैं, वह दिशा तार के चारों ओर चुंबकीय बल रेखाओं की दिशा बताएगी।</p>
+<p>उपयोग - इस नियम का उपयोग चुंबकीय क्षेत्र रेखाओं की दिशा जानने के लिए किया जाता है।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">दायें हाथ की हथेली का नियम क्या है?</div>
+        <div class="answer">
+            <p>यदि दाहिने हाथ की हथेली को इस प्रकार फैलाया जाए कि अंगूठा और उंगलियाँ एक-दूसरे के लंबवत हों और अंगूठा चालक में धारा की दिशा में संकेत करे, उंगलियाँ उस बिंदु की ओर संकेत करें जिस पर चुंबकीय क्षेत्र की दिशा जाननी है, तो चुंबकीय क्षेत्र की दिशा खुली हथेली के लंबवत और हथेली से बाहर की ओर होती है।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">चुंबकीय बल क्या है?</div>
+        <div class="answer">
+            <p>जब किसी धारावाही चालक को चुंबकीय क्षेत्र में रखा जाता है, तो धारावाही चालक एक बल का अनुभव करता है, जिसे चुंबकीय बल कहा जाता है।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">फ्लेमिंग का बायाँ हाथ नियम बताइए।(2019/23/24)</div>
+        <div class="answer">
+            <p>इस नियम के अनुसार, अपने बायें हाथ के अंगूठे, तर्जनी और मध्यमा उंगली को इस प्रकार फैलाइए कि वे परस्पर लंबवत हों।</p>
+<p>यदि तर्जनी उंगली चुंबकीय क्षेत्र की दिशा में और मध्यमा उंगली धारा की दिशा में संकेत करे, तो अंगूठा चालक पर लगने वाले बल या गति की दिशा में संकेत करेगा।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">चुंबकीय क्षेत्र में रखे धारावाही चालक द्वारा अनुभव किया गया बल कब सबसे अधिक होता है? (2024)</div>
+        <div class="answer">
+            <p>फ्लेमिंग के बायें हाथ के नियम के अनुसार, चुंबकीय क्षेत्र में रखे धारावाही चालक द्वारा अनुभव किया गया बल तब सबसे अधिक (अधिकतम) होता है जब इसे चुंबकीय क्षेत्र के लंबवत रखा जाता है।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">परिनालिका (सोलेनॉइड) क्या है?</div>
+        <div class="answer">
+            <p>बेलन के आकार में कसकर लपेटे गए विद्युतरोधी तांबे के तार के कई वृत्ताकार फेरों की कुंडली को परिनालिका कहते हैं।</p>
+<img alt="चित्र" src="images/image4.png" style="max-width:350px; height:auto; margin:10px 0;"/>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">परिनालिका चुंबक की तरह कैसे कार्य करती है?(प्रश्न बैंक)</div>
+        <div class="answer">
+            <p>परिनालिका चुंबक की तरह कार्य करती है क्योंकि जब इसकी कुंडली से विद्युत धारा प्रवाहित होती है, तो यह छड़ चुंबक के समान चुंबकीय क्षेत्र उत्पन्न करती है। एक सिरा उत्तरी ध्रुव की तरह और दूसरा सिरा दक्षिणी ध्रुव की तरह व्यवहार करता है, जिससे कुंडली के अंदर एक प्रबल और एकसमान चुंबकीय क्षेत्र उत्पन्न होता है।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">विद्युत चुंबक क्या है? इसके उपयोग बताइए। (2024)</div>
+        <div class="answer">
+            <p>विद्युत धारा के चुंबकीय क्षेत्र के कारण बना अस्थायी चुंबक विद्युत चुंबक कहलाता है।</p>
+<img alt="चित्र" src="images/image2.png" style="max-width:350px; height:auto; margin:10px 0;"/>
+<p>इसे नर्म चुंबकीय पदार्थ की क्रोड (कोर) पर तार लपेटकर बनाया जाता है। धारा बंद होते ही विद्युत चुंबक अपना चुंबकत्व खो देता है।</p>
+<p>उपयोग –</p>
+<ol><li>विद्युत रेल जैसे विद्युत उपकरणों के लिए।</li><li>लोहे की बड़ी वस्तुओं को एक स्थान से दूसरे स्थान पर ले जाने के लिए।</li><li>किसी रोगी की आंख से लोहे के छोटे टुकड़ों को निकालने के लिए।</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">विद्युत चुंबक बनाने में इस्पात (स्टील) का उपयोग क्यों नहीं किया जाता?</div>
+        <div class="answer">
+            <p>विद्युत चुंबक की क्रोड नर्म लोहे की होनी चाहिए क्योंकि कुंडली में धारा बंद होने पर नर्म लोहा अपना संपूर्ण चुंबकत्व खो देता है। दूसरी ओर, यदि विद्युत चुंबक की क्रोड बनाने में इस्पात का उपयोग किया जाए, तो धारा बंद होने पर इस्पात अपना संपूर्ण चुंबकत्व नहीं खोता और यह एक स्थायी चुंबक बन जाता है। इसी कारण विद्युत चुंबक बनाने में इस्पात का उपयोग नहीं किया जाता।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">विद्युत चुंबक की प्रबलता को प्रभावित करने वाले कारक कौन-से हैं?</div>
+        <div class="answer">
+            <p>विद्युत चुंबक की प्रबलता को प्रभावित करने वाले कारक:</p>
+<ol><li>कुंडली में फेरों की संख्या:</li><li>फेरों की संख्या बढ़ाने से विद्युत चुंबक की प्रबलता बढ़ जाती है।</li><li>कुंडली में प्रवाहित धारा:</li><li>जब कुंडली में धारा बढ़ाई जाती है, तो विद्युत चुंबक अधिक प्रबल हो जाता है।</li><li>ध्रुवों के बीच वायु अंतराल की लंबाई:</li><li>ध्रुवों के बीच वायु अंतराल की लंबाई कम करने से विद्युत चुंबक की प्रबलता बढ़ जाती है।</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">विद्युत चुंबक स्थायी चुंबक से बेहतर क्यों है?</div>
+        <div class="answer">
+            <p>विद्युत चुंबक स्थायी चुंबक से बेहतर है क्योंकि:</p>
+<ol><li>विद्युत चुंबक एक बहुत प्रबल चुंबकीय क्षेत्र उत्पन्न कर सकता है।</li><li>इसकी प्रबलता को निम्नलिखित बदलकर आसानी से नियंत्रित किया जा सकता है:<ol><li>कुंडली में फेरों की संख्या, या</li><li>कुंडली से प्रवाहित होने वाली धारा।</li></ol></li><li>इसे चालू (ON) या बंद (OFF) किया जा सकता है, जो स्थायी चुंबक के साथ संभव नहीं है।</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">स्थायी चुंबक और विद्युत चुंबक के बीच अंतर लिखिए।</div>
+        <div class="answer">
+            <table><tr><th><p>स्थायी चुंबक</p></th><th><p>विद्युत चुंबक</p></th></tr><tr><td><p>1. ध्रुवता को बदला नहीं जा सकता।</p></td><td><p>1. धारा प्रवाह की दिशा उलटकर ध्रुवता को बदला जा सकता है।</p></td></tr><tr><td><p>2. प्रबलता स्थिर रहती है।</p></td><td><p>2. धारा का परिमाण बदलकर प्रबलता को बदला जा सकता है।</p></td></tr><tr><td><p>3. ये इस्पात (स्टील) से बने होते हैं।</p></td><td><p>3. ये नर्म लोहे से बने होते हैं।</p></td></tr></table>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">विद्युत लघुपथन (शॉर्ट सर्किट) कब होता है?</div>
+        <div class="answer">
+            <p>अथवा, विद्युत परिपथ में लघुपथन (शॉर्ट सर्किट) कैसे होता है?(2023)</p>
+<p>जब किसी तार का विद्युतरोधन (इंसुलेशन) क्षतिग्रस्त हो जाता है और यह नंगा तार किसी अन्य ऐसे ही तार यानी लाइव तार और उदासीन (न्यूट्रल) तार के संपर्क में आ जाता है, तो परिपथ में प्रवाहित होने वाली धारा बढ़ जाती है और लघुपथन हो जाता है।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">विद्युत परिपथों और उपकरणों में सामान्यतः उपयोग की जाने वाली दो सुरक्षा युक्तियों के नाम लिखिए। (2023)</div>
+        <div class="answer">
+            <ol><li>धात्विक बॉडी वाले विद्युत उपकरणों के लिए भू-तार (अर्थिंग वायरिंग) का उपयोग करना।</li><li>लघु परिपथ वियोजक (MCB) यानी फ्यूज का उपयोग करना।</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">घरेलू विद्युत परिपथ का नामांकित (लेबल किया हुआ) चित्र बनाइए।</div>
+        <div class="answer">
+            <img alt="चित्र" src="images/image3.png" style="max-width:350px; height:auto; margin:10px 0;"/>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">घरेलू विद्युत परिपथों के अतिभारण (ओवरलोडिंग) से बचने के लिए क्या सावधानी बरतनी चाहिए?(2024)</div>
+        <div class="answer">
+            <ol><li>अतिभारण से बचने के लिए निम्नलिखित सावधानियाँ बरतनी चाहिए</li><li>दो अलग-अलग परिपथों का उपयोग किया जाना चाहिए, एक 5 एम्पियर धारा का और दूसरा 15 एम्पियर धारा का।</li><li>5 एम्पियर और 15 एम्पियर दोनों परिपथों के लिए एक फ्यूज लगाया जाना चाहिए।</li><li>समानांतर परिपथों का उपयोग किया जाना चाहिए।</li><li>एक ही स्थान पर बहुत अधिक विद्युत उपकरणों का उपयोग कभी नहीं किया जाना चाहिए।</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">भू-तार (अर्थ वायर) क्या है?</div>
+        <div class="answer">
+            <p>भू-तार एक सुरक्षा तार है जो किसी खराबी की स्थिति में विद्युत धारा को भूमि में प्रवाहित होने के लिए सीधा मार्ग प्रदान करता है।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">भू-तार (अर्थ वायर) का क्या कार्य है?</div>
+        <div class="answer">
+            <p>भू-तार को एक सुरक्षा उपाय के रूप में धात्विक बॉडी वाले सभी विद्युत उपकरणों जैसे माइक्रोवेव, इलेक्ट्रिक प्रेस, टोस्टर, गीज़र, कूलर, एसी आदि से जोड़ा जाता है।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">धात्विक उपकरणों को भू-सम्पर्कित (अर्थ) करने के लिए भू-तार आवश्यक क्यों है?</div>
+        <div class="answer">
+            <p>भू-तार आवश्यक है क्योंकि यह रिसाव धारा (लीकेज करंट) के लिए एक सुरक्षित मार्ग प्रदान करता है।</p>
+<p>यदि किसी भी प्रकार का धारा रिसाव होता है, तो उपयोगकर्ता को कोई धारा (करंट) नहीं लगेगी क्योंकि धारा भूमि में प्रवाहित हो जाती है और उपकरण तथा भूमि की विभवांतर को समान बनाए रखती है।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">विद्युत फ्यूज क्या है? फ्यूज क्या है? इसका उपयोग क्यों किया जाता है?</div>
+        <div class="answer">
+            <p>विद्युत फ्यूज एक युक्ति है जिसका उपयोग किया जाता है और इसे विद्युत परिपथ के साथ श्रेणीक्रम (सीरीज) में एक सुरक्षा युक्ति के रूप में जोड़ा जाता है ताकि लघुपथन या परिपथ के अतिभारण के कारण होने वाली क्षति को रोका जा सके।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">फ्यूज तार बनाने के लिए किस पदार्थ का उपयोग किया जाता है?</div>
+        <div class="answer">
+            <p>फ्यूज तार तांबे (Cu) और टिन (Sn) की कम गलनांक वाली एक पतली मिश्रधातु (मिश्र) से बना होता है।</p>
+<p>जब अत्यधिक धारा प्रवाहित होती है, तो फ्यूज तार पिघल जाता है और परिपथ को तोड़ देता है, जिससे उपकरणों की रक्षा होती है।</p>
+        </div>
+    </div>
+
+
+</div>
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("show");
+}
+document.addEventListener("click", function(e){
+    if(!e.target.closest(".navbar")){
+        var menu = document.getElementById("menu");
+        if(menu) menu.classList.remove("show");
+    }
+});
+</script>
+<script>
+document.addEventListener("contextmenu", function(e) { e.preventDefault(); return false; }, false);
+document.addEventListener("selectstart", function(e) { e.preventDefault(); return false; }, false);
+document.addEventListener("keydown", function(e) {
+    if (e.key === "PrintScreen" || e.keyCode === 44 ||
+        (e.ctrlKey && e.shiftKey && e.key === "S") ||
+        (e.keyCode === 91 && e.shiftKey && e.key === "5")) { e.preventDefault(); return false; }
+    if ((e.ctrlKey || e.metaKey) && (e.key === "c" || e.keyCode === 67)) {
+        e.preventDefault(); alert("Copying content is not allowed on this page."); return false;
+    }
+    if ((e.ctrlKey || e.metaKey) && (e.key === "a" || e.keyCode === 65)) { e.preventDefault(); return false; }
+    if ((e.ctrlKey || e.metaKey) && (e.key === "x" || e.keyCode === 88)) { e.preventDefault(); return false; }
+    if (e.keyCode === 123) { e.preventDefault(); return false; }
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "i" || e.keyCode === 73)) { e.preventDefault(); return false; }
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "j" || e.keyCode === 74)) { e.preventDefault(); return false; }
+}, false);
+document.addEventListener("mouseup", function() {
+    document.selection && document.selection.empty ? document.selection.empty() : window.getSelection().removeAllRanges();
+}, false);
+document.addEventListener("paste", function(e) {
+    e.preventDefault(); alert("Pasting content is not allowed on this page."); return false;
+}, false);
+document.addEventListener("DOMContentLoaded", function() {
+    document.body.style.userSelect = "none";
+    document.body.style.webkitUserSelect = "none";
+    document.body.style.msUserSelect = "none";
+    document.body.style.mozUserSelect = "none";
+});
+document.addEventListener("dragstart", function(e) { e.preventDefault(); return false; }, false);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | Notes</title>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<script>
+window.MathJax={
+ tex:{
+ inlineMath:[
+ ['$','$'],
+ ['\\(','\\)']
+ ]
+}
+};
+</script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<style>
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+
+body{
+background:#f5f7fb;
+line-height:1.7;
+}
+
+
+/* NAVBAR */
+
+    .navbar{
+
+      background:rgba(15,23,42,0.45);
+
+      backdrop-filter:blur(10px);
+
+      box-shadow:0 4px 18px rgba(0,0,0,.18);
+
+      padding:10px 0;
+
+      transition:.3s;
+
+    }
+
+    .navbar-brand{
+
+      font-size:28px;
+
+      font-weight:700;
+
+      color:white !important;
+
+    }
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+      .navbar-brand{
+        font-size:40px;
+      }
+/* CONTENT */
+
+.notes-container{
+
+max-width:900px;
+
+margin:100px auto 50px;
+
+padding:20px;
+
+}
+
+.notes-title{
+
+background:#e3f2fd;
+
+color:#1565c0;
+
+padding:10px;
+
+border-left:5px solid #1565c0;
+
+border-radius:50px;
+
+font-size:30px;
+
+font-weight:bold;
+margin-top:100px;
+
+margin-bottom:50px;
+
+}
+
+
+
+.qa-box{
+
+background:white;
+
+padding:22px;
+
+margin-bottom:18px;
+
+border-radius:14px;
+
+border-left:6px solid #1565c0;
+
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+transition:.25s;
+
+}
+
+
+.qa-box:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+
+.question{
+
+font-weight:bold;
+
+color:#1b3a57;
+
+margin-bottom:8px;
+
+}
+.question-image{
+    text-align:center;
+    margin:15px 0;
+    overflow-x:auto;
+}
+
+.question-image img{
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:8px;
+}
+
+
+.answer{
+
+color:#2c3e50;
+
+text-align:justify;
+
+}
+.answer img{
+    max-width:100%;
+    height:auto;
+    margin:10px 0;
+    border-radius:8px;
+}
+
+.answer table{
+    width:100%;
+    border-collapse:collapse;
+    margin:12px 0;
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    display:block;
+    overflow-x:auto;
+    box-shadow:0 2px 8px rgba(0,0,0,0.06);
+}
+
+.answer table td, .answer table th{
+    border:1px solid #ddd;
+    padding:10px 12px;
+    text-align:left;
+    vertical-align:top;
+    white-space:normal;
+}
+
+.answer table th{
+    background:#eaf2fb;
+    font-weight:bold;
+    color:#1b3a57;
+}
+
+.answer ol, .answer ul{
+    margin-left:20px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.answer li{ margin-bottom:8px; }
+
+
+
+@media(max-width:768px){
+
+.notes-container{
+
+margin-top:80px;
+
+}
+
+
+}
+.formula{
+    overflow-x:auto;
+    overflow-y:hidden;
+    margin:10px 0;
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<!-- NAVBAR -->
+
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+
+Pal <span>Study Center</span>
+
+</a>
+    <button class="navbar-toggler bg-light"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+</div>
+
+</nav>
+
+
+
+<div class="container">
+
+    <div class="notes-title">📘 इकाई 11 - विद्युत (Electricity)</div>
+
+        <div class="qa-box">
+        <div class="question">विद्युत (Electricity) क्या है?</div>
+        <div class="answer">
+            <p>विद्युत, किसी चालक (conductor) से होकर विद्युत आवेश के प्रवाह को कहते हैं।</p>
+<p>यह ऊर्जा का एक रूप है जिसका उपयोग बल्ब, पंखे, मोटर और मशीनों जैसे विभिन्न उपकरणों को चलाने के लिए किया जा सकता है।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">विद्युत आवेश (Electric Charge) क्या है?</div>
+        <div class="answer">
+            <p>विद्युत आवेश पदार्थ का एक मूल गुण है जिसके कारण वह विद्युत क्षेत्र में बल का अनुभव करता है।</p>
+<p>आवेश को कूलॉम (C) में मापा जाता है।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">विद्युत आवेश कितने प्रकार के होते हैं?</div>
+        <div class="answer">
+            <p>विद्युत आवेश दो प्रकार के होते हैं:</p>
+<ol><li>धनावेश (+)</li><li>ऋणावेश (–) समान आवेश एक-दूसरे को प्रतिकर्षित करते हैं।</li></ol>
+<p>असमान (विजातीय) आवेश एक-दूसरे को आकर्षित करते हैं।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">इलेक्ट्रॉन और प्रोटॉन पर किस प्रकार का आवेश होता है?</div>
+        <div class="answer">
+            <p>इलेक्ट्रॉन पर ऋणावेश होता है, और प्रोटॉन पर धनावेश होता है।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">घर्षण द्वारा किसी वस्तु पर आवेश कैसे उत्पन्न होता है?</div>
+        <div class="answer">
+            <p>जब दो उदासीन (neutral) वस्तुओं को आपस में रगड़ा जाता है, तो घर्षण के कारण कुछ इलेक्ट्रॉन एक वस्तु से दूसरी वस्तु में स्थानांतरित हो जाते हैं।</p>
+<p>इस प्रकार, जो वस्तु इलेक्ट्रॉन खो देती है वह धनावेशित हो जाती है और जो वस्तु इलेक्ट्रॉन प्राप्त करती है वह ऋणावेशित हो जाती है।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">चालक (Conductors) क्या होते हैं?</div>
+        <div class="answer">
+            <p>वे पदार्थ जिनसे होकर विद्युत प्रवाहित हो सकती है, चालक कहलाते हैं। </p>
+<p>उदाहरण – चाँदी, ताँबा और एल्युमीनियम जैसी सभी धातुएँ चालक होती हैं।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">कुचालक (Insulators) क्या होते हैं?</div>
+        <div class="answer">
+            <p>वे पदार्थ जिनसे होकर विद्युत प्रवाहित नहीं हो सकती है, कुचालक कहलाते हैं। </p>
+<p>उदाहरण – काँच, एबोनाइट, रबर, अधिकांश प्लास्टिक, कागज, सूखी लकड़ी आदि कुचालक हैं।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">विद्युत विभव (Electric Potential) क्या है?</div>
+        <div class="answer">
+            <p>विद्युत क्षेत्र में अनंत (infinity) से किसी बिंदु तक इकाई धनावेश को लाने में किए गए कार्य की मात्रा को उस बिंदु का विद्युत विभव कहते हैं। इसे V से दर्शाया जाता है।</p>
+<p>यदि आवेश q को अनंत से किसी बिंदु तक लाने में W कार्य किया जाता है, तो 𝑉 = 𝑊/𝑄 यह एक अदिश (scalar) राशि है।</p>
+<p>विद्युत विभव का SI मात्रक वोल्ट है।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">विभवांतर (Potential Difference) क्या है?</div>
+        <div class="answer">
+            <p>विद्युत क्षेत्र में एक बिंदु से दूसरे बिंदु तक इकाई धनावेश को लाने में किए गए कार्य की मात्रा को विभवांतर कहते हैं। इसे PD से दर्शाया जाता है।</p>
+<p>यदि आवेश q को अनंत से किसी बिंदु तक लाने में W कार्य किया जाता है, तो PD = 𝑊/𝑄 यह एक अदिश (scalar) राशि है।</p>
+<p>विद्युत विभव का SI मात्रक वोल्ट है।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">वोल्ट (Volt) क्या है?</div>
+        <div class="answer">
+            <p>वोल्ट, विद्युत विभव का SI मात्रक है।</p>
+<p>V𝑜𝑙𝑡 = 𝐽𝑜𝑢𝑙𝑒/𝑐𝑜𝑢𝑙𝑜𝑚𝑏 ∴ किसी बिंदु पर अनंत से इकाई धनावेश लाने में एक जूल कार्य करने पर उस बिंदु का विभव एक वोल्ट कहलाता है।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">वोल्टमीटर (Voltmeter) क्या है?</div>
+        <div class="answer">
+            <p>विभवांतर को वोल्टमीटर नामक यंत्र की सहायता से मापा जाता है। </p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">विद्युत विभव और विभवांतर में अंतर लिखिए।</div>
+        <div class="answer">
+            <table><tr><th><p>विद्युत विभव (Electric Potential)</p></th><th><p>विभवांतर (Potential Difference)</p></th></tr><tr><td><p>1. किसी बिंदु पर विद्युत विभव, अनंत से उस बिंदु तक इकाई धनावेश लाने में किया गया कार्य है।</p></td><td><p>1. विभवांतर, विद्युत क्षेत्र में एक बिंदु से दूसरे बिंदु तक इकाई धनावेश ले जाने में किया गया कार्य है।</p></td></tr><tr><td><p>2. इसे V से दर्शाया जाता है।</p></td><td><p>2. इसे V₍P.D.₎ या केवल V से दर्शाया जाता है।</p></td></tr><tr><td><p>3. यह विद्युत क्षेत्र के एक बिंदु से संबंधित है।</p></td><td><p>3. यह विद्युत क्षेत्र के दो बिंदुओं से संबंधित है।</p></td></tr></table>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">किसी युक्ति (device) का नाम बताइए जो किसी चालक के सिरों के बीच विभवांतर बनाए रखने में सहायता करती है।(Q. Bank)</div>
+        <div class="answer">
+            <p>वह युक्ति जो किसी चालक के सिरों के बीच विभवांतर बनाए रखने में सहायता करती है, बैटरी कहलाती है, जो एक या अधिक विद्युत सेलों से मिलकर बनी होती है।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">विद्युत धारा (Electric Current) क्या है और इसका SI मात्रक लिखिए।</div>
+        <div class="answer">
+            <p>I. Unit.</p>
+<p>(2019/2023 Q. Bank) विद्युत आवेशों के प्रवाहित होने की दर को विद्युत धारा कहते हैं।</p>
+<p>धारा = आवेश / समय इसका SI मात्रक ऐम्पियर है।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">विद्युत धारा का SI मात्रक क्या है? साथ ही इसकी परिभाषा भी लिखिए। (2023)</div>
+        <div class="answer">
+            <p>ऐम्पियर विद्युत धारा का SI मात्रक है जो प्रति सेकंड एक कूलॉम आवेश के प्रवाह के बराबर होता है।</p>
+<p>1 amp= 1C/1sec</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">ओम का नियम (Ohm's Law) क्या है?(2023)</div>
+        <div class="answer">
+            <p>ओम के नियम के अनुसार, किसी चालक से प्रवाहित विद्युत धारा उसके सिरों के बीच के विभवांतर के अनुक्रमानुपाती होती है, बशर्ते चालक की भौतिक अवस्थाएँ (जैसे तापमान) समान रहें।</p>
+<p>यदि I किसी चालक से प्रवाहित धारा है और V उसके सिरों के बीच विभवांतर है, तो ओम के नियम के अनुसार, V ∝ I V = RI जहाँ R एक स्थिरांक है जिसे चालक का प्रतिरोध कहते हैं</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">प्रतिरोध (Resistance) क्या है? इसका मात्रक भी बताइए</div>
+        <div class="answer">
+            <p>प्रतिरोध किसी चालक का वह गुण है जो उसमें से प्रवाहित होने वाली विद्युत धारा का विरोध करता है।<br/></p>
+<p>प्रतिरोध का SI मात्रक ओम (Ω) है।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">ओम (Ohm) को परिभाषित कीजिए।</div>
+        <div class="answer">
+            <p>किसी चालक का प्रतिरोध एक ओम कहलाता है जब उस पर 1 वोल्ट का विभवांतर लगाने से उसमें 1 ऐम्पियर की धारा प्रवाहित होती है।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">चालक के प्रतिरोध को प्रभावित करने वाले कारक कौन-कौन से हैं?</div>
+        <div class="answer">
+            <p>किसी चालक तार का प्रतिरोध निम्नलिखित कारकों पर निर्भर करता है -</p>
+<ol><li>तार की लंबाई - एकसमान चालक तार का प्रतिरोध उसकी लंबाई के अनुक्रमानुपाती होता है अर्थात् R ∝ L</li><li>तार का अनुप्रस्थ काट (Cross-section) - एकसमान चालक तार का प्रतिरोध उसके अनुप्रस्थ काट क्षेत्रफल के व्युत्क्रमानुपाती होता है अर्थात् R ∝ 1/A</li><li>चालक तार की प्रकृति - तार का प्रतिरोध चालक तार के पदार्थ (matter) की प्रकृति पर निर्भर करता है। </li><li>तार का तापमान - एकसमान मोटाई के धात्विक तार का प्रतिरोध तापमान बढ़ने के साथ बढ़ता है और तापमान घटने के साथ घटता है।</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">समान स्रोत से जोड़े जाने पर, समान पदार्थ के मोटे तार या पतले तार में से विद्युत धारा अधिक आसानी से प्रवाहित होगी? क्यों? (Q. Bank)</div>
+        <div class="answer">
+            <p>पतले तार की तुलना में मोटे तार में से विद्युत धारा अधिक आसानी से प्रवाहित होगी क्योंकि मोटे तार का प्रतिरोध पतले तार की तुलना में कम होता है। कम प्रतिरोध का अर्थ है अधिक धारा, क्योंकि I = V/R</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">यदि प्रतिरोध बढ़ा दिया जाए तो विद्युत धारा पर क्या प्रभाव पड़ता है?</div>
+        <div class="answer">
+            <p>ओम के नियम के अनुसार, धारा और प्रतिरोध व्युत्क्रमानुपाती होते हैं। अतः जब प्रतिरोध बढ़ता है, तो परिपथ में धारा घट जाती है।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">विद्युत के संचरण (transmission) के लिए सामान्यतः कौन-सी दो धातुओं के तार प्रयोग किए जाते हैं? (2023)</div>
+        <div class="answer">
+            <p>ताँबा और एल्युमीनियम धातु के तार सामान्यतः विद्युत के संचरण के लिए प्रयोग किए जाते हैं।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">विद्युत संचरण के लिए ताँबे और एल्युमीनियम के तार सामान्यतः क्यों प्रयोग किए जाते हैं? (Q. Bank)</div>
+        <div class="answer">
+            <ol><li>ताँबा और एल्युमीनियम अन्य धातुओं की तुलना में अधिक आसानी से और सस्ते में उपलब्ध होते हैं।</li><li>इनका प्रतिरोध कम होता है और ये गर्म नहीं होते</li><li>उच्च तन्यता (malleability) के कारण इन्हें आसानी से तारों में बदला जा सकता है।</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">किसी पदार्थ की प्रतिरोधकता (Resistivity) क्या है? इसका SI मात्रक बताइए।</div>
+        <div class="answer">
+            <p>I. unit.</p>
+<p>(Q. Bank) किसी पदार्थ के 1m भुजा वाले घन (cube) के विपरीत फलकों के बीच लंबवत् विद्युत धारा प्रवाहित करने पर उसके द्वारा प्रस्तुत प्रतिरोध, उस पदार्थ की प्रतिरोधकता कहलाती है।</p>
+<p>प्रतिरोधकता का SI मात्रक ओम-मीटर है।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">प्रतिरोध और प्रतिरोधकता में अंतर बताइए।</div>
+        <div class="answer">
+            <table><tr><th><p>प्रतिरोध (Resistance)</p></th><th><p>प्रतिरोधकता (Resistivity)</p></th></tr></table>
+<table><tr><th><p>1. यह किसी चालक का वह गुण है जिसके कारण वह अपने में से प्रवाहित विद्युत आवेशों का विरोध करता है।</p></th><th><p>1. यह किसी पदार्थ की इकाई लंबाई और इकाई अनुप्रस्थ काट क्षेत्रफल का प्रतिरोध है।</p></th></tr></table>
+<table><tr><th><p>2. इसका मात्रक ओम (Ω) है।</p></th><th><p>2. इसका मात्रक ओम-मीटर (Ω·m) है।</p></th></tr></table>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">प्रतिरोधों के श्रेणीक्रम संयोजन (Series Combination) से आपका क्या तात्पर्य है?</div>
+        <div class="answer">
+            <p>इस संयोजन में, पहले प्रतिरोध का दूसरा सिरा दूसरे प्रतिरोध के पहले सिरे से जोड़ा जाता है; दूसरे प्रतिरोध का दूसरा सिरा तीसरे प्रतिरोध के पहले सिरे से जोड़ा जाता है, और इसी प्रकार आगे भी।</p>
+<p>अतः प्रत्येक प्रतिरोध में प्रवाहित धारा समान रहेगी। </p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">प्रतिरोधों के श्रेणीक्रम संयोजन का तुल्य प्रतिरोध व्युत्पन्न (derive) कीजिए।</div>
+        <div class="answer">
+            <p>चित्र में तीन प्रतिरोधों 𝑅1, 𝑅2 और 𝑅3 का श्रेणीक्रम संयोजन दिखाया गया है। मान लीजिए प्रतिरोधों 𝑅1, 𝑅2 और 𝑅3 के सिरों के बीच उत्पन्न विभवांतर क्रमशः 𝑉1, 𝑉2 और 𝑉3 हैं। जब एक सेल E को इस संयोजन से जोड़ा जाता है तो उसमें से धारा I प्रवाहित होती है।</p>
+<p>तब ओम के नियम से, 𝑉1 = 𝐼𝑅1 𝑉2 = 𝐼𝑅2 𝑉3 = 𝐼𝑅3 माना R परिपथ का तुल्य प्रतिरोध है, तब A और B के बीच विभवांतर होगा V = IR 𝑉 = 𝑉1 + 𝑉2 + 𝑉3 𝐼𝑅 = 𝐼𝑅1 + 𝐼𝑅2 + 𝐼𝑅3 𝑅 = 𝑅1 + 𝑅2 + 𝑅3</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">प्रतिरोधों के समानांतर क्रम संयोजन (Parallel Combination) से आपका क्या तात्पर्य है?</div>
+        <div class="answer">
+            <p>इस संयोजन में, प्रत्येक प्रतिरोध का एक सिरा बिंदु A से जोड़ा जाता है और प्रत्येक प्रतिरोध का दूसरा सिरा एक अन्य बिंदु B से जोड़ा जाता है।</p>
+<p>इस स्थिति में प्रत्येक प्रतिरोध के सिरों के बीच विभवांतर समान रहेगा।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">प्रतिरोधों के समानांतर क्रम संयोजन का तुल्य प्रतिरोध व्युत्पन्न (derive) कीजिए।</div>
+        <div class="answer">
+            <p>चित्र में तीन प्रतिरोधों 𝑅1, 𝑅2 और 𝑅3 का समानांतर क्रम संयोजन दिखाया गया है। जब एक सेल E को इस संयोजन से जोड़ा जाता है तो उसमें से धारा I प्रवाहित होती है। यह धारा बिंदु A पर तीन भागों में विभाजित हो जाती है, यदि 𝑅1, 𝑅2 और 𝑅3 में से क्रमशः धाराएँ 𝐼1, 𝐼2 और 𝐼3 प्रवाहित हो रही हैं।</p>
+<p>चूँकि सभी प्रतिरोध दो बिंदुओं A और B के बीच जुड़े हुए हैं, अतः सभी के लिए दोनों बिंदुओं के बीच विभवांतर समान होगा। माना यह V है।</p>
+<p>तब ओम के नियम से, 𝐼1 =𝑉𝑅1 𝐼2 =𝑉𝑅2 माना R परिपथ का तुल्य प्रतिरोध है, तब 𝐼 =𝑉𝑅 परंतु 𝐼 = 𝐼1 + 𝐼2 + 𝐼3 𝑉/𝑅 = 𝑉/𝑅1 + 𝑉/𝑅2 + 𝑉/𝑅3 1/𝑅 = 1/𝑅1 + 1/𝑅2 + 1/𝑅3</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">प्रतिरोधकों के श्रेणीक्रम और समानांतर क्रम संयोजनों में अंतर लिखिए</div>
+        <div class="answer">
+            <table><tr><th><p>श्रेणीक्रम संयोजन (Series Connection)</p></th><th><p>समानांतर क्रम संयोजन (Parallel Connection)</p></th></tr><tr><td><p>1. संयोजन के सिरों के बीच कुल विभवांतर (V) व्यष्टिगत विभवांतरों के योग के बराबर होता है।</p></td><td><p>1. सभी प्रतिरोधकों के सिरों के बीच विभवांतर (V) समान/स्थिर रहता है।</p></td></tr><tr><td><p>2. सभी प्रतिरोधकों में धारा (I) समान रहती है।</p></td><td><p>2. प्रत्येक प्रतिरोधक में से प्रवाहित धारा (I) उसके प्रतिरोध के अनुसार भिन्न-भिन्न होती है।</p></td></tr></table>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">विद्युत धारा का तापीय प्रभाव (Thermal Effect) क्या है?</div>
+        <div class="answer">
+            <p>जब किसी चालक से होकर विद्युत धारा प्रवाहित होती है, तो उसमें ऊष्मा उत्पन्न होती है। विद्युत धारा के इस ऊष्मा उत्पन्न करने वाले प्रभाव को विद्युत धारा का तापीय प्रभाव कहते हैं।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">जूल का तापन नियम (Joule's Law of Heating) क्या है?</div>
+        <div class="answer">
+            <p>जूल के तापन नियम के अनुसार:</p>
+<p>किसी चालक में विद्युत धारा द्वारा उत्पन्न ऊष्मा (H) निम्नलिखित के अनुक्रमानुपाती होती है:</p>
+<ol><li>धारा का वर्ग (I²)</li><li>चालक का प्रतिरोध (R)</li><li>वह समय जिसके लिए धारा प्रवाहित होती है (t) गणितीय रूप से, 𝐻 = 𝐼2𝑅𝑡</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">विद्युत धारा के तापीय प्रभावों के व्यावहारिक उपयोग लिखिए। (2021) अथवा</div>
+        <div class="answer">
+            <p>विद्युत धारा के तापीय प्रभाव के दो उपयोग लिखिए।(Q. Bank)</p>
+<p>विद्युत धारा के तापीय प्रभाव के उपयोग</p>
+<ol><li>इसका उपयोग विद्युत हीटर में किया जाता है। </li><li>इसका उपयोग विद्युत इस्तरी (electric iron) में किया जाता है। </li><li>इसका उपयोग विद्युत टोस्टर में किया जाता है।</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">विद्युत टोस्टर और विद्युत इस्तरी की कुंडलियाँ शुद्ध धातु के बजाय मिश्रधातु (alloy) की क्यों बनाई जाती हैं? (Q. Bank)</div>
+        <div class="answer">
+            <p>अथवा, ब्रेड टोस्टर और विद्युत इस्तरी जैसे विद्युत तापन उपकरणों के चालक शुद्ध धातु के बजाय मिश्रधातु के क्यों बनाए जाते हैं? (2022)</p>
+<p>हम जानते हैं कि किसी मिश्रधातु की प्रतिरोधकता शुद्ध धातु की तुलना में बहुत अधिक होती है और मिश्रधातु उच्च तापमान पर, यहाँ तक कि लाल-तप्त (red hot) होने पर भी, आसानी से ऑक्सीकृत (oxidise) नहीं होती। इसलिए, विद्युत टोस्टर और विद्युत इस्तरी की कुंडलियाँ शुद्ध धातु के बजाय मिश्रधातु की बनाई जाती हैं।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">विद्युत हीटर की डोरी (cord) चमकती (glow) क्यों नहीं है जबकि उसका तापन तत्व (heating element) चमकता है? कारण लिखिए।(2024)</div>
+        <div class="answer">
+            <p>डोरी का प्रतिरोध तापन तत्व की तुलना में बहुत कम होता है, इसलिए डोरी में उत्पन्न ऊष्मा तापन तत्व की तुलना में कम होती है। अतः तापन तत्व चमकने लगता है परंतु डोरी नहीं चमकती।</p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">विद्युत लैंपों के तंतु (filament) के लिए लगभग हमेशा टंगस्टन (tungsten) का ही उपयोग क्यों किया जाता है? (2020/22)</div>
+        <div class="answer">
+            <ol><li>इसमें यह विशेष गुण होता है कि यह गर्म होने पर चमकता है।</li><li>इसका गलनांक (melting point) उच्च होता है।</li><li>यह वायु में उपस्थित गैसों के साथ अभिक्रिया नहीं करता और ऑक्सीकृत नहीं होता।</li><li>इसका प्रतिरोध कम होता है।</li></ol>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">फ्यूज तार (Fuse Wire) क्या है?</div>
+        <div class="answer">
+            <p>फ्यूज निम्न गलनांक वाला एक धात्विक तार होता है। इसे भवन की वायरिंग के प्रत्येक भाग की लाइव लाइन (live line) में जोड़ा जाता है। </p>
+        </div>
+    </div>
+    <div class="qa-box">
+        <div class="question">फ्यूज तार विद्युत उपकरणों को क्षति से किस प्रकार बचाता है?</div>
+        <div class="answer">
+            <p>यदि परिपथ में किसी प्रकार का अत्यधिक तापन (overheating) होता है तो फ्यूज तार तुरंत पिघल जाता है, जिससे दुर्घटनाओं और विद्युत उपकरणों को होने वाली क्षति से बचाव होता है</p>
+        </div>
+    </div>
+
+
+</div>
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("show");
+}
+document.addEventListener("click", function(e){
+    if(!e.target.closest(".navbar")){
+        var menu = document.getElementById("menu");
+        if(menu) menu.classList.remove("show");
+    }
+});
+</script>
+<script>
+document.addEventListener("contextmenu", function(e) { e.preventDefault(); return false; }, false);
+document.addEventListener("selectstart", function(e) { e.preventDefault(); return false; }, false);
+document.addEventListener("keydown", function(e) {
+    if (e.key === "PrintScreen" || e.keyCode === 44 ||
+        (e.ctrlKey && e.shiftKey && e.key === "S") ||
+        (e.keyCode === 91 && e.shiftKey && e.key === "5")) { e.preventDefault(); return false; }
+    if ((e.ctrlKey || e.metaKey) && (e.key === "c" || e.keyCode === 67)) {
+        e.preventDefault(); alert("Copying content is not allowed on this page."); return false;
+    }
+    if ((e.ctrlKey || e.metaKey) && (e.key === "a" || e.keyCode === 65)) { e.preventDefault(); return false; }
+    if ((e.ctrlKey || e.metaKey) && (e.key === "x" || e.keyCode === 88)) { e.preventDefault(); return false; }
+    if (e.keyCode === 123) { e.preventDefault(); return false; }
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "i" || e.keyCode === 73)) { e.preventDefault(); return false; }
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "j" || e.keyCode === 74)) { e.preventDefault(); return false; }
+}, false);
+document.addEventListener("mouseup", function() {
+    document.selection && document.selection.empty ? document.selection.empty() : window.getSelection().removeAllRanges();
+}, false);
+document.addEventListener("paste", function(e) {
+    e.preventDefault(); alert("Pasting content is not allowed on this page."); return false;
+}, false);
+document.addEventListener("DOMContentLoaded", function() {
+    document.body.style.userSelect = "none";
+    document.body.style.webkitUserSelect = "none";
+    document.body.style.msUserSelect = "none";
+    document.body.style.mozUserSelect = "none";
+});
+document.addEventListener("dragstart", function(e) { e.preventDefault(); return false; }, false);
+</script>
+
+</body>
+</html>
