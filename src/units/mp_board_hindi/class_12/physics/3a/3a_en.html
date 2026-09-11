@@ -50,7 +50,7 @@ line-height:1.7;
 
     .navbar{
 
-      background:rgba(15,23,42,0.45);
+      background:rgba(23,74,126,0.95);
 
       backdrop-filter:blur(10px);
 
@@ -90,26 +90,21 @@ padding:20px;
 
 }
 
-.notes-title{
 
-background:#e3f2fd;
-
-color:#1565c0;
-
-padding:10px;
-
-border-left:5px solid #1565c0;
-
-border-radius:50px;
-
-font-size:30px;
-
-font-weight:bold;
-margin-top:100px;
-
-margin-bottom:50px;
-
+.notes-title {
+    background: #174a7e;
+    color: white;
+    padding: 18px 22px;
+    border-radius: 12px 12px 0 0;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 100px;
+    margin-bottom: 0;
 }
+
+
+
+
 
 
 
@@ -1040,6 +1035,97 @@ The force acting on a moving charged particle or on a current-carrying conductor
     </div>
 </div>
 
+  <div class="qa-box">
+
+    <div class="question">
+        Q. Derive the expression for the force per unit length between two parallel current-carrying conductors. What will be the nature of the force if—
+    </div>
+
+    <p>
+        (i) Current flows in the same direction through both conductors?
+    </p>
+
+    <p>
+        (ii) Current flows in opposite directions through both conductors?
+    </p>
+
+    <div class="answer">
+
+        <img src="images/voltmeter-construction.png" alt="Diagram">
+
+        Let two long, straight and parallel conductors \(X\) and \(Y\) be placed at a distance \(r\) from each other.
+        Currents \(I_1\) and \(I_2\) flow through them respectively.
+
+        <br><br>
+
+        The magnetic field produced at the position of conductor \(Y\) due to conductor \(X\) is,
+
+        <div class="formula">
+            \[
+            B_1=\frac{\mu_0 I_1}{2\pi r}
+            \]
+        </div>
+
+        If the length of conductor \(Y\) is \(l\), then the Lorentz force acting on it due to conductor \(X\) is,
+
+        <div class="formula">
+            \[
+            F_{12}=B_1I_2l
+            \]
+        </div>
+
+        <div class="formula">
+            \[
+            F_{12}
+            =\frac{\mu_0 I_1}{2\pi r}\times I_2l
+            \]
+        </div>
+
+        <div class="formula">
+            \[
+            F_{12}
+            =\frac{\mu_0 I_1I_2l}{2\pi r}
+            \]
+        </div>
+
+        Therefore, the force per unit length is,
+
+        <div class="formula">
+            \[
+            \boxed{
+            \frac{F_{12}}{l}
+            =\frac{\mu_0 I_1I_2}{2\pi r}
+            }
+            \]
+        </div>
+
+        Similarly, if the length of conductor \(X\) is \(l\), then the force acting on it due to conductor \(Y\) is,
+
+        <div class="formula">
+            \[
+            \boxed{
+            \frac{F_{21}}{l}
+            =\frac{\mu_0 I_1I_2}{2\pi r}
+            }
+            \]
+        </div>
+
+        <ol>
+            <li>
+                If the currents in both conductors flow in the <strong>same direction</strong>,
+                the force between them is <strong>attractive</strong>.
+            </li>
+
+            <li>
+                If the currents in both conductors flow in <strong>opposite directions</strong>,
+                the force between them is <strong>repulsive</strong>.
+            </li>
+        </ol>
+
+    </div>
+
+  </div>
+  
   <div class="qa-box">
     <div class="question">
         Question: What is a galvanometer?
