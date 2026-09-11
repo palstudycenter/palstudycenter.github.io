@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | Notes</title>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<script>
+window.MathJax={
+ tex:{
+ inlineMath:[
+ ['$','$'],
+ ['\\(','\\)']
+ ]
+}
+};
+</script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<style>
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+
+body{
+background:#f5f7fb;
+line-height:1.7;
+}
+
+
+/* NAVBAR */
+
+    .navbar{
+
+      background:rgba(15,23,42,0.45);
+
+      backdrop-filter:blur(10px);
+
+      box-shadow:0 4px 18px rgba(0,0,0,.18);
+
+      padding:10px 0;
+
+      transition:.3s;
+
+    }
+
+    .navbar-brand{
+
+      font-size:28px;
+
+      font-weight:700;
+
+      color:white !important;
+
+    }
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+      .navbar-brand{
+        font-size:40px;
+      }
+/* CONTENT */
+
+.notes-container{
+
+max-width:900px;
+
+margin:100px auto 50px;
+
+padding:20px;
+
+}
+
+.notes-title{
+
+background:#e3f2fd;
+
+color:#1565c0;
+
+padding:10px;
+
+border-left:5px solid #1565c0;
+
+border-radius:50px;
+
+font-size:30px;
+
+font-weight:bold;
+margin-top:100px;
+
+margin-bottom:50px;
+
+}
+
+
+
+.qa-box{
+
+background:white;
+
+padding:22px;
+
+margin-bottom:18px;
+
+border-radius:14px;
+
+border-left:6px solid #1565c0;
+
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+transition:.25s;
+
+}
+
+
+.qa-box:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+
+.question{
+
+font-weight:bold;
+
+color:#1b3a57;
+
+margin-bottom:8px;
+
+}
+.question-image{
+    text-align:center;
+    margin:15px 0;
+    overflow-x:auto;
+}
+
+.question-image img{
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:8px;
+}
+
+
+
+.answer{
+
+color:#2c3e50;
+
+text-align:justify;
+
+}
+
+
+
+@media(max-width:768px){
+
+.notes-container{
+
+margin-top:80px;
+
+}
+
+
+}
+.formula{
+    overflow-x:auto;
+    overflow-y:hidden;
+    margin:10px 0;
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<!-- NAVBAR -->
+
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+
+पाल <span>स्टडी सेंटर</span>
+
+</a>
+    <button class="navbar-toggler bg-light"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+</div>
+
+</nav>
+
+
+
+
+
+<!-- NOTES -->
+
+<div class="qa-box">
+  <div class="container">
+ <div class="notes-title">📘 Exercise - 4.2</div>  
+</div>
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+Q.1 (i) Find the area of the triangle whose vertices are
+\[
+(1,0),\ (6,0),\ (4,3)
+\]
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+त्रिभुज का क्षेत्रफल ज्ञात करने का सूत्र —
+</p>
+
+<p class="formula">
+\[
+A=\frac12
+\begin{vmatrix}
+x_1 & y_1 & 1\\
+x_2 & y_2 & 1\\
+x_3 & y_3 & 1
+\end{vmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+A=\frac12
+\begin{vmatrix}
+1 & 0 & 1\\
+6 & 0 & 1\\
+4 & 3 & 1
+\end{vmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac12
+\left[
+1
+\begin{vmatrix}
+0 & 1\\
+3 & 1
+\end{vmatrix}
+-0
+\begin{vmatrix}
+6 & 1\\
+4 & 1
+\end{vmatrix}
++1
+\begin{vmatrix}
+6 & 0\\
+4 & 3
+\end{vmatrix}
+\right]
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac12
+\left[
+1(0-3)+0+1(18-0)
+\right]
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac12(15)
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{15}{2}
+\]
+</p>
+
+<p class="formula">
+\[
+\therefore \text{Area}=\frac{15}{2}\text{ sq. units}
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.1 (ii) Find the area of the triangle whose vertices are
+\[
+(2,7),\ (1,1),\ (10,8)
+\]
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+त्रिभुज का क्षेत्रफल ज्ञात करने का सूत्र —
+</p>
+
+<p class="formula">
+\[
+A=\frac12
+\begin{vmatrix}
+x_1 & y_1 & 1\\
+x_2 & y_2 & 1\\
+x_3 & y_3 & 1
+\end{vmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+A=\frac12
+\begin{vmatrix}
+2 & 7 & 1\\
+1 & 1 & 1\\
+10 & 8 & 1
+\end{vmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac12
+\left[
+2
+\begin{vmatrix}
+1 & 1\\
+8 & 1
+\end{vmatrix}
+-7
+\begin{vmatrix}
+1 & 1\\
+10 & 1
+\end{vmatrix}
++1
+\begin{vmatrix}
+1 & 1\\
+10 & 8
+\end{vmatrix}
+\right]
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac12
+\left[
+2(1-8)-7(1-10)+(8-10)
+\right]
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac12
+\left[
+-14+63-2
+\right]
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac12(47)
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{47}{2}
+\]
+</p>
+
+<p class="formula">
+\[
+\therefore \text{Area}=\frac{47}{2}\text{ sq. units}
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.1 (iii) Find the area of the triangle whose vertices are
+\[
+(-2,-3),\ (3,2),\ (-1,-8)
+\]
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+त्रिभुज का क्षेत्रफल ज्ञात करने का सूत्र —
+</p>
+
+<p class="formula">
+\[
+A=\frac12
+\begin{vmatrix}
+x_1 & y_1 & 1\\
+x_2 & y_2 & 1\\
+x_3 & y_3 & 1
+\end{vmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+A=\frac12
+\begin{vmatrix}
+-2 & -3 & 1\\
+3 & 2 & 1\\
+-1 & -8 & 1
+\end{vmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac12
+\left[
+-2
+\begin{vmatrix}
+2 & 1\\
+-8 & 1
+\end{vmatrix}
+-(-3)
+\begin{vmatrix}
+3 & 1\\
+-1 & 1
+\end{vmatrix}
++1
+\begin{vmatrix}
+3 & 2\\
+-1 & -8
+\end{vmatrix}
+\right]
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac12
+\left[
+-2(2+8)
++3(3+1)
++\{-24+2\}
+\right]
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac12
+\left[
+-20+12-22
+\right]
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac12(-30)
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac12(30)
+\]
+</p>
+
+<p class="formula">
+\[
+=15
+\]
+</p>
+
+<p class="formula">
+\[
+\therefore \text{Area}=15\text{ sq. units}
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.2 Show that the points
+\[
+A(a,b+c),\ B(b,c+a),\ C(c,a+b)
+\]
+are collinear.
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+तीन बिन्दुओं के संरेख होने की शर्त —
+</p>
+
+<p class="formula">
+\[
+A=\frac12
+\begin{vmatrix}
+x_1 & y_1 & 1\\
+x_2 & y_2 & 1\\
+x_3 & y_3 & 1
+\end{vmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+A=\frac12
+\begin{vmatrix}
+a & b+c & 1\\
+b & c+a & 1\\
+c & a+b & 1
+\end{vmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac12
+\left[
+a
+\begin{vmatrix}
+c+a & 1\\
+a+b & 1
+\end{vmatrix}
+-(b+c)
+\begin{vmatrix}
+b & 1\\
+c & 1
+\end{vmatrix}
++1
+\begin{vmatrix}
+b & c+a\\
+c & a+b
+\end{vmatrix}
+\right]
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac12
+\left[
+a\{(c+a)-(a+b)\}
+-(b+c)(b-c)
++\{b(a+b)-c(c+a)\}
+\right]
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac12
+\left[
+a(c-b)
+-(b^2-c^2)
++(ab+b^2-c^2-ac)
+\right]
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac12(0)
+\]
+</p>
+
+<p class="formula">
+\[
+=0
+\]
+</p>
+
+<p>
+अतः त्रिभुज का क्षेत्रफल शून्य है, इसलिए बिन्दु
+\[
+A(a,b+c),\ B(b,c+a),\ C(c,a+b)
+\]
+संरेख (Collinear) हैं।
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.3 (i) Find the value of \(k\), if the area of the triangle is 4 sq. units and the vertices are
+\[
+(k,0),\ (4,0),\ (0,2)
+\]
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+त्रिभुज का क्षेत्रफल ज्ञात करने का सूत्र —
+</p>
+
+<p class="formula">
+\[
+A=\frac12
+\begin{vmatrix}
+x_1 & y_1 & 1\\
+x_2 & y_2 & 1\\
+x_3 & y_3 & 1
+\end{vmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+4=\frac12
+\begin{vmatrix}
+k & 0 & 1\\
+4 & 0 & 1\\
+0 & 2 & 1
+\end{vmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+4=\frac12
+\left[
+k
+\begin{vmatrix}
+0 & 1\\
+2 & 1
+\end{vmatrix}
++1
+\begin{vmatrix}
+4 & 0\\
+0 & 2
+\end{vmatrix}
+\right]
+\]
+</p>
+
+<p class="formula">
+\[
+4=\frac12[-2k+8]
+\]
+</p>
+
+<p class="formula">
+\[
+8=-2k+8
+\]
+</p>
+
+<p class="formula">
+\[
+-2k=0
+\]
+</p>
+
+<p class="formula">
+\[
+k=0
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.3 (ii) Find the value of \(k\), if the area of the triangle is 4 sq. units and the vertices are
+\[
+(-2,0),\ (0,4),\ (0,k)
+\]
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+त्रिभुज का क्षेत्रफल ज्ञात करने का सूत्र —
+</p>
+
+<p class="formula">
+\[
+A=\frac12
+\begin{vmatrix}
+x_1 & y_1 & 1\\
+x_2 & y_2 & 1\\
+x_3 & y_3 & 1
+\end{vmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+4=\frac12
+\begin{vmatrix}
+-2 & 0 & 1\\
+0 & 4 & 1\\
+0 & k & 1
+\end{vmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+4=\frac12
+\left[
+-2
+\begin{vmatrix}
+4 & 1\\
+k & 1
+\end{vmatrix}
++1
+\begin{vmatrix}
+0 & 4\\
+0 & k
+\end{vmatrix}
+\right]
+\]
+</p>
+
+<p class="formula">
+\[
+4=\frac12\left[-2(4-k)+0\right]
+\]
+</p>
+
+<p class="formula">
+\[
+4=\frac12(-8+2k)
+\]
+</p>
+
+<p class="formula">
+\[
+8=\left|-8+2k\right|
+\]
+</p>
+
+<p>
+अब दो स्थितियाँ होंगी —
+</p>
+
+<p class="formula">
+\[
+-8+2k=8
+\]
+</p>
+
+<p class="formula">
+\[
+2k=16
+\]
+</p>
+
+<p class="formula">
+\[
+k=8
+\]
+</p>
+
+<p>
+या
+</p>
+
+<p class="formula">
+\[
+-8+2k=-8
+\]
+</p>
+
+<p class="formula">
+\[
+2k=0
+\]
+</p>
+
+<p class="formula">
+\[
+k=0
+\]
+</p>
+
+<p class="formula">
+\[
+\therefore \boxed{k=0 \text{ या } k=8}
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.4 (i) Find the equation of the line joining the points
+\[
+(1,2)\ \text{and}\ (3,6)
+\]
+using determinants.
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+दो बिन्दुओं से जाने वाली रेखा का समीकरण —
+</p>
+
+<p class="formula">
+\[
+\begin{vmatrix}
+x & y & 1\\
+x_1 & y_1 & 1\\
+x_2 & y_2 & 1
+\end{vmatrix}
+=0
+\]
+</p>
+
+<p class="formula">
+\[
+\begin{vmatrix}
+x & y & 1\\
+1 & 2 & 1\\
+3 & 6 & 1
+\end{vmatrix}
+=0
+\]
+</p>
+
+<p class="formula">
+\[
+x
+\begin{vmatrix}
+2 & 1\\
+6 & 1
+\end{vmatrix}
+-y
+\begin{vmatrix}
+1 & 1\\
+3 & 1
+\end{vmatrix}
++1
+\begin{vmatrix}
+1 & 2\\
+3 & 6
+\end{vmatrix}
+=0
+\]
+</p>
+
+<p class="formula">
+\[
+x(2-6)-y(1-3)+(6-6)=0
+\]
+</p>
+
+<p class="formula">
+\[
+-4x+2y=0
+\]
+</p>
+
+<p class="formula">
+\[
+-2x+y=0
+\]
+</p>
+
+<p class="formula">
+\[
+\therefore y=2x
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.4 (ii) Find the equation of the line joining the points
+\[
+(3,1)\ \text{and}\ (9,3)
+\]
+using determinants.
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+दो बिन्दुओं से जाने वाली रेखा का समीकरण —
+</p>
+
+<p class="formula">
+\[
+\begin{vmatrix}
+x & y & 1\\
+x_1 & y_1 & 1\\
+x_2 & y_2 & 1
+\end{vmatrix}
+=0
+\]
+</p>
+
+<p class="formula">
+\[
+\begin{vmatrix}
+x & y & 1\\
+3 & 1 & 1\\
+9 & 3 & 1
+\end{vmatrix}
+=0
+\]
+</p>
+
+<p class="formula">
+\[
+x
+\begin{vmatrix}
+1 & 1\\
+3 & 1
+\end{vmatrix}
+-y
+\begin{vmatrix}
+3 & 1\\
+9 & 1
+\end{vmatrix}
++1
+\begin{vmatrix}
+3 & 1\\
+9 & 3
+\end{vmatrix}
+=0
+\]
+</p>
+
+<p class="formula">
+\[
+x(1-3)-y(3-9)+(9-9)=0
+\]
+</p>
+
+<p class="formula">
+\[
+-2x+6y=0
+\]
+</p>
+
+<p class="formula">
+\[
+-x+3y=0
+\]
+</p>
+
+<p class="formula">
+\[
+\therefore x-3y=0
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.5 If the area of the triangle is 35 sq. units and the vertices are
+\[
+(2,6),\ (5,4),\ (k,4),
+\]
+then \(k\) is
+
+<p>
+(A) 12 &nbsp;&nbsp;
+(B) -2 &nbsp;&nbsp;
+(C) -12, -2 &nbsp;&nbsp;
+(D) 12, -2
+</p>
+
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+त्रिभुज का क्षेत्रफल ज्ञात करने का सूत्र —
+</p>
+
+<p class="formula">
+\[
+A=\frac12
+\begin{vmatrix}
+x_1 & y_1 & 1\\
+x_2 & y_2 & 1\\
+x_3 & y_3 & 1
+\end{vmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+35=\frac12
+\begin{vmatrix}
+2 & 6 & 1\\
+5 & 4 & 1\\
+k & 4 & 1
+\end{vmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+35=\frac12
+\left[
+2
+\begin{vmatrix}
+4 & 1\\
+4 & 1
+\end{vmatrix}
+-6
+\begin{vmatrix}
+5 & 1\\
+k & 1
+\end{vmatrix}
++1
+\begin{vmatrix}
+5 & 4\\
+k & 4
+\end{vmatrix}
+\right]
+\]
+</p>
+
+<p class="formula">
+\[
+35=\frac12
+\left[
+2(0)-6(5-k)+(20-4k)
+\right]
+\]
+</p>
+
+<p class="formula">
+\[
+35=\frac12(-30+6k+20-4k)
+\]
+</p>
+
+<p class="formula">
+\[
+35=\frac12(2k-10)
+\]
+</p>
+
+<p class="formula">
+\[
+70=\left|2k-10\right|
+\]
+</p>
+
+<p>
+अब दो स्थितियाँ होंगी —
+</p>
+
+<p class="formula">
+\[
+2k-10=70
+\]
+</p>
+
+<p class="formula">
+\[
+2k=80
+\]
+</p>
+
+<p class="formula">
+\[
+k=40
+\]
+</p>
+
+<p>
+या
+</p>
+
+<p class="formula">
+\[
+2k-10=-70
+\]
+</p>
+
+<p class="formula">
+\[
+2k=-60
+\]
+</p>
+
+<p class="formula">
+\[
+k=-30
+\]
+</p>
+
+<p class="formula">
+\[
+\therefore \boxed{k=40 \text{ या } k=-30}
+\]
+</p>
+
+<p>
+अतः दिए गए विकल्पों में से <b>कोई भी विकल्प सही नहीं है।</b>
+</p>
+
+</div>
+
+</div>
+<!-- NOTES -->
+
+
+
+
+
+
+
+<!-- PROTECTION -->
+
+
+<script>
+
+
+document.addEventListener("contextmenu",
+e=>e.preventDefault());
+
+
+document.addEventListener("selectstart",
+e=>e.preventDefault());
+
+
+document.addEventListener("copy",
+e=>{
+
+e.preventDefault();
+
+alert("Copying content is not allowed");
+
+});
+
+
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
+

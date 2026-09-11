@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | Notes</title>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<script>
+window.MathJax={
+ tex:{
+ inlineMath:[
+ ['$','$'],
+ ['\\(','\\)']
+ ]
+}
+};
+</script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<style>
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+
+body{
+background:#f5f7fb;
+line-height:1.7;
+}
+
+
+/* NAVBAR */
+
+    .navbar{
+
+      background:rgba(15,23,42,0.45);
+
+      backdrop-filter:blur(10px);
+
+      box-shadow:0 4px 18px rgba(0,0,0,.18);
+
+      padding:10px 0;
+
+      transition:.3s;
+
+    }
+
+    .navbar-brand{
+
+      font-size:28px;
+
+      font-weight:700;
+
+      color:white !important;
+
+    }
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+      .navbar-brand{
+        font-size:40px;
+      }
+/* CONTENT */
+
+.notes-container{
+
+max-width:900px;
+
+margin:100px auto 50px;
+
+padding:20px;
+
+}
+
+.notes-title{
+
+background:#e3f2fd;
+
+color:#1565c0;
+
+padding:10px;
+
+border-left:5px solid #1565c0;
+
+border-radius:50px;
+
+font-size:30px;
+
+font-weight:bold;
+margin-top:100px;
+
+margin-bottom:50px;
+
+}
+
+
+
+.qa-box{
+
+background:white;
+
+padding:22px;
+
+margin-bottom:18px;
+
+border-radius:14px;
+
+border-left:6px solid #1565c0;
+
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+transition:.25s;
+
+}
+
+
+.qa-box:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+
+.question{
+
+font-weight:bold;
+
+color:#1b3a57;
+
+margin-bottom:8px;
+
+}
+.question-image{
+    text-align:center;
+    margin:15px 0;
+    overflow-x:auto;
+}
+
+.question-image img{
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:8px;
+}
+
+
+
+.answer{
+
+color:#2c3e50;
+
+text-align:justify;
+
+}
+
+
+
+@media(max-width:768px){
+
+.notes-container{
+
+margin-top:80px;
+
+}
+
+
+}
+.formula{
+    overflow-x:auto;
+    overflow-y:hidden;
+    margin:10px 0;
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<!-- NAVBAR -->
+
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+
+पाल <span>स्टडी सेंटर</span>
+
+</a>
+    <button class="navbar-toggler bg-light"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+</div>
+
+</nav>
+
+
+
+
+
+<!-- NOTES -->
+
+<div class="qa-box">
+  <div class="container">
+ <div class="notes-title">📘 Unit 2- विद्युत धारा</div>  
+</div>
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+Q.1 Find the adjoint of the matrix
+\[
+A=
+\begin{bmatrix}
+1 & 2\\
+3 & 4
+\end{bmatrix}
+\]
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+सहगुणक (Cofactor) मैट्रिक्स —
+</p>
+
+<p class="formula">
+\[
+C=
+\begin{bmatrix}
+4 & -3\\
+-2 & 1
+\end{bmatrix}
+\]
+</p>
+
+<p>
+Adjoint = Cofactor Matrix का Transpose
+</p>
+
+<p class="formula">
+\[
+\operatorname{adj}(A)
+=
+\begin{bmatrix}
+4 & -2\\
+-3 & 1
+\end{bmatrix}
+\]
+</p>
+
+</div>
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+Q.2 Find the adjoint of the matrix
+\[
+A=
+\begin{bmatrix}
+1 & -1 & 2\\
+2 & 3 & 5\\
+-2 & 0 & 1
+\end{bmatrix}
+\]
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+सहगुणक (Cofactors) —
+</p>
+
+<p class="formula">
+\[
+C_{11}=
+\begin{vmatrix}
+3 & 5\\
+0 & 1
+\end{vmatrix}
+=3
+\]
+</p>
+
+<p class="formula">
+\[
+C_{12}=-
+\begin{vmatrix}
+2 & 5\\
+-2 & 1
+\end{vmatrix}
+=-12
+\]
+</p>
+
+<p class="formula">
+\[
+C_{13}=
+\begin{vmatrix}
+2 & 3\\
+-2 & 0
+\end{vmatrix}
+=6
+\]
+</p>
+
+<p class="formula">
+\[
+C_{21}=-
+\begin{vmatrix}
+-1 & 2\\
+0 & 1
+\end{vmatrix}
+=1
+\]
+</p>
+
+<p class="formula">
+\[
+C_{22}=
+\begin{vmatrix}
+1 & 2\\
+-2 & 1
+\end{vmatrix}
+=5
+\]
+</p>
+
+<p class="formula">
+\[
+C_{23}=-
+\begin{vmatrix}
+1 & -1\\
+-2 & 0
+\end{vmatrix}
+=-2
+\]
+</p>
+
+<p class="formula">
+\[
+C_{31}=
+\begin{vmatrix}
+-1 & 2\\
+3 & 5
+\end{vmatrix}
+=-11
+\]
+</p>
+
+<p class="formula">
+\[
+C_{32}=-
+\begin{vmatrix}
+1 & 2\\
+2 & 5
+\end{vmatrix}
+=-1
+\]
+</p>
+
+<p class="formula">
+\[
+C_{33}=
+\begin{vmatrix}
+1 & -1\\
+2 & 3
+\end{vmatrix}
+=5
+\]
+</p>
+
+<p class="formula">
+\[
+Adj(A)=
+\begin{bmatrix}
+C_{11} & C_{21} & C_{31}\\
+C_{12} & C_{22} & C_{32}\\
+C_{13} & C_{23} & C_{33}
+\end{bmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+Adj(A)=
+\begin{bmatrix}
+3 & 1 & -11\\
+-12 & 5 & -1\\
+6 & -2 & 5
+\end{bmatrix}
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.3 Verify that
+\[
+A(\operatorname{Adj}A)=(\operatorname{Adj}A)A=|A|I
+\]
+for
+\[
+A=
+\begin{bmatrix}
+2 & 3\\
+-4 & -6
+\end{bmatrix}
+\]
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p class="formula">
+\[
+|A|=
+\begin{vmatrix}
+2 & 3\\
+-4 & -6
+\end{vmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+=(2)(-6)-(3)(-4)
+\]
+</p>
+
+<p class="formula">
+\[
+=-12+12
+\]
+</p>
+
+<p class="formula">
+\[
+=0
+\]
+</p>
+
+<p class="formula">
+\[
+Adj(A)=
+\begin{bmatrix}
+-6 & -3\\
+4 & 2
+\end{bmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+A\,Adj(A)
+=
+\begin{bmatrix}
+2 & 3\\
+-4 & -6
+\end{bmatrix}
+\begin{bmatrix}
+-6 & -3\\
+4 & 2
+\end{bmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\begin{bmatrix}
+2(-6)+3(4) & 2(-3)+3(2)\\
+-4(-6)+(-6)(4) & -4(-3)+(-6)(2)
+\end{bmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\begin{bmatrix}
+0 & 0\\
+0 & 0
+\end{bmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+=(0)
+\begin{bmatrix}
+1 & 0\\
+0 & 1
+\end{bmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+=|A|I
+\]
+</p>
+
+<p class="formula">
+\[
+Adj(A)\,A
+=
+\begin{bmatrix}
+-6 & -3\\
+4 & 2
+\end{bmatrix}
+\begin{bmatrix}
+2 & 3\\
+-4 & -6
+\end{bmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\begin{bmatrix}
+-12+12 & -18+18\\
+8-8 & 12-12
+\end{bmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\begin{bmatrix}
+0 & 0\\
+0 & 0
+\end{bmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+=(0)
+\begin{bmatrix}
+1 & 0\\
+0 & 1
+\end{bmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+=|A|I
+\]
+</p>
+
+<p class="formula">
+\[
+\therefore A(\operatorname{Adj}A)
+=(\operatorname{Adj}A)A
+=|A|I
+\]
+</p>
+
+</div>
+
+</div><div class="qa-box">
+
+<div class="question">
+Q.5 Find the inverse of the matrix
+\[
+A=
+\begin{bmatrix}
+2 & -2\\
+4 & 3
+\end{bmatrix}
+\]
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p class="formula">
+\[
+|A|=
+\begin{vmatrix}
+2 & -2\\
+4 & 3
+\end{vmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+=(2)(3)-(-2)(4)
+\]
+</p>
+
+<p class="formula">
+\[
+=6+8
+\]
+</p>
+
+<p class="formula">
+\[
+=14
+\]
+</p>
+
+<p class="formula">
+\[
+Adj(A)=
+\begin{bmatrix}
+3 & 2\\
+-4 & 2
+\end{bmatrix}
+\]
+</p>
+
+<p>
+Inverse का सूत्र —
+</p>
+
+<p class="formula">
+\[
+A^{-1}=\frac{1}{|A|}\,Adj(A)
+\]
+</p>
+
+<p class="formula">
+\[
+A^{-1}
+=\frac{1}{14}
+\begin{bmatrix}
+3 & 2\\
+-4 & 2
+\end{bmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+A^{-1}
+=
+\begin{bmatrix}
+\frac{3}{14} & \frac{1}{7}\\
+-\frac{2}{7} & \frac{1}{7}
+\end{bmatrix}
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.6 Find the inverse of the matrix
+\[
+A=
+\begin{bmatrix}
+-1 & 5\\
+-3 & 2
+\end{bmatrix}
+\]
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p class="formula">
+\[
+|A|=
+\begin{vmatrix}
+-1 & 5\\
+-3 & 2
+\end{vmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+=(-1)(2)-(5)(-3)
+\]
+</p>
+
+<p class="formula">
+\[
+=-2+15
+\]
+</p>
+
+<p class="formula">
+\[
+=13
+\]
+</p>
+
+<p class="formula">
+\[
+Adj(A)=
+\begin{bmatrix}
+2 & -5\\
+3 & -1
+\end{bmatrix}
+\]
+</p>
+
+<p>
+Inverse का सूत्र —
+</p>
+
+<p class="formula">
+\[
+A^{-1}=\frac{1}{|A|}\,Adj(A)
+\]
+</p>
+
+<p class="formula">
+\[
+A^{-1}
+=\frac{1}{13}
+\begin{bmatrix}
+2 & -5\\
+3 & -1
+\end{bmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+A^{-1}
+=
+\begin{bmatrix}
+\frac{2}{13} & -\frac{5}{13}\\
+\frac{3}{13} & -\frac{1}{13}
+\end{bmatrix}
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.7 Find the inverse of the matrix
+\[
+A=
+\begin{bmatrix}
+1 & 2 & 3\\
+0 & 2 & 4\\
+0 & 0 & 5
+\end{bmatrix}
+\]
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p class="formula">
+\[
+|A|=
+\begin{vmatrix}
+1 & 2 & 3\\
+0 & 2 & 4\\
+0 & 0 & 5
+\end{vmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+=1(2)(5)
+\]
+</p>
+
+<p class="formula">
+\[
+=10
+\]
+</p>
+
+<p class="formula">
+\[
+Adj(A)=
+\begin{bmatrix}
+10 & -10 & -2\\
+0 & 5 & -4\\
+0 & 0 & 2
+\end{bmatrix}
+\]
+</p>
+
+<p>
+Inverse का सूत्र —
+</p>
+
+<p class="formula">
+\[
+A^{-1}=\frac{1}{|A|}\,Adj(A)
+\]
+</p>
+
+<p class="formula">
+\[
+A^{-1}
+=\frac{1}{10}
+\begin{bmatrix}
+10 & -10 & -2\\
+0 & 5 & -4\\
+0 & 0 & 2
+\end{bmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+A^{-1}
+=
+\begin{bmatrix}
+1 & -1 & -\frac15\\
+0 & \frac12 & -\frac25\\
+0 & 0 & \frac15
+\end{bmatrix}
+\]
+</p>
+
+</div>
+
+</div><div class="qa-box">
+
+<div class="question">
+Q.8 Find the inverse of the matrix
+\[
+A=
+\begin{bmatrix}
+1 & 0 & 0\\
+3 & 3 & 0\\
+5 & 2 & -1
+\end{bmatrix}
+\]
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p class="formula">
+\[
+|A|=
+\begin{vmatrix}
+1 & 0 & 0\\
+3 & 3 & 0\\
+5 & 2 & -1
+\end{vmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+=1
+\begin{vmatrix}
+3 & 0\\
+2 & -1
+\end{vmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+=1(3\times -1-0\times 2)
+\]
+</p>
+
+<p class="formula">
+\[
+=-3
+\]
+</p>
+
+<p class="formula">
+\[
+Adj(A)=
+\begin{bmatrix}
+-3 & 0 & 0\\
+3 & -1 & 0\\
+-9 & 2 & 3
+\end{bmatrix}
+\]
+</p>
+
+<p>
+Inverse का सूत्र —
+</p>
+
+<p class="formula">
+\[
+A^{-1}=\frac{1}{|A|}\,Adj(A)
+\]
+</p>
+
+<p class="formula">
+\[
+A^{-1}
+=\frac{1}{-3}
+\begin{bmatrix}
+-3 & 0 & 0\\
+3 & -1 & 0\\
+-9 & 2 & 3
+\end{bmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+A^{-1}
+=
+\begin{bmatrix}
+1 & 0 & 0\\
+-1 & \frac13 & 0\\
+3 & -\frac23 & -1
+\end{bmatrix}
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.12 Let
+\[
+A=
+\begin{bmatrix}
+3 & 7\\
+2 & 5
+\end{bmatrix},
+\qquad
+B=
+\begin{bmatrix}
+6 & 8\\
+7 & 9
+\end{bmatrix}
+\]
+Verify that
+\[
+(AB)^{-1}=B^{-1}A^{-1}
+\]
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p class="formula">
+\[
+AB=
+\begin{bmatrix}
+3 & 7\\
+2 & 5
+\end{bmatrix}
+\begin{bmatrix}
+6 & 8\\
+7 & 9
+\end{bmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\begin{bmatrix}
+67 & 87\\
+47 & 61
+\end{bmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+|AB|=
+\begin{vmatrix}
+67 & 87\\
+47 & 61
+\end{vmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+=(67)(61)-(87)(47)
+\]
+</p>
+
+<p class="formula">
+\[
+=4087-4089
+\]
+</p>
+
+<p class="formula">
+\[
+=-2
+\]
+</p>
+
+<p class="formula">
+\[
+(AB)^{-1}
+=\frac{1}{-2}
+\begin{bmatrix}
+61 & -87\\
+-47 & 67
+\end{bmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\begin{bmatrix}
+-\frac{61}{2} & \frac{87}{2}\\
+\frac{47}{2} & -\frac{67}{2}
+\end{bmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+|A|=
+\begin{vmatrix}
+3 & 7\\
+2 & 5
+\end{vmatrix}
+=15-14=1
+\]
+</p>
+
+<p class="formula">
+\[
+A^{-1}
+=
+\begin{bmatrix}
+5 & -7\\
+-2 & 3
+\end{bmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+|B|=
+\begin{vmatrix}
+6 & 8\\
+7 & 9
+\end{vmatrix}
+=54-56=-2
+\]
+</p>
+
+<p class="formula">
+\[
+B^{-1}
+=\frac{1}{-2}
+\begin{bmatrix}
+9 & -8\\
+-7 & 6
+\end{bmatrix}
+=
+\begin{bmatrix}
+-\frac92 & 4\\
+\frac72 & -3
+\end{bmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+B^{-1}A^{-1}
+=
+\begin{bmatrix}
+-\frac92 & 4\\
+\frac72 & -3
+\end{bmatrix}
+\begin{bmatrix}
+5 & -7\\
+-2 & 3
+\end{bmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\begin{bmatrix}
+-\frac{61}{2} & \frac{87}{2}\\
+\frac{47}{2} & -\frac{67}{2}
+\end{bmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+(AB)^{-1}
+=
+B^{-1}A^{-1}
+\]
+</p>
+
+<p class="formula">
+\[
+\therefore \text{Verified}
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.13 If
+\[
+A=
+\begin{bmatrix}
+3 & 1\\
+-1 & 2
+\end{bmatrix}
+\]
+show that
+\[
+A^2-5A+7I=O
+\]
+Hence find \(A^{-1}\).
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p class="formula">
+\[
+A=
+\begin{bmatrix}
+3 & 1\\
+-1 & 2
+\end{bmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+A^2=
+\begin{bmatrix}
+3 & 1\\
+-1 & 2
+\end{bmatrix}
+\begin{bmatrix}
+3 & 1\\
+-1 & 2
+\end{bmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\begin{bmatrix}
+8 & 5\\
+-5 & 3
+\end{bmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+A^2-5A+7I=
+\begin{bmatrix}
+8 & 5\\
+-5 & 3
+\end{bmatrix}
+-
+\begin{bmatrix}
+15 & 5\\
+-5 & 10
+\end{bmatrix}
++
+\begin{bmatrix}
+7 & 0\\
+0 & 7
+\end{bmatrix}
+\]
+</p>
+<p class="formula">
+\[
+=
+\begin{bmatrix}
+0 & 0\\
+0 & 0
+\end{bmatrix}
+=O
+\]
+</p>
+
+<p>
+अतः
+</p>
+
+<p class="formula">
+\[
+A^2-5A+7I=O
+\]
+</p>
+<p class="formula">
+\[
+A-5I+7A^{-1}=O
+\]
+</p>
+
+<p class="formula">
+\[
+A^{-1}=\frac{1}{7}(5I-A)
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{1}{7}
+\left[
+\begin{bmatrix}
+5 & 0\\
+0 & 5
+\end{bmatrix}
+-
+\begin{bmatrix}
+3 & 1\\
+-1 & 2
+\end{bmatrix}
+\right]
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{1}{7}
+\begin{bmatrix}
+2 & -1\\
+1 & 3
+\end{bmatrix}
+\]
+</p>
+
+<p class="formula">
+\[
+\therefore
+A^{-1}
+=
+\frac{1}{7}
+\begin{bmatrix}
+2 & -1\\
+1 & 3
+\end{bmatrix}
+\]
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- NOTES -->
+
+
+
+
+
+
+
+<!-- PROTECTION -->
+
+
+<script>
+
+
+document.addEventListener("contextmenu",
+e=>e.preventDefault());
+
+
+document.addEventListener("selectstart",
+e=>e.preventDefault());
+
+
+document.addEventListener("copy",
+e=>{
+
+e.preventDefault();
+
+alert("Copying content is not allowed");
+
+});
+
+
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
+

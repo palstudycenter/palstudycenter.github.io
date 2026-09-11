@@ -1,0 +1,1883 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | Notes</title>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<script>
+window.MathJax={
+ tex:{
+ inlineMath:[
+ ['$','$'],
+ ['\\(','\\)']
+ ]
+}
+};
+</script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<style>
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+
+body{
+background:#f5f7fb;
+line-height:1.7;
+}
+
+
+/* NAVBAR */
+
+    .navbar{
+
+      background:rgba(15,23,42,0.45);
+
+      backdrop-filter:blur(10px);
+
+      box-shadow:0 4px 18px rgba(0,0,0,.18);
+
+      padding:10px 0;
+
+      transition:.3s;
+
+    }
+
+    .navbar-brand{
+
+      font-size:28px;
+
+      font-weight:700;
+
+      color:white !important;
+
+    }
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+      .navbar-brand{
+        font-size:40px;
+      }
+/* CONTENT */
+
+.notes-container{
+
+max-width:900px;
+
+margin:100px auto 50px;
+
+padding:20px;
+
+}
+
+.notes-title{
+
+background:#e3f2fd;
+
+color:#1565c0;
+
+padding:10px;
+
+border-left:5px solid #1565c0;
+
+border-radius:50px;
+
+font-size:30px;
+
+font-weight:bold;
+margin-top:100px;
+
+margin-bottom:50px;
+
+}
+
+
+
+.qa-box{
+
+background:white;
+
+padding:22px;
+
+margin-bottom:18px;
+
+border-radius:14px;
+
+border-left:6px solid #1565c0;
+
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+transition:.25s;
+
+}
+
+
+.qa-box:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+
+.question{
+
+font-weight:bold;
+
+color:#1b3a57;
+
+margin-bottom:8px;
+
+}
+.question-image{
+    text-align:center;
+    margin:15px 0;
+    overflow-x:auto;
+}
+
+.question-image img{
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:8px;
+}
+
+
+
+.answer{
+
+color:#2c3e50;
+
+text-align:justify;
+
+}
+
+
+
+@media(max-width:768px){
+
+.notes-container{
+
+margin-top:80px;
+
+}
+
+
+}
+.formula{
+    overflow-x:auto;
+    overflow-y:hidden;
+    margin:10px 0;
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<!-- NAVBAR -->
+
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+
+पाल <span>स्टडी सेंटर</span>
+
+</a>
+    <button class="navbar-toggler bg-light"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+</div>
+
+</nav>
+
+
+<!-- NOTES -->
+
+<div class="qa-box">
+  <div class="container">
+ <div class="notes-title">Exercise- 10.3</div>  
+</div>
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.1 An urn contains 5 red and 5 black balls. Find the probability that the second ball is red.
+</div>
+
+<div class="answer">
+
+<p><b>Solution</b></p>
+
+<p class="formula">
+\[
+\text{Let }R_1=\text{First ball is red}
+\]
+</p>
+
+<p class="formula">
+\[
+P(R_1)=\frac{5}{10}=\frac12
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Let }B_1=\text{First ball is black}
+\]
+</p>
+
+<p class="formula">
+\[
+P(B_1)=\frac{5}{10}=\frac12
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Let }R_2=\text{Second ball is red}
+\]
+</p>
+
+<p class="formula">
+\[
+P(R_2|R_1)=\frac{7}{12}
+\]
+</p>
+
+<p class="formula">
+\[
+(5R+5B\rightarrow7R+5B)
+\]
+</p>
+
+<p class="formula">
+\[
+P(R_2|B_1)=\frac{5}{12}
+\]
+</p>
+
+<p class="formula">
+\[
+(5R+5B\rightarrow5R+7B)
+\]
+</p>
+
+<p class="formula">
+\[
+P(R_2)=P(R_1)P(R_2|R_1)+P(B_1)P(R_2|B_1)
+\]
+</p>
+
+<p class="formula">
+\[
+=\left(\frac12\right)\left(\frac7{12}\right)+\left(\frac12\right)\left(\frac5{12}\right)
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{12}{24}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac12
+\]
+</p>
+
+<p class="formula">
+\[
+\therefore \text{Required Probability}=\frac12
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.2 Two bags are given. The first bag contains 4 red and 4 black balls and the second bag contains 2 red and 6 black balls. One bag is selected at random and a red ball is drawn. Find the probability that the first bag was selected.
+</div>
+
+<div class="answer">
+
+<p><b>Solution</b></p>
+
+<p class="formula">
+\[
+\text{Let }E_1=\text{First bag selected}
+\]
+</p>
+
+<p class="formula">
+\[
+P(E_1)=\frac12
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Let }E_2=\text{Second bag selected}
+\]
+</p>
+
+<p class="formula">
+\[
+P(E_2)=\frac12
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Let }R=\text{Red ball drawn}
+\]
+</p>
+
+<p class="formula">
+\[
+P(R|E_1)=\frac48=\frac12
+\]
+</p>
+
+<p class="formula">
+\[
+P(R|E_2)=\frac28=\frac14
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Using Bayes' Theorem}
+\]
+</p>
+
+<p class="formula">
+\[
+P(E_1|R)
+=\frac{P(E_1)P(R|E_1)}
+{P(E_1)P(R|E_1)+P(E_2)P(R|E_2)}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{\left(\frac12\right)\left(\frac12\right)}
+{\left(\frac12\right)\left(\frac12\right)+\left(\frac12\right)\left(\frac14\right)}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{\frac14}{\frac38}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac23
+\]
+</p>
+
+<p class="formula">
+\[
+\therefore \text{Required Probability}=\frac23
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.3 A student is selected at random from a class. The probability that the student is a hosteller is 0.6 and the probability that a hosteller obtains grade A is 0.3. The probability that a day scholar obtains grade A is 0.2. If the selected student has obtained grade A, find the probability that the student is a hosteller.
+</div>
+
+<div class="answer">
+
+<p><b>Solution</b></p>
+
+<p class="formula">
+\[
+\text{Let }H=\text{Hosteller}
+\]
+</p>
+
+<p class="formula">
+\[
+P(H)=0.6
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Let }D=\text{Day Scholar}
+\]
+</p>
+
+<p class="formula">
+\[
+P(D)=0.4
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Let }A=\text{Obtains Grade A}
+\]
+</p>
+
+<p class="formula">
+\[
+P(A|H)=0.3
+\]
+</p>
+
+<p class="formula">
+\[
+P(A|D)=0.2
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Using Bayes' Theorem}
+\]
+</p>
+
+<p class="formula">
+\[
+P(H|A)=
+\frac{P(H)P(A|H)}
+{P(H)P(A|H)+P(D)P(A|D)}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\frac{0.6\times0.3}
+{(0.6\times0.3)+(0.4\times0.2)}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{0.18}{0.26}
+\]
+</p>
+
+<p class="formula">
+\[
+=\frac{9}{13}
+\]
+</p>
+
+<p class="formula">
+\[
+\therefore \text{Required Probability}=\frac{9}{13}
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.4 A student answers a multiple choice question. The probability that he knows the answer is \(\frac34\). If he does not know the answer, he guesses. Assuming that a question has four choices, find the probability that the student knew the answer, given that he answered it correctly.
+</div>
+
+<div class="answer">
+
+<p><b>Solution</b></p>
+
+<p class="formula">
+\[
+\text{Let }K=\text{Student knows the answer}
+\]
+</p>
+
+<p class="formula">
+\[
+P(K)=\frac34
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Let }G=\text{Student guesses}
+\]
+</p>
+
+<p class="formula">
+\[
+P(G)=\frac14
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Let }C=\text{Correct answer}
+\]
+</p>
+
+<p class="formula">
+\[
+P(C|K)=1
+\]
+</p>
+
+<p class="formula">
+\[
+P(C|G)=\frac14
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Using Bayes' Theorem}
+\]
+</p>
+
+<p class="formula">
+\[
+P(K|C)
+=
+\frac{P(K)P(C|K)}
+{P(K)P(C|K)+P(G)P(C|G)}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\frac{\left(\frac34\right)(1)}
+{\left(\frac34\right)(1)+\left(\frac14\right)\left(\frac14\right)}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\frac{\frac34}
+{\frac34+\frac1{16}}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\frac{\frac34}
+{\frac{13}{16}}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\frac34\times\frac{16}{13}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\frac{12}{13}
+\]
+</p>
+
+<p class="formula">
+\[
+\therefore \text{Required Probability}=\frac{12}{13}
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.5 A person has a disease with probability \(0.001\). A diagnostic test detects the disease correctly with probability \(0.99\) and gives a false positive with probability \(0.005\). If the test result is positive, find the probability that the person actually has the disease.
+</div>
+
+<div class="answer">
+
+<p><b>Solution</b></p>
+
+<p class="formula">
+\[
+\text{Let }D=\text{Person has disease}
+\]
+</p>
+
+<p class="formula">
+\[
+P(D)=0.001
+\]
+</p>
+
+<p class="formula">
+\[
+P(D')=0.999
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Let }T=\text{Positive test}
+\]
+</p>
+
+<p class="formula">
+\[
+P(T|D)=0.99
+\]
+</p>
+
+<p class="formula">
+\[
+P(T|D')=0.005
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Using Bayes' Theorem}
+\]
+</p>
+
+<p class="formula">
+\[
+P(D|T)=
+\frac{P(D)P(T|D)}
+{P(D)P(T|D)+P(D')P(T|D')}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\frac{(0.001)(0.99)}
+{(0.001)(0.99)+(0.999)(0.005)}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\frac{0.00099}
+{0.005985}
+\]
+</p>
+
+<p class="formula">
+\[
+\approx0.165
+\]
+</p>
+
+<p class="formula">
+\[
+=16.5\%
+\]
+</p>
+
+<p class="formula">
+\[
+\therefore \text{Required Probability}\approx0.165
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.6 Three coins are chosen at random from a bag containing one two-headed coin, one biased coin (having probability \(\frac34\) of showing head) and one fair coin. One coin is tossed and it shows a head. Find the probability that it was the two-headed coin.
+</div>
+
+<div class="answer">
+
+<p><b>Solution</b></p>
+
+<p class="formula">
+\[
+\text{Let }E_1=\text{Two-headed coin}
+\]
+</p>
+
+<p class="formula">
+\[
+P(E_1)=\frac13
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Let }E_2=\text{Biased coin}
+\]
+</p>
+
+<p class="formula">
+\[
+P(E_2)=\frac13
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Let }E_3=\text{Fair coin}
+\]
+</p>
+
+<p class="formula">
+\[
+P(E_3)=\frac13
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Let }H=\text{Head}
+\]
+</p>
+
+<p class="formula">
+\[
+P(H|E_1)=1
+\]
+</p>
+
+<p class="formula">
+\[
+P(H|E_2)=\frac34
+\]
+</p>
+
+<p class="formula">
+\[
+P(H|E_3)=\frac12
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Using Bayes' Theorem}
+\]
+</p>
+
+<p class="formula">
+\[
+P(E_1|H)
+=
+\frac
+{
+P(E_1)P(H|E_1)
+}
+{
+P(E_1)P(H|E_1)+P(E_2)P(H|E_2)+P(E_3)P(H|E_3)
+}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\frac
+{
+\left(\frac13\right)(1)
+}
+{
+\left(\frac13\right)(1)+
+\left(\frac13\right)\left(\frac34\right)+
+\left(\frac13\right)\left(\frac12\right)
+}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\frac
+{
+\frac13
+}
+{
+\frac13+\frac14+\frac16
+}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\frac
+{
+\frac13
+}
+{
+\frac34
+}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\frac13\times\frac43
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\frac49
+\]
+</p>
+
+<p class="formula">
+\[
+\therefore \text{Required Probability}=\frac49
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.7 A city has 2000 scooters, 4000 cars and 6000 trucks. The probability of an accident involving a scooter, car and truck is \(0.01,\ 0.03\) and \(0.15\) respectively. One of the vehicles met with an accident. Find the probability that it is a scooter.
+</div>
+
+<div class="answer">
+
+<p><b>Solution</b></p>
+
+<p class="formula">
+\[
+\text{Let }S=\text{Scooter}
+\]
+</p>
+
+<p class="formula">
+\[
+P(S)=\dfrac{2000}{12000}=\dfrac{1}{6}
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Let }C=\text{Car}
+\]
+</p>
+
+<p class="formula">
+\[
+P(C)=\dfrac{4000}{12000}=\dfrac{1}{3}
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Let }T=\text{Truck}
+\]
+</p>
+
+<p class="formula">
+\[
+P(T)=\dfrac{6000}{12000}=\dfrac{1}{2}
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Let }A=\text{Accident}
+\]
+</p>
+
+<p class="formula">
+\[
+P(A|S)=0.01
+\]
+</p>
+
+<p class="formula">
+\[
+P(A|C)=0.03
+\]
+</p>
+
+<p class="formula">
+\[
+P(A|T)=0.15
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Using Bayes' Theorem}
+\]
+</p>
+
+<p class="formula">
+\[
+P(S|A)
+=
+\dfrac
+{
+P(S)P(A|S)
+}
+{
+P(S)P(A|S)+P(C)P(A|C)+P(T)P(A|T)
+}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\dfrac
+{
+\left(\dfrac{1}{6}\right)(0.01)
+}
+{
+\left(\dfrac{1}{6}\right)(0.01)+
+\left(\dfrac{1}{3}\right)(0.03)+
+\left(\dfrac{1}{2}\right)(0.15)
+}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\dfrac
+{
+0.001667
+}
+{
+0.086667
+}
+\]
+</p>
+
+<p class="formula">
+\[
+\approx0.0192
+\]
+</p>
+
+<p class="formula">
+\[
+=\dfrac{5}{260}\approx\dfrac{1}{52}
+\]
+</p>
+
+<p class="formula">
+\[
+\therefore \text{Required Probability}\approx0.0192
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.8 A factory has two machines A and B. Machine A produces 60% of the total items and Machine B produces 40%. The percentage of defective items produced by A and B are 2% and 1% respectively. An item selected at random is found to be defective. Find the probability that it was produced by Machine B.
+</div>
+
+<div class="answer">
+
+<p><b>Solution</b></p>
+
+<p class="formula">
+\[
+\text{Let }A=\text{Item produced by Machine A}
+\]
+</p>
+
+<p class="formula">
+\[
+P(A)=0.60
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Let }B=\text{Item produced by Machine B}
+\]
+</p>
+
+<p class="formula">
+\[
+P(B)=0.40
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Let }D=\text{Defective item}
+\]
+</p>
+
+<p class="formula">
+\[
+P(D|A)=0.02
+\]
+</p>
+
+<p class="formula">
+\[
+P(D|B)=0.01
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Using Bayes' Theorem}
+\]
+</p>
+
+<p class="formula">
+\[
+P(B|D)
+=
+\dfrac
+{
+P(B)\,P(D|B)
+}
+{
+P(A)\,P(D|A)+P(B)\,P(D|B)
+}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\dfrac
+{
+(0.40)(0.01)
+}
+{
+(0.60)(0.02)+(0.40)(0.01)
+}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\dfrac
+{
+0.004
+}
+{
+0.016
+}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\dfrac
+{
+1
+}
+{
+4
+}
+\]
+</p>
+
+<p class="formula">
+\[
+\therefore \text{Required Probability}
+=
+\dfrac
+{
+1
+}
+{
+4
+}
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.9 Two groups compete for election. The probability that the first group will form the government is 0.6 and the probability that the second group will form the government is 0.4. If the first group forms the government, the probability of introducing a new product is 0.7. If the second group forms the government, the probability of introducing a new product is 0.3. If a new product is introduced, find the probability that the second group formed the government.
+</div>
+
+<div class="answer">
+
+<p><b>Solution</b></p>
+
+<p class="formula">
+\[
+\text{Let }G_1=\text{First group forms the government}
+\]
+</p>
+
+<p class="formula">
+\[
+P(G_1)=0.6
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Let }G_2=\text{Second group forms the government}
+\]
+</p>
+
+<p class="formula">
+\[
+P(G_2)=0.4
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Let }N=\text{New product is introduced}
+\]
+</p>
+
+<p class="formula">
+\[
+P(N|G_1)=0.7
+\]
+</p>
+
+<p class="formula">
+\[
+P(N|G_2)=0.3
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Using Bayes' Theorem}
+\]
+</p>
+
+<p class="formula">
+\[
+P(G_2|N)
+=
+\frac
+{
+P(G_2)P(N|G_2)
+}
+{
+P(G_1)P(N|G_1)+P(G_2)P(N|G_2)
+}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\frac
+{
+(0.4)(0.3)
+}
+{
+(0.6)(0.7)+(0.4)(0.3)
+}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\frac
+{
+0.12
+}
+{
+0.54
+}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\frac29
+\]
+</p>
+
+<p class="formula">
+\[
+\therefore \text{Required Probability}=\frac29
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.10 A girl throws a die. If the die shows 1, 2, 3 or 4, she tosses one coin. If the die shows 5 or 6, she tosses three coins. If exactly one head is obtained, find the probability that the die showed 1, 2, 3 or 4.
+</div>
+
+<div class="answer">
+
+<p><b>Solution</b></p>
+
+<p class="formula">
+\[
+\text{Let }E_1=\text{Die shows }\{1,2,3,4\}
+\]
+</p>
+
+<p class="formula">
+\[
+P(E_1)=\frac46=\frac23
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Let }E_2=\text{Die shows }\{5,6\}
+\]
+</p>
+
+<p class="formula">
+\[
+P(E_2)=\frac26=\frac13
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Let }H=\text{Exactly one head is obtained}
+\]
+</p>
+
+<p class="formula">
+\[
+P(H|E_1)=\frac12
+\]
+</p>
+
+<p class="formula">
+\[
+P(H|E_2)=\binom31\left(\frac12\right)^3=\frac38
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Using Bayes' Theorem}
+\]
+</p>
+
+<p class="formula">
+\[
+P(E_1|H)
+=
+\frac
+{
+P(E_1)P(H|E_1)
+}
+{
+P(E_1)P(H|E_1)+P(E_2)P(H|E_2)
+}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\frac
+{
+\left(\frac23\right)\left(\frac12\right)
+}
+{
+\left(\frac23\right)\left(\frac12\right)+
+\left(\frac13\right)\left(\frac38\right)
+}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\frac
+{
+\frac13
+}
+{
+\frac13+\frac18
+}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\frac
+{
+\frac13
+}
+{
+\frac{11}{24}
+}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\frac13\times\frac{24}{11}
+=
+\frac{8}{11}
+\]
+</p>
+
+<p class="formula">
+\[
+\therefore \text{Required Probability}=\frac{8}{11}
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.11 A manufacturer has three machine operators A, B and C who produce 50%, 30% and 20% of the total items respectively. The percentages of defective items produced by A, B and C are 1%, 5% and 7% respectively. If an item is selected at random and found to be defective, find the probability that it was produced by operator A.
+</div>
+
+<div class="answer">
+
+<p><b>Solution</b></p>
+
+<p class="formula">
+\[
+\text{Let }A=\text{Item produced by operator A}
+\]
+</p>
+
+<p class="formula">
+\[
+P(A)=0.50
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Let }B=\text{Item produced by operator B}
+\]
+</p>
+
+<p class="formula">
+\[
+P(B)=0.30
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Let }C=\text{Item produced by operator C}
+\]
+</p>
+
+<p class="formula">
+\[
+P(C)=0.20
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Let }D=\text{Defective item}
+\]
+</p>
+
+<p class="formula">
+\[
+P(D|A)=0.01
+\]
+</p>
+
+<p class="formula">
+\[
+P(D|B)=0.05
+\]
+</p>
+
+<p class="formula">
+\[
+P(D|C)=0.07
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Using Bayes' Theorem}
+\]
+</p>
+
+<p class="formula">
+\[
+P(A|D)
+=
+\frac
+{
+P(A)P(D|A)
+}
+{
+P(A)P(D|A)+P(B)P(D|B)+P(C)P(D|C)
+}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\frac
+{
+(0.50)(0.01)
+}
+{
+(0.50)(0.01)+(0.30)(0.05)+(0.20)(0.07)
+}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\frac
+{
+0.005
+}
+{
+0.005+0.015+0.014
+}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\frac
+{
+0.005
+}
+{
+0.034
+}
+=
+\frac{5}{34}
+\]
+</p>
+
+<p class="formula">
+\[
+\therefore \text{Required Probability}=\frac{5}{34}
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.12 One card is lost from a pack of 52 playing cards. From the remaining cards, two cards are drawn and both are found to be diamonds. Find the probability that the lost card was a diamond.
+</div>
+
+<div class="answer">
+
+<p><b>Solution</b></p>
+
+<p class="formula">
+\[
+\text{Let }D=\text{Lost card is a diamond}
+\]
+</p>
+
+<p class="formula">
+\[
+P(D)=\frac{13}{52}=\frac14
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Let }D'=\text{Lost card is not a diamond}
+\]
+</p>
+
+<p class="formula">
+\[
+P(D')=\frac{39}{52}=\frac34
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Let }E=\text{Both drawn cards are diamonds}
+\]
+</p>
+
+<p class="formula">
+\[
+P(E|D)=\frac{\binom{12}{2}}{\binom{51}{2}}
+=\frac{66}{1275}
+\]
+</p>
+
+<p class="formula">
+\[
+P(E|D')=\frac{\binom{13}{2}}{\binom{51}{2}}
+=\frac{78}{1275}
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Using Bayes' Theorem}
+\]
+</p>
+
+<p class="formula">
+\[
+P(D|E)
+=
+\frac
+{
+P(D)P(E|D)
+}
+{
+P(D)P(E|D)+P(D')P(E|D')
+}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\frac
+{
+\left(\frac14\right)\left(\frac{66}{1275}\right)
+}
+{
+\left(\frac14\right)\left(\frac{66}{1275}\right)
++
+\left(\frac34\right)\left(\frac{78}{1275}\right)
+}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\frac{66}{66+234}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\frac{66}{300}
+=
+\frac{11}{50}
+\]
+</p>
+
+<p class="formula">
+\[
+\therefore \text{Required Probability}=\frac{11}{50}
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.13 The probability that A speaks the truth is \(\frac45\). A coin is tossed and A reports that a head has appeared. Find the probability that actually a head appeared.
+</div>
+
+<div class="answer">
+
+<p><b>Solution</b></p>
+
+<p class="formula">
+\[
+\text{Let }H=\text{Head appears}
+\]
+</p>
+
+<p class="formula">
+\[
+P(H)=\frac12
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Let }T=\text{Tail appears}
+\]
+</p>
+
+<p class="formula">
+\[
+P(T)=\frac12
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Let }R=\text{A reports Head}
+\]
+</p>
+
+<p class="formula">
+\[
+P(R|H)=\frac45
+\]
+</p>
+
+<p class="formula">
+\[
+P(R|T)=\frac15
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Using Bayes' Theorem}
+\]
+</p>
+
+<p class="formula">
+\[
+P(H|R)
+=
+\frac
+{
+P(H)P(R|H)
+}
+{
+P(H)P(R|H)+P(T)P(R|T)
+}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\frac
+{
+\left(\frac12\right)\left(\frac45\right)
+}
+{
+\left(\frac12\right)\left(\frac45\right)
++
+\left(\frac12\right)\left(\frac15\right)
+}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\frac{\frac25}{\frac25+\frac1{10}}
+=
+\frac{\frac25}{\frac12}
+\]
+</p>
+
+<p class="formula">
+\[
+=
+\frac45
+\]
+</p>
+
+<p class="formula">
+\[
+\therefore \text{Required Probability}=\frac45
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+Q.14 If \(A \subset B\) and \(P(B)\neq0\), then show that
+\[
+P(A|B)\ge P(A).
+\]
+</div>
+
+<div class="answer">
+
+<p><b>Solution</b></p>
+
+<p class="formula">
+\[
+\text{Given }A\subset B
+\]
+</p>
+
+<p class="formula">
+\[
+A\cap B=A
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Using the definition of conditional probability,}
+\]
+</p>
+
+<p class="formula">
+\[
+P(A|B)
+=
+\frac{P(A\cap B)}{P(B)}
+=
+\frac{P(A)}{P(B)}
+\]
+</p>
+
+<p class="formula">
+\[
+\text{Since }A\subset B,\; P(A)\le P(B)\le1
+\]
+</p>
+
+<p class="formula">
+\[
+\frac1{P(B)}\ge1
+\]
+</p>
+
+<p class="formula">
+\[
+P(A|B)
+=
+P(A)\cdot\frac1{P(B)}
+\ge
+P(A)
+\]
+</p>
+
+<p class="formula">
+\[
+\therefore P(A|B)\ge P(A)
+\]
+</p>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- PROTECTION -->
+
+
+<script>
+
+
+document.addEventListener("contextmenu",
+e=>e.preventDefault());
+
+
+document.addEventListener("selectstart",
+e=>e.preventDefault());
+
+
+document.addEventListener("copy",
+e=>{
+
+e.preventDefault();
+
+alert("Copying content is not allowed");
+
+});
+
+
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>

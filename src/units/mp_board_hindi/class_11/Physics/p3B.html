@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | Notes</title>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<script>
+window.MathJax={
+ tex:{
+ inlineMath:[
+ ['$','$'],
+ ['\\(','\\)']
+ ]
+}
+};
+</script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<style>
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+
+body{
+background:#f5f7fb;
+line-height:1.7;
+}
+
+
+/* NAVBAR */
+
+    .navbar{
+
+      background:rgba(15,23,42,0.45);
+
+      backdrop-filter:blur(10px);
+
+      box-shadow:0 4px 18px rgba(0,0,0,.18);
+
+      padding:10px 0;
+
+      transition:.3s;
+
+    }
+
+    .navbar-brand{
+
+      font-size:28px;
+
+      font-weight:700;
+
+      color:white !important;
+
+    }
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+      .navbar-brand{
+        font-size:40px;
+      }
+/* CONTENT */
+
+.notes-container{
+
+max-width:900px;
+
+margin:100px auto 50px;
+
+padding:20px;
+
+}
+
+.notes-title{
+
+background:#e3f2fd;
+
+color:#1565c0;
+
+padding:10px;
+
+border-left:5px solid #1565c0;
+
+border-radius:50px;
+
+font-size:30px;
+
+font-weight:bold;
+margin-top:100px;
+
+margin-bottom:50px;
+
+}
+
+
+
+.qa-box{
+
+background:white;
+
+padding:22px;
+
+margin-bottom:18px;
+
+border-radius:14px;
+
+border-left:6px solid #1565c0;
+
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+transition:.25s;
+
+}
+
+
+.qa-box:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+
+.question{
+
+font-weight:bold;
+
+color:#1b3a57;
+
+margin-bottom:8px;
+
+}
+.question-image{
+    text-align:center;
+    margin:15px 0;
+    overflow-x:auto;
+}
+
+.question-image img{
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:8px;
+}
+
+
+
+.answer{
+
+color:#2c3e50;
+
+text-align:justify;
+
+}
+
+
+
+@media(max-width:768px){
+
+.notes-container{
+
+margin-top:80px;
+
+}
+
+
+}
+.formula{
+    overflow-x:auto;
+    overflow-y:hidden;
+    margin:10px 0;
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<!-- NAVBAR -->
+
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+
+पाल <span>स्टडी सेंटर</span>
+
+</a>
+    <button class="navbar-toggler bg-light"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+</div>
+
+</nav>
+
+
+
+
+
+<!-- NOTES -->
+
+<div class="qa-box">
+  <div class="container">
+ <div class="notes-title">📘 Unit 3(B)वृत्तीय गति </div>  
+</div>
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - वृत्तीय गति किसे कहते हैं?
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+जब कोई वस्तु किसी निश्चित बिंदु या अक्ष के चारों ओर वृत्ताकार पथ पर गति करती है, तो उसकी गति को <b>वृत्तीय गति (Circular Motion)</b> कहते हैं।
+</p>
+
+<p>
+उदाहरण : डोरी से बंधे पत्थर को वृत्ताकार पथ में घुमाना, पंखे के पंखों की गति तथा पृथ्वी के चारों ओर चन्द्रमा की गति।
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - अभिकेंद्री बल क्या है? इसके लिए सूत्र स्थापित कीजिए।
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+वृत्तीय पथ पर गतिशील किसी वस्तु को उस पथ पर बनाए रखने के लिए वृत्त के केंद्र की ओर कार्य करने वाले बल को <b>अभिकेंद्री बल (Centripetal Force)</b> कहते हैं।
+</p>
+
+<p><b>सूत्र की स्थापना :</b></p>
+
+<p>
+माना \(m\) द्रव्यमान की कोई वस्तु \(r\) त्रिज्या वाले वृत्तीय पथ पर \(v\) वेग से गति कर रही है।
+</p>
+
+<p>
+वृत्तीय गति में उत्पन्न अभिकेंद्री त्वरण,
+</p>
+
+<p class="formula">
+\[
+a=\frac{v^2}{r}
+\]
+</p>
+
+<p>
+न्यूटन के द्वितीय गति नियम के अनुसार,अभिकेंद्री बल का सूत्र,
+</p>
+<p class="formula">
+\[
+F=ma
+\]
+</p>
+<p class="formula">
+\[
+F=m\left(\frac{v^2}{r}\right)
+\]
+</p>
+
+<p class="formula">
+\[
+F=\frac{mv^2}{r}
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - अभिकेंद्री बल के कुछ उदाहरण दीजिए।
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+अभिकेंद्री बल के प्रमुख उदाहरण निम्नलिखित हैं—
+</p>
+
+<ol>
+
+<li>
+डोरी से बंधे पत्थर को वृत्ताकार पथ में घुमाने पर डोरी में उत्पन्न तनाव अभिकेंद्री बल प्रदान करता है।
+</li>
+
+<li>
+पृथ्वी के चारों ओर चन्द्रमा की परिक्रमा के लिए पृथ्वी का गुरुत्वाकर्षण बल अभिकेंद्री बल का कार्य करता है।
+</li>
+
+<li>
+सूर्य के चारों ओर ग्रहों की गति के लिए सूर्य का गुरुत्वाकर्षण बल अभिकेंद्री बल प्रदान करता है।
+</li>
+
+<li>
+मोड़ पर चलती हुई कार के लिए सड़क तथा टायरों के बीच का घर्षण बल अभिकेंद्री बल का कार्य करता है।
+</li>
+
+<li>
+इलेक्ट्रॉन का नाभिक के चारों ओर घूमना विद्युत आकर्षण बल के कारण संभव होता है, जो अभिकेंद्री बल का कार्य करता है।
+</li>
+
+</ol>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - एक साइकिल चालक घुमावदार रास्ते पर चलते समय अंदर की ओर क्यों झुकता है?
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+जब साइकिल चालक घुमावदार रास्ते पर चलता है, तब उसे वृत्तीय गति के लिए आवश्यक <b>अभिकेंद्री बल</b> की आवश्यकता होती है।
+</p>
+
+<p>
+यदि चालक सीधा बैठा रहे, तो साइकिल के पलटने की संभावना रहती है। इसलिए वह अंदर की ओर झुक जाता है, जिससे अभिलंब अभिक्रिया तथा घर्षण बल का परिणामी आवश्यक अभिकेंद्री बल प्रदान करता है।
+</p>
+
+<p>
+अतः घुमावदार रास्ते पर संतुलन बनाए रखने तथा आवश्यक अभिकेंद्री बल प्राप्त करने के लिए साइकिल चालक अंदर की ओर झुकता है।
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - वह कोण ज्ञात कीजिए जिससे एक साइकिल चालक वक्र पर चलते समय ऊर्ध्वाधर से मुड़ता है।
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+माना साइकिल चालक तथा उसकी साइकिल का कुल द्रव्यमान <b>\(m\)</b> है और वह <b>\(r\)</b> त्रिज्या वाले वृत्तीय पथ पर <b>\(v\)</b> वेग से गति कर रहा है। <b>O</b> वृत्तीय पथ का केंद्र है।
+</p>
+
+<p>
+साइकिल पर निम्नलिखित बल कार्य करते हैं—
+</p>
+
+<ol>
+<li>कुल भार = \(mg\) &nbsp; [ लंबवत् नीचे की ओर ]</li>
+
+<li>अभिलंब अभिक्रिया = \(R\) &nbsp; [ ऊर्ध्वाधर से \(\theta\) कोण पर ]</li>
+
+<li>अभिकेंद्री बल = \(\dfrac{mv^2}{r}\) &nbsp; [ मुड़ाव के केंद्र की ओर ]</li>
+
+<li>घर्षण बल = \(f\) &nbsp; [ मुड़ाव के केंद्र की ओर ]</li>
+</ol>
+
+<p>
+अभिलंब अभिक्रिया \(R\) को दो अवयवों में विभाजित करने पर—
+</p>
+
+<p><b>ऊर्ध्वाधर अवयव :</b></p>
+
+<p class="formula">
+\[
+R\cos\theta = mg
+\qquad \cdots (1)
+\]
+</p>
+
+<p><b>क्षैतिज अवयव :</b></p>
+
+<p class="formula">
+\[
+R\sin\theta = \frac{mv^2}{r}
+\qquad \cdots (2)
+\]
+</p>
+
+<p>
+समीकरण (2) को समीकरण (1) से भाग देने पर,
+</p>
+
+<p class="formula">
+\[
+\frac{R\sin\theta}{R\cos\theta}
+=
+\frac{\frac{mv^2}{r}}{mg}
+\]
+</p>
+
+<p class="formula">
+\[
+\tan\theta
+=
+\frac{v^2}{rg}
+\]
+</p>
+
+<p>
+अतः,
+</p>
+
+<p class="formula">
+\[
+\boxed{\theta=\tan^{-1}\left(\frac{v^2}{rg}\right)}
+\]
+</p>
+
+<p>
+यही वह कोण है जिससे साइकिल चालक वक्र पर चलते समय ऊर्ध्वाधर से मुड़ता है।
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - वक्रीय सड़क के बैंकिंग से क्या तात्पर्य है?
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+जब किसी वक्र (Curve) पर सड़क के बाहरी किनारे को भीतरी किनारे की अपेक्षा कुछ ऊँचा बना दिया जाता है, तो इस व्यवस्था को <b>सड़क का बैंकिंग (Banking of Road)</b> कहते हैं।
+</p>
+
+<p>
+सड़क को बैंकित करने का उद्देश्य वाहन को आवश्यक अभिकेंद्री बल प्रदान करना तथा वाहन को फिसलने या पलटने से बचाना होता है।
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - बैंकिंग कोण किसे कहते हैं?
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+बैंकित (झुकी हुई) सड़क के तल तथा क्षैतिज तल के बीच बनने वाले कोण को <b>बैंकिंग कोण (Banking Angle)</b> कहते हैं। इसे सामान्यतः <b>\(\theta\)</b> द्वारा प्रदर्शित किया जाता है।
+</p>
+
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - बैंकिंग कोण निर्धारित करने के लिए सूत्र स्थापित कीजिए।<br>
+अथवा<br>
+त्रिज्या \(r\) वाले वृत्ताकार मोड़ पर सड़क का झुकाव (Banking Angle) कितना होना चाहिए ताकि उस पर चलने वाली कार फिसले नहीं?
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+माना कार का द्रव्यमान <b>\(m\)</b> तथा चाल <b>\(v\)</b> है। सड़क का झुकाव कोण <b>\(\theta\)</b> है, जिससे मोड़ पर कार अपने आप अंदर की ओर झुक जाती है।
+</p>
+
+<p>
+इस स्थिति में कार पर निम्नलिखित बल कार्य करते हैं—
+</p>
+
+<ol>
+<li>कुल भार = \(mg\) &nbsp; [ ऊर्ध्वाधर नीचे की ओर ]</li>
+
+<li>अभिलंब अभिक्रिया = \(R\) &nbsp; [ ऊर्ध्वाधर से \(\theta\) कोण पर ]</li>
+
+<li>अभिकेंद्री बल = \(\dfrac{mv^2}{r}\) &nbsp; [ मोड़ के केंद्र की ओर ]</li>
+</ol>
+
+<p>
+अभिलंब अभिक्रिया \(R\) को दो घटकों में विभाजित करते हैं—
+</p>
+
+<p><b>ऊर्ध्वाधर घटक :</b></p>
+
+<p class="formula">
+\[
+R\cos\theta
+\]
+</p>
+
+<p><b>क्षैतिज घटक :</b></p>
+
+<p class="formula">
+\[
+R\sin\theta
+\]
+</p>
+
+<p>
+ऊर्ध्वाधर संतुलन की अवस्था में,
+</p>
+
+<p class="formula">
+\[
+R\cos\theta = mg
+\qquad \cdots (1)
+\]
+</p>
+
+<p>
+पुनः, क्षैतिज संतुलन की अवस्था में,
+</p>
+
+<p class="formula">
+\[
+R\sin\theta = \frac{mv^2}{r}
+\qquad \cdots (2)
+\]
+</p>
+
+<p>
+समीकरण (2) को समीकरण (1) से भाग देने पर,
+</p>
+
+<p class="formula">
+\[
+\frac{R\sin\theta}{R\cos\theta}
+=
+\frac{\frac{mv^2}{r}}{mg}
+\]
+</p>
+
+<p class="formula">
+\[
+\tan\theta
+=
+\frac{v^2}{rg}
+\]
+</p>
+
+<p>
+अतः,
+</p>
+
+<p class="formula">
+\[
+\boxed{\theta=\tan^{-1}\left(\frac{v^2}{rg}\right)}
+\]
+</p>
+
+<p>
+यही सड़क का आवश्यक बैंकिंग कोण है।
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - एक कार को समतल वक्र पथ पर गति करने के लिए आवश्यक अभिकेंद्री बल कैसे प्राप्त होता है?
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+जब कोई कार समतल वक्र पथ पर चलती है, तब उसे वृत्तीय गति बनाए रखने के लिए अभिकेंद्री बल की आवश्यकता होती है।
+</p>
+
+<p>
+समतल सड़क पर यह अभिकेंद्री बल कार के टायरों तथा सड़क के बीच उत्पन्न <b>स्थैतिक घर्षण बल</b> द्वारा प्रदान किया जाता है।
+</p>
+
+<p>
+यह घर्षण बल सदैव वक्र पथ के केंद्र की ओर कार्य करता है और कार को वृत्तीय पथ पर बनाए रखता है।
+</p>
+
+<p>
+अतः समतल वक्र पथ पर गति करती हुई कार को आवश्यक अभिकेंद्री बल टायरों और सड़क के बीच के स्थैतिक घर्षण बल से प्राप्त होता है।
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - वह अधिकतम गति ज्ञात कीजिए जिससे एक कार समतल वक्र पथ पर सुरक्षित रूप से चल सकती है।
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+माना \(m\) द्रव्यमान की एक कार \(r\) त्रिज्या वाली समतल वृत्ताकार सड़क पर \(v\) वेग से चल रही है।
+</p>
+
+<p>
+कुल अभिलंब अभिक्रिया \(R\), कार के भार को संतुलित करती है, अतः
+</p>
+
+<p class="formula">
+\[
+R=mg
+\]
+</p>
+
+<p>
+यदि कुल घर्षण बल \(f\) मोड़ के केंद्र की ओर कार्य करता है, तो घर्षण के नियम से
+</p>
+
+<p class="formula">
+\[
+f=\mu R
+\]
+</p>
+
+<p>
+जहाँ \(\mu\) टायरों तथा सड़क के बीच घर्षण गुणांक है।
+</p>
+
+<p>
+अतः,
+</p>
+
+<p class="formula">
+\[
+f=\mu mg
+\]
+</p>
+
+<p>
+कार के सड़क पर सुरक्षित रूप से बने रहने के लिए अधिकतम घर्षण बल, आवश्यक अभिकेंद्री बल के बराबर या उससे अधिक होना चाहिए।
+</p>
+
+<p class="formula">
+\[
+\frac{mv^2}{r}=f
+\]
+</p>
+
+<p>
+अतः,
+</p>
+
+<p class="formula">
+\[
+\frac{mv^2}{r}=\mu mg
+\]
+</p>
+
+<p>
+दोनों पक्षों में \(m\) को निरस्त करने पर,
+</p>
+
+<p class="formula">
+\[
+\frac{v^2}{r}=\mu g
+\]
+</p>
+
+<p class="formula">
+\[
+v^2=\mu rg
+\]
+</p>
+
+<p>
+अतः कार की अधिकतम सुरक्षित गति,
+</p>
+
+<p class="formula">
+\[
+\boxed{v_{\max}=\sqrt{\mu rg}}
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - कार को ढलान वाले वक्र पथ पर सुरक्षित रूप से गति करने के लिए आवश्यक वेग के लिए सूत्र निगमित कीजिए।
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+माना कार का द्रव्यमान \(m\) है तथा वह \(r\) त्रिज्या वाले वृत्ताकार पथ पर \(v\) वेग से गति कर रही है। माना \(O\) वृत्ताकार पथ का केंद्र है।
+</p>
+
+<p>
+कार पर निम्नलिखित बल कार्य करते हैं—
+</p>
+
+<ol>
+<li>कुल भार = \(mg\) &nbsp; [ ऊर्ध्वाधर नीचे की ओर ]</li>
+
+<li>अभिलंब अभिक्रिया = \(R\) &nbsp; [ ऊर्ध्वाधर से \(\theta\) कोण पर ]</li>
+
+<li>अभिकेंद्री बल = \(\dfrac{mv^2}{r}\) &nbsp; [ मोड़ के केंद्र की ओर ]</li>
+
+<li>घर्षण बल = \(f\) &nbsp; [ आनत तल के अनुदिश ]</li>
+</ol>
+
+<p>
+अभिलंब अभिक्रिया \(R\) को दो घटकों में विभाजित करने पर—
+</p>
+
+<p class="formula">
+\[
+\text{ऊर्ध्वाधर घटक} = R\cos\theta
+\]
+</p>
+
+<p class="formula">
+\[
+\text{क्षैतिज घटक} = R\sin\theta
+\]
+</p>
+
+<p>
+घर्षण बल \(f\) को दो घटकों में विभाजित करने पर—
+</p>
+
+<p class="formula">
+\[
+\text{ऊर्ध्वाधर घटक} = f\sin\theta
+\]
+</p>
+
+<p class="formula">
+\[
+\text{क्षैतिज घटक} = f\cos\theta
+\]
+</p>
+
+<p>
+ऊर्ध्वाधर संतुलन अवस्था में,
+</p>
+
+<p class="formula">
+\[
+mg+f\sin\theta=R\cos\theta
+\]
+</p>
+
+<p class="formula">
+\[
+mg=R\cos\theta-f\sin\theta
+\]
+</p>
+<p class="formula">
+\[
+mg=R\cos\theta-\mu R\sin\theta
+\qquad \cdots (1)
+\]
+</p>
+
+<p>
+क्षैतिज संतुलन अवस्था में, \(R\sin\theta\) तथा \(f\cos\theta\) मिलकर आवश्यक अभिकेंद्री बल प्रदान करते हैं।
+</p>
+
+<p class="formula">
+\[
+\frac{mv^2}{r}=R\sin\theta+f\cos\theta\]
+</p>
+<p class="formula">
+\[
+\frac{mv^2}{r}=R\sin\theta+\mu R\cos\theta
+\qquad \cdots (2)
+\]
+</p>
+
+<p>
+दूसरे समीकरण को पहले समीकरण से भाग देने पर,
+</p>
+
+<p class="formula">
+\[
+\frac{\dfrac{mv^2}{r}}{mg}
+=
+\frac{R\sin\theta+\mu R\cos\theta}
+{R\cos\theta-\mu R\sin\theta}
+\]
+</p>
+
+<p class="formula">
+\[
+\frac{v^2}{rg}
+=
+\frac{\tan\theta+\mu}
+{1-\mu\tan\theta}
+\]
+</p>
+
+<p class="formula">
+\[
+v^2=
+rg\left(
+\frac{\tan\theta+\mu}
+{1-\mu\tan\theta}
+\right)
+\]
+</p>
+
+<p class="formula">
+\[
+\boxed{
+v=
+\sqrt{
+rg\left(
+\frac{\tan\theta+\mu}
+{1-\mu\tan\theta}
+\right)
+}
+}
+\]
+</p>
+
+<p>
+यही ढलान वाले वक्र पथ पर कार की सुरक्षित गति का व्यंजक है।
+</p>
+
+</div>
+
+</div>
+
+
+
+
+<!-- NOTES -->
+
+
+
+
+
+
+
+<!-- PROTECTION -->
+
+
+<script>
+
+
+document.addEventListener("contextmenu",
+e=>e.preventDefault());
+
+
+document.addEventListener("selectstart",
+e=>e.preventDefault());
+
+
+document.addEventListener("copy",
+e=>{
+
+e.preventDefault();
+
+alert("Copying content is not allowed");
+
+});
+
+
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
+

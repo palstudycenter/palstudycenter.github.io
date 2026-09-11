@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | Notes</title>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<script>
+window.MathJax={
+ tex:{
+ inlineMath:[
+ ['$','$'],
+ ['\\(','\\)']
+ ]
+}
+};
+</script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<style>
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+
+body{
+background:#f5f7fb;
+line-height:1.7;
+}
+
+
+/* NAVBAR */
+
+    .navbar{
+
+      background:rgba(15,23,42,0.45);
+
+      backdrop-filter:blur(10px);
+
+      box-shadow:0 4px 18px rgba(0,0,0,.18);
+
+      padding:10px 0;
+
+      transition:.3s;
+
+    }
+
+    .navbar-brand{
+
+      font-size:28px;
+
+      font-weight:700;
+
+      color:white !important;
+
+    }
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+      .navbar-brand{
+        font-size:40px;
+      }
+/* CONTENT */
+
+.notes-container{
+
+max-width:900px;
+
+margin:100px auto 50px;
+
+padding:20px;
+
+}
+
+.notes-title{
+
+background:#e3f2fd;
+
+color:#1565c0;
+
+padding:10px;
+
+border-left:5px solid #1565c0;
+
+border-radius:50px;
+
+font-size:30px;
+
+font-weight:bold;
+margin-top:100px;
+
+margin-bottom:50px;
+
+}
+
+
+
+.qa-box{
+
+background:white;
+
+padding:22px;
+
+margin-bottom:18px;
+
+border-radius:14px;
+
+border-left:6px solid #1565c0;
+
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+transition:.25s;
+
+}
+
+
+.qa-box:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+
+.question{
+
+font-weight:bold;
+
+color:#1b3a57;
+
+margin-bottom:8px;
+
+}
+.question-image{
+    text-align:center;
+    margin:15px 0;
+    overflow-x:auto;
+}
+
+.question-image img{
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:8px;
+}
+
+
+
+.answer{
+
+color:#2c3e50;
+
+text-align:justify;
+
+}
+
+
+
+@media(max-width:768px){
+
+.notes-container{
+
+margin-top:80px;
+
+}
+
+
+}
+.formula{
+    overflow-x:auto;
+    overflow-y:hidden;
+    margin:10px 0;
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<!-- NAVBAR -->
+
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+
+पाल <span>स्टडी सेंटर</span>
+
+</a>
+    <button class="navbar-toggler bg-light"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+</div>
+
+</nav>
+
+
+
+
+
+<!-- NOTES -->
+
+<div class="qa-box">
+  <div class="container">
+ <div class="notes-title">📘 Unit 2(B)-सदिश</div>  
+</div>
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - अदिश तथा सदिश राशियाँ किसे कहते हैं?
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+<b>अदिश राशि (Scalar Quantity)</b> – वह भौतिक राशि जिसे व्यक्त करने के लिए केवल परिमाण (Magnitude) की आवश्यकता होती है तथा दिशा की आवश्यकता नहीं होती, अदिश राशि कहलाती है।
+</p>
+
+<p>
+उदाहरण – द्रव्यमान, समय, दूरी, चाल, कार्य, ऊर्जा, तापमान आदि।
+</p>
+
+<p>
+<b>सदिश राशि (Vector Quantity)</b> – वह भौतिक राशि जिसे पूर्ण रूप से व्यक्त करने के लिए परिमाण के साथ-साथ दिशा की भी आवश्यकता होती है, सदिश राशि कहलाती है।
+</p>
+
+<p>
+उदाहरण – विस्थापन, वेग, त्वरण, बल, संवेग आदि।
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - अदिश तथा सदिश राशियों में अंतर लिखिए।
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<table class="table table-bordered text-center">
+
+<tr>
+<th>अदिश राशि</th>
+<th>सदिश राशि</th>
+</tr>
+
+<tr>
+<td>इसे व्यक्त करने के लिए केवल परिमाण की आवश्यकता होती है।</td>
+<td>इसे व्यक्त करने के लिए परिमाण तथा दिशा दोनों की आवश्यकता होती है।</td>
+</tr>
+
+<tr>
+<td>इनका योग या अंतर साधारण बीजगणित के नियमों से किया जाता है।</td>
+<td>इनका योग या अंतर सदिश बीजगणित के नियमों से किया जाता है।</td>
+</tr>
+
+<tr>
+<td>इनकी दिशा नहीं होती।</td>
+<td>इनकी निश्चित दिशा होती है।</td>
+</tr>
+
+<tr>
+<td>उदाहरण – द्रव्यमान, समय, दूरी, चाल।</td>
+<td>उदाहरण – विस्थापन, वेग, त्वरण, बल।</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - सदिश कितने प्रकार के होते हैं?
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+सदिश (Vector) मुख्यतः निम्न प्रकार के होते हैं—
+</p>
+
+<ol>
+
+<li>
+<b>शून्य सदिश (Zero Vector)</b> – वह सदिश जिसका परिमाण शून्य हो, शून्य सदिश कहलाता है।
+</li>
+
+<li>
+<b>एकांक सदिश (Unit Vector)</b> – वह सदिश जिसका परिमाण एक हो, एकांक सदिश कहलाता है।
+</li>
+
+<li>
+<b>समान सदिश (Equal Vectors)</b> – वे सदिश जिनका परिमाण तथा दिशा दोनों समान हों।
+</li>
+
+<li>
+<b>ऋणात्मक सदिश (Negative Vectors)</b> – वे सदिश जिनका परिमाण समान हो परन्तु दिशाएँ विपरीत हों।
+</li>
+
+<li>
+<b>समांतर सदिश (Like Parallel Vectors)</b> – वे सदिश जो समान दिशा में समानांतर हों।
+</li>
+
+<li>
+<b>विपरीत समांतर सदिश (Unlike Parallel Vectors)</b> – वे सदिश जो विपरीत दिशा में समानांतर हों।
+</li>
+
+<li>
+<b>स्थिति सदिश (Position Vector)</b> – किसी बिंदु की स्थिति बताने वाला सदिश।
+</li>
+
+</ol>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - सदिश के परिमाण से क्या अभिप्राय है?
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+किसी सदिश राशि की संख्यात्मक मात्रा (Numerical Value) को उसके <b>परिमाण (Magnitude)</b> कहते हैं।
+</p>
+
+<p>
+यदि किसी सदिश को \(\vec{A}\) द्वारा प्रदर्शित किया जाए, तो उसका परिमाण \(|\vec{A}|\) अथवा \(A\) द्वारा व्यक्त किया जाता है।
+</p>
+
+<p>
+त्रिविमीय निर्देशांक पद्धति में यदि
+</p>
+
+<p class="formula">
+\[
+\vec{A}=A_x\hat{i}+A_y\hat{j}+A_z\hat{k}
+\]
+</p>
+
+<p>
+तो सदिश का परिमाण होगा—
+</p>
+
+<p class="formula">
+\[
+|\vec{A}|=\sqrt{A_x^2+A_y^2+A_z^2}
+\]
+</p>
+
+<p>
+परिमाण एक <b>अदिश राशि</b> होता है तथा सदैव धनात्मक या शून्य होता है।
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - दो सदिशों को जोड़ने के कौन-कौन से नियम हैं?
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<ol>
+
+<li>त्रिभुज नियम (Triangle Law of Vector Addition)</li>
+
+<li>समांतर चतुर्भुज नियम (Parallelogram Law of Vector Addition)</li>
+
+<li>बहुभुज नियम (Polygon Law of Vector Addition)</li>
+
+</ol>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - दो सदिशों को जोड़ने का त्रिभुज नियम लिखिए।
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+<b>सदिश योग का त्रिभुज नियम (Triangle Law of Vector Addition)</b> के अनुसार, यदि दो सदिशों को परिमाण तथा दिशा के अनुसार किसी त्रिभुज की दो भुजाओं द्वारा क्रम से निरूपित किया जाए, तो उनका परिणामी सदिश उस त्रिभुज की तीसरी भुजा द्वारा प्रथम सदिश के प्रारम्भ बिंदु से द्वितीय सदिश के अंतिम बिंदु तक निरूपित होता है।
+</p>
+
+<p>
+माना दो सदिश \(\vec{A}\) तथा \(\vec{B}\) हैं। यदि \(\vec{B}\) का प्रारम्भ बिंदु \(\vec{A}\) के अंतिम बिंदु पर रखा जाए, तो उनका परिणामी सदिश \(\vec{R}\) होगा।
+</p>
+
+<p>
+अर्थात,
+</p>
+
+<p class="formula">
+\[
+\vec{R}=\vec{A}+\vec{B}
+\]
+</p>
+
+<p>
+जहाँ \(\vec{R}\), दोनों सदिशों का परिणामी सदिश है।
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - सिद्ध कीजिए कि दो सदिशों का योग क्रम-विनिमय नियम (Commutative Law) का पालन करता है।
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+क्रम-विनिमय नियम के अनुसार, दो सदिशों को किसी भी क्रम में जोड़ने पर उनका परिणामी समान प्राप्त होता है।
+</p>
+
+<p>
+माना दो सदिश \(\vec{A}\) तथा \(\vec{B}\) हैं।
+</p>
+
+<p>
+समांतर चतुर्भुज नियम के अनुसार, \(\vec{A}\) तथा \(\vec{B}\) को समांतर चतुर्भुज \(OACB\) की आसन्न भुजाओं द्वारा निरूपित किया गया है।
+</p>
+
+<p>
+तब विकर्ण \(OC\), दोनों सदिशों का परिणामी प्रदर्शित करता है।
+</p>
+
+<p>
+अतः,
+</p>
+
+<p class="formula">
+\[
+\vec{R}=\vec{A}+\vec{B}
+\]
+</p>
+
+<p>
+यदि सदिशों का क्रम बदल दिया जाए, अर्थात पहले \(\vec{B}\) तथा फिर \(\vec{A}\) लिया जाए, तब भी उसी समांतर चतुर्भुज का वही विकर्ण \(OC\) परिणामी देगा।
+</p>
+
+<p>
+अर्थात,
+</p>
+
+<p class="formula">
+\[
+\vec{R}=\vec{B}+\vec{A}
+\]
+</p>
+
+<p>
+अतः,
+</p>
+
+<p class="formula">
+\[
+\boxed{\vec{A}+\vec{B}=\vec{B}+\vec{A}}
+\]
+</p>
+
+<p>
+इस प्रकार सिद्ध हुआ कि दो सदिशों का योग <b>क्रम-विनिमय नियम (Commutative Law)</b> का पालन करता है।
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - दो सदिशों में कौन-कौन से गुणन होते हैं?
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+दो सदिशों के बीच मुख्यतः निम्नलिखित प्रकार के गुणन होते हैं—
+</p>
+
+<ol>
+
+<li>
+<b>अदिश गुणन (Scalar Product / Dot Product)</b>
+</li>
+
+<li>
+<b>सदिश गुणन (Vector Product / Cross Product)</b>
+</li>
+
+</ol>
+
+<p>
+अदिश गुणन का परिणाम एक <b>अदिश राशि</b> होता है, जबकि सदिश गुणन का परिणाम एक <b>सदिश राशि</b> होता है।
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - दो सदिशों के अदिश गुणन को लिखिए।
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+दो सदिशों \(\vec{A}\) तथा \(\vec{B}\) का अदिश गुणन (Scalar Product या Dot Product) उनके परिमाणों तथा उनके बीच के कोण \(\theta\) के कोज्या के गुणनफल के बराबर होता है।
+</p>
+
+<p>
+इसे निम्न प्रकार व्यक्त किया जाता है—
+</p>
+
+<p class="formula">
+\[
+\vec{A}\cdot\vec{B}=AB\cos\theta
+\]
+</p>
+
+<p>
+जहाँ,
+</p>
+
+<p>
+\(A\) = सदिश \(\vec{A}\) का परिमाण
+</p>
+
+<p>
+\(B\) = सदिश \(\vec{B}\) का परिमाण
+</p>
+
+<p>
+\(\theta\) = दोनों सदिशों के बीच का कोण
+</p>
+
+<p>
+अदिश गुणन का परिणाम सदैव एक <b>अदिश राशि</b> होता है।
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - दो त्रिविमीय सदिशों का अदिश गुणन लिखिए।
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+माना दो त्रिविमीय सदिश
+</p>
+
+<p class="formula">
+\[
+\vec{A}=A_x\hat{i}+A_y\hat{j}+A_z\hat{k}
+\]
+</p>
+
+<p>
+तथा
+</p>
+
+<p class="formula">
+\[
+\vec{B}=B_x\hat{i}+B_y\hat{j}+B_z\hat{k}
+\]
+</p>
+
+<p>
+हैं।
+</p>
+
+<p>
+इनका अदिश गुणन (Scalar Product) होगा—
+</p>
+
+<p class="formula">
+\[
+\vec{A}\cdot\vec{B}
+=
+(A_x\hat{i}+A_y\hat{j}+A_z\hat{k})
+\cdot
+(B_x\hat{i}+B_y\hat{j}+B_z\hat{k})
+\]
+</p>
+
+<p>
+अदिश गुणन के नियमों का प्रयोग करने पर,
+</p>
+
+<p class="formula">
+\[
+\vec{A}\cdot\vec{B}
+=
+A_xB_x+A_yB_y+A_zB_z
+\]
+</p>
+
+<p>
+अतः दो त्रिविमीय सदिशों के अदिश गुणन का व्यंजक है—
+</p>
+
+<p class="formula">
+\[
+\boxed{
+\vec{A}\cdot\vec{B}
+=
+A_xB_x+A_yB_y+A_zB_z
+}
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - दो सदिशों के अदिश गुणन के गुण लिखिए।
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+दो सदिशों के अदिश गुणन (Scalar Product) के प्रमुख गुण निम्नलिखित हैं—
+</p>
+
+<ol>
+
+<li>
+<b>क्रम-विनिमेय गुण (Commutative Property)</b>
+<p class="formula">
+\[
+\vec{A}\cdot\vec{B}=\vec{B}\cdot\vec{A}
+\]
+</p>
+</li>
+
+<li>
+<b>वितरण गुण (Distributive Property)</b>
+<p class="formula">
+\[
+\vec{A}\cdot(\vec{B}+\vec{C})
+=
+\vec{A}\cdot\vec{B}
++
+\vec{A}\cdot\vec{C}
+\]
+</p>
+</li>
+
+<li>
+<b>स्वयं के साथ अदिश गुणन</b>
+<p class="formula">
+\[
+\vec{A}\cdot\vec{A}=A^2
+\]
+</p>
+</li>
+
+<li>
+<b>लंबवत् सदिशों के लिए</b>
+<p class="formula">
+\[
+\theta=90^\circ
+\]
+</p>
+
+<p class="formula">
+\[
+\vec{A}\cdot\vec{B}=0
+\]
+</p>
+</li>
+
+<li>
+<b>एकांक सदिशों के अदिश गुणन</b>
+<p class="formula">
+\[
+\hat{i}\cdot\hat{i}
+=
+\hat{j}\cdot\hat{j}
+=
+\hat{k}\cdot\hat{k}
+=
+1
+\]
+</p>
+
+<p class="formula">
+\[
+\hat{i}\cdot\hat{j}
+=
+\hat{j}\cdot\hat{k}
+=
+\hat{k}\cdot\hat{i}
+=
+0
+\]
+</p>
+</li>
+
+</ol>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - दो सदिशों का सदिश गुणन लिखिए।
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+दो सदिशों \(\vec{A}\) तथा \(\vec{B}\) का सदिश गुणन (Vector Product या Cross Product) एक ऐसा सदिश होता है जिसका परिमाण दोनों सदिशों के परिमाणों तथा उनके बीच के कोण \(\theta\) की ज्या के गुणनफल के बराबर होता है तथा जिसकी दिशा दोनों सदिशों के तल पर लंबवत् दाहिने हाथ के नियम (Right Hand Rule) द्वारा निर्धारित की जाती है।
+</p>
+
+<p>
+इसे निम्न प्रकार व्यक्त किया जाता है—
+</p>
+
+<p class="formula">
+\[
+\vec{A}\times\vec{B}
+=
+AB\sin\theta \,\hat{n}
+\]
+</p>
+
+<p>
+जहाँ,
+</p>
+
+<p>
+\(A\) = सदिश \(\vec{A}\) का परिमाण
+</p>
+
+<p>
+\(B\) = सदिश \(\vec{B}\) का परिमाण
+</p>
+
+<p>
+\(\theta\) = दोनों सदिशों के बीच का कोण
+</p>
+
+<p>
+\(\hat{n}\) = दोनों सदिशों के तल पर लंबवत् एकांक सदिश
+</p>
+
+<p>
+अतः,
+</p>
+
+<p class="formula">
+\[
+\boxed{\vec{A}\times\vec{B}=AB\sin\theta \,\hat{n}}
+\]
+</p>
+
+<p>
+सदिश गुणन का परिणाम सदैव एक <b>सदिश राशि</b> होता है।
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - दो त्रिविमीय सदिशों का सदिश गुणन लिखिए।
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+माना दो त्रिविमीय सदिश
+</p>
+
+<p class="formula">
+\[
+\vec{A}=A_x\hat{i}+A_y\hat{j}+A_z\hat{k}
+\]
+</p>
+
+<p>
+तथा
+</p>
+
+<p class="formula">
+\[
+\vec{B}=B_x\hat{i}+B_y\hat{j}+B_z\hat{k}
+\]
+</p>
+
+<p>
+हैं।
+</p>
+
+<p>
+इनका सदिश गुणन (Vector Product) निम्न प्रकार व्यक्त किया जाता है—
+</p>
+
+<p class="formula">
+\[
+\vec{A}\times\vec{B}
+=
+\begin{vmatrix}
+\hat{i} & \hat{j} & \hat{k}\\
+A_x & A_y & A_z\\
+B_x & B_y & B_z
+\end{vmatrix}
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - दो सदिशों के सदिश गुणन के गुण लिखिए।
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+दो सदिशों के सदिश गुणन (Vector Product) के प्रमुख गुण निम्नलिखित हैं—
+</p>
+
+<ol>
+
+<li>
+<b>क्रम-विनिमेय नहीं होता (Non-Commutative)</b>
+<p class="formula">
+\[
+\vec{A}\times\vec{B}
+=
+-\left(\vec{B}\times\vec{A}\right)
+\]
+</p>
+</li>
+
+<li>
+<b>वितरण गुण (Distributive Property)</b>
+<p class="formula">
+\[
+\vec{A}\times(\vec{B}+\vec{C})
+=
+\vec{A}\times\vec{B}
++
+\vec{A}\times\vec{C}
+\]
+</p>
+</li>
+
+<li>
+<b>स्वयं के साथ सदिश गुणन शून्य होता है</b>
+<p class="formula">
+\[
+\vec{A}\times\vec{A}=0
+\]
+</p>
+</li>
+
+<li>
+<b>समानांतर सदिशों के लिए सदिश गुणन शून्य होता है</b>
+<p class="formula">
+\[
+\theta=0^\circ \; \text{या} \; 180^\circ
+\]
+</p>
+
+<p class="formula">
+\[
+\vec{A}\times\vec{B}=0
+\]
+</p>
+</li>
+
+<li>
+<b>एकांक सदिशों के सदिश गुणन</b>
+
+<p class="formula">
+\[
+\hat{i}\times\hat{i}
+=
+\hat{j}\times\hat{j}
+=
+\hat{k}\times\hat{k}
+=
+0
+\]
+</p>
+
+<p class="formula">
+\[
+\hat{i}\times\hat{j}
+=
+\hat{k}
+\]
+</p>
+
+<p class="formula">
+\[
+\hat{j}\times\hat{k}
+=
+\hat{i}
+\]
+</p>
+
+<p class="formula">
+\[
+\hat{k}\times\hat{i}
+=
+\hat{j}
+\]
+</p>
+</li>
+</div>
+
+</div>
+
+
+<!-- NOTES -->
+
+
+
+
+
+
+
+<!-- PROTECTION -->
+
+
+<script>
+
+
+document.addEventListener("contextmenu",
+e=>e.preventDefault());
+
+
+document.addEventListener("selectstart",
+e=>e.preventDefault());
+
+
+document.addEventListener("copy",
+e=>{
+
+e.preventDefault();
+
+alert("Copying content is not allowed");
+
+});
+
+
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
+
