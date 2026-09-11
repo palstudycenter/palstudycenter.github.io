@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PAL STUDY CENTER | The Enemy</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            background: linear-gradient(135deg, #eef2f3, #dfe9f3);
+            font-family: "Poppins", "Noto Sans Devanagari", Arial, sans-serif;
+            color: #222;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: rgba(20, 20, 20, 0.95);
+            box-shadow: 0 3px 12px rgba(0,0,0,0.25);
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 22px;
+            letter-spacing: 0.5px;
+        }
+
+        .navbar-brand span {
+            color: #ffc107;
+        }
+
+        /* Main Container */
+        .notes-container {
+            max-width: 1050px;
+            margin: 35px auto;
+            padding: 20px;
+        }
+
+        /* Title */
+        .notes-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .notes-title h1 {
+            font-weight: 800;
+            color: #212529;
+            margin-bottom: 8px;
+        }
+
+        .notes-title p {
+            color: #555;
+            font-size: 16px;
+        }
+
+        /* Question Box */
+        .qa-box {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 22px;
+            margin-bottom: 22px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            border-left: 5px solid #0d6efd;
+        }
+
+        .question {
+            font-size: 19px;
+            font-weight: 700;
+            color: #0d47a1;
+            margin-bottom: 12px;
+        }
+
+        .answer {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .answer strong {
+            color: #198754;
+        }
+
+        .hindi-answer {
+            border-top: 1px dashed #ccc;
+            padding-top: 10px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 40px 0 25px;
+            font-weight: 800;
+            color: #212529;
+        }
+
+        /* Extract */
+        .extract-title {
+            background: #212529;
+            color: white;
+            padding: 14px 18px;
+            border-radius: 12px;
+            margin-bottom: 18px;
+            font-weight: 700;
+        }
+
+        .extract {
+            background: #fff;
+            padding: 22px;
+            border-radius: 15px;
+            box-shadow: 0 5px 16px rgba(0,0,0,0.07);
+            margin-bottom: 25px;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        /* MCQ */
+        .mcq-box {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 20px;
+            margin-bottom: 18px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+        }
+
+        .mcq-question {
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .option {
+            padding: 5px 0;
+        }
+
+        .correct {
+            color: #198754;
+            font-weight: 700;
+            margin-top: 8px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px 10px;
+            margin-top: 40px;
+            background: #212529;
+            color: white;
+        }
+
+        footer span {
+            color: #ffc107;
+            font-weight: 700;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+
+            .notes-container {
+                margin: 20px auto;
+                padding: 12px;
+            }
+
+            .notes-title h1 {
+                font-size: 27px;
+            }
+
+            .question {
+                font-size: 17px;
+            }
+
+            .answer {
+                font-size: 15px;
+            }
+
+            .qa-box {
+                padding: 17px;
+            }
+
+            .extract {
+                padding: 17px;
+                font-size: 15px;
+            }
+        }
+
+        /* Selection Protection */
+        body {
+            user-select: none;
+        }
+
+        input, textarea {
+            user-select: text;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <i class="bi bi-book-half"></i>
+            पाल <span>स्टडी सेंटर</span>
+        </a>
+    </div>
+</nav>
+
+
+<div class="notes-container">
+
+    <!-- Title -->
+    <div class="notes-title">
+        <h1>Lesson 4 – The Enemy</h1>
+        <p><strong>Class 12 English | MP Board</strong></p>
+        <p>Written by <strong>Pearl S. Buck</strong></p>
+    </div>
+
+
+    <!-- Introduction -->
+    <h2 class="section-title">📖 परिचय</h2>
+
+
+    <!-- Q1 -->
+    <div class="qa-box">
+
+        <div class="question">
+            Q1. Who was Dr. Sadao? Where was his house?
+        </div>
+
+        <div class="answer">
+            <strong>Ans (English):</strong>
+            Dr. Sadao Hoki was a famous Japanese surgeon and scientist.
+            He had studied surgery and medicine in America. His house was on
+            the Japanese coast, on rocks above a narrow beach.
+        </div>
+
+        <div class="answer hindi-answer">
+            <strong>उत्तर (Hindi):</strong>
+            डॉ. सदाओ होकी एक प्रसिद्ध जापानी सर्जन और वैज्ञानिक थे।
+            उन्होंने अमेरिका में सर्जरी और चिकित्सा की पढ़ाई की थी।
+            उनका घर जापान के समुद्र तट पर एक संकरे समुद्र तट से ऊपर चट्टानों पर बना था।
+        </div>
+
+    </div>
+
+
+    <!-- Q2 -->
+    <div class="qa-box">
+
+        <div class="question">
+            Q2. Why was Dr. Sadao not sent with the Japan army?
+        </div>
+
+        <div class="answer">
+            <strong>Ans (English):</strong>
+            Dr. Sadao was not sent with the troops because he was perfecting
+            a discovery that would make wounds completely clean. Moreover,
+            the old General might need an operation, so Sadao was kept in Japan.
+        </div>
+
+        <div class="answer hindi-answer">
+            <strong>उत्तर (Hindi):</strong>
+            डॉ. सदाओ को सेना के साथ नहीं भेजा गया क्योंकि वे ऐसी खोज को पूरा कर रहे थे
+            जिससे घावों को पूरी तरह साफ किया जा सके। इसके अलावा, वृद्ध जनरल को
+            ऑपरेशन की आवश्यकता पड़ सकती थी, इसलिए सदाओ को जापान में रखा गया।
+        </div>
+
+    </div>
+
+
+    <!-- Q3 -->
+    <div class="qa-box">
+
+        <div class="question">
+            Q3. In what condition did Dr. Sadao and Hana find the enemy soldier?
+        </div>
+
+        <div class="answer">
+            <strong>Ans (English):</strong>
+            Dr. Sadao and Hana found the wounded American prisoner lying near
+            the shore. He was badly wounded and weak, and he had been shot.
+        </div>
+
+        <div class="answer hindi-answer">
+            <strong>उत्तर (Hindi):</strong>
+            डॉ. सदाओ और हाना ने घायल अमेरिकी सैनिक को समुद्र तट के पास पड़ा हुआ पाया।
+            वह बहुत घायल और कमजोर था तथा उसे गोली लगी थी।
+        </div>
+
+    </div>
+
+
+    <!-- Q4 -->
+    <div class="qa-box">
+
+        <div class="question">
+            Q4. Will Hana help the wounded man and wash him herself?
+        </div>
+
+        <div class="answer">
+            <strong>Ans (English):</strong>
+            Yes, Hana helped the wounded man. Although he was an enemy,
+            she showed humanity and washed him herself when the servants refused to do so.
+        </div>
+
+        <div class="answer hindi-answer">
+            <strong>उत्तर (Hindi):</strong>
+            हाँ, हाना ने घायल व्यक्ति की मदद की। यद्यपि वह एक दुश्मन सैनिक था,
+            फिर भी हाना ने मानवता दिखाते हुए उसकी मदद की और नौकरों के मना करने पर
+            स्वयं उसे साफ किया।
+        </div>
+
+    </div>
+
+
+    <!-- Q5 -->
+    <div class="qa-box">
+
+        <div class="question">
+            Q5. What did Dr. Sadao and his wife do with the wounded man?
+        </div>
+
+        <div class="answer">
+            <strong>Ans (English):</strong>
+            Dr. Sadao and Hana decided to save the wounded man's life.
+            Sadao operated on him and removed the bullet, while Hana helped
+            him and cared for him.
+        </div>
+
+        <div class="answer hindi-answer">
+            <strong>उत्तर (Hindi):</strong>
+            डॉ. सदाओ और हाना ने घायल व्यक्ति की जान बचाने का निर्णय लिया।
+            सदाओ ने उसका ऑपरेशन करके गोली निकाली, जबकि हाना ने उसकी देखभाल की।
+        </div>
+
+    </div>
+
+
+    <!-- Q6 -->
+    <div class="qa-box">
+
+        <div class="question">
+            Q6. Why did Dr. Sadao's servants leave his service?
+        </div>
+
+        <div class="answer">
+            <strong>Ans (English):</strong>
+            The servants left because they considered the wounded American
+            to be an enemy of Japan. They did not approve of Sadao and Hana
+            treating and sheltering him.
+        </div>
+
+        <div class="answer hindi-answer">
+            <strong>उत्तर (Hindi):</strong>
+            नौकरों ने इसलिए नौकरी छोड़ दी क्योंकि वे घायल अमेरिकी को जापान का
+            दुश्मन मानते थे। उन्हें सदाओ और हाना द्वारा उसकी चिकित्सा करने और
+            उसे घर में रखने की बात पसंद नहीं थी।
+        </div>
+
+    </div>
+
+
+    <!-- Q7 -->
+    <div class="qa-box">
+
+        <div class="question">
+            Q7. What will Dr. Sadao do to get rid of the man?
+        </div>
+
+        <div class="answer">
+            <strong>Ans (English):</strong>
+            Dr. Sadao decided to help the prisoner escape from Japan.
+            He planned to put him on a boat and guide him towards a nearby island
+            from where he could escape safely.
+        </div>
+
+        <div class="answer hindi-answer">
+            <strong>उत्तर (Hindi):</strong>
+            डॉ. सदाओ ने कैदी को जापान से भागने में मदद करने का निर्णय लिया।
+            उन्होंने उसे नाव में बैठाकर एक निकटवर्ती द्वीप की ओर भेजने की योजना बनाई,
+            जहाँ से वह सुरक्षित रूप से भाग सकता था।
+        </div>
+
+    </div>
+
+
+    <!-- Q8 -->
+    <div class="qa-box">
+
+        <div class="question">
+            Q8. Will Dr. Sadao be arrested on the charge of harbouring an enemy?
+        </div>
+
+        <div class="answer">
+            <strong>Ans (English):</strong>
+            No, Dr. Sadao was not arrested. Although he had sheltered an enemy
+            soldier, the General trusted him and needed his medical services.
+            The prisoner was eventually helped to escape.
+        </div>
+
+        <div class="answer hindi-answer">
+            <strong>उत्तर (Hindi):</strong>
+            नहीं, डॉ. सदाओ को गिरफ्तार नहीं किया गया। यद्यपि उन्होंने एक दुश्मन
+            सैनिक को शरण दी थी, लेकिन जनरल को उन पर विश्वास था और उनकी चिकित्सा
+            सेवाओं की आवश्यकता थी। अंततः कैदी को भागने में मदद की गई।
+        </div>
+
+    </div>
+
+
+    <!-- Q9 -->
+    <div class="qa-box">
+
+        <div class="question">
+            Q9. How did Dr. Sadao help the prisoner escape?
+        </div>
+
+        <div class="answer">
+            <strong>Ans (English):</strong>
+            Dr. Sadao gave the prisoner a boat, food and other necessary things.
+            He instructed him to escape towards a nearby island and wait for
+            a Korean fishing boat. Later, Sadao realized that the prisoner had escaped.
+        </div>
+
+        <div class="answer hindi-answer">
+            <strong>उत्तर (Hindi):</strong>
+            डॉ. सदाओ ने कैदी को नाव, भोजन और आवश्यक सामान दिया।
+            उन्होंने उसे पास के एक द्वीप की ओर जाने और कोरियाई मछली पकड़ने वाली
+            नाव की प्रतीक्षा करने को कहा। बाद में सदाओ को पता चला कि कैदी भाग चुका था।
+        </div>
+
+    </div>
+
+
+    <!-- Extra Important -->
+    <h2 class="section-title">⭐ Important Extra Questions</h2>
+
+
+    <div class="qa-box">
+
+        <div class="question">
+            Q10. What conflict did Dr. Sadao face in the story?
+        </div>
+
+        <div class="answer">
+            <strong>Ans (English):</strong>
+            Dr. Sadao faced a conflict between his duty as a Japanese citizen
+            and his duty as a doctor. As a patriot, he considered the man an enemy,
+            but as a doctor, he could not allow a wounded person to die.
+        </div>
+
+        <div class="answer hindi-answer">
+            <strong>उत्तर (Hindi):</strong>
+            डॉ. सदाओ को जापानी नागरिक के कर्तव्य और डॉक्टर के कर्तव्य के बीच
+            संघर्ष का सामना करना पड़ा। एक देशभक्त के रूप में वह उस व्यक्ति को
+            दुश्मन मानते थे, लेकिन डॉक्टर होने के कारण वे एक घायल व्यक्ति को
+            मरने नहीं दे सकते थे।
+        </div>
+
+    </div>
+
+
+    <div class="qa-box">
+
+        <div class="question">
+            Q11. What message does the story “The Enemy” give?
+        </div>
+
+        <div class="answer">
+            <strong>Ans (English):</strong>
+            The story gives the message that humanity is above hatred and war.
+            A doctor’s first duty is to save a human life, irrespective of
+            nationality or enemy status.
+        </div>
+
+        <div class="answer hindi-answer">
+            <strong>उत्तर (Hindi):</strong>
+            कहानी यह संदेश देती है कि मानवता घृणा और युद्ध से ऊपर है।
+            डॉक्टर का पहला कर्तव्य मानव जीवन को बचाना है, चाहे व्यक्ति किसी भी
+            देश का हो या दुश्मन ही क्यों न हो।
+        </div>
+
+    </div>
+
+
+    <!-- Extract A -->
+    <h2 class="section-title">📝 Extract Based Questions – A</h2>
+
+    <div class="extract-title">
+        Extract A
+    </div>
+
+    <div class="extract">
+        Dr. Sadao Hoki's house was built on a spot of the Japanese coast where
+        as a little boy he had often played. The low, square stone house was set
+        upon rocks well above a narrow beach that was outlined with bent pines.
+        As a boy Sadao had climbed the pines, supporting himself on his bare feet,
+        as he had seen men do in the South Seas when they climbed for coconuts.
+    </div>
+
+
+    <!-- A1 -->
+    <div class="mcq-box">
+
+        <div class="mcq-question">
+            1. Dr. Sadao Hoki's house was built:
+        </div>
+
+        <div class="option">(a) In plains</div>
+        <div class="option">(b) Near a coast</div>
+        <div class="option">(c) At the top of a hill</div>
+        <div class="option">(d) In the forest</div>
+
+        <div class="correct">
+            ✔ Correct Answer: (b) Near a coast
+        </div>
+
+    </div>
+
+
+    <!-- A2 -->
+    <div class="mcq-box">
+
+        <div class="mcq-question">
+            2. Which trees outlined Dr. Sadao Hoki's house?
+        </div>
+
+        <div class="option">(a) Pine</div>
+        <div class="option">(b) Coconut</div>
+        <div class="option">(c) Apple</div>
+        <div class="option">(d) Guava</div>
+
+        <div class="correct">
+            ✔ Correct Answer: (a) Pine
+        </div>
+
+    </div>
+
+
+    <!-- A3 -->
+    <div class="mcq-box">
+
+        <div class="mcq-question">
+            3. The antonym of the word 'narrow' is:
+        </div>
+
+        <div class="option">(a) Tight</div>
+        <div class="option">(b) Heavy</div>
+        <div class="option">(c) Broad</div>
+        <div class="option">(d) Sweet</div>
+
+        <div class="correct">
+            ✔ Correct Answer: (c) Broad
+        </div>
+
+    </div>
+
+
+    <!-- A4 -->
+    <div class="mcq-box">
+
+        <div class="mcq-question">
+            4. This extract has been taken from the lesson:
+        </div>
+
+        <div class="option">(a) The Enemy</div>
+        <div class="option">(b) The Third Level</div>
+        <div class="option">(c) Memories of Childhood</div>
+        <div class="option">(d) The Tiger King</div>
+
+        <div class="correct">
+            ✔ Correct Answer: (a) The Enemy
+        </div>
+
+    </div>
+
+
+    <!-- Extract B -->
+    <h2 class="section-title">📝 Extract Based Questions – B</h2>
+
+    <div class="extract-title">
+        Extract B
+    </div>
+
+    <div class="extract">
+        Sadao knew that his education was his father's chief concern. For this
+        reason he had been sent at twenty-two to America to learn all that could
+        be learned of surgery and medicine. He had come back at thirty, and before
+        his father died he had seen Sadao become famous not only as a surgeon but
+        as a scientist. Because he was perfecting a discovery which would render
+        wounds entirely clean, he had not been sent abroad with the troops.
+        Also, he knew, there was some slight danger that the old General might
+        need an operation for a condition for which he was now being treated
+        medically, and for this possibility Sadao was being kept in Japan.
+    </div>
+
+
+    <!-- B1 -->
+    <div class="mcq-box">
+
+        <div class="mcq-question">
+            1. What was the chief concern of Dr. Sadao's father?
+        </div>
+
+        <div class="option">(a) Dr. Sadao's education</div>
+        <div class="option">(b) Dr. Sadao's treatment</div>
+        <div class="option">(c) Dr. Sadao's marriage</div>
+        <div class="option">(d) Dr. Sadao's children</div>
+
+        <div class="correct">
+            ✔ Correct Answer: (a) Dr. Sadao's education
+        </div>
+
+    </div>
+
+
+    <!-- B2 -->
+    <div class="mcq-box">
+
+        <div class="mcq-question">
+            2. At what age did Dr. Sadao go to America?
+        </div>
+
+        <div class="option">(a) Thirty</div>
+        <div class="option">(b) Twenty-two</div>
+        <div class="option">(c) Twenty</div>
+        <div class="option">(d) Thirty-two</div>
+
+        <div class="correct">
+            ✔ Correct Answer: (b) Twenty-two
+        </div>
+
+    </div>
+
+
+    <!-- B3 -->
+    <div class="mcq-box">
+
+        <div class="mcq-question">
+            3. Why was Dr. Sadao sent to America?
+        </div>
+
+        <div class="option">(a) To learn surgery and medicine</div>
+        <div class="option">(b) To learn scientific activities</div>
+        <div class="option">(c) To learn about wounds</div>
+        <div class="option">(d) For further studies</div>
+
+        <div class="correct">
+            ✔ Correct Answer: (a) To learn surgery and medicine
+        </div>
+
+    </div>
+
+
+    <!-- B4 -->
+    <div class="mcq-box">
+
+        <div class="mcq-question">
+            4. Find the word from the extract which is opposite in meaning to
+            'fraction'.
+        </div>
+
+        <div class="option">(a) Army</div>
+        <div class="option">(b) Unit</div>
+        <div class="option">(c) Troop</div>
+        <div class="option">(d) Group</div>
+
+        <div class="correct">
+            ✔ Correct Answer: (d) Group
+        </div>
+
+    </div>
+
+
+    <!-- Important MCQs -->
+    <h2 class="section-title">⭐ Important MCQs</h2>
+
+
+    <div class="mcq-box">
+
+        <div class="mcq-question">
+            1. Who wrote “The Enemy”?
+        </div>
+
+        <div class="option">(a) Jack Finney</div>
+        <div class="option">(b) Pearl S. Buck</div>
+        <div class="option">(c) Kalki</div>
+        <div class="option">(d) Tishani Doshi</div>
+
+        <div class="correct">
+            ✔ Correct Answer: (b) Pearl S. Buck
+        </div>
+
+    </div>
+
+
+    <div class="mcq-box">
+
+        <div class="mcq-question">
+            2. What was Dr. Sadao's profession?
+        </div>
+
+        <div class="option">(a) Teacher</div>
+        <div class="option">(b) Soldier</div>
+        <div class="option">(c) Surgeon and scientist</div>
+        <div class="option">(d) Businessman</div>
+
+        <div class="correct">
+            ✔ Correct Answer: (c) Surgeon and scientist
+        </div>
+
+    </div>
+
+
+    <div class="mcq-box">
+
+        <div class="mcq-question">
+            3. What was the nationality of the wounded soldier?
+        </div>
+
+        <div class="option">(a) Japanese</div>
+        <div class="

@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PAL STUDY CENTER | On the Face of It</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            background: linear-gradient(135deg, #eef2f3, #dfe9f3);
+            font-family: "Poppins", "Noto Sans Devanagari", Arial, sans-serif;
+            color: #222;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: rgba(20, 20, 20, 0.95);
+            box-shadow: 0 3px 12px rgba(0,0,0,0.25);
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 22px;
+            letter-spacing: 0.5px;
+        }
+
+        .navbar-brand span {
+            color: #ffc107;
+        }
+
+        /* Main Container */
+        .notes-container {
+            max-width: 1050px;
+            margin: 35px auto;
+            padding: 20px;
+        }
+
+        /* Title */
+        .notes-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .notes-title h1 {
+            font-weight: 800;
+            color: #212529;
+            margin-bottom: 8px;
+        }
+
+        .notes-title p {
+            color: #555;
+            font-size: 16px;
+        }
+
+        /* Question Box */
+        .qa-box {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 22px;
+            margin-bottom: 22px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            border-left: 5px solid #0d6efd;
+        }
+
+        .question {
+            font-size: 19px;
+            font-weight: 700;
+            color: #0d47a1;
+            margin-bottom: 12px;
+        }
+
+        .answer {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .answer strong {
+            color: #198754;
+        }
+
+        .hindi-answer {
+            border-top: 1px dashed #ccc;
+            padding-top: 10px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 40px 0 25px;
+            font-weight: 800;
+            color: #212529;
+        }
+
+        /* Extract */
+        .extract-title {
+            background: #212529;
+            color: white;
+            padding: 14px 18px;
+            border-radius: 12px;
+            margin-bottom: 18px;
+            font-weight: 700;
+        }
+
+        .extract {
+            background: #fff;
+            padding: 22px;
+            border-radius: 15px;
+            box-shadow: 0 5px 16px rgba(0,0,0,0.07);
+            margin-bottom: 25px;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        /* MCQ */
+        .mcq-box {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 20px;
+            margin-bottom: 18px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+        }
+
+        .mcq-question {
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .option {
+            padding: 5px 0;
+        }
+
+        .correct {
+            color: #198754;
+            font-weight: 700;
+            margin-top: 8px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px 10px;
+            margin-top: 40px;
+            background: #212529;
+            color: white;
+        }
+
+        footer span {
+            color: #ffc107;
+            font-weight: 700;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+
+            .notes-container {
+                margin: 20px auto;
+                padding: 12px;
+            }
+
+            .notes-title h1 {
+                font-size: 27px;
+            }
+
+            .question {
+                font-size: 17px;
+            }
+
+            .answer {
+                font-size: 15px;
+            }
+
+            .qa-box {
+                padding: 17px;
+            }
+
+            .extract {
+                padding: 17px;
+                font-size: 15px;
+            }
+        }
+
+        /* Selection Protection */
+        body {
+            user-select: none;
+        }
+
+        input, textarea {
+            user-select: text;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <i class="bi bi-book-half"></i>
+            पाल <span>स्टडी सेंटर</span>
+        </a>
+    </div>
+</nav>
+
+
+<div class="notes-container">
+
+    <!-- Title -->
+    <div class="notes-title">
+        <h1>Lesson 5 – On the Face of It</h1>
+        <p><strong>Class 12 English | MP Board</strong></p>
+        <p>Written by <strong>Susan Hill</strong></p>
+    </div>
+
+
+    <!-- Introduction -->
+    <h2 class="section-title">📖 परिचय</h2>
+
+
+    <!-- Q1 -->
+    <div class="qa-box">
+
+        <div class="question">
+            Q1. Who is Mr. Lamb? How does Derry get into his garden?
+        </div>
+
+        <div class="answer">
+            <strong>Ans (English):</strong>
+            Mr. Lamb is an old man who has a tin leg and lives alone in a large garden.
+            He is friendly, positive and open-minded. Derry gets into his garden
+            through the open gate.
+        </div>
+
+        <div class="answer hindi-answer">
+            <strong>उत्तर (Hindi):</strong>
+            मिस्टर लैम्ब एक वृद्ध व्यक्ति हैं जिनका एक पैर टिन का है और वे
+            एक बड़े बगीचे में अकेले रहते हैं। वे मिलनसार, सकारात्मक और
+            खुले विचारों वाले हैं। डेरी खुले दरवाजे से उनके बगीचे में प्रवेश करता है।
+        </div>
+
+    </div>
+
+
+    <!-- Q2 -->
+    <div class="qa-box">
+
+        <div class="question">
+            Q2. Why does Mr. Lamb leave his garden open?
+        </div>
+
+        <div class="answer">
+            <strong>Ans (English):</strong>
+            Mr. Lamb leaves his garden gate open because he does not want to
+            shut people out. He welcomes everyone and believes that people
+            should be free to come and go.
+        </div>
+
+        <div class="answer hindi-answer">
+            <strong>उत्तर (Hindi):</strong>
+            मिस्टर लैम्ब अपने बगीचे का दरवाजा खुला रखते हैं क्योंकि वे लोगों को
+            बाहर नहीं रखना चाहते। वे सभी का स्वागत करते हैं और मानते हैं कि
+            लोगों को स्वतंत्र रूप से आना-जाना चाहिए।
+        </div>
+
+    </div>
+
+
+    <!-- Q3 -->
+    <div class="qa-box">
+
+        <div class="question">
+            Q3. Why did Derry not like to mix up with people?
+        </div>
+
+        <div class="answer">
+            <strong>Ans (English):</strong>
+            Derry did not like to mix with people because half of his face had
+            been burnt by acid. He believed that people were afraid of him
+            and felt sorry for him. Their reactions made him withdrawn and unhappy.
+        </div>
+
+        <div class="answer hindi-answer">
+            <strong>उत्तर (Hindi):</strong>
+            डेरी लोगों से घुलना-मिलना पसंद नहीं करता था क्योंकि उसके चेहरे का
+            आधा भाग तेजाब से जल गया था। उसे लगता था कि लोग उससे डरते हैं
+            और उस पर दया करते हैं। लोगों की प्रतिक्रियाओं ने उसे अंतर्मुखी और दुखी बना दिया था।
+        </div>
+
+    </div>
+
+
+    <!-- Q4 -->
+    <div class="qa-box">
+
+        <div class="question">
+            Q4. What is it that draws Derry towards Mr. Lamb inspite of himself?
+        </div>
+
+        <div class="answer">
+            <strong>Ans (English):</strong>
+            Derry is attracted towards Mr. Lamb because of his positive attitude,
+            friendly nature and encouraging words. Mr. Lamb does not pity him
+            or judge him by his appearance.
+        </div>
+
+        <div class="answer hindi-answer">
+            <strong>उत्तर (Hindi):</strong>
+            डेरी मिस्टर लैम्ब की ओर उनके सकारात्मक दृष्टिकोण, मिलनसार स्वभाव
+            और उत्साहवर्धक बातों के कारण आकर्षित होता है। मिस्टर लैम्ब उस पर
+            दया नहीं करते और न ही उसके रूप के आधार पर उसका मूल्यांकन करते हैं।
+        </div>
+
+    </div>
+
+
+    <!-- Q5 -->
+    <div class="qa-box">
+
+        <div class="question">
+            Q5. Do you think all this will change Derry's attitude towards Mr. Lamb?
+        </div>
+
+        <div class="answer">
+            <strong>Ans (English):</strong>
+            Yes, Derry's attitude towards Mr. Lamb changes gradually.
+            Mr. Lamb gives him confidence and teaches him to look at life
+            positively. Derry begins to overcome his fear and isolation.
+        </div>
+
+        <div class="answer hindi-answer">
+            <strong>उत्तर (Hindi):</strong>
+            हाँ, इन सब बातों से डेरी का मिस्टर लैम्ब के प्रति दृष्टिकोण धीरे-धीरे बदलता है।
+            मिस्टर लैम्ब उसे आत्मविश्वास देते हैं और जीवन को सकारात्मक रूप से देखना सिखाते हैं।
+            डेरी अपने डर और अकेलेपन से बाहर आने लगता है।
+        </div>
+
+    </div>
+
+
+    <!-- Q6 -->
+    <div class="qa-box">
+
+        <div class="question">
+            Q6. Why did Mr. Lamb take the example of a flower and a weed?
+        </div>
+
+        <div class="answer">
+            <strong>Ans (English):</strong>
+            Mr. Lamb used the example of a flower and a weed to show that
+            everything in nature has its own value. He wanted Derry to understand
+            that people should not be judged only by their appearance.
+        </div>
+
+        <div class="answer hindi-answer">
+            <strong>उत्तर (Hindi):</strong>
+            मिस्टर लैम्ब ने फूल और खरपतवार का उदाहरण यह बताने के लिए दिया कि
+            प्रकृति की हर चीज का अपना महत्व है। वे डेरी को समझाना चाहते थे कि
+            लोगों का मूल्यांकन केवल उनके बाहरी रूप के आधार पर नहीं करना चाहिए।
+        </div>
+
+    </div>
+
+
+    <!-- Q7 -->
+    <div class="qa-box">
+
+        <div class="question">
+            Q7. Write the character sketch of Derry.
+        </div>
+
+        <div class="answer">
+            <strong>Ans (English):</strong>
+            Derry is a sensitive and lonely boy. Half of his face has been burnt
+            by acid, which makes him conscious of his appearance. He avoids people
+            because he thinks they pity or fear him. However, he is intelligent,
+            curious and capable of change. Mr. Lamb's positive attitude gives him
+            confidence and inspires him to face life more positively.
+        </div>
+
+        <div class="answer hindi-answer">
+            <strong>उत्तर (Hindi):</strong>
+            डेरी एक संवेदनशील और अकेला लड़का है। उसके चेहरे का आधा भाग तेजाब से
+            जल गया है, जिसके कारण वह अपने रूप को लेकर चिंतित रहता है। वह लोगों
+            से दूर रहता है क्योंकि उसे लगता है कि वे उस पर दया करते हैं या उससे डरते हैं।
+            फिर भी वह बुद्धिमान, जिज्ञासु और परिवर्तन के योग्य है। मिस्टर लैम्ब का
+            सकारात्मक दृष्टिकोण उसे आत्मविश्वास देता है और जीवन का सामना
+            सकारात्मक रूप से करने के लिए प्रेरित करता है।
+        </div>
+
+    </div>
+
+
+    <!-- Q8 -->
+    <div class="qa-box">
+
+        <div class="question">
+            Q8. Write the character sketch of Mr. Lamb.
+        </div>
+
+        <div class="answer">
+            <strong>Ans (English):</strong>
+            Mr. Lamb is an optimistic, friendly and kind-hearted old man.
+            He has a tin leg but does not allow his physical condition to control
+            his life. He keeps his garden gate open and welcomes everyone.
+            He teaches Derry to accept life, overcome fear and look at the world
+            with a positive attitude.
+        </div>
+
+        <div class="answer hindi-answer">
+            <strong>उत्तर (Hindi):</strong>
+            मिस्टर लैम्ब एक आशावादी, मिलनसार और दयालु वृद्ध व्यक्ति हैं।
+            उनका एक पैर टिन का है, लेकिन वे अपनी शारीरिक स्थिति को अपने जीवन पर
+            हावी नहीं होने देते। वे अपने बगीचे का दरवाजा खुला रखते हैं और सभी का
+            स्वागत करते हैं। वे डेरी को जीवन को स्वीकार करना, डर पर काबू पाना और
+            दुनिया को सकारात्मक दृष्टिकोण से देखना सिखाते हैं।
+        </div>
+
+    </div>
+
+
+    <!-- Extract A -->
+    <h2 class="section-title">📝 Extract Based Questions – A</h2>
+
+    <div class="extract-title">
+        Extract A
+    </div>
+
+    <div class="extract">
+        “You think...... 'Here's a boy. You look at me.... and then you see my face
+        and you think. "That's bad. That's terrible thing. That's the ugliest thing
+        I ever saw." You think, 'Poor boy. But I'm not. Not poor. Underneath, you are
+        afraid. Anybody would be. I am. When I look in the mirror, and see it.
+        I'm afraid of me.”
+    </div>
+
+
+    <!-- A1 -->
+    <div class="mcq-box">
+
+        <div class="mcq-question">
+            1. This extract has been taken from:
+        </div>
+
+        <div class="option">(a) The Third Level</div>
+        <div class="option">(b) The Tiger King</div>
+        <div class="option">(c) On the Face of It</div>
+        <div class="option">(d) The Enemy</div>
+
+        <div class="correct">
+            ✔ Correct Answer: (c) On the Face of It
+        </div>
+
+    </div>
+
+
+    <!-- A2 -->
+    <div class="mcq-box">
+
+        <div class="mcq-question">
+            2. Who is the speaker?
+        </div>
+
+        <div class="option">(a) Herek</div>
+        <div class="option">(b) Susan</div>
+        <div class="option">(c) Mr. Lamb</div>
+        <div class="option">(d) Derry</div>
+
+        <div class="correct">
+            ✔ Correct Answer: (d) Derry
+        </div>
+
+    </div>
+
+
+    <!-- A3 -->
+    <div class="mcq-box">
+
+        <div class="mcq-question">
+            3. Derry was _____ years old.
+        </div>
+
+        <div class="option">(a) 13</div>
+        <div class="option">(b) 14</div>
+        <div class="option">(c) 12</div>
+        <div class="option">(d) 10</div>
+
+        <div class="correct">
+            ✔ Correct Answer: (b) 14
+        </div>
+
+    </div>
+
+
+    <!-- A4 -->
+    <div class="mcq-box">
+
+        <div class="mcq-question">
+            4. Why is the speaker afraid to see himself?
+        </div>
+
+        <div class="option">(a) He had a burnt face</div>
+        <div class="option">(b) He was dark-skinned</div>
+        <div class="option">(c) He was handsome</div>
+        <div class="option">(d) He was short-heighted</div>
+
+        <div class="correct">
+            ✔ Correct Answer: (a) He had a burnt face
+        </div>
+
+    </div>
+
+
+    <!-- Extract B -->
+    <h2 class="section-title">📝 Extract Based Questions – B</h2>
+
+    <div class="extract-title">
+        Extract B
+    </div>
+
+    <div class="extract">
+        “I don't know what I want. I want something no one else has got or ever will have.
+        Something just mine. Like this garden. I don't know what it is.
+
+        You could find out.
+
+        How?
+
+        Waiting. Watching. Listening. Sitting here or going there. I'll have to see to
+        the bees.
+
+        Those other people who come here ...... do they talk to you? Ask you things?”
+    </div>
+
+
+    <!-- B1 -->
+    <div class="mcq-box">
+
+        <div class="mcq-question">
+            1. Who is referred as 'I' in the above extract?
+        </div>
+
+        <div class="option">(a) Susan</div>
+        <div class="option">(b) Derry</div>
+        <div class="option">(c) Mr. Lamb</div>
+        <div class="option">(d) Derry's mother</div>
+
+        <div class="correct">
+            ✔ Correct Answer: (b) Derry
+        </div>
+
+    </div>
+
+
+    <!-- B2 -->
+    <div class="mcq-box">
+
+        <div class="mcq-question">
+            2. Who is the listener in the above extract?
+        </div>
+
+        <div class="option">(a) Derry's father</div>
+        <div class="option">(b) Derry's mother</div>
+        <div class="option">(c) Mr. Lamb</div>
+        <div class="option">(d) Derry</div>
+
+        <div class="correct">
+            ✔ Correct Answer: (c) Mr. Lamb
+        </div>
+
+    </div>
+
+
+    <!-- B3 -->
+    <div class="mcq-box">
+
+        <div class="mcq-question">
+            3. How can the speaker find what he wants?
+        </div>
+
+        <div class="option">(a) By waiting</div>
+        <div class="option">(b) By watching</div>
+        <div class="option">(c) By listening</div>
+        <div class="option">(d) All of these</div>
+
+        <div class="correct">
+            ✔ Correct Answer: (d) All of these
+        </div>
+
+    </div>
+
+
+    <!-- B4 -->
+    <div class="mcq-box">
+
+        <div class="mcq-question">
+            4. Which word in the above extract means 'Possessed'?
+        </div>
+
+        <div class="option">(a) Got</div>
+        <div class="option">(b) Know</div>
+        <div class="option">(c) Want</div>
+        <div class="option">(d) Watch</div>
+
+        <div class="correct">
+            ✔ Correct Answer: (a) Got
+        </div>
+
+    </div>
+
+
+    <!-- Important MCQs -->
+    <h2 class="section-title">⭐ Important MCQs</h2>
+
+
+    <div class="mcq-box">
+
+        <div class="mcq-question">
+            1. Who wrote “On the Face of It”?
+        </div>
+
+        <div class="option">(a) Jack Finney</div>
+        <div class="option">(b) Pearl S. Buck</div>
+        <div class="option">(c) Susan Hill</div>
+        <div class="option">(d) Kalki</div>
+
+        <div class="correct">
+            ✔ Correct Answer: (c) Susan Hill
+        </div>
+
+    </div>
+
+
+    <div class="mcq-box">
+
+        <div class="mcq-question">
+            2. How old was Derry?
+        </div>
+
+        <div class="option">(a) 12 years</div>
+        <div class="option">(b) 13 years</div>
+        <div class="option">(c) 14 years</div>
+        <div class="option">(d) 15 years</div>
+
+        <div class="correct">
+            ✔ Correct Answer: (c) 14 years
+        </div>
+
+    </div>
+
+
+    <div class="mcq-box">
+
+        <div class="mcq-question">
+            3. What was unusual about Mr. Lamb?
+        </div>
+
+        <div class="option">(a) He had a tin leg</div>
+        <div class="option">(b) He was a doctor</div>
+        <div class="option">(c) He was a teacher</div>
+        <div class="option">(d) He was a soldier</div>
+
+        <div class="correct">
+            ✔ Correct Answer: (a) He had a tin leg
+        </div>
+
+    </div>
+
+
+    <div class="mcq-box">
+
+        <div class="mcq-question">
+            4. Where did Mr. Lamb live?
+        </div>
+
+        <div class="option">(a) In a city</div>
+        <div class="option">(b) In a large garden</div>
+        <div class="option">(c) In a school</div>
+        <div class="option">(d) Near a railway station</div>
+
+        <div class="correct">
+            ✔ Correct Answer: (b) In a large garden
+        </div>
+
+    </div>
+
+
+    <div class="mcq-box">
+
+        <div class="mcq-question">
+            5. What did Mr. Lamb teach Derry?
+        </div>
+
+        <div class="option">(a) To remain isolated</div>
+        <div class="option">(b) To fear people</div>
+        <div class="option">(c) To live positively</div>
+        <div class="option">(d) To stay at home</div>
+
+        <div class="correct">
+            ✔ Correct Answer: (c) To live positively
+        </div>
+
+    </div>
+
+
+    <div class="mcq-box">
+
+        <div class="mcq-question">
+            6. What does the open gate of Mr. Lamb's garden symbolize?
+        </div>
+
+        <div class="option">(a) Fear</div>
+        <div class="option">(b) Openness and acceptance</div>
+        <div class="option">(c) Loneliness</div>
+        <div class="option">(d) Anger</div>
+
+        <div class="correct">
+            ✔ Correct Answer: (b) Openness and acceptance
+        </div>
+
+    </div>
+
+
+    <div class="mcq-box">
+
+        <div class="mcq-question">
+            7. What is the main theme of “On the Face of It”?
+        </div>
+
+        <div class="option">(a) War</div>
+        <div class="option">(b) Wealth</div>
+        <div class="option">(c) Acceptance and positive attitude towards life</div>
+        <div class="option">(d) Advent
