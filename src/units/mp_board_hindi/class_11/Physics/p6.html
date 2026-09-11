@@ -49,7 +49,7 @@ line-height:1.7;
 
     .navbar{
 
-      background:rgba(15,23,42,0.45);
+      background:rgba(23,74,126,0.95);
 
       backdrop-filter:blur(10px);
 
@@ -89,27 +89,17 @@ padding:20px;
 
 }
 
-.notes-title{
 
-background:#e3f2fd;
-
-color:#1565c0;
-
-padding:10px;
-
-border-left:5px solid #1565c0;
-
-border-radius:50px;
-
-font-size:30px;
-
-font-weight:bold;
-margin-top:100px;
-
-margin-bottom:50px;
-
+.notes-title {
+    background: #174a7e;
+    color: white;
+    padding: 18px 22px;
+    border-radius: 12px 12px 0 0;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 100px;
+    margin-bottom: 0;
 }
-
 
 
 .qa-box{
@@ -192,39 +182,6 @@ margin-top:80px;
     margin:10px 0;
 }
 
-.answer table{
-    width:100%;
-    border-collapse:collapse;
-    margin:12px 0;
-    background:#fff;
-    border-radius:10px;
-    overflow:hidden;
-    display:block;
-    overflow-x:auto;
-    box-shadow:0 2px 8px rgba(0,0,0,0.06);
-}
-
-.answer table td, .answer table th{
-    border:1px solid #ddd;
-    padding:10px 12px;
-    text-align:left;
-    vertical-align:top;
-    white-space:normal;
-}
-
-.answer table th{
-    background:#eaf2fb;
-    font-weight:bold;
-    color:#1b3a57;
-}
-
-.answer ol, .answer ul{
-    margin-left:20px;
-    margin-top:10px;
-    margin-bottom:10px;
-}
-
-
 </style>
 
 
@@ -269,514 +226,1107 @@ margin-top:80px;
 
 <div class="qa-box">
   <div class="container">
- <div class="notes-title">📘 Unit 2- </div>  
+<div class="notes-title"> Unit 6-गुरुत्वाकर्षण</div>  
 </div>
 </div>
-
-<!DOCTYPE html>
-<html lang="hi">
-
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>PAL STUDY CENTER | कक्षा 11 भौतिक विज्ञान | प्रत्यास्थता</title>
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
-}
-
-body{
-    background:#f5f7fb;
-    line-height:1.7;
-}
-
-/* NAVBAR */
-
-.navbar{
-    background:rgba(15,23,42,0.90);
-    backdrop-filter:blur(10px);
-    box-shadow:0 4px 18px rgba(0,0,0,.18);
-    padding:10px 0;
-}
-
-.navbar-brand{
-    font-size:30px;
-    font-weight:700;
-    color:white !important;
-}
-
-.navbar-brand span{
-    color:#93c5fd;
-}
-
-/* NOTES */
-
-.notes-container{
-    max-width:900px;
-    margin:100px auto 50px;
-    padding:20px;
-}
-
-/* TITLE */
-
-.notes-title{
-    background:#e3f2fd;
-    color:#1565c0;
-    padding:15px 20px;
-    border-left:6px solid #1565c0;
-    border-radius:50px;
-    font-size:28px;
-    font-weight:bold;
-    margin-bottom:30px;
-    text-align:center;
-}
-
-/* QA BOX */
-
-.qa-box{
-    background:white;
-    padding:22px;
-    margin-bottom:18px;
-    border-radius:14px;
-    border-left:6px solid #1565c0;
-    box-shadow:0 4px 12px rgba(0,0,0,.08);
-    transition:.25s;
-}
-
-.qa-box:hover{
-    transform:translateY(-3px);
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
-}
-
-.question{
-    font-weight:bold;
-    color:#1b3a57;
-    margin-bottom:10px;
-    font-size:19px;
-}
-
-.answer{
-    color:#2c3e50;
-    text-align:justify;
-}
-
-.answer ul,
-.answer ol{
-    margin-left:25px;
-    margin-top:10px;
-    margin-bottom:10px;
-}
-
-.answer li{
-    margin-bottom:7px;
-}
-
-/* FORMULA */
-
-.formula{
-    background:#f8fafc;
-    padding:12px;
-    margin:14px 0;
-    border-radius:8px;
-    text-align:center;
-    overflow-x:auto;
-    font-size:19px;
-}
-
-/* TABLE */
-
-.answer table{
-    width:100%;
-    border-collapse:collapse;
-    margin:12px 0;
-}
-
-.answer table th,
-.answer table td{
-    border:1px solid #ddd;
-    padding:10px 12px;
-    text-align:left;
-    vertical-align:top;
-}
-
-.answer table th{
-    background:#eaf2fb;
-    color:#1b3a57;
-}
-
-/* IMPORTANT */
-
-.important{
-    background:#fff8e1;
-    border-left:5px solid #ffb300;
-    padding:12px 15px;
-    margin-top:12px;
-    border-radius:8px;
-}
-
-/* SUB HEADING */
-
-.sub-heading{
-    color:#1565c0;
-    font-weight:bold;
-    margin-top:15px;
-    margin-bottom:8px;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-    .navbar-brand{
-        font-size:24px;
-    }
-
-    .notes-container{
-        margin-top:85px;
-        padding:12px;
-    }
-
-    .notes-title{
-        font-size:22px;
-        border-radius:20px;
-    }
-
-    .qa-box{
-        padding:17px;
-    }
-
-    .question{
-        font-size:17px;
-    }
-
-    .formula{
-        font-size:16px;
-    }
-
-    .answer table{
-        font-size:14px;
-    }
-
-}
-
-</style>
-
-</head>
-
-<body>
-
-<!-- NAVBAR -->
-
-<nav class="navbar fixed-top">
-
-<div class="container">
-
-<a class="navbar-brand" href="../index.html">
-पाल <span>स्टडी सेंटर</span>
-</a>
-
-</div>
-
-</nav>
-
-
-<!-- NOTES -->
-
-< class="notes-container">
-
-<div class="notes-title">
-📘 कक्षा 11 — भौतिक विज्ञान<br>
-अध्याय : प्रत्यास्थता
-</div>
-
-
-<!-- प्रश्न 1 -->
 
 <div class="qa-box">
 
 <div class="question">
-प्रश्न 1: प्रत्यास्थता किसे कहते हैं?
+प्रश्न - गुरुत्वाकर्षण क्या है?
 </div>
 
 <div class="answer">
 
+<p><b>उत्तर -</b></p>
+
 <p>
-किसी वस्तु का वह गुण जिसके कारण बाह्य बल हटाने पर वस्तु
-अपनी <b>मूल आकृति एवं मूल आकार</b> को पुनः प्राप्त कर लेती है,
-उसे <b>प्रत्यास्थता</b> कहते हैं।
+ब्रह्माण्ड में उपस्थित किन्हीं दो वस्तुओं के बीच कार्य करने वाले पारस्परिक आकर्षण बल को गुरुत्वाकर्षण कहते हैं।
 </p>
 
 <p>
-<b>उदाहरण:</b> रबर, इस्पात आदि में प्रत्यास्थता का गुण पाया जाता है।
+यह बल प्रत्येक वस्तु के द्रव्यमान के कारण उत्पन्न होता है तथा वस्तुओं को एक-दूसरे की ओर आकर्षित करता है।
 </p>
 
-</div>
+<ul>
+    <li>पृथ्वी द्वारा वस्तुओं को अपनी ओर खींचना।</li>
+    <li>ग्रहों का सूर्य के चारों ओर परिक्रमा करना।</li>
+    <li>चन्द्रमा का पृथ्वी के चारों ओर घूमना।</li>
+    <li>ये सभी घटनाएँ गुरुत्वाकर्षण के परिणाम हैं।</li>
+</ul>
+
 </div>
 
-
-<!-- प्रश्न 2 -->
+</div>
 
 <div class="qa-box">
 
 <div class="question">
-प्रश्न 2: प्लास्टिकता किसे कहते हैं?
+प्रश्न - न्यूटन का सार्वत्रिक गुरुत्वाकर्षण नियम लिखिए।
 </div>
 
 <div class="answer">
+
+<p><b>उत्तर -</b></p>
 
 <p>
-किसी वस्तु का वह गुण जिसके कारण बाह्य बल हटाने पर वस्तु
-अपनी मूल आकृति एवं आकार को पुनः प्राप्त नहीं कर पाती,
-उसे <b>प्लास्टिकता</b> कहते हैं।
+न्यूटन के सार्वत्रिक गुरुत्वाकर्षण नियम के अनुसार ब्रह्माण्ड में प्रत्येक दो कण एक-दूसरे को आकर्षित करते हैं। यह आकर्षण बल उनके द्रव्यमानों के गुणनफल के समानुपाती तथा उनके बीच की दूरी के वर्ग के व्युत्क्रमानुपाती होता है।
 </p>
+<!-- न्यूटन के सार्वत्रिक गुरुत्वाकर्षण नियम का सरल रेखाचित्र -->
+<div style="text-align:center; margin:10px 0; overflow-x:auto;">
+
+    <svg width="280" height="150" viewBox="0 0 500 260"
+         xmlns="http://www.w3.org/2000/svg">
+
+        <!-- पहला पिंड -->
+        <circle cx="120" cy="130" r="35"
+                fill="white" stroke="black" stroke-width="2"/>
+
+        <text x="107" y="137" font-size="17"
+              font-weight="bold">m₁</text>
+
+        <!-- दूसरा पिंड -->
+        <circle cx="380" cy="130" r="35"
+                fill="white" stroke="black" stroke-width="2"/>
+
+        <text x="367" y="137" font-size="17"
+              font-weight="bold">m₂</text>
+
+        <!-- दूरी r -->
+        <line x1="120" y1="130" x2="380" y2="130"
+              stroke="black" stroke-width="1.5"
+              stroke-dasharray="6,5"/>
+
+        <text x="245" y="120" font-size="17"
+              font-weight="bold">r</text>
+
+    </svg>
 
 </div>
-</div>
-
-
-<!-- प्रश्न 3 -->
-
-<div class="qa-box">
-
-<div class="question">
-प्रश्न 3: प्रत्यास्थता एवं प्लास्टिकता में अंतर लिखिए।
-</div>
-
-<div class="answer">
-
-<table>
-
-<tr>
-<th>प्रत्यास्थता</th>
-<th>प्लास्टिकता</th>
-</tr>
-
-<tr>
-<td>
-बल हटाने पर वस्तु अपनी मूल आकृति प्राप्त कर लेती है।
-</td>
-
-<td>
-बल हटाने पर वस्तु अपनी मूल आकृति प्राप्त नहीं करती।
-</td>
-</tr>
-
-<tr>
-<td>
-वस्तु में स्थायी विकृति नहीं होती, यदि बल प्रत्यास्थ सीमा में हो।
-</td>
-
-<td>
-वस्तु में स्थायी विकृति उत्पन्न हो जाती है।
-</td>
-</tr>
-
-<tr>
-<td>
-इसका उदाहरण इस्पात का तार है।
-</td>
-
-<td>
-इसका उदाहरण मोम या गीली मिट्टी है।
-</td>
-</tr>
-
-</table>
-
-</div>
-</div>
-
-
-<!-- प्रश्न 4 -->
-
-<div class="qa-box">
-
-<div class="question">
-प्रश्न 4: प्रतिबल किसे कहते हैं? इसका सूत्र एवं SI मात्रक लिखिए।
-</div>
-
-<div class="answer">
-
 <p>
-बाह्य बल के कारण वस्तु के भीतर उत्पन्न प्रति इकाई क्षेत्रफल
-पर लगने वाले आंतरिक प्रतिरोधी बल को <b>प्रतिबल</b> कहते हैं। इसे सिग्मा से व्यक्त करते है। अर्थात 
+माना दो कणों के द्रव्यमान \(m_1\) तथा \(m_2\) हैं और उनके बीच की दूरी \(r\) है।
 </p>
 
-<div class="formula">
+<p class="formula">
 \[
-\sigma=\frac{F}{A}
+F \propto m_1m_2
 \]
+</p>
 
-</div>
-
-<p>
-इसका SI मात्रक N/m² या पास्कल होता है।
+<p class="formula">
+\[
+F \propto \frac{1}{r^2}
+\]
 </p>
 
 <p>
-प्रतिबल मुख्यतः तीन प्रकार का होता है—
+दोनों समानुपातों को मिलाने पर,
+</p>
+
+<p class="formula">
+\[
+F \propto \frac{m_1m_2}{r^2}
+\]
+</p>
+
+<p class="formula">
+\[
+F = G\frac{m_1m_2}{r^2}
+\]
+</p>
+
+<p>
+जहाँ \(G\) सार्वत्रिक गुरुत्वाकर्षण नियतांक है।
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - सार्वत्रिक गुरुत्वाकर्षण नियतांक (G) क्या है?
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+यह एक सार्वत्रिक नियतांक है तथा इसका मान ब्रह्माण्ड में प्रत्येक स्थान पर समान रहता है।
+</p>
+<p>
+इसका मान है—
+</p>
+
+<p class="formula">
+\[
+G = 6.67 \times 10^{-11}\; N\,m^2\,kg^{-2}
+\]
+</p>
+<p>
+G का मान उन दो एकांक द्रव्यमानों के बीच लगने वाले गुरुत्वाकर्षण बल के बराबर होता है, जो निर्वात में 1 मीटर की दूरी पर स्थित हों।
+</p>
+
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - गुरुत्वीय त्वरण किसे कहते हैं?
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+पृथ्वी के गुरुत्वाकर्षण बल के कारण किसी वस्तु में उत्पन्न त्वरण को गुरुत्वीय त्वरण कहते हैं।
+</p>
+
+<p>
+इसे \(g\) द्वारा प्रदर्शित किया जाता है।
+</p>
+
+<p>
+जब कोई वस्तु पृथ्वी की ओर स्वतंत्र रूप से गिरती है, तो उसके वेग में प्रति सेकण्ड होने वाली वृद्धि गुरुत्वीय त्वरण के कारण होती है।
+</p>
+
+<p>
+पृथ्वी की सतह के निकट इसका औसत मान है—
+</p>
+
+<p class="formula">
+\[
+g = 9.8\; m\,s^{-2}
+\]
+</p>
+
+<p>
+गुरुत्वीय त्वरण का SI मात्रक मीटर प्रति सेकण्ड² (m s⁻²) तथा विमीय सूत्र
+</p>
+
+<p class="formula">
+\[
+[M^0L^1T^{-2}]
+\]
+</p>
+
+<p>
+होता है।
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+    <div class="question">
+        प्रश्न - G तथा g में अंतर लिखिए।
+    </div>
+
+    <div class="answer">
+
+        <p><b>उत्तर -</b></p>
+
+        <div class="table-responsive">
+            <table class="table table-bordered text-center align-middle">
+
+                <thead>
+                    <tr>
+                        <th style="width:50%;">G (सार्वत्रिक गुरुत्वाकर्षण नियतांक)</th>
+                        <th style="width:50%;">g (गुरुत्वीय त्वरण)</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>
+                            यह न्यूटन के सार्वत्रिक गुरुत्वाकर्षण नियम का नियतांक है।
+                        </td>
+                        <td>
+                            यह पृथ्वी के गुरुत्वाकर्षण के कारण उत्पन्न त्वरण है।
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            इसे <b>G</b> द्वारा प्रदर्शित करते हैं।
+                        </td>
+                        <td>
+                            इसे <b>g</b> द्वारा प्रदर्शित करते हैं।
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            इसका मान समस्त ब्रह्माण्ड में नियत रहता है।
+                        </td>
+                        <td>
+                            इसका मान स्थान, ऊँचाई तथा गहराई के अनुसार बदलता है।
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="formula">
+                                \[
+                                G = 6.67 \times 10^{-11}\;N\,m^2\,kg^{-2}
+                                \]
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="formula">
+                                \[
+                                g = 9.8\;m\,s^{-2}
+                                \]
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            यह एक <b>अदिश राशि</b> है।
+                        </td>
+                        <td>
+                            यह एक <b>सदिश राशि</b> है।
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            इसका SI मात्रक
+                            <b>N m² kg⁻²</b> होता है।
+                        </td>
+                        <td>
+                            इसका SI मात्रक
+                            <b>m s⁻²</b> होता है।
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <b>विमीय सूत्र:</b>
+                            <div class="formula">
+                                \[
+                                [M^{-1}L^{3}T^{-2}]
+                                \]
+                            </div>
+                        </td>
+
+                        <td>
+                            <b>विमीय सूत्र:</b>
+                            <div class="formula">
+                                \[
+                                [M^{0}L^{1}T^{-2}]
+                                \]
+                            </div>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+        </div>
+
+    </div>
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - g का मान किन-किन कारणों से परिवर्तित होता है?
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+गुरुत्वीय त्वरण (g) का मान निम्नलिखित कारणों से परिवर्तित होता है—
 </p>
 
 <ol>
 
-<li>
-      <b>अनुदैर्ध्य प्रतिबल</b>
-    जब किसी वस्तु पर उसकी लंबाई की दिशा में बाह्य बल लगाया जाता है,
-    तो उसकी <b>लंबाई में परिवर्तन</b> होता है। इस स्थिति में उत्पन्न
-    प्रति इकाई क्षेत्रफल पर लगने वाले आंतरिक प्रतिरोधी बल को
-    <b>अनुदैर्ध्य प्रतिबल</b> कहते हैं।
-</p>  
-</li>
+<li>पृथ्वी की सतह से ऊँचाई के परिवर्तन के कारण।</li>
 
-<li>
-<b>आयतन प्रतिबल</b>
-            जब किसी वस्तु पर सभी दिशाओं से समान रूप से बाह्य बल लगाया जाता है,
-            तो उसके <b>आयतन में परिवर्तन</b> होता है। इस स्थिति में उत्पन्न
-            प्रति इकाई क्षेत्रफल पर लगने वाले आंतरिक प्रतिरोधी बल को
-            <b>आयतन प्रतिबल</b> कहते हैं।
-</p>   
+<li>पृथ्वी की सतह के नीचे गहराई के परिवर्तन के कारण।</li>
 
-</li>
+<li>पृथ्वी के घूर्णन (Rotation) के कारण।</li>
 
-<li>
-<b>स्पर्शीय या अपरूपण प्रतिबल</b>
-            जब किसी वस्तु की सतह के <b>समानांतर</b> बाह्य बल लगाया जाता है,
-            तो वस्तु की आकृति में परिवर्तन होता है। इस प्रकार उत्पन्न
-            प्रति इकाई क्षेत्रफल पर लगने वाले आंतरिक प्रतिरोधी बल को
-            <b>स्पर्शीय या अपरूपण प्रतिबल</b> कहते हैं।
-</p>
-</li>
+<li>अक्षांश (Latitude) के परिवर्तन के कारण।</li>
+
+<li>पृथ्वी के चपटा गोलाकार (Oblate Spheroid) होने के कारण।</li>
+
 </ol>
 
-</div>
+<p>
+इसी कारण g का मान पृथ्वी के सभी स्थानों पर समान नहीं होता।
+</p>
+
 </div>
 
-<!-- प्रश्न 7 -->
-
+</div>
 <div class="qa-box">
 
 <div class="question">
-प्रश्न 7: विकृति किसे कहते हैं? इसका सूत्र लिखिए।
+प्रश्न - G तथा g में सम्बन्ध निगमित कीजिए।
 </div>
 
 <div class="answer">
 
+<p><b>उत्तर -</b></p>
+
+<!-- G तथा g में संबंध का रेखाचित्र -->
+<div style="text-align:center; margin:10px 0; overflow-x:auto;">
+
+    <svg width="320" height="200" viewBox="0 0 520 330"
+         xmlns="http://www.w3.org/2000/svg">
+
+        <!-- पृथ्वी -->
+        <circle cx="260" cy="190" r="90"
+                fill="white" stroke="black" stroke-width="2"/>
+
+        <!-- केंद्र O -->
+        <circle cx="260" cy="190" r="4" fill="black"/>
+        <text x="272" y="185" font-size="17"
+              font-weight="bold">O</text>
+
+        <!-- पृथ्वी का द्रव्यमान M -->
+        <text x="230" y="195" font-size="17"
+              font-weight="bold">M</text>
+
+        <!-- सतह पर वस्तु m -->
+        <circle cx="260" cy="100" r="10"
+                fill="white" stroke="black" stroke-width="2"/>
+
+        <text x="278" y="105" font-size="17"
+              font-weight="bold">m</text>
+
+        <!-- त्रिज्या R -->
+        <line x1="260" y1="190" x2="260" y2="100"
+              stroke="black" stroke-width="2"
+              stroke-dasharray="6,5"/>
+
+        <text x="272" y="150" font-size="17"
+              font-weight="bold">R</text>
+    </svg>
+
 <p>
-बाह्य बल के कारण वस्तु के आकार या आकृति में होने वाले
-सापेक्ष परिवर्तन को <b>विकृति</b> कहते हैं।
+माना पृथ्वी का द्रव्यमान \(M\) तथा त्रिज्या \(R\) है। पृथ्वी की सतह पर स्थित \(m\) द्रव्यमान की किसी वस्तु पर लगने वाला गुरुत्वाकर्षण बल
 </p>
 
-<div class="formula">
-
+<p class="formula">
 \[
-\text{विकृति}
-=
-\frac{\text{परिवर्तन}}{\text{मूल मान}}
+F = G\frac{Mm}{R^2}
 \]
+</p>
+
+<p>
+न्यूटन के द्वितीय गति नियम के अनुसार,
+</p>
+
+<p class="formula">
+\[
+F = mg
+\]
+</p>
+
+<p>
+अतः,
+</p>
+
+<p class="formula">
+\[
+mg = G\frac{Mm}{R^2}
+\]
+</p>
+
+<p>
+दोनों पक्षों में \(m\) से भाग देने पर,
+</p>
+
+<p class="formula">
+\[
+\boxed{g=\frac{GM}{R^2}}
+\]
+</p>
+
+<p>
+यही G तथा g के मध्य सम्बन्ध है।
+</p>
+</div>
+
+</div>
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - ऊँचाई के साथ g के मान में होने वाले परिवर्तन के लिए सूत्र निगमित कीजिए।
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+<!-- ऊँचाई के साथ g के मान में परिवर्तन का रेखाचित्र -->
+<div style="text-align:center; margin:10px 0; overflow-x:auto;">
+
+    <svg width="320" height="200" viewBox="0 0 520 330"
+         xmlns="http://www.w3.org/2000/svg">
+
+        <!-- पृथ्वी -->
+        <circle cx="260" cy="220" r="75"
+                fill="white" stroke="black" stroke-width="2"/>
+
+        <text x="232" y="226" font-size="17"
+              font-weight="bold">पृथ्वी</text>
+
+        <!-- केंद्र O -->
+        <circle cx="260" cy="220" r="4" fill="black"/>
+        <text x="270" y="218" font-size="16"
+              font-weight="bold">O</text>
+
+        <!-- त्रिज्या R -->
+        <line x1="260" y1="220" x2="260" y2="145"
+              stroke="black" stroke-width="1.5"
+              stroke-dasharray="6,5"/>
+
+        <text x="270" y="185" font-size="16"
+              font-weight="bold">R</text>
+
+        <!-- ऊँचाई h -->
+        <line x1="260" y1="145" x2="260" y2="75"
+              stroke="black" stroke-width="1.5"
+              stroke-dasharray="6,5"/>
+
+        <text x="270" y="110" font-size="16"
+              font-weight="bold">h</text>
+
+        <!-- ऊँचाई पर वस्तु -->
+        <circle cx="260" cy="65" r="10"
+                fill="white" stroke="black" stroke-width="2"/>
+
+        <text x="275" y="70" font-size="16"
+              font-weight="bold">m</text>
+
+        <!-- g की दिशा -->
+        <line x1="260" y1="75" x2="260" y2="115"
+              stroke="black" stroke-width="2"/>
+
+        <polygon points="260,125 253,110 267,110"
+                 fill="black"/>
+
+    </svg>
+
+</div>
+<p>
+माना पृथ्वी का द्रव्यमान \(M\) तथा त्रिज्या \(R\) है। </p>
+
+<p>
+पृथ्वी की सतह पर गुरुत्वीय त्वरण का सूत्र है—
+</p>
+
+<p class="formula">
+    \[
+    g=\frac{GM}{R^2}
+    -----(1)\]
+</p>
+
+<p>
+पृथ्वी की सतह से \(h\) ऊँचाई पर वस्तु की केन्द्र से दूरी \((R+h)\) होगी। अतः उस बिन्दु पर गुरुत्वीय त्वरण
+</p>
+
+<p class="formula">
+\[
+g_h=\frac{GM}{(R+h)^2}
+-----(2)\]
+</p>
+
+<p>
+समीकरण (2) में समीकरण (1) का भाग देने पर,
+</p>
+
+<p class="formula">
+\[
+\frac{g_h}{g}
+=
+\frac{\dfrac{GM}{(R+h)^2}}
+{\dfrac{GM}{R^2}}
+\]
+</p>
+
+<p class="formula">
+\[
+\frac{g_h}{g}
+=
+\frac{R^2}{(R+h)^2}
+\]
+</p>
+
+<p class="formula">
+\[
+g_h
+=
+g\left(\frac{R}{R+h}\right)^2
+\]
+</p>
+<p class="formula">
+\[
+g_h=g\left(\frac{R+h}{R}\right)^{-2}
+\]
+</p>
+
+<p>
+द्विपद प्रमेय से,
+</p>
+
+<p class="formula">
+\[
+\boxed{g_h=g\left(1-\frac{2h}{R}\right)}
+\]
+</p>
+
+<p>
+यही ऊँचाई के साथ g के मान में परिवर्तन का सूत्र है।
+</p>
 
 </div>
 
-<p>
-विकृति विमाहीन राशि है, अतः इसका कोई
-            मात्रक नहीं होता।
-</p>
-</p>
-<p>
-विकृति निम्न तीन प्रकार की होती है।
-</p>
+</div>
+<div class="qa-box">
 
-<ol>
+    <div class="question">
+        प्रश्न - गहराई के साथ g के मान में होने वाले परिवर्तन के लिए सूत्र निगमित कीजिए।
+    </div>
 
-<li>
-<b>अनुदैर्ध्य विकृति</b> : 
-            जब किसी वस्तु पर अनुदैर्ध्य बल लगाया जाता है, तो उसकी लंबाई में
-            परिवर्तन होता है। लंबाई में हुए परिवर्तन तथा वस्तु की
-            <b>मूल लंबाई</b> के अनुपात को <b>अनुदैर्ध्य विकृति</b> कहते हैं।
-      
-        <p class="formula">
+    <div class="answer">
+
+        <p><b>उत्तर -</b></p>
+<!-- गहराई के साथ g के मान में परिवर्तन का रेखाचित्र -->
+<div style="text-align:center; margin:10px 0; overflow-x:auto;">
+
+    <svg width="320" height="200" viewBox="0 0 520 330"
+         xmlns="http://www.w3.org/2000/svg">
+
+        <!-- पृथ्वी -->
+        <circle cx="260" cy="165" r="110"
+                fill="white" stroke="black" stroke-width="2"/>
+
+        <!-- केंद्र O -->
+        <circle cx="260" cy="165" r="4" fill="black"/>
+        <!-- सतह पर वस्तु -->
+        <circle cx="260" cy="55" r="9"
+                fill="white" stroke="black" stroke-width="2"/>
+
+        <text x="275" y="60" font-size="16"
+              font-weight="bold">m</text>
+
+        <!-- सतह से केंद्र तक त्रिज्या R -->
+        <line x1="260" y1="55" x2="260" y2="165"
+              stroke="black" stroke-width="1.5"
+              stroke-dasharray="6,5"/>
+
+        <!-- केंद्र से गहराई d पर वस्तु -->
+        <circle cx="260" cy="120" r="8"
+                fill="white" stroke="black" stroke-width="2"/>
+
+        <text x="275" y="125" font-size="16"
+              font-weight="bold">m</text>
+
+        <!-- गहराई d -->
+        <line x1="260" y1="55" x2="260" y2="120"
+              stroke="black" stroke-width="1.5"
+              stroke-dasharray="6,5"/>
+
+        <text x="235" y="92" font-size="16"
+              font-weight="bold">d</text>
+
+        <!-- गहराई पर g की दिशा -->
+        <line x1="260" y1="110" x2="260" y2="135"
+              stroke="black" stroke-width="2"/>
+
+        <polygon points="260,145 253,132 267,132"
+                 fill="black"/>
+
+        <text x="275" y="145" font-size="17"
+              font-weight="bold">R-d</text>
+
+    </svg>
+
+</div>
+        <p>
+            माना पृथ्वी की त्रिज्या \(R\), द्रव्यमान \(M\) तथा घनत्व \(\rho\) है।
+  <p>
+         अब, द्रव्यमान = आयतन × घनत्व
+        </p>
+
+        <div class="formula">
             \[
-            \boxed{
-            \text{अनुदैर्ध्य विकृति}
+            M=\frac{4}{3}\pi R^3\rho
+            \]
+        </div>
+
+        <p>
+            पृथ्वी की सतह पर गुरुत्वीय त्वरण का सूत्र है—
+        </p>
+
+        <div class="formula">
+            \[
+            g=\frac{GM}{R^2}
+         \]
+        </div>
+   <div class="formula">
+            \[
+            g=\frac{G\frac{4}{3}\pi R^3\rho}{R^2}
+            \]
+        </div>
+           <div class="formula">
+            \[
+            g=\frac{4}{3}\pi G\rho R
+            ----(1)\]
+        </div>
+
+        <p>
+पृथ्वी के केन्द्र से \(d\) गहराई पर स्थित बिन्दु की दूरी (R - d) होगी। अतः  \(d\) गहराई पर गुरुत्वीय त्वरण —
+        </p> 
+
+        <div class="formula">
+            \[
+            g_d=
+            \frac{4}{3}\pi G\rho(R-d) ----(2) \]
+        </div>
+
+       
+       
+
+        <p>
+            समीकरण (2) को (1) से भाग देने पर—
+        </p>
+
+        <div class="formula">
+            \[
+            \frac{g_d}{g}
             =
-            \frac{\Delta L}{L}
+            \frac{
+            \frac{4}{3}\pi G\rho(R-d)
+            }
+            {
+            \frac{4}{3}\pi G\rho R
             }
             \]
-        </p>
+        </div>
+
+        <div class="formula">
+            \[
+            \frac{g_d}{g}
+            =
+            \frac{R-d}{R}
+            \]
+        </div>
+        <div class="formula">
+            \[
+            \boxed{
+            g_d=g\left(1-\frac{d}{R}\right)
+            }
+            \]
+        </div>
 
         <p>
-            जहाँ <b>ΔL</b> = लंबाई में परिवर्तन तथा
-            <b>L</b> = वस्तु की मूल लंबाई है।
+            <b>अतः गहराई \(d\) बढ़ने पर \(g\) का मान घटता है।</b>
         </p>
 
-</li>
+    </div>
+</div>
+<div class="qa-box">
 
-<li>
+<div class="question">
+प्रश्न - पृथ्वी के घूर्णन के कारण g के मान में होने वाले परिवर्तन का सूत्र निगमित कीजिए।
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+<!-- पृथ्वी के घूर्णन के कारण g में परिवर्तन : सूत्र निगमन का रेखाचित्र -->
+<div style="text-align:center; margin:10px 0; overflow-x:auto;">
+
+    <svg width="320" height="210" viewBox="0 0 520 340"
+         xmlns="http://www.w3.org/2000/svg">
+
+        <!-- पृथ्वी -->
+        <circle cx="260" cy="170" r="110"
+                fill="white" stroke="black" stroke-width="2"/>
+
+        <!-- घूर्णन अक्ष -->
+        <line x1="260" y1="45" x2="260" y2="295"
+              stroke="black" stroke-width="1.5"
+              stroke-dasharray="6,5"/>
+
+        <!-- केंद्र O -->
+        <circle cx="260" cy="170" r="4" fill="black"/>
+        <text x="272" y="165" font-size="17" font-weight="bold">O</text>
+
+        <!-- अक्ष से वस्तु की दूरी -->
+        <line x1="260" y1="170" x2="370" y2="170"
+              stroke="black" stroke-width="2"
+              stroke-dasharray="6,5"/>
+
+        <text x="310" y="158" font-size="17" font-weight="bold">R</text>
+
+        <!-- पृथ्वी की सतह पर वस्तु -->
+        <circle cx="370" cy="170" r="10"
+                fill="white" stroke="black" stroke-width="2"/>
+
+        <text x="382" y="175" font-size="17" font-weight="bold">m</text>
+
+        <!-- गुरुत्वाकर्षण बल mg -->
+        <line x1="370" y1="170" x2="370" y2="245"
+              stroke="black" stroke-width="2"/>
+
+        <polygon points="370,255 363,242 377,242"
+                 fill="black"/>
+
+        <text x="382" y="235" font-size="17" font-weight="bold">mg</text>
+
+        <!-- अभिकेन्द्रीय बल की दिशा -->
+        <line x1="360" y1="170" x2="305" y2="170"
+              stroke="black" stroke-width="2"/>
+
+        <polygon points="295,170 308,163 308,177"
+                 fill="black"/>
+
+        <text x="315" y="190" font-size="17" font-weight="bold">
+            mω²R
+        </text>
+
+        <!-- घूर्णन -->
+        <path d="M 330 80 A 105 105 0 0 1 400 135"
+              fill="none" stroke="black" stroke-width="2"/>
+
+        <polygon points="400,135 388,130 395,142"
+                 fill="black"/>
+
+        <text x="360" y="80" font-size="17" font-weight="bold">ω</text>
+
+    </svg>
+
+</div>
 <p>
-    <b>आयतन विकृति</b> :
-    जब किसी वस्तु पर सभी दिशाओं से समान रूप से बल लगाया जाता है,
-    तो उसके आयतन में परिवर्तन होता है। आयतन में हुए परिवर्तन तथा
-    वस्तु के <b>मूल आयतन</b> के अनुपात को <b>आयतन विकृति</b> कहते हैं।
+पृथ्वी अपने अक्ष पर पश्चिम से पूर्व की ओर घूर्णन करती है। इस घूर्णन के कारण पृथ्वी की सतह पर स्थित वस्तुओं पर अपकेन्द्रीय बल कार्य करता है, जिससे गुरुत्वीय त्वरण का प्रभावी मान कम हो जाता है।
+</p>
+
+<p>
+माना पृथ्वी की कोणीय चाल \( \omega \), त्रिज्या \( R \) तथा अक्षांश \( \lambda \) है।
+</p>
+
+<p>
+अक्षांश \( \lambda \) पर अपकेन्द्रीय त्वरण का त्रिज्यीय घटक
 </p>
 
 <p class="formula">
-    \[
-    \boxed{
-    \text{आयतन विकृति}
-    =
-    \frac{\Delta V}{V}
-    }
-    \]
+\[
+\omega^2 R \cos^2\lambda
+\]
 </p>
 
 <p>
-    जहाँ <b>ΔV</b> = आयतन में परिवर्तन तथा
-    <b>V</b> = वस्तु का मूल आयतन।
+होता है।
 </p>
-</li>
 
-<li>
 <p>
-    <b>अपरूपण विकृति</b> :
-    जब किसी वस्तु पर स्पर्शीय बल लगाया जाता है, तो उसकी आकृति में
-    परिवर्तन होता है। उत्पन्न कोणीय विस्थापन को
-    <b>अपरूपण विकृति</b> कहते हैं।
+यदि पृथ्वी के घूर्णन को न माना जाए तो गुरुत्वीय त्वरण \(g\) होगा तथा घूर्णन के कारण प्रभावी गुरुत्वीय त्वरण \(g_r\) होगा।
 </p>
 
 <p class="formula">
-    \[
-    \boxed{
-    \text{अपरूपण विकृति}
-    =
-    \frac{\Delta x}{L}
-    =
-    \tan\theta
-    }
-    \]
+\[
+\boxed{g_r=g-\omega^2R\cos^2\lambda}
+\]
 </p>
 
 <p>
-    जहाँ <b>Δx</b> = पार्श्व विस्थापन तथा
-    <b>L</b> = वस्तु की मूल लंबाई।
+यही पृथ्वी के घूर्णन के कारण गुरुत्वीय त्वरण का सूत्र है।
 </p>
-</li>
 
-</ol>
+<p>
+<b>विशेष स्थितियाँ :</b>
+</p>
+
+<p>
+(1) भूमध्य रेखा पर (\(\lambda=0^\circ\))
+</p>
+
+<p class="formula">
+\[
+g_r=g-\omega^2R
+\]
+</p>
+
+<p>
+(2) ध्रुवों पर (\(\lambda=90^\circ\))
+</p>
+
+<p class="formula">
+\[
+g_r=g
+\]
+</p>
+
+<p>
+अतः गुरुत्वीय त्वरण का मान ध्रुवों पर अधिकतम तथा भूमध्य रेखा पर न्यूनतम होता है।
+</p>
 
 </div>
+
 </div>
 
 <div class="qa-box">
 
+<div class="question">
+प्रश्न - गुरुत्वीय स्थितिज ऊर्जा किसे कहते है? इसके लिए सूत्र निगमित कीजिए।
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+किसी वस्तु में उसकी पृथ्वी की सतह से ऊँचाई के कारण संचित ऊर्जा को गुरुत्वीय स्थितिज ऊर्जा कहते हैं।
+</p>
+<!-- ऊँचाई के साथ g के मान में परिवर्तन का रेखाचित्र -->
+<div style="text-align:center; margin:10px 0; overflow-x:auto;">
+
+    <svg width="320" height="200" viewBox="0 0 520 330"
+         xmlns="http://www.w3.org/2000/svg">
+
+        <!-- पृथ्वी -->
+        <circle cx="260" cy="220" r="75"
+                fill="white" stroke="black" stroke-width="2"/>
+
+        <text x="232" y="226" font-size="17"
+              font-weight="bold">पृथ्वी</text>
+
+        <!-- केंद्र O -->
+        <circle cx="260" cy="220" r="4" fill="black"/>
+        <text x="270" y="218" font-size="16"
+              font-weight="bold">O</text>
+
+        <!-- त्रिज्या R -->
+        <line x1="260" y1="220" x2="260" y2="145"
+              stroke="black" stroke-width="1.5"
+              stroke-dasharray="6,5"/>
+
+        <text x="270" y="185" font-size="16"
+              font-weight="bold">R</text>
+
+        <!-- ऊँचाई h -->
+        <line x1="260" y1="145" x2="260" y2="75"
+              stroke="black" stroke-width="1.5"
+              stroke-dasharray="6,5"/>
+
+        <text x="270" y="110" font-size="16"
+              font-weight="bold">h</text>
+
+        <!-- ऊँचाई पर वस्तु -->
+        <circle cx="260" cy="65" r="10"
+                fill="white" stroke="black" stroke-width="2"/>
+
+        <text x="275" y="70" font-size="16"
+              font-weight="bold">m</text>
+
+    </svg>
+
+</div>
+<p>
+माना \(m\) द्रव्यमान की एक वस्तु को पृथ्वी की सतह से \(h\) ऊँचाई तक उठाया जाता है।
+</p>
+
+<p>
+वस्तु पर लगने वाला भार
+</p>
+
+<p class="formula">
+\[
+F = mg
+\]
+</p>
+
+<p>
+वस्तु को \(h\) ऊँचाई तक उठाने में किया गया कार्य
+</p>
+
+<p class="formula">
+\[
+W = F \times h
+\]
+</p>
+
+<p class="formula">
+\[
+W = mg \times h
+\]
+</p>
+
+<p class="formula">
+\[
+W = mgh
+\]
+</p>
+
+<p>
+वस्तु में संचित यही कार्य उसकी गुरुत्वीय स्थितिज ऊर्जा के बराबर होता है।
+अतः</p>
+
+<p class="formula">
+\[
+\boxed{PE = mgh}
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - पलायन वेग किसे कहते हैं? इसके लिए सूत्र निगमित कीजिए।
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+किसी ग्रह या उपग्रह की सतह से किसी वस्तु को ऐसा न्यूनतम वेग प्रदान किया जाए कि वह उसके गुरुत्वाकर्षण क्षेत्र से बाहर निकल जाए और पुनः वापस न लौटे, तो उस न्यूनतम वेग को पलायन वेग कहते हैं।
+इसे \(V_e\) द्वारा प्रदर्शित किया जाता है।
+</p>
+<!-- पलायन वेग का रेखाचित्र -->
+<div style="text-align:center; margin:10px 0; overflow-x:auto;">
+
+    <svg width="320" height="200" viewBox="0 0 520 330"
+         xmlns="http://www.w3.org/2000/svg">
+
+        <!-- पृथ्वी -->
+        <circle cx="260" cy="220" r="75"
+                fill="white" stroke="black" stroke-width="2"/>
+
+        <text x="232" y="226" font-size="17"
+              font-weight="bold">पृथ्वी</text>
+
+        <!-- केंद्र O -->
+        <circle cx="260" cy="220" r="4" fill="black"/>
+
+        <text x="270" y="218" font-size="16"
+              font-weight="bold">O</text>
+
+        <!-- त्रिज्या R -->
+        <line x1="260" y1="220" x2="260" y2="145"
+              stroke="black" stroke-width="1.5"
+              stroke-dasharray="6,5"/>
+
+        <text x="270" y="185" font-size="16"
+              font-weight="bold">R</text>
+
+        <!-- वस्तु m -->
+        <circle cx="260" cy="135" r="10"
+                fill="white" stroke="black" stroke-width="2"/>
+
+        <text x="275" y="140" font-size="16"
+              font-weight="bold">m</text>
+
+        <!-- पलायन वेग -->
+        <line x1="260" y1="125" x2="260" y2="45"
+              stroke="black" stroke-width="2"/>
+
+        <polygon points="260,35 253,50 267,50"
+                 fill="black"/>
+
+        <text x="275" y="80" font-size="17"
+              font-weight="bold">vₑ</text>
+
+    </svg>
+
+</div>
+<p>
+माना पृथ्वी का द्रव्यमान \(M\), त्रिज्या \(R\) तथा वस्तु का द्रव्यमान \(m\) है।
+</p>
+
+<p>
+पृथ्वी की सतह पर वस्तु की गतिज ऊर्जा
+</p>
+
+<p class="formula">
+\[
+KE=\frac{1}{2}mV_e^2
+\]
+</p>
+
+<p>
+पृथ्वी की सतह पर वस्तु की गुरुत्वीय स्थितिज ऊर्जा
+</p>
+
+<p class="formula">
+\[
+PE=-\frac{GMm}{R}
+\]
+</p>
+
+<p>
+अनन्त पर वस्तु की गतिज ऊर्जा तथा स्थितिज ऊर्जा दोनों शून्य हो जाते हैं।
+</p>
+
+<p>
+ऊर्जा संरक्षण के नियम से,
+</p>
+
+<p class="formula">
+\[
+\frac{1}{2}mV_e^2-\frac{GMm}{R}=0
+\]
+</p>
+
+<p class="formula">
+\[
+\frac{1}{2}mV_e^2=\frac{GMm}{R}
+\]
+</p>
+
+<p class="formula">
+\[
+V_e^2=\frac{2GM}{R}
+\]
+</p>
+
+<p class="formula">
+\[
+\boxed{V_e=\sqrt{\frac{2GM}{R}}}
+\]
+</p>
+
+<p>
+ \(GM=gR^2\) रखने पर,
+</p>
+
+<p class="formula">
+\[
+V_e=\sqrt{\frac{2gR^2}{R}}
+\]
+</p>
+
+<p class="formula">
+\[
+\boxed{V_e=\sqrt{2gR}}
+\]
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
     <div class="question">
-        प्रश्न - प्रत्यास्थता की सीमा किसे कहते हैं?
+        प्रश्न - गुरुत्वीय त्वरण तथा त्रिज्या द्वारा पृथ्वी एवं चंद्रमा की सतह पर पलायन वेग का संख्यात्मक मान ज्ञात कीजिए।
     </div>
 
     <div class="answer">
@@ -784,754 +1334,551 @@ body{
         <p><b>उत्तर -</b></p>
 
         <p>
-            किसी वस्तु पर लगाया गया वह अधिकतम प्रतिबल, जिसके हटाने पर
-            वस्तु अपनी <b>मूल आकृति और आकार</b> को पूर्णतः प्राप्त कर लेती है,
-            <b>प्रत्यास्थता की सीमा</b> कहलाती है।
+            पलायन वेग का सूत्र है—
         </p>
+
+        <div class="formula">
+            \[
+            v_e=\sqrt{2gR}
+            \]
+        </div>
+
+        <h5>1. पृथ्वी के लिए</h5>
+
+        <p>
+            दिया है—
+        </p>
+
+        <div class="formula">
+            \[
+            g=9.8\;m\,s^{-2}
+            \]
+            \[
+            R=6.37\times10^6\;m
+            \]
+        </div>
+
+        <p>अतः,</p>
+
+        <div class="formula">
+            \[
+            v_e=\sqrt{2\times9.8\times6.37\times10^6}
+            \]
+        </div>
+
+        <div class="formula">
+            \[
+            v_e\approx1.117\times10^4\;m/s
+            \]
+        </div>
+
+        <div class="formula">
+            \[
+            \boxed{v_e\approx11.2\;km/s}
+            \]
+        </div>
+
+        <h5>2. चंद्रमा के लिए</h5>
+
+        <p>
+            दिया है—
+        </p>
+
+        <div class="formula">
+            \[
+            g=1.62\;m\,s^{-2}
+            \]
+            \[
+            R=1.74\times10^6\;m
+            \]
+        </div>
+
+        <p>अतः,</p>
+
+        <div class="formula">
+            \[
+            v_e=\sqrt{2\times1.62\times1.74\times10^6}
+            \]
+        </div>
+
+        <div class="formula">
+            \[
+            v_e\approx2.374\times10^3\;m/s
+            \]
+        </div>
+
+        <div class="formula">
+            \[
+            \boxed{v_e\approx2.37\;km/s}
+            \]
+        </div>
+        </div>
 
     </div>
 
 </div>
-<!-- प्रश्न 10 -->
-
-<div class="qa-box">
-
-<div class="question">
-प्रश्न 10: हुक का नियम लिखिए।
-</div>
-
-<div class="answer">
-
-<p>
-प्रत्यास्थ सीमा के अंदर <b>प्रतिबल, विकृति के समानुपाती</b> होता है।
-इसे हुक का नियम कहते हैं।
-</p>
-
-<div class="formula">
-
-\[
-\text{प्रतिबल}\propto\text{विकृति}
-\]
-
-\[
-\frac{\text{प्रतिबल}}{\text{विकृति}}
-=\text{नियतांक}
-\]
-
-</div>
-
-</div>
-</div>
 <div class="qa-box">
 
     <div class="question">
-        प्रश्न - प्रत्यास्थता गुणांक किसे कहते हैं? यह कितने प्रकार का होता है?
+        प्रश्न - क्या कारण है कि पृथ्वी पर वायुमण्डल है लेकिन चंद्रमा पर नहीं?
     </div>
 
     <div class="answer">
 
         <p><b>उत्तर -</b></p>
 
-        <p>
-            प्रतिबल और संगत विकृति के अनुपात को <b>प्रत्यास्थता गुणांक</b>
-            कहते हैं।
+<p>
+            पृथ्वी का
+            पलायन वेग लगभग 11.2\km/s तथा चंद्रमा का पलायन वेग लगभग 2.37\km/s है।
+        </p>
+
+        <p>पृथ्वी का पलायन वेग अधिक होने के कारण गैसों के अणु
+            पृथ्वी के गुरुत्वीय आकर्षण से बाहर नहीं निकल पाते और पृथ्वी पर
+            वायुमण्डल बना रहता है।
+            
         </p>
 
         <p>
-            प्रत्यास्थता गुणांक मुख्यतः <b>तीन प्रकार</b> का होता है—
-        </p>
-
-        <p>
-            1. <b>यंग प्रत्यास्थता गुणांक (Y)</b>
-        </p>
-
-        <p>
-            2. <b>आयतन प्रत्यास्थता गुणांक (K)</b>
-        </p>
-
-        <p>
-            3. <b>अपरूपण प्रत्यास्थता गुणांक (η)</b>
+            इसके विपरीत, चंद्रमा का पलायन वेग कम होने के कारण उसके वायुमण्डल के गैसों के
+            अणु आसानी से चंद्रमा के गुरुत्वीय आकर्षण से बाहर निकल जाते हैं।
+            इसलिए चंद्रमा पर वायुमण्डल नहीं है।
         </p>
 
     </div>
 
 </div>
 
-<!-- प्रश्न 11 -->
-
 <div class="qa-box">
 
 <div class="question">
-प्रश्न 11: यंग प्रत्यास्थता गुणांक किसे कहते हैं?
+प्रश्न - उपग्रह किसे कहते हैं?
 </div>
 
 <div class="answer">
 
-<p>
-अनुदैर्ध्य प्रतिबल और अनुदैर्ध्य विकृति के अनुपात को
-<b>यंग प्रत्यास्थता गुणांक</b> कहते हैं।
-</p>
-
-<div class="formula">
-
-\[
-Y=
-\frac{\text{अनुदैर्ध्य प्रतिबल}}
-{\text{अनुदैर्ध्य विकृति}}
-\]
-
-\[
-Y=
-\frac{F/A}{\Delta L/L}
-\]
-
-\[
-\boxed{
-Y=\frac{FL}{A\Delta L}
-}
-\]
-  <div class="qa-box">
-
-    <div class="question">
-        प्रश्न - यंग प्रत्यास्थता गुणांक के लिए सूत्र निगमित कीजिए।
-    </div>
-
-    <div class="answer">
-
-        <p><b>उत्तर -</b></p>
-
-        <p>
-            यंग प्रत्यास्थता गुणांक प्रतिबल तथा अनुदैर्ध्य विकृति के अनुपात के बराबर होता है।
-        </p>
-
-        <p class="formula">
-            \[
-            Y=\frac{\text{अनुदैर्ध्य प्रतिबल}}
-            {\text{अनुदैर्ध्य विकृति}}
-            \]
-        </p>
-
-        <p>
-            अनुदैर्ध्य प्रतिबल —
-        </p>
-
-        <p class="formula">
-            \[
-            \text{प्रतिबल}=\frac{F}{A}
-            \]
-        </p>
-
-        <p>
-            अनुदैर्ध्य विकृति —
-        </p>
-
-        <p class="formula">
-            \[
-            \text{विकृति}=\frac{\Delta L}{L}
-            \]
-        </p>
-
-        <p>
-            अतः,
-        </p>
-
-        <p class="formula">
-            \[
-            Y=
-            \frac{F/A}{\Delta L/L}
-            \]
-        </p>
-
-        <p class="formula">
-            \[
-            \boxed{Y=\frac{FL}{A\Delta L}}
-            \]
-        </p>
-
-        <p>
-            जहाँ F = लगाया गया बल, A = अनुप्रस्थ क्षेत्रफल,
-            L = मूल लंबाई तथा ΔL = लंबाई में परिवर्तन।
-        </p>
-
-    </div>
-
-  </div>
-
-</div>
+<p><b>उत्तर -</b></p>
 
 <p>
-<b>SI मात्रक:</b> Pa या N/m²
+वे खगोलीय पिंड जो किसी ग्रह के चारों ओर गुरुत्वाकर्षण बल के कारण निश्चित कक्षा में परिक्रमा करते हैं, उपग्रह कहलाते हैं।
 </p>
-
-</div>
-</div>
-
-
-<!-- प्रश्न 12 -->
-
-<div class="qa-box">
-
-<div class="question">
-प्रश्न 12: आयतन प्रत्यास्थता गुणांक किसे कहते हैं?
-</div>
-
-<div class="answer">
 
 <p>
-आयतन प्रतिबल और आयतन विकृति के अनुपात को
-<b>आयतन प्रत्यास्थता गुणांक</b> कहते हैं।
+उपग्रह दो प्रकार के होते हैं—
 </p>
-
-<div class="formula">
-
-\[
-K=
--\frac{\text{आयतन प्रतिबल}}
-{\text{आयतन विकृति}}
-\]
-
-\[
-\boxed{
-K=-\frac{\Delta P}{\Delta V/V}
-}
-\]
-
-</div>
-
-<p>
-<b>SI मात्रक:</b> Pa
-</p>
-
-</div>
-</div>
-
-
-<!-- प्रश्न 13 -->
-
-<div class="qa-box">
-
-<div class="question">
-प्रश्न 13: दृढ़ता गुणांक किसे कहते हैं?
-</div>
-
-<div class="answer">
-
-<p>
-अपरूपण प्रतिबल और अपरूपण विकृति के अनुपात को
-<b>दृढ़ता गुणांक</b> कहते हैं।
-</p>
-
-<div class="formula">
-
-\[
-G=
-\frac{\text{अपरूपण प्रतिबल}}
-{\text{अपरूपण विकृति}}
-\]
-
-</div>
-
-<p>
-<b>SI मात्रक:</b> Pa
-</p>
-
-</div>
-</div>
-
-
-<!-- प्रश्न 14 -->
-
-<div class="qa-box">
-
-<div class="question">
-प्रश्न 14: पॉइसन अनुपात किसे कहते हैं?
-</div>
-
-<div class="answer">
-
-<p>
-पार्श्व विकृति तथा अनुदैर्ध्य विकृति के अनुपात को
-<b>पॉइसन अनुपात</b> कहते हैं।
-</p>
-
-<div class="formula">
-
-\[
-\nu=
--\frac{\text{पार्श्व विकृति}}
-{\text{अनुदैर्ध्य विकृति}}
-\]
-
-</div>
-
-<p>
-यह एक <b>विमाहीन राशि</b> है।
-</p>
-
-</div>
-</div>
-
-
-<!-- प्रश्न 15 -->
-
-<div class="qa-box">
-
-<div class="question">
-प्रश्न 15: प्रत्यास्थता के तीन प्रमुख प्रत्यास्थता गुणांक कौन-कौन से हैं?
-</div>
-
-<div class="answer">
 
 <ol>
 
-<li>
-<b>यंग प्रत्यास्थता गुणांक (Y)</b>
-</li>
+<li>प्राकृतिक उपग्रह</li>
 
-<li>
-<b>आयतन प्रत्यास्थता गुणांक (K)</b>
-</li>
+<li>कृत्रिम उपग्रह</li>
 
-<li>
-<b>दृढ़ता गुणांक (G)</b>
-</li>
+</ol>
+
+<p>
+चन्द्रमा पृथ्वी का प्राकृतिक उपग्रह है।
+</p>
+
+<p>
+मनुष्य द्वारा निर्मित तथा अंतरिक्ष में स्थापित उपग्रहों को कृत्रिम उपग्रह कहते हैं, जैसे संचार, मौसम एवं दूरसंवेदी उपग्रह।
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - कक्षीय वेग किसे कहते हैं? इसके लिए सूत्र निगमित कीजिए।
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+किसी उपग्रह को किसी ग्रह के चारों ओर उसकी कक्षा में स्थिर रूप से परिक्रमा कराने के लिए आवश्यक न्यूनतम वेग को कक्षीय वेग कहते हैं।
+इसे \(V_o\) द्वारा प्रदर्शित किया जाता है।
+</p>
+<!-- उपग्रह के परिक्रमण काल का रेखाचित्र -->
+<div style="text-align:center; margin:10px 0; overflow-x:auto;">
+
+    <svg width="320" height="200" viewBox="0 0 520 330"
+         xmlns="http://www.w3.org/2000/svg">
+
+        <!-- पृथ्वी -->
+        <circle cx="260" cy="165" r="75"
+                fill="white" stroke="black" stroke-width="2"/>
+
+        <text x="232" y="171" font-size="17"
+              font-weight="bold">पृथ्वी</text>
+
+        <!-- उपग्रह की कक्षा -->
+        <circle cx="260" cy="165" r="125"
+                fill="none" stroke="black" stroke-width="2"/>
+
+        <!-- उपग्रह -->
+        <circle cx="385" cy="165" r="10"
+                fill="white" stroke="black" stroke-width="2"/>
+
+        <text x="370" y="145" font-size="16"
+              font-weight="bold">उपग्रह</text>
+
+        <!-- पृथ्वी के केंद्र से उपग्रह की दूरी -->
+        <line x1="260" y1="165" x2="385" y2="165"
+              stroke="black" stroke-width="1.5"
+              stroke-dasharray="6,5"/>
+
+        <text x="315" y="155" font-size="16"
+              font-weight="bold">r</text>
+
+        <!-- परिक्रमण की दिशा -->
+        <path d="M 345 75 A 125 125 0 0 1 385 125"
+              fill="none" stroke="black" stroke-width="2"/>
+
+        <polygon points="385,125 376,120 378,130"
+                 fill="black"/>
+
+        <text x="350" y="65" font-size="16"
+              font-weight="bold">T</text>
+
+    </svg>
+
+</div>
+<p>
+माना पृथ्वी का द्रव्यमान \(M\), त्रिज्या \(R\) तथा पृथ्वी की सतह से उपग्रह की ऊँचाई \(h\) है।
+अतः उपग्रह की पृथ्वी के केन्द्र से दूरी r = R+h होगी।
+</p>      
+<p>
+अब पृथ्वी द्वारा उपग्रह पर लगने वाला के गुरुत्वाकर्षण बल 
+</p>
+
+<p class="formula">
+\[
+F=\frac{GMm}{r^2}
+\]
+</p>
+<p>
+यही गुरुत्वाकर्षण उपग्रह को वृत्तीय कक्षा में बनाए रखने के लिए आवश्यक अभिकेन्द्रीय बल प्रदान  करता है। अर्थात 
+</p>
+
+<p class="formula">
+\[
+\frac{mv_o^2}{r}
+=
+\frac{GMm}{r^2}
+\]
+</p>
+
+<p class="formula">
+\[
+\frac{v_o^2}{r}
+=
+\frac{GM}{r^2}
+\]
+</p>
+
+<p class="formula">
+\[
+v_o^2
+=
+\frac{GM}{r}
+\]
+</p>
+
+<p class="formula">
+\[
+v_o=\sqrt{\frac{GM}{r}}
+\]
+</p>
+<p class="formula">
+\[
+\boxed{v_o=\sqrt{\frac{GM}{R+h}}}
+\]
+</p>
+
+<p>
+पृथ्वी की सतह के निकट \((h=0)\),
+तथा \(GM=gR^2\) रखने पर </p>
+
+<p class="formula">
+\[
+v_o=\sqrt{\frac{GM}{R+0}}
+\]
+</p>
+
+<p class="formula">
+\[
+V_o=\sqrt{\frac{gR^2}{R}}
+\]
+</p>
+<p class="formula">
+\[
+\boxed{v_o=\sqrt{gR}}
+\]
+</p>
+
+<p>
+पृथ्वी के निकट कक्षीय वेग का मान लगभग 7.9 km\s होता है।
+</p>
+
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - परिक्रमण काल किसे कहते हैं? इसके लिए सूत्र निगमित कीजिए।
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+किसी उपग्रह द्वारा अपने ग्रह के चारों ओर एक पूर्ण चक्कर लगाने में लगे समय को उसका परिक्रमण काल कहते हैं। इसे \(T\) द्वारा प्रदर्शित किया जाता है।
+</p>
+<!-- उपग्रह के परिक्रमण काल का रेखाचित्र -->
+<div style="text-align:center; margin:10px 0; overflow-x:auto;">
+
+    <svg width="320" height="200" viewBox="0 0 520 330"
+         xmlns="http://www.w3.org/2000/svg">
+
+        <!-- पृथ्वी -->
+        <circle cx="260" cy="165" r="75"
+                fill="white" stroke="black" stroke-width="2"/>
+
+        <text x="232" y="171" font-size="17"
+              font-weight="bold">पृथ्वी</text>
+
+        <!-- उपग्रह की कक्षा -->
+        <circle cx="260" cy="165" r="125"
+                fill="none" stroke="black" stroke-width="2"/>
+
+        <!-- उपग्रह -->
+        <circle cx="385" cy="165" r="10"
+                fill="white" stroke="black" stroke-width="2"/>
+
+        <text x="370" y="145" font-size="16"
+              font-weight="bold">उपग्रह</text>
+
+        <!-- पृथ्वी के केंद्र से उपग्रह की दूरी -->
+        <line x1="260" y1="165" x2="385" y2="165"
+              stroke="black" stroke-width="1.5"
+              stroke-dasharray="6,5"/>
+
+        <text x="315" y="155" font-size="16"
+              font-weight="bold">r</text>
+
+        <!-- परिक्रमण की दिशा -->
+        <path d="M 345 75 A 125 125 0 0 1 385 125"
+              fill="none" stroke="black" stroke-width="2"/>
+
+        <polygon points="385,125 376,120 378,130"
+                 fill="black"/>
+
+        <text x="350" y="65" font-size="16"
+              font-weight="bold">T</text>
+
+    </svg>
+
+</div>
+<p>
+माना पृथ्वी का द्रव्यमान \(M\), त्रिज्या \(R\) तथा पृथ्वी की सतह से उपग्रह की ऊँचाई \(h\) है।
+अतः उपग्रह की पृथ्वी के केन्द्र से दूरी r = R+h होगी।
+</p>      
+
+<p>
+उपग्रह का कक्षीय वेग
+</p>
+
+<p class="formula">
+\[
+v_o=\sqrt{\frac{GM}{r}}
+\]
+</p>
+
+<p>
+एक परिक्रमा में उपग्रह द्वारा तय की गई दूरी
+2πr होती है।</p>
+
+<p>
+अतः उपग्रह का परिक्रमण काल 
+</p>
+
+<p class="formula">
+\[
+T=\frac{2\pi r}{v_o}
+\]
+</p>
+
+<p class="formula">
+\[
+T=
+\frac{2\pi r}
+{\sqrt{\frac{GM}{r}}}
+\]
+</p>
+
+<p class="formula">
+\[
+T=2\pi\sqrt{\frac{r^3}{GM}}
+\]
+</p>
+
+<p class="formula">
+\[
+\boxed{
+T=
+2\pi
+\sqrt{\frac{(R+h)^3}{GM}}
+}
+\]
+</p>
+<p>
+पृथ्वी की सतह के निकट \((h=0)\),
+तथा \(GM=gR^2\) रखने पर </p>
+<p class="formula">
+\[
+T=
+2\pi
+\sqrt{\frac{(R+0)^3}{gR^2}
+}
+\]
+</p>
+<p class="formula">
+\[
+T=
+2\pi
+\sqrt{\frac{R^3}{gR^2}
+}
+\]
+</p>
+<p class="formula">
+\[\boxed{
+T=
+2\pi
+\sqrt{\frac{R}{g}
+}}
+\]
+</p>
+<p>
+पृथ्वी के निकट किसी उपग्रह का परिक्रमण काल का मान लगभग 84 मिनट होता है।
+</p> 
+</div>
+
+</div>
+<div class="qa-box">
+
+<div class="question">
+प्रश्न - तुल्यकाली (भूस्थिर) उपग्रह किसे कहते हैं?
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+वह कृत्रिम उपग्रह जिसका परिक्रमण काल पृथ्वी के घूर्णन काल (24 घंटे) के बराबर होता है, तुल्यकाली या भूस्थिर उपग्रह कहलाता है।
+</p>
+
+<p>
+यह उपग्रह पृथ्वी के घूर्णन की दिशा में भूमध्य रेखा के तल में परिक्रमा करता है।
+</p>
+
+<p>
+
+पृथ्वी से देखने पर यह सदैव एक ही स्थान पर स्थिर दिखाई देता है इसलिए इसे भूस्थाई उपग्रह भी कहते है।
+</p>
+
+<p>
+<b>उपयोग :</b>
+</p>
+
+<ol>
+
+<li>दूरसंचार में।</li>
+
+<li>टेलीविजन एवं रेडियो प्रसारण में।</li>
+
+<li>मौसम पूर्वानुमान में।</li>
+
+<li>उपग्रह संचार सेवाओं में।</li>
 
 </ol>
 
 </div>
+
 </div>
-
-
-<!-- प्रश्न 16 -->
-
 <div class="qa-box">
 
 <div class="question">
-प्रश्न 16: यंग, दृढ़ता और आयतन प्रत्यास्थता गुणांक के बीच संबंध लिखिए।
+प्रश्न - केपलर के ग्रहों की गति सम्बन्धी नियम लिखिए।
 </div>
 
 <div class="answer">
 
-<div class="formula">
-
-\[
-\boxed{
-Y=\frac{9KG}{3K+G}
-}
-\]
-
-</div>
-
-</div>
-</div>
-
-
-<!-- प्रश्न 17 -->
-
-<div class="qa-box">
-
-<div class="question">
-प्रश्न 17: यंग प्रत्यास्थता गुणांक और पॉइसन अनुपात के बीच संबंध लिखिए।
-</div>
-
-<div class="answer">
-
-<div class="formula">
-
-\[
-\boxed{
-Y=2G(1+\nu)
-}
-\]
-
-</div>
-
-</div>
-</div>
-
-
-<!-- प्रश्न 18 -->
-
-<div class="qa-box">
-
-<div class="question">
-प्रश्न 18: प्रतिबल-विकृति वक्र क्या है?
-</div>
-
-<div class="answer">
+<p><b>उत्तर -</b></p>
 
 <p>
-प्रतिबल और विकृति के बीच खींचे गए ग्राफ को
-<b>प्रतिबल-विकृति वक्र</b> कहते हैं।
+केपलर ने ग्रहों की गति को समझाने के लिए निम्नलिखित तीन नियम प्रतिपादित किए—
 </p>
 
-<div class="formula">
+<p>
+<b>1. कक्षाओं का नियम -</b>
+प्रत्येक ग्रह सूर्य के चारों ओर दीर्घवृत्ताकार कक्षा में परिक्रमा करता है तथा सूर्य उस दीर्घवृत्त के एक फोकस पर स्थित होता है।
+</p>
+<!-- केपलर के प्रथम नियम का छोटा रेखाचित्र -->
+<div style="text-align:center; margin:10px 0; overflow-x:auto;">
 
-\[
-\boxed{
-\text{प्रतिबल} \; \text{बनाम} \; \text{विकृति}
-}
-\]
+    <svg width="320" height="200" viewBox="0 0 520 330"
+         xmlns="http://www.w3.org/2000/svg">
+
+        <!-- दीर्घवृत्तीय कक्षा -->
+        <ellipse cx="260" cy="165" rx="210" ry="115"
+                 fill="none" stroke="black" stroke-width="2"/>
+
+        <!-- सूर्य -->
+        <circle cx="105" cy="165" r="12"
+                fill="white" stroke="black" stroke-width="2"/>
+        <text x="88" y="195" font-size="16"
+              font-weight="bold">सूर्य</text>
+
+        <!-- ग्रह -->
+        <circle cx="390" cy="85" r="9"
+                fill="white" stroke="black" stroke-width="2"/>
+        <text x="377" y="68" font-size="16"
+              font-weight="bold">ग्रह</text>
+
+        <!-- सूर्य से ग्रह की दूरी -->
+        <line x1="105" y1="165" x2="390" y2="85"
+              stroke="black" stroke-width="1.5"
+              stroke-dasharray="6,5"/>
+
+        <text x="245" y="112" font-size="16"
+              font-weight="bold">r</text>
+
+    </svg>
 
 </div>
+<p>
+<b>2. क्षेत्रफल का नियम-</b>
+ग्रह तथा सूर्य को मिलाने वाली रेखा समान समय में समान क्षेत्रफल तय करती है।
+</p>
 
 <p>
-इस वक्र से पदार्थ की प्रत्यास्थता, प्रत्यास्थ सीमा,
-प्लास्टिक क्षेत्र तथा टूटने के बिंदु की जानकारी प्राप्त होती है।
+<b>3. आवर्तकाल का नियम -</b>
+किसी ग्रह के परिक्रमण काल का वर्ग उसकी कक्षा की अर्ध-दीर्घ-अक्ष की घन शक्ति के समानुपाती होता है।
+अर्थात</p>
+
+<p class="formula">
+\[
+T^2 \propto r^3
+\]
 </p>
 
 </div>
-</div>
-
-
-<!-- प्रश्न 19 -->
-
-<div class="qa-box">
-
-<div class="question">
-प्रश्न 19: प्रत्यास्थ सीमा किसे कहते हैं?
-</div>
-
-<div class="answer">
-
-<p>
-प्रतिबल-विकृति वक्र पर वह अधिकतम सीमा जहाँ तक बाह्य बल
-हटाने पर वस्तु अपनी मूल अवस्था में वापस आ जाती है,
-<b>प्रत्यास्थ सीमा</b> कहलाती है।
-</p>
 
 </div>
-</div>
-
-
-<!-- प्रश्न 20 -->
-
-<div class="qa-box">
-
-<div class="question">
-प्रश्न 20: प्रत्यास्थ ऊर्जा किसे कहते हैं?
-</div>
-
-<div class="answer">
-
-<p>
-किसी प्रत्यास्थ वस्तु को विकृत करने में किया गया कार्य
-उसमें <b>प्रत्यास्थ स्थितिज ऊर्जा</b> के रूप में संचित हो जाता है।
-इसे प्रत्यास्थ ऊर्जा कहते हैं।
-</p>
-
-</div>
-</div>
-
-
-<!-- प्रश्न 21 -->
-
-<div class="qa-box">
-
-<div class="question">
-प्रश्न 21: खिंचे हुए तार में संचित प्रत्यास्थ ऊर्जा का सूत्र लिखिए।
-</div>
-
-<div class="answer">
-
-<div class="formula">
-
-\[
-\boxed{
-U=\frac{1}{2}F\Delta L
-}
-\]
-
-</div>
-
-<p>
-जहाँ F = लगाया गया अंतिम बल तथा ΔL = तार की लंबाई में वृद्धि है।
-</p>
-
-</div>
-</div>
-
-
-<!-- प्रश्न 22 -->
-
-<div class="qa-box">
-
-<div class="question">
-प्रश्न 22: तार में संचित ऊर्जा प्रति इकाई आयतन का सूत्र लिखिए।
-</div>
-
-<div class="answer">
-
-<div class="formula">
-
-\[
-\boxed{
-u=\frac{1}{2}\times
-\text{प्रतिबल}\times
-\text{विकृति}
-}
-\]
-
-</div>
-
-</div>
-</div>
-
-
-<!-- प्रश्न 23 -->
-
-<div class="qa-box">
-
-<div class="question">
-प्रश्न 23: इस्पात रबर की अपेक्षा अधिक प्रत्यास्थ क्यों है?
-</div>
-
-<div class="answer">
-
-<p>
-किसी पदार्थ की प्रत्यास्थता उसके प्रत्यास्थता गुणांक से निर्धारित होती है।
-इस्पात का यंग प्रत्यास्थता गुणांक रबर की अपेक्षा बहुत अधिक होता है।
-इसलिए समान प्रतिबल के लिए इस्पात में विकृति कम उत्पन्न होती है।
-अतः <b>इस्पात रबर से अधिक प्रत्यास्थ</b> है।
-</p>
-
-</div>
-</div>
-
-
-<!-- प्रश्न 24 -->
-
-<div class="qa-box">
-
-<div class="question">
-प्रश्न 24: किसी तार की लंबाई दोगुनी कर दी जाए और उसका आयतन समान रहे,
-तो उसके यंग प्रत्यास्थता गुणांक पर क्या प्रभाव पड़ेगा?
-</div>
-
-<div class="answer">
-
-<p>
-यंग प्रत्यास्थता गुणांक पदार्थ का गुण है। यह तार की लंबाई और
-क्षेत्रफल पर निर्भर नहीं करता।
-</p>
-
-<div class="important">
-अतः तार की लंबाई बदलने पर भी उसके पदार्थ का
-<b>यंग प्रत्यास्थता गुणांक अपरिवर्तित</b> रहेगा।
-</div>
-
-</div>
-</div>
-
-
-<!-- प्रश्न 25 -->
-
-<div class="qa-box">
-
-<div class="question">
-प्रश्न 25: प्रत्यास्थता गुणांक का विमीय सूत्र लिखिए।
-</div>
-
-<div class="answer">
-
-<p>
-यंग प्रत्यास्थता गुणांक का विमीय सूत्र प्रतिबल के समान होता है।
-</p>
-
-<div class="formula">
-
-\[
-\boxed{
-[M L^{-1}T^{-2}]
-}
-\]
-
-</div>
-
-</div>
-</div>
-
-
-<!-- प्रश्न 26 -->
-
-<div class="qa-box">
-
-<div class="question">
-प्रश्न 26: प्रत्यास्थता गुणांक का SI मात्रक क्या है?
-</div>
-
-<div class="answer">
-
-<p>
-प्रत्यास्थता गुणांक का SI मात्रक—
-</p>
-
-<div class="formula">
-
-\[
-\boxed{\text{पास्कल (Pa)}}
-\]
-
-\[
-\boxed{1\,Pa=1\,N/m^2}
-\]
-
-</div>
-
-</div>
-</div>
-
-
-<!-- प्रश्न 27 -->
-
-<div class="qa-box">
-
-<div class="question">
-प्रश्न 27: संख्यात्मक — एक तार की लंबाई 2 m तथा अनुप्रस्थ क्षेत्रफल
-1 × 10⁻⁶ m² है। उस पर 100 N का बल लगाने पर लंबाई में 1 mm की वृद्धि होती है।
-यंग प्रत्यास्थता गुणांक ज्ञात कीजिए।
-</div>
-
-<div class="answer">
-
-<p>
-दिया है—
-</p>
-
-<div class="formula">
-
-\[
-L=2m
-\]
-
-\[
-A=1\times10^{-6}m^2
-\]
-
-\[
-F=100N
-\]
-
-\[
-\Delta L=1mm=1\times10^{-3}m
-\]
-
-</div>
-
-<p>
-यंग प्रत्यास्थता गुणांक—
-</p>
-
-<div class="formula">
-
-\[
-Y=\frac{FL}{A\Delta L}
-\]
-
-\[
-Y=
-\frac{100\times2}
-{(1\times10^{-6})(1\times10^{-3})}
-\]
-
-\[
-\boxed{
-Y=2\times10^{11}Pa
-}
-\]
-
-</div>
-
-</div>
-</div>
-
-
-<!-- IMPORTANT FORMULAS -->
-
-<div class="qa-box">
-
-<div class="question">
-📌 प्रत्यास्थता के महत्वपूर्ण सूत्र
-</div>
-
-<div class="answer">
-
-<div class="formula">
-
-\[
-\boxed{\text{प्रतिबल}=\frac{F}{A}}
-\]
-
-\[
-\boxed{\text{अनुदैर्ध्य विकृति}=\frac{\Delta L}{L}}
-\]
-
-\[
-\boxed{Y=\frac{FL}{A\Delta L}}
-\]
-
-\[
-\boxed{K=-\frac{\Delta P}{\Delta V/V}}
-\]
-
-\[
-\boxed{G=\frac{\text{अपरूपण प्रतिबल}}
-{\text{अपरूपण विकृति}}}
-\]
-
-\[
-\boxed{Y=\frac{9KG}{3K+G}}
-\]
-
-\[
-\boxed{Y=2G(1+\nu)}
-\]
-
-\[
-\boxed{U=\frac{1}{2}F\Delta L}
-\]
-
-\[
-\boxed{
-u=\frac{1}{2}
-(\text{प्रतिबल})(\text{विकृति})
-}
-\]
-
-</div>
-
-</div>
-</div>
-
-
-</div>
-
-
-<!-- PROTECTION -->
-
-<script>
-
-document.addEventListener("contextmenu", e => e.preventDefault());
-
-document.addEventListener("selectstart", e => e.preventDefault());
-
-document.addEventListener("copy", e => {
-
-    e.preventDefault();
-
-    alert("Copying content is not allowed");
-
-});
-
-</script>
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
-</html>
-
-
 
 
 <!-- PROTECTION -->
