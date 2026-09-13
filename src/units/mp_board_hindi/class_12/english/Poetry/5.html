@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="PAL STUDY CENTER - Hindi Study Notes, Questions and Answers, MCQs and Important Questions">
+
+    <title>PAL STUDY CENTER | Chapter Name</title>
+
+
+    <!-- =========================
+         BOOTSTRAP CSS
+    ========================= -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <style>
+
+        /* =========================
+           GLOBAL
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f5f7fb;
+            line-height: 1.7;
+
+            font-family:
+                Arial,
+                "Noto Sans Devanagari",
+                "Mangal",
+                sans-serif;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            background: rgba(23, 74, 126, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+            padding: 10px 0;
+            transition: 0.3s;
+        }
+
+
+        .navbar-brand {
+            font-size: 40px;
+            font-weight: 700;
+            color: white !important;
+            text-decoration: none;
+        }
+
+
+        .navbar-brand span {
+            color: #93c5fd;
+        }
+
+
+        /* =========================
+           MAIN CONTENT
+        ========================= */
+
+        .notes-container {
+            max-width: 900px;
+            margin:100px auto 50px;
+            padding: 3px 15px;
+        }
+
+
+        /* =========================
+           QUESTION / CONTENT BOX
+        ========================= */
+
+        .qa-box {
+            padding: 20px;
+            background: white;
+            margin-bottom: 18px;
+            border-radius: 14px;
+            border-left: 6px solid #1565c0;
+
+            box-shadow:
+                0 4px 12px rgba(0, 0, 0, 0.08);
+
+            transition: 0.25s;
+        }
+
+
+        .qa-box:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* =========================
+           SECTION TITLE
+        ========================= */
+
+        .notes-title {
+            background: #174a7e;
+            color: white;
+
+            padding: 15px 20px;
+
+            border-radius: 10px;
+
+            font-size: 20px;
+            font-weight: bold;
+
+            margin: 0px 0px 0px 0px;
+        }
+
+
+        /* =========================
+           QUESTION
+        ========================= */
+
+        .question {
+            font-weight: bold;
+            color: #1b3a57;
+
+            margin-bottom: 10px;
+
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           ANSWER
+        ========================= */
+
+        .answer {
+            color: #2c3e50;
+
+            text-align: left;
+
+            font-size: 16px;
+        }
+
+
+        .answer b {
+            color: #174a73;
+        }
+
+
+        .answer p {
+            margin-bottom: 12px;
+        }
+
+
+        /* =========================
+           YEAR BADGE
+        ========================= */
+
+        .year {
+            display: inline-block;
+
+            background: #fff3cd;
+            color: #856404;
+
+            padding: 2px 9px;
+
+            border-radius: 12px;
+
+            font-size: 13px;
+
+            margin-left: 5px;
+        }
+
+
+        /* =========================
+           MCQ
+        ========================= */
+
+        .mcq {
+            background: #f8fbff;
+
+            padding: 15px;
+
+            border-radius: 10px;
+
+            margin-top: 10px;
+            margin-bottom: 18px;
+
+            border: 1px solid #e2edf8;
+        }
+
+
+        .mcq-option {
+            padding: 4px 0;
+        }
+
+
+        .correct {
+            font-weight: bold;
+            color: #198754;
+        }
+
+
+        /* =========================
+           IMPORTANT BOX
+        ========================= */
+
+        .important {
+            background: #fff8e1;
+
+            border-left: 5px solid #ffc107;
+
+            padding: 15px;
+
+            border-radius: 8px;
+        }
+
+
+        /* =========================
+           EXTRACT
+        ========================= */
+
+        .extract {
+            background: #f1f8ff;
+
+            border: 1px solid #cfe5ff;
+
+            padding: 18px;
+
+            border-radius: 10px;
+
+            font-style: italic;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================
+           HORIZONTAL LINE
+        ========================= */
+
+        hr {
+            border: 0;
+
+            border-top: 1px solid #ddd;
+
+            margin: 20px 0;
+        }
+
+
+        /* =========================
+           MOBILE RESPONSIVE
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            .navbar-brand {
+                font-size: 30px;
+            }
+
+            .notes-container {
+                margin-top: 100px;
+                padding: 3px 10px;
+            }
+
+            .qa-box {
+                padding: 15px;
+
+                border-left-width: 4px;
+            }
+
+            .notes-title {
+                font-size: 18px;
+                padding: 13px 15px;
+            }
+
+            .question {
+                font-size: 20px;
+            }
+
+            .answer {
+                font-size: 20px;
+            }
+
+        }
+
+
+        /* =========================
+           SMALL MOBILE
+        ========================= */
+
+        @media (max-width: 480px) {
+
+            .navbar-brand {
+                font-size: 48px;
+            }
+
+            .notes-container {
+                margin-top: 155px;
+            }
+
+            .qa-box {
+                padding: 12px;
+            }
+
+            .notes-title {
+                font-size: 17px;
+            }
+
+            .year {
+                font-size: 11px;
+                margin-top: 4px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================= -->
+
+    <nav class="navbar fixed-top">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="../index.html">
+                पाल <span>स्टडी सेंटर</span>
+            </a>
+
+
+            <!-- Navbar toggler को आपके निर्देश के अनुसार रखा गया है -->
+
+            <button
+                class="navbar-toggler bg-light"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-label="Toggle navigation"
+            >
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================= -->
+
+    <main class="notes-container">
+
+
+        <!-- =========================
+             CHAPTER INTRODUCTION
+        ========================= -->
+<!-- =========================
+     CHAPTER INTRODUCTION
+========================= -->
+
+<div class="notes-title">
+    📘 Poem 5 – Aunt Jennifer's Tigers
+</div>
+
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ By Adrienne Rich
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>कविता का परिचय:</b>
+            <i>Aunt Jennifer's Tigers</i> प्रसिद्ध कवयित्री
+            <b>Adrienne Rich</b> की कविता है। इसमें कवयित्री ने
+            एक ऐसी विवाहित महिला <b>Aunt Jennifer</b> की स्थिति का
+            वर्णन किया है जो अपने वैवाहिक जीवन में दबाव, भय और
+            पुरुष-प्रधान व्यवस्था से पीड़ित है। वह अपनी भावनाओं और
+            स्वतंत्रता की इच्छा को कढ़ाई के माध्यम से व्यक्त करती है।
+        </p>
+
+        <p>
+            <b>मुख्य विषय:</b>
+            Aunt Jennifer अपने पर्दे पर चमकीले और सुंदर बाघों की
+            कढ़ाई करती हैं। ये बाघ जंगल के <b>denizens</b> अर्थात
+            वासी हैं और उन्हें <b>chivalric</b> अर्थात वीर,
+            साहसी और शौर्यपूर्ण बताया गया है। बाघ स्वतंत्र,
+            निर्भीक और शक्तिशाली हैं। वे Aunt Jennifer के अपने
+            व्यक्तित्व से बिल्कुल अलग हैं, क्योंकि वह स्वयं
+            भयभीत और दबाव में जीवन जी रही हैं।
+        </p>
+
+        <p>
+            <b>बाघों का प्रतीक:</b>
+            Aunt Jennifer द्वारा बनाए गए बाघ उनकी स्वतंत्रता,
+            निर्भीकता और दबे हुए सपनों के प्रतीक हैं। वह स्वयं
+            जिस स्वतंत्र और निडर जीवन को नहीं जी पातीं, उसे अपने
+            कलात्मक कार्य में व्यक्त करती हैं। इसलिए बाघ उनके
+            भीतर छिपी रचनात्मक शक्ति और स्वतंत्रता की इच्छा को
+            दर्शाते हैं।
+        </p>
+
+        <p>
+            <b>Wedding Band और वैवाहिक जीवन:</b>
+            कविता में <b>'wedding band'</b> केवल शादी की अंगूठी
+            नहीं है, बल्कि यह Aunt Jennifer पर मौजूद वैवाहिक
+            जिम्मेदारियों, दबाव और पति के नियंत्रण का प्रतीक है।
+            <b>'Massive weight of uncle's wedding band'</b> से
+            पता चलता है कि उनका वैवाहिक जीवन उनके लिए बहुत
+            भारी और बोझिल बन गया है।
+        </p>
+
+        <p>
+            <b>'Ringed' और 'Ordeals':</b>
+            Aunt Jennifer अनेक <b>ordeals</b> अर्थात कठिनाइयों,
+            जिम्मेदारियों और मानसिक दबाव से घिरी हुई हैं।
+            <b>'Ringed'</b> शब्द यह संकेत देता है कि वे अपने
+            वैवाहिक बंधन और उससे जुड़े दबाव से पूरी तरह घिरी हुई
+            हैं तथा उससे स्वतंत्र नहीं हो पा रही हैं।
+        </p>
+
+        <p>
+            <b>Aunt Jennifer का भय:</b>
+            Aunt Jennifer अपने पति के प्रभुत्व और वैवाहिक जीवन
+            के दबाव से भयभीत रहती हैं। उनकी उँगलियाँ भी कढ़ाई
+            करते समय आसानी से काम नहीं कर पातीं। इससे उनके
+            मानसिक तनाव और कमजोर स्थिति का पता चलता है। उन्हें
+            लगता है कि उनके जीवन की कठिनाइयाँ मृत्यु तक उनका
+            पीछा करेंगी।
+        </p>
+
+        <p>
+            <b>मृत्यु के बाद बाघ:</b>
+            Aunt Jennifer की मृत्यु के बाद भी उनके द्वारा बनाए गए
+            बाघ पर्दे पर स्वतंत्र और निर्भीक होकर चलते रहेंगे।
+            इसका अर्थ है कि उनकी कला उनके दबे हुए सपनों,
+            स्वतंत्रता की इच्छा और साहस को उनके बाद भी जीवित रखेगी।
+        </p>
+
+        <p>
+            <b>स्त्री की स्थिति:</b>
+            कविता पुरुष-प्रधान समाज में महिलाओं के शोषण और
+            दमन को उजागर करती है। Aunt Jennifer अपने वैवाहिक
+            जीवन में स्वतंत्र रूप से अपनी इच्छाएँ व्यक्त नहीं
+            कर पातीं। उनकी कला उनके दबे हुए व्यक्तित्व और
+            स्वतंत्रता की इच्छा को आवाज देती है।
+        </p>
+
+        <p>
+            <b>मुख्य संदेश:</b>
+            कविता का संदेश है कि किसी भी महिला को भय, दबाव और
+            नियंत्रण में जीवन नहीं जीना चाहिए। प्रत्येक व्यक्ति
+            को स्वतंत्रता, सम्मान और अपनी पहचान के साथ जीने का
+            अधिकार है। Aunt Jennifer के बाघ हमें बताते हैं कि
+            दबे हुए सपने और स्वतंत्रता की इच्छा कला के माध्यम से
+            भी जीवित रह सकती है।
+        </p>
+
+        <p>
+            <b>केंद्रीय भाव:</b>
+            <i>Aunt Jennifer's Tigers</i> का केंद्रीय भाव
+            पुरुष-प्रधान वैवाहिक व्यवस्था में महिलाओं के
+            दमन और उनकी स्वतंत्रता की इच्छा को व्यक्त करना है।
+            Aunt Jennifer के भयभीत जीवन और उनके द्वारा बनाए गए
+            निर्भीक बाघों के बीच स्पष्ट विरोधाभास दिखाई देता है।
+            बाघ उनकी रचनात्मक शक्ति, स्वतंत्रता और उस जीवन के
+            प्रतीक हैं जिसकी वे मन ही मन इच्छा करती हैं।
+        </p>
+
+    </div>
+
+</section>
+        <!-- =========================
+             QUESTION WITH YEAR
+        ========================= -->
+<div class="notes-title">
+                📖 Questions &amp; Answers
+            </div>
+
+        <!-- =========================
+     QUESTIONS & ANSWERS
+========================= -->
+
+
+<!-- Q1 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 1. Why are the tigers called Aunt Jennifer's tigers?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            बाघों को Aunt Jennifer's Tigers क्यों कहा गया है?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            The tigers are called Aunt Jennifer's tigers because Aunt
+            Jennifer has embroidered them on a panel. They represent
+            her imagination and her desire for a free and fearless life.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            बाघों को Aunt Jennifer's Tigers इसलिए कहा गया है क्योंकि
+            Aunt Jennifer ने उन्हें एक पर्दे पर कढ़ाई करके बनाया है।
+            ये बाघ उनकी कल्पना और स्वतंत्र तथा निर्भीक जीवन जीने की
+            इच्छा का प्रतीक हैं।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q2 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 2. Why did Aunt Jennifer choose to embroider tigers on the panel?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            Aunt Jennifer ने पर्दे पर बाघों को ही काढ़ना क्यों चुना?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            Aunt Jennifer chose to embroider tigers because they were
+            symbols of freedom, courage and fearlessness. She herself
+            lived under pressure and fear, so through the tigers she
+            expressed her desire to be free and fearless.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            Aunt Jennifer ने बाघों को इसलिए काढ़ा क्योंकि वे स्वतंत्रता,
+            साहस और निर्भीकता के प्रतीक थे। वह स्वयं दबाव और भय में
+            जीवन जी रही थीं, इसलिए बाघों के माध्यम से उन्होंने अपने
+            स्वतंत्र और निर्भीक जीवन जीने की इच्छा व्यक्त की।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q3 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 3. How do 'denizens' and 'chivalric' add to our
+        understanding of the tiger's attitude?
+        <span class="year">NCERT</span>
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            'Denizens' और 'chivalric' शब्द बाघों के रवैये को समझने
+            में हमारी किस प्रकार सहायता करते हैं?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            'Denizens' means inhabitants or dwellers of a particular
+            place. The tigers are called denizens of the green world,
+            meaning the forest. 'Chivalric' suggests that they are
+            brave, fearless, proud and majestic. These words show the
+            tigers as powerful and independent creatures.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            'Denizens' का अर्थ किसी विशेष स्थान के निवासी या वासी होता है।
+            बाघों को हरी-भरी दुनिया अर्थात जंगल का वासी कहा गया है।
+            'Chivalric' शब्द उनके साहसी, निर्भीक, गौरवपूर्ण और
+            शानदार स्वभाव को दर्शाता है। ये शब्द बाघों को शक्तिशाली
+            और स्वतंत्र प्राणी के रूप में प्रस्तुत करते हैं।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q4 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 4. What does 'wedding band' stand for?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            'Wedding band' किसका प्रतीक है?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            The 'wedding band' stands for the marital responsibilities,
+            restrictions and pressures that Aunt Jennifer has to bear.
+            It also represents the control and dominance of her husband.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            'Wedding band' वैवाहिक जिम्मेदारियों, बंधनों और दबाव का
+            प्रतीक है जिन्हें Aunt Jennifer को सहना पड़ता है। यह उनके
+            पति के नियंत्रण और प्रभुत्व को भी दर्शाता है।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q5 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 5. What is suggested by the image 'massive weight of
+        Uncle's wedding band'?
+        <span class="year">NCERT; 2023, 2025</span>
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            'Uncle's wedding band का भारी भार' वाली छवि से क्या
+            आशय है?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            The image suggests that Aunt Jennifer is heavily burdened
+            by her married life. Her husband's dominance, household
+            responsibilities and restrictions have made her life
+            difficult and oppressive.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            इस छवि से पता चलता है कि Aunt Jennifer अपने वैवाहिक जीवन
+            के भारी दबाव से बोझिल हैं। उनके पति का प्रभुत्व, घरेलू
+            जिम्मेदारियाँ और बंधन उनके जीवन को कठिन और उत्पीड़नपूर्ण
+            बना देते हैं।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q6 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 6. What are the 'ordeals' Aunt Jennifer is surrounded by?
+        Why is it significant that the poet uses the word 'ringed'?
+        What are the meanings of the word 'ringed' in the poem?
+        <span class="year">NCERT</span>
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            Aunt Jennifer किन 'ordeals' अर्थात कठिनाइयों से घिरी हुई हैं?
+            कवयित्री ने 'ringed' शब्द का प्रयोग क्यों किया है और कविता
+            में 'ringed' के क्या अर्थ हैं?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            Aunt Jennifer is surrounded by the ordeals of an oppressive
+            married life, heavy responsibilities, fear and her husband's
+            dominance. The word 'ringed' is significant because it
+            suggests that she is trapped and surrounded by the restrictions
+            of marriage. It also connects with the wedding ring on her finger.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            Aunt Jennifer दमनकारी वैवाहिक जीवन, अत्यधिक जिम्मेदारियों,
+            भय और अपने पति के प्रभुत्व जैसी कठिनाइयों से घिरी हुई हैं।
+            'Ringed' शब्द महत्वपूर्ण है क्योंकि यह बताता है कि वह
+            वैवाहिक बंधनों और प्रतिबंधों से घिरी हुई तथा उनमें फँसी हुई हैं।
+            यह शब्द उनकी उँगली में पहनी हुई शादी की अंगूठी से भी जुड़ा है।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q7 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 7. Why do you think Aunt Jennifer created animals that
+        are so different from her own character? What might the poet
+        be suggesting through this difference?
+        <span class="year">NCERT</span>
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            आपको क्यों लगता है कि Aunt Jennifer ने अपने व्यक्तित्व से
+            बिल्कुल अलग जानवर बनाए? कवयित्री इस अंतर के माध्यम से
+            क्या बताना चाहती है?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            Aunt Jennifer created fearless and powerful tigers because
+            they represented the qualities she herself lacked in her
+            oppressed life. She wanted to be free and courageous like
+            the tigers. The poet suggests a contrast between Aunt
+            Jennifer's fearful life and the freedom and confidence
+            represented by the tigers.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            Aunt Jennifer ने निर्भीक और शक्तिशाली बाघ इसलिए बनाए क्योंकि
+            वे उन गुणों का प्रतिनिधित्व करते थे जो उनके दबे हुए जीवन
+            में नहीं थे। वह बाघों की तरह स्वतंत्र और साहसी बनना चाहती थीं।
+            कवयित्री Aunt Jennifer के भयपूर्ण जीवन और बाघों की स्वतंत्रता
+            तथा आत्मविश्वास के बीच का विरोधाभास दिखाती हैं।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q8 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 8. Of what or of whom is Aunt Jennifer terrified in the
+        third stanza?
+        <span class="year">NCERT</span>
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            तीसरे छंद में Aunt Jennifer किससे भयभीत हैं?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            Aunt Jennifer is terrified of the oppressive and dominating
+            nature of her husband and the burdens of her married life.
+            She has lived under this fear and pressure for a long time.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            Aunt Jennifer अपने पति के दमनकारी और प्रभुत्वपूर्ण व्यवहार
+            तथा वैवाहिक जीवन के बोझ से भयभीत हैं। वह लंबे समय से इसी
+            भय और दबाव में जीवन जी रही हैं।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q9 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 9. For Aunt Jennifer, what do the tigers symbolise?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            Aunt Jennifer के लिए बाघ किस बात के प्रतीक हैं?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            The tigers symbolise freedom, courage, confidence and the
+            creative energy of Aunt Jennifer. They represent the fearless
+            life that she desires but cannot experience in reality.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            बाघ Aunt Jennifer के लिए स्वतंत्रता, साहस, आत्मविश्वास और
+            रचनात्मक ऊर्जा के प्रतीक हैं। वे उस निर्भीक जीवन का
+            प्रतिनिधित्व करते हैं जिसे वह चाहती हैं, लेकिन वास्तविक
+            जीवन में जी नहीं पातीं।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q10 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 10. What will happen to Aunt Jennifer's tigers when she is dead?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            Aunt Jennifer की मृत्यु के बाद उनके बाघों का क्या होगा?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            After Aunt Jennifer's death, the embroidered tigers will
+            continue to prance proudly on the panel. They will remain
+            as a lasting symbol of her desire for freedom and fearlessness.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            Aunt Jennifer की मृत्यु के बाद भी उनके द्वारा काढ़े गए
+            बाघ पर्दे पर गर्व और स्वतंत्रता के साथ चलते रहेंगे।
+            वे उनकी स्वतंत्रता और निर्भीकता की इच्छा के स्थायी
+            प्रतीक बने रहेंगे।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q11 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 11. Summarize the poem 'Aunt Jennifer's Tigers'.
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            'Aunt Jennifer's Tigers' कविता का संक्षेप में वर्णन कीजिए।
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            The poem describes the oppressed life of Aunt Jennifer,
+            who is dominated by her husband and burdened by the
+            responsibilities of married life. She expresses her hidden
+            desire for freedom through her embroidery. She creates
+            bright and fearless tigers that move proudly in a green
+            world. The tigers represent the courage, freedom and
+            confidence that Aunt Jennifer wishes to have.
+        </p>
+
+        <p>
+            The heavy wedding band represents the burden and restrictions
+            of her marriage. Although Aunt Jennifer remains fearful and
+            oppressed throughout her life, her embroidered tigers will
+            continue to live on the panel even after her death. Thus,
+            her art keeps her dream of freedom alive.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            यह कविता Aunt Jennifer के दमनपूर्ण जीवन का वर्णन करती है।
+            उनके पति का प्रभुत्व और वैवाहिक जीवन की जिम्मेदारियाँ
+            उनके जीवन को बोझिल बना देती हैं। वह अपनी छिपी हुई
+            स्वतंत्रता की इच्छा को कढ़ाई के माध्यम से व्यक्त करती हैं।
+            वह चमकीले और निर्भीक बाघ बनाती हैं जो हरी-भरी दुनिया में
+            गर्व से घूमते हैं। ये बाघ उस साहस, स्वतंत्रता और आत्मविश्वास
+            के प्रतीक हैं जिन्हें Aunt Jennifer अपने जीवन में पाना चाहती हैं।
+        </p>
+
+        <p>
+            भारी शादी की अंगूठी उनके वैवाहिक जीवन के बोझ और बंधनों का
+            प्रतीक है। यद्यपि Aunt Jennifer अपने पूरे जीवन भय और
+            उत्पीड़न में रहती हैं, फिर भी उनकी मृत्यु के बाद उनके
+            काढ़े हुए बाघ पर्दे पर जीवित रहेंगे। इस प्रकार उनकी कला
+            उनकी स्वतंत्रता की इच्छा को हमेशा जीवित रखेगी।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q12 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 12. What is the central idea of the poem
+        'Aunt Jennifer's Tigers'?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            'Aunt Jennifer's Tigers' कविता का मुख्य विषय या केंद्रीय
+            भाव क्या है?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            The central idea of the poem is the oppression of women in
+            a male-dominated society. Aunt Jennifer is trapped in an
+            unhappy and restrictive married life. Through her tigers,
+            she expresses her desire for freedom, courage and an
+            independent identity. The poem shows that art can preserve
+            a person's dreams even when life does not allow them to
+            become reality.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            कविता का केंद्रीय भाव पुरुष-प्रधान समाज में महिलाओं के
+            दमन को उजागर करना है। Aunt Jennifer एक दुखी और बंधनपूर्ण
+            वैवाहिक जीवन में फँसी हुई हैं। अपने बाघों के माध्यम से
+            वह स्वतंत्रता, साहस और स्वतंत्र पहचान की इच्छा व्यक्त
+            करती हैं। कविता बताती है कि जब वास्तविक जीवन में सपने
+            पूरे नहीं हो पाते, तब भी कला उन सपनों को जीवित रख सकती है।
+        </p>
+
+    </div>
+
+</section>
+
+
+        <!-- =========================
+             EXTRACT
+        ========================= -->
+<div class="notes-title">
+                📝 Extract – A
+            </div>
+
+        <section class="qa-box">
+
+            <div class="extract">
+
+                Write the extract/passage here.
+
+            </div>
+
+
+            <div class="answer">
+
+
+                <!-- MCQ 1 -->
+
+                <p>
+                    <b>1. Write your MCQ question here?</b>
+                </p>
+
+
+                <div class="mcq">
+
+                    <div class="mcq-option">
+                        (a) Option A
+                    </div>
+
+                    <div class="mcq-option">
+                        (b) Option B
+                    </div>
+
+                    <div class="mcq-option correct">
+                        (c) Correct Answer
+                    </div>
+
+                    <div class="mcq-option">
+                        (d) Option D
+                    </div>
+
+                </div>
+
+
+
+                <!-- MCQ 2 -->
+
+                <p>
+                    <b>2. Write your second MCQ here?</b>
+                </p>
+
+
+                <div class="mcq">
+
+                    <div class="mcq-option">
+                        (a) Option A
+                    </div>
+
+                    <div class="mcq-option correct">
+                        (b) Correct Answer
+                    </div>
+
+                    <div class="mcq-option">
+                        (c) Option C
+                    </div>
+
+                    <div class="mcq-option">
+                        (d) Option D
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+        <!-- =========================
+             IMPORTANT NOTE
+        ========================= -->
+<div class="notes-title">
+            Important MCQ
+            </div>
+
+        <section class="qa-box">
+
+            <div class="important">
+
+                यहाँ महत्वपूर्ण जानकारी लिखें।
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         COPY PROTECTION
+    ========================= -->
+
+    <script>
+
+        /* Disable right click */
+
+        document.addEventListener("contextmenu", function (e) {
+
+            e.preventDefault();
+
+        });
+
+
+        /* Disable text selection */
+
+        document.addEventListener("selectstart", function (e) {
+
+            e.preventDefault();
+
+        });
+
+
+        /* Disable copy */
+
+        document.addEventListener("copy", function (e) {
+
+            e.preventDefault();
+
+            alert("Copying content is not allowed.");
+
+        });
+
+    </script>
+
+
+
+    <!-- =========================
+         BOOTSTRAP JS
+         केवल एक बार
+    ========================= -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+</body>
+
+</html>

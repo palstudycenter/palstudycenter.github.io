@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="PAL STUDY CENTER - Hindi Study Notes, Questions and Answers, MCQs and Important Questions">
+
+    <title>PAL STUDY CENTER | Chapter Name</title>
+
+
+    <!-- =========================
+         BOOTSTRAP CSS
+    ========================= -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <style>
+
+        /* =========================
+           GLOBAL
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f5f7fb;
+            line-height: 1.7;
+
+            font-family:
+                Arial,
+                "Noto Sans Devanagari",
+                "Mangal",
+                sans-serif;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            background: rgba(23, 74, 126, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+            padding: 10px 0;
+            transition: 0.3s;
+        }
+
+
+        .navbar-brand {
+            font-size: 40px;
+            font-weight: 700;
+            color: white !important;
+            text-decoration: none;
+        }
+
+
+        .navbar-brand span {
+            color: #93c5fd;
+        }
+
+
+        /* =========================
+           MAIN CONTENT
+        ========================= */
+
+        .notes-container {
+            max-width: 900px;
+            margin:100px auto 50px;
+            padding: 3px 15px;
+        }
+
+
+        /* =========================
+           QUESTION / CONTENT BOX
+        ========================= */
+
+        .qa-box {
+            padding: 20px;
+            background: white;
+            margin-bottom: 18px;
+            border-radius: 14px;
+            border-left: 6px solid #1565c0;
+
+            box-shadow:
+                0 4px 12px rgba(0, 0, 0, 0.08);
+
+            transition: 0.25s;
+        }
+
+
+        .qa-box:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* =========================
+           SECTION TITLE
+        ========================= */
+
+        .notes-title {
+            background: #174a7e;
+            color: white;
+
+            padding: 15px 20px;
+
+            border-radius: 10px;
+
+            font-size: 20px;
+            font-weight: bold;
+
+            margin: 0px 0px 0px 0px;
+        }
+
+
+        /* =========================
+           QUESTION
+        ========================= */
+
+        .question {
+            font-weight: bold;
+            color: #1b3a57;
+
+            margin-bottom: 10px;
+
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           ANSWER
+        ========================= */
+
+        .answer {
+            color: #2c3e50;
+
+            text-align: left;
+
+            font-size: 16px;
+        }
+
+
+        .answer b {
+            color: #174a73;
+        }
+
+
+        .answer p {
+            margin-bottom: 12px;
+        }
+
+
+        /* =========================
+           YEAR BADGE
+        ========================= */
+
+        .year {
+            display: inline-block;
+
+            background: #fff3cd;
+            color: #856404;
+
+            padding: 2px 9px;
+
+            border-radius: 12px;
+
+            font-size: 13px;
+
+            margin-left: 5px;
+        }
+
+
+        /* =========================
+           MCQ
+        ========================= */
+
+        .mcq {
+            background: #f8fbff;
+
+            padding: 15px;
+
+            border-radius: 10px;
+
+            margin-top: 10px;
+            margin-bottom: 18px;
+
+            border: 1px solid #e2edf8;
+        }
+
+
+        .mcq-option {
+            padding: 4px 0;
+        }
+
+
+        .correct {
+            font-weight: bold;
+            color: #198754;
+        }
+
+
+        /* =========================
+           IMPORTANT BOX
+        ========================= */
+
+        .important {
+            background: #fff8e1;
+
+            border-left: 5px solid #ffc107;
+
+            padding: 15px;
+
+            border-radius: 8px;
+        }
+
+
+        /* =========================
+           EXTRACT
+        ========================= */
+
+        .extract {
+            background: #f1f8ff;
+
+            border: 1px solid #cfe5ff;
+
+            padding: 18px;
+
+            border-radius: 10px;
+
+            font-style: italic;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================
+           HORIZONTAL LINE
+        ========================= */
+
+        hr {
+            border: 0;
+
+            border-top: 1px solid #ddd;
+
+            margin: 20px 0;
+        }
+
+
+        /* =========================
+           MOBILE RESPONSIVE
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            .navbar-brand {
+                font-size: 30px;
+            }
+
+            .notes-container {
+                margin-top: 100px;
+                padding: 3px 10px;
+            }
+
+            .qa-box {
+                padding: 15px;
+
+                border-left-width: 4px;
+            }
+
+            .notes-title {
+                font-size: 18px;
+                padding: 13px 15px;
+            }
+
+            .question {
+                font-size: 20px;
+            }
+
+            .answer {
+                font-size: 20px;
+            }
+
+        }
+
+
+        /* =========================
+           SMALL MOBILE
+        ========================= */
+
+        @media (max-width: 480px) {
+
+            .navbar-brand {
+                font-size: 48px;
+            }
+
+            .notes-container {
+                margin-top: 155px;
+            }
+
+            .qa-box {
+                padding: 12px;
+            }
+
+            .notes-title {
+                font-size: 17px;
+            }
+
+            .year {
+                font-size: 11px;
+                margin-top: 4px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================= -->
+
+    <nav class="navbar fixed-top">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="../index.html">
+                पाल <span>स्टडी सेंटर</span>
+            </a>
+
+
+            <!-- Navbar toggler को आपके निर्देश के अनुसार रखा गया है -->
+
+            <button
+                class="navbar-toggler bg-light"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-label="Toggle navigation"
+            >
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================= -->
+
+    <main class="notes-container">
+
+
+<!-- =========================
+     CHAPTER INTRODUCTION
+========================= -->
+
+<div class="notes-title">
+    📘 Poem 3 – A Thing of Beauty
+</div>
+
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ By John Keats
+    </div>
+
+
+    <div class="answer">
+
+        <p>
+            <b>कविता का परिचय:</b>
+            <i>A Thing of Beauty</i> प्रसिद्ध अंग्रेजी कवि
+            <b>John Keats</b> की प्रकृति और सुंदरता पर आधारित कविता है।
+            कवि के अनुसार कोई भी सुंदर वस्तु मनुष्य के लिए हमेशा आनंद का
+            स्रोत होती है। सुंदरता केवल कुछ क्षणों की खुशी नहीं देती,
+            बल्कि मन पर ऐसी स्थायी छाप छोड़ती है जो कठिन समय में भी
+            हमें आशा, शांति और प्रसन्नता प्रदान करती है।
+        </p>
+
+
+        <p>
+            <b>मुख्य विषय:</b>
+            मनुष्य का जीवन दुख, निराशा, ईर्ष्या, घृणा और अनेक परेशानियों
+            से भरा हो सकता है। इन <b>'gloomy days and dark spirits'</b>
+            के बावजूद प्रकृति की सुंदर वस्तुएँ मनुष्य को जीवन से प्रेम
+            करने की प्रेरणा देती हैं। सूर्य, चंद्रमा, हरे-भरे पेड़,
+            फूल, पशु और स्वच्छ जल की धाराएँ मन को शांति और आनंद देती हैं।
+            इनका सौंदर्य कभी समाप्त नहीं होता और इनकी स्मृति भी लंबे समय
+            तक हमारे मन में बनी रहती है।
+        </p>
+
+
+        <p>
+            कवि ने प्रकृति की अनेक सुंदर वस्तुओं का उल्लेख किया है।
+            इनमें <b>सूर्य, चंद्रमा, छायादार पेड़, भेड़, डैफोडिल के फूल,
+            स्वच्छ जल की धाराएँ और जंगल में खिलने वाले कस्तूरी-गुलाब</b>
+            शामिल हैं। इन सुंदर वस्तुओं को देखकर मनुष्य अपने दुखों और
+            चिंताओं को भूल जाता है तथा उसके मन में नई ऊर्जा और आशा का
+            संचार होता है।
+        </p>
+
+
+        <p>
+            <b>डैफोडिल और साफ जल की धाराएँ</b> प्रकृति के सुंदर और
+            जीवनदायक रूप को दर्शाती हैं। हरे वातावरण में खिले डैफोडिल
+            मन को प्रसन्न करते हैं, जबकि स्वच्छ जल की धाराएँ शीतलता और
+            शांति प्रदान करती हैं। इस प्रकार प्रकृति का सौंदर्य हमारे
+            वातावरण को सुंदर बनाता है और हमारे मन को सकारात्मक बनाता है।
+        </p>
+
+
+        <p>
+            कवि <b>'mighty dead'</b> अर्थात महान और पराक्रमी लोगों को भी
+            सुंदरता का हिस्सा मानता है। उनके महान और नेक कार्य तथा
+            मानवता के लिए किए गए त्याग आज भी लोगों को प्रेरित करते हैं।
+            उनके अच्छे कार्यों की विरासत उनके जाने के बाद भी जीवित रहती है।
+            इसी कारण उनके साथ <b>'grandeur'</b> अर्थात महानता और वैभव
+            को जोड़ा गया है।
+        </p>
+
+
+        <p>
+            हमारे <b>'gloomy days and dark spirits'</b> का कारण जीवन में
+            मौजूद दुखों के साथ-साथ मनुष्य की नकारात्मक भावनाएँ भी हैं।
+            ईर्ष्या, घृणा, स्वार्थ, क्रूरता और मानवीय मूल्यों की कमी
+            मनुष्य को निराश करती है। लेकिन सुंदर प्रकृति और अच्छे कार्यों
+            की स्मृति इस मानसिक अंधकार को दूर करके मन में आशा और
+            सकारात्मकता उत्पन्न करती है।
+        </p>
+
+
+        <p>
+            कवि के अनुसार सुंदरता का आनंद केवल थोड़े समय तक सीमित नहीं
+            रहता। जब हम किसी सुंदर वस्तु को देखते हैं, तो उसका प्रभाव
+            हमारे मन में लंबे समय तक बना रहता है। सुंदरता हमें
+            <b>शांति, खुशी और आशावाद</b> देती है तथा कठिन परिस्थितियों
+            को सहने की शक्ति प्रदान करती है।
+        </p>
+
+
+        <p>
+            कवि अंत में पृथ्वी की सुंदरता को
+            <b>'an endless fountain of immortal drink'</b> के समान
+            बताता है। इसका अर्थ है कि प्रकृति का सौंदर्य एक ऐसे
+            अनंत झरने की तरह है जो लगातार मनुष्य को आनंद और ऊर्जा
+            प्रदान करता रहता है। यह ईश्वर की ओर से मनुष्य को मिला
+            अमूल्य उपहार है।
+        </p>
+
+
+        <p>
+            <b>अच्छे जीवन का भाव:</b>
+            कविता के अनुसार प्रकृति की सुंदरता को पहचानना और उसका
+            आनंद लेना जीवन को सुखी और सकारात्मक बनाने का एक महत्वपूर्ण
+            माध्यम है। सुंदर वस्तुएँ मन के दुख और नकारात्मकता को कम
+            करती हैं। प्रकृति के संपर्क से मनुष्य को मानसिक शांति,
+            आशा और नई ऊर्जा मिलती है। इसलिए प्रकृति के सुंदर रूपों
+            का आनंद लेना और उनके प्रति संवेदनशील रहना जीवन को
+            अधिक सुंदर बनाता है।
+        </p>
+
+
+        <p>
+            <b>मुख्य संदेश:</b>
+            कविता का संदेश है कि <b>सुंदरता हमेशा आनंद देती है</b> और
+            उसका प्रभाव हमारे मन पर स्थायी रहता है। जीवन में चाहे
+            कितने भी दुख और परेशानियाँ हों, प्रकृति की सुंदर वस्तुएँ
+            हमें आशा, शांति और प्रसन्नता देती हैं। हमें प्रकृति की
+            सुंदरता को पहचानना चाहिए और उसके माध्यम से जीवन में
+            सकारात्मकता तथा आनंद प्राप्त करना चाहिए।
+        </p>
+
+
+        <p>
+            <b>केंद्रीय भाव:</b>
+            <i>A Thing of Beauty</i> का केंद्रीय भाव यह है कि सुंदरता
+            मनुष्य के जीवन में <b>आनंद, शांति, आशा और सकारात्मकता</b>
+            का स्थायी स्रोत है। प्रकृति की सुंदर वस्तुएँ तथा महान
+            लोगों के अच्छे कार्य हमारे दुखों और निराशा को दूर करते हैं।
+            कवि के अनुसार प्रकृति का सौंदर्य स्वर्ग से मिलने वाले
+            <b>अंतहीन और अमर आनंद के झरने</b> के समान है।
+        </p>
+
+    </div>
+
+</section>
+      <!-- =========================
+     QUESTIONS & ANSWERS
+========================= -->
+<div class="notes-title">
+                📖 Questions &amp; Answers
+</div>
+
+<!-- Q1 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 1. What makes human beings love life in spite of troubles and sufferings?
+        <span class="year">NCERT; 2023, 2025</span>
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            मुसीबतों और कष्टों के बावजूद मनुष्य को अपने जीवन से प्रेम करने
+            के लिए क्या प्रेरित करता है?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            Beautiful things of nature make human beings love life despite
+            troubles and sufferings. Their beauty gives us lasting joy,
+            peace, hope and positive energy.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            प्रकृति की सुंदर वस्तुएँ मुसीबतों और कष्टों के बावजूद मनुष्य को
+            जीवन से प्रेम करने के लिए प्रेरित करती हैं। उनका सौंदर्य हमें
+            स्थायी आनंद, शांति, आशा और सकारात्मक ऊर्जा प्रदान करता है।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q2 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 2. List the things of beauty mentioned in the poem
+        "A Thing of Beauty".
+        <span class="year">NCERT; 2022, 2024</span>
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            'A Thing of Beauty' कविता में उल्लिखित सुंदर वस्तुओं की सूची
+            बनाइए।
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            The beautiful things mentioned in the poem are the sun, the moon,
+            old and young trees, sheep, daffodils, clear streams, musk-roses
+            and the noble deeds and stories of great people.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            कविता में सुंदर वस्तुओं के रूप में सूर्य, चंद्रमा, पेड़, भेड़,
+            डैफोडिल के फूल, स्वच्छ जल की धाराएँ, जंगल में खिलने वाले
+            कस्तूरी-गुलाब तथा महान लोगों के नेक कार्यों और उनकी सुंदर
+            कहानियों का उल्लेख किया गया है।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q3 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 3. Do we experience things of beauty only for short moments
+        or do they make a lasting impression on us?
+        <span class="year">NCERT</span>
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            क्या हम सुंदर वस्तुओं का आनंद केवल थोड़े समय के लिए लेते हैं
+            या उनका हम पर स्थायी प्रभाव पड़ता है?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            Beautiful things make a lasting impression on us. The joy
+            created by their beauty remains in our mind and continues to
+            give us peace, hope and happiness even after the moment has passed.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            सुंदर वस्तुएँ हमारे मन पर स्थायी प्रभाव डालती हैं। उनके सौंदर्य
+            से प्राप्त आनंद उस क्षण के समाप्त होने के बाद भी हमारे मन में
+            बना रहता है और हमें शांति, आशा तथा खुशी देता है।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q4 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 4. What is the cause of our 'gloomy days and dark spirits'?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            हमारे 'gloomy days and dark spirits' अर्थात दुख भरे दिनों और
+            निराश मन का कारण क्या है?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            Our gloomy days and dark spirits are caused by sadness,
+            disappointment, selfishness, hatred, cruelty and the lack of
+            noble human values. These negative experiences make life unhappy.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            हमारे दुख भरे दिन और निराश मन दुख, निराशा, स्वार्थ, घृणा,
+            क्रूरता तथा मानवीय मूल्यों की कमी के कारण होते हैं। ये
+            नकारात्मक अनुभव हमारे जीवन को दुखी बना देते हैं।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q5 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 5. How do the 'daffodils' and 'clear rills' enrich our environment?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            'Daffodils' और 'clear rills' हमारे वातावरण को किस प्रकार
+            समृद्ध बनाते हैं?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            Daffodils add colour and beauty to the green surroundings,
+            while clear streams of water provide freshness and coolness.
+            Their beauty makes the natural environment pleasant and
+            gives joy to human beings.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            डैफोडिल के फूल हरे-भरे वातावरण में रंग और सुंदरता जोड़ते हैं,
+            जबकि स्वच्छ जल की धाराएँ ताजगी और शीतलता प्रदान करती हैं।
+            उनका सौंदर्य प्राकृतिक वातावरण को मनोहारी बनाता है और
+            मनुष्य को आनंद देता है।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q6 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 6. Why is 'grandeur' associated with the 'mighty dead'?
+        <span class="year">NCERT; 2022, 2023</span>
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            'Grandeur' अर्थात वैभव को 'mighty dead' अर्थात महान मृतकों
+            के साथ क्यों जोड़ा गया है?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            'Grandeur' is associated with the mighty dead because their
+            noble deeds, bravery and sacrifices continue to inspire people.
+            Their great achievements remain as a beautiful legacy even
+            after their death.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            'Grandeur' को महान मृतकों से इसलिए जोड़ा गया है क्योंकि उनके
+            नेक कार्य, वीरता और बलिदान आज भी लोगों को प्रेरित करते हैं।
+            उनकी महान उपलब्धियाँ उनकी मृत्यु के बाद भी सुंदर विरासत
+            के रूप में बनी रहती हैं।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q7 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 7. What is the secret of good health according to the poet?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            कवि के अनुसार अच्छे स्वास्थ्य का रहस्य क्या है?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            According to the poet, a positive and peaceful mind, along with
+            the joy received from beautiful things in nature, helps a person
+            live a healthy and happy life. Beauty removes negativity and
+            gives mental freshness.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            कवि के अनुसार सकारात्मक और शांत मन तथा प्रकृति की सुंदर
+            वस्तुओं से प्राप्त आनंद अच्छे और सुखी जीवन में सहायता करते हैं।
+            सुंदरता मन की नकारात्मकता को दूर करके मानसिक ताजगी प्रदान करती है।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q8 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 8. What image does the poet use to describe the beautiful
+        bounty of the earth?
+        <span class="year">NCERT</span>
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            कवि ने पृथ्वी के सुंदर उपहारों का वर्णन करने के लिए
+            किस चित्र का प्रयोग किया है?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            The poet uses the image of an endless fountain of immortal drink.
+            It suggests that the beautiful gifts of nature continuously
+            provide joy, peace and positive energy to human beings.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            कवि ने पृथ्वी के सुंदर उपहारों का वर्णन
+            <b>'अमर पेय के अंतहीन झरने'</b> के रूपक के द्वारा किया है।
+            इसका अर्थ है कि प्रकृति के सुंदर उपहार मनुष्य को लगातार
+            आनंद, शांति और सकारात्मक ऊर्जा प्रदान करते रहते हैं।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q9 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 9. What is the message of the poem 'A Thing of Beauty'?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            'A Thing of Beauty' कविता का क्या संदेश है?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            The poem conveys the message that beauty is a permanent source
+            of joy. Beautiful things of nature remove sadness and negativity
+            and fill our minds with peace, hope and happiness.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            कविता का संदेश है कि सुंदरता आनंद का स्थायी स्रोत है। प्रकृति
+            की सुंदर वस्तुएँ हमारे दुख और नकारात्मकता को दूर करके मन में
+            शांति, आशा और प्रसन्नता भर देती हैं।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q10 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 10. Summarize the poem 'A Thing of Beauty'.
+        <span class="year">2024</span>
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            'A Thing of Beauty' कविता का संक्षेप में वर्णन कीजिए।
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            John Keats says that a beautiful thing is a source of everlasting
+            joy. Its beauty leaves a lasting impression on our minds and
+            provides peace and hope during difficult times. Nature offers
+            many beautiful things such as the sun, moon, trees, sheep,
+            daffodils, clear streams and musk-roses. The noble deeds of
+            great people also inspire us. The poet compares the beauty of
+            nature to an endless fountain of immortal drink that continuously
+            gives happiness and positive energy.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            जॉन कीट्स कहते हैं कि सुंदर वस्तु हमेशा आनंद का स्रोत होती है।
+            उसका सौंदर्य हमारे मन पर स्थायी प्रभाव डालता है और कठिन समय
+            में हमें शांति तथा आशा प्रदान करता है। प्रकृति हमें सूर्य,
+            चंद्रमा, पेड़, भेड़, डैफोडिल, स्वच्छ जल की धाराएँ और
+            कस्तूरी-गुलाब जैसी अनेक सुंदर वस्तुएँ देती है। महान लोगों के
+            नेक कार्य भी हमें प्रेरित करते हैं। कवि प्रकृति की सुंदरता
+            की तुलना अमर आनंद देने वाले अंतहीन झरने से करता है, जो
+            लगातार हमें खुशी और सकारात्मक ऊर्जा प्रदान करता है।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q11 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 11. Write the central idea of the poem.
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            कविता का मुख्य विषय अथवा केंद्रीय भाव लिखिए।
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            The central idea of the poem is that beauty is a lasting source
+            of joy and happiness. Beautiful things of nature remove
+            negativity, give peace and inspire us to live with hope and
+            optimism. Beauty makes life meaningful and worth living.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            कविता का केंद्रीय भाव यह है कि सुंदरता आनंद और प्रसन्नता का
+            स्थायी स्रोत है। प्रकृति की सुंदर वस्तुएँ नकारात्मकता को दूर
+            करके मन को शांति देती हैं और हमें आशा तथा सकारात्मकता के साथ
+            जीवन जीने की प्रेरणा देती हैं। सुंदरता जीवन को सार्थक और
+            जीने योग्य बनाती है।
+        </p>
+
+    </div>
+
+</section>
+
+
+
+        <!-- =========================
+             EXTRACT
+        ========================= -->
+<div class="notes-title">
+                📝 Extract – A
+            </div>
+
+        <section class="qa-box">
+
+            <div class="extract">
+
+                Write the extract/passage here.
+
+            </div>
+
+
+            <div class="answer">
+
+
+                <!-- MCQ 1 -->
+
+                <p>
+                    <b>1. Write your MCQ question here?</b>
+                </p>
+
+
+                <div class="mcq">
+
+                    <div class="mcq-option">
+                        (a) Option A
+                    </div>
+
+                    <div class="mcq-option">
+                        (b) Option B
+                    </div>
+
+                    <div class="mcq-option correct">
+                        (c) Correct Answer
+                    </div>
+
+                    <div class="mcq-option">
+                        (d) Option D
+                    </div>
+
+                </div>
+
+
+
+                <!-- MCQ 2 -->
+
+                <p>
+                    <b>2. Write your second MCQ here?</b>
+                </p>
+
+
+                <div class="mcq">
+
+                    <div class="mcq-option">
+                        (a) Option A
+                    </div>
+
+                    <div class="mcq-option correct">
+                        (b) Correct Answer
+                    </div>
+
+                    <div class="mcq-option">
+                        (c) Option C
+                    </div>
+
+                    <div class="mcq-option">
+                        (d) Option D
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+        <!-- =========================
+             IMPORTANT NOTE
+        ========================= -->
+<div class="notes-title">
+            Important MCQ
+            </div>
+
+        <section class="qa-box">
+
+            <div class="important">
+
+                यहाँ महत्वपूर्ण जानकारी लिखें।
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         COPY PROTECTION
+    ========================= -->
+
+    <script>
+
+        /* Disable right click */
+
+        document.addEventListener("contextmenu", function (e) {
+
+            e.preventDefault();
+
+        });
+
+
+        /* Disable text selection */
+
+        document.addEventListener("selectstart", function (e) {
+
+            e.preventDefault();
+
+        });
+
+
+        /* Disable copy */
+
+        document.addEventListener("copy", function (e) {
+
+            e.preventDefault();
+
+            alert("Copying content is not allowed.");
+
+        });
+
+    </script>
+
+
+
+    <!-- =========================
+         BOOTSTRAP JS
+         केवल एक बार
+    ========================= -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+</body>
+
+</html>

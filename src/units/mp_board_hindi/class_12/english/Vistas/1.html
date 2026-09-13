@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="hi">
 
@@ -50,7 +49,7 @@ line-height:1.7;
 
     .navbar{
 
-      background:rgba(15,23,42,0.45);
+      background:rgba(23,74,126,0.95);
 
       backdrop-filter:blur(10px);
 
@@ -90,28 +89,16 @@ padding:20px;
 
 }
 
-.notes-title{
-
-background:#e3f2fd;
-
-color:#1565c0;
-
-padding:10px;
-
-border-left:5px solid #1565c0;
-
-border-radius:50px;
-
-font-size:30px;
-
-font-weight:bold;
-margin-top:100px;
-
-margin-bottom:50px;
-
+.notes-title {
+    background: #174a7e;
+    color: white;
+    padding: 18px 22px;
+    border-radius: 12px 12px 0 0;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 100px;
+    margin-bottom: 0;
 }
-
-
 
 .qa-box{
 
@@ -130,6 +117,8 @@ box-shadow:0 4px 12px rgba(0,0,0,.08);
 transition:.25s;
 
 }
+
+
 .qa-box:hover{
 
 transform:translateY(-4px);
@@ -191,6 +180,95 @@ margin-top:80px;
     margin:10px 0;
 }
 
+.answer table{
+    width:100%;
+    border-collapse:collapse;
+    margin:12px 0;
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    display:block;
+    overflow-x:auto;
+    box-shadow:0 2px 8px rgba(0,0,0,0.06);
+}
+
+.answer table td, .answer table th{
+    border:1px solid #ddd;
+    padding:10px 12px;
+    text-align:left;
+    vertical-align:top;
+    white-space:normal;
+}
+
+.answer table th{
+    background:#eaf2fb;
+    font-weight:bold;
+    color:#1b3a57;
+}
+
+.answer ol, .answer ul{
+    margin-left:20px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+/* =========================
+           YEAR BADGE
+        ========================= */
+
+        .year {
+            display: inline-block;
+            background: #fff3cd;
+            color: #856404;
+            padding: 2px 9px;
+            border-radius: 12px;
+            font-size: 13px;
+            margin-left: 5px;
+        }
+
+        /* =========================
+           MCQ
+        ========================= */
+
+        .mcq {
+            background: #f8fbff;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .mcq-option {
+            padding: 4px 0;
+        }
+
+        .correct {
+            font-weight: bold;
+            color: #198754;
+        }
+
+        /* =========================
+           IMPORTANT BOX
+        ========================= */
+
+        .important {
+            background: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        /* =========================
+           EXTRACT
+        ========================= */
+
+        .extract {
+            background: #f1f8ff;
+            border: 1px solid #cfe5ff;
+            padding: 18px;
+            border-radius: 10px;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
 
 </style>
 
@@ -201,216 +279,403 @@ margin-top:80px;
 <body>
 
 
-<!-- Navbar -->
-<nav class="navbar navbar-dark">
-    <div class="container">
-        <a class="navbar-brand" href="#">
-            <i class="bi bi-book-half"></i>
-            पाल <span>स्टडी सेंटर</span>
-        </a>
-    </div>
+
+<!-- NAVBAR -->
+
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+
+पाल <span>स्टडी सेंटर</span>
+
+</a>
+    <button class="navbar-toggler bg-light"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+</div>
+
 </nav>
 
 
-<div class="notes-container">
 
-    <!-- Title -->
-    <div class="notes-title">
-        <h1>Lesson 1 – The Third Level</h1>
+
+
+<!-- NOTES -->
+
+<div class="qa-box">
+  <div class="container">
+ <div class="notes-title">Lesson 1 – The Third Leve </div>  
+</div>
+</div>
+
+
+<!-- Introduction -->
+
+<div class="qa-box">
+
+    <div class="question">
+        पाठ का संक्षिप्त हिंदी अनुवाद – The Third Level
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>लेखक:</b>
+            “The Third Level” जैक फिन्नी द्वारा लिखी गई कहानी है। इसका मुख्य पात्र चार्ली है,
+            जो आधुनिक जीवन की भाग-दौड़, तनाव, भय, असुरक्षा और चिंता से परेशान है।
+        </p>
+
+        <p>
+            <b>कहानी:</b>
+            एक दिन चार्ली ग्रैंड सेंट्रल स्टेशन में एक ऐसे तीसरे स्तर पर पहुँच जाता है,
+            जो वास्तव में वहाँ मौजूद नहीं है। वहाँ का वातावरण वर्ष 1894 जैसा दिखाई देता है।
+            पुराने कपड़े, पुराने सिक्के, पुराने समाचार-पत्र और पुरानी रेलगाड़ियाँ देखकर
+            चार्ली को लगता है कि वह अतीत में पहुँच गया है।
+        </p>
+
+        <p>
+            <b>गैल्सबर्ग जाने की इच्छा:</b>
+            चार्ली अपनी पत्नी लुइसा के साथ 1894 के गैल्सबर्ग, इलिनॉय जाना चाहता है।
+            उसे लगता है कि उस समय का जीवन शांत, सुखी और सुरक्षित था। वह अपने और लुइसा
+            के लिए गैल्सबर्ग के दो टिकट खरीदना चाहता है, लेकिन पुराने नोट न होने के कारण
+            टिकट नहीं खरीद पाता।
+        </p>
+
+        <p>
+            <b>सैम की व्याख्या:</b>
+            चार्ली अपने मित्र सैम को तीसरे स्तर के बारे में बताता है। सैम एक मनोचिकित्सक
+            है। वह बताता है कि तीसरा स्तर चार्ली की जागते हुए देखी गई कल्पना है।
+            चार्ली आधुनिक दुनिया की परेशानियों से बचना चाहता है, इसलिए उसके मन में
+            अतीत में जाने की इच्छा उत्पन्न हुई।
+        </p>
+
+        <p>
+            <b>सैम का पत्र:</b>
+            बाद में सैम स्वयं गायब हो जाता है। चार्ली को सैम का एक पत्र मिलता है,
+            जो 1894 के गैल्सबर्ग से भेजा गया था। सैम चार्ली को भी वहाँ आने के लिए कहता है।
+            इससे कहानी का रहस्य और गहरा हो जाता है कि तीसरा स्तर केवल कल्पना था
+            या वास्तव में अतीत में जाने का कोई माध्यम था।
+        </p>
+
+        <p>
+            <b>कहानी का मुख्य भाव:</b>
+            कहानी <b>पलायनवाद (Escapism)</b> की भावना को दर्शाती है। आधुनिक जीवन के
+            तनाव, भय और असुरक्षा से परेशान मनुष्य शांति पाने के लिए कल्पना, अतीत की यादों,
+            शौक और रचनात्मक गतिविधियों का सहारा लेता है।
+        </p>
+
+        <p>
+            <b>तीसरे स्तर का प्रतीक:</b>
+            तीसरा स्तर चार्ली की आधुनिक जीवन से बचकर शांत, सुखी और सुरक्षित अतीत
+            में जाने की इच्छा का प्रतीक है।
+        </p>
+
+        <p>
+            <b>याद रखें:</b>
+            चार्ली → आधुनिक जीवन का तनाव → तीसरे स्तर की कल्पना → 1894 →
+            गैल्सबर्ग → शांति और सुरक्षा → पलायनवाद
+        </p>
+
+    </div>
+
+</div>
   
+<div class="qa-box">
+
+    <div class="question">
+        Q1. What does the third level refer to?
     </div>
 
+    <div class="answer">
 
-    <!-- Introduction -->
-    <h2 class="section-title">📖 परिचय</h2>
+        <strong>Ans (English):</strong>
 
-    <div class="qa-box">
-
-        <div class="question">
-            Q1. What does the third level refer to?
-        </div>
-
-        <div class="answer">
-            <strong>Ans (English):</strong>
-            The third level refers to an imaginary floor at Grand Central Station.
-            It symbolizes Charley’s wish to escape from the modern world into the peaceful past.
-        </div>
-
-        <div class="answer hindi-answer">
-            <strong>उत्तर (Hindi):</strong>
-            तीसरा स्तर ग्रैंड सेंट्रल स्टेशन का एक काल्पनिक भाग है।
-            यह चार्ली की उस इच्छा का प्रतीक है जिसमें वह आधुनिक जीवन से भागकर
-            अतीत की शांत दुनिया में जाना चाहता है।
-        </div>
+        The third level refers to an imaginary floor at Grand Central Station.
+        It symbolizes Charley’s wish to escape from the modern world into the peaceful past.
 
     </div>
 
+    <hr>
 
-    <div class="qa-box">
+    <div class="question">
+        प्रश्न 1. तीसरा स्तर किसे संदर्भित करता है?
+    </div>
 
-        <div class="question">
-            Q2. Would Charley ever go back to the ticket counter on the third level
-            to buy tickets to Galesburg for himself and his wife?
-        </div>
+    <div class="answer hindi-answer">
 
-        <div class="answer">
-            <strong>Ans (English):</strong>
-            No, Charley would never go back to the ticket counter because the third
-            level was only his imagination.
-        </div>
+        <strong>उत्तर (Hindi):</strong>
 
-        <div class="answer hindi-answer">
-            <strong>उत्तर (Hindi):</strong>
-            नहीं, चार्ली कभी भी टिकट काउंटर पर वापस नहीं जा सकता क्योंकि
-            तीसरा स्तर केवल उसकी कल्पना था।
-        </div>
+        तीसरा स्तर ग्रैंड सेंट्रल स्टेशन का एक काल्पनिक भाग है।
+        यह चार्ली की आधुनिक दुनिया से निकलकर अतीत की शांत दुनिया में जाने की इच्छा का प्रतीक है।
 
     </div>
 
+</div>
 
-    <div class="qa-box">
 
-        <div class="question">
-            Q3. Do you think that the third level was a medium of escape for Charley? Why?
-        </div>
+<div class="qa-box">
 
-        <div class="answer">
-            <strong>Ans (English):</strong>
-            Yes, it was a medium of escape for Charley.
-            He imagined it to get rid of stress, fear, and insecurity of the modern world
-            and to enter the peaceful life of 1894.
-        </div>
+    <div class="question">
+        Q2. Would Charley ever go back to the ticket counter on the third level
+        to buy tickets to Galesburg for himself and his wife?
+    </div>
 
-        <div class="answer hindi-answer">
-            <strong>उत्तर (Hindi):</strong>
-            हाँ, यह चार्ली के लिए पलायन का माध्यम था।
-            उसने इसे आधुनिक जीवन के भय, तनाव और असुरक्षा से बचकर
-            1894 के शांत जीवन में जाने के लिए कल्पित किया।
-        </div>
+    <div class="answer">
+
+        <strong>Ans (English):</strong>
+
+        No, Charley would never go back to the ticket counter because the third
+        level was only his imagination.
 
     </div>
 
+    <hr>
 
-    <div class="qa-box">
+    <div class="question">
+        प्रश्न 2. क्या चार्ली अपने और अपनी पत्नी के लिए गैल्सबर्ग के टिकट खरीदने के लिए
+        तीसरे स्तर के टिकट काउंटर पर कभी वापस जा सकता था?
+    </div>
 
-        <div class="question">
-            Q4. What do you infer from Sam’s letter to Charley?
-        </div>
+    <div class="answer hindi-answer">
 
-        <div class="answer">
-            <strong>Ans (English):</strong>
-            Sam’s letter suggests that he too escaped into the past.
-            It shows Charley’s strong belief in the existence of the third level.
-        </div>
+        <strong>उत्तर (Hindi):</strong>
 
-        <div class="answer hindi-answer">
-            <strong>उत्तर (Hindi):</strong>
-            सैम का पत्र बताता है कि वह भी अतीत में चला गया।
-            यह चार्ली के तीसरे स्तर पर विश्वास को मजबूत करता है।
-        </div>
+        नहीं, चार्ली कभी भी टिकट काउंटर पर वापस नहीं जा सकता था क्योंकि
+        तीसरा स्तर केवल उसकी कल्पना था।
 
     </div>
 
+</div>
 
-    <div class="qa-box">
 
-        <div class="question">
-            Q5. How does “The Third Level” illustrate the theme of escapism?
-        </div>
+<div class="qa-box">
 
-        <div class="answer">
-            <strong>Ans (English):</strong>
-            The story illustrates escapism as Charley creates an imaginary third
-            level to avoid the tensions of the modern world.
-            He wishes to go to Galesburg of 1894 for peace and comfort.
-        </div>
+    <div class="question">
+        Q3. Do you think that the third level was a medium of escape for Charley? Why?
+    </div>
 
-        <div class="answer hindi-answer">
-            <strong>उत्तर (Hindi):</strong>
-            यह कहानी पलायनवाद को दर्शाती है क्योंकि चार्ली आधुनिक जीवन के तनाव से
-            बचने के लिए एक काल्पनिक तीसरे स्तर की रचना करता है।
-            वह शांति और सुकून के लिए 1894 के गैल्सबर्ग जाना चाहता है।
-        </div>
+    <div class="answer">
+
+        <strong>Ans (English):</strong>
+
+        Yes, it was a medium of escape for Charley.
+        He imagined it to get rid of the stress, fear, and insecurity of the modern world
+        and to enter the peaceful life of 1894.
 
     </div>
 
+    <hr>
 
-    <!-- Reading with Insight -->
-    <h2 class="section-title">📚 Reading with Insight</h2>
+    <div class="question">
+        प्रश्न 3. क्या आपको लगता है कि तीसरा स्तर चार्ली के लिए पलायन का माध्यम था? क्यों?
+    </div>
 
+    <div class="answer hindi-answer">
 
-    <div class="qa-box">
+        <strong>उत्तर (Hindi):</strong>
 
-        <div class="question">
-            Q3. “The modern world is full of insecurity, fear, war, worry and stress.”
-            What are the ways in which we attempt to overcome them?
-        </div>
-
-        <div class="answer">
-            <strong>Ans (English):</strong>
-            People try to escape through imagination, nostalgia, hobbies,
-            and creative activities like reading, painting, or music.
-            These give relief from stress.
-        </div>
-
-        <div class="answer hindi-answer">
-            <strong>उत्तर (Hindi):</strong>
-            लोग कल्पना, अतीत की यादों, शौक और रचनात्मक कार्यों जैसे पढ़ना,
-            चित्रकला या संगीत द्वारा तनाव से मुक्ति पाने की कोशिश करते हैं।
-        </div>
+        हाँ, तीसरा स्तर चार्ली के लिए पलायन का माध्यम था।
+        उसने आधुनिक दुनिया के तनाव, भय और असुरक्षा से बचने तथा
+        1894 के शांतिपूर्ण जीवन में जाने के लिए इसकी कल्पना की थी।
 
     </div>
 
+</div>
 
-    <div class="qa-box">
 
-        <div class="question">
-            Q4. Do you see an intersection of time and space in the story?
-        </div>
+<div class="qa-box">
 
-        <div class="answer">
-            <strong>Ans (English):</strong>
-            Yes, the story shows the intersection of time and space.
-            The present-day station coexists with the world of 1894 on the third level.
-        </div>
+    <div class="question">
+        Q4. What do you infer from Sam’s letter to Charley?
+    </div>
 
-        <div class="answer hindi-answer">
-            <strong>उत्तर (Hindi):</strong>
-            हाँ, कहानी में समय और स्थान का संगम दिखाई देता है।
-            वर्तमान का स्टेशन तीसरे स्तर पर 1894 की दुनिया के साथ जुड़ा हुआ है।
-        </div>
+    <div class="answer">
+
+        <strong>Ans (English):</strong>
+
+        Sam’s letter suggests that he too escaped into the past.
+        It strengthens Charley’s belief in the existence of the third level.
 
     </div>
 
+    <hr>
 
-    <div class="qa-box">
+    <div class="question">
+        प्रश्न 4. सैम के चार्ली को लिखे पत्र से आप क्या निष्कर्ष निकालते हैं?
+    </div>
 
-        <div class="question">
-            Q5. Apparent illogicality sometimes turns out to be a futuristic projection?
-            Discuss.
-        </div>
+    <div class="answer hindi-answer">
 
-        <div class="answer">
-            <strong>Ans (English):</strong>
-            Yes, many ideas that seem illogical today may become real in the future.
-            The third level may represent such a futuristic imagination.
-        </div>
+        <strong>उत्तर (Hindi):</strong>
 
-        <div class="answer hindi-answer">
-            <strong>उत्तर (Hindi):</strong>
-            हाँ, कई बातें जो आज अव्यावहारिक लगती हैं, भविष्य में सच हो सकती हैं।
-            तीसरा स्तर भी ऐसी ही भविष्य की कल्पना को दर्शा सकता है।
-        </div>
+        सैम का पत्र बताता है कि वह भी अतीत में चला गया था।
+        इससे चार्ली का तीसरे स्तर के अस्तित्व पर विश्वास और मजबूत हो जाता है।
 
     </div>
 
-    <div class="qa-box">
-    <!-- Extract A -->
-    <h2 class="section-title">📝 Extract Based Questions – A</h2>
+</div>
 
-    <div class="extract-title">
-        Extract A
+
+<div class="qa-box">
+
+    <div class="question">
+        Q5. How does “The Third Level” illustrate the theme of escapism?
     </div>
+
+    <div class="answer">
+
+        <strong>Ans (English):</strong>
+
+        The story illustrates escapism as Charley creates an imaginary third
+        level to avoid the tensions of the modern world.
+        He wishes to go to Galesburg of 1894 for peace and comfort.
+
+    </div>
+
+    <hr>
+
+    <div class="question">
+        प्रश्न 5. “The Third Level” कहानी पलायनवाद की विषय-वस्तु को कैसे दर्शाती है?
+    </div>
+
+    <div class="answer hindi-answer">
+
+        <strong>उत्तर (Hindi):</strong>
+
+        यह कहानी पलायनवाद को दर्शाती है क्योंकि चार्ली आधुनिक दुनिया के तनावों
+        से बचने के लिए एक काल्पनिक तीसरे स्तर की कल्पना करता है।
+        वह शांति और सुकून के लिए 1894 के गैल्सबर्ग जाना चाहता है।
+
+    </div>
+
+</div>
+
+
+<!-- Reading with Insight -->
+
+<h2 class="section-title">📚 Reading with Insight</h2>
+
+
+<div class="qa-box">
+
+    <div class="question">
+        Q3. “The modern world is full of insecurity, fear, war, worry and stress.”
+        What are the ways in which we attempt to overcome them?
+    </div>
+
+    <div class="answer">
+
+        <strong>Ans (English):</strong>
+
+        People try to escape through imagination, nostalgia, hobbies,
+        and creative activities like reading, painting, or music.
+        These activities provide relief from stress.
+
+    </div>
+
+    <hr>
+
+    <div class="question">
+        प्रश्न 3. “आधुनिक दुनिया असुरक्षा, भय, युद्ध, चिंता और तनाव से भरी हुई है।”
+        हम इनसे उबरने के लिए कौन-कौन से उपाय करते हैं?
+    </div>
+
+    <div class="answer hindi-answer">
+
+        <strong>उत्तर (Hindi):</strong>
+
+        लोग कल्पना, अतीत की यादों, शौक और पढ़ने, चित्रकला तथा संगीत जैसी
+        रचनात्मक गतिविधियों के माध्यम से तनाव से बचने का प्रयास करते हैं।
+        ये गतिविधियाँ तनाव से राहत प्रदान करती हैं।
+
+    </div>
+
+</div>
+
+
+<div class="qa-box">
+
+    <div class="question">
+        Q4. Do you see an intersection of time and space in the story?
+    </div>
+
+    <div class="answer">
+
+        <strong>Ans (English):</strong>
+
+        Yes, the story shows the intersection of time and space.
+        The present-day station coexists with the world of 1894 on the third level.
+
+    </div>
+
+    <hr>
+
+    <div class="question">
+        प्रश्न 4. क्या आपको कहानी में समय और स्थान का संगम दिखाई देता है?
+    </div>
+
+    <div class="answer hindi-answer">
+
+        <strong>उत्तर (Hindi):</strong>
+
+        हाँ, कहानी में समय और स्थान का संगम दिखाई देता है।
+        वर्तमान का स्टेशन तीसरे स्तर पर 1894 की दुनिया के साथ जुड़ा हुआ दिखाई देता है।
+
+    </div>
+
+</div>
+
+
+<div class="qa-box">
+
+    <div class="question">
+        Q5. Apparent illogicality sometimes turns out to be a futuristic projection?
+        Discuss.
+    </div>
+
+    <div class="answer">
+
+        <strong>Ans (English):</strong>
+
+        Yes, many ideas that seem illogical today may become real in the future.
+        The third level may represent such a futuristic imagination.
+
+    </div>
+
+    <hr>
+
+    <div class="question">
+        प्रश्न 5. क्या दिखाई देने वाली अतार्किक बातें कभी-कभी भविष्य की कल्पना सिद्ध हो सकती हैं? चर्चा कीजिए।
+    </div>
+
+    <div class="answer hindi-answer">
+
+        <strong>उत्तर (Hindi):</strong>
+
+        हाँ, आज जो बातें अतार्किक लगती हैं, वे भविष्य में वास्तविक हो सकती हैं।
+        तीसरा स्तर भी ऐसी ही भविष्य की कल्पना को दर्शा सकता है।
+
+    </div>
+
+</div>
+
+<!-- Extract Based Questions – A -->
+
+<div class="qa-box">
+  
+<div class="notes-title">
+   📝 Extract – A
+   </div>
 
     <div class="extract">
         “The presidents of the New York Central and the New York, New Heaven and
@@ -423,14 +688,31 @@ margin-top:80px;
         is full of insecurity, fear, war, worry and all the rest of it, and that I just
         want to escape. Well, who doesn't? Everybody I know wants to escape, but they
         don't wander down into any third level at Grand Central Station.”
-    </div>
+  
+<p>
+
+        <b>हिंदी अनुवाद:</b>
+        न्यूयॉर्क सेंट्रल तथा न्यूयॉर्क, न्यू हेवन और हार्टफोर्ड रेलमार्गों के अध्यक्ष
+        कहेंगे कि ग्रैंड सेंट्रल स्टेशन में केवल दो स्तर हैं। लेकिन चार्ली कहता है कि
+        वहाँ तीन स्तर हैं, क्योंकि वह तीसरे स्तर पर जा चुका है। उसने अपने मनोचिकित्सक
+        मित्र से इस बारे में बात की। मनोचिकित्सक ने कहा कि यह जागते हुए देखे गए सपने
+        की इच्छा-पूर्ति है। आधुनिक दुनिया असुरक्षा, भय, युद्ध और चिंताओं से भरी हुई है,
+        इसलिए चार्ली इन सब से बचना चाहता है।
+</p>
+</div>
+
+    <hr>
+
+    
 
 
     <!-- MCQ A1 -->
+
     <div class="mcq-box">
 
         <div class="mcq-question">
-            1. How many levels are there in the Grand Central?
+            <b>1. English Question:</b><br>
+            How many levels are there in the Grand Central Station?
         </div>
 
         <div class="option">(a) Two</div>
@@ -439,17 +721,37 @@ margin-top:80px;
         <div class="option">(d) Four</div>
 
         <div class="correct">
-            ✔ Correct Answer: (a) Two
+            ✔ <b>English Answer:</b> (a) Two
+        </div>
+
+        <hr>
+
+        <div class="mcq-question">
+            <b>1. हिंदी प्रश्न:</b><br>
+            ग्रैंड सेंट्रल स्टेशन में कितने स्तर हैं?
+        </div>
+
+        <div class="option">(a) दो</div>
+        <div class="option">(b) तीन</div>
+        <div class="option">(c) एक</div>
+        <div class="option">(d) चार</div>
+
+        <div class="correct">
+            ✔ <b>हिंदी उत्तर:</b> (a) दो
         </div>
 
     </div>
 
+    <hr>
+
 
     <!-- MCQ A2 -->
+
     <div class="mcq-box">
 
         <div class="mcq-question">
-            2. Who is the central character of the story?
+            <b>2. English Question:</b><br>
+            Who is the main character of the story?
         </div>
 
         <div class="option">(a) Marley</div>
@@ -458,244 +760,505 @@ margin-top:80px;
         <div class="option">(d) Darley</div>
 
         <div class="correct">
-            ✔ Correct Answer: (b) Charley
+            ✔ <b>English Answer:</b> (b) Charley
+        </div>
+
+        <hr>
+
+        <div class="mcq-question">
+            <b>2. हिंदी प्रश्न:</b><br>
+            कहानी का मुख्य पात्र कौन है?
+        </div>
+
+        <div class="option">(a) मार्ले</div>
+        <div class="option">(b) चार्ली</div>
+        <div class="option">(c) हार्ले</div>
+        <div class="option">(d) डार्ले</div>
+
+        <div class="correct">
+            ✔ <b>हिंदी उत्तर:</b> (b) चार्ली
         </div>
 
     </div>
+
+    <hr>
 
 
     <!-- MCQ A3 -->
+
     <div class="mcq-box">
 
         <div class="mcq-question">
-            3. Why did the author say that there are three levels?
+            <b>3. English Question:</b><br>
+            Why did the narrator say that there were three levels?
         </div>
 
-        <div class="option">(a) He heard from others</div>
-        <div class="option">(b) Timetables say so</div>
-        <div class="option">(c) There are actually 3 levels</div>
-        <div class="option">(d) He has been to level three</div>
+        <div class="option">
+            (a) He had heard it from others
+        </div>
+
+        <div class="option">
+            (b) It was written in the timetable
+        </div>
+
+        <div class="option">
+            (c) There were actually three levels
+        </div>
+
+        <div class="option">
+            (d) He had already been to the third level
+        </div>
 
         <div class="correct">
-            ✔ Correct Answer: (d) He has been to level three
+            ✔ <b>English Answer:</b> (d) He had already been to the third level
+        </div>
+
+        <hr>
+
+        <div class="mcq-question">
+            <b>3. हिंदी प्रश्न:</b><br>
+            लेखक ने क्यों कहा कि वहाँ तीन स्तर हैं?
+        </div>
+
+        <div class="option">
+            (a) उसने दूसरों से सुना था
+        </div>
+
+        <div class="option">
+            (b) समय-सारणी में ऐसा लिखा था
+        </div>
+
+        <div class="option">
+            (c) वास्तव में तीन स्तर थे
+        </div>
+
+        <div class="option">
+            (d) वह तीसरे स्तर पर जा चुका था
+        </div>
+
+        <div class="correct">
+            ✔ <b>हिंदी उत्तर:</b> (d) वह तीसरे स्तर पर जा चुका था
         </div>
 
     </div>
+
+    <hr>
 
 
     <!-- MCQ A4 -->
+
     <div class="mcq-box">
 
         <div class="mcq-question">
-            4. According to Sam, why did Charley wish to escape?
+            <b>4. English Question:</b><br>
+            According to Sam, why did Charley want to escape?
         </div>
 
-        <div class="option">(a) His wife was mad</div>
-        <div class="option">(b) He wished to go to third level</div>
-        <div class="option">(c) He wanted to meet his grandfather</div>
-        <div class="option">(d) He wanted to get away from insecurities</div>
+        <div class="option">
+            (a) His wife was angry
+        </div>
+
+        <div class="option">
+            (b) He wanted to go to the third level
+        </div>
+
+        <div class="option">
+            (c) He wanted to meet his grandfather
+        </div>
+
+        <div class="option">
+            (d) He wanted to escape from insecurity
+        </div>
 
         <div class="correct">
-            ✔ Correct Answer: (d) He wanted to get away from insecurities
+            ✔ <b>English Answer:</b> (d) He wanted to escape from insecurity
+        </div>
+
+        <hr>
+
+        <div class="mcq-question">
+            <b>4. हिंदी प्रश्न:</b><br>
+            सैम के अनुसार चार्ली क्यों बचना चाहता था?
+        </div>
+
+        <div class="option">
+            (a) उसकी पत्नी नाराज़ थी
+        </div>
+
+        <div class="option">
+            (b) वह तीसरे स्तर पर जाना चाहता था
+        </div>
+
+        <div class="option">
+            (c) वह अपने दादा से मिलना चाहता था
+        </div>
+
+        <div class="option">
+            (d) वह असुरक्षा से दूर जाना चाहता था
+        </div>
+
+        <div class="correct">
+            ✔ <b>हिंदी उत्तर:</b> (d) वह असुरक्षा से दूर जाना चाहता था
         </div>
 
     </div>
+</div>
 
+   
 
     <!-- Extract B -->
-    <h2 class="section-title">📝 Extract Based Questions – B</h2>
+<div class="qa-box">
+  
+    <div class="notes-title">
+   📝 Extract – B
+   </div>
 
-    <div class="extract-title">
-        Extract B
-    </div>
 
     <div class="extract">
         “To make sure, I walked over to a newsboy and glanced at the stack of papers
         at his feet. It was The World; and The World hasn't been published for years.
         The lead story said something about President Cleveland. I've found that front
         page since, in the Public Library files, and it was printed June 11, 1894.
-
         I turned towards the ticket windows knowing that here on the third level at
         Grand Central—I could buy tickets that would take Louisa and me anywhere in
         the United States we wanted to go. In the year 1894. And I wanted two tickets
         to Galesburg, Illinois.”
+  
+
+        <p>
+            “यह सुनिश्चित करने के लिए कि मैं सही सोच रहा हूँ, मैं एक अखबार बेचने वाले
+            लड़के के पास गया और उसके पैरों के पास रखे अखबारों के ढेर को देखा।
+            वह <b>The World</b> अखबार था; और <b>The World</b> का प्रकाशन कई वर्षों
+            पहले ही बंद हो चुका था।
+        </p>
+
+        <p>
+            अखबार की मुख्य खबर राष्ट्रपति क्लीवलैंड के बारे में थी। बाद में मैंने
+            सार्वजनिक पुस्तकालय की फाइलों में उस अखबार के पहले पृष्ठ को खोज लिया।
+            वह अखबार 11 जून, 1894 को प्रकाशित हुआ था।
+        </p>
+
+        <p>
+            मैं टिकट की खिड़कियों की ओर मुड़ा। मुझे पता था कि यहाँ ग्रैंड सेंट्रल
+            स्टेशन के तीसरे स्तर पर मैं ऐसे टिकट खरीद सकता हूँ, जो लुइसा और मुझे
+            संयुक्त राज्य अमेरिका में हमारी इच्छानुसार कहीं भी ले जा सकते थे।
+            लेकिन वह वर्ष 1894 था।
+        </p>
+
+        <p>
+            और मुझे गैल्सबर्ग, इलिनॉय के लिए दो टिकट चाहिए थे।”
+        </p>
+
+    </>
     </div>
 
 
     <!-- MCQ B1 -->
+
     <div class="mcq-box">
 
         <div class="mcq-question">
-            1. What was the name of the newspaper?
+            1. समाचार-पत्र का नाम क्या था?
         </div>
 
-        <div class="option">(a) Grand Central</div>
-        <div class="option">(b) President Cleveland</div>
-        <div class="option">(c) Galesburg</div>
-        <div class="option">(d) The World</div>
+        <div class="option">(a) ग्रैंड सेंट्रल</div>
+        <div class="option">(b) प्रेसिडेंट क्लीवलैंड</div>
+        <div class="option">(c) गैल्सबर्ग</div>
+        <div class="option">(d) द वर्ल्ड</div>
 
         <div class="correct">
-            ✔ Correct Answer: (d) The World
+            ✔ सही उत्तर: (d) द वर्ल्ड
         </div>
 
     </div>
 
 
     <!-- MCQ B2 -->
+
     <div class="mcq-box">
 
         <div class="mcq-question">
-            2. Where did Charley want to take his wife?
+            2. चार्ली अपनी पत्नी को कहाँ ले जाना चाहता था?
         </div>
 
-        <div class="option">(a) Galesburg, Illinois</div>
-        <div class="option">(b) The Third Level</div>
-        <div class="option">(c) The Grand Central</div>
-        <div class="option">(d) Into the Past</div>
+        <div class="option">(a) गैल्सबर्ग, इलिनॉय</div>
+        <div class="option">(b) तीसरा स्तर</div>
+        <div class="option">(c) ग्रैंड सेंट्रल</div>
+        <div class="option">(d) अतीत में</div>
 
         <div class="correct">
-            ✔ Correct Answer: (a) Galesburg, Illinois
+            ✔ सही उत्तर: (a) गैल्सबर्ग, इलिनॉय
         </div>
 
     </div>
 
 
-    <!-- MCQ B3 -->
-    <div class="mcq-box">
+<!-- MCQ B3 -->
 
-        <div class="mcq-question">
-            3. The newspaper was printed on:
-        </div>
+<div class="mcq-box">
 
-        <div class="option">(a) 17.06.1894</div>
-        <div class="option">(b) 11.06.1894</div>
-        <div class="option">(c) 11.06.1984</div>
-        <div class="option">(d) 06.11.1984</div>
-
-        <div class="correct">
-            ✔ Correct Answer: (b) 11.06.1894
-        </div>
-
+    <div class="mcq-question">
+        <b>3. English Question:</b><br>
+        On what date was the newspaper published?
     </div>
 
+    <div class="option">(a) 17.06.1894</div>
+    <div class="option">(b) 11.06.1894</div>
+    <div class="option">(c) 11.06.1984</div>
+    <div class="option">(d) 06.11.1984</div>
 
-    <!-- MCQ B4 -->
-    <div class="mcq-box">
-
-        <div class="mcq-question">
-            4. Give the opposite of 'lost' from the passage.
-        </div>
-
-        <div class="option">(a) front</div>
-        <div class="option">(b) turned</div>
-        <div class="option">(c) found</div>
-        <div class="option">(d) stack</div>
-
-        <div class="correct">
-            ✔ Correct Answer: (c) found
-        </div>
-
+    <div class="correct">
+        ✔ <b>English Answer:</b> (b) 11.06.1894
     </div>
 
+    <hr>
 
-    <!-- Important MCQs -->
-    <h2 class="section-title">⭐ Important MCQs</h2>
-
-
-    <div class="mcq-box">
-        <div class="mcq-question">
-            1. Who wrote “The Third Level”?
-        </div>
-
-        <div class="option">(a) Jack Finney</div>
-        <div class="option">(b) Kalki</div>
-        <div class="option">(c) Tishani Doshi</div>
-        <div class="option">(d) Louis Fischer</div>
-
-        <div class="correct">
-            ✔ Correct Answer: (a) Jack Finney
-        </div>
+    <div class="mcq-question">
+        <b>3. हिंदी प्रश्न:</b><br>
+        समाचार-पत्र किस तारीख को प्रकाशित हुआ था?
     </div>
 
+    <div class="option">(a) 17.06.1894</div>
+    <div class="option">(b) 11.06.1894</div>
+    <div class="option">(c) 11.06.1984</div>
+    <div class="option">(d) 06.11.1984</div>
 
-    <div class="mcq-box">
-        <div class="mcq-question">
-            2. Who was Charley’s wife?
-        </div>
-
-        <div class="option">(a) Louisa</div>
-        <div class="option">(b) Sam</div>
-        <div class="option">(c) Clara</div>
-        <div class="option">(d) Helen</div>
-
-        <div class="correct">
-            ✔ Correct Answer: (a) Louisa
-        </div>
-    </div>
-
-
-    <div class="mcq-box">
-        <div class="mcq-question">
-            3. In which year did Charley want to go to Galesburg?
-        </div>
-
-        <div class="option">(a) 1894</div>
-        <div class="option">(b) 1940</div>
-        <div class="option">(c) 1960</div>
-        <div class="option">(d) 2000</div>
-
-        <div class="correct">
-            ✔ Correct Answer: (a) 1894
-        </div>
-    </div>
-
-
-    <div class="mcq-box">
-        <div class="mcq-question">
-            4. Who was Sam?
-        </div>
-
-        <div class="option">(a) Charley’s psychiatrist friend</div>
-        <div class="option">(b) Charley’s father</div>
-        <div class="option">(c) A ticket collector</div>
-        <div class="option">(d) A newsboy</div>
-
-        <div class="correct">
-            ✔ Correct Answer: (a) Charley’s psychiatrist friend
-        </div>
-    </div>
-
-
-    <div class="mcq-box">
-        <div class="mcq-question">
-            5. What does Galesburg symbolize in the story?
-        </div>
-
-        <div class="option">(a) War</div>
-        <div class="option">(b) Peace and security</div>
-        <div class="option">(c) Modern stress</div>
-        <div class="option">(d) Fear</div>
-
-        <div class="correct">
-            ✔ Correct Answer: (b) Peace and security
-        </div>
-    </div>
-
+    <div class="correct">
+        ✔ <b>हिंदी उत्तर:</b> (b) 11.06.1894
     </div>
 
 </div>
 
+<hr>
 
-<!-- Footer -->
-<footer>
-    <div>
-        © 2026 <span>PAL STUDY CENTER</span> | Class 12 English Notes
+
+<!-- MCQ B4 -->
+
+<div class="mcq-box">
+
+    <div class="mcq-question">
+        <b>4. English Question:</b><br>
+        What is the antonym of the word 'lost' in the extract?
     </div>
 
-    <div class="mt-2">
-        The Third Level – Jack Finney
+    <div class="option">(a) front</div>
+    <div class="option">(b) turned</div>
+    <div class="option">(c) found</div>
+    <div class="option">(d) stack</div>
+
+    <div class="correct">
+        ✔ <b>English Answer:</b> (c) found
     </div>
-</footer>
+
+    <hr>
+
+    <div class="mcq-question">
+        <b>4. हिंदी प्रश्न:</b><br>
+        गद्यांश में 'lost' का विलोम शब्द क्या है?
+    </div>
+
+    <div class="option">(a) front</div>
+    <div class="option">(b) turned</div>
+    <div class="option">(c) found</div>
+    <div class="option">(d) stack</div>
+
+    <div class="correct">
+        ✔ <b>हिंदी उत्तर:</b> (c) found
+    </div>
+
+</div>
+  
+  
+
+    <!-- Important MCQs -->
+
+
+
+
+<div class="mcq-box">
+
+    <div class="mcq-question">
+        <b>1. English Question:</b><br>
+        Who is the author of “The Third Level”?
+    </div>
+
+    <div class="option">(a) Jack Finney</div>
+    <div class="option">(b) Kalki</div>
+    <div class="option">(c) Tishani Doshi</div>
+    <div class="option">(d) Louis Fischer</div>
+
+    <div class="correct">
+        ✔ <b>English Answer:</b> (a) Jack Finney
+    </div>
+
+    <hr>
+
+    <div class="mcq-question">
+        <b>1. हिंदी प्रश्न:</b><br>
+        “The Third Level” के लेखक कौन हैं?
+    </div>
+
+    <div class="option">(a) जैक फिन्नी</div>
+    <div class="option">(b) कल्कि</div>
+    <div class="option">(c) तिशानी दोशी</div>
+    <div class="option">(d) लुई फिशर</div>
+
+    <div class="correct">
+        ✔ <b>हिंदी उत्तर:</b> (a) जैक फिन्नी
+    </div>
+
+</div>
+
+<hr>
+
+
+<div class="mcq-box">
+
+    <div class="mcq-question">
+        <b>2. English Question:</b><br>
+        Who was Charley's wife?
+    </div>
+
+    <div class="option">(a) Louisa</div>
+    <div class="option">(b) Sam</div>
+    <div class="option">(c) Clara</div>
+    <div class="option">(d) Helen</div>
+
+    <div class="correct">
+        ✔ <b>English Answer:</b> (a) Louisa
+    </div>
+
+    <hr>
+
+    <div class="mcq-question">
+        <b>2. हिंदी प्रश्न:</b><br>
+        चार्ली की पत्नी कौन थी?
+    </div>
+
+    <div class="option">(a) लुइसा</div>
+    <div class="option">(b) सैम</div>
+    <div class="option">(c) क्लारा</div>
+    <div class="option">(d) हेलेन</div>
+
+    <div class="correct">
+        ✔ <b>हिंदी उत्तर:</b> (a) लुइसा
+    </div>
+
+</div>
+
+<hr>
+
+
+<div class="mcq-box">
+
+    <div class="mcq-question">
+        <b>3. English Question:</b><br>
+        In which year did Charley want to go to Galesburg?
+    </div>
+
+    <div class="option">(a) 1894</div>
+    <div class="option">(b) 1940</div>
+    <div class="option">(c) 1960</div>
+    <div class="option">(d) 2000</div>
+
+    <div class="correct">
+        ✔ <b>English Answer:</b> (a) 1894
+    </div>
+
+    <hr>
+
+    <div class="mcq-question">
+        <b>3. हिंदी प्रश्न:</b><br>
+        चार्ली किस वर्ष गैल्सबर्ग जाना चाहता था?
+    </div>
+
+    <div class="option">(a) 1894</div>
+    <div class="option">(b) 1940</div>
+    <div class="option">(c) 1960</div>
+    <div class="option">(d) 2000</div>
+
+    <div class="correct">
+        ✔ <b>हिंदी उत्तर:</b> (a) 1894
+    </div>
+
+</div>
+
+<hr>
+
+
+<div class="mcq-box">
+
+    <div class="mcq-question">
+        <b>4. English Question:</b><br>
+        Who was Sam?
+    </div>
+
+    <div class="option">(a) Charley's psychiatrist friend</div>
+    <div class="option">(b) Charley's father</div>
+    <div class="option">(c) Ticket collector</div>
+    <div class="option">(d) Newspaper boy</div>
+
+    <div class="correct">
+        ✔ <b>English Answer:</b> (a) Charley's psychiatrist friend
+    </div>
+
+    <hr>
+
+    <div class="mcq-question">
+        <b>4. हिंदी प्रश्न:</b><br>
+        सैम कौन था?
+    </div>
+
+    <div class="option">(a) चार्ली का मनोचिकित्सक मित्र</div>
+    <div class="option">(b) चार्ली का पिता</div>
+    <div class="option">(c) टिकट कलेक्टर</div>
+    <div class="option">(d) समाचार-पत्र बेचने वाला लड़का</div>
+
+    <div class="correct">
+        ✔ <b>हिंदी उत्तर:</b> (a) चार्ली का मनोचिकित्सक मित्र
+    </div>
+
+</div>
+
+<hr>
+
+
+<div class="mcq-box">
+
+    <div class="mcq-question">
+        <b>5. English Question:</b><br>
+        What does Galesburg symbolize in the story?
+    </div>
+
+    <div class="option">(a) War</div>
+    <div class="option">(b) Peace and security</div>
+    <div class="option">(c) Modern stress</div>
+    <div class="option">(d) Fear</div>
+
+    <div class="correct">
+        ✔ <b>English Answer:</b> (b) Peace and security
+    </div>
+
+    <hr>
+
+    <div class="mcq-question">
+        <b>5. हिंदी प्रश्न:</b><br>
+        कहानी में गैल्सबर्ग किसका प्रतीक है?
+    </div>
+
+    <div class="option">(a) युद्ध</div>
+    <div class="option">(b) शांति और सुरक्षा</div>
+    <div class="option">(c) आधुनिक तनाव</div>
+    <div class="option">(d) भय</div>
+
+    <div class="correct">
+        ✔ <b>हिंदी उत्तर:</b> (b) शांति और सुरक्षा
+    </div>
+
+</div>
+
+</div>
+
 
 <!-- PROTECTION -->
 
@@ -731,5 +1294,3 @@ alert("Copying content is not allowed");
 </body>
 
 </html>
-
-

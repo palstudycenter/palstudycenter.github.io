@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="PAL STUDY CENTER - Hindi Study Notes, Questions and Answers, MCQs and Important Questions">
+
+    <title>PAL STUDY CENTER | Chapter Name</title>
+
+
+    <!-- =========================
+         BOOTSTRAP CSS
+    ========================= -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <style>
+
+        /* =========================
+           GLOBAL
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f5f7fb;
+            line-height: 1.7;
+
+            font-family:
+                Arial,
+                "Noto Sans Devanagari",
+                "Mangal",
+                sans-serif;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            background: rgba(23, 74, 126, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+            padding: 10px 0;
+            transition: 0.3s;
+        }
+
+
+        .navbar-brand {
+            font-size: 40px;
+            font-weight: 700;
+            color: white !important;
+            text-decoration: none;
+        }
+
+
+        .navbar-brand span {
+            color: #93c5fd;
+        }
+
+
+        /* =========================
+           MAIN CONTENT
+        ========================= */
+
+        .notes-container {
+            max-width: 900px;
+            margin:100px auto 50px;
+            padding: 3px 15px;
+        }
+
+
+        /* =========================
+           QUESTION / CONTENT BOX
+        ========================= */
+
+        .qa-box {
+            padding: 20px;
+            background: white;
+            margin-bottom: 18px;
+            border-radius: 14px;
+            border-left: 6px solid #1565c0;
+
+            box-shadow:
+                0 4px 12px rgba(0, 0, 0, 0.08);
+
+            transition: 0.25s;
+        }
+
+
+        .qa-box:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* =========================
+           SECTION TITLE
+        ========================= */
+
+        .notes-title {
+            background: #174a7e;
+            color: white;
+
+            padding: 15px 20px;
+
+            border-radius: 10px;
+
+            font-size: 20px;
+            font-weight: bold;
+
+            margin: 0px 0px 0px 0px;
+        }
+
+
+        /* =========================
+           QUESTION
+        ========================= */
+
+        .question {
+            font-weight: bold;
+            color: #1b3a57;
+
+            margin-bottom: 10px;
+
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           ANSWER
+        ========================= */
+
+        .answer {
+            color: #2c3e50;
+
+            text-align: left;
+
+            font-size: 16px;
+        }
+
+
+        .answer b {
+            color: #174a73;
+        }
+
+
+        .answer p {
+            margin-bottom: 12px;
+        }
+
+
+        /* =========================
+           YEAR BADGE
+        ========================= */
+
+        .year {
+            display: inline-block;
+
+            background: #fff3cd;
+            color: #856404;
+
+            padding: 2px 9px;
+
+            border-radius: 12px;
+
+            font-size: 13px;
+
+            margin-left: 5px;
+        }
+
+
+        /* =========================
+           MCQ
+        ========================= */
+
+        .mcq {
+            background: #f8fbff;
+
+            padding: 15px;
+
+            border-radius: 10px;
+
+            margin-top: 10px;
+            margin-bottom: 18px;
+
+            border: 1px solid #e2edf8;
+        }
+
+
+        .mcq-option {
+            padding: 4px 0;
+        }
+
+
+        .correct {
+            font-weight: bold;
+            color: #198754;
+        }
+
+
+        /* =========================
+           IMPORTANT BOX
+        ========================= */
+
+        .important {
+            background: #fff8e1;
+
+            border-left: 5px solid #ffc107;
+
+            padding: 15px;
+
+            border-radius: 8px;
+        }
+
+
+        /* =========================
+           EXTRACT
+        ========================= */
+
+        .extract {
+            background: #f1f8ff;
+
+            border: 1px solid #cfe5ff;
+
+            padding: 18px;
+
+            border-radius: 10px;
+
+            font-style: italic;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================
+           HORIZONTAL LINE
+        ========================= */
+
+        hr {
+            border: 0;
+
+            border-top: 1px solid #ddd;
+
+            margin: 20px 0;
+        }
+
+
+        /* =========================
+           MOBILE RESPONSIVE
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            .navbar-brand {
+                font-size: 30px;
+            }
+
+            .notes-container {
+                margin-top: 100px;
+                padding: 3px 10px;
+            }
+
+            .qa-box {
+                padding: 15px;
+
+                border-left-width: 4px;
+            }
+
+            .notes-title {
+                font-size: 18px;
+                padding: 13px 15px;
+            }
+
+            .question {
+                font-size: 20px;
+            }
+
+            .answer {
+                font-size: 20px;
+            }
+
+        }
+
+
+        /* =========================
+           SMALL MOBILE
+        ========================= */
+
+        @media (max-width: 480px) {
+
+            .navbar-brand {
+                font-size: 48px;
+            }
+
+            .notes-container {
+                margin-top: 155px;
+            }
+
+            .qa-box {
+                padding: 12px;
+            }
+
+            .notes-title {
+                font-size: 17px;
+            }
+
+            .year {
+                font-size: 11px;
+                margin-top: 4px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================= -->
+
+    <nav class="navbar fixed-top">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="../index.html">
+                पाल <span>स्टडी सेंटर</span>
+            </a>
+
+
+            <!-- Navbar toggler को आपके निर्देश के अनुसार रखा गया है -->
+
+            <button
+                class="navbar-toggler bg-light"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-label="Toggle navigation"
+            >
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================= -->
+
+    <main class="notes-container">
+
+
+        <!-- =========================
+             CHAPTER INTRODUCTION
+        ========================= -->
+<div class="notes-title">
+                📘 Lesson 1 – Chapter Name
+            </div>
+
+        <section class="qa-box">
+
+            <div class="question">
+                ✍️ By Author Name
+            </div>
+
+
+            <div class="answer">
+
+                <p>
+                    <b>पाठ परिचय:</b>
+                    यहाँ पाठ का परिचय लिखें।
+                </p>
+
+
+                <p>
+                    <b>मुख्य विषय:</b>
+                    यहाँ अध्याय के मुख्य विषय के बारे में जानकारी  लिखें जिससे पूर अध्याय का अर्थ समझ आ जाए।
+                </p>
+
+
+                <p>
+                    <b>मुख्य संदेश:</b>
+                    यहाँ पाठ का मुख्य संदेश लिखें।
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             QUESTION WITH YEAR
+        ========================= -->
+<div class="notes-title">
+                📖 Questions &amp; Answers
+            </div>
+
+        <section class="qa-box">
+
+            <div class="question">
+
+                Q1. Write your question here.
+
+                <span class="year">
+                    NCERT; 2025
+                </span>
+
+            </div>
+
+
+            <div class="answer">
+
+                <p>
+                    <b>Answer:</b>
+                    Write the answer here.
+                </p>
+
+
+                <hr>
+
+                <p>
+                    <b>प्र.1. प्रश्न यहाँ लिखें।</b>
+                </p>
+
+
+                <p>
+                    <b>उ.</b>
+                    उत्तर यहाँ लिखें।
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             EXTRACT
+        ========================= -->
+<div class="notes-title">
+                📝 Extract – A
+            </div>
+
+        <section class="qa-box">
+
+            <div class="extract">
+
+                Write the extract/passage here.
+
+            </div>
+
+
+            <div class="answer">
+
+
+                <!-- MCQ 1 -->
+
+                <p>
+                    <b>1. Write your MCQ question here?</b>
+                </p>
+
+
+                <div class="mcq">
+
+                    <div class="mcq-option">
+                        (a) Option A
+                    </div>
+
+                    <div class="mcq-option">
+                        (b) Option B
+                    </div>
+
+                    <div class="mcq-option correct">
+                        (c) Correct Answer
+                    </div>
+
+                    <div class="mcq-option">
+                        (d) Option D
+                    </div>
+
+                </div>
+
+
+
+                <!-- MCQ 2 -->
+
+                <p>
+                    <b>2. Write your second MCQ here?</b>
+                </p>
+
+
+                <div class="mcq">
+
+                    <div class="mcq-option">
+                        (a) Option A
+                    </div>
+
+                    <div class="mcq-option correct">
+                        (b) Correct Answer
+                    </div>
+
+                    <div class="mcq-option">
+                        (c) Option C
+                    </div>
+
+                    <div class="mcq-option">
+                        (d) Option D
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+        <!-- =========================
+             IMPORTANT NOTE
+        ========================= -->
+<div class="notes-title">
+            Important MCQ
+            </div>
+
+        <section class="qa-box">
+
+            <div class="important">
+
+                यहाँ महत्वपूर्ण जानकारी लिखें।
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         COPY PROTECTION
+    ========================= -->
+
+    <script>
+
+        /* Disable right click */
+
+        document.addEventListener("contextmenu", function (e) {
+
+            e.preventDefault();
+
+        });
+
+
+        /* Disable text selection */
+
+        document.addEventListener("selectstart", function (e) {
+
+            e.preventDefault();
+
+        });
+
+
+        /* Disable copy */
+
+        document.addEventListener("copy", function (e) {
+
+            e.preventDefault();
+
+            alert("Copying content is not allowed.");
+
+        });
+
+    </script>
+
+
+
+    <!-- =========================
+         BOOTSTRAP JS
+         केवल एक बार
+    ========================= -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+</body>
+
+</html>

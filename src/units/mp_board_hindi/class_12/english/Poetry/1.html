@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="PAL STUDY CENTER - Hindi Study Notes, Questions and Answers, MCQs and Important Questions">
+
+    <title>PAL STUDY CENTER | Chapter Name</title>
+
+
+    <!-- =========================
+         BOOTSTRAP CSS
+    ========================= -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <style>
+
+        /* =========================
+           GLOBAL
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f5f7fb;
+            line-height: 1.7;
+
+            font-family:
+                Arial,
+                "Noto Sans Devanagari",
+                "Mangal",
+                sans-serif;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            background: rgba(23, 74, 126, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+            padding: 10px 0;
+            transition: 0.3s;
+        }
+
+
+        .navbar-brand {
+            font-size: 40px;
+            font-weight: 700;
+            color: white !important;
+            text-decoration: none;
+        }
+
+
+        .navbar-brand span {
+            color: #93c5fd;
+        }
+
+
+        /* =========================
+           MAIN CONTENT
+        ========================= */
+
+        .notes-container {
+            max-width: 900px;
+            margin:100px auto 50px;
+            padding: 3px 15px;
+        }
+
+
+        /* =========================
+           QUESTION / CONTENT BOX
+        ========================= */
+
+        .qa-box {
+            padding: 20px;
+            background: white;
+            margin-bottom: 18px;
+            border-radius: 14px;
+            border-left: 6px solid #1565c0;
+
+            box-shadow:
+                0 4px 12px rgba(0, 0, 0, 0.08);
+
+            transition: 0.25s;
+        }
+
+
+        .qa-box:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* =========================
+           SECTION TITLE
+        ========================= */
+
+        .notes-title {
+            background: #174a7e;
+            color: white;
+
+            padding: 15px 20px;
+
+            border-radius: 10px;
+
+            font-size: 20px;
+            font-weight: bold;
+
+            margin: 0px 0px 0px 0px;
+        }
+
+
+        /* =========================
+           QUESTION
+        ========================= */
+
+        .question {
+            font-weight: bold;
+            color: #1b3a57;
+
+            margin-bottom: 10px;
+
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           ANSWER
+        ========================= */
+
+        .answer {
+            color: #2c3e50;
+
+            text-align: left;
+
+            font-size: 16px;
+        }
+
+
+        .answer b {
+            color: #174a73;
+        }
+
+
+        .answer p {
+            margin-bottom: 12px;
+        }
+
+
+        /* =========================
+           YEAR BADGE
+        ========================= */
+
+        .year {
+            display: inline-block;
+
+            background: #fff3cd;
+            color: #856404;
+
+            padding: 2px 9px;
+
+            border-radius: 12px;
+
+            font-size: 13px;
+
+            margin-left: 5px;
+        }
+
+
+        /* =========================
+           MCQ
+        ========================= */
+
+        .mcq {
+            background: #f8fbff;
+
+            padding: 15px;
+
+            border-radius: 10px;
+
+            margin-top: 10px;
+            margin-bottom: 18px;
+
+            border: 1px solid #e2edf8;
+        }
+
+
+        .mcq-option {
+            padding: 4px 0;
+        }
+
+
+        .correct {
+            font-weight: bold;
+            color: #198754;
+        }
+
+
+        /* =========================
+           IMPORTANT BOX
+        ========================= */
+
+        .important {
+            background: #fff8e1;
+
+            border-left: 5px solid #ffc107;
+
+            padding: 15px;
+
+            border-radius: 8px;
+        }
+
+
+        /* =========================
+           EXTRACT
+        ========================= */
+
+        .extract {
+            background: #f1f8ff;
+
+            border: 1px solid #cfe5ff;
+
+            padding: 18px;
+
+            border-radius: 10px;
+
+            font-style: italic;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================
+           HORIZONTAL LINE
+        ========================= */
+
+        hr {
+            border: 0;
+
+            border-top: 1px solid #ddd;
+
+            margin: 20px 0;
+        }
+
+
+        /* =========================
+           MOBILE RESPONSIVE
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            .navbar-brand {
+                font-size: 30px;
+            }
+
+            .notes-container {
+                margin-top: 100px;
+                padding: 3px 10px;
+            }
+
+            .qa-box {
+                padding: 15px;
+
+                border-left-width: 4px;
+            }
+
+            .notes-title {
+                font-size: 18px;
+                padding: 13px 15px;
+            }
+
+            .question {
+                font-size: 20px;
+            }
+
+            .answer {
+                font-size: 20px;
+            }
+
+        }
+
+
+        /* =========================
+           SMALL MOBILE
+        ========================= */
+
+        @media (max-width: 480px) {
+
+            .navbar-brand {
+                font-size: 48px;
+            }
+
+            .notes-container {
+                margin-top: 155px;
+            }
+
+            .qa-box {
+                padding: 12px;
+            }
+
+            .notes-title {
+                font-size: 17px;
+            }
+
+            .year {
+                font-size: 11px;
+                margin-top: 4px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================= -->
+
+    <nav class="navbar fixed-top">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="../index.html">
+                पाल <span>स्टडी सेंटर</span>
+            </a>
+
+
+            <!-- Navbar toggler को आपके निर्देश के अनुसार रखा गया है -->
+
+            <button
+                class="navbar-toggler bg-light"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-label="Toggle navigation"
+            >
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================= -->
+
+    <main class="notes-container">
+
+
+<!-- =========================
+     CHAPTER INTRODUCTION
+========================= -->
+
+<div class="notes-title">
+    📘 Poem 1 – My Mother at Sixty-Six
+</div>
+
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ By Kamala Das
+    </div>
+
+
+    <div class="answer">
+
+        <p>
+            <b>कविता का परिचय:</b>
+            <i>My Mother at Sixty-Six</i> कवयित्री
+            <b>Kamala Das</b> की भावनात्मक कविता है। इसमें कवयित्री
+            अपनी वृद्ध माँ के प्रति अपने गहरे प्रेम, चिंता और उनसे
+            बिछड़ने के डर को व्यक्त करती हैं। कवयित्री अपनी माँ को
+            देखकर उनकी बढ़ती उम्र और कमजोर होती स्थिति को महसूस करती हैं।
+            इस कारण उनके मन में बचपन से जुड़ा एक पुराना और परिचित
+            <b>वियोग का दर्द (familiar ache)</b> फिर से जाग उठता है।
+        </p>
+
+
+        <p>
+            <b>मुख्य विषय:</b>
+            कविता की शुरुआत में कवयित्री अपनी माँ के साथ कार में
+            यात्रा कर रही होती हैं। उनकी माँ कार में सो रही होती हैं।
+            कवयित्री जब अपनी माँ के पीले, कमजोर और शांत चेहरे को देखती हैं,
+            तो उन्हें माँ की बढ़ती उम्र का एहसास होता है। उन्हें डर लगता है
+            कि कहीं उनकी माँ उन्हें हमेशा के लिए छोड़ न दें। इसी कारण
+            उनके मन में बचपन से चला आ रहा <b>माँ से बिछड़ने का डर और दर्द</b>
+            फिर लौट आता है।
+        </p>
+
+
+        <p>
+            अपने दुख और डर से ध्यान हटाने के लिए कवयित्री कार की खिड़की
+            से बाहर देखने लगती हैं। बाहर उन्हें <b>तेजी से पीछे भागते हुए
+            हरे-भरे पेड़</b> दिखाई देते हैं। पेड़ों को
+            <b>'sprinting'</b> अर्थात दौड़ते हुए इसलिए कहा गया है क्योंकि
+            कार तेज गति से आगे बढ़ रही होती है और पेड़ पीछे की ओर भागते
+            हुए दिखाई देते हैं। बाहर का यह दृश्य जीवन की गति और ऊर्जा
+            को भी दर्शाता है।
+        </p>
+
+
+        <p>
+            इसके बाद कवयित्री को घरों से बाहर निकलते हुए
+            <b>मस्ती करते और प्रसन्न बच्चों</b> का दृश्य दिखाई देता है।
+            ये बच्चे जीवन, ऊर्जा और खुशी के प्रतीक हैं। कवयित्री ने
+            बच्चों का यह दृश्य इसलिए प्रस्तुत किया है ताकि बाहर की
+            <b>यौवन और जीवन की खुशी</b> तथा अपनी माँ के
+            <b>बुढ़ापे और कमजोरी</b> के बीच स्पष्ट अंतर दिखाई दे।
+        </p>
+
+
+        <p>
+            कवयित्री अपनी माँ के चेहरे की तुलना
+            <b>'late winter's moon'</b> अर्थात देर सर्दी के चाँद से करती हैं।
+            देर सर्दी का चाँद फीका, कमजोर और अपनी चमक खोया हुआ दिखाई देता है।
+            उसी प्रकार उनकी माँ का चेहरा पीला, कमजोर और वृद्ध दिखाई देता है।
+            यह उपमा माँ की बढ़ती उम्र और उनकी कमजोर होती जीवन-शक्ति को
+            व्यक्त करती है।
+        </p>
+
+
+        <p>
+            जब कवयित्री हवाई अड्डे पर पहुँचती हैं और माँ से विदा लेने का
+            समय आता है, तो उनके मन में गहरा दुख और डर होता है। उन्हें
+            आशंका रहती है कि यह उनकी माँ से अंतिम विदाई भी हो सकती है।
+            वह अपने पुराने <b>familiar ache</b> को फिर महसूस करती हैं।
+            फिर भी वह अपनी भावनाओं को माँ के सामने प्रकट नहीं करतीं।
+            वह अपनी माँ को देखकर केवल <b>मुस्कुराती रहती हैं</b> और
+            उन्हें आश्वस्त करने का प्रयास करती हैं।
+        </p>
+
+
+        <p>
+            कविता के अंत में कवयित्री के
+            <b>'all I did was smile and smile and smile'</b> का अर्थ है
+            कि वह अपने अंदर के दुख, डर और बिछड़ने की पीड़ा को छिपाकर
+            माँ के सामने सामान्य और प्रसन्न दिखाई देने का प्रयास करती हैं।
+            उनकी मुस्कान के पीछे गहरा प्रेम, चिंता और माँ को खो देने का
+            डर छिपा हुआ है। इस प्रकार मुस्कान वास्तव में उनके
+            <b>आंतरिक दुख को छिपाने का माध्यम</b> बन जाती है।
+        </p>
+
+
+        <p>
+            <b>केंद्रीय भाव:</b>
+            कविता का केंद्रीय भाव <b>माँ और बेटी के गहरे प्रेम तथा
+            बिछड़ने के दर्द</b> को व्यक्त करना है। वृद्ध माँ को देखकर
+            कवयित्री को मृत्यु और वियोग की स्वाभाविक चिंता होती है।
+            बाहर के हरे पेड़ और प्रसन्न बच्चे जीवन की ऊर्जा तथा
+            माँ के वृद्ध चेहरे के विपरीत दिखाई देते हैं। कविता यह
+            संदेश देती है कि माता-पिता की बढ़ती उम्र और उनसे संभावित
+            बिछड़ने का विचार मन में गहरा दर्द पैदा करता है, लेकिन
+            प्रेम और साहस के कारण मनुष्य अपने दुख को छिपाकर भी
+            अपने प्रिय व्यक्ति को सांत्वना दे सकता है।
+        </p>
+
+    </div>
+
+</section>
+
+        <!-- =========================
+     QUESTIONS & ANSWERS
+========================= -->
+<div class="notes-title">
+                📖 Questions &amp; Answers
+</div>
+
+<!-- Q1 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 1. What is the kind of pain and ache that the poet feels?
+        <span class="year">NCERT</span>
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            कवयित्री किस प्रकार के दर्द और पीड़ा को महसूस करती हैं?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            The poet feels the pain of seeing her old and weak mother.
+            She is also afraid of losing her mother. This is her old and
+            familiar fear of separation from her mother.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            कवयित्री अपनी वृद्ध और कमजोर माँ को देखकर दुखी होती हैं।
+            उन्हें अपनी माँ से हमेशा के लिए बिछड़ने का डर भी सताता है।
+            यही माँ से अलग होने का पुराना और परिचित दर्द है।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q2 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 2. Why does the poet look outside?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            कवयित्री बाहर क्यों देखती हैं?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            The poet looks outside the car window to divert her attention
+            from the painful thought of her mother's old age and possible
+            separation from her.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            कवयित्री अपनी माँ की बढ़ती उम्र और उनसे बिछड़ने के दुखद विचार
+            से अपना ध्यान हटाने के लिए कार की खिड़की से बाहर देखती हैं।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q3 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 3. What is the poet's familiar ache and why does it return?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            कवयित्री का परिचित दर्द क्या है और वह फिर क्यों लौट आता है?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            The poet's familiar ache is the fear of losing her mother and
+            being separated from her. It returns when she notices her
+            mother's old, pale and weak face and realizes that her mother
+            is growing older.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            कवयित्री का परिचित दर्द अपनी माँ को खोने और उनसे बिछड़ने का डर है।
+            यह दर्द तब फिर लौट आता है जब वह अपनी माँ के वृद्ध, पीले और कमजोर
+            चेहरे को देखती हैं और महसूस करती हैं कि उनकी माँ बूढ़ी हो रही हैं।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q4 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 4. What were the activities that the poet saw outside
+        the car's window?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            कवयित्री ने कार की खिड़की के बाहर कौन-कौन सी गतिविधियाँ देखीं?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            The poet saw young green trees appearing to sprint past the car.
+            She also saw happy children coming out of their homes and
+            enjoying themselves.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            कवयित्री ने कार के बाहर हरे-भरे युवा पेड़ों को तेजी से पीछे
+            भागते हुए देखा। उन्होंने घरों से बाहर निकलते हुए प्रसन्न और
+            खेलते हुए बच्चों को भी देखा।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q5 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 5. Why are the young trees described as 'sprinting'
+        in the poem 'My Mother at Sixty-Six'?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            कविता में युवा पेड़ों को 'sprinting' अर्थात तेजी से दौड़ते हुए
+            क्यों बताया गया है?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            The young trees are described as 'sprinting' because the car is
+            moving fast. The trees seem to run backwards as the poet looks
+            at them from the moving car.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            युवा पेड़ों को 'sprinting' इसलिए कहा गया है क्योंकि कार तेज गति
+            से आगे बढ़ रही है। चलती हुई कार से देखने पर पेड़ पीछे की ओर
+            तेजी से भागते हुए दिखाई देते हैं।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q6 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 6. Why has the poet brought in the image of the merry
+        children 'spilling out of their homes'?
+        <span class="year">NCERT</span>
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            कवयित्री ने 'spilling out of their homes' अर्थात घरों से
+            निकलते हुए प्रसन्न बच्चों का चित्र क्यों प्रस्तुत किया है?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            The poet presents the image of merry children to show youth,
+            happiness and energy. It contrasts with her mother's old age,
+            weakness and approaching separation.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            कवयित्री ने प्रसन्न बच्चों का चित्र युवावस्था, खुशी और ऊर्जा
+            को दिखाने के लिए प्रस्तुत किया है। यह दृश्य उनकी माँ के
+            बुढ़ापे, कमजोरी और उनसे संभावित बिछड़ने की स्थिति के विपरीत है।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q7 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 7. Why has the mother been compared to the
+        'late winter's moon'?
+        <span class="year">NCERT; 2024</span>
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            माँ की तुलना 'late winter's moon' अर्थात देर सर्दी के चाँद
+            से क्यों की गई है?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            The mother is compared to the late winter's moon because her
+            face looks pale, weak and dull. Like the late winter moon,
+            which appears less bright, the old mother has lost the freshness
+            and glow of youth.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            माँ की तुलना देर सर्दी के चाँद से इसलिए की गई है क्योंकि उनका
+            चेहरा पीला, कमजोर और फीका दिखाई देता है। देर सर्दी का चाँद भी
+            कम चमकीला दिखाई देता है। इसी प्रकार वृद्ध माँ के चेहरे से
+            युवावस्था की चमक समाप्त हो गई है।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q8 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 8. What were the poet's feelings at the airport?
+        How did she hide them?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            हवाई अड्डे पर कवयित्री की क्या भावनाएँ थीं? उन्होंने उन्हें
+            कैसे छिपाया?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            At the airport, the poet felt sad and anxious because she had
+            to leave her mother. She was also afraid that it might be her
+            last meeting with her. She hid her feelings by smiling and
+            assuring her mother that she would meet her again.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            हवाई अड्डे पर कवयित्री अपनी माँ से बिछड़ने के कारण बहुत दुखी
+            और चिंतित थीं। उन्हें यह डर भी था कि शायद यह माँ से उनकी
+            अंतिम मुलाकात हो। उन्होंने अपनी भावनाओं को छिपाने के लिए
+            मुस्कुराते हुए माँ को विदा किया और उन्हें फिर मिलने का
+            विश्वास दिलाया।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q9 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 9. What do the parting words of the poet and her smile signify?
+        <span class="year">NCERT</span>
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            कवयित्री के विदाई के शब्द और उनकी मुस्कान क्या दर्शाते हैं?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            The poet's parting words and smile signify her deep love for
+            her mother and her effort to hide her fear and sadness.
+            She tries to give her mother hope and courage instead of
+            showing her own pain.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            कवयित्री के विदाई के शब्द और मुस्कान माँ के प्रति उनके गहरे
+            प्रेम तथा अपने डर और दुख को छिपाने के प्रयास को दर्शाते हैं।
+            वह अपनी पीड़ा दिखाने के बजाय माँ को आशा और साहस देना चाहती हैं।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q10 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 10. What does the poet mean by
+        'all I did was smile and smile and smile..........'?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            'all I did was smile and smile and smile' से कवयित्री का
+            क्या तात्पर्य है?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            The poet means that she repeatedly smiled to hide her inner
+            pain and fear from her mother. Her smile was an expression
+            of love and an attempt to reassure her mother that everything
+            would be all right.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            कवयित्री का अर्थ है कि उन्होंने अपने भीतर के दुख और डर को
+            माँ से छिपाने के लिए बार-बार मुस्कुराया। उनकी मुस्कान माँ के
+            प्रति प्रेम और उन्हें आश्वस्त करने का प्रयास थी कि सब ठीक रहेगा।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q11 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 11. Summarize the poem 'My Mother at Sixty Six'.
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            'My Mother at Sixty-Six' कविता का सारांश लिखिए।
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            The poem describes the poet's deep love and fear of separation
+            from her ageing mother. During a journey to the airport, the
+            poet notices her mother's pale and weak face and becomes sad.
+            She looks outside the car and sees sprinting trees and happy
+            children. These lively images contrast with her mother's old age.
+            At the airport, the poet feels the pain of separation but hides
+            it behind a smile. She says goodbye with the hope of meeting
+            her mother again.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            यह कविता कवयित्री के अपनी वृद्ध माँ के प्रति गहरे प्रेम और
+            उनसे बिछड़ने के डर को व्यक्त करती है। हवाई अड्डे जाते समय
+            कवयित्री अपनी माँ के पीले और कमजोर चेहरे को देखकर दुखी हो जाती हैं।
+            अपना ध्यान हटाने के लिए वह बाहर देखती हैं, जहाँ उन्हें तेजी से
+            पीछे भागते पेड़ और प्रसन्न बच्चे दिखाई देते हैं। ये जीवंत दृश्य
+            माँ के बुढ़ापे के विपरीत हैं। हवाई अड्डे पर कवयित्री बिछड़ने के
+            दुख को मुस्कान के पीछे छिपाकर माँ को विदा करती हैं और फिर मिलने
+            की आशा रखती हैं।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q12 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 12. Write the central idea of the poem.
+        <span class="year">2025</span>
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            कविता का केंद्रीय भाव लिखिए।
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            The central idea of the poem is the deep bond between a mother
+            and daughter and the pain of separation caused by old age.
+            The poet fears losing her ageing mother but hides her sorrow
+            with a smile. The poem beautifully presents love, ageing,
+            fear of separation and the emotional bond between a mother
+            and her daughter.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            कविता का केंद्रीय भाव माँ और बेटी के गहरे प्रेम तथा बुढ़ापे के
+            कारण उत्पन्न होने वाली बिछड़ने की पीड़ा है। कवयित्री अपनी
+            वृद्ध माँ को खोने से डरती हैं, लेकिन अपने दुख को मुस्कान के
+            पीछे छिपा लेती हैं। कविता माँ-बेटी के प्रेम, बढ़ती उम्र,
+            बिछड़ने के डर और भावनात्मक संबंध को सुंदर ढंग से प्रस्तुत करती है।
+        </p>
+
+    </div>
+
+</section>
+
+
+        <!-- =========================
+             EXTRACT
+        ========================= -->
+<div class="notes-title">
+                📝 Extract – A
+            </div>
+
+        <section class="qa-box">
+
+            <div class="extract">
+
+                Write the extract/passage here.
+
+            </div>
+
+
+            <div class="answer">
+
+
+                <!-- MCQ 1 -->
+
+                <p>
+                    <b>1. Write your MCQ question here?</b>
+                </p>
+
+
+                <div class="mcq">
+
+                    <div class="mcq-option">
+                        (a) Option A
+                    </div>
+
+                    <div class="mcq-option">
+                        (b) Option B
+                    </div>
+
+                    <div class="mcq-option correct">
+                        (c) Correct Answer
+                    </div>
+
+                    <div class="mcq-option">
+                        (d) Option D
+                    </div>
+
+                </div>
+
+
+
+                <!-- MCQ 2 -->
+
+                <p>
+                    <b>2. Write your second MCQ here?</b>
+                </p>
+
+
+                <div class="mcq">
+
+                    <div class="mcq-option">
+                        (a) Option A
+                    </div>
+
+                    <div class="mcq-option correct">
+                        (b) Correct Answer
+                    </div>
+
+                    <div class="mcq-option">
+                        (c) Option C
+                    </div>
+
+                    <div class="mcq-option">
+                        (d) Option D
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+        <!-- =========================
+             IMPORTANT NOTE
+        ========================= -->
+<div class="notes-title">
+            Important MCQ
+            </div>
+
+        <section class="qa-box">
+
+            <div class="important">
+
+                यहाँ महत्वपूर्ण जानकारी लिखें।
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         COPY PROTECTION
+    ========================= -->
+
+    <script>
+
+        /* Disable right click */
+
+        document.addEventListener("contextmenu", function (e) {
+
+            e.preventDefault();
+
+        });
+
+
+        /* Disable text selection */
+
+        document.addEventListener("selectstart", function (e) {
+
+            e.preventDefault();
+
+        });
+
+
+        /* Disable copy */
+
+        document.addEventListener("copy", function (e) {
+
+            e.preventDefault();
+
+            alert("Copying content is not allowed.");
+
+        });
+
+    </script>
+
+
+
+    <!-- =========================
+         BOOTSTRAP JS
+         केवल एक बार
+    ========================= -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+</body>
+
+</html>

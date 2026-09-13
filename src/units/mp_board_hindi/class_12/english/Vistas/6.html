@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="PAL STUDY CENTER - Hindi Study Notes, Questions and Answers, MCQs and Important Questions">
+
+    <title>PAL STUDY CENTER | Chapter Name</title>
+
+
+    <!-- =========================
+         BOOTSTRAP CSS
+    ========================= -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <style>
+
+        /* =========================
+           GLOBAL
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f5f7fb;
+            line-height: 1.7;
+
+            font-family:
+                Arial,
+                "Noto Sans Devanagari",
+                "Mangal",
+                sans-serif;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            background: rgba(23, 74, 126, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+            padding: 10px 0;
+            transition: 0.3s;
+        }
+
+
+        .navbar-brand {
+            font-size: 40px;
+            font-weight: 700;
+            color: white !important;
+            text-decoration: none;
+        }
+
+
+        .navbar-brand span {
+            color: #93c5fd;
+        }
+
+
+        /* =========================
+           MAIN CONTENT
+        ========================= */
+
+        .notes-container {
+            max-width: 900px;
+            margin:100px auto 50px;
+            padding: 3px 15px;
+        }
+
+
+        /* =========================
+           QUESTION / CONTENT BOX
+        ========================= */
+
+        .qa-box {
+            padding: 20px;
+            background: white;
+            margin-bottom: 18px;
+            border-radius: 14px;
+            border-left: 6px solid #1565c0;
+
+            box-shadow:
+                0 4px 12px rgba(0, 0, 0, 0.08);
+
+            transition: 0.25s;
+        }
+
+
+        .qa-box:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* =========================
+           SECTION TITLE
+        ========================= */
+
+        .notes-title {
+            background: #174a7e;
+            color: white;
+
+            padding: 15px 20px;
+
+            border-radius: 10px;
+
+            font-size: 20px;
+            font-weight: bold;
+
+            margin: 0px 0px 0px 0px;
+        }
+
+
+        /* =========================
+           QUESTION
+        ========================= */
+
+        .question {
+            font-weight: bold;
+            color: #1b3a57;
+
+            margin-bottom: 10px;
+
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           ANSWER
+        ========================= */
+
+        .answer {
+            color: #2c3e50;
+
+            text-align: left;
+
+            font-size: 16px;
+        }
+
+
+        .answer b {
+            color: #174a73;
+        }
+
+
+        .answer p {
+            margin-bottom: 12px;
+        }
+
+
+        /* =========================
+           YEAR BADGE
+        ========================= */
+
+        .year {
+            display: inline-block;
+
+            background: #fff3cd;
+            color: #856404;
+
+            padding: 2px 9px;
+
+            border-radius: 12px;
+
+            font-size: 13px;
+
+            margin-left: 5px;
+        }
+
+
+        /* =========================
+           MCQ
+        ========================= */
+
+        .mcq {
+            background: #f8fbff;
+
+            padding: 15px;
+
+            border-radius: 10px;
+
+            margin-top: 10px;
+            margin-bottom: 18px;
+
+            border: 1px solid #e2edf8;
+        }
+
+
+        .mcq-option {
+            padding: 4px 0;
+        }
+
+
+        .correct {
+            font-weight: bold;
+            color: #198754;
+        }
+
+
+        /* =========================
+           IMPORTANT BOX
+        ========================= */
+
+        .important {
+            background: #fff8e1;
+
+            border-left: 5px solid #ffc107;
+
+            padding: 15px;
+
+            border-radius: 8px;
+        }
+
+
+        /* =========================
+           EXTRACT
+        ========================= */
+
+        .extract {
+            background: #f1f8ff;
+
+            border: 1px solid #cfe5ff;
+
+            padding: 18px;
+
+            border-radius: 10px;
+
+            font-style: italic;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================
+           HORIZONTAL LINE
+        ========================= */
+
+        hr {
+            border: 0;
+
+            border-top: 1px solid #ddd;
+
+            margin: 20px 0;
+        }
+
+
+        /* =========================
+           MOBILE RESPONSIVE
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            .navbar-brand {
+                font-size: 30px;
+            }
+
+            .notes-container {
+                margin-top: 100px;
+                padding: 3px 10px;
+            }
+
+            .qa-box {
+                padding: 15px;
+
+                border-left-width: 4px;
+            }
+
+            .notes-title {
+                font-size: 18px;
+                padding: 13px 15px;
+            }
+
+            .question {
+                font-size: 20px;
+            }
+
+            .answer {
+                font-size: 20px;
+            }
+
+        }
+
+
+        /* =========================
+           SMALL MOBILE
+        ========================= */
+
+        @media (max-width: 480px) {
+
+            .navbar-brand {
+                font-size: 48px;
+            }
+
+            .notes-container {
+                margin-top: 155px;
+            }
+
+            .qa-box {
+                padding: 12px;
+            }
+
+            .notes-title {
+                font-size: 17px;
+            }
+
+            .year {
+                font-size: 11px;
+                margin-top: 4px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================= -->
+
+    <nav class="navbar fixed-top">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="../index.html">
+                पाल <span>स्टडी सेंटर</span>
+            </a>
+
+
+            <!-- Navbar toggler को आपके निर्देश के अनुसार रखा गया है -->
+
+            <button
+                class="navbar-toggler bg-light"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-label="Toggle navigation"
+            >
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================= -->
+
+    <main class="notes-container">
+
+
+        <!-- =========================
+             CHAPTER INTRODUCTION
+      ========================= -->
+
+
+      <!-- =========================
+     CHAPTER INTRODUCTION
+========================= -->
+
+<!-- =========================
+     CHAPTER INTRODUCTION
+========================= -->
+
+<div class="notes-title">
+    📘 Lesson 6 – Memories of Childhood
+</div>
+
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ By Zitkala-Sa and Bama
+    </div>
+
+
+    <div class="answer">
+
+        <p>
+            <b>पाठ परिचय:</b>
+            <i>Memories of Childhood</i> दो अलग-अलग लेखिकाओं
+            <b>Zitkala-Sa</b> और <b>Bama</b> के बचपन के अनुभवों पर आधारित
+            पाठ है। दोनों अलग-अलग संस्कृतियों और समाजों से संबंधित थीं,
+            लेकिन दोनों ने बचपन में भेदभाव और अन्याय का अनुभव किया।
+            Zitkala-Sa ने अमेरिका में नस्लीय और सांस्कृतिक भेदभाव का सामना
+            किया, जबकि Bama ने भारत में जातिगत भेदभाव और अस्पृश्यता को
+            अनुभव किया।
+        </p>
+
+
+        <p>
+            <b>मुख्य विषय:</b>
+            पाठ के पहले भाग में Zitkala-Sa के विद्यालय का अनुभव बताया गया है।
+            वह अपने लंबे बालों को अपनी संस्कृति और पहचान का महत्वपूर्ण हिस्सा
+            मानती थीं। जब उन्हें पता चला कि विद्यालय के अधिकारी उनके बाल
+            जबरन छोटे करने वाले हैं, तो उन्होंने इसका कड़ा विरोध किया और
+            अपने बाल बचाने के लिए छिप गईं। लेकिन अंत में उनके बाल काट दिए गए।
+            इस घटना से उन्हें गहरा दुख हुआ और उन्हें अपनी स्वतंत्रता,
+            संस्कृति और आत्मसम्मान के अपमान का अनुभव हुआ। उनका विरोध यह
+            दिखाता है कि बच्चे भी अपने साथ होने वाले अन्याय को पहचान सकते हैं।
+        </p>
+
+
+        <p>
+            पाठ के दूसरे भाग में Bama अपने बचपन की एक घटना को याद करती हैं।
+            एक दिन उन्होंने एक वृद्ध व्यक्ति को ऊँची जाति के व्यक्ति के लिए
+            खाने का पैकेट उसकी डोरी से पकड़कर ले जाते देखा। Bama को यह दृश्य
+            पहले मज़ेदार लगा, लेकिन बाद में उनके भाई ने समझाया कि वह व्यक्ति
+            नीची जाति का होने के कारण खाने की वस्तु को सीधे छू नहीं सकता था।
+            इस घटना से Bama को जातिगत भेदभाव और अस्पृश्यता की कठोर सच्चाई
+            का पता चला। वह इस अन्याय से दुखी और नाराज़ हुईं।
+        </p>
+
+
+        <p>
+            Bama के भाई ने उन्हें सलाह दी कि वे मन लगाकर पढ़ाई करें और
+            जीवन में आगे बढ़ें। उनके अनुसार शिक्षा और मेहनत के द्वारा
+            व्यक्ति सामाजिक भेदभाव का सामना कर सकता है तथा सम्मान और
+            आत्मसम्मान प्राप्त कर सकता है। इस घटना ने Bama के मन में
+            अन्याय के विरुद्ध संघर्ष करने की भावना पैदा की।
+        </p>
+
+
+        <p>
+            <b>मुख्य संदेश:</b>
+            दोनों लेखिकाओं की परिस्थितियाँ और संस्कृतियाँ अलग थीं, लेकिन
+            दोनों के अनुभवों का मूल विषय समान है—<b>भेदभाव, अन्याय,
+            उत्पीड़न और उसके विरुद्ध प्रतिरोध।</b> Zitkala-Sa ने नस्लीय
+            और सांस्कृतिक भेदभाव का विरोध किया, जबकि Bama ने जातिगत
+            भेदभाव और अस्पृश्यता की सच्चाई को समझकर शिक्षा तथा संघर्ष
+            को अपना मार्ग बनाया। पाठ हमें सिखाता है कि किसी भी रूप में
+            किया गया अन्याय बच्चों की नजर से भी नहीं बच सकता और
+            <b>समानता, स्वतंत्रता, सम्मान, आत्मसम्मान तथा शिक्षा</b>
+            के माध्यम से भेदभाव का विरोध किया जा सकता है।
+        </p>
+
+    </div>
+
+</section>
+        <!-- =========================
+             QUESTION WITH YEAR
+        ========================= -->
+<!-- =========================
+     QUESTIONS & ANSWERS
+========================= -->
+<div class="notes-title">
+                📖 Questions &amp; Answers
+</div>
+<!-- Q1 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 1. Why did Zitkala-Sa resist shortening of her hair?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            ज़िटकाला-सा ने अपने बाल छोटे करवाने का विरोध क्यों किया?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            Zitkala-Sa resisted the shortening of her hair because her long hair
+            was an important part of her Native American culture and identity.
+            She believed that cutting her hair would take away her dignity,
+            freedom and cultural identity.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            ज़िटकाला-सा ने अपने बाल छोटे करवाने का विरोध किया क्योंकि उनके
+            लंबे बाल उनकी मूल अमेरिकी संस्कृति और पहचान का महत्वपूर्ण हिस्सा थे।
+            उन्हें लगता था कि बाल काटने से उनकी गरिमा, स्वतंत्रता और सांस्कृतिक
+            पहचान छिन जाएगी।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q2 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 2. How did Zitkala-Sa react when Judewin told her that her hair would be shortened?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            जब जूडविन ने ज़िटकाला-सा को बताया कि उसके बाल छोटे किए जाएंगे,
+            तब उसने कैसी प्रतिक्रिया दी?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            When Judewin told Zitkala-Sa that her hair would be shortened,
+            she became frightened and upset. She strongly opposed the idea
+            and decided to hide herself so that the authorities could not
+            cut her hair.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            जब जूडविन ने ज़िटकाला-सा को बताया कि उसके बाल छोटे किए जाएंगे,
+            तो वह डर गई और बहुत दुखी हुई। उसने इसका कड़ा विरोध किया और
+            अधिकारियों से बचने के लिए खुद को छिपा लिया, ताकि वे उसके बाल
+            न काट सकें।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q3 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 3. How did Bama come to know of the evil of untouchability?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            बामा को अस्पृश्यता की बुराई के बारे में कैसे पता चला?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            Bama came to know about the evil of untouchability when she saw
+            an elderly man carrying a packet of food by its string for a
+            landlord. She initially found the sight funny, but her brother
+            explained that the man was not allowed to touch the food because
+            he belonged to a lower caste. This made Bama understand the
+            injustice of untouchability.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            बामा को अस्पृश्यता की बुराई तब पता चली जब उन्होंने एक बुजुर्ग व्यक्ति
+            को एक जमींदार के लिए खाने का पैकेट उसकी डोरी से पकड़कर ले जाते देखा।
+            शुरुआत में बामा को यह दृश्य मज़ेदार लगा, लेकिन उनके भाई ने समझाया
+            कि वह व्यक्ति नीची जाति का था, इसलिए उसे भोजन को छूने की अनुमति नहीं थी।
+            इससे बामा को अस्पृश्यता और सामाजिक अन्याय का पता चला।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q4 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 4. What advice did Bama's brother give her?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            बामा के भाई ने उसे क्या सलाह दी?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            Bama's brother advised her to study hard and make progress in life.
+            He told her that education was the best way to overcome caste
+            discrimination and gain respect and dignity.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            बामा के भाई ने उसे मन लगाकर पढ़ाई करने और जीवन में आगे बढ़ने की
+            सलाह दी। उन्होंने बताया कि शिक्षा ही जातिगत भेदभाव को दूर करने
+            तथा सम्मान और गरिमा प्राप्त करने का सबसे अच्छा साधन है।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q5 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 5. Bama's experience is that of a victim of the caste system.
+        What kind of discrimination does Zitkala-Sa's experience depict?
+        What are their responses to their respective situations?
+        <span class="year">NCERT</span>
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            बामा का अनुभव जाति-व्यवस्था की पीड़ित होने का है। ज़िटकाला-सा का
+            अनुभव किस प्रकार के भेदभाव को दर्शाता है? दोनों ने अपनी-अपनी
+            परिस्थितियों में कैसी प्रतिक्रिया दी?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            Bama's experience depicts caste discrimination and untouchability,
+            while Zitkala-Sa's experience depicts racial and cultural
+            discrimination. Bama became angry after learning about the
+            injustice and decided to fight it through education and progress.
+            Zitkala-Sa resisted the forced cutting of her hair because she
+            wanted to protect her cultural identity and dignity. Both opposed
+            discrimination and refused to accept injustice silently.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            बामा का अनुभव जातिगत भेदभाव और अस्पृश्यता को दर्शाता है, जबकि
+            ज़िटकाला-सा का अनुभव नस्लीय और सांस्कृतिक भेदभाव को दर्शाता है।
+            बामा को अन्याय का पता चलने पर बहुत दुख और क्रोध हुआ तथा उन्होंने
+            शिक्षा और प्रगति के माध्यम से इसका विरोध करने का निश्चय किया।
+            ज़िटकाला-सा ने अपने बाल जबरन काटे जाने का विरोध किया क्योंकि वे
+            अपनी सांस्कृतिक पहचान और गरिमा की रक्षा करना चाहती थीं। दोनों ने
+            भेदभाव का विरोध किया और अन्याय को चुपचाप स्वीकार नहीं किया।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q6 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 6. The two accounts that you read above are based in two distant
+        cultures. What is the commonality of theme found in both of them?
+        <span class="year">NCERT</span>
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            ऊपर पढ़े गए दोनों विवरण दो अलग-अलग संस्कृतियों पर आधारित हैं।
+            दोनों में पाए जाने वाले विषय की समानता क्या है?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            The two accounts belong to different cultures, but both have the
+            common theme of discrimination and oppression. Zitkala-Sa faces
+            racial and cultural discrimination, while Bama experiences caste
+            discrimination. Both stories show the desire for equality, dignity,
+            freedom and self-respect.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            दोनों विवरण अलग-अलग संस्कृतियों से संबंधित हैं, लेकिन दोनों का
+            मुख्य विषय भेदभाव और उत्पीड़न है। ज़िटकाला-सा नस्लीय और सांस्कृतिक
+            भेदभाव का सामना करती हैं, जबकि बामा जातिगत भेदभाव का अनुभव करती हैं।
+            दोनों कहानियाँ समानता, सम्मान, स्वतंत्रता और आत्मसम्मान की इच्छा
+            को दर्शाती हैं।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q7 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 7. It may take a long time for oppression to be resisted,
+        but the seeds of rebellion are sowed early in life. Do you agree
+        that injustice in any form cannot escape being noticed even by children?
+        <span class="year">NCERT</span>
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            उत्पीड़न का विरोध करने में बहुत समय लग सकता है, लेकिन विद्रोह के
+            बीज जीवन में बहुत पहले ही बो दिए जाते हैं। क्या आप सहमत हैं कि
+            किसी भी रूप में किया गया अन्याय बच्चों की नजर से भी नहीं बच सकता?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            Yes, I agree. Children may not always understand the complete
+            meaning of injustice, but they can notice unfair treatment.
+            Zitkala-Sa understood that cutting her hair against her wishes
+            was wrong. Similarly, Bama noticed an unusual incident and later
+            understood its connection with untouchability. These experiences
+            planted the seeds of resistance in both children.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            हाँ, मैं सहमत हूँ। बच्चे हमेशा अन्याय का पूरा अर्थ नहीं समझ पाते,
+            लेकिन वे अनुचित व्यवहार को पहचान सकते हैं। ज़िटकाला-सा समझ गई थीं
+            कि उनकी इच्छा के विरुद्ध बाल काटना गलत था। इसी प्रकार बामा ने एक
+            असामान्य घटना देखी और बाद में समझा कि उसका संबंध अस्पृश्यता से था।
+            इन अनुभवों ने दोनों के मन में अन्याय के विरोध के बीज बो दिए।
+        </p>
+
+    </div>
+
+</section>
+      
+    
+
+        <!-- =========================
+             EXTRACT
+        ========================= -->
+<div class="notes-title">
+                📝 Extract – A
+            </div>
+
+        <section class="qa-box">
+
+            <div class="extract">
+
+                Write the extract/passage here.
+
+            </div>
+
+
+            <div class="answer">
+
+
+                <!-- MCQ 1 -->
+
+                <p>
+                    <b>1. Write your MCQ question here?</b>
+                </p>
+
+
+                <div class="mcq">
+
+                    <div class="mcq-option">
+                        (a) Option A
+                    </div>
+
+                    <div class="mcq-option">
+                        (b) Option B
+                    </div>
+
+                    <div class="mcq-option correct">
+                        (c) Correct Answer
+                    </div>
+
+                    <div class="mcq-option">
+                        (d) Option D
+                    </div>
+
+                </div>
+
+
+
+                <!-- MCQ 2 -->
+
+                <p>
+                    <b>2. Write your second MCQ here?</b>
+                </p>
+
+
+                <div class="mcq">
+
+                    <div class="mcq-option">
+                        (a) Option A
+                    </div>
+
+                    <div class="mcq-option correct">
+                        (b) Correct Answer
+                    </div>
+
+                    <div class="mcq-option">
+                        (c) Option C
+                    </div>
+
+                    <div class="mcq-option">
+                        (d) Option D
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+        <!-- =========================
+             IMPORTANT NOTE
+        ========================= -->
+<div class="notes-title">
+            Important MCQ
+            </div>
+
+        <section class="qa-box">
+
+            <div class="important">
+
+                यहाँ महत्वपूर्ण जानकारी लिखें।
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         COPY PROTECTION
+    ========================= -->
+
+    <script>
+
+        /* Disable right click */
+
+        document.addEventListener("contextmenu", function (e) {
+
+            e.preventDefault();
+
+        });
+
+
+        /* Disable text selection */
+
+        document.addEventListener("selectstart", function (e) {
+
+            e.preventDefault();
+
+        });
+
+
+        /* Disable copy */
+
+        document.addEventListener("copy", function (e) {
+
+            e.preventDefault();
+
+            alert("Copying content is not allowed.");
+
+        });
+
+    </script>
+
+
+
+    <!-- =========================
+         BOOTSTRAP JS
+         केवल एक बार
+    ========================= -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+</body>
+
+</html>

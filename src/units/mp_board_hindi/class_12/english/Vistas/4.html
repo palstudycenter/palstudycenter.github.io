@@ -20,197 +20,176 @@
             color: #222;
         }
 
-        /* Navbar */
-        .navbar {
-            background: rgba(20, 20, 20, 0.95);
-            box-shadow: 0 3px 12px rgba(0,0,0,0.25);
-        }
 
-        .navbar-brand {
-            font-weight: 700;
-            font-size: 22px;
-            letter-spacing: 0.5px;
-        }
+      /* NAVBAR */
 
-        .navbar-brand span {
-            color: #ffc107;
-        }
+    .navbar{
 
-        /* Main Container */
-        .notes-container {
-            max-width: 1050px;
-            margin: 35px auto;
-            padding: 20px;
-        }
+      background:rgba(23,74,126,0.95);
 
-        /* Title */
-        .notes-title {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+      backdrop-filter:blur(10px);
 
-        .notes-title h1 {
-            font-weight: 800;
-            color: #212529;
-            margin-bottom: 8px;
-        }
+      box-shadow:0 4px 18px rgba(0,0,0,.18);
 
-        .notes-title p {
-            color: #555;
-            font-size: 16px;
-        }
+      padding:10px 0;
 
-        /* Question Box */
-        .qa-box {
-            background: #ffffff;
-            border-radius: 16px;
-            padding: 22px;
-            margin-bottom: 22px;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-            border-left: 5px solid #0d6efd;
-        }
+      transition:.3s;
 
-        .question {
-            font-size: 19px;
-            font-weight: 700;
-            color: #0d47a1;
-            margin-bottom: 12px;
-        }
+    }
 
-        .answer {
-            font-size: 16px;
-            line-height: 1.8;
-            margin-bottom: 10px;
-        }
+    .navbar-brand{
 
-        .answer strong {
-            color: #198754;
-        }
+      font-size:28px;
 
-        .hindi-answer {
-            border-top: 1px dashed #ccc;
-            padding-top: 10px;
-        }
+      font-weight:700;
 
-        .section-title {
-            text-align: center;
-            margin: 40px 0 25px;
-            font-weight: 800;
-            color: #212529;
-        }
+      color:white !important;
 
-        /* Extract */
-        .extract-title {
-            background: #212529;
-            color: white;
-            padding: 14px 18px;
-            border-radius: 12px;
-            margin-bottom: 18px;
-            font-weight: 700;
-        }
+    }
 
-        .extract {
-            background: #fff;
-            padding: 22px;
-            border-radius: 15px;
-            box-shadow: 0 5px 16px rgba(0,0,0,0.07);
-            margin-bottom: 25px;
-            line-height: 1.8;
-            font-style: italic;
-        }
+.navbar-brand span{
+    color:#93c5fd;
+}
+      .navbar-brand{
+        font-size:40px;
+      }
 
-        /* MCQ */
-        .mcq-box {
-            background: #ffffff;
-            border-radius: 14px;
-            padding: 20px;
-            margin-bottom: 18px;
-            box-shadow: 0 4px 14px rgba(0,0,0,0.06);
-        }
 
-        .mcq-question {
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: #333;
-        }
+/* CONTENT */
 
-        .option {
-            padding: 5px 0;
-        }
+.notes-container{
+max-width:900px;
+margin:100px auto 50px;
+padding:3px;
+}
 
-        .correct {
-            color: #198754;
-            font-weight: 700;
-            margin-top: 8px;
-        }
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 25px 10px;
-            margin-top: 40px;
-            background: #212529;
-            color: white;
-        }
+.notes-title {
+    background: #174a7e;
+    color: white;
+    padding: 18px 22px;
+    border-radius: 12px 12px 0 0;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 0;
+}
 
-        footer span {
-            color: #ffc107;
-            font-weight: 700;
-        }
 
-        /* Mobile */
-        @media (max-width: 768px) {
+/* QUESTION BOX */
 
-            .notes-container {
-                margin: 20px auto;
-                padding: 12px;
-            }
 
-            .notes-title h1 {
-                font-size: 27px;
-            }
+.qa-box{padding:20px;
+background:white;
+margin-bottom:18px;
+border-radius:14px;
+border-left:6px solid #1565c0;
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+transition:.25s;
+}
 
-            .question {
-                font-size: 17px;
-            }
+.qa-box:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
 
-            .answer {
-                font-size: 15px;
-            }
+/* QUESTION */
 
-            .qa-box {
-                padding: 17px;
-            }
+.question{
+font-weight:bold;
+color:#1b3a57;
+margin-bottom:10px;
+}
 
-            .extract {
-                padding: 17px;
-                font-size: 15px;
-            }
-        }
+.answer{
+color:#2c3e50;
+text-align:justify;
+}
 
-        /* Selection Protection */
-        body {
-            user-select: none;
-        }
+.answer b{
+color:#174a73;
+}
 
-        input, textarea {
-            user-select: text;
-        }
+.year{
+display:inline-block;
+background:#fff3cd;
+color:#856404;
+padding:2px 9px;
+border-radius:12px;
+font-size:13px;
+margin-left:5px;
+}
+
+
+/* MCQ */
+
+.mcq{
+background:#f8fbff;
+padding:15px;
+border-radius:10px;
+margin-top:10px;
+}
+
+.mcq-option{
+padding:4px 0;
+}
+
+.correct{
+font-weight:bold;
+color:#198754;
+}
+
+/* IMPORTANT */
+
+.important{
+background:#fff8e1;
+border-left:5px solid #ffc107;
+padding:15px;
+border-radius:8px;
+}
+
+
+/* EXTRACT */
+
+.extract{
+background:#f1f8ff;
+border:1px solid #cfe5ff;
+padding:18px;
+border-radius:10px;
+font-style:italic;
+margin-bottom:15px;
+}
+      
+        
     </style>
 </head>
 
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-dark">
-    <div class="container">
-        <a class="navbar-brand" href="#">
-            <i class="bi bi-book-half"></i>
-            पाल <span>स्टडी सेंटर</span>
-        </a>
-    </div>
-</nav>
+<!-- NAVBAR -->
 
+<nav class="navbar fixed-top">
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+
+पाल <span>स्टडी सेंटर</span>
+
+</a>
+  <button class="navbar-toggler bg-light"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+
+</div>
+
+</nav>
 
 <div class="notes-container">
 
@@ -726,3 +705,41 @@
 
         <div class="option">(a) Japanese</div>
         <div class="
+      
+
+          
+          <!-- PROTECTION -->
+
+    <!-- Bootstrap JS -->
+<script>
+
+document.addEventListener("contextmenu",
+e=>e.preventDefault());
+
+document.addEventListener("selectstart",
+e=>e.preventDefault());
+
+
+document.addEventListener("copy",
+e=>{
+
+e.preventDefault();
+
+alert("Copying content is not allowed");
+
+});
+
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+
+</html>
+

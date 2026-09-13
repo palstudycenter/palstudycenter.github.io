@@ -28,51 +28,67 @@ line-height:1.7;
 }
 
 
+
+
 /* NAVBAR */
 
-.navbar{
-background:rgba(15,23,42,0.92);
-backdrop-filter:blur(10px);
-box-shadow:0 4px 18px rgba(0,0,0,.18);
-padding:10px 0;
-}
+    .navbar{
 
-.navbar-brand{
-font-size:32px;
-font-weight:700;
-color:white !important;
-}
+      background:rgba(23,74,126,0.95);
+
+      backdrop-filter:blur(10px);
+
+      box-shadow:0 4px 18px rgba(0,0,0,.18);
+
+      padding:10px 0;
+
+      transition:.3s;
+
+    }
+
+    .navbar-brand{
+
+      font-size:28px;
+
+      font-weight:700;
+
+      color:white !important;
+
+    }
 
 .navbar-brand span{
-color:#93c5fd;
+    color:#93c5fd;
 }
-
+      .navbar-brand{
+        font-size:40px;
+      }
 
 /* CONTENT */
 
 .notes-container{
 max-width:900px;
-margin:95px auto 50px;
-padding:20px;
+margin:100px auto 50px;
+padding:3px;
 }
 
-.notes-title{
-background:#e3f2fd;
-color:#1565c0;
-padding:12px 20px;
-border-left:5px solid #1565c0;
-border-radius:50px;
-font-size:30px;
-font-weight:bold;
-margin:30px 0;
+
+.notes-title {
+    background: #174a7e;
+    color: white;
+    padding: 18px 22px;
+    border-radius: 12px 12px 0 0;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 0;
 }
 
 
 /* QUESTION BOX */
 
-.qa-box{
+
+.qa-box{padding:20px;
 background:white;
-padding:22px;
 margin-bottom:18px;
 border-radius:14px;
 border-left:6px solid #1565c0;
@@ -154,30 +170,6 @@ font-style:italic;
 margin-bottom:15px;
 }
 
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-.notes-container{
-margin-top:75px;
-padding:12px;
-}
-
-.navbar-brand{
-font-size:25px;
-}
-
-.notes-title{
-font-size:22px;
-}
-
-.qa-box{
-padding:17px;
-}
-
-}
-
 </style>
 
 </head>
@@ -197,18 +189,28 @@ padding:17px;
 पाल <span>स्टडी सेंटर</span>
 
 </a>
+  <button class="navbar-toggler bg-light"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
 
 </div>
 
 </nav>
-
-
 
 <!-- MAIN CONTENT -->
 
 <div class="notes-container">
 
 
+<!-- AUTHOR -->
+
+<div class="qa-box">
 <!-- TITLE -->
 
 <div class="notes-title">
@@ -217,58 +219,103 @@ padding:17px;
 
 </div>
 
+    <div class="question">
 
+        ✍️ By Tishani Doshi
 
-<!-- AUTHOR -->
+    </div>
 
-<div class="qa-box">
+    <div class="answer">
 
-<div class="question">
+        <p>
+            <b>पाठ परिचय:</b>
+            “Journey to the End of the Earth” तिशानी दोशी द्वारा लिखा गया
+            यात्रा-वृत्तांत है। इसमें लेखिका की अंटार्कटिका यात्रा के माध्यम से
+            पृथ्वी के भूवैज्ञानिक इतिहास, पर्यावरण, जलवायु परिवर्तन और ग्लोबल
+            वार्मिंग के गंभीर प्रभावों को समझाया गया है।
+        </p>
 
-✍️ By Tishani Doshi
+        <p>
+            <b>अंटार्कटिका की यात्रा:</b>
+            लेखिका अंटार्कटिका की यात्रा करती हैं। अंटार्कटिका पृथ्वी का सबसे
+            दक्षिणी और अत्यंत ठंडा महाद्वीप है। यहाँ चारों ओर बर्फ ही बर्फ दिखाई
+            देती है और मानव जीवन बहुत कम है। इस शांत और निर्जन स्थान को देखकर
+            लेखिका को पृथ्वी के प्राचीन स्वरूप को समझने का अवसर मिलता है।
+        </p>
+
+        <p>
+            <b>पृथ्वी का प्राचीन इतिहास:</b>
+            लगभग 650 मिलियन वर्ष पहले अंटार्कटिका आज की तरह बर्फ से ढका हुआ
+            नहीं था। उस समय पृथ्वी के विभिन्न भू-भाग एक विशाल भू-भाग
+            <b>गोंडवाना लैंड</b> का हिस्सा थे। भारत भी उसी विशाल भू-भाग का
+            हिस्सा था। समय के साथ भू-भाग अलग होते गए और वर्तमान महाद्वीपों का
+            निर्माण हुआ। इसलिए अंटार्कटिका पृथ्वी के भूवैज्ञानिक इतिहास को
+            समझने के लिए बहुत महत्वपूर्ण है।
+        </p>
+
+        <p>
+            <b>अंटार्कटिका का महत्व:</b>
+            अंटार्कटिका की बर्फ में पृथ्वी के पुराने वातावरण और जलवायु से
+            संबंधित महत्वपूर्ण प्रमाण सुरक्षित हैं। वैज्ञानिक बर्फ की परतों
+            का अध्ययन करके यह जान सकते हैं कि पुराने समय में पृथ्वी का
+            वातावरण कैसा था और उसमें समय के साथ क्या परिवर्तन हुए।
+        </p>
+
+        <p>
+            <b>ग्लोबल वार्मिंग:</b>
+            वर्तमान समय में पृथ्वी का तापमान लगातार बढ़ रहा है। इसका मुख्य
+            कारण वायुमंडल में बढ़ती ग्रीनहाउस गैसें और मानवीय गतिविधियाँ हैं।
+            तापमान बढ़ने से अंटार्कटिका की बर्फ पिघल सकती है, जिससे समुद्र का
+            जल-स्तर बढ़ सकता है और दुनिया के अनेक तटीय क्षेत्रों पर खतरा
+            उत्पन्न हो सकता है।
+        </p>
+
+        <p>
+            <b>पृथ्वी का पर्यावरणीय संतुलन:</b>
+            अंटार्कटिका का पर्यावरण पूरी पृथ्वी के पर्यावरण से जुड़ा हुआ है।
+            यहाँ होने वाला जलवायु परिवर्तन केवल अंटार्कटिका तक सीमित नहीं रहता,
+            बल्कि उसका प्रभाव पूरी पृथ्वी पर पड़ सकता है। इसलिए पृथ्वी के
+            पर्यावरण और जलवायु संतुलन को बनाए रखना आवश्यक है।
+        </p>
+
+        <p>
+            <b>पाठ का मुख्य संदेश:</b>
+            यह पाठ हमें प्रकृति और पर्यावरण के प्रति जागरूक होने की सीख देता है।
+            यदि मनुष्य प्राकृतिक संसाधनों का अत्यधिक उपयोग करता रहा और प्रदूषण
+            बढ़ाता रहा, तो जलवायु परिवर्तन की समस्या गंभीर हो सकती है। हमें
+            पर्यावरण की रक्षा करनी चाहिए और पृथ्वी को आने वाली पीढ़ियों के लिए
+            सुरक्षित रखना चाहिए।
+        </p>
+
+        <p>
+            <b>प्रश्न-उत्तर समझने के लिए मुख्य बातें:</b>
+            तिशानी दोशी → अंटार्कटिका की यात्रा → पृथ्वी का प्राचीन इतिहास →
+            गोंडवाना लैंड → जलवायु परिवर्तन → ग्लोबल वार्मिंग → बर्फ का पिघलना →
+            समुद्र के जल-स्तर में वृद्धि → पर्यावरण संरक्षण।
+        </p>
+
+    </div>
 
 </div>
 
-<div class="answer">
-
-<p>
-
-<b>पाठ परिचय:</b>
-
-“Journey to the End of the Earth” तिशानी दोशी द्वारा लिखा गया यात्रा-वृत्तांत है।
-
-इसमें लेखिका की अंटार्कटिका यात्रा, पृथ्वी के भूवैज्ञानिक इतिहास,
-जलवायु परिवर्तन, ग्लोबल वार्मिंग तथा पर्यावरण संरक्षण के महत्व का वर्णन है।
-
-</p>
-
-<p>
-
-अंटार्कटिका पृथ्वी के अतीत, वर्तमान और भविष्य को समझने के लिए एक महत्वपूर्ण
-स्थान है। यहाँ के बर्फीले वातावरण में पृथ्वी के लाखों वर्षों पुराने
-भूवैज्ञानिक और जलवायु संबंधी प्रमाण सुरक्षित हैं।
-
-</p>
-
 </div>
 
-</div>
+
 
 
 
 <!-- STORY ORDER -->
 
-<div class="notes-title">
-
-📖 Questions & Answers – कहानी के क्रम में
-
-</div>
-
-
 
 <!-- Q1 -->
 
 <div class="qa-box">
+<div class="notes-title">
+
+📖 Questions & Answers 
+
+</div>
+
 
 <div class="question">
 
@@ -765,23 +812,6 @@ protect the larger environment.
 
 </div>
 
-</div>
-
-
-
-<!-- EXTRA QUESTION -->
-
-<div class="notes-title">
-
-⭐ अतिरिक्त परीक्षा-उपयोगी प्रश्न
-
-</div>
-
-
-
-<!-- EXTRA Q1 -->
-
-<div class="qa-box">
 
 <div class="question">
 
@@ -818,10 +848,10 @@ aware of the need for environmental protection.
 जागरूक करना था।
 
 </p>
-
 </div>
 
 </div>
+
 
 
 
@@ -974,16 +1004,13 @@ climate change and global warming.
 
 <!-- EXTRACT A -->
 
-<div class="notes-title">
-
-📝 Important Extract – A
-
-</div>
-
-
 
 <div class="qa-box">
+<div class="notes-title">
 
+📝 Extract – A
+
+</div>
 <div class="extract">
 
 By the time I actually set foot on the Antarctic continent I had been
@@ -1052,16 +1079,13 @@ profound wonder.
 
 <!-- EXTRACT B -->
 
+
+<div class="qa-box">
 <div class="notes-title">
 
 📝 Important Extract – B
 
 </div>
-
-
-
-<div class="qa-box">
-
 <div class="extract">
 
 Take the microscopic phytoplankton, those grasses of the sea that nourish
@@ -1130,16 +1154,12 @@ photosynthesis.
 
 <!-- MORE IMPORTANT MCQS -->
 
+<div class="qa-box">
 <div class="notes-title">
 
-📚 Important MCQs – Exam Revision
+📚 Important MCQs 
 
 </div>
-
-
-
-<div class="qa-box">
-
 <div class="answer">
 
 <p>
@@ -1181,3 +1201,39 @@ photosynthesis.
 <p>
 <b>7. What is the major threat discussed in the lesson?</b><br>
 <span cl
+  
+  <!-- PROTECTION -->
+
+
+<script>
+
+
+document.addEventListener("contextmenu",
+e=>e.preventDefault());
+
+
+document.addEventListener("selectstart",
+e=>e.preventDefault());
+
+
+document.addEventListener("copy",
+e=>{
+
+e.preventDefault();
+
+alert("Copying content is not allowed");
+
+});
+
+
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
+

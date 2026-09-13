@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="PAL STUDY CENTER - Hindi Study Notes, Questions and Answers, MCQs and Important Questions">
+
+    <title>PAL STUDY CENTER | Chapter Name</title>
+
+
+    <!-- =========================
+         BOOTSTRAP CSS
+    ========================= -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <style>
+
+        /* =========================
+           GLOBAL
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f5f7fb;
+            line-height: 1.7;
+
+            font-family:
+                Arial,
+                "Noto Sans Devanagari",
+                "Mangal",
+                sans-serif;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            background: rgba(23, 74, 126, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+            padding: 10px 0;
+            transition: 0.3s;
+        }
+
+
+        .navbar-brand {
+            font-size: 40px;
+            font-weight: 700;
+            color: white !important;
+            text-decoration: none;
+        }
+
+
+        .navbar-brand span {
+            color: #93c5fd;
+        }
+
+
+        /* =========================
+           MAIN CONTENT
+        ========================= */
+
+        .notes-container {
+            max-width: 900px;
+            margin:100px auto 50px;
+            padding: 3px 15px;
+        }
+
+
+        /* =========================
+           QUESTION / CONTENT BOX
+        ========================= */
+
+        .qa-box {
+            padding: 20px;
+            background: white;
+            margin-bottom: 18px;
+            border-radius: 14px;
+            border-left: 6px solid #1565c0;
+
+            box-shadow:
+                0 4px 12px rgba(0, 0, 0, 0.08);
+
+            transition: 0.25s;
+        }
+
+
+        .qa-box:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* =========================
+           SECTION TITLE
+        ========================= */
+
+        .notes-title {
+            background: #174a7e;
+            color: white;
+
+            padding: 15px 20px;
+
+            border-radius: 10px;
+
+            font-size: 20px;
+            font-weight: bold;
+
+            margin: 0px 0px 0px 0px;
+        }
+
+
+        /* =========================
+           QUESTION
+        ========================= */
+
+        .question {
+            font-weight: bold;
+            color: #1b3a57;
+
+            margin-bottom: 10px;
+
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           ANSWER
+        ========================= */
+
+        .answer {
+            color: #2c3e50;
+
+            text-align: left;
+
+            font-size: 16px;
+        }
+
+
+        .answer b {
+            color: #174a73;
+        }
+
+
+        .answer p {
+            margin-bottom: 12px;
+        }
+
+
+        /* =========================
+           YEAR BADGE
+        ========================= */
+
+        .year {
+            display: inline-block;
+
+            background: #fff3cd;
+            color: #856404;
+
+            padding: 2px 9px;
+
+            border-radius: 12px;
+
+            font-size: 13px;
+
+            margin-left: 5px;
+        }
+
+
+        /* =========================
+           MCQ
+        ========================= */
+
+        .mcq {
+            background: #f8fbff;
+
+            padding: 15px;
+
+            border-radius: 10px;
+
+            margin-top: 10px;
+            margin-bottom: 18px;
+
+            border: 1px solid #e2edf8;
+        }
+
+
+        .mcq-option {
+            padding: 4px 0;
+        }
+
+
+        .correct {
+            font-weight: bold;
+            color: #198754;
+        }
+
+
+        /* =========================
+           IMPORTANT BOX
+        ========================= */
+
+        .important {
+            background: #fff8e1;
+
+            border-left: 5px solid #ffc107;
+
+            padding: 15px;
+
+            border-radius: 8px;
+        }
+
+
+        /* =========================
+           EXTRACT
+        ========================= */
+
+        .extract {
+            background: #f1f8ff;
+
+            border: 1px solid #cfe5ff;
+
+            padding: 18px;
+
+            border-radius: 10px;
+
+            font-style: italic;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================
+           HORIZONTAL LINE
+        ========================= */
+
+        hr {
+            border: 0;
+
+            border-top: 1px solid #ddd;
+
+            margin: 20px 0;
+        }
+
+
+        /* =========================
+           MOBILE RESPONSIVE
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            .navbar-brand {
+                font-size: 30px;
+            }
+
+            .notes-container {
+                margin-top: 100px;
+                padding: 3px 10px;
+            }
+
+            .qa-box {
+                padding: 15px;
+
+                border-left-width: 4px;
+            }
+
+            .notes-title {
+                font-size: 18px;
+                padding: 13px 15px;
+            }
+
+            .question {
+                font-size: 20px;
+            }
+
+            .answer {
+                font-size: 20px;
+            }
+
+        }
+
+
+        /* =========================
+           SMALL MOBILE
+        ========================= */
+
+        @media (max-width: 480px) {
+
+            .navbar-brand {
+                font-size: 48px;
+            }
+
+            .notes-container {
+                margin-top: 155px;
+            }
+
+            .qa-box {
+                padding: 12px;
+            }
+
+            .notes-title {
+                font-size: 17px;
+            }
+
+            .year {
+                font-size: 11px;
+                margin-top: 4px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================= -->
+
+    <nav class="navbar fixed-top">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="../index.html">
+                पाल <span>स्टडी सेंटर</span>
+            </a>
+
+
+            <!-- Navbar toggler को आपके निर्देश के अनुसार रखा गया है -->
+
+            <button
+                class="navbar-toggler bg-light"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-label="Toggle navigation"
+            >
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================= -->
+
+    <main class="notes-container">
+
+
+<!-- =========================
+     CHAPTER INTRODUCTION
+========================= -->
+
+<div class="notes-title">
+    📘 Poem 2 – Keeping Quiet
+</div>
+
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ By Pablo Neruda
+    </div>
+
+
+    <div class="answer">
+
+        <p>
+            <b>कविता का परिचय:</b>
+            <i>Keeping Quiet</i> प्रसिद्ध कवि
+            <b>Pablo Neruda</b> की एक विचारपूर्ण कविता है। इस कविता में
+            कवि मनुष्य से कुछ समय के लिए रुकने, शांत रहने और अपने कार्यों
+            तथा व्यवहार पर विचार करने की अपील करता है। कवि का उद्देश्य
+            पूर्ण निष्क्रियता नहीं, बल्कि कुछ समय के लिए आत्मचिंतन,
+            शांति और मानवता की भावना को विकसित करना है।
+        </p>
+
+
+        <p>
+            <b>मुख्य विषय:</b>
+            कवि लोगों से <b>बारह तक गिनने और कुछ क्षण शांत रहने</b> का
+            आग्रह करता है। इसका उद्देश्य सभी लोगों को अपने दैनिक कार्यों,
+            संघर्षों और गलतियों से थोड़ी देर विराम देकर अपने भीतर झाँकने
+            का अवसर देना है। यदि मनुष्य कुछ समय शांत रहकर सोचें, तो वे
+            अपने जीवन और दूसरों के जीवन को बेहतर ढंग से समझ सकते हैं।
+            इससे आपसी प्रेम, शांति और भाईचारे की भावना विकसित हो सकती है।
+        </p>
+
+
+        <p>
+            कवि <b>पूर्ण निष्क्रियता या आलस्य</b> का समर्थन नहीं करता।
+            वह केवल ऐसी गतिविधियों को कुछ समय रोकने की बात करता है जो
+            मनुष्य और प्रकृति को नुकसान पहुँचाती हैं। मनुष्य लगातार
+            युद्ध, हिंसा, शोषण और स्वार्थपूर्ण कार्यों में लगा हुआ है।
+            कवि चाहता है कि मनुष्य कुछ समय रुककर अपने कार्यों के परिणाम
+            पर विचार करे और विनाशकारी गतिविधियों से दूर हो।
+        </p>
+
+
+        <p>
+            कविता में <b>'sadness'</b> उस दुख और निराशा को दर्शाती है
+            जो मनुष्य की लगातार भाग-दौड़, स्वार्थ, हिंसा, युद्ध और
+            प्रकृति के शोषण से उत्पन्न होती है। मनुष्य अपने ही कार्यों
+            के कारण अपने जीवन में तनाव और दुख पैदा कर रहा है। कवि
+            मानता है कि थोड़ी देर शांत रहकर आत्मचिंतन करने से इस दुख
+            के कारणों को समझा जा सकता है।
+        </p>
+
+
+        <p>
+            कवि <b>'exotic moment'</b> की कल्पना एक ऐसे अद्भुत और
+            असामान्य क्षण के रूप में करता है जब पूरी दुनिया में कुछ
+            समय के लिए शांति और मौन हो। इस क्षण में मनुष्य अपनी
+            विनाशकारी गतिविधियों को रोककर अपने जीवन, प्रकृति और
+            दूसरों के बारे में सोच सकता है। कवि के अनुसार कुछ समय
+            शांत रहकर और आत्मचिंतन करके मनुष्य इस विशेष अनुभव को
+            प्राप्त कर सकता है।
+        </p>
+
+
+        <p>
+            कवि समुद्र में रहने वाले मछुआरों और समुद्री जीवों का उदाहरण
+            देकर बताता है कि यदि मनुष्य कुछ समय शांत रहे और विनाशकारी
+            गतिविधियाँ रोक दे, तो <b>समुद्र में भी जीवन को राहत</b> मिलेगी।
+            मछुआरे समुद्री जीवों को नुकसान पहुँचाने से बचेंगे और
+            समुद्र तथा उसके जीव-जंतुओं को सुरक्षित रहने का अवसर मिलेगा।
+            इस प्रकार प्रकृति के प्रति मनुष्य का व्यवहार अधिक संवेदनशील
+            बन सकता है।
+        </p>
+
+
+        <p>
+            कविता में कवि <b>धरती</b> से सीखने की बात करता है। धरती
+            बाहर से शांत और स्थिर दिखाई देती है, लेकिन उसके भीतर
+            जीवन लगातार सक्रिय रहता है। इसी प्रकार थोड़ी देर का
+            बाहरी मौन जीवन का अंत नहीं है। यह हमें सिखाता है कि
+            शांति और ठहराव के बाद भी जीवन नई ऊर्जा के साथ आगे बढ़
+            सकता है। प्रकृति हमें धैर्य, पुनर्जीवन और संतुलन की शिक्षा देती है।
+        </p>
+
+
+        <p>
+            <b>कवि की अपील:</b>
+            कवि की अपील है कि संसार के सभी लोग कुछ समय के लिए
+            अपनी भाग-दौड़ रोकें, शांत रहें और आत्मचिंतन करें। उन्हें
+            युद्ध, हिंसा, लालच, शोषण तथा प्रकृति के विनाश जैसी
+            गतिविधियों पर विचार करना चाहिए। कवि चाहता है कि मनुष्य
+            अपने व्यवहार में बदलाव लाकर शांति, प्रेम, सहयोग और
+            भाईचारे को बढ़ावा दे।
+        </p>
+
+
+        <p>
+            <b>मुख्य संदेश:</b>
+            कविता का संदेश यह है कि मनुष्य को लगातार भागते रहने के
+            बजाय कभी-कभी रुककर अपने जीवन और कार्यों पर विचार करना चाहिए।
+            <b>शांत रहना आलस्य या निष्क्रियता नहीं है</b>, बल्कि स्वयं को
+            समझने और गलत कार्यों को सुधारने का अवसर है। यदि मनुष्य
+            थोड़ी देर रुककर आत्मचिंतन करे, तो वह युद्ध, हिंसा,
+            स्वार्थ और प्रकृति के शोषण को कम करके संसार में
+            <b>शांति, प्रेम, समानता और मानवता</b> स्थापित करने की दिशा
+            में आगे बढ़ सकता है।
+        </p>
+
+
+        <p>
+            <b>केंद्रीय भाव:</b>
+            <i>Keeping Quiet</i> का केंद्रीय भाव है कि कुछ समय का
+            मौन और आत्मचिंतन मनुष्य को अपने जीवन तथा अपने कार्यों
+            को समझने में सहायता कर सकता है। कवि पूर्ण निष्क्रियता
+            का नहीं, बल्कि विनाशकारी गतिविधियों से विराम लेकर
+            सकारात्मक सोच विकसित करने का समर्थन करता है। प्रकृति
+            और धरती से प्रेरणा लेकर मनुष्य शांति, संतुलन और
+            नए जीवन की ओर बढ़ सकता है।
+        </p>
+
+    </div>
+
+</section>
+
+
+      <!-- =========================
+     QUESTIONS & ANSWERS
+========================= -->
+
+
+<!-- Q1 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 1. What will counting upto twelve and keeping still help us achieve?
+        <span class="year">NCERT; 2022, 2023</span>
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            बारह तक गिनने और कुछ समय शांत रहने से हमें क्या प्राप्त करने
+            में सहायता मिलेगी?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            Counting up to twelve and keeping still will give us a moment
+            of peace and silence. It will help us stop our hurried activities,
+            look within ourselves and understand the consequences of our actions.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            बारह तक गिनने और कुछ समय शांत रहने से हमें शांति और मौन का
+            एक क्षण मिलेगा। इससे हम अपनी भाग-दौड़ भरी गतिविधियों को रोककर
+            अपने भीतर झाँक सकेंगे और अपने कार्यों के परिणामों को समझ सकेंगे।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q2 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 2. What is the poet's appeal to the people?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            कवि की लोगों से क्या अपील है?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            The poet appeals to people to stop for a moment, remain quiet
+            and introspect. He wants them to stop harmful activities and
+            think about peace, humanity and the well-being of nature.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            कवि लोगों से कुछ समय रुकने, शांत रहने और आत्मचिंतन करने की
+            अपील करता है। वह चाहता है कि लोग हानिकारक गतिविधियों को
+            रोककर शांति, मानवता और प्रकृति के कल्याण के बारे में सोचें।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q3 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 3. What kind of activity does the poet feel a man is involved in?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            कवि के अनुसार मनुष्य किस प्रकार की गतिविधियों में लगा हुआ है?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            The poet feels that man is involved in constant and harmful
+            activities. People are busy with wars, violence, exploitation,
+            selfish actions and the destruction of nature instead of living
+            peacefully.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            कवि के अनुसार मनुष्य लगातार ऐसी गतिविधियों में लगा हुआ है,
+            जो हानिकारक हैं। लोग युद्ध, हिंसा, शोषण, स्वार्थपूर्ण कार्यों
+            और प्रकृति के विनाश में व्यस्त हैं, जबकि उन्हें शांतिपूर्ण
+            जीवन जीना चाहिए।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q4 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 4. Do you think the poet Pablo Neruda advocates total inactivity?
+        <span class="year">NCERT</span>
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            क्या आपको लगता है कि कवि पाब्लो नेरूदा पूर्ण निष्क्रियता
+            का समर्थन करते हैं?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            No, the poet does not advocate total inactivity. He asks people
+            to stop only for a short time so that they can introspect and
+            understand their actions. He wants people to give up harmful
+            activities, not all useful work.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            नहीं, कवि पूर्ण निष्क्रियता का समर्थन नहीं करता। वह केवल
+            थोड़े समय के लिए रुकने और आत्मचिंतन करने की बात करता है,
+            ताकि मनुष्य अपने कार्यों को समझ सके। वह उपयोगी कार्यों को
+            छोड़ने के बजाय हानिकारक गतिविधियों को रोकने की बात करता है।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q5 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 5. What is the 'sadness' that the poet refers to in the poem?
+        <span class="year">NCERT; 2024</span>
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            कविता में कवि जिस 'sadness' अर्थात दुख का उल्लेख करता है,
+            वह क्या है?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            The sadness refers to the sorrow caused by man's endless
+            activities, conflicts, violence, selfishness and exploitation.
+            Human beings often fail to understand themselves and continue
+            actions that create suffering for themselves and others.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            'Sadness' से तात्पर्य मनुष्य की लगातार भाग-दौड़, संघर्ष,
+            हिंसा, स्वार्थ और शोषण से उत्पन्न दुख से है। मनुष्य अक्सर
+            स्वयं को समझे बिना ऐसे कार्य करता रहता है, जो उसके और
+            दूसरों के जीवन में पीड़ा पैदा करते हैं।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q6 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 6. What do you mean by 'exotic moment' and how can man achieve it?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            'Exotic moment' से क्या तात्पर्य है और मनुष्य इसे कैसे प्राप्त कर सकता है?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            'Exotic moment' means a rare and wonderful moment of complete
+            peace and silence. Man can achieve it by stopping his hurried
+            and harmful activities for a while, remaining quiet and
+            looking within himself.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            'Exotic moment' का अर्थ एक ऐसे दुर्लभ और अद्भुत क्षण से है,
+            जिसमें चारों ओर शांति और मौन हो। मनुष्य कुछ समय के लिए
+            अपनी भाग-दौड़ और हानिकारक गतिविधियों को रोककर, शांत रहकर
+            और आत्मचिंतन करके इस क्षण को प्राप्त कर सकता है।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q7 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 7. How would keeping quiet affect life in and around the sea?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            शांत रहने से समुद्र के अंदर और उसके आसपास के जीवन पर
+            क्या प्रभाव पड़ेगा?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            Keeping quiet would stop harmful activities in and around the
+            sea for a while. Fishermen would not harm sea creatures and
+            nature would get some relief. It would create a peaceful
+            environment for marine life.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            शांत रहने से कुछ समय के लिए समुद्र और उसके आसपास की
+            हानिकारक गतिविधियाँ रुक जाएँगी। मछुआरे समुद्री जीवों को
+            नुकसान नहीं पहुँचाएँगे और प्रकृति को कुछ राहत मिलेगी।
+            इससे समुद्री जीवन के लिए शांतिपूर्ण वातावरण बनेगा।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q8 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 8. What symbol from Nature does the poet invoke to say that
+        there can be life under apparent stillness?
+        <span class="year">NCERT; 2023</span>
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            प्रकृति के किस प्रतीक का प्रयोग कवि यह बताने के लिए करता है
+            कि दिखाई देने वाली शांति के भीतर भी जीवन हो सकता है?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            The poet uses the symbol of the Earth. The Earth may appear
+            still and silent at times, but it continues to support life
+            and renewal. Thus, apparent stillness does not mean the end
+            of life.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            कवि धरती के प्रतीक का प्रयोग करता है। धरती कभी शांत और स्थिर
+            दिखाई देती है, लेकिन उसके भीतर जीवन और पुनर्जीवन की प्रक्रिया
+            चलती रहती है। इसलिए बाहरी शांति का अर्थ जीवन का अंत नहीं है।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q9 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 9. What can the Earth teach us?
+        <span class="year">2025</span>
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            धरती हमें क्या सिखा सकती है?
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            The Earth teaches us that there can be life and renewal even
+            after a period of stillness. It teaches us patience, silence,
+            balance and the possibility of a fresh beginning.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            धरती हमें सिखाती है कि कुछ समय की शांति के बाद भी जीवन और
+            पुनर्जीवन संभव है। वह हमें धैर्य, मौन, संतुलन और नई शुरुआत
+            की संभावना की शिक्षा देती है।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q10 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 10. Summarize the poem 'Keeping Quiet'.
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            'Keeping Quiet' कविता का सारांश लिखिए।
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            In 'Keeping Quiet', Pablo Neruda asks people to count up to
+            twelve and remain still for a moment. He does not support
+            complete inactivity. He wants people to stop harmful activities
+            and think about their actions. Such silence can bring peace,
+            self-understanding and harmony. The poet refers to the sadness
+            caused by violence, wars and exploitation. He presents the
+            Earth as a symbol of life under apparent stillness and suggests
+            that humanity can learn from nature. The poem finally gives
+            a message of peace, introspection, unity and renewal.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            'Keeping Quiet' में पाब्लो नेरूदा लोगों से बारह तक गिनने और
+            कुछ समय शांत रहने की अपील करते हैं। वे पूर्ण निष्क्रियता का
+            समर्थन नहीं करते। वे चाहते हैं कि मनुष्य हानिकारक गतिविधियों
+            को कुछ समय रोककर अपने कार्यों पर विचार करे। ऐसा मौन शांति,
+            आत्मबोध और आपसी सद्भाव ला सकता है। कवि युद्ध, हिंसा और
+            शोषण से उत्पन्न दुख की ओर संकेत करता है। वह धरती को
+            दिखाई देने वाली शांति के भीतर जीवन का प्रतीक मानता है और
+            मनुष्य को प्रकृति से सीखने की प्रेरणा देता है। अंततः कविता
+            शांति, आत्मचिंतन, एकता और नए जीवन का संदेश देती है।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Q11 -->
+<section class="qa-box">
+
+    <div class="question">
+        ✍️ Q. 11. Write the central idea of the poem 'Keeping Quiet'.
+        <span class="year">2024</span>
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>हिंदी अनुवाद:</b>
+            'Keeping Quiet' कविता का केंद्रीय भाव लिखिए।
+        </p>
+
+        <p>
+            <b>English Answer:</b>
+            The central idea of the poem is that a moment of silence and
+            introspection can help human beings understand their lives
+            and actions. The poet wants people to stop violence, conflict
+            and destructive activities and move towards peace, harmony,
+            humanity and a better relationship with nature.
+        </p>
+
+        <p>
+            <b>हिंदी उत्तर:</b>
+            कविता का केंद्रीय भाव यह है कि कुछ समय का मौन और आत्मचिंतन
+            मनुष्य को अपने जीवन और कार्यों को समझने में सहायता कर सकता है।
+            कवि चाहता है कि मनुष्य हिंसा, संघर्ष और विनाशकारी गतिविधियों
+            को रोककर शांति, सद्भाव, मानवता और प्रकृति के साथ बेहतर
+            संबंध की ओर बढ़े।
+        </p>
+
+    </div>
+
+</section>
+
+
+
+
+        <!-- =========================
+             EXTRACT
+        ========================= -->
+<div class="notes-title">
+                📝 Extract – A
+            </div>
+
+        <section class="qa-box">
+
+            <div class="extract">
+
+                Write the extract/passage here.
+
+            </div>
+
+
+            <div class="answer">
+
+
+                <!-- MCQ 1 -->
+
+                <p>
+                    <b>1. Write your MCQ question here?</b>
+                </p>
+
+
+                <div class="mcq">
+
+                    <div class="mcq-option">
+                        (a) Option A
+                    </div>
+
+                    <div class="mcq-option">
+                        (b) Option B
+                    </div>
+
+                    <div class="mcq-option correct">
+                        (c) Correct Answer
+                    </div>
+
+                    <div class="mcq-option">
+                        (d) Option D
+                    </div>
+
+                </div>
+
+
+
+                <!-- MCQ 2 -->
+
+                <p>
+                    <b>2. Write your second MCQ here?</b>
+                </p>
+
+
+                <div class="mcq">
+
+                    <div class="mcq-option">
+                        (a) Option A
+                    </div>
+
+                    <div class="mcq-option correct">
+                        (b) Correct Answer
+                    </div>
+
+                    <div class="mcq-option">
+                        (c) Option C
+                    </div>
+
+                    <div class="mcq-option">
+                        (d) Option D
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+        <!-- =========================
+             IMPORTANT NOTE
+        ========================= -->
+<div class="notes-title">
+            Important MCQ
+            </div>
+
+        <section class="qa-box">
+
+            <div class="important">
+
+                यहाँ महत्वपूर्ण जानकारी लिखें।
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         COPY PROTECTION
+    ========================= -->
+
+    <script>
+
+        /* Disable right click */
+
+        document.addEventListener("contextmenu", function (e) {
+
+            e.preventDefault();
+
+        });
+
+
+        /* Disable text selection */
+
+        document.addEventListener("selectstart", function (e) {
+
+            e.preventDefault();
+
+        });
+
+
+        /* Disable copy */
+
+        document.addEventListener("copy", function (e) {
+
+            e.preventDefault();
+
+            alert("Copying content is not allowed.");
+
+        });
+
+    </script>
+
+
+
+    <!-- =========================
+         BOOTSTRAP JS
+         केवल एक बार
+    ========================= -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+</body>
+
+</html>
