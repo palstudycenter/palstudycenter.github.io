@@ -49,7 +49,7 @@ line-height:1.7;
 
     .navbar{
 
-      background:rgba(15,23,42,0.45);
+      background:rgba(23,74,126,0.95);
 
       backdrop-filter:blur(10px);
 
@@ -85,30 +85,21 @@ max-width:900px;
 
 margin:100px auto 50px;
 
-padding:20px;
-
-}
-
-.notes-title{
-
-background:#e3f2fd;
-
-color:#1565c0;
-
 padding:10px;
 
-border-left:5px solid #1565c0;
-
-border-radius:50px;
-
-font-size:30px;
-
-font-weight:bold;
-margin-top:100px;
-
-margin-bottom:50px;
-
 }
+
+.notes-title {
+    background: #174a7e;
+    color: white;
+    padding: 15px 18px;
+    border-radius: 12px 12px 0 0;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+
 
 
 
@@ -365,7 +356,9 @@ Pal <span>Study Center</span>
         <br><br>
 
         A magnet obtained naturally from nature is called a <strong>natural magnet</strong>. Its shape is irregular, and it is relatively less powerful.
-
+<div class="question-image">
+            <img src="images/5.webp" alt="चित्र">
+</div>
         <br><br>
 
         <strong>Example:</strong> Lodestone
@@ -379,6 +372,7 @@ Pal <span>Study Center</span>
         A magnet made by humans is called an <strong>artificial magnet</strong>. These can be made in various shapes as required, and they are more powerful than natural magnets.
 
     </div>
+
 </div>
 <div class="qa-box">
     <div class="question">
@@ -419,6 +413,9 @@ Pal <span>Study Center</span>
         Magnets whose magnetism persists for a long time are called <strong>permanent magnets</strong>. These are usually made of <strong>hardened steel, nickel, and cobalt</strong>. Their magnetism does not disappear quickly.
 
     </div>
+  <div class="question-image">
+            <img src="images/6.png" alt="चित्र">
+  </div>
 </div>
 
 <div class="qa-box">
@@ -567,7 +564,35 @@ Pal <span>Study Center</span>
     <div class="answer">
     According to this law, the force of attraction or repulsion acting between <strong>two magnetic poles</strong> is directly proportional to the product of the pole strengths of the two poles
             and inversely proportional to the square of the distance between them.
-    <div class="formula">
+<div class="answer" style="width:100%; overflow-x:auto;">
+
+  <svg viewBox="0 0 500 140"
+       style="width:500px; max-width:100%; height:auto; display:block;"
+       xmlns="http://www.w3.org/2000/svg">
+
+    <!-- Q₁ से Q₂ तक रेखा -->
+    <line x1="120" y1="75" x2="380" y2="75"
+          stroke="black" stroke-width="2"/>
+
+    <!-- पहला आवेश Q₁ -->
+    <circle cx="120" cy="75" r="4" fill="black"/>
+    <text x="85" y="50" font-size="18">m₁</text>
+
+    <!-- दूसरा आवेश Q₂ -->
+    <circle cx="380" cy="75" r="4" fill="black"/>
+    <text x="365" y="50" font-size="18">m₂</text>
+
+    <!-- दोनों आवेशों के बीच दूरी r -->
+    <text x="245" y="60" font-size="18">r</text>
+
+  </svg>
+
+</div>
+<div class="answer">
+Let two magnetic poles with strengths \(m_1\) and \(m_2\) be situated at a distance \(r\) from each other; then, according to Coulomb's law, the force acting between them is given by the following:
+</div>
+      
+      <div class="formula">
      \[
         F\propto m_1m_2
         \]
@@ -586,54 +611,53 @@ Pal <span>Study Center</span>
         </div>
     <div class="formula">
         \[
-        \boxed{F=\frac{\mu}{4\pi}\times\frac{m_1m_2}{r^2}}
+        \boxed{F=\frac{\mu_0}{4\pi}\times\frac{m_1m_2}{r^2}}
         \]
         </div>
-        where—
-       <ul>
-            <li>\(F\) = force between two magnetic poles</li>
-            <li>\(m_1,\;m_2\) = pole strengths of the two poles</li>
-            <li>\(r\) = distance between the two poles</li>
-            <li>\(\mu\) = magnetic permeability of the medium</li>
-        </ul>
+        <div class="note">
+    where \( \frac{\mu_0}{4\pi} \) is a proportionality constant.
+        </div>
 
     </div>
 </div>
+  
 <div class="qa-box">
     <div class="question">
-        Question: What is called magnetic moment?
+        Q. What is the value of \( \frac{\mu_0}{4\pi} \)?
+    </div>
+
+    <div class="answer">
+        The value of \( \frac{\mu_0}{4\pi} \) is
+        \( 10^{-7} \, \mathrm{N/A^2} \).
+    </div>
+</div>
+
+
+<div class="qa-box">
+    <div class="question">
+        <b>Question:</b> What is \( \mu_0 \)? Write its value.
     </div>
 
     <div class="answer">
 
-        The product of the <strong>pole strength</strong> of a magnet and the <strong>effective distance</strong> between its poles is called the <strong>Magnetic Moment</strong>.
+        <p>
+            <b>\(\mu_0\)</b> is called the magnetic permeability of free space.
+        </p>
 
-        <br><br>
-
-        Let \(NS\) be a bar magnet whose pole strength is \(m\) and effective length is \(2d\); then its magnetic moment will be—
+        <p>
+            Its value is given below.
+        </p>
 
         <div class="formula">
-
-        \[
-        \boxed{M=m\times2d}
-        \]
-
+            $$
+            \mu_0 = 4\pi \times 10^{-7}\,
+            \mathrm{N/A^2}
+            $$
         </div>
-
-        where,
-
-        <ul>
-            <li>\(M\) = magnetic moment</li>
-            <li>\(m\) = pole strength</li>
-            <li>\(2d\) = effective distance between the poles</li>
-        </ul>
-
-        <br>
-
-        Its SI unit is <strong>ampere × metre² (A·m²)</strong>.
 
     </div>
 </div>
+
 
 <div class="qa-box">
     <div class="question">
@@ -668,14 +692,6 @@ Pal <span>Study Center</span>
 
         </div>
 
-        where,
-
-        <ul>
-            <li>\(B\) = intensity of the magnetic field</li>
-            <li>\(F\) = force acting on the pole</li>
-            <li>\(m\) = pole strength</li>
-        </ul>
-
         <ul>
             <li>It is a <strong>Vector Quantity</strong>.</li>
             <li>Its SI unit is <strong>newton/(ampere × metre)</strong> \(\left(\mathrm{N/(A\cdot m)}\right)\) or <strong>Tesla</strong>.</li>
@@ -683,312 +699,577 @@ Pal <span>Study Center</span>
 
     </div>
 </div>
+  <div class="qa-box">
+    <div class="question">
+        Question: What is called magnetic moment?
+    </div>
+
+    <div class="answer">
+
+        The product of the pole strength of a magnet and the effective distance between its poles is called the Magnetic Moment.“It is represented by \(M\).”
+
+
+        <br><br>
+
+        Let \(NS\) be a bar magnet whose pole strength is \(m\) and effective length is \(2l\); then its magnetic moment will be—
+
+        <div class="formula">
+
+        \[
+        \boxed{M=m\times2l}
+        \]
+
+        </div>
+
+      
+
+        Its SI unit is <strong>ampere × metre² (A·m²)</strong>.
+
+    </div>
+</div>
+
 <div class="qa-box">
+
 <div class="question">
-Question: Derive the formula for the intensity of the magnetic field at an axial position of a bar magnet.
+Q. Find the intensity of the magnetic field at an axial (longitudinal) position of a bar magnet.
 </div>
 
 <!-- DIAGRAM -->
 <div class="question-image">
-    <img src="images/bar-magnet-axial-position.png" alt="Bar Magnet Axial Position">
+            <img src="images/1.png" alt="चित्र">
 </div>
 
 <div class="answer">
-Let \(NS\) be a bar magnet whose north and south poles have pole strength \(m\), and the effective distance between the poles is \(2d\). We need to find the intensity of the magnetic field at a point \(P\) located at a distance \(r\) from the centre \(O\) of the magnet in the axial position.
+Consider a bar magnet \(NS\), whose magnetic pole strength is \(m\),
+and the distance between its poles is \(2l\).
+We have to find the magnetic field at point \(P\), which is at a distance
+\(r\) from the center \(O\) of the bar magnet and lies on its axial position.
 </div>
 
 <div class="answer">
-We imagine a unit north pole at point \(P\).
-</div>
-
-<div class="answer">
-As shown in the figure,
+According to the figure:
 \[
-NP=r-d \qquad \text{and} \qquad SP=r+d
+SP = r + l
+\]
+\[
+NP = r - l
 \]
 </div>
 
 <div class="answer">
-Magnetic field at point \(P\) due to north pole \(N\)
+Now, the magnetic field at point \(P\) due to the north pole \(N\) is:
 </div>
 
 <div class="formula">
+$$
+B_1 = \frac{\mu_0}{4\pi} \cdot \frac{m}{(NP)^2}
+$$
 
-\[
-B_1=\frac{\mu_0}{4\pi}\cdot\frac{m}{(r-d)^2}
-\]
-
+$$
+B_1 = \frac{\mu_0}{4\pi} \cdot
+\frac{m}{(r-l)^2}
+$$
 </div>
 
 <div class="answer">
-(in the direction \(NP\))
+Again, the magnetic field at point \(P\) due to the south pole \(S\) is:
+</div>
+
+<div class="formula">
+$$
+B_2 = \frac{\mu_0}{4\pi} \cdot \frac{m}{(SP)^2}
+$$
+
+$$
+B_2 = \frac{\mu_0}{4\pi} \cdot
+\frac{m}{(r+l)^2}
+$$
 </div>
 
 <div class="answer">
-Magnetic field at point \(P\) due to south pole \(S\)
+Therefore, the resultant magnetic field is:
 </div>
 
 <div class="formula">
-
-\[
-B_2=\frac{\mu_0}{4\pi}\cdot\frac{m}{(r+d)^2}
-\]
-
-</div>
-
-<div class="answer">
-(in the direction \(PS\))
-</div>
-
-<div class="answer">
-Hence, the resultant magnetic field
+$$
+B = B_1 - B_2
+$$
 </div>
 
 <div class="formula">
-
-\[
-B=B_1-B_2
-\]
-
+$$
+B =
+\frac{\mu_0 m}{4\pi(r-l)^2}
+-
+\frac{\mu_0 m}{4\pi(r+l)^2}
+$$
 </div>
 
 <div class="formula">
-
-\[
-B=\frac{\mu_0m}{4\pi(r-d)^2}-\frac{\mu_0m}{4\pi(r+d)^2}
-\]
-
-</div>
-
-<div class="formula">
-
-\[
-B=\frac{\mu_0m}{4\pi}
+$$
+B =
+\frac{\mu_0 m}{4\pi}
 \left[
-\frac{1}{(r-d)^2}-\frac{1}{(r+d)^2}
+\frac{1}{(r-l)^2}
+-
+\frac{1}{(r+l)^2}
 \right]
-\]
-
+$$
 </div>
 
 <div class="formula">
-
-\[
-B=\frac{\mu_0m}{4\pi}
+$$
+B =
+\frac{\mu_0 m}{4\pi}
 \left[
-\frac{(r+d)^2-(r-d)^2}{(r^2-d^2)^2}
+\frac{(r+l)^2-(r-l)^2}
+{(r^2-l^2)^2}
 \right]
-\]
-
+$$
 </div>
 
 <div class="formula">
+$$
+B =
+\frac{\mu_0 m}{4\pi}
+\left[
+\frac{(r^2+l^2+2rl)-(r^2+l^2-2rl)}
+{(r^2-l^2)^2}
+\right]
+$$
+</div>
 
-\[
-B=\frac{\mu_0m}{4\pi}
+<div class="formula">
+$$
+B =
+\frac{\mu_0 m}{4\pi}
 \cdot
-\frac{4rd}{(r^2-d^2)^2}
+\frac{4rl}{(r^2-l^2)^2}
+$$
+</div>
+
+<div class="answer">
+If the bar magnet is very small \((l^2 \ll r^2)\), then \(l^2\) can be neglected.
+</div>
+
+<div class="formula">
+$$
+B =
+\frac{\mu_0 m}{4\pi}
+\cdot
+\frac{4rl}{(r^2-0)^2}
+$$
+</div>
+
+<div class="formula">
+$$
+B =
+\frac{\mu_0}{4\pi}
+\cdot
+\frac{4mrl}{r^4}
+$$
+</div>
+
+<div class="formula">
+$$
+B =
+\frac{\mu_0}{4\pi}
+\cdot
+\frac{2(2ml)}{r^3}
+$$
+</div>
+
+<div class="formula">
+$$
+B =
+\frac{\mu_0}{4\pi}
+\cdot
+\frac{2M}{r^3}
+\quad
+(\text{∵ } M=2ml)
+$$
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+Q. Find the intensity of the magnetic field at the equatorial position (perpendicular to the magnetic axis) of a bar magnet.
+</div>
+<!-- DIAGRAM -->
+<div class="question-image">
+            <img src="images/2.png" alt="चित्र">
+</div>
+
+<div class="answer">
+Consider a bar magnet \(NS\), whose north and south poles have pole strength
+\(m\), and the distance between the poles is \(2l\).
+We have to find the magnetic field at point \(P\), which is at a distance
+\(r\) from the center \(O\) of the bar magnet and lies on its equatorial position.
+</div>
+
+<div class="answer">
+Consider a unit north pole at point \(P\).
+</div>
+
+<div class="answer">
+Now, in right-angled \(NOS\), by Pythagoras' theorem,
+
+\[
+SP^2 = OP^2 + OA^2
+\]
+
+\[
+SP^2 = r^2 + l^2
+\]
+
+\[
+SP = \sqrt{r^2 + l^2}
+= NP
+\]
+
+Also,
+
+\[
+\cos\theta = \frac{OS}{SP}
+\]
+
+\[
+\cos\theta =
+\frac{l}{\sqrt{r^2 + l^2}}
 \]
 
 </div>
 
 <div class="answer">
-If the bar magnet is very short, that is,
-
-\[
-d^2\ll r^2
-\]
-
-then \(d^2\) is considered negligible.
+Now, the magnetic field at point \(P\) due to the north pole \(N\) is:
 </div>
 
 <div class="formula">
 
-\[
-B=\frac{\mu_0}{4\pi}\cdot\frac{4mrd}{r^4}
-\]
-
-</div>
-
-<div class="formula">
-
-\[
-B=\frac{\mu_0}{4\pi}\cdot\frac{2(2md)}{r^3}
-\]
+$$
+B_1 =
+\frac{\mu_0}{4\pi}
+\cdot
+\frac{m}{(r^2 + l^2)}
+\;(\overrightarrow{NP})
+$$
 
 </div>
 
 <div class="answer">
-Since,
-
-\[
-M=m\times2d
-\]
-
-where \(M\) is the magnetic moment of the bar magnet.
+Again, the magnetic field at point \(P\) due to the south pole \(S\) is:
 </div>
 
 <div class="formula">
 
-\[
-\boxed{
-B=\frac{\mu_0}{4\pi}\cdot\frac{2M}{r^3}
-}
-\]
+$$
+B_2 =
+\frac{\mu_0}{4\pi}
+\cdot
+\frac{m}{(r^2 + l^2)}
+\;(\overrightarrow{PAS)
+$$
 
 </div>
 
 <div class="answer">
-This is the formula for the intensity of the magnetic field in the <strong>axial position</strong> of a bar magnet.
+Since \(B_1 = B_2\), their components along the magnetic axis cancel each other,
+while the perpendicular components act in the same direction and add up.
+Therefore, the resultant magnetic field is:
+</div>
+
+<div class="formula">
+
+$$
+B = B_1 \cos\theta + B_2 \cos\theta
+$$
+
+</div>
+
+<div class="formula">
+
+$$
+B = 2B_1 \cos\theta
+$$
+
+</div>
+
+<div class="formula">
+
+$$
+B =
+2 \cdot
+\frac{\mu_0}{4\pi}
+\cdot
+\frac{m}{(r^2 + l^2)}
+\cdot
+\frac{l}{\sqrt{r^2 + l^2}}
+$$
+
+</div>
+
+<div class="formula">
+
+$$
+B =
+\frac{\mu_0}{4\pi}
+\cdot
+\frac{2ml}{(r^2 + l^2)^{3/2}}
+$$
+
+</div>
+
+<div class="formula">
+
+$$
+B =
+\frac{\mu_0}{4\pi}
+\cdot
+\frac{M}{(r^2 + l^2)^{3/2}}
+\quad
+(\text{∵ } M = 2ml)
+$$
+
+</div>
+
+<div class="answer">
+If the bar magnet is very small \((l^2 \ll r^2)\), then \(l^2\) can be neglected.
+</div>
+
+<div class="formula">
+
+$$
+B =
+\frac{\mu_0}{4\pi}
+\cdot
+\frac{M}{(r^2 + 0)^{3/2}}
+$$
+
+</div>
+
+<div class="formula">
+
+$$
+B =
+\frac{\mu_0}{4\pi}
+\cdot
+\frac{M}{r^3}
+$$
+
+</div>
+
+<div class="answer">
+At the equatorial position, the direction of the magnetic field is
+<strong>opposite</strong> to the direction of the magnetic dipole moment \(M\).
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+Q. Derive the formula for the torque acting on a bar magnet placed in a uniform magnetic field.
+</div>
+<!-- DIAGRAM -->
+<div class="question-image">
+            <img src="images/3.png" alt="चित्र">
+</div>
+  
+
+<div class="answer">
+Consider a bar magnet \(NS\), whose pole strength is \(m\) and effective
+length is \(2l\). It is placed in a uniform magnetic field \(B\), making
+an angle \(\theta\) with the direction of the magnetic field.
+Then equal and opposite forces act on its two poles, which form a couple
+and tend to rotate the magnet to bring it in the direction of the magnetic field.
+Therefore, the torque produced by this couple is given by:
+</div>
+
+<div class="formula">
+\[
+\tau = \text{One force} \times \text{Perpendicular distance between the two forces}
+\]
+</div>
+
+<div class="formula">
+$$
+\tau = mB \times NA
+$$
+</div>
+
+<div class="answer">
+Now, in the right-angled triangle \( \triangle NAS \):
+</div>
+
+<div class="formula">
+$$
+\sin\theta = \frac{NA}{NS}
+$$
+
+$$
+\sin\theta = \frac{NA}{2l}
+$$
+
+$$
+NA = 2l\sin\theta
+$$
+</div>
+
+<div class="answer">
+Substituting the value in the above equation:
+</div>
+
+<div class="formula">
+$$
+\tau = mB \times 2l\sin\theta
+$$
+</div>
+
+<div class="formula">
+$$
+\tau = (m \times 2l)B\sin\theta
+$$
+</div>
+
+<div class="formula">
+$$
+\tau = MB\sin\theta
+\quad
+(\text{∵ } M=2ml)
+$$
+</div>
+
+<div class="answer">
+where \(M\) is the magnetic dipole moment of the bar magnet.
+</div>
+
+<div class="answer">
+<b>Case I:</b> If \(\theta = 0^\circ\), then
+</div>
+
+<div class="formula">
+$$
+\tau = MB\sin0^\circ
+$$
+
+$$
+\tau = MB \times 0
+$$
+
+$$
+\tau_{\min}=0
+$$
+</div>
+
+<div class="answer">
+<b>Case II:</b> If \(\theta = 90^\circ\), then
+</div>
+
+<div class="formula">
+$$
+\tau = MB\sin90^\circ
+$$
+
+$$
+\tau = MB \times 1
+$$
+
+$$
+\tau_{\max}=MB
+$$
 </div>
 
 </div>
 <div class="qa-box">
+
 <div class="question">
-Question: Derive the formula for the intensity of the magnetic field at an equatorial position of a bar magnet.
+Q. दंड चुंबक की स्थितिज ऊर्जा से क्या अभिप्राय है? इसका व्यंजक स्थापित कीजिए।
 </div>
 
+<div class="answer">
+दंड चुंबक की स्थितिज ऊर्जा वह ऊर्जा है जो किसी दंड चुंबक को उसकी
+मानक स्थिति से किसी विशेष स्थिति में लाने में किए गए कार्य के बराबर होती है।
+</div>
 <!-- DIAGRAM -->
 <div class="question-image">
-    <img src="images/bar-magnet-equatorial-position.png" alt="Bar Magnet Equatorial Position">
-</div>
-
+            <img src="images/3.png" alt="चित्र">
+</div
 <div class="answer">
-Let \(NS\) be a bar magnet whose north and south poles have pole strength \(m\), and the effective distance between the poles is \(2d\). We need to find the intensity of the magnetic field at a point \(P\) located at a distance \(r\) from the centre \(O\) of the magnet in the equatorial position.
-</div>
-
-<div class="answer">
-We imagine a unit north pole at point \(P\).
-</div>
-
-<div class="answer">
-As shown in the figure,
-
-\[
-NP=SP=\sqrt{r^2+d^2}
-\]
-
-</div>
-
-<div class="answer">
-Magnetic field at point \(P\) due to north pole \(N\)
+किसी दंड चुंबक \(NS\), जिसका चुंबकीय आघूर्ण \(M\) है, को एक समान
+चुंबकीय क्षेत्र \(B\) में \(\theta\) कोण पर रखने पर उस पर लगने वाले
+बल-युग्म का आघूर्ण:
 </div>
 
 <div class="formula">
-
-\[
-B_1=\frac{\mu_0}{4\pi}\cdot\frac{m}{r^2+d^2}
-\]
-
+$$
+\tau = MB \sin\theta
+$$
 </div>
 
 <div class="answer">
-and due to south pole \(S\)
+मानक स्थिति \((\theta = \frac{\pi}{2})\) से \(\theta\) कोण पर लाने में किया गया कार्य:
 </div>
 
 <div class="formula">
+$$
+U = \int_{\pi/2}^{\theta} MB \sin\theta \, d\theta
+$$
+</div>
 
-\[
-B_2=\frac{\mu_0}{4\pi}\cdot\frac{m}{r^2+d^2}
-\]
+<div class="formula">
+$$
+U = MB \int_{\pi/2}^{\theta} \sin\theta \, d\theta
+$$
+</div>
 
+<div class="formula">
+$$
+U = MB [-\cos\theta]_{\pi/2}^{\theta}
+$$
+</div>
+
+<div class="formula">
+$$
+U = -MB [\cos\theta]_{\pi/2}^{\theta}
+$$
+</div>
+
+<div class="formula">
+$$
+U = -MB [\cos\theta - \cos(\pi/2)]
+$$
+</div>
+
+<div class="formula">
+$$
+U = -MB [\cos\theta - 0]
+$$
+</div>
+
+<div class="formula">
+$$
+U = -MB\cos\theta
+$$
 </div>
 
 <div class="answer">
-The horizontal components of both fields cancel each other out, while the vertical components add up in the same direction.
-
-If \(\theta\) is the angle formed between \(NP\) and \(OP\), then
-
-\[
-\sin\theta=\frac{d}{\sqrt{r^2+d^2}}
-\]
-
-</div>
-
-<div class="answer">
-Hence, the resultant magnetic field
+<b>Case I :</b> यदि \(\theta = 0^\circ\) तब
 </div>
 
 <div class="formula">
+$$
+U = -MB\cos0^\circ
+$$
 
-\[
-B=2B_1\sin\theta
-\]
+$$
+U = -MB\times 1
+$$
 
-</div>
-
-<div class="formula">
-
-\[
-B=2\left(\frac{\mu_0}{4\pi}\cdot\frac{m}{r^2+d^2}\right)\cdot
-\frac{d}{\sqrt{r^2+d^2}}
-\]
-
-</div>
-
-<div class="formula">
-
-\[
-B=\frac{\mu_0}{4\pi}\cdot
-\frac{2md}{(r^2+d^2)^{3/2}}
-\]
-
-</div>
-
-<div class="answer">
-Since,
-
-\[
-M=m\times2d
-\]
-
-where \(M\) is the magnetic moment of the bar magnet.
-</div>
-
-<div class="formula">
-
-\[
-B=\frac{\mu_0}{4\pi}\cdot
-\frac{M}{(r^2+d^2)^{3/2}}
-\]
-
-</div>
-
-<div class="answer">
-If the bar magnet is very short, that is,
-
-\[
-d^2\ll r^2
-\]
-
-then \(d^2\) is considered negligible.
-</div>
-
-<div class="formula">
-
-\[
-(r^2+d^2)^{3/2}\approx r^3
-\]
-
-</div>
-
-<div class="formula">
-
-\[
-\boxed{
-B=\frac{\mu_0}{4\pi}\cdot\frac{M}{r^3}
-}
-\]
-
-</div>
-
-<div class="answer">
-The direction of the magnetic field is <strong>opposite</strong> to the direction of the magnetic moment.
-
-<br><br>
-
-This is the formula for the intensity of the magnetic field in the <strong>Equatorial</strong> position of a bar magnet.
-
+$$
+U_{\min} = -MB
+$$
 </div>
 
 </div>
