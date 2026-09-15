@@ -556,6 +556,36 @@ Pal <span>Study Center</span>
 
     </div>
 </div>
+    <div class="qa-box">
+    <div class="question">
+        Question: What is called magnetic moment?
+    </div>
+
+    <div class="answer">
+
+        The product of the pole strength of a magnet and the effective distance between its poles is called the Magnetic Moment.“It is represented by \(M\).”
+<div class="question-image">
+            <img src="images/7.png" alt="चित्र">
+</div>
+
+        <br><br>
+
+        Let \(NS\) be a bar magnet whose pole strength is \(m\) and effective length is \(2l\); then its magnetic moment will be—
+
+        <div class="formula">
+
+        \[
+        \boxed{M=m\times2l}
+        \]
+
+        </div>
+
+      
+
+        Its SI unit is <strong>ampere × metre² (A·m²)</strong>.
+
+    </div>
+    </div>
 <div class="qa-box">
     <div class="question">
         Question: State Coulomb's inverse square law.
@@ -696,34 +726,6 @@ Let two magnetic poles with strengths \(m_1\) and \(m_2\) be situated at a dista
             <li>It is a <strong>Vector Quantity</strong>.</li>
             <li>Its SI unit is <strong>newton/(ampere × metre)</strong> \(\left(\mathrm{N/(A\cdot m)}\right)\) or <strong>Tesla</strong>.</li>
         </ul>
-
-    </div>
-</div>
-  <div class="qa-box">
-    <div class="question">
-        Question: What is called magnetic moment?
-    </div>
-
-    <div class="answer">
-
-        The product of the pole strength of a magnet and the effective distance between its poles is called the Magnetic Moment.“It is represented by \(M\).”
-
-
-        <br><br>
-
-        Let \(NS\) be a bar magnet whose pole strength is \(m\) and effective length is \(2l\); then its magnetic moment will be—
-
-        <div class="formula">
-
-        \[
-        \boxed{M=m\times2l}
-        \]
-
-        </div>
-
-      
-
-        Its SI unit is <strong>ampere × metre² (A·m²)</strong>.
 
     </div>
 </div>
@@ -954,7 +956,7 @@ $$
 
 $$
 B_1 = \frac{\mu_0}{4\pi} \cdot
-\frac{m}{(r-l)^2}\;(\overrightarrow{NP})
+\frac{m}{(r^2 + l^2)}\;(\overrightarrow{NP})
 $$
 </div>
 
@@ -969,7 +971,7 @@ $$
 
 $$
 B_2 = \frac{\mu_0}{4\pi} \cdot
-\frac{m}{(r+l)^2}\;(\overrightarrow{PS})
+\frac{m}{(r^2 + l^2)}\;(\overrightarrow{PS})
 $$
   </div>
 
@@ -1184,21 +1186,183 @@ $$
 <div class="qa-box">
 
 <div class="question">
-Q. दंड चुंबक की स्थितिज ऊर्जा से क्या अभिप्राय है? इसका व्यंजक स्थापित कीजिए।
+
+**Q. Calculate the work done in rotating a bar magnet through some angle from its mean position in a uniform magnetic field.**
+
+</div>
+
+<!-- DIAGRAM -->
+
+<div class="question-image">
+
+            <img src="images/3.png" alt="Diagram">
+
 </div>
 
 <div class="answer">
-दंड चुंबक की स्थितिज ऊर्जा वह ऊर्जा है जो किसी दंड चुंबक को उसकी
-मानक स्थिति से किसी विशेष स्थिति में लाने में किए गए कार्य के बराबर होती है।
+
+Consider a bar magnet \(NS\) having magnetic dipole moment \(M\). When it is placed at an angle \(\theta\) in a uniform magnetic field \(B\), the torque acting on it is:
+
 </div>
+
+<div class="formula">
+
+$$
+\tau = MB \sin\theta
+$$
+
+</div>
+
+<div class="answer">
+
+If the bar magnet is rotated through a small angle \(d\theta\) from this position, the work done is:
+
+</div>
+
+<div class="formula">
+
+$$
+dw = \tau \, d\theta
+$$
+
+</div>
+
+<div class="formula">
+
+$$
+dw = MB \sin\theta \, d\theta
+$$
+
+</div>
+
+<div class="answer">
+
+Therefore, the work done in rotating the bar magnet from \(\theta = 0\) to \(\theta\) is:
+
+</div>
+
+<div class="formula">
+
+$$
+W = \int_0^\theta MB \sin\theta \, d\theta
+$$
+
+</div>
+
+<div class="formula">
+
+$$
+W = MB \int_0^\theta \sin\theta \, d\theta
+$$
+
+</div>
+
+<div class="formula">
+
+$$
+W = MB [ -\cos\theta ]_0^\theta
+$$
+
+</div>
+
+<div class="formula">
+
+$$
+W = - MB [ \cos\theta ]_0^\theta
+$$
+
+</div>
+
+<div class="formula">
+
+$$
+W = -MB [ \cos\theta - \cos0^\circ ]
+$$
+
+</div>
+
+<div class="formula">
+
+$$
+W = -MB [ \cos\theta - 1 ]
+$$
+
+</div>
+
+<div class="formula">
+
+$$
+W = MB [ 1 - \cos\theta ]
+$$
+
+</div>
+
+<div class="answer">
+
+**Case I:** If \(\theta = 0^\circ\), then
+
+</div>
+
+<div class="formula">
+
+$$
+W = MB [ 1 - \cos0^\circ ]
+$$
+
+$$
+W = MB [ 1 - 1 ]
+$$
+
+$$
+W_{\min}= 0
+$$
+
+</div>
+
+<div class="answer">
+
+**Case II:** If \(\theta = 180^\circ\), then
+
+</div>
+
+<div class="formula">
+
+$$
+W = MB [ 1 - \cos180^\circ ]
+$$
+
+$$
+W = MB [ 1 + 1 ]
+$$
+
+$$
+W_{\max} = 2MB
+$$
+
+</div>
+
+</div>
+
+<div class="qa-box">
+
+<div class="question">
+Q. What is meant by the potential energy of a bar magnet? Derive its expression.
+</div>
+
+<div class="answer">
+The potential energy of a bar magnet is the energy equal to the work done
+in bringing the bar magnet from its standard position to a particular position.
+</div>
+
 <!-- DIAGRAM -->
 <div class="question-image">
-            <img src="images/3.png" alt="चित्र">
-</div
+    <img src="images/3.png" alt="Figure">
+</div>
+
 <div class="answer">
-किसी दंड चुंबक \(NS\), जिसका चुंबकीय आघूर्ण \(M\) है, को एक समान
-चुंबकीय क्षेत्र \(B\) में \(\theta\) कोण पर रखने पर उस पर लगने वाले
-बल-युग्म का आघूर्ण:
+When a bar magnet \(NS\), whose magnetic dipole moment is \(M\), is placed
+in a uniform magnetic field \(B\) at an angle \(\theta\), the torque acting
+on it due to the couple is:
 </div>
 
 <div class="formula">
@@ -1208,9 +1372,9 @@ $$
 </div>
 
 <div class="answer">
-मानक स्थिति \((\theta = \frac{\pi}{2})\) से \(\theta\) कोण पर लाने में किया गया कार्य:
+The work done in bringing the magnet from its standard position
+\((\theta = \frac{\pi}{2})\) to an angle \(\theta\) is:
 </div>
-
 <div class="formula">
 $$
 U = \int_{\pi/2}^{\theta} MB \sin\theta \, d\theta
@@ -1254,7 +1418,7 @@ $$
 </div>
 
 <div class="answer">
-<b>Case I :</b> यदि \(\theta = 0^\circ\) तब
+<b>Case I :</b> If \(\theta = 0^\circ\) then
 </div>
 
 <div class="formula">
@@ -1270,7 +1434,23 @@ $$
 U_{\min} = -MB
 $$
 </div>
+  <div class="answer">
+<b>Case II :</b> If \(\theta = 180^\circ\) then
+</div>
 
+<div class="formula">
+$$
+U = -MB\cos180^\circ
+$$
+
+$$
+U = -MB\times (-1)
+$$
+
+$$
+U_{\max} = MB
+$$
+</div>
 </div>
 <div class="qa-box">
     <div class="question">

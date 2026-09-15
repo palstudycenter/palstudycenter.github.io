@@ -50,7 +50,7 @@ line-height:1.7;
 
     .navbar{
 
-      background:rgba(15,23,42,0.45);
+      background:rgba(23,74,126,0.95);
 
       backdrop-filter:blur(10px);
 
@@ -90,27 +90,17 @@ padding:20px;
 
 }
 
-.notes-title{
 
-background:#e3f2fd;
-
-color:#1565c0;
-
-padding:10px;
-
-border-left:5px solid #1565c0;
-
-border-radius:50px;
-
-font-size:30px;
-
-font-weight:bold;
-margin-top:100px;
-
-margin-bottom:50px;
-
+.notes-title {
+    background: #174a7e;
+    color: white;
+    padding: 18px 22px;
+    border-radius: 12px 12px 0 0;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 100px;
+    margin-bottom: 0;
 }
-
 
 
 .qa-box{
@@ -205,7 +195,29 @@ margin-top:80px;
     padding:10px;
     vertical-align:middle;
 }
+  .formula {
+    text-align: center;
+    font-size: 16px;
+    line-height: 2;
+    font-family: "Noto Sans Devanagari", "Mangal", sans-serif;
+  }
+.fraction {
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 1.2;
+    margin: 0 5px;
+}
 
+.fraction .top {
+    border-bottom: 1px solid #000;
+    padding: 0 8px 3px;
+}
+
+.fraction .bottom {
+    padding-top: 3px;
+}
 </style>
 </head>
 
@@ -314,11 +326,15 @@ margin-top:80px;
     </div>
     <div class="answer">
         किसी सूक्ष्मदर्शी में अंतिम प्रतिबिंब द्वारा नेत्र पर बने दर्शन कोण तथा स्पष्ट दृष्टि की न्यूनतम दूरी पर रखी वस्तु द्वारा नेत्र पर बने दर्शन कोण के अनुपात को सूक्ष्मदर्शी की आवर्धन क्षमता कहते हैं। इसे \(m\) से प्रदर्शित करते हैं।
-        <div class="formula">
-            $$
-            m=\frac{\text{अंतिम प्रतिबिंब द्वारा बना दर्शन कोण}}{\text{स्पष्ट दृष्टि की न्यूनतम दूरी पर रखी वस्तु द्वारा बना दर्शन कोण}}
-            $$
-        </div>
+    <div class="formula">
+    <span style="white-space: nowrap;">
+        \(m =\)
+        <span class="fraction">
+            <span class="top">अंतिम प्रतिबिम्ब द्वारा नेत्र पर बना दर्शन कोण</span>
+            <span class="bottom">स्पष्ट दृष्टि की न्यूनतम दूरी पर रखी वस्तु द्वारा नेत्र पर बना दर्शन कोण</span>
+        </span>
+    </span>
+    </div> 
     </div>
 </div>
 
@@ -328,13 +344,14 @@ margin-top:80px;
     </div>
     <div class="answer">
         एक कम फोकस दूरी के उत्तल लेंस को सरल सूक्ष्मदर्शी कहते हैं। इसका उपयोग छोटी वस्तुओं को बड़ा और स्पष्ट रूप में देखने के लिए किया जाता है।
-        <br><br>
-        <strong>सिद्धांत</strong> - जब वस्तु को उत्तल लेंस के फोकस के भीतर रखा जाता है, तो लेंस उस वस्तु का आभासी, सीधा तथा बड़ा प्रतिबिंब बनाता है। इस प्रकार वस्तु वास्तविक आकार से बड़ी दिखाई देती है।
-        <br><br>
-        <strong>रचना</strong> - इसकी रचना में एक शक्तिशाली उत्तल लेंस होता है, जो इसका मुख्य भाग है। यह लेंस हैंडल में लगा होता है।
-        <br><br>
-        <strong>चित्र</strong>
-        <br><br>
+<strong>चित्र</strong>
+      <div class="question-image">
+            <img src="images/7.jpg" alt="सरल सूक्ष्मदर्शी का किरण आरेख">
+  </div>  
+      <strong>रचना</strong> - इसकी रचना में एक शक्तिशाली उत्तल लेंस होता है, जो इसका मुख्य भाग है। यह लेंस हैंडल में लगा होता है।
+    <br><br>
+      <strong>सिद्धांत</strong> - जब वस्तु को उत्तल लेंस के फोकस के भीतर रखा जाता है, तो लेंस उस वस्तु का आभासी, सीधा तथा बड़ा प्रतिबिंब बनाता है। इस प्रकार वस्तु वास्तविक आकार से बड़ी दिखाई देती है।
+<br><br>
         <strong>उपयोग -</strong>
         <ol>
             <li>इसका उपयोग घड़ी निर्माता एवं जौहरी अपने बारीकी के काम के लिए करते हैं।</li>
@@ -344,64 +361,424 @@ margin-top:80px;
 </div>
 
 <div class="qa-box">
-    <div class="question">
-        प्रश्न: निम्नलिखित के आधार पर सरल सूक्ष्मदर्शी की व्याख्या कीजिए। (a) स्पष्ट दृष्टि की दूरी पर बने। (b) अनंत पर बने। (2019)
-    </div>
-    <div class="answer">
-        <ol>
-            <li><strong>प्रतिबिंब निर्माण के लिए किरण आरेख,</strong></li>
-            <li><strong>आवर्धन क्षमता जबकि अंतिम प्रतिबिंब</strong></li>
-        </ol>
-        <strong>किरण आरेख-</strong>
+ <div class="question">
+प्रश्न: सरल सूक्ष्मदर्शी का किरण आरेख तथा आवर्धन क्षमता के लिए सूत्र निगमित कीजिए जबकि अंतिमप्रतिबिम्ब -
+ <ol>
+  <li>
+<strong>स्पष्ट दृष्टि की दूरी पर बने।</strong>
+</li>
+   <li>
+<strong>अनंत पर बने। (2019)</strong>
+</li>
+ </ol>
+ </div>
+    
+<div class="answer"> 
+  <strong>किरण आरेख-</strong>
+<br>  
+  <strong>Case (1) —</strong> जब अंतिम प्रतिबिम्ब स्पष्ट दृष्टि की न्यूनतम दूरी पर बने तब -
         <div class="question-image">
-            <img src="images/image5.png" alt="सरल सूक्ष्मदर्शी का किरण आरेख">
+            <img src="images/5.jpg" alt="सरल सूक्ष्मदर्शी का किरण आरेख">
         </div>
-        <strong>आवर्धन क्षमता -</strong> कॉपी से लिखें।
+      <strong>Case (2) —</strong>class="question-image">
+            <img src="images/6.png" alt="सरल सूक्ष्मदर्शी का किरण आरेख">
+        </div>
+        <strong>आवर्धन क्षमता -</strong> 
+
+सरल सूक्ष्मदर्शी की आवर्धन क्षमता निम्न होती है।
+
+<div class="formula">
+    <span style="white-space: nowrap;">
+        \(m =\)
+        <span class="fraction">
+            <span class="top">अंतिम प्रतिबिम्ब द्वारा नेत्र पर बना दर्शन कोण</span>
+            <span class="bottom">स्पष्ट दृष्टि की न्यूनतम दूरी पर रखी वस्तु द्वारा नेत्र पर बना दर्शन कोण</span>
+        </span>
+    </span>
+</div>
+<div class="formula">
+
+    $$ m= \frac{\beta}{\alpha} $$
+
+</div>
+जब कोण छोटे हो तो \(\alpha \approx \tan\alpha\) तथा \(\beta \approx \tan\beta\) अतः
+<div class="formula">
+
+    $$ m= \frac{\tan\beta}{\tan\alpha}\quad ---(1)$$
+
+</div>
+
+\(\triangle PBO\) समकोणिक है। अत
+<div class="formula">
+
+    $$ \tan\alpha = \frac{PB'}{OB'} $$
+
+</div>
+
+<div class="formula">
+
+    $$ \tan\alpha = \frac{AB}{OB'}\quad (PB'=AB) $$
+
+</div>
+
+\(\triangle ABO\) समकोणिक है। अत:
+
+<div class="formula">
+
+    $$ \tan\beta = \frac{AB}{OB} $$
+
+</div>
+\(\tan\alpha\) तथा \(\tan\beta\) समीकरण (1) में रखने पर,
+<div class="formula">
+
+    $$ m= \frac{\tan\beta}{\tan\alpha} $$
+
+</div>
+
+<div class="formula">
+
+    $$ m= \frac{\frac{AB}{OB}}{\frac{AB}{OB'}} $$
+
+</div>
+
+<div class="formula">
+
+    $$ m= \frac{OB'}{OB} $$
+
+</div>
+
+चिह्न परिपाटी से 
+
+<div class="formula">
+
+    $$ OB = -u $$
+
+    $$ OB' = -D $$
+
+</div>
+
+अतः,
+
+<div class="formula">
+
+    $$ m= \frac{-D}{-u} $$
+
+</div>
+
+<div class="formula">
+
+    $$ m= \frac{D}{u} \quad ---(2) $$
+
+</div>
+
+<strong>Case (1) —</strong>  जब अंतिम प्रतिबिम्ब स्पष्ट दृष्टि की न्यूनतम दूरी पर बने तब -
+
+<div class="formula">
+
+    $$ u = -u $$
+
+    $$ v = -D $$
+
+    $$ f = f $$
+
+</div>
+
+लेंस सूत्र से -
+
+<div class="formula">
+
+    $$ \frac{1}{f}=\frac{1}{-D}-\frac{1}{-u} $$
+
+</div>
+
+दोनों ओर \(D\) का गुणा करने पर
+
+<div class="formula">
+
+    $$ \frac{D}{f}=\frac{D}{-D}-\frac{D}{-u} $$
+
+</div>
+
+<div class="formula">
+
+    $$ \frac{D}{f}=-1+\frac{D}{u} $$
+
+</div>
+
+<div class="formula">
+
+    $$ \frac{D}{u}=1+\frac{D}{f} $$
+
+</div>
+अतः समीकरण (2) से, 
+
+<div class="formula">
+
+    $$ m=\frac{D}{u} $$
+
+</div>
+
+<div class="formula">
+
+    $$ \boxed{m=1+\frac{D}{f}} $$
+
+</div>
+
+<strong>Case (2) —</strong> जब अंतिम प्रतिबिम्ब अनन्त पर बने तब -
+
+<div class="formula">
+
+    $$ u=-f $$
+
+</div>
+
+समीकरण (2) से-
+
+<div class="formula">
+
+    $$ m=\frac{D}{u} $$
+
+</div>
+
+<div class="formula">
+
+    $$ \boxed{m=\frac{D}{f}} $$
+    
+</div>
+      
     </div>
 </div>
 
 <div class="qa-box">
     <div class="question">
-        प्रश्न: सरल सूक्ष्मदर्शी की आवर्धन क्षमता किस प्रकार बढ़ायी जा सकती है?
+        प्रश्न: सरल सूक्ष्मदर्शी की आवर्धन क्षमता के लिए सूत्र लिखिए तथा बताइए कि इसे किस प्रकार बढ़ायी जा सकती है?
     </div>
+
     <div class="answer">
+        सरल सूक्ष्मदर्शी की आवर्धन क्षमता निम्न होती है।
+
+        <div class="formula">
+            <strong>Case (1) —</strong> जब अंतिम प्रतिबिम्ब स्पष्ट दृष्टि की न्यूनतम दूरी पर बने तब -
+            $$ \boxed{m=1+\frac{D}{f}} $$
+        </div>
+
+        <div class="formula">
+            <strong>Case (2) —</strong> जब अंतिम प्रतिबिम्ब अनन्त पर बने तब -
+            $$ \boxed{m=\frac{D}{f}} $$
+        </div>
+
         सरल सूक्ष्मदर्शी की आवर्धन क्षमता निम्न प्रकार बढ़ायी जा सकती है-
+
         <ol>
             <li>लेंस की फोकस दूरी कम करके।</li>
             <li>अंतिम प्रतिबिम्ब स्पष्ट दृष्टि की न्यूनतम दूरी पर बनाकर।</li>
         </ol>
     </div>
 </div>
-
 <div class="qa-box">
     <div class="question">
-        प्रश्न: निम्नलिखित के आधार पर संयुक्त या यौगिक सूक्ष्मदर्शी की व्याख्या कीजिए। (a) स्पष्ट दृष्टि की दूरी पर बने। (b) अनंत पर बने।
-    </div>
-    <div class="answer">
+        प्रश्न: संयुक्त सूक्ष्मदर्शी का किरण आरेख तथा आवर्धन क्षमता के लिए सूत्र निगमित कीजिए जबकि अंतिम प्रतिबिम्ब -
         <ol>
-            <li><strong>प्रतिबिंब निर्माण के लिए किरण आरेख,</strong></li>
-            <li><strong>आवर्धन क्षमता जबकि अंतिम प्रतिबिंब</strong></li>
+            <li>
+                <strong>स्पष्ट दृष्टि की न्यूनतम दूरी पर बने।</strong>
+            </li>
+            <li>
+                <strong>अनंत पर बने।</strong>
+            </li>
         </ol>
+    </div>
+
+    <div class="answer">
+        <strong>किरण आरेख-</strong>
+    <br>
+        <strong>Case (1) —</strong> जब अंतिम प्रतिबिम्ब स्पष्ट दृष्टि की न्यूनतम दूरी पर बने तब -
         <div class="question-image">
-            <img src="images/image4.png" alt="यौगिक सूक्ष्मदर्शी का किरण आरेख">
+            <img src="images/8.jpg" alt="संयुक्त सूक्ष्मदर्शी का किरण आरेख">
         </div>
-        इसका उत्तर कॉपी से नोट करें।
+
+        <strong>Case (2) —</strong> जब अंतिम प्रतिबिम्ब अनन्त पर बने तब -
+        <div class="question-image">
+            <img src="images/9.jpg" alt="संयुक्त सूक्ष्मदर्शी का किरण आरेख">
+        </div>
+
+        <strong>आवर्धन क्षमता -</strong>
+
+        संयुक्त सूक्ष्मदर्शी की आवर्धन क्षमता निम्न होती है।
+
+        <div class="formula">
+            <span style="white-space: nowrap;">
+                \(m =\)
+                <span class="fraction">
+                    <span class="top">अंतिम प्रतिबिम्ब द्वारा नेत्र पर बना दर्शन कोण</span>
+                    <span class="bottom">वस्तु को स्पष्ट दृष्टि की न्यूनतम दूरी पर रखने पर नेत्र पर बना दर्शन कोण</span>
+                </span>
+            </span>
+        </div>
+
+        <div class="formula">
+            $$ m = \frac{\beta}{\alpha} $$
+        </div>
+
+        जब कोण छोटे हो तो \(\alpha \approx \tan\alpha\) तथा \(\beta \approx \tan\beta\), अतः
+
+        <div class="formula">
+            $$ m = \frac{\tan\beta}{\tan\alpha}\quad ---(1) $$
+        </div>
+
+\(\triangle ABO\) समकोणिक है। अत
+<div class="formula">
+
+    $$ \tan\alpha = \frac{AB}{D} $$
+
+</div>
+
+
+पुनः\(\triangle A'B'O'\) समकोणिक है। अत:
+
+<div class="formula">
+
+    $$ \tan\beta = \frac{A'B'}{O'B'} $$
+
+</div>
+\(\tan\alpha\) तथा \(\tan\beta\) समीकरण (1) में रखने पर,
+<div class="formula">
+
+    $$ m= \frac{\tan\beta}{\tan\alpha} $$
+
+</div>
+
+<div class="formula">
+
+    $$ m= \frac{\frac{A'B'}{O'B'}}{\frac{AB}{D}} $$
+</div>
+
+<div class="formula">
+    $$ m= \frac{A'B'}{O'B'}\times\frac{D}{AB} $$
+</div>
+
+<div class="formula">
+    $$ m= \frac{A'B'}{AB}\times\frac{D}{O'B'}\quad ---(2)  $$
+</div>
+
+पुनः\(\triangle ABO\) तथा पुनः\(\triangle A'B'O\) समरूप है। अत: इनकी  संगत भुजाएं आनुपातिक होगी।
+
+<div class="formula">
+$$ \frac{AB}{OB}=\frac{A'B'}{OB'} $$
+</div>
+
+<div class="formula">
+$$ \frac{OB'}{OB}=\frac{A'B'}{AB} $$
+</div>
+उपरोक्त मान समीकरण (2) में रखने पर -
+<div class="formula">
+    $$ m= \frac{OB'}{OB}\times\frac{D}{O'B'} $$
+</div>
+
+अब चिह्न परिपाटी से -
+
+<div class="formula">
+
+    $$ OB' = +v_o$$
+    $$ OB = -u_o $$
+    $$ D = -D $$
+    $$ O'B' = -u_e $$
+</div>
+
+अतः,
+<div class="formula">
+    $$ m= \frac{v_o}{-u_o}\times\frac{-D}{-u_e} $$
+</div>
+
+<div class="formula">
+    $$ m= -\frac{v_o}{u_o}\times\frac{D}{u_e}\quad ---(3)$$
+</div>
+
+<strong>Case (1) —</strong>  जब अंतिम प्रतिबिम्ब स्पष्ट दृष्टि की न्यूनतम दूरी पर बने तब -
+
+<div class="formula">
+
+    $$ u = -u_e $$
+
+    $$ v = -D $$
+
+    $$ f = +f_e $$
+
+</div>
+
+लेंस सूत्र से -
+<div class="formula">
+    $$ \frac{1}{f}=\frac{1}{v}-\frac{1}{u} $$
+</div>
+
+<div class="formula">
+    $$ \frac{1}{f_e}=\frac{1}{-D}-\frac{1}{-u_e} $$
+</div>
+
+दोनों ओर \(D\) का गुणा करने पर
+
+<div class="formula">
+    $$ \frac{D}{f_e}=\frac{D}{-D}-\frac{D}{-u_e} $$
+</div>
+
+<div class="formula">
+    $$ \frac{D}{f_e}=-1+\frac{D}{u_e} $$
+</div>
+
+<div class="formula">
+
+    $$ \frac{D}{u_e}=1+\frac{D}{f_e} $$
+
+</div>
+उपरोक्त मान समीकरण (3) में रखने पर -
+
+<div class="formula">
+    $$ \boxed{m= -\frac{v_o}{u_o}\times(1+\frac{D}{f_e})} $$
+</div>
+
+<strong>Case (2) —</strong> जब अंतिम प्रतिबिम्ब अनन्त पर बने तब -
+
+<div class="formula">
+
+    $$ u_e=f_e $$
+
+</div>
+
+उपरोक्त मान समीकरण (3) में रखने पर -
+
+<div class="formula">
+    $$ \boxed{m= -\frac{v_o}{u_o}\times\frac{D}{f_e}}$$
+</div>
     </div>
 </div>
 
-<div class="qa-box">
+  <div class="qa-box">
     <div class="question">
-        प्रश्न: संयुक्त सूक्ष्मदर्शी की आवर्धन क्षमता किस प्रकार बढ़ायी जा सकती है? (म. प्र. 2022 पूरक)
+        प्रश्न: संयुक्त सूक्ष्मदर्शी की आवर्धन क्षमता के लिए सूत्र लिखिए तथा बताइए कि इसे किस प्रकार बढ़ायी जा सकती है?
     </div>
+
     <div class="answer">
+        संयुक्त सूक्ष्मदर्शी की आवर्धन क्षमता निम्न होती है।
+
+        <div class="formula">
+            <strong>केस (1) —</strong> जब अंतिम प्रतिबिम्ब स्पष्ट दृष्टि की न्यूनतम दूरी पर बने तब -
+            $$ \boxed{m=-\frac{v_o}{u_o}\left(1+\frac{D}{f_e}\right)} $$
+        </div>
+
+        <div class="formula">
+            <strong>केस (2) —</strong> जब अंतिम प्रतिबिम्ब अनन्त पर बने तब -
+            $$ \boxed{m=-\frac{v_o}{u_o}\frac{D}{f_e}} $$
+        </div>
+
         संयुक्त सूक्ष्मदर्शी की आवर्धन क्षमता निम्न प्रकार बढ़ायी जा सकती है-
+
         <ol>
-            <li>दोनों लेंसों की फोकस दूरियाँ कम करके।</li>
+            <li>अभिदृश्यक की फोकस दूरी कम करके।</li>
+            <li>नेत्रिका की फोकस दूरी कम करके।</li>
+            <li>अभिदृश्यक की आवर्धन क्षमता बढ़ाकर।</li>
             <li>अंतिम प्रतिबिम्ब स्पष्ट दृष्टि की न्यूनतम दूरी पर बनाकर।</li>
         </ol>
     </div>
-</div>
-
+  </div>
 <div class="qa-box">
     <div class="question">
         प्रश्न: दूरदर्शी किसे कहते हैं? यह कितने प्रकार के होते हैं?

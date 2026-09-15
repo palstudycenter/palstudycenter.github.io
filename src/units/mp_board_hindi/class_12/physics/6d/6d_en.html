@@ -49,7 +49,7 @@ line-height:1.7;
 
     .navbar{
 
-      background:rgba(15,23,42,0.45);
+      background:rgba(23,74,126,0.95);
 
       backdrop-filter:blur(10px);
 
@@ -89,28 +89,17 @@ padding:20px;
 
 }
 
-.notes-title{
 
-background:#e3f2fd;
-
-color:#1565c0;
-
-padding:10px;
-
-border-left:5px solid #1565c0;
-
-border-radius:50px;
-
-font-size:30px;
-
-font-weight:bold;
-margin-top:100px;
-
-margin-bottom:50px;
-
+.notes-title {
+    background: #174a7e;
+    color: white;
+    padding: 18px 22px;
+    border-radius: 12px 12px 0 0;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 100px;
+    margin-bottom: 0;
 }
-
-
 
 .qa-box{
 
@@ -204,7 +193,29 @@ margin-top:80px;
     padding:10px;
     vertical-align:middle;
 }
+.formula {
+    text-align: center;
+    font-size: 16px;
+    line-height: 2;
+    font-family: "Noto Sans Devanagari", "Mangal", sans-serif;
+  }
+.fraction {
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 1.2;
+    margin: 0 5px;
+}
 
+.fraction .top {
+    border-bottom: 1px solid #000;
+    padding: 0 8px 3px;
+}
+
+.fraction .bottom {
+    padding-top: 3px;
+}
 </style>
 </head>
 
@@ -218,7 +229,7 @@ margin-top:80px;
 
 <a class="navbar-brand" href="../index.html">
 
-Pal <span>Study Center</span>
+पाल <span>स्टडी सेंटर</span>
 
 </a>
     <button class="navbar-toggler bg-light"
@@ -320,82 +331,414 @@ Pal <span>Study Center</span>
         </div>
     </div>
 </div>
-
 <div class="qa-box">
     <div class="question">
-        Q: What is a simple microscope called? Write its principle, construction, and uses.
+        <strong>Question:</strong> What is a simple microscope? Write its principle, construction, and uses.
     </div>
+
     <div class="answer">
         A convex lens of short focal length is called a simple microscope. It is used to view small objects in a magnified and clear form.
-        <br><br>
-        <strong>Principle</strong> - When the object is placed within the focus of the convex lens, the lens forms a virtual, erect, and magnified image of the object. Thus the object appears larger than its actual size.
-        <br><br>
-        <strong>Construction</strong> - Its construction consists of a powerful convex lens, which is its main part. This lens is fitted in a handle.
-        <br><br>
-        <strong>Diagram</strong>
-        <br><br>
-        <strong>Uses -</strong>
-        <ol>
-            <li>It is used by watchmakers and jewellers for their fine work.</li>
-            <li>It is used to read the vernier scale fitted in instruments.</li>
-        </ol>
-    </div>
-</div>
 
-<div class="qa-box">
-    <div class="question">
-        Q: Explain the simple microscope on the basis of the following. (a) Image formed at the distance of distinct vision. (b) Image formed at infinity. (2019)
-    </div>
-    <div class="answer">
-        <ol>
-            <li><strong>Ray diagram for image formation,</strong></li>
-            <li><strong>Magnifying power when the final image</strong></li>
-        </ol>
-        <strong>Ray diagram-</strong>
+        <strong>Figure</strong>
         <div class="question-image">
-            <img src="images/image5.png" alt="Ray diagram of a simple microscope">
+            <img src="images/7.jpg" alt="Ray diagram of a simple microscope">
         </div>
-        <strong>Magnifying power -</strong> Copy from notebook.
+
+        <strong>Construction</strong> - It consists of a powerful convex lens, which is its main component. The lens is mounted in a handle.
+<br><br>
+        <strong>Principle</strong> - When an object is placed within the focal length of a convex lens, the lens forms a virtual, erect, and magnified image of the object. Thus, the object appears larger than its actual size.
+<br><br>
+        <strong>Uses</strong> -
+        <ol>
+            <li>It is used by watchmakers and jewellers for precision work.</li>
+            <li>It is used to read the vernier scale of instruments.</li>
+        </ol>
+    </div>
+</div>
+  
+<div class="qa-box">
+    <div class="question">
+        <strong>Question:</strong> Derive the ray diagrams and formulae for the magnifying power of a simple microscope when the final image is formed—
+        
+        <ol>
+            <li><strong>At the least distance of distinct vision.</strong></li>
+            <li><strong>At infinity. (2019)</strong></li>
+        </ol>
+    </div>
+
+    <div class="answer">
+        <strong>Ray Diagrams:</strong>
+
+        <p>
+            <strong>Case (1) —</strong> When the final image is formed at the least
+            distance of distinct vision:
+        </p>
+
+        <div class="question-image">
+            <img src="images/5.jpg" alt="Ray diagram of a simple microscope">
+        </div>
+
+        <p>
+            <strong>Case (2) —</strong> When the final image is formed at infinity:
+        </p>
+
+        <div class="question-image">
+            <img src="images/6.png" alt="Ray diagram of a simple microscope">
+        </div>
+    </div>
+
+        <strong>Magnifying Power-</strong>
+
+        The magnifying power of a simple microscope is given by:
+
+        <div class="formula">
+            <span style="white-space: nowrap;">
+                \(m =\)
+                <span class="fraction">
+                    <span class="top">Angle subtended at the eye by the final image</span>
+                    <span class="bottom">Angle subtended at the eye by the object placed at the least distance of distinct vision</span>
+                </span>
+            </span>
+        </div>
+
+        <div class="formula">
+            $$ m= \frac{\beta}{\alpha} $$
+        </div>
+
+        For small angles, \(\alpha \approx \tan\alpha\) and \(\beta \approx \tan\beta\). Therefore,
+
+        <div class="formula">
+            $$ m= \frac{\tan\beta}{\tan\alpha}\quad ---(1)$$
+        </div>
+
+        \(\triangle PBO\) is a right-angled triangle. Therefore,
+
+        <div class="formula">
+            $$ \tan\alpha = \frac{PB'}{OB'} $$
+        </div>
+
+        <div class="formula">
+            $$ \tan\alpha = \frac{AB}{OB'}\quad (PB'=AB) $$
+        </div>
+
+        \(\triangle ABO\) is a right-angled triangle. Therefore,
+
+        <div class="formula">
+            $$ \tan\beta = \frac{AB}{OB} $$
+        </div>
+
+        Substituting \(\tan\alpha\) and \(\tan\beta\) in equation (1),
+
+        <div class="formula">
+            $$ m= \frac{\tan\beta}{\tan\alpha} $$
+        </div>
+
+        <div class="formula">
+            $$ m= \frac{\frac{AB}{OB}}{\frac{AB}{OB'}} $$
+        </div>
+
+        <div class="formula">
+            $$ m= \frac{OB'}{OB} $$
+        </div>
+
+        According to the sign convention,
+
+        <div class="formula">
+            $$ OB = -u $$
+
+            $$ OB' = -D $$
+        </div>
+
+        Therefore,
+
+        <div class="formula">
+            $$ m= \frac{-D}{-u} $$
+        </div>
+
+        <div class="formula">
+            $$ m= \frac{D}{u} \quad ---(2) $$
+        </div>
+
+      <strong>Case (1) —</strong> - When the final image is formed at the least distance of distinct vision -
+
+        <div class="formula">
+            $$ u = -u $$
+
+            $$ v = -D $$
+
+            $$ f = f $$
+        </div>
+
+        From the lens formula,
+
+        <div class="formula">
+            $$ \frac{1}{f}=\frac{1}{-D}-\frac{1}{-u} $$
+        </div>
+
+        Multiplying both sides by \(D\),
+
+        <div class="formula">
+            $$ \frac{D}{f}=\frac{D}{-D}-\frac{D}{-u} $$
+        </div>
+
+        <div class="formula">
+            $$ \frac{D}{f}=-1+\frac{D}{u} $$
+        </div>
+
+        <div class="formula">
+            $$ \frac{D}{u}=1+\frac{D}{f} $$
+        </div>
+
+        Therefore, from equation (2),
+
+        <div class="formula">
+            $$ m=\frac{D}{u} $$
+        </div>
+
+        <div class="formula">
+            $$ \boxed{m=1+\frac{D}{f}} $$
+        </div>
+
+        <br><br>
+
+        <strong>Case (2) —</strong> When the final image is formed at infinity -
+
+        <div class="formula">
+            $$ u=f $$
+        </div>
+
+        From equation (2),
+
+        <div class="formula">
+            $$ m=\frac{D}{u} $$
+        </div>
+
+        <div class="formula">
+            $$ \boxed{m=\frac{D}{f}} $$
+        </div>
+
     </div>
 </div>
 
 <div class="qa-box">
     <div class="question">
-        Q: How can the magnifying power of a simple microscope be increased?
+        <strong>Question:</strong> Write the formula for the magnifying power of a simple microscope and explain how it can be increased.
     </div>
+
     <div class="answer">
-        The magnifying power of a simple microscope can be increased in the following ways-
+        The magnifying power of a simple microscope is given as follows.
+
+        <div class="formula">
+            <strong>Case (1) —</strong> When the final image is formed at the least distance of distinct vision -
+            $$ \boxed{m=1+\frac{D}{f}} $$
+        </div>
+
+        <div class="formula">
+            <strong>Case (2) —</strong> When the final image is formed at infinity -
+            $$ \boxed{m=\frac{D}{f}} $$
+        </div>
+
+        The magnifying power of a simple microscope can be increased in the following ways -
+
         <ol>
             <li>By decreasing the focal length of the lens.</li>
             <li>By forming the final image at the least distance of distinct vision.</li>
         </ol>
     </div>
 </div>
-
+  
 <div class="qa-box">
     <div class="question">
-        Q: Explain the compound microscope on the basis of the following. (a) Image formed at the distance of distinct vision. (b) Image formed at infinity.
-    </div>
-    <div class="answer">
+        <strong>Question:</strong> Derive the ray diagram and formula for the magnifying power of a compound microscope when the final image is formed -
         <ol>
-            <li><strong>Ray diagram for image formation,</strong></li>
-            <li><strong>Magnifying power when the final image</strong></li>
+            <li>
+                <strong>At the least distance of distinct vision.</strong>
+            </li>
+            <li>
+                <strong>At infinity.</strong>
+            </li>
         </ol>
+    </div>
+
+    <div class="answer">
+        <strong>Ray Diagram-</strong>
+        <br>
+
+        <strong>Case (1) —</strong> When the final image is formed at the least distance of distinct vision -
         <div class="question-image">
-            <img src="images/image4.png" alt="Ray diagram of a compound microscope">
+            <img src="images/8.jpg" alt="Ray diagram of a compound microscope">
         </div>
-        Note this answer down from your notebook.
+
+        <strong>Case (2) —</strong> When the final image is formed at infinity -
+        <div class="question-image">
+            <img src="images/9.jpg" alt="Ray diagram of a compound microscope">
+        </div>
+
+        <strong>Magnifying Power -</strong>
+
+        The magnifying power of a compound microscope is given by -
+
+        <div class="formula">
+            <span style="white-space: nowrap;">
+                \(m =\)
+                <span class="fraction">
+                    <span class="top">Visual angle subtended at the eye by the final image</span>
+                    <span class="bottom">Visual angle subtended at the eye by the object placed at the least distance of distinct vision</span>
+                </span>
+            </span>
+        </div>
+
+        <div class="formula">
+            $$ m = \frac{\beta}{\alpha} $$
+        </div>
+
+        For small angles, \(\alpha \approx \tan\alpha\) and \(\beta \approx \tan\beta\), therefore -
+
+        <div class="formula">
+            $$ m = \frac{\tan\beta}{\tan\alpha}\quad ---(1) $$
+        </div>
+
+        \(\triangle ABO\) is a right-angled triangle. Therefore,
+
+        <div class="formula">
+            $$ \tan\alpha = \frac{AB}{D} $$
+        </div>
+
+        Again, \(\triangle A'B'O'\) is a right-angled triangle. Therefore,
+
+        <div class="formula">
+            $$ \tan\beta = \frac{A'B'}{O'B'} $$
+        </div>
+
+        Substituting the values of \(\tan\alpha\) and \(\tan\beta\) in equation (1),
+
+        <div class="formula">
+            $$ m= \frac{\tan\beta}{\tan\alpha} $$
+        </div>
+
+        <div class="formula">
+            $$ m= \frac{\frac{A'B'}{O'B'}}{\frac{AB}{D}} $$
+        </div>
+
+        <div class="formula">
+            $$ m= \frac{A'B'}{O'B'}\times\frac{D}{AB} $$
+        </div>
+
+        <div class="formula">
+            $$ m= \frac{A'B'}{AB}\times\frac{D}{O'B'}\quad ---(2) $$
+        </div>
+
+        Again, \(\triangle ABO\) and \(\triangle A'B'O\) are similar. Therefore, their corresponding sides are proportional.
+
+        <div class="formula">
+            $$ \frac{AB}{OB}=\frac{A'B'}{OB'} $$
+        </div>
+
+        <div class="formula">
+            $$ \frac{OB'}{OB}=\frac{A'B'}{AB} $$
+        </div>
+
+        Substituting the above value in equation (2),
+
+        <div class="formula">
+            $$ m= \frac{OB'}{OB}\times\frac{D}{O'B'} $$
+        </div>
+
+        Now, according to the sign convention -
+
+        <div class="formula">
+            $$ OB' = +v_o$$
+            $$ OB = -u_o $$
+            $$ D = -D $$
+            $$ O'B' = -u_e $$
+        </div>
+
+        Therefore,
+
+        <div class="formula">
+            $$ m= \frac{v_o}{-u_o}\times\frac{-D}{-u_e} $$
+        </div>
+
+        <div class="formula">
+            $$ m= -\frac{v_o}{u_o}\times\frac{D}{u_e}\quad ---(3)$$
+        </div>
+
+        <strong>Case (1) —</strong> When the final image is formed at the least distance of distinct vision -
+
+        <div class="formula">
+            $$ u = -u_e $$
+            $$ v = -D $$
+            $$ f = +f_e $$
+        </div>
+
+        From the lens formula -
+
+        <div class="formula">
+            $$ \frac{1}{f}=\frac{1}{v}-\frac{1}{u} $$
+        </div>
+
+        <div class="formula">
+            $$ \frac{1}{f_e}=\frac{1}{-D}-\frac{1}{-u_e} $$
+        </div>
+
+        Multiplying both sides by \(D\),
+
+        <div class="formula">
+            $$ \frac{D}{f_e}=\frac{D}{-D}-\frac{D}{-u_e} $$
+        </div>
+
+        <div class="formula">
+            $$ \frac{D}{f_e}=-1+\frac{D}{u_e} $$
+        </div>
+
+        <div class="formula">
+            $$ \frac{D}{u_e}=1+\frac{D}{f_e} $$
+        </div>
+
+        Substituting the above value in equation (3),
+
+        <div class="formula">
+            $$ \boxed{m= -\frac{v_o}{u_o}\times\left(1+\frac{D}{f_e}\right)} $$
+        </div>
+
+        <strong>Case (2) —</strong> When the final image is formed at infinity -
+
+        <div class="formula">
+            $$ u_e=f_e $$
+        </div>
+
+        Substituting the above value in equation (3),
+
+        <div class="formula">
+            $$ \boxed{m= -\frac{v_o}{u_o}\times\frac{D}{f_e}} $$
+        </div>
     </div>
 </div>
 
 <div class="qa-box">
     <div class="question">
-        Q: How can the magnifying power of a compound microscope be increased? (M.P. 2022 Supplementary)
+        <strong>Question:</strong> Write the formula for the magnifying power of a compound microscope and state how it can be increased.
     </div>
+
     <div class="answer">
-        The magnifying power of a compound microscope can be increased in the following ways-
+        The magnifying power of a compound microscope is given as follows.
+
+        <div class="formula">
+            <strong>Case (1) —</strong> When the final image is formed at the least distance of distinct vision -
+            $$ \boxed{m=-\frac{v_o}{u_o}\left(1+\frac{D}{f_e}\right)} $$
+        </div>
+
+        <div class="formula">
+            <strong>Case (2) —</strong> When the final image is formed at infinity -
+            $$ \boxed{m=-\frac{v_o}{u_o}\frac{D}{f_e}} $$
+        </div>
+
+        The magnifying power of a compound microscope can be increased in the following ways -
+
         <ol>
-            <li>By decreasing the focal lengths of both lenses.</li>
+            <li>By decreasing the focal length of the objective lens.</li>
+            <li>By decreasing the focal length of the eyepiece.</li>
+            <li>By increasing the magnifying power of the objective lens.</li>
             <li>By forming the final image at the least distance of distinct vision.</li>
         </ol>
     </div>

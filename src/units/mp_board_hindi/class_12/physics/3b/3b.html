@@ -560,6 +560,33 @@ margin-top:80px;
 
     </div>
 </div>
+  <div class="qa-box">
+    <div class="question">
+        प्रश्न: चुंबकीय आघूर्ण किसे कहते हैं?
+    </div>
+
+    <div class="answer">
+
+        चुंबक के ध्रुव प्रबल्य तथा उसके ध्रुवों के बीच की प्रभावी दूरी के गुणनफल को चुंबकीय आघूर्ण कहते हैं। इसे M से प्रदर्शित करते है।
+<div class="question-image">
+            <img src="images/7.png" alt="चित्र">
+</div>
+        <br><br>
+
+        माना \(NS\) एक दण्ड चुंबक है, जिसकी ध्रुव प्रबलता \(m\) तथा प्रभावी लंबाई \(2l\) है, तब उसका चुंबकीय आघूर्ण होगा—
+
+        <div class="formula">
+
+        \[
+        \boxed{M=m\times2l}
+        \]
+
+        </div> 
+
+        इसका SI मात्रक <strong>एम्पियर × मीटर² (A·m²)</strong> होता है।
+
+    </div>
+  </div>
 <div class="qa-box">
     <div class="question">
         प्रश्न: कूलम्ब का व्युत्क्रम वर्ग नियम लिखिए।
@@ -703,33 +730,7 @@ margin-top:80px;
 
     </div>
 </div>
-  <div class="qa-box">
-    <div class="question">
-        प्रश्न: चुंबकीय आघूर्ण किसे कहते हैं?
-    </div>
 
-    <div class="answer">
-
-        चुंबक के ध्रुव प्रबल्य तथा उसके ध्रुवों के बीच की प्रभावी दूरी के गुणनफल को चुंबकीय आघूर्ण कहते हैं। इसे M से प्रदर्शित करते है।
-
-        <br><br>
-
-        माना \(NS\) एक दण्ड चुंबक है, जिसकी ध्रुव प्रबलता \(m\) तथा प्रभावी लंबाई \(2l\) है, तब उसका चुंबकीय आघूर्ण होगा—
-
-        <div class="formula">
-
-        \[
-        \boxed{M=m\times2l}
-        \]
-
-        </div>
-
-    
-
-        इसका SI मात्रक <strong>एम्पियर × मीटर² (A·m²)</strong> होता है।
-
-    </div>
-  </div>
   
 <div class="qa-box">
 
@@ -965,16 +966,16 @@ $$
 </div>
 
 <div class="formula">
-
 $$
-B_2 =
-\frac{\mu_0}{4\pi}
-\cdot
-\frac{m}{(r^2 + l^2)}
-\;(\overrightarrow{PS})
+B_2 = \frac{\mu_0}{4\pi} \cdot \frac{m}{(SP)^2}
 $$
 
-</div>
+$$
+B_2 = \frac{\mu_0}{4\pi} \cdot
+\frac{m}{(r^2 + l^2)}\;(\overrightarrow{PS})
+$$
+  </div>
+
 
 <div class="answer">
 चूँकि \(B_1 = B_2\), अतः इनके अक्ष के समानांतर घटक परस्पर निरस्त हो जाते हैं
@@ -1185,14 +1186,124 @@ $$
 </div>
 
 </div>
-<div class="qa-box">
 
+<div class="qa-box">
 <div class="question">
-Q. दंड चुंबक की स्थितिज ऊर्जा से क्या अभिप्राय है? इसका व्यंजक स्थापित कीजिए।
+Q. दंड चुंबक को एक समान चुंबकीय क्षेत्र में माध्य स्थिति से कुछ कोण घुमाने में किए गए कार्य की गणना करे।
 </div>
 
+<!-- DIAGRAM -->
 <div class="question-image">
-    <img src="image4.png" alt="Bar Magnet in Uniform Magnetic Field">
+            <img src="images/3.png" alt="चित्र">
+</div>
+<div class="answer">
+किसी दंड चुंबक \(NS\), जिसका चुंबकीय आघूर्ण \(M\) है, को एक समान
+चुंबकीय क्षेत्र \(B\) में \(\theta\) कोण पर रखने पर उस पर लगने वाले
+बल-युग्म का आघूर्ण:
+</div>
+
+<div class="formula">
+$$
+\tau = MB \sin\theta
+$$
+</div>
+
+<div class="answer">
+यदि दण्ड चुम्बक को इस स्थिति से अल्प कोण \(d\theta\) से घुमाया जाए तो किया गया कार्य:
+</div>
+
+<div class="formula">
+$$
+dw = \zeta \, d\theta
+$$
+</div>
+
+<div class="formula">
+$$
+dw = MB \sin\theta \, d\theta
+$$
+</div>
+
+<div class="answer">
+अतः दण्ड चुम्बक को \(\theta = 0\) से \(\theta\) तक घुमाने में किया गया कार्य:
+</div>
+
+<div class="formula">
+$$
+W = \int_0^\theta MB \sin\theta \, d\theta
+$$
+</div>
+
+<div class="formula">
+$$
+W = MB \int_0^\theta \sin\theta \, d\theta
+$$
+</div>
+
+<div class="formula">
+$$
+W = MB [ -\cos\theta ]_0^\theta
+$$
+</div>
+<div class="formula">
+$$
+W = - MB [ \cos\theta ]_0^\theta
+$$
+  </div>
+
+<div class="formula">
+$$
+W = -MB [ \cos\theta - \cos0^\circ ]
+$$
+</div>
+<div class="formula">
+$$
+W = -MB [ \cos\theta - 1 ] 
+$$
+  </div>
+
+<div class="formula">
+$$
+W = MB [ 1 - \cos\theta ]  
+$$
+</div>
+
+<div class="answer">
+<b>Case I :</b> यदि \(\theta = 0^\circ\) तब
+</div>
+
+<div class="formula">
+$$
+W = MB [ 1 - \cos0^\circ\ ]  
+$$
+$$
+W = MB [ 1 - 1 ]  
+$$
+$$
+W_{min}= 0
+$$
+</div>
+
+<div class="answer">
+<b>Case II :</b> यदि \(\theta = 180^\circ\) तब
+</div>
+
+<div class="formula">
+$$
+W = MB [ 1 - \cos180^\circ\ ]  
+$$
+$$
+W = MB [ 1 + 1 ]  
+$$
+$$
+W_{max} = 2MB
+$$
+</div>
+</div>
+  
+<div class="qa-box">
+<div class="question">
+Q. दंड चुंबक की स्थितिज ऊर्जा से क्या अभिप्राय है? इसका व्यंजक स्थापित कीजिए।
 </div>
 
 <div class="answer">
@@ -1278,6 +1389,25 @@ $$
 U_{\min} = -MB
 $$
 </div>
+  
+<div class="answer">
+<b>Case II :</b> यदि \(\theta = 180^\circ\) तब
+</div>
+
+<div class="formula">
+$$
+U = -MB\cos180^\circ
+$$
+
+$$
+U = -MB\times (-1)
+$$
+
+$$
+U_{\max} = MB
+$$
+</div>
+
 
 </div>
 <div class="qa-box">
