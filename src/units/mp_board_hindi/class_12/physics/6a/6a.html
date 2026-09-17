@@ -50,7 +50,7 @@ line-height:1.7;
 
     .navbar{
 
-      background:rgba(15,23,42,0.45);
+      background:rgba(23,74,126,0.95);
 
       backdrop-filter:blur(10px);
 
@@ -90,28 +90,17 @@ padding:20px;
 
 }
 
-.notes-title{
 
-background:#e3f2fd;
-
-color:#1565c0;
-
-padding:10px;
-
-border-left:5px solid #1565c0;
-
-border-radius:50px;
-
-font-size:30px;
-
-font-weight:bold;
-margin-top:100px;
-
-margin-bottom:50px;
-
+.notes-title {
+    background: #174a7e;
+    color: white;
+    padding: 18px 22px;
+    border-radius: 12px 12px 0 0;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 100px;
+    margin-bottom: 0;
 }
-
-
 
 .qa-box{
 
@@ -545,34 +534,45 @@ margin-top:80px;
         प्रश्न: दर्पण सूत्र लिखिए तथा इसे सिद्ध कीजिए।
     </div>
     <div class="answer">
+      दर्पण सूत्र —
+        <div class="formula">
+            $$\frac{1}{f}=\frac{1}{u}+\frac{1}{v} $$
+        </div>
+      
+<div class="formula">
+    जहाँ 
+    <br>
+    \(f\) = फोकस दूरी
+    <br>
+    \(v\) = प्रतिबिंब दूरी
+    <br>
+    \(u\) = वस्तु दूरी
+</div>
+
+<strong>सूत्र स्थापना</strong>
+
         <div class="question-image">
             <img src="images/image2.png" alt="अवतल दर्पण द्वारा प्रतिबिंब निर्माण का किरण आरेख">
         </div>
-        माना कि \(M_1M_2\) एक अवतल दर्पण है जिसका ध्रुव P है, फोकस F है तथा वक्रता केन्द्र C है। इसकी मुख्य अक्ष के किसी बिन्दु पर एक वस्तु AB रखी है जिसका दर्पण से परावर्तन के पश्चात प्रतिबिंब A'B' पर बनता है।
+      माना कि एक अवतल दर्पण है, जिसका ध्रुव \(P\), फोकस \(F\) तथा वक्रता केन्द्र \(C\) है। इसकी मुख्य अक्ष पर किसी बिन्दु पर वस्तु \(AB\) रखी है। दर्पण से परावर्तन के बाद इसका प्रतिबिंब \(A'B'\) बनता है।
+
         <br><br>
         \(\triangle ABC\) तथा \(\triangle A'B'C\) समकोणिक हैं। अत:
         <div class="formula">
-            $$ \frac{AB}{A'B'} = \frac{BC}{B'C} \quad (1) $$
+            $$ \frac{AB}{A'B'} = \frac{BC}{B'C} \quad ----(1) $$
         </div>
-        इसी प्रकार, \(\triangle A'B'F\) तथा \(\triangle MNF\) भी समकोणिक हैं।
+        इसी प्रकार, \(\triangle A'B'F\) तथा \(\triangle MNF\) समकोणिक हैं।
         <div class="formula">
-            $$ \therefore \frac{MN}{A'B'} = \frac{NF}{FB'} $$
+            $$ \frac{MN}{A'B'} = \frac{NF}{B'F} $$
         </div>
-        परन्तु \(MN = AB\),
+      
         <div class="formula">
-            $$ \therefore \frac{AB}{A'B'} = \frac{NF}{FB'} \quad (2) $$
+      $$ \frac{AB}{A'B'} = \frac{PF}{B'F}\quad----(2) \quad \left(\substack{\because\ MN = AB\\ NF \approx PF}\right) $$
         </div>
         समीकरण (1) व (2) की तुलना करने पर,
+      
         <div class="formula">
-            $$ \frac{BC}{B'C} = \frac{NF}{FB'} $$
-        </div>
-        माना दर्पण पर बिन्दु M, ध्रुव P के बहुत समीप है।
-        <div class="formula">
-            $$ NF = PF \text{ (लगभग)} $$
-        </div>
-        यह मान रखने पर,
-        <div class="formula">
-            $$ \frac{BC}{B'C} = \frac{PF}{FB'} $$
+            $$ \frac{BC}{B'C} = \frac{PF}{B'F} $$
             $$ \frac{PB - PC}{PC - PB'} = \frac{PF}{PB' - PF} $$
         </div>
         चिह्न परंपरा के अनुसार
@@ -589,16 +589,105 @@ margin-top:80px;
             $$ (-u+2f)(-v+f) = -f(-2f+v) $$
             $$ uv - uf - 2fv + 2f^2 = 2f^2 - fv $$
             $$ uv - uf - fv = 0 $$
-            $$ uf + fv = uv $$
-            $$ \frac{1}{v} + \frac{1}{u} = \frac{1}{f} $$
+            $$ uv = uf + fv $$
+            $$ \boxed{\frac{1}{f} = \frac{1}{u} + \frac{1}{v}} $$
         </div>
-        अतः दर्पण सूत्र —
-        <div class="formula">
-            $$ \boxed{\frac{1}{v}+\frac{1}{u}=\frac{1}{f}} $$
-        </div>
+    
     </div>
 </div>
 
+<div class="qa-box">
+    <div class="question">
+        <strong>प्रश्न: रेखीय आवर्धन किसे कहते हैं? गोलीय दर्पण के लिए इसका सूत्र स्थापित कीजिए।</strong>
+    </div>
+
+    <div class="answer">
+        किसी दर्पण द्वारा बनाए गए प्रतिबिंब के आकार और वस्तु के आकार के अनुपात को रेखीय आवर्धन कहते हैं। इसे \(m\) से प्रदर्शित करते हैं।
+
+        <br><br>
+
+        अर्थात्—
+
+        <div class="formula">
+            $$
+            m=\frac{I}{O}=-\frac{v}{u}
+            $$
+        </div>
+
+        जहाँ—
+
+        <ul>
+            <li><strong>\(O\)</strong> = वस्तु की ऊँचाई</li>
+            <li><strong>\(I\)</strong> = प्रतिबिंब की ऊँचाई</li>
+            <li><strong>\(v\)</strong> = प्रतिबिंब दूरी</li>
+            <li><strong>\(u\)</strong> = वस्तु दूरी</li>
+        </ul>
+    </div>
+
+
+<strong>सूत्र स्थापना</strong>
+
+<div class="question-image">
+    <img src="images/image4.png" alt="गोलीय दर्पण द्वारा प्रतिबिंब निर्माण का किरण आरेख">
+</div>
+
+<div class="answer">
+माना कि एक अवतल दर्पण है, जिसका ध्रुव \(P\), फोकस \(F\) तथा वक्रता केन्द्र \(C\) है। इसकी मुख्य अक्ष पर किसी बिन्दु पर वस्तु \(AB\) रखी है। दर्पण से परावर्तन के बाद इसका प्रतिबिंब \(A'B'\) बनता है।
+
+<br><br>
+        \(\triangle A'B'P\) तथा \(\triangle ABP\) समकोणिक हैं। अत:
+<div class="formula">
+            $$ \frac{A'B'}{AB} = \frac{PB'}{PB}$$
+</div>
+
+    परंतु चिन्ह परिपाटी के अनुसार—
+
+    <div class="formula">
+        $$
+        A'B'=-I
+        $$
+        $$
+        AB =+O
+        $$
+        $$
+        PB' =-v
+        $$
+        $$
+        PB =-u
+        $$
+    </div>
+
+    इसलिए,
+
+    <div class="formula">
+        $$
+        \frac{-I}{+O}=\frac{-v}{-u}
+        $$
+    </div>
+  <div class="formula">
+        $$
+        \frac{I}{O}=-\frac{v}{u}
+        $$
+  </div>
+
+    अतः गोलीय दर्पण के लिए रेखीय आवर्धन -
+
+        <div class="formula">
+            $$
+            m=\frac{I}{O}
+            $$
+        </div>
+
+  
+<div class="formula">
+        $$
+        \boxed{m=-\frac{v}{u}}
+        $$
+    </div>
+
+</div>
+</div>
+  
 <div class="qa-box">
     <div class="question">
         प्रश्न: अवतल दर्पणों द्वारा विभिन्न स्थितियों में प्रतिबिम्बों की रचना को आरेखों सहित समझाइए।
@@ -770,79 +859,154 @@ margin-top:80px;
 
 <div class="qa-box">
     <div class="question">
-        प्रश्न: रेखीय आवर्धन किसे कहते हैं? गोलीय दर्पण के लिए सूत्र स्थापित कीजिए।
+        <strong>प्रश्न: संख्यात्मक प्रश्नों के लिए दर्पण सूत्रों में प्रयुक्त चिन्ह परिपाटी (Sign Convention) लिखिए।</strong>
     </div>
-    <div class="answer">
-        किसी दर्पण या लेंस द्वारा बनाए गए प्रतिबिंब के आकार और वस्तु के आकार के अनुपात को रेखीय आवर्धन कहते है। इसे \(m\) से प्रदर्शित करते है।
-        <br><br>
-        अर्थात
-        <div class="formula">
-            $$ m=\frac{O}{I}=-\frac{u}{v} $$
-        </div>
-        जहाँ —
-        <ul>
-            <li><strong>\(O\)</strong> = वस्तु की ऊँचाई</li>
-            <li><strong>\(I\)</strong> = प्रतिबिंब की ऊँचाई</li>
-            <li><strong>\(v\)</strong> = प्रतिबिंब दूरी</li>
-            <li><strong>\(u\)</strong> = वस्तु दूरी</li>
-        </ul>
-    </div>
+<div class="answer">
+    अवतल और उत्तल दर्पणों के संख्यात्मक प्रश्नों में कार्तीय चिन्ह परिपाटी का प्रयोग किया जाता है। इसके अनुसार—
+
+    <ol>
+        <li>दर्पण के ध्रुव \(P\) को मूल बिंदु माना जाता है और सभी दूरियाँ मुख्य अक्ष के अनुदिश मापी जाती हैं।</li>
+
+        <li>वस्तु दूरी \(u\) हमेशा ऋणात्मक होती है।</li>
+
+        <li>प्रतिबिंब दूरी \(v\) और आवर्धन \(m\):
+            <ul>
+                <li>वास्तविक प्रतिबिंब के लिए \(v\) ऋणात्मक होता है।</li>
+                <li>आभासी प्रतिबिंब के लिए \(v\) धनात्मक होता है।</li>
+            </ul>
+        </li>
+
+        <li>फोकस दूरी \(f\) और वक्रता त्रिज्या \(R\):
+            <ul>
+                <li>अवतल दर्पण के लिए \(f\) और \(R\) ऋणात्मक होते हैं।</li>
+                <li>उत्तल दर्पण के लिए \(f\) और \(R\) धनात्मक होते हैं।</li>
+            </ul>
+        </li>
+
+        <li>मुख्य अक्ष के ऊपर की ऊँचाई धनात्मक तथा नीचे की ऊँचाई ऋणात्मक होती है।</li>
+    </ol>
 </div>
+
+
+</div>
+
 
 <div class="qa-box">
     <div class="question">
-        प्रश्न: संख्यात्मक प्रश्नों के लिए दर्पण सूत्रों में प्रयुक्त चिन्ह परिपाटी (Sign Convention) लिखिए।
+        <strong>प्रश्न: अवतल दर्पण की फोकस दूरी ज्ञात कीजिए, यदि उसकी वक्रता त्रिज्या 20 cm है। (2024 पूरक)</strong>
     </div>
-    <div class="answer">
-        अवतल दर्पण तथा उत्तल दर्पण से संख्यात्मक प्रश्न हल करने के लिए दर्पण सूत्रों में चिन्हों के प्रयोग हेतु कार्तीय चिन्ह परिपाटी अपनाई जाती है। इसके अनुसार —
-        <ol>
-            <li>समस्त दूरियाँ दर्पण के ध्रुव को मूल बिंदु मानकर मुख्य अक्ष के अनुदिश मापी जाती हैं।</li>
-            <li>वस्तु दूरी (u): हमेशा ऋणात्मक (-) ली जाती है।</li>
-            <li>प्रतिबिंब दूरी (v) तथा आवर्धन (m):
-                <ul>
-                    <li>यदि प्रतिबिंब वास्तविक बनता है → v तथा m ऋणात्मक (-)</li>
-                    <li>यदि प्रतिबिंब आभासी बनता है → v तथा m धनात्मक (+)</li>
-                </ul>
-            </li>
-            <li>फोकस दूरी (f):
-                <ul>
-                    <li>अवतल दर्पण के लिए → f ऋणात्मक (-)</li>
-                    <li>उत्तल दर्पण के लिए → f धनात्मक (+)</li>
-                </ul>
-            </li>
-            <li>वस्तु की ऊँचाई (O):
-                <ul>
-                    <li>मुख्य अक्ष के ऊपर → धनात्मक (+)</li>
-                    <li>मुख्य अक्ष के नीचे → ऋणात्मक (-)</li>
-                </ul>
-            </li>
-            <li>प्रतिबिंब की ऊँचाई (I):
-                <ul>
-                    <li>वास्तविक प्रतिबिंब → ऋणात्मक (-)</li>
-                    <li>आभासी प्रतिबिंब → धनात्मक (+)</li>
-                </ul>
-            </li>
-        </ol>
+<div class="answer">
+    <strong>दिया गया:</strong>
+
+    <br><br>
+
+    वक्रता त्रिज्या,
+    <div class="formula">
+        $$
+        R=-20\,cm
+        $$
     </div>
+
+    <strong>सूत्र:</strong>
+
+    <div class="formula">
+        $$
+        f=\frac{R}{2}
+        $$
+    </div>
+
+    <div class="formula">
+        $$
+        f=\frac{-20}{2}
+        $$
+    </div>
+
+    <div class="formula">
+        $$
+        \boxed{f=-10\,cm}
+        $$
+    </div>
+
+    अतः अवतल दर्पण की फोकस दूरी \(-10\,cm\) है।
 </div>
+
+</div>
+
 
 <div class="qa-box">
     <div class="question">
-        प्रश्न: अवतल दर्पण की फोकस दूरी ज्ञात कीजिए। यदि उसकी वक्रता त्रिज्या 20 cm है। (2024 पूरक)
+        <strong>प्रश्न: कोई वस्तु 15 cm वक्रता त्रिज्या के अवतल दर्पण से 10 cm दूरी पर रखी है। प्रतिबिंब की ध्रुव से दूरी ज्ञात कीजिए। (2025 पूरक)</strong>
     </div>
-    <div class="answer">
-        (स्रोत में इस प्रश्न का हल/उत्तर उपलब्ध नहीं है।)
+<div class="answer">
+    <strong>दिया गया:</strong>
+    <div class="formula">
+        $$
+        R=-15\,cm
+        $$
+    
+        $$
+        u=-10\,cm
+        $$
+</div>
+    
+    फोकस दूरी -
+
+    <div class="formula">
+        $$
+        f=\frac{R}{2}
+        $$
     </div>
+
+    <div class="formula">
+        $$
+        f=\frac{-15}{2}=-7.5\,cm
+        $$
+    </div>
+
+    दर्पण सूत्र से—
+
+    <div class="formula">
+        $$
+        \frac{1}{f}=\frac{1}{v}+\frac{1}{u}
+        $$
+    </div>
+
+
+    <div class="formula">
+        $$
+        \frac{1}{-7.5}=\frac{1}{v}+\frac{1}{-10}
+        $$
+    </div>
+
+    <div class="formula">
+        $$
+        -\frac{2}{15}=\frac{1}{v}-\frac{1}{10}
+        $$
+    </div>
+
+    <div class="formula">
+        $$
+        \frac{1}{v}=-\frac{2}{15}+\frac{1}{10}
+        $$
+    </div>
+
+    <div class="formula">
+        $$
+        \frac{1}{v}=-\frac{1}{30}
+        $$
+    </div>
+
+    <div class="formula">
+        $$
+        \boxed{v=-30\,cm}
+        $$
+    </div>
+
+    अतः प्रतिबिंब की ध्रुव से दूरी 30 cm है और प्रतिबिंब दर्पण के सामने बनेगा।
 </div>
 
-<div class="qa-box">
-    <div class="question">
-        प्रश्न: कोई वस्तु 15 cm वक्रता त्रिज्या के अवतल दर्पण से 10 cm दूरी पर रखी है, प्रतिबिम्ब की ध्रुव से दूरी ज्ञात कीजिए। (2025 पूरक)
-    </div>
-    <div class="answer">
-        (स्रोत में इस प्रश्न का हल/उत्तर उपलब्ध नहीं है।)
-    </div>
 </div>
+
 
 <div class="qa-box">
     <div class="question">

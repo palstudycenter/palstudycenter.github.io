@@ -50,7 +50,7 @@ line-height:1.7;
 
     .navbar{
 
-      background:rgba(15,23,42,0.45);
+      background:rgba(23,74,126,0.95);
 
       backdrop-filter:blur(10px);
 
@@ -90,27 +90,17 @@ padding:20px;
 
 }
 
-.notes-title{
 
-background:#e3f2fd;
-
-color:#1565c0;
-
-padding:10px;
-
-border-left:5px solid #1565c0;
-
-border-radius:50px;
-
-font-size:30px;
-
-font-weight:bold;
-margin-top:100px;
-
-margin-bottom:50px;
-
+.notes-title {
+    background: #174a7e;
+    color: white;
+    padding: 18px 22px;
+    border-radius: 12px 12px 0 0;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 100px;
+    margin-bottom: 0;
 }
-
 
 
 .qa-box{
@@ -545,34 +535,44 @@ Pal <span>Study Center</span>
         Q: Write the mirror formula and prove it.
     </div>
     <div class="answer">
+      Mirror formula —
+        <div class="formula">
+            $$\frac{1}{f}=\frac{1}{u}+\frac{1}{v} $$
+        </div>
+      
+<div class="formula">
+    Where
+    <br>
+    \(f\) = Focal length
+    <br>
+    \(v\) = Image distance
+    <br>
+    \(u\) = Object distance
+</div>
+
+<strong>Derivation of the Formula</strong>
+
         <div class="question-image">
             <img src="images/image2.png" alt="Ray diagram of image formation by a concave mirror">
         </div>
-        Let \(M_1M_2\) be a concave mirror whose pole is P, focus is F, and centre of curvature is C. An object AB is placed at some point on its principal axis, whose image A'B' is formed after reflection from the mirror.
+      Let us consider a concave mirror whose pole is \(P\), focus is \(F\), and centre of curvature is \(C\). An object \(AB\) is placed at a point on its principal axis. After reflection from the mirror, its image \(A'B'\) is formed.
         <br><br>
         \(\triangle ABC\) and \(\triangle A'B'C\) are right-angled. Therefore
         <div class="formula">
-            $$ \frac{AB}{A'B'} = \frac{BC}{B'C} \quad (1) $$
+            $$ \frac{AB}{A'B'} = \frac{BC}{B'C} \quad---(1) $$
         </div>
         Similarly, \(\triangle A'B'F\) and \(\triangle MNF\) are also right-angled.
         <div class="formula">
             $$ \therefore \frac{MN}{A'B'} = \frac{NF}{FB'} $$
         </div>
-        But \(MN = AB\),
-        <div class="formula">
-            $$ \therefore \frac{AB}{A'B'} = \frac{NF}{FB'} \quad (2) $$
-        </div>
+      <div class="formula">
+      $$ \frac{AB}{A'B'} = \frac{PF}{B'F}\quad---(2) \quad \left(\substack{\because\ MN = AB\\ NF \approx PF}\right) $$
+       </div>
+      
         Comparing equations (1) and (2),
+    
         <div class="formula">
-            $$ \frac{BC}{B'C} = \frac{NF}{FB'} $$
-        </div>
-        Let point M on the mirror be very close to the pole P.
-        <div class="formula">
-            $$ NF = PF \text{ (approximately)} $$
-        </div>
-        Substituting this value,
-        <div class="formula">
-            $$ \frac{BC}{B'C} = \frac{PF}{FB'} $$
+            $$ \frac{BC}{B'C} = \frac{PF}{B'F} $$
             $$ \frac{PB - PC}{PC - PB'} = \frac{PF}{PB' - PF} $$
         </div>
         According to the sign convention
@@ -589,14 +589,107 @@ Pal <span>Study Center</span>
             $$ (-u+2f)(-v+f) = -f(-2f+v) $$
             $$ uv - uf - 2fv + 2f^2 = 2f^2 - fv $$
             $$ uv - uf - fv = 0 $$
-            $$ uf + fv = uv $$
-            $$ \frac{1}{v} + \frac{1}{u} = \frac{1}{f} $$
+            $$ uv = uf + fv $$
+            $$ \boxed{\frac{1}{f} = \frac{1}{u} + \frac{1}{v}} $$
+            
         </div>
-        Therefore, the mirror formula —
-        <div class="formula">
-            $$ \boxed{\frac{1}{v}+\frac{1}{u}=\frac{1}{f}} $$
-        </div>
+        
     </div>
+</div>
+<div class="qa-box">
+    <div class="question">
+        <strong>Question: What is meant by linear magnification? Derive its formula for a spherical mirror.</strong>
+    </div>
+<div class="answer">
+    The ratio of the size of the image formed by a mirror to the size of the object is called linear magnification. It is represented by \(m\).
+
+    <br><br>
+
+    Thus—
+
+    <div class="formula">
+        $$
+        m=\frac{I}{O}=-\frac{v}{u}
+        $$
+    </div>
+
+    Where—
+
+    <ul>
+        <li><strong>\(O\)</strong> = Height of the object</li>
+        <li><strong>\(I\)</strong> = Height of the image</li>
+        <li><strong>\(v\)</strong> = Image distance</li>
+        <li><strong>\(u\)</strong> = Object distance</li>
+    </ul>
+</div>
+
+<strong>Derivation of the Formula</strong>
+
+<div class="question-image">
+    <img src="images/image4.png" alt="Ray diagram showing image formation by a spherical mirror">
+</div>
+
+<div class="answer">
+    Let us consider a concave mirror whose pole is \(P\), focus is \(F\), and centre of curvature is \(C\). An object \(AB\) is placed at a point on its principal axis. After reflection from the mirror, its image \(A'B'\) is formed.
+
+    <br><br>
+
+    The triangles \(\triangle A'B'P\) and \(\triangle ABP\) are right-angled. Therefore—
+
+    <div class="formula">
+        $$
+        \frac{A'B'}{AB}=\frac{PB'}{PB}
+        $$
+    </div>
+
+    According to the Cartesian sign convention—
+
+    <div class="formula">
+        $$
+        A'B'=-I
+        $$
+        $$
+        AB=+O
+        $$
+        $$
+        PB'=-v
+        $$
+        $$
+        PB=-u
+        $$
+    </div>
+
+    Therefore—
+
+    <div class="formula">
+        $$
+        \frac{-I}{+O}=\frac{-v}{-u}
+        $$
+    </div>
+
+    Hence—
+
+    <div class="formula">
+        $$
+        \frac{I}{O}=-\frac{v}{u}
+        $$
+    </div>
+
+    Therefore, the linear magnification for a spherical mirror is—
+
+    <div class="formula">
+        $$
+        m=\frac{I}{O}
+        $$
+    </div>
+
+    <div class="formula">
+        $$
+        \boxed{m=-\frac{v}{u}}
+        $$
+    </div>
+</div>
+
 </div>
 
 <div class="qa-box">
@@ -767,81 +860,152 @@ Pal <span>Study Center</span>
         </ol>
     </div>
 </div>
-
 <div class="qa-box">
     <div class="question">
-        Q: What is linear magnification? Establish the formula for a spherical mirror.
+        <strong>Question: Write the sign convention used in mirror formulas for solving numerical problems.</strong>
     </div>
-    <div class="answer">
-        The ratio of the size of the image formed by a mirror or lens to the size of the object is called linear magnification. It is denoted by \(m\).
-        <br><br>
-        That is,
-        <div class="formula">
-            $$ m=\frac{O}{I}=-\frac{u}{v} $$
-        </div>
-        where —
-        <ul>
-            <li><strong>\(O\)</strong> = height of the object</li>
-            <li><strong>\(I\)</strong> = height of the image</li>
-            <li><strong>\(v\)</strong> = image distance</li>
-            <li><strong>\(u\)</strong> = object distance</li>
-        </ul>
-    </div>
+<div class="answer">
+    The Cartesian sign convention is used for solving numerical problems involving concave and convex mirrors. According to this convention—
+
+    <ol>
+        <li>The pole \(P\) of the mirror is taken as the origin, and all distances are measured along the principal axis.</li>
+
+        <li>The object distance \(u\) is always negative.</li>
+
+        <li>Image distance \(v\) and magnification \(m\):
+            <ul>
+                <li>For a real image, \(v\) is negative.</li>
+                <li>For a virtual image, \(v\) is positive.</li>
+            </ul>
+        </li>
+
+        <li>Focal length \(f\) and radius of curvature \(R\):
+            <ul>
+                <li>For a concave mirror, \(f\) and \(R\) are negative.</li>
+                <li>For a convex mirror, \(f\) and \(R\) are positive.</li>
+            </ul>
+        </li>
+
+        <li>Heights measured above the principal axis are positive, while those measured below the principal axis are negative.</li>
+    </ol>
+</div>
+
 </div>
 
 <div class="qa-box">
     <div class="question">
-        Q: Write the sign convention used in mirror formulas for numerical problems.
+        <strong>Question: Find the focal length of a concave mirror if its radius of curvature is 20 cm. (2024 Supplementary)</strong>
     </div>
-    <div class="answer">
-        To solve numerical problems involving concave and convex mirrors, the Cartesian sign convention is adopted for the signs used in mirror formulas. According to this —
-        <ol>
-            <li>All distances are measured along the principal axis, taking the pole of the mirror as the origin.</li>
-            <li>Object distance (u): Always taken as negative (-).</li>
-            <li>Image distance (v) and magnification (m):
-                <ul>
-                    <li>If the image formed is real → v and m are negative (-)</li>
-                    <li>If the image formed is virtual → v and m are positive (+)</li>
-                </ul>
-            </li>
-            <li>Focal length (f):
-                <ul>
-                    <li>For a concave mirror → f is negative (-)</li>
-                    <li>For a convex mirror → f is positive (+)</li>
-                </ul>
-            </li>
-            <li>Height of the object (O):
-                <ul>
-                    <li>Above the principal axis → positive (+)</li>
-                    <li>Below the principal axis → negative (-)</li>
-                </ul>
-            </li>
-            <li>Height of the image (I):
-                <ul>
-                    <li>Real image → negative (-)</li>
-                    <li>Virtual image → positive (+)</li>
-                </ul>
-            </li>
-        </ol>
+<div class="answer">
+    <strong>Given:</strong>
+
+    <br><br>
+
+    Radius of curvature,
+    <div class="formula">
+        $$
+        R=-20\,cm
+        $$
     </div>
+
+    <strong>Formula:</strong>
+
+    <div class="formula">
+        $$
+        f=\frac{R}{2}
+        $$
+    </div>
+
+
+    <div class="formula">
+        $$
+        f=\frac{-20}{2}
+        $$
+    </div>
+
+    <div class="formula">
+        $$
+        \boxed{f=-10\,cm}
+        $$
+    </div>
+
+    Therefore, the focal length of the concave mirror is \(-10\,cm\).
+</div>
+
 </div>
 
 <div class="qa-box">
     <div class="question">
-        Q: Find the focal length of a concave mirror if its radius of curvature is 20 cm. (2024 supplementary)
+        <strong>Question: An object is placed 10 cm in front of a concave mirror having a radius of curvature of 15 cm. Find the distance of the image from the pole. (2025 Supplementary)</strong>
     </div>
-    <div class="answer">
-        (The solution/answer to this question is not available in the source.)
+<div class="answer">
+    Given:
+
+    <div class="formula">
+        $$
+        R=-15\,cm
+        $$
+
+        $$
+        u=-10\,cm
+        $$
+    </div> 
+    Focal length:
+
+    <div class="formula">
+        $$
+        f=\frac{R}{2}
+        $$
     </div>
+
+    <div class="formula">
+        $$
+        f=\frac{-15}{2}=-7.5\,cm
+        $$
+    </div>
+
+    Using the mirror formula—
+
+    <div class="formula">
+        $$
+        \frac{1}{f}=\frac{1}{v}+\frac{1}{u}
+        $$
+    </div>
+
+    <div class="formula">
+        $$
+        \frac{1}{-7.5}=\frac{1}{v}+\frac{1}{-10}
+        $$
+    </div>
+
+    <div class="formula">
+        $$
+        -\frac{2}{15}=\frac{1}{v}-\frac{1}{10}
+        $$
+    </div>
+
+    <div class="formula">
+        $$
+        \frac{1}{v}=-\frac{2}{15}+\frac{1}{10}
+        $$
+    </div>
+
+    <div class="formula">
+        $$
+        \frac{1}{v}=-\frac{1}{30}
+        $$
+    </div>
+
+
+    <div class="formula">
+        $$
+        \boxed{v=-30\,cm}
+        $$
+    </div>
+
+    Therefore, the distance of the image from the pole is 30 cm, and the image is formed in front of the mirror.
 </div>
 
-<div class="qa-box">
-    <div class="question">
-        Q: An object is placed at a distance of 10 cm from a concave mirror of radius of curvature 15 cm. Find the distance of the image from the pole. (2025 supplementary)
-    </div>
-    <div class="answer">
-        (The solution/answer to this question is not available in the source.)
-    </div>
 </div>
 
 <div class="qa-box">
