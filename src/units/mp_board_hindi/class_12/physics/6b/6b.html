@@ -372,7 +372,7 @@ margin-top:80px;
     </div>
     <div class="answer">
       <div class="question-image">
-            <img src="images/5.png" alt="चित्र">
+            <img src="images/5.jpg" alt="चित्र">
       </div>
 
        मानलो कोई प्रकाश किरण AB कई माध्यमों में क्रमशः अपवर्तित होती है। पहला तथा अन्तिम माध्यम एक ही है।
@@ -457,7 +457,7 @@ margin-top:80px;
     </div>
 <div class="answer">
     <div class="question-image">
-        <img src="images/3.jpg" alt="किरण आरेख">
+        <img src="images/3.png" alt="किरण आरेख">
     </div>
 
     माना कि एक वस्तु \(P\) सघन माध्यम में स्थित है। अपवर्तन के कारण वस्तु अपने वास्तविक स्थान से ऊपर उठी हुई दिखाई देती है और उसका आभासी प्रतिबिंब \(P'\) बनता है।
@@ -543,17 +543,17 @@ margin-top:80px;
         $$
     </div>
 
-<div class="formula">
-    <span style="font-family: 'Noto Sans Devanagari', 'Mangal', sans-serif; white-space: nowrap;">
-          μ =
-    </span>
+<div class="formula" style="display: flex; justify-content: center; align-items: center; width: 100%;">
+    <span style="display: inline-flex; align-items: center; gap: 8px;">
+        <span>μ =</span>
 
-    <span style="display: inline-block; vertical-align: middle; text-align: center; margin-left: 8px;">
-      <span style="display: block; border-bottom: 1px solid #000; padding: 0 8px;">
-            वास्तविक गहराई
-        </span>
-        <span style="display: block; padding: 0 8px;">
-            आभासी गहराई
+        <span style="display: inline-block; text-align: center; vertical-align: middle;">
+            <span style="display: block; border-bottom: 1px solid #000; padding: 2px 12px;">
+                वास्तविक गहराई
+            </span>
+            <span style="display: block; padding: 2px 12px;">
+                आभासी गहराई
+            </span>
         </span>
     </span>
 </div>
@@ -1097,23 +1097,46 @@ $$</div>
         </div>
         
         <p>
-            माना एक पतला उत्तल लेंस \(L\) है जिसके दोनों पृष्ठों की वक्रता त्रिज्याएँ \(R_1\) और \(R_2\) हैं। लेंस के पदार्थ का अपवर्तनांक \(\mu\) है। लेंस के मुख्य अक्ष पर ध्रुव से \(u\) दूरी पर एक बिंदु वस्तु \(O\) रखी है जिसका अंतिम प्रतिबिम्ब \(v\) दूरी पर \(I\) पर बनता है।
+            माना एक पतला उत्तल लेंस \(L\) है जिसके दोनों पृष्ठों की वक्रता त्रिज्याएँ \(R_1\) और \(R_2\) हैं। लेंस के पदार्थ का अपवर्तनांक \(\mu\) है। 
         </p>
 
         <p><strong>प्रथम पृष्ठ पर अपवर्तन:</strong></p>
-        <p>एकल गोलीय पृष्ठ के सूत्र \(\frac{\mu}{v} - \frac{1}{u} = \frac{\mu-1}{R}\) से -</p>
+      <p>
+माना द्वितीय पृष्ठ की अनुपस्थिति मे, मुख्य अक्ष पर रखी बिन्दु वस्तु \(O\) का प्रथम गोलीय पृष्ठ से अपवर्तन के पश्चात प्रतिबिम्ब \(I'\) बनता है। इसमें प्रकाश किरण वायु से माध्यम मे प्रवेश करती है। इस स्थिति में -
+</p>
+<div class="formula">
+    $$ u = -u $$
+    $$ v = v' $$
+    $$ R = R_1$$
+    $$\mu = \mu$$
+</div>
+
+        <p>गोलीय पृष्ठ के सूत्र \(\frac{\mu}{v} - \frac{1}{u} = \frac{\mu-1}{R}\) से -</p>
         <div class="formula">
-            $$\frac{\mu}{v'} - \frac{1}{u} = \frac{\mu-1}{R_1} \tag{1}$$
+            $$\frac{\mu}{v'} - \frac{1}{u} = \frac{\mu-1}{R_1}\tag{1}$$
         </div>
-        <p>जहाँ \(v'\) प्रथम पृष्ठ द्वारा बने प्रतिबिम्ब की दूरी है।</p>
+
 
         <p><strong>द्वितीय पृष्ठ पर अपवर्तन:</strong></p>
-        <p>पहला प्रतिबिम्ब \(I'\) दूसरे पृष्ठ के लिए वस्तु का कार्य करता है। दूसरे पृष्ठ पर प्रकाश सघन से विरल में जा रहा है, अतः -</p>
+      <p>
+ प्रथम पृष्ठ से बना प्रतिबिम्ब, द्वितीय पृष्ठ के लिए वस्तु का कार्य करता है। माना \(I'\) का द्वितीय पृष्ठ से अपवर्तन के पश्चात प्रतिबिम्ब  \(I\) पर बनता है। इसमें प्रकाश किरण माध्यम से वायु में प्रवेश करती है। इस स्थिति में -
+  </p>
+<div class="formula">
+    $$ u = v' $$
+    $$ v = v $$
+    $$ R = R_2$$
+    $$\mu = \frac{1}{\mu}$$
+</div>
+   <p>गोलीय पृष्ठ के सूत्र \(\frac{\mu}{v} - \frac{1}{u} = \frac{\mu-1}{R}\) से -</p>
+         
         <div class="formula">
-            $$\frac{1}{v} - \frac{\mu}{v'} = \frac{1-\mu}{R_2} \tag{2}$$
+            $$\frac{\frac{1}{\mu}}{v} - \frac{1}{v'} = \frac{\frac{1}{\mu}-1}{R_2}$$
         </div>
+      <div class="formula">
+            $$\frac{1}{v} - \frac{\mu}{v'} = \frac{1-\mu}{R_2}$$
+      </div>
         <div class="formula">
-            $$\frac{1}{v} - \frac{\mu}{v'} = -\frac{\mu-1}{R_2}$$
+            $$\frac{1}{v} - \frac{\mu}{v'} = -\frac{\mu-1}{R_2}\tag{2}$$
         </div>
 
         <p>दोनों समीकरणों को जोड़ने पर:</p>
@@ -1121,27 +1144,162 @@ $$</div>
             $$\frac{\mu}{v'} - \frac{1}{u} + \frac{1}{v} - \frac{\mu}{v'} = \frac{\mu-1}{R_1} - \frac{\mu-1}{R_2}$$
         </div>
         <div class="formula">
-            $$\frac{1}{v} - \frac{1}{u} = (\mu-1)\left(\frac{1}{R_1} - \frac{1}{R_2}\right) \tag{3}$$
+            $$\frac{1}{v} - \frac{1}{u} = (\mu-1)\left(\frac{1}{R_1} - \frac{1}{R_2}\right)$$
         </div>
 
       
-        <p>जब वस्तु अनन्त पर होती है \(u = \infty\) तो प्रतिबिम्ब फोकस पर बनता है \(v = f\)। समीकरण (3) में रखने पर -</p>
+        <p>जब वस्तु अनन्त पर होती है \(u = \infty\) तो प्रतिबिम्ब फोकस पर बनता है \(v = f\)। </p>
         <div class="formula">
             $$\frac{1}{f} - \frac{1}{\infty} = (\mu-1)\left(\frac{1}{R_1} - \frac{1}{R_2}\right)$$
         </div>
         <div class="formula">
-            $$\frac{1}{f} = (\mu-1)\left(\frac{1}{R_1} - \frac{1}{R_2}\right) \tag{4}$$
+            $$\frac{1}{f} = (\mu-1)\left(\frac{1}{R_1} - \frac{1}{R_2}\right)$$
         </div>
         <p>यह लेंस मेकर सूत्र है।</p>
 
-        <p><strong>5. लेंस सूत्र:</strong></p>
-        <p>समीकरण (3) और (4) की तुलना करने पर -</p>
-        <div class="formula">
-            $$\boxed{\frac{1}{v} - \frac{1}{u} = \frac{1}{f}}$$
+    </div>    
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        <strong>प्रश्न: सिद्ध करो की \(\frac{1}{f_1} + \frac{1}{f_2} = \frac{1}{f}\) </strong>
+    </div>
+    <div class="answer">
+        <div class="question-image">
+            <img src="images/29.png" alt="लेंस सूत्र का किरण आरेख">
         </div>
-        <p>यही पतले लेंस का लेंस सूत्र है।</p>
+        
+        <p>
+            माना दो उत्तल लेंस \(L_1\) तथा \(L_2\) है जिनकी फोकस दूरिया क्रमशः \(f_1\) और \(f_2\) हैं। 
+        </p>
+
+        <p><strong>प्रथम लेंस \(L_1\) से अपवर्तन :</strong></p>
+        <p>
+            माना द्वितीय लेंस की अनुपस्थिति मे, मुख्य अक्ष पर रखी बिन्दु वस्तु \(O\) का प्रथम लेंस से अपवर्तन के पश्चात प्रतिबिम्ब \(I_1\) बनता है। इस स्थिति में -
+        </p>
+        <div class="formula">
+            $$ u = u $$
+            $$ v = v_1 $$
+            $$ f = f_1 $$
+        </div>
+
+        <p>लेंस सूत्र \(\frac{1}{f} = \frac{1}{v} - \frac{1}{u}\) से -</p>
+        
+        <div class="formula">
+            $$\frac{1}{f_1} = \frac{1}{v_1} - \frac{1}{u} \tag{1}$$
+        </div>
+
+        <p><strong>द्वितीय लेंस \(L_2\) से अपवर्तन:</strong></p>
+        <p>
+            प्रथम लेंस से बना प्रतिबिम्ब, द्वितीय लेंस के लिए वस्तु का कार्य करता है। माना \(I_1\) का द्वितीय लेंस से अपवर्तन के पश्चात प्रतिबिम्ब \(I\) पर बनता है। इस स्थिति में -
+        </p>
+        <div class="formula">
+            $$ u = v_1 $$
+            $$ v = v $$
+            $$ f = f_2 $$
+        </div>
+        <p>लेंस सूत्र \(\frac{1}{f} = \frac{1}{v} - \frac{1}{u}\) से -</p>
+        
+        <div class="formula">
+            $$\frac{1}{f_2} = \frac{1}{v} - \frac{1}{v_1} \tag{2}$$
+        </div>
+
+        <p>दोनों समीकरणों को जोड़ने पर:</p>
+       
+        <div class="formula">
+            $$\frac{1}{f_1}+\frac{1}{f_2} = \frac{1}{v_1} - \frac{1}{u} + \frac{1}{v} - \frac{1}{v_1}$$
+        </div>
+
+        <div class="formula">
+            $$\frac{1}{f_1}+\frac{1}{f_2} = \frac{1}{v} - \frac{1}{u} $$
+        </div>
+      
+        <p>जब वस्तु अनन्त पर होती है \(u = \infty\) तो प्रतिबिम्ब संयुक्त फोकस पर बनता है \(v = f\)। </p>
+
+        <div class="formula">
+            $$\frac{1}{f_1}+\frac{1}{f_2} = \frac{1}{f} - \frac{1}{\infty} $$
+        </div>
+        <div class="formula">
+            $$\frac{1}{f_1}+\frac{1}{f_2} = \frac{1}{f} - 0 $$
+        </div>
+        <div class="formula">
+            $$\frac{1}{f_1}+\frac{1}{f_2} = \frac{1}{f} $$
+        </div>
+        <p>यही संयुक्त फोकस दूरी का सूत्र है।</p>
+
+    </div>    
+</div>
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: लेंस सूत्र लिखिए तथा इसे सिद्ध कीजिए।
+    </div>
+    <div class="answer">
+लेंस सूत्र
+ <div class="formula">
+            $$ \frac{1}{f} = \frac{1}{v} - \frac{1}{u} $$
+        </div>
+<div class="formula">
+    जहाँ 
+    <br>
+    \(f\) = फोकस दूरी
+    <br>
+    \(v\) = प्रतिबिंब दूरी
+    <br>
+    \(u\) = वस्तु दूरी
+</div>
+
+        <div class="question-image">
+            <img src="images/image28.png" alt="चित्र">
+        </div>
+        <p>
+            माना कि L एक उत्तल लेंस है जिसका प्रकाशीय केंद्र O तथा फोकस F है। इसकी मुख्य अक्ष के किसी बिन्दु पर एक वस्तु AB रखी है जिसका लेंस से अपवर्तन के पश्चात प्रतिबिंब A'B' पर बनता है।
+        </p>
+ 
+        <p>समकोण \(\triangle ABO\) तथा \(\triangle A'B'O\) में -</p>
+        <div class="formula">
+            $$ \frac{AB}{A'B'} = \frac{OB}{OB'} \tag{1} $$
+        </div>
+        <p>इसी प्रकार, समकोण \(\triangle LOF\) तथा \(\triangle A'B'F\) में -</p>
+        <div class="formula">
+            $$ \frac{LO}{A'B'} = \frac{OF}{B'F} $$
+        </div>
+      
+        <div class="formula">
+            $$ \frac{AB}{A'B'} = \frac{OF}{B'F} \tag{2} \quad( {\because LO = AB}) $$
+        </div>
+        <p>समीकरण (1) व (2) की तुलना करने पर,</p>
+      
+        <div class="formula">
+            $$ \frac{OB}{OB'} = \frac{OF}{B'F} $$
+            $$ \frac{OB}{OB'} = \frac{OF}{OB' - OF} $$
+        </div>
+        <p>चिह्न परंपरा के अनुसार</p>
+        <div class="formula">
+            $$ OB = -u $$
+            $$ OB' = +v $$
+            $$ OF = +f $$
+        </div>
+        <p>चिन्ह सहित मान रखने पर,</p>
+        <div class="formula">
+            $$ \frac{-u}{v} = \frac{f}{v - f} $$
+            $$ -u(v - f) = v f $$
+            $$ -uv + uf = vf $$
+            $$ uf - vf = uv $$
+            $$ uf = uv + vf $$
+            $$ uv = uf - vf $$
+        </div>
+       दोनों ओर uvf का भाग देने पर 
+<div class="formula">
+            $$ \frac{uv}{uvf} = \frac{uf}{uvf} - \frac{vf}{uvf} $$
+          </div>
+      
+  <div class="formula">
+            $$ \boxed{\frac{1}{f} = \frac{1}{v} - \frac{1}{u}} $$
+        </div>
+        <p>यही लेंस सूत्र है।</p>
     </div>
 </div>
+  
 <div class="qa-box">
     <div class="question">
         प्रश्न: उत्तल लेंसों में विभिन्न वस्तुओं की स्थितियों के लिए प्रतिबिंब निर्माण की प्रकृति, आकार और स्थिति का वर्णन कीजिए।
@@ -1152,32 +1310,33 @@ $$</div>
         <ol>
             <li><strong>जब वस्तु अनंत पर हो -</strong> जब वस्तु अनंत पर होती है तो उत्तल लेंस से अपवर्तन के पश्चात् प्रतिबिंब लेंस के दूसरी ओर फोकस पर बनता है। प्रतिबिंब वास्तविक, उल्टा तथा बहुत छोटा, या बिंदु-आकार का होता है।</li>
             <div class="question-image">
-            <img src="images/14.png" alt="चित्र">
+            <img src="images/14.jpg" alt="चित्र">
             </div>
           <li><strong>जब वस्तु \(2F\) से परे स्थित हो -</strong> जब वस्तु \(2F\) से परे होती है तो उत्तल लेंस से अपवर्तन के पश्चात् प्रतिबिंब लेंस के दूसरी ओर \(F\) और \(2F\) के बीच बनता है। प्रतिबिंब वास्तविक, उल्टा तथा वस्तु से छोटा होता है।</li>
           <div class="question-image">
-            <img src="images/15.png" alt="चित्र">
+            <img src="images/15.jpg" alt="चित्र">
           </div>
           <li><strong>जब वस्तु \(2F\) पर स्थित हो -</strong> जब वस्तु \(2F\) पर स्थित होती है तो उत्तल लेंस से अपवर्तन के पश्चात् प्रतिबिंब लेंस के दूसरी ओर \(2F\) पर बनता है। प्रतिबिंब वास्तविक, उल्टा तथा वस्तु के आकार का होता है।</li>
           <div class="question-image">
-            <img src="images/16.png" alt="चित्र">
+            <img src="images/16.jpg" alt="चित्र">
           </div>
           <li><strong>जब वस्तु \(2F\) और \(F\) के मध्य स्थित हो -</strong> जब वस्तु \(2F\) और \(F\) के मध्य स्थित होती है तो उत्तल लेंस से अपवर्तन के पश्चात् प्रतिबिंब लेंस के दूसरी ओर \(2F\) से परे बनता है। प्रतिबिंब वास्तविक, उल्टा तथा वस्तु से बड़ा होता है।</li>
           <div class="question-image">
-            <img src="images/17.png" alt="चित्र">
+            <img src="images/17.jpg" alt="चित्र">
           </div>
           <li><strong>जब वस्तु \(F\) से परे स्थित हो -</strong> जब वस्तु \(F\) से परे होती है तो उत्तल लेंस से अपवर्तन के पश्चात् प्रतिबिंब लेंस के दूसरी ओर अनंत पर बनता है। प्रतिबिंब वास्तविक, उल्टा तथा वस्तु से बहुत बड़ा होता है।</li>
            <div class="question-image">
-            <img src="images/18.png" alt="चित्र">
+            <img src="images/18.jpg" alt="चित्र">
            </div>
           <li><strong>जब वस्तु \(F\) और \(O\) के मध्य स्थित हो -</strong> जब वस्तु \(F\) और \(O\) के मध्य स्थित होती है तो उत्तल लेंस से अपवर्तन के पश्चात् प्रतिबिंब वस्तु की ओर ही बनता है। प्रतिबिंब आभासी, सीधा तथा वस्तु से बड़ा होता है।</li>
         <div class="question-image">
-            <img src="images/19.png" alt="चित्र">
+            <img src="images/19.jpg" alt="चित्र">
         </div>
         </ol>
     </div>
 </div>
 
+  
 <div class="qa-box">
     <div class="question">
         प्रश्न: उत्तल लेंस के उपयोग लिखिए।
@@ -1212,7 +1371,7 @@ $$</div>
     </li>
 
     <div class="question-image">
-            <img src="images/20.png" alt="चित्र">
+            <img src="images/20.jpg" alt="चित्र">
     </div>
 
     <li>
@@ -1221,7 +1380,7 @@ $$</div>
         प्रतिबिंब वस्तु की ओर लेंस के प्रकाशिक केन्द्र और फोकस के बीच बनता है। प्रतिबिंब आभासी, सीधा और वस्तु से छोटा होता है।
     </li>
   <div class="question-image">
-            <img src="images/21.png" alt="चित्र">
+            <img src="images/21.jpg" alt="चित्र">
   </div>
 </ol>
 

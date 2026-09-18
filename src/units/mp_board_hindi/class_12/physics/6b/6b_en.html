@@ -377,7 +377,7 @@ Pal <span>Study Center</span>
     <div class="answer">
         
 <div class="question-image">
-            <img src="images/5.png" alt="चित्र">
+            <img src="images/5.jpg" alt="चित्र">
 </div>
       
 
@@ -467,7 +467,7 @@ Pal <span>Study Center</span>
     <div class="answer">
 
         <div class="question-image">
-            <img src="images/3.jpg" alt="Ray diagram">
+            <img src="images/3.png" alt="Ray diagram">
         </div>
 
         Let an object <i>P</i> be placed inside a denser medium.
@@ -1001,31 +1001,53 @@ An optical fibre works on the principle of total internal reflection. When light
         </div>
         
         <p>
-            Let a thin convex lens \(L\) be having radii of curvature \(R_1\) and \(R_2\) for its two surfaces. The refractive index of the lens material is \(\mu\). A point object \(O\) is placed at a distance \(u\) from the pole on the principal axis, whose final image \(I\) is formed at a distance \(v\).
+            Let a thin convex lens \(L\) be having radii of curvature \(R_1\) and \(R_2\) for its two surfaces. The refractive index of the lens material is \(\mu\). 
         </p>
 
         <p><strong>Refraction at First Surface:</strong></p>
-        <p>From the formula for refraction at a single spherical surface \(\frac{\mu}{v} - \frac{1}{u} = \frac{\mu-1}{R}\) -</p>
-        <div class="formula">
-            $$\frac{\mu}{v'} - \frac{1}{u} = \frac{\mu-1}{R_1} \tag{1}$$
-        </div>
-        <p>Where \(v'\) is the distance of the image formed by the first surface.</p>
-
+    <p>
+Let the image of a point object \(O\) placed on the principal axis be formed at \(I'\) after refraction through the first spherical surface, in the absence of the second surface. In this case light ray enters from air to the medium. So,
+</p>
+      <div class="formula">
+    $$ u = -u $$
+    $$ v = v' $$
+    $$ R = R_1$$
+    $$\mu = \mu$$
+</div>
+<p>From the formula for refraction at a spherical surface \(\frac{\mu}{v} - \frac{1}{u} = \frac{\mu-1}{R}\) -</p>
+          
+<div class="formula">
+    $$\frac{\mu}{v'} - \frac{1}{u} = \frac{\mu-1}{R_1} \tag{1}$$
+</div>
+ 
+      
         <p><strong>Refraction at Second Surface:</strong></p>
-        <p>The first image \(I'\) acts as an object for the second surface. At the second surface light goes from denser to rarer medium, hence -</p>
-        <div class="formula">
-            $$\frac{1}{v} - \frac{\mu}{v'} = \frac{1-\mu}{R_2} \tag{2}$$
+<p>
+The image formed by the first surface acts as an object for the second surface. Let the image of \(I'\) be formed at \(I\) after refraction through the second surface. In this case light ray enters from medium to air. So,
+</p>
+      <div class="formula">
+    $$ u = v' $$
+    $$ v = v $$
+    $$ R = R_2$$
+    $$\mu = \frac{1}{\mu}$$
+      </div>
+  <p>From the formula for refraction at a spherical surface \(\frac{\mu}{v} - \frac{1}{u} = \frac{\mu-1}{R}\) -</p>
+          
+<div class="formula">
+            $$\frac{\frac{1}{\mu}}{v} - \frac{1}{v'} = \frac{\frac{1}{\mu}-1}{R_2}\tag{2}$$
         </div>
+      <div class="formula">
+            $$\frac{1}{v} - \frac{\mu}{v'} = \frac{1-\mu}{R_2}$$
+      </div>
         <div class="formula">
             $$\frac{1}{v} - \frac{\mu}{v'} = -\frac{\mu-1}{R_2}$$
         </div>
-
         Adding Both Equations:
         <div class="formula">
             $$\frac{\mu}{v'} - \frac{1}{u} + \frac{1}{v} - \frac{\mu}{v'} = \frac{\mu-1}{R_1} - \frac{\mu-1}{R_2}$$
         </div>
         <div class="formula">
-            $$\frac{1}{v} - \frac{1}{u} = (\mu-1)\left(\frac{1}{R_1} - \frac{1}{R_2}\right) \tag{3}$$
+            $$\frac{1}{v} - \frac{1}{u} = (\mu-1)\left(\frac{1}{R_1} - \frac{1}{R_2}\right)$$
         </div>
 
     
@@ -1034,18 +1056,155 @@ An optical fibre works on the principle of total internal reflection. When light
             $$\frac{1}{f} - \frac{1}{\infty} = (\mu-1)\left(\frac{1}{R_1} - \frac{1}{R_2}\right)$$
         </div>
         <div class="formula">
-            $$\frac{1}{f} = (\mu-1)\left(\frac{1}{R_1} - \frac{1}{R_2}\right) \tag{4}$$
+            $$\frac{1}{f} = (\mu-1)\left(\frac{1}{R_1} - \frac{1}{R_2}\right) $$
         </div>
         <p>This is the Lens Maker's Formula.</p>
 
-        <p><strong>5. Lens Formula:</strong></p>
-        <p>On comparing equation (3) and (4) -</p>
-        <div class="formula">
-            $$\boxed{\frac{1}{v} - \frac{1}{u} = \frac{1}{f}}$$
-        </div>
-        <p>This is the lens formula for a thin lens. According to sign convention, \(f\) is positive for convex lens and negative for concave lens.</p>
-    </div>
+    </div>        
   </div>
+  <div class="qa-box">
+    <div class="question">
+        <strong>Question: Prove that \(\frac{1}{f_1} + \frac{1}{f_2} = \frac{1}{f}\)</strong>
+    </div>
+    <div class="answer">
+        <div class="question-image">
+            <img src="images/29.png" alt="Ray diagram of lens formula">
+        </div>
+        
+        <p>
+            Let there be two convex lenses \(L_1\) and \(L_2\) whose focal lengths are \(f_1\) and \(f_2\) respectively.
+        </p>
+
+        <p><strong>Refraction through first lens \(L_1\):</strong></p>
+        <p>
+            Let, in the absence of the second lens, the image of a point object \(O\) placed on the principal axis be formed at \(I_1\) after refraction through the first lens. In this case -
+        </p>
+        <div class="formula">
+            $$ u = u $$
+            $$ v = v_1 $$
+            $$ f = f_1 $$
+        </div>
+
+        <p>From lens formula \(\frac{1}{f} = \frac{1}{v} - \frac{1}{u}\) -</p>
+        
+        <div class="formula">
+            $$\frac{1}{f_1} = \frac{1}{v_1} - \frac{1}{u} \tag{1}$$
+        </div>
+
+        <p><strong>Refraction through second lens \(L_2\):</strong></p>
+        <p>
+            The image formed by the first lens acts as an object for the second lens. Let the image of \(I_1\) be formed at \(I\) after refraction through the second lens. In this case -
+        </p>
+        <div class="formula">
+            $$ u = v_1 $$
+            $$ v = v $$
+            $$ f = f_2 $$
+        </div>
+        <p>From lens formula \(\frac{1}{f} = \frac{1}{v} - \frac{1}{u}\) -</p>
+        
+        <div class="formula">
+            $$\frac{1}{f_2} = \frac{1}{v} - \frac{1}{v_1} \tag{2}$$
+        </div>
+
+        <p>Adding both equations:</p>
+       
+        <div class="formula">
+            $$\frac{1}{f_1}+\frac{1}{f_2} = \frac{1}{v_1} - \frac{1}{u} + \frac{1}{v} - \frac{1}{v_1}$$
+        </div>
+
+        <div class="formula">
+            $$\frac{1}{f_1}+\frac{1}{f_2} = \frac{1}{v} - \frac{1}{u} $$
+        </div>
+      
+        <p>When the object is at infinity \(u = \infty\) then the image is formed at the combined focus \(v = f\).</p>
+
+        <div class="formula">
+            $$\frac{1}{f_1}+\frac{1}{f_2} = \frac{1}{f} - \frac{1}{\infty} $$
+        </div>
+        <div class="formula">
+            $$\frac{1}{f_1}+\frac{1}{f_2} = \frac{1}{f} - 0 $$
+        </div>
+        <div class="formula">
+            $$\frac{1}{f_1}+\frac{1}{f_2} = \frac{1}{f} $$
+        </div>
+        <p>This is the formula for combined focal length.</p>
+
+    </div>    
+  </div>
+<div class="qa-box">
+    <div class="question">
+        Question: Write the lens formula and prove it.
+    </div>
+    <div class="answer">
+        Lens formula
+        <div class="formula">
+            $$ \frac{1}{f} = \frac{1}{v} - \frac{1}{u} $$
+        </div>
+        <div class="formula">
+            where
+            <br>
+            \(f\) = focal length
+            <br>
+            \(v\) = image distance
+            <br>
+            \(u\) = object distance
+        </div>
+
+        <div class="question-image">
+            <img src="images/image28.png" alt="Diagram">
+        </div>
+        <p>
+            Let L be a convex lens whose optical center is O and focus is F. An object AB is placed at a point on its principal axis whose image is formed at A'B' after refraction through the lens.
+        </p>
+ 
+        <p>In right-angled \(\triangle ABO\) and \(\triangle A'B'O\) -</p>
+        <div class="formula">
+            $$ \frac{AB}{A'B'} = \frac{OB}{OB'} \tag{1} $$
+        </div>
+        <p>Similarly, in right-angled \(\triangle LOF\) and \(\triangle A'B'F\) -</p>
+        <div class="formula">
+            $$ \frac{LO}{A'B'} = \frac{OF}{B'F} $$
+        </div>
+      
+        <div class="formula">
+            $$ \frac{AB}{A'B'} = \frac{OF}{B'F} \tag{2} \quad( {\because LO = AB}) $$
+        </div>
+        <p>On comparing equation (1) and (2),</p>
+      
+        <div class="formula">
+            $$ \frac{OB}{OB'} = \frac{OF}{B'F} $$
+            $$ \frac{OB}{OB'} = \frac{OF}{OB' - OF} $$
+        </div>
+        <p>According to sign convention</p>
+        <div class="formula">
+            $$ OB = -u $$
+            $$ OB' = +v $$
+            $$ OF = +f $$
+        </div>
+        <p>On putting values with sign,</p>
+        <div class="formula">
+            $$ \frac{-u}{v} = \frac{f}{v - f} $$
+            $$ -u(v - f) = v f $$
+            $$ -uv + uf = vf $$
+            $$ uf - vf = uv $$
+            $$ uf = uv + vf $$
+            $$ uv = uf - vf $$
+        </div>
+        <p>Dividing both sides by uvf</p>
+        <div class="formula">
+            $$ \frac{uv}{uvf} = \frac{uf}{uvf} - \frac{vf}{uvf} $$
+            $$ \frac{1}{f} = \frac{1}{v} - \frac{1}{u} $$
+        </div>
+      
+        <div class="formula">
+            $$ \boxed{\frac{1}{f} = \frac{1}{v} - \frac{1}{u}} $$
+        </div>
+        <p>This is the lens formula.</p>
+    </div>
+</div>
+
+
+  
 <div class="qa-box">
     <div class="question">
         Q: Describe the nature, size, and position of the image formed by convex lenses for different positions of the object.
@@ -1056,27 +1215,27 @@ An optical fibre works on the principle of total internal reflection. When light
         <ol>
             <li><strong>When the object is at infinity -</strong> When the object is at infinity, after refraction through the convex lens, the image forms at the focus on the other side of the lens. The image is real, inverted, and highly diminished, or point-sized.</li>
            <div class="question-image">
-            <img src="images/14.png" alt="चित्र">
+            <img src="images/14.jpg" alt="चित्र">
            </div>
           <li><strong>When the object is beyond \(2F\) -</strong> When the object is beyond \(2F\), after refraction through the convex lens, the image forms between \(F\) and \(2F\) on the other side of the lens. The image is real, inverted, and smaller than the object.</li>
            <div class="question-image">
-            <img src="images/15.png" alt="चित्र">
+            <img src="images/15.jpg" alt="चित्र">
            </div>
           <li><strong>When the object is at \(2F\) -</strong> When the object is at \(2F\), after refraction through the convex lens, the image forms at \(2F\) on the other side of the lens. The image is real, inverted, and the same size as the object.</li>
            <div class="question-image">
-            <img src="images/16.png" alt="चित्र">
+            <img src="images/16.jpg" alt="चित्र">
            </div>
           <li><strong>When the object is between \(2F\) and \(F\) -</strong> When the object is between \(2F\) and \(F\), after refraction through the convex lens, the image forms beyond \(2F\) on the other side of the lens. The image is real, inverted, and larger than the object.</li>
            <div class="question-image">
-            <img src="images/17.png" alt="चित्र">
+            <img src="images/17.jpg" alt="चित्र">
            </div>
           <li><strong>When the object is beyond \(F\) -</strong> When the object is beyond \(F\), after refraction through the convex lens, the image forms at infinity on the other side of the lens. The image is real, inverted, and much larger than the object.</li>
            <div class="question-image">
-            <img src="images/18.png" alt="चित्र">
+            <img src="images/18.jpg" alt="चित्र">
            </div>
           <li><strong>When the object is between \(F\) and \(O\) -</strong> When the object is between \(F\) and \(O\), after refraction through the convex lens, the image forms on the same side as the object. The image is virtual, erect, and larger than the object.</li>
         <div class="question-image">
-            <img src="images/19.png" alt="चित्र">
+            <img src="images/19.jpg" alt="चित्र">
         </div>
         </ol>
     </div>
@@ -1115,7 +1274,7 @@ An optical fibre works on the principle of total internal reflection. When light
     </li>
 
     <div class="question-image">
-            <img src="images/20.png" alt="चित्र">
+            <img src="images/20.jpg" alt="चित्र">
     </div>
 
     <li>
@@ -1124,7 +1283,7 @@ An optical fibre works on the principle of total internal reflection. When light
         The image is formed between the optical centre and the focus of the lens, on the same side as the object. The image is virtual, erect, and smaller than the object.
     </li>
   <div class="question-image">
-            <img src="images/21.png" alt="चित्र">
+            <img src="images/21.jpg" alt="चित्र">
   </div>
 </ol>
 
