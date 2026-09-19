@@ -78,7 +78,7 @@ color:#fff!important;
 ========================= */
 
 .hero{
-min-height:360px;
+min-height:340px;
 padding:90px 20px 60px;
 
 display:flex;
@@ -131,8 +131,8 @@ filter:blur(50px);
 
 .hero-logo{
 width:260px;
-max-width:85%;
-margin-bottom:25px;
+max-width:90%;
+margin-bottom:20px;
 position:relative;
 z-index:2;
 
@@ -155,7 +155,7 @@ text-shadow:0 4px 15px rgba(0,0,0,.25);
 
 #studentInfo{
 font-size:1rem;
-color:#e2e8f0;
+color:#1e293b;
 max-width:700px;
 margin:auto;
 line-height:1.7;
