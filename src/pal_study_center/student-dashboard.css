@@ -30,7 +30,7 @@ border-bottom:1px solid rgba(255,255,255,.08);
 .navbar-brand{
     display:flex;
     align-items:center;
-    gap:12px;
+    gap:13px;
     white-space:nowrap;
 }
 
@@ -378,7 +378,7 @@ margin-top:0px;
 
 .section-title{
 text-align:center;
-padding:30px 10px;
+padding:28px 10px;
 }
 
 .section-title h2{
