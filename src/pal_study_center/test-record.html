@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Test Record | पाल स्टडी सेंटर</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+
+/* =========================
+   BASIC
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    overflow-x:hidden;
+    font-family:'Poppins',sans-serif;
+    background:#f4f7ff;
+    color:#0f172a;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    background:#1e293b;
+    box-shadow:0 4px 18px rgba(23,74,126,.95);
+    padding:10px 0;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.navbar-brand{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    white-space:nowrap;
+}
+
+.navbar-brand span{
+    font-size:44px;
+    font-weight:700;
+    line-height:1.1;
+}
+
+.navbar-brand span:first-child{
+    color:#fff;
+}
+
+.navbar-brand span:last-child{
+    color:#60a5fa;
+}
+
+.navbar-toggler{
+    border-color:#fff;
+}
+
+.navbar-toggler-icon{
+    filter:brightness(0) invert(1);
+}
+
+.nav-link{
+    color:#e2e8f0 !important;
+    font-weight:600;
+    border-radius:10px;
+    padding:8px 14px !important;
+    transition:.3s;
+}
+
+.nav-link:hover,
+.nav-link.active{
+    background:rgba(255,255,255,.10);
+    color:#fff !important;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.test-hero{
+    min-height:235px;
+    padding:105px 15px 35px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    position:relative;
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        135deg,
+        #111827 0%,
+        #1f2937 55%,
+        #334155 100%
+    );
+
+    color:#fff;
+}
+
+.test-hero::before{
+    content:"";
+    position:absolute;
+    top:-180px;
+    left:-180px;
+    width:450px;
+    height:450px;
+    border-radius:50%;
+    background:rgba(255,255,255,.05);
+    filter:blur(50px);
+}
+
+.test-hero::after{
+    content:"";
+    position:absolute;
+    bottom:-180px;
+    right:-180px;
+    width:450px;
+    height:450px;
+    border-radius:50%;
+    background:rgba(148,163,184,.12);
+    filter:blur(50px);
+}
+
+.test-hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.test-icon{
+    width:58px;
+    height:58px;
+    margin:0 auto 10px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:16px;
+
+    background:rgba(255,255,255,.10);
+    border:1px solid rgba(255,255,255,.12);
+
+    font-size:28px;
+}
+
+.test-hero h1{
+    margin:0 0 6px;
+    font-size:2.2rem;
+    font-weight:800;
+}
+
+.student-name{
+    margin:0;
+    color:#93c5fd;
+    font-size:1rem;
+    font-weight:600;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.test-container{
+    margin-top:-30px;
+    position:relative;
+    z-index:5;
+    padding-bottom:50px;
+}
+
+.test-wrapper{
+    background:#fff;
+    border-radius:24px;
+    padding:28px;
+
+    border:1px solid #e2e8f0;
+
+    box-shadow:
+    0 15px 40px rgba(15,23,42,.08);
+
+    position:relative;
+    overflow:hidden;
+}
+
+.test-wrapper::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:5px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #334155,
+        #64748b,
+        #334155
+    );
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.section-heading{
+    margin-bottom:25px;
+}
+
+.section-label{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+
+    padding:7px 13px;
+
+    border-radius:30px;
+
+    background:#eef2ff;
+
+    color:#334155;
+
+    font-size:.72rem;
+    font-weight:800;
+    letter-spacing:.4px;
+}
+
+.section-heading h2{
+    margin:12px 0 4px;
+
+    font-size:1.5rem;
+    font-weight:800;
+
+    color:#1e293b;
+}
+
+.section-heading p{
+    margin:0;
+    color:#64748b;
+    font-size:.85rem;
+}
+
+
+/* =========================
+   NO RECORD CARD
+========================= */
+
+.empty-test{
+    min-height:300px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:35px 20px;
+
+    border-radius:18px;
+
+    background:#f8fafc;
+
+    border:1px dashed #cbd5e1;
+}
+
+.empty-icon{
+    width:72px;
+    height:72px;
+
+    margin-bottom:16px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#e2e8f0;
+
+    color:#64748b;
+
+    font-size:32px;
+}
+
+.empty-test h3{
+    margin:0 0 8px;
+
+    color:#334155;
+
+    font-size:1.15rem;
+    font-weight:800;
+}
+
+.empty-test p{
+    max-width:450px;
+
+    margin:0;
+
+    color:#64748b;
+
+    font-size:.85rem;
+    line-height:1.6;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+    text-align:center;
+    padding:20px 15px;
+    color:#64748b;
+    font-size:.75rem;
+}
+
+.footer p{
+    margin:0;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:576px){
+
+    .navbar{
+        padding:8px 0;
+    }
+
+    .navbar-brand{
+        gap:6px;
+    }
+
+    .navbar-brand span{
+        font-size:34px;
+    }
+
+    .test-hero{
+        min-height:220px;
+        padding:90px 12px 30px;
+    }
+
+    .test-icon{
+        width:52px;
+        height:52px;
+        font-size:24px;
+    }
+
+    .test-hero h1{
+        font-size:1.75rem;
+    }
+
+    .student-name{
+        font-size:.9rem;
+    }
+
+    .test-container{
+        margin-top:-25px;
+    }
+
+    .test-wrapper{
+        padding:20px 16px;
+        border-radius:20px;
+    }
+
+    .section-heading h2{
+        font-size:1.3rem;
+    }
+
+    .empty-test{
+        min-height:270px;
+        padding:25px 15px;
+    }
+
+    .empty-icon{
+        width:62px;
+        height:62px;
+        font-size:27px;
+    }
+
+    .empty-test h3{
+        font-size:1rem;
+    }
+
+    .empty-test p{
+        font-size:.78rem;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="student-dashboard.html">
+            <span>पाल</span>
+            <span>स्टडी सेंटर</span>
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#nav"
+            aria-controls="nav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="nav">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+
+                    <a class="nav-link active"
+                       href="test-record.html">
+
+                        <i class="bi bi-clipboard-data"></i>
+
+                        Test Record
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="student-dashboard.html">
+
+                        <i class="bi bi-house-fill"></i>
+
+                        Dashboard
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="test-hero">
+
+    <div class="test-hero-content">
+
+        <div class="test-icon">
+
+            <i class="bi bi-clipboard-data-fill"></i>
+
+        </div>
+
+
+        <h1>
+            Test Record
+        </h1>
+
+
+        <p class="student-name">
+            Student Test Records
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     MAIN CONTENT
+========================= -->
+
+<section class="container test-container">
+
+    <div class="test-wrapper">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+
+                <i class="bi bi-bar-chart-fill"></i>
+
+                TEST RECORD
+
+            </span>
+
+
+            <h2>
+                My Test Records
+            </h2>
+
+
+            <p>
+                यहाँ आपके सभी टेस्ट के परिणाम दिखाई देंगे।
+            </p>
+
+        </div>
+
+
+
+        <!-- NO RECORD -->
+
+        <div class="empty-test">
+
+            <div class="empty-icon">
+
+                <i class="bi bi-clipboard-x"></i>
+
+            </div>
+
+
+            <h3>
+                अभी कोई टेस्ट रिकॉर्ड उपलब्ध नहीं है
+            </h3>
+
+
+            <p>
+                जब आपका टेस्ट रिकॉर्ड उपलब्ध होगा,
+                तो वह यहाँ दिखाई देगा।
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
+
+    <p>
+        © 2026 पाल स्टडी सेंटर
+    </p>
+
+</footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -294,7 +294,7 @@ body{
     font-weight:600;
 
     animation:
-        heroScroll 18s linear infinite;
+        heroScroll 10s linear infinite;
 }
 
 @keyframes heroScroll{
@@ -339,7 +339,7 @@ body{
     }
 
     .hero-marquee span{
-        font-size:.72rem;
+        font-size:.80rem;
 
         padding:7px 15px;
     }
