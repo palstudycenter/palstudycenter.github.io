@@ -247,16 +247,6 @@
     max-width:1200px;
 }
 
-.hero-badge{
-    display:inline-block;
-    background:#2563eb;
-    color:#fff;
-    padding:10px 25px;
-    border-radius:50px;
-    font-weight:600;
-    margin-bottom:25px;
-    box-shadow:0 8px 20px rgba(37,99,235,.25);
-}
 
 .hero-logo{
     width:100%;
@@ -286,7 +276,7 @@
 .hero-marquee-content{
     display:inline-block;
     white-space:nowrap;
-    animation:marquee 15s linear infinite;
+    animation:marquee 20s linear infinite;
     font-weight:800;
     will-change:transform;
 }
@@ -323,7 +313,7 @@
     }
 
     .hero-marquee-content{
-        font-size:14px;
+        font-size:16px;
     }
 }
 
@@ -335,18 +325,28 @@
   .section-title h2{
     font-size:28px;
   }
+    .hero-badge{
+    display:inline-block;
+    background:#0D47A1;
+    color:#fff;
+    padding:10px 25px;
+    border-radius:50px;
+    font-weight:600;
+    margin-bottom:25px;
+    box-shadow:0 8px 20px rgba(37,99,235,.25);
+    }
 .hero-actions{
     display:flex;
     justify-content:center;
     align-items:center;
     gap:16px;
     flex-wrap:wrap;
-    margin-top:28px;
-    margin-bottom:28px;
+    margin-top:5px;
+    margin-bottom:5px;
 }
 
 .hero-apply-btn{
-    background:#2563eb;
+    background:#0D47A1;
     color:#fff;
     padding:10px 24px;
     border-radius:50px;
@@ -362,7 +362,7 @@
 }
 .hero-access-btn{
     background:#ffffff;
-    color:#2563eb;
+    color:#0D47A1;
     padding:10px 24px;
     border-radius:50px;
     font-weight:600;
@@ -371,7 +371,7 @@
 }
 
 .hero-access-btn:hover{
-    background:#2563eb;
+    background:#0D47A1;
     color:#fff;
     transform:translateY(-3px);
 }
@@ -385,13 +385,14 @@
     margin-top:25px;
     
     background:#ffffff;
-    color:#2563eb;
+    color:#0D47A1;
     padding:10px 24px;
     border-radius:50px;
     font-weight:600;
-    border:2px solid #2563eb;
+    border:2px solid #0D47A1;
     transition:.3s;
 }
+    
 
     /* ======================
        QUICK ACCESS
@@ -570,7 +571,7 @@
 ====================== */
 
 .cta{
-  background:linear-gradient(135deg,#2563eb,#1d4ed8);
+  background:linear-gradient(#0D47A1);
   color:white;
   text-align:center;
   padding:80px 20px;
@@ -757,6 +758,100 @@
       }
 
     }
+    /* ================================
+   HERO TOP RIGHT LOGIN BUTTON
+================================ */
+
+.hero {
+    position: relative;
+}
+
+.hero-login {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    z-index: 50;
+}
+
+.hero-login-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    padding: 7px 12px;
+
+    background: linear-gradient( #0D47A1 );
+
+    color: #ffffff;
+
+    border: 1px solid rgba(13, 71, 161, .25);
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+
+    box-shadow:
+        0 4px 12px rgba(13, 71, 161, .20);
+
+    transition: all .25s ease;
+}
+
+
+/* Arrow */
+
+.login-arrow {
+    font-size: 12px;
+    line-height: 1;
+
+    transition: transform .25s ease;
+}
+
+
+/* Hover */
+
+.hero-login-btn:hover {
+    color: #ffffff;
+
+    background: linear-gradient(
+        135deg,
+        #1976d2,
+        #1565c0
+    );
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 18px rgba(13, 71, 161, .28);
+}
+
+.hero-login-btn:hover .login-arrow {
+    transform: translate(2px, -2px);
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .hero-login {
+        top: 12px;
+        right: 12px;
+    }
+
+    .hero-login-btn {
+        padding: 6px 10px;
+        font-size: 10px;
+        border-radius: 7px;
+    }
+
+    .login-arrow {
+        font-size: 11px;
+    }
+}
 
   </style>
   
@@ -844,6 +939,12 @@
 
 <section class="hero">
 <div class="container hero-content">
+  <div class="hero-login">
+    <a href="src/pal_study_center/login.html" class="hero-login-btn">
+        <span>Login</span>
+        <span class="login-arrow">↗</span>
+    </a>
+  </div>
 
     <div class="hero-tagline">
         Learn • Grow • Succeed
@@ -857,7 +958,7 @@
     <div class="hero-actions">
 
         <span class="hero-badge">
-            🎓 Admission Open 2026-27
+            Admission Open 
         </span>
 
         <a href="src/pal_study_center/signup.html"
@@ -871,21 +972,19 @@
     <div class="hero-marquee">
 
         <div class="hero-marquee-content">
-
-            🎓 Admissions Open 2026-27
-            &nbsp;&nbsp;|&nbsp;&nbsp;
-
-            📚 MP Board (9th–12th) • B.Sc Classes
-            &nbsp;&nbsp;|&nbsp;&nbsp;
-
-            🏆 Expert Faculty • Regular Tests
-            &nbsp;&nbsp;|&nbsp;&nbsp;
-
-            📖 Complete Study Material
-            &nbsp;&nbsp;|&nbsp;&nbsp;
-
-            📞 +91 9425123350
-
+    🎓 <strong>पाल स्टडी सेंटर</strong> — Admissions Open 2026–27
+    &nbsp;&nbsp;•&nbsp;&nbsp;
+    Learn Better • Prepare Smarter • Achieve More
+    &nbsp;&nbsp;•&nbsp;&nbsp;
+    📚 MP Board 9th–12th | B.Sc. Classes
+    &nbsp;&nbsp;•&nbsp;&nbsp;
+    👨‍🏫 Expert Faculty
+    &nbsp;&nbsp;•&nbsp;&nbsp;
+    📝 Regular Tests
+    &nbsp;&nbsp;•&nbsp;&nbsp;
+    📖 Complete Study Material
+    &nbsp;&nbsp;•&nbsp;&nbsp;
+    📞 +91 9425123350
         </div>
 
     </div>
@@ -1089,7 +1188,6 @@ Apply Now
 <div class="col-lg-4">
   <h5>Contact</h5>
 <h3>पाल स्टडी सेंटर</h3>
-<p>Learn • Grow • Succeed</p>
 </div>
 
 <div class="col-lg-4">
