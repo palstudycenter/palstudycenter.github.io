@@ -13,7 +13,7 @@ html{scroll-behavior:smooth;}
 body{font-family:Arial,sans-serif;background:#f4f7fb;overflow-x:hidden;}
 
 .hero{
-height:75vh;
+height:40vh;
 background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
 display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;
 }
@@ -90,28 +90,17 @@ from{opacity:0;transform:translateY(40px);}to{opacity:1;transform:translateY(0);
 <div class="circle circle3"></div>
 
 <div class="hero-content">
-<h1>Pal Study Center</h1>
-<h2>Students Academy</h2>
-<p>“सपनों को सफलता में बदलने की सही जगह”</p>
-<a href="#reviews" class="hero-btn">View Reviews</a>
+  <div class="mb-4 text-end">
+  <button class="btn btn-warning" onclick="openAddReviewModal(event)">Add Review</button>
+  </div>
+<p>“Trusted by Our Brilliant Students”</p>
+<a href="#reviews" class="hero-btn">Students Reviews</a>
 </div>
 </section>
 
 <section class="review-section" id="reviews">
 <div class="container">
-
-<h1 class="section-title">Students Reviews</h1>
-<p class="section-subtitle">Trusted by Our Brilliant Students</p>
-
-<div class="mb-4 text-end">
-  <button class="btn btn-warning" onclick="openAddReviewModal(event)">Add Review</button>
-</div>
-
 <div class="row g-4" id="reviewGrid">
-  <div class="col-12 text-center py-4 text-muted" id="reviewLoading">
-    <div class="spinner-border text-primary" role="status"></div>
-    <p class="mt-3">Loading reviews...</p>
-  </div>
 </div>
 </section>
 
@@ -174,37 +163,6 @@ from{opacity:0;transform:translateY(40px);}to{opacity:1;transform:translateY(0);
     </div>
   </div>
 </div>
-
-<!-- STATS SECTION -->
-<section class="py-5 bg-primary text-white text-center">
-<div class="container">
-<div class="row">
-<div class="col-md-4 mb-3">
-<h1>500+</h1>
-<p>Successful Students</p>
-</div>
-<div class="col-md-4 mb-3">
-<h1>95%</h1>
-<p>Result Performance</p>
-</div>
-<div class="col-md-4 mb-3">
-<h1>10+</h1>
-<p>Years Experience</p>
-</div>
-</div>
-</div>
-</section>
-
-<!-- CONTACT SECTION -->
-<section id="contact" class="py-5 bg-light">
-<div class="container text-center">
-<h2 class="mb-4">Contact Us</h2>
-<p><strong>Pal Study Center</strong></p>
-<p>RLB Marg Manasa, Madhya Pradesh</p>
-<p>📞 +91 9425123350</p>
-<p>📧studycentmns@gmail.com</p>
-</div>
-</section>
 
 <!-- FOOTER -->
 <footer class="bg-dark text-white text-center py-3">
