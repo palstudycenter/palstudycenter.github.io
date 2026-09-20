@@ -220,13 +220,13 @@ body{
 #studentName{
     margin:0 0 5px;
 
-    font-size:1.25rem;
+    font-size:1.75rem;
 
     font-weight:700;
 
     line-height:1.3;
 
-    color:#93c5fd;
+    color:#ffffff;
 
     position:relative;
 
@@ -362,7 +362,7 @@ body{
     }
 
     .navbar-brand span{
-        font-size:40px;
+        font-size:42px;
     }
 
     .hero{
@@ -372,13 +372,13 @@ body{
     }
 
     .dashboard-title{
-        font-size:1.60rem;
+        font-size:1.40rem;
 
         letter-spacing:0;
     }
 
     #studentName{
-        font-size:1.15rem;
+        font-size:1.50rem;
     }
 
     .dashboard-subtitle{
