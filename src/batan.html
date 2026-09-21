@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhatsApp Share</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .share-box {
+      max-width: 400px;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+    }
+
+    .logo {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+
+    .share-btn {
+      background: #25D366;
+      color: white;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="share-box">
+
+    <!-- अपना लोगो यहाँ लगाएँ -->
+    <img src="1.png" class="logo" alt="Logo">
+
+    <!-- अपना मैटर यहाँ लिखें -->
+    <h3>📚 महत्वपूर्ण सूचना</h3>
+
+    <p>
+      प्रिय विद्यार्थी,<br>
+      यहाँ अपना मैटर लिखें।<br>
+      कृपया नीचे दिए गए लिंक पर क्लिक करें।
+    </p>
+
+
+
+
+    
+    <!-- अपना लिंक यहाँ लगाएँ -->
+    <p>
+      🔗 https://palstudycenter.github.io/
+    </p>
+
+    <button class="share-btn" onclick="shareWhatsApp()">
+      📲 WhatsApp पर शेयर करें
+    </button>
+
+  </div>
+
+
+  <script>
+    function shareWhatsApp() {
+
+      const message =
+`📚 महत्वपूर्ण सूचना
+
+प्रिय विद्यार्थी,
+
+यहाँ अपना मैटर लिखें।
+कृपया नीचे दिए गए लिंक पर क्लिक करें।
+
+🔗 https://palstudycenter.github.io/`;
+
+      const whatsappURL =
+        "https://wa.me/?text=" + encodeURIComponent(message);
+
+      window.open(whatsappURL, "_blank");
+    }
+  </script>
+
+</body>
+</html>
