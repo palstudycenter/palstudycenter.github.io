@@ -63,141 +63,6 @@ border:4px solid #2563eb;margin-bottom:10px;
 from{opacity:0;transform:translateY(40px);}to{opacity:1;transform:translateY(0);}
 }
 
-/* =========================
-   HERO IMAGE BUTTON
-========================= */
-
-.image-btn{
-  border:none;
-  margin-left:10px;
-  cursor:pointer;
-  font-family:Arial,sans-serif;
-  font-size:16px;
-}
-
-
-/* =========================
-   HERO IMAGE MODAL
-========================= */
-
-.hero-image-modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.90);
-
-  z-index:99999;
-
-  align-items:center;
-  justify-content:center;
-
-  padding:20px;
-}
-
-
-/* IMAGE BOX */
-
-.hero-image-box{
-  position:relative;
-
-  max-width:95%;
-  max-height:90vh;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-
-/* IMAGE */
-
-.hero-popup-image{
-  max-width:95vw;
-  max-height:85vh;
-
-  width:auto;
-  height:auto;
-
-  object-fit:contain;
-
-  border-radius:15px;
-
-  box-shadow:0 10px 40px rgba(0,0,0,0.5);
-
-  animation:imagePopup 0.35s ease;
-}
-
-
-/* CLOSE BUTTON */
-
-.hero-image-close{
-  position:absolute;
-
-  top:-18px;
-  right:-18px;
-
-  width:42px;
-  height:42px;
-
-  border:none;
-  border-radius:50%;
-
-  background:#fff;
-  color:#111;
-
-  font-size:22px;
-  font-weight:bold;
-
-  cursor:pointer;
-
-  z-index:2;
-
-  box-shadow:0 4px 15px rgba(0,0,0,0.3);
-}
-
-.hero-image-close:hover{
-  background:#facc15;
-}
-
-
-/* POPUP ANIMATION */
-
-@keyframes imagePopup{
-
-  from{
-    opacity:0;
-    transform:scale(0.85);
-  }
-
-  to{
-    opacity:1;
-    transform:scale(1);
-  }
-
-}
-
-
-/* MOBILE */
-
-@media(max-width:600px){
-
-  .image-btn{
-    margin-left:0;
-    margin-top:10px;
-  }
-
-  .hero-popup-image{
-    max-width:94vw;
-    max-height:75vh;
-  }
-
-  .hero-image-close{
-    top:-12px;
-    right:-8px;
-  }
-
 </style>
 </head>
 
@@ -231,12 +96,6 @@ from{opacity:0;transform:translateY(40px);}to{opacity:1;transform:translateY(0);
   </div>
 <p>“Trusted by Our Brilliant Students”</p>
 <a href="#reviews" class="hero-btn">Students Reviews</a>
-<button
-  type="button"
-  class="hero-btn image-btn"
-  onclick="openHeroImage()">
-  📸 View Image
-</button>
 </div>
 </section>
 
@@ -245,55 +104,7 @@ from{opacity:0;transform:translateY(40px);}to{opacity:1;transform:translateY(0);
 <div class="row g-4" id="reviewGrid">
 </div>
 </section>
-<!-- HERO IMAGE MODAL -->
-
-<div
-  class="hero-image-modal"
-  id="heroImageModal"
-  onclick="closeHeroImage(event)"
->
-
-  <div class="hero-image-box">
-
-    <button
-      class="hero-image-close"
-      onclick="closeHeroImage(event)">
-      ✕
-    </button>
-    <img
-      src="../assets/img/gallery/7.jpeg"
-      alt="Pal Study Center"
-      class="hero-popup-image">
-    <img
-      src="../assets/img/gallery/8.png"
-      alt="Pal Study Center"
-      class="hero-popup-image">
-    <img
-      src="../assets/img/gallery/9.jpeg"
-      alt="Pal Study Center"
-      class="hero-popup-image">
-    <img
-      src="../assets/img/gallery/10.jpeg"
-      alt="Pal Study Center"
-      class="hero-popup-image">
-    <img
-      src="../assets/img/gallery/11.jpeg"
-      alt="Pal Study Center"
-      class="hero-popup-image">
-    <img
-      src="../assets/img/gallery/12.jpeg"
-      alt="Pal Study Center"
-      class="hero-popup-image">
-    <img
-      src="../assets/img/gallery/13.jpeg"
-      alt="Pal Study Center"
-      class="hero-popup-image">
-    <img
-      src="../assets/img/gallery/14.jpeg"
-      alt="Pal Study Center"
-      class="hero-popup-image">
-  </div>
-</div>
+  
 
   
 <!-- Add Review Modal -->
@@ -364,44 +175,5 @@ from{opacity:0;transform:translateY(40px);}to{opacity:1;transform:translateY(0);
 <script src="../config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="reviews.js"></script>
-<script>
-
-function openHeroImage(){
-
-  const modal =
-    document.getElementById("heroImageModal");
-
-  modal.style.display = "flex";
-
-}
-
-
-function closeHeroImage(event){
-
-  if(event){
-    event.stopPropagation();
-  }
-
-  const modal =
-    document.getElementById("heroImageModal");
-
-  modal.style.display = "none";
-
-}
-
-
-/* ESC दबाने पर image बंद */
-
-document.addEventListener("keydown", function(event){
-
-  if(event.key === "Escape"){
-
-    closeHeroImage();
-
-  }
-
-});
-
-</script>
 </body>
 </html>
