@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="hi">
 <head>
@@ -7,14 +8,19 @@
 <title>पाल स्टडी सेंटर गैलरी</title>
 
 <style>
+*{
+  box-sizing:border-box;
+}
+
 body{
   margin:0;
-  font-family:Arial;
+  font-family:Arial,sans-serif;
   background:#f5f7ff;
   overflow-x:hidden;
 }
 
-/* 🌈 ANIMATED HEADER */
+/* ================= HEADER ================= */
+
 .header{
   height:260px;
   display:flex;
@@ -24,9 +30,15 @@ body{
   text-align:center;
   color:#fff;
   position:relative;
-  background:linear-gradient(-45deg,#1f4db8,#6a11cb,#2575fc,#00c6ff);
+  background:linear-gradient(
+    -45deg,
+    #1f4db8,
+    #6a11cb,
+    #2575fc,
+    #00c6ff
+  );
   background-size:400% 400%;
-  animation: gradientMove 8s ease infinite;
+  animation:gradientMove 8s ease infinite;
   overflow:hidden;
 }
 
@@ -36,14 +48,13 @@ body{
   100%{background-position:0% 50%;}
 }
 
-/* floating circles */
 .header::before,
 .header::after{
   content:"";
   position:absolute;
   border-radius:50%;
   background:rgba(255,255,255,0.15);
-  animation: float 6s infinite ease-in-out;
+  animation:float 6s infinite ease-in-out;
 }
 
 .header::before{
@@ -62,24 +73,33 @@ body{
 }
 
 @keyframes float{
-  0%,100%{transform:translateY(0);}
-  50%{transform:translateY(-25px);}
+  0%,100%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(-25px);
+  }
 }
 
-/* TEXT */
 .header h1{
   font-size:40px;
   margin:0;
   text-shadow:0 0 15px rgba(255,255,255,0.7);
+  position:relative;
+  z-index:2;
 }
 
 .header p{
   margin-top:10px;
   font-size:18px;
-  opacity:0.95;
+  opacity:.95;
+  position:relative;
+  z-index:2;
 }
 
-/* FILTER */
+/* ================= FILTER ================= */
+
 .filters{
   text-align:center;
   margin:15px;
@@ -95,10 +115,19 @@ body{
   cursor:pointer;
 }
 
-/* GALLERY */
+.filters button:hover{
+  background:#1f4db8;
+  color:#fff;
+}
+
+/* ================= GALLERY ================= */
+
 .gallery{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  grid-template-columns:repeat(
+    auto-fit,
+    minmax(200px,1fr)
+  );
   gap:15px;
   padding:20px;
 }
@@ -108,8 +137,8 @@ body{
   overflow:hidden;
   background:#fff;
   cursor:pointer;
-  box-shadow:0 5px 15px rgba(0,0,0,0.08);
-  transition:0.3s;
+  box-shadow:0 5px 15px rgba(0,0,0,.08);
+  transition:.3s;
 }
 
 .card:hover{
@@ -120,186 +149,731 @@ body{
   width:100%;
   height:200px;
   object-fit:cover;
-  transition:0.3s;
+  display:block;
+  transition:.3s;
 }
 
 .card img:hover{
   transform:scale(1.05);
 }
 
-/* MODAL */
+/* ================= MODAL ================= */
+
 .modal{
   display:none;
   position:fixed;
-  top:0;
-  left:0;
+  z-index:9999;
+  inset:0;
   width:100%;
   height:100%;
-  background:rgba(0,0,0,0.92);
+  background:rgba(0,0,0,.92);
+
   justify-content:center;
   align-items:center;
   flex-direction:column;
+
+  padding:20px;
+  overflow:hidden;
+}
+
+/*
+  IMPORTANT:
+  Image का original ratio खराब नहीं होगा।
+  Portrait और landscape दोनों image सही दिखाई देंगी।
+*/
+
+.modal-img-box{
+  width:100%;
+  height:75vh;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  overflow:hidden;
 }
 
 .modal img{
-  max-width:90%;
-  max-height:75%;
+  max-width:95%;
+  max-height:100%;
+
+  width:auto;
+  height:auto;
+
+  object-fit:contain;
+
   border-radius:10px;
+
+  transform:scale(1);
+  transition:transform .25s ease;
+
+  user-select:none;
+  -webkit-user-drag:none;
 }
 
-/* BUTTONS */
+/* ================= BUTTONS ================= */
+
 .btns{
   margin-top:15px;
+  text-align:center;
+  max-width:100%;
 }
 
-button{
-  margin:5px;
+.btns button{
+  margin:4px;
   padding:10px 14px;
   border:none;
   border-radius:8px;
   cursor:pointer;
   background:#1f4db8;
   color:#fff;
+  font-size:14px;
+}
+
+.btns button:hover{
+  background:#2575fc;
+}
+
+/* CLOSE BUTTON */
+
+.close-btn{
+  background:#d62828 !important;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:600px){
+
+  .header{
+    height:220px;
+  }
+
+  .header h1{
+    font-size:28px;
+  }
+
+  .header p{
+    font-size:15px;
+    padding:0 15px;
+  }
+
+  .gallery{
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+    padding:10px;
+  }
+
+  .card img{
+    height:150px;
+  }
+
+  .modal{
+    padding:10px;
+  }
+
+  .modal-img-box{
+    height:65vh;
+  }
+
+  .modal img{
+    max-width:100%;
+    max-height:100%;
+  }
+
+  .btns button{
+    padding:8px 10px;
+    font-size:13px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
+
 <div class="header">
+
   <h1>📸 पाल स्टडी सेंटर</h1>
-  <p>हमारी यादें • हमारी पहचान • हमारी गैलरी</p>
+
+  <p>
+    हमारी यादें • हमारी पहचान • हमारी गैलरी
+  </p>
+
 </div>
 
-<!-- FILTER -->
+
+<!-- ================= FILTER ================= -->
+
 <div class="filters">
-  <button onclick="filter('All')">All</button>
-  <button onclick="filter('Classroom')">Classroom</button>
-  <button onclick="filter('Events')">Events</button>
-  <button onclick="filter('Other')">Other</button>
+
+  <button onclick="filterImages('All')">
+    All
+  </button>
+
+  <button onclick="filterImages('Classroom')">
+    Classroom
+  </button>
+
+  <button onclick="filterImages('Events')">
+    Events
+  </button>
+
+  <button onclick="filterImages('Other')">
+    Other
+  </button>
+
 </div>
 
-<!-- GALLERY -->
-<div class="gallery" id="gallery"></div>
 
-<!-- MODAL -->
-<div class="modal" id="modal">
-  <img id="modalImg">
+<!-- ================= GALLERY ================= -->
+
+<div
+  class="gallery"
+  id="gallery">
+</div>
+
+
+<!-- ================= MODAL ================= -->
+
+<div
+  class="modal"
+  id="modal"
+  onclick="backgroundClose(event)"
+>
+
+  <div class="modal-img-box">
+
+    <img
+      id="modalImg"
+      alt="Pal Study Center Gallery"
+    >
+
+  </div>
+
 
   <div class="btns">
-    <button onclick="prev()">⬅ Prev</button>
-    <button onclick="next()">Next ➡</button>
-    <button onclick="zoomIn()">➕ Zoom</button>
-    <button onclick="zoomOut()">➖ Zoom</button>
-    <button onclick="download()">⬇ Download</button>
-    <button onclick="startSlide()">▶ Slideshow</button>
-    <button onclick="stopSlide()">⏸ Stop</button>
-    <button onclick="closeModal()">Close ❌</button>
+
+    <button onclick="prev(event)">
+      ⬅ Prev
+    </button>
+
+    <button onclick="next(event)">
+      Next ➡
+    </button>
+
+    <button onclick="zoomIn(event)">
+      ➕ Zoom
+    </button>
+
+    <button onclick="zoomOut(event)">
+      ➖ Zoom
+    </button>
+
+    <button onclick="resetZoom(event)">
+      🔄 Reset
+    </button>
+
+    <button onclick="downloadImage(event)">
+      ⬇ Download
+    </button>
+
+    <button onclick="startSlide(event)">
+      ▶ Slideshow
+    </button>
+
+    <button onclick="stopSlide(event)">
+      ⏸ Stop
+    </button>
+
+    <button
+      class="close-btn"
+      onclick="closeModal(event)"
+    >
+      Close ❌
+    </button>
+
   </div>
+
 </div>
+
 
 <script>
 
-let images = [
-  {src:"../assets/img/gallery/1.png", cat:"Classroom"},
-    {src:"../assets/img/gallery/2.png", cat:"Classroom"},
-   {src:"../assets/img/gallery/3.png", cat:"Classroom"},
- {src:"../assets/img/gallery/4.png", cat:"Classroom"},
-{src:"../assets/img/gallery/5.jpg", cat:"Classroom"},
-  {src:"../assets/img/gallery/6.jpg", cat:"Classroom"},
- {src:"../assets/img/gallery/7.jpeg", cat:"Other"},
-    {src:"../assets/img/gallery/8.png", cat:"Other"},
-   {src:"../assets/img/gallery/9.jpeg", cat:"Other"},
- {src:"../assets/img/gallery/10.jpeg", cat:"Other"},
-{src:"../assets/img/gallery/11.jpeg", cat:"Other"},
-  {src:"../assets/img/gallery/12.jpeg", cat:"Other"},
-  {src:"../assets/img/gallery/13.jpeg", cat:"Other"},
-  {src:"../assets/img/gallery/14.jpeg", cat:"Other"},
-  {src:"", cat:"Events"},
-  {src:"", cat:"Other"},
-  
-  {src:"", cat:"Events"},
-  {src:"", cat:"Other"}
+/* =================================================
+   IMAGE LIST
+================================================= */
+
+const images = [
+
+  {
+    src:"../assets/img/gallery/1.png",
+    cat:"Classroom"
+  },
+
+  {
+    src:"../assets/img/gallery/2.png",
+    cat:"Classroom"
+  },
+
+  {
+    src:"../assets/img/gallery/3.png",
+    cat:"Classroom"
+  },
+
+  {
+    src:"../assets/img/gallery/4.png",
+    cat:"Classroom"
+  },
+
+  {
+    src:"../assets/img/gallery/5.jpg",
+    cat:"Classroom"
+  },
+
+  {
+    src:"../assets/img/gallery/6.jpg",
+    cat:"Classroom"
+  },
+
+  {
+    src:"../assets/img/gallery/7.jpeg",
+    cat:"Other"
+  },
+
+  {
+    src:"../assets/img/gallery/8.png",
+    cat:"Other"
+  },
+
+  {
+    src:"../assets/img/gallery/9.jpeg",
+    cat:"Other"
+  },
+
+  {
+    src:"../assets/img/gallery/10.jpeg",
+    cat:"Other"
+  },
+
+  {
+    src:"../assets/img/gallery/11.jpeg",
+    cat:"Other"
+  },
+
+  {
+    src:"../assets/img/gallery/12.jpeg",
+    cat:"Other"
+  },
+
+  {
+    src:"../assets/img/gallery/13.jpeg",
+    cat:"Other"
+  },
+
+  {
+    src:"../assets/img/gallery/14.jpeg",
+    cat:"Other"
+  }
+
+  /*
+  आगे image जोड़नी हो तो:
+
+  {
+    src:"../assets/img/gallery/15.jpeg",
+    cat:"Events"
+  },
+
+  {
+    src:"../assets/img/gallery/16.jpeg",
+    cat:"Other"
+  }
+
+  */
+
 ];
 
-let current=0;
-let scale=1;
-let slide;
 
-// LOAD
-function load(data=images){
-  let html="";
-  data.forEach((img,i)=>{
-    html+=`<div class="card" onclick="openImg(${i})">
-      <img src="${img.src}">
-    </div>`;
+/* =================================================
+   VARIABLES
+================================================= */
+
+let current = 0;
+
+let scale = 1;
+
+let slide = null;
+
+let currentList = images;
+
+
+/* =================================================
+   LOAD GALLERY
+================================================= */
+
+function loadGallery(data = images){
+
+  currentList = data;
+
+  let html = "";
+
+  data.forEach((img) => {
+
+    /*
+      IMPORTANT FIX:
+
+      यहाँ filtered array का index नहीं,
+      original images array का index लिया जा रहा है।
+    */
+
+    const originalIndex =
+      images.indexOf(img);
+
+    html += `
+
+      <div
+        class="card"
+        onclick="openImg(${originalIndex})"
+      >
+
+        <img
+          src="${img.src}"
+          alt="Gallery Image"
+          loading="lazy"
+        >
+
+      </div>
+
+    `;
+
   });
-  document.getElementById("gallery").innerHTML=html;
-}
-load();
 
-// FILTER
-function filter(cat){
-  if(cat==="All") return load();
-  load(images.filter(i=>i.cat===cat));
+  document.getElementById("gallery").innerHTML =
+    html;
 }
 
-// OPEN
-function openImg(i){
-  current=i;
-  scale=1;
-  document.getElementById("modal").style.display="flex";
-  document.getElementById("modalImg").src=images[i].src;
-  document.getElementById("modalImg").style.transform="scale(1)";
+
+/* =================================================
+   FILTER
+================================================= */
+
+function filterImages(cat){
+
+  if(cat === "All"){
+
+    loadGallery(images);
+
+    return;
+
+  }
+
+  const filtered =
+    images.filter(
+      img => img.cat === cat
+    );
+
+  loadGallery(filtered);
 }
 
-// CLOSE
-function closeModal(){
-  document.getElementById("modal").style.display="none";
+
+/* =================================================
+   OPEN IMAGE
+================================================= */
+
+function openImg(index){
+
+  current = index;
+
+  scale = 1;
+
+  const modal =
+    document.getElementById("modal");
+
+  const modalImg =
+    document.getElementById("modalImg");
+
+  modal.style.display = "flex";
+
+  modalImg.src =
+    images[current].src;
+
+  modalImg.style.transform =
+    "scale(1)";
+
+}
+
+
+/* =================================================
+   CLOSE
+================================================= */
+
+function closeModal(event){
+
+  if(event){
+    event.stopPropagation();
+  }
+
+  document.getElementById("modal")
+    .style.display = "none";
+
   stopSlide();
+
 }
 
-// NEXT
-function next(){
-  current=(current+1)%images.length;
+
+/* =================================================
+   BACKGROUND CLICK CLOSE
+================================================= */
+
+function backgroundClose(event){
+
+  if(
+    event.target.id === "modal"
+  ){
+
+    closeModal();
+
+  }
+
+}
+
+
+/* =================================================
+   NEXT
+================================================= */
+
+function next(event){
+
+  if(event){
+    event.stopPropagation();
+  }
+
+  current =
+    (current + 1) %
+    images.length;
+
   openImg(current);
+
 }
 
-// PREV
-function prev(){
-  current=(current-1+images.length)%images.length;
+
+/* =================================================
+   PREVIOUS
+================================================= */
+
+function prev(event){
+
+  if(event){
+    event.stopPropagation();
+  }
+
+  current =
+    (current - 1 + images.length) %
+    images.length;
+
   openImg(current);
+
 }
 
-// ZOOM
-function zoomIn(){
-  scale+=0.2;
-  document.getElementById("modalImg").style.transform=`scale(${scale})`;
+
+/* =================================================
+   ZOOM IN
+================================================= */
+
+function zoomIn(event){
+
+  if(event){
+    event.stopPropagation();
+  }
+
+  scale += 0.2;
+
+  document.getElementById("modalImg")
+    .style.transform =
+    `scale(${scale})`;
+
 }
 
-function zoomOut(){
-  scale=Math.max(0.5,scale-0.2);
-  document.getElementById("modalImg").style.transform=`scale(${scale})`;
+
+/* =================================================
+   ZOOM OUT
+================================================= */
+
+function zoomOut(event){
+
+  if(event){
+    event.stopPropagation();
+  }
+
+  scale =
+    Math.max(
+      0.5,
+      scale - 0.2
+    );
+
+  document.getElementById("modalImg")
+    .style.transform =
+    `scale(${scale})`;
+
 }
 
-// DOWNLOAD
-function download(){
-  let a=document.createElement("a");
-  a.href=images[current].src;
-  a.download="pal-study-center.jpg";
+
+/* =================================================
+   RESET ZOOM
+================================================= */
+
+function resetZoom(event){
+
+  if(event){
+    event.stopPropagation();
+  }
+
+  scale = 1;
+
+  document.getElementById("modalImg")
+    .style.transform =
+    "scale(1)";
+
+}
+
+
+/* =================================================
+   DOWNLOAD
+================================================= */
+
+function downloadImage(event){
+
+  if(event){
+    event.stopPropagation();
+  }
+
+  const img =
+    images[current];
+
+  const a =
+    document.createElement("a");
+
+  a.href = img.src;
+
+  a.download =
+    "pal-study-center-" +
+    (current + 1) +
+    ".jpg";
+
+  document.body.appendChild(a);
+
   a.click();
+
+  document.body.removeChild(a);
+
 }
 
-// SLIDESHOW
-function startSlide(){
+
+/* =================================================
+   SLIDESHOW
+================================================= */
+
+function startSlide(event){
+
+  if(event){
+    event.stopPropagation();
+  }
+
   stopSlide();
-  slide=setInterval(next,2000);
+
+  slide =
+    setInterval(
+      () => next(),
+      3000
+    );
+
 }
 
-function stopSlide(){
-  clearInterval(slide);
+
+/* =================================================
+   STOP SLIDESHOW
+================================================= */
+
+function stopSlide(event){
+
+  if(event){
+    event.stopPropagation();
+  }
+
+  if(slide){
+
+    clearInterval(slide);
+
+    slide = null;
+
+  }
+
 }
+
+
+/* =================================================
+   KEYBOARD CONTROL
+================================================= */
+
+document.addEventListener(
+  "keydown",
+  function(e){
+
+    const modal =
+      document.getElementById("modal");
+
+    if(
+      modal.style.display !== "flex"
+    ){
+
+      return;
+
+    }
+
+
+    if(e.key === "ArrowRight"){
+
+      next();
+
+    }
+
+
+    if(e.key === "ArrowLeft"){
+
+      prev();
+
+    }
+
+
+    if(e.key === "Escape"){
+
+      closeModal();
+
+    }
+
+
+    if(e.key === "+"){
+
+      zoomIn();
+
+    }
+
+
+    if(e.key === "-"){
+
+      zoomOut();
+
+    }
+
+  }
+);
+
+
+/* =================================================
+   INITIAL LOAD
+================================================= */
+
+loadGallery();
 
 </script>
 
