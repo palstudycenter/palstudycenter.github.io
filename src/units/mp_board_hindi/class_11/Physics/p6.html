@@ -535,41 +535,7 @@ g = 9.8\; m\,s^{-2}
 
     </div>
 </div>
-<div class="qa-box">
 
-<div class="question">
-प्रश्न - g का मान किन-किन कारणों से परिवर्तित होता है?
-</div>
-
-<div class="answer">
-
-<p><b>उत्तर -</b></p>
-
-<p>
-गुरुत्वीय त्वरण (g) का मान निम्नलिखित कारणों से परिवर्तित होता है—
-</p>
-
-<ol>
-
-<li>पृथ्वी की सतह से ऊँचाई के परिवर्तन के कारण।</li>
-
-<li>पृथ्वी की सतह के नीचे गहराई के परिवर्तन के कारण।</li>
-
-<li>पृथ्वी के घूर्णन (Rotation) के कारण।</li>
-
-<li>अक्षांश (Latitude) के परिवर्तन के कारण।</li>
-
-<li>पृथ्वी के चपटा गोलाकार (Oblate Spheroid) होने के कारण।</li>
-
-</ol>
-
-<p>
-इसी कारण g का मान पृथ्वी के सभी स्थानों पर समान नहीं होता।
-</p>
-
-</div>
-
-</div>
 <div class="qa-box">
 
 <div class="question">
@@ -615,14 +581,13 @@ g = 9.8\; m\,s^{-2}
               font-weight="bold">R</text>
     </svg>
 
-<p>
-माना पृथ्वी का द्रव्यमान \(M\) तथा त्रिज्या \(R\) है। पृथ्वी की सतह पर स्थित \(m\) द्रव्यमान की किसी वस्तु पर लगने वाला गुरुत्वाकर्षण बल
+<p>माना पृथ्वी का द्रव्यमान \(M\) तथा त्रिज्या \(R\) है। पृथ्वी की सतह पर स्थित \(m\) द्रव्यमान की किसी वस्तु पर लगने वाला गुरुत्वाकर्षण बल
 </p>
 
 <p class="formula">
 \[
 F = G\frac{Mm}{R^2}
-\]
+-----(1)\]
 </p>
 
 <p>
@@ -632,11 +597,11 @@ F = G\frac{Mm}{R^2}
 <p class="formula">
 \[
 F = mg
-\]
+-----(2)\]
 </p>
 
 <p>
-अतः,
+समीकरण (1) व (2) से -
 </p>
 
 <p class="formula">
@@ -662,6 +627,118 @@ mg = G\frac{Mm}{R^2}
 
 </div>
 </div>
+  <div class="qa-box">
+
+<div class="question">
+प्रश्न - g का मान किन-किन कारणों से परिवर्तित होता है?
+</div>
+
+<div class="answer">
+
+<p><b>उत्तर -</b></p>
+
+<p>
+गुरुत्वीय त्वरण (g) का मान निम्नलिखित कारणों से परिवर्तित होता है—
+</p>
+
+<ol>
+<li>पृथ्वी के चपटा गोलाकार होने के कारण।</li>
+<li>पृथ्वी की सतह से ऊँचाई के परिवर्तन के कारण।</li>
+<li>पृथ्वी की सतह के नीचे गहराई के परिवर्तन के कारण।</li>
+<li>पृथ्वी के घूर्णन के कारण।</li>
+<li>अक्षांश के परिवर्तन के कारण।</li>
+</ol>
+
+<p>
+इसी कारण g का मान पृथ्वी के सभी स्थानों पर समान नहीं होता।
+</p>
+
+</div>
+
+  </div>
+  <div class="qa-box">
+    <div class="question">सिद्ध कीजिए कि ध्रुवों पर गुरुत्वीय त्वरण का मान भूमध्य रेखा से अधिक होता है।</div>
+    <div class="answer">
+    
+    <div class="diagram" style="text-align:center; margin:20px 0;">
+        <svg width="300" height="320" viewBox="0 0 300 320" xmlns="http://www.w3.org/2000/svg">
+            <!-- पृथ्वी का दीर्घवृत्ताकार आकार (ध्रुवों पर चपटी) -->
+            <ellipse cx="150" cy="160" rx="110" ry="90" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.5"/>
+            
+            <!-- भूमध्य रेखा -->
+            <line x1="40" y1="160" x2="260" y2="160" stroke="#e53935" stroke-width="1.5" stroke-dasharray="6,4"/>
+            <text x="265" y="164" font-size="13" fill="#e53935">भूमध्य रेखा</text>
+
+            <!-- केन्द्र बिन्दु -->
+            <circle cx="150" cy="160" r="3" fill="black"/>
+            <text x="155" y="155" font-size="12">O</text>
+
+            <!-- Re - भूमध्य त्रिज्या -->
+            <line x1="150" y1="160" x2="260" y2="160" stroke="black" stroke-width="1.8" marker-end="url(#arrow)"/>
+            <text x="185" y="150" font-size="14" font-weight="bold">R<tspan baseline-shift="sub" font-size="11">e</tspan></text>
+
+            <!-- Rp - ध्रुवीय त्रिज्या -->
+            <line x1="150" y1="160" x2="150" y2="70" stroke="black" stroke-width="1.8" marker-end="url(#arrow)"/>
+            <text x="132" y="115" font-size="14" font-weight="bold">R<tspan baseline-shift="sub" font-size="11">p</tspan></text>
+
+            <!-- तीर के लिए परिभाषा -->
+            <defs>
+                <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 0 L 10 5 L 0 10 z" fill="black"/>
+                </marker>
+            </defs>
+
+            <!-- ध्रुवों के नाम -->
+            <text x="150" y="50" font-size="12" text-anchor="middle">उत्तरी ध्रुव</text>
+            <text x="150" y="275" font-size="12" text-anchor="middle">दक्षिणी ध्रुव</text>
+            
+            <!-- Re > Rp का संकेत -->
+            <text x="150" y="305" font-size="13" font-weight="bold" text-anchor="middle" fill="#1565c0">R<tspan baseline-shift="sub">e</tspan> &gt; R<tspan baseline-shift="sub">p</tspan></text>
+        </svg>
+    </div>
+      
+        <p>पृथ्वी पूर्णतः गोलाकार नहीं है, बल्कि यह ध्रुवों पर थोड़ी चपटी है। इसलिए भूमध्य रेखा पर इसकी त्रिज्या ध्रुवों की त्रिज्या से अधिक होती है।</p>
+        
+        <p>माना कि -</p>
+        <p>पृथ्वी का द्रव्यमान = M <br>
+           भूमध्य रेखा पर त्रिज्या = R<sub>e</sub> <br>
+           ध्रुवों पर त्रिज्या = R<sub>p</sub> <br>
+           तथा R<sub>e</sub> &gt; R<sub>p</sub>
+        </p>
+
+        <p>भूमध्य रेखा पर गुरुत्वीय त्वरण -</p>
+        <p class="formula">
+            \[
+            g_e = \frac{GM}{(R_e)^2} \quad ....(1)
+            \]
+        </p>
+
+        <p>ध्रुवों पर गुरुत्वीय त्वरण -</p>
+        <p class="formula">
+            \[
+            g_p = \frac{GM}{(R_p)^2} \quad ....(2)
+            \]
+        </p>
+
+        <p>समी. (1) में समी. (2) का भाग देने पर,</p>
+        <p class="formula">
+            \[
+            \frac{g_e}{g_p} = \frac{GM / (R_e)^2}{GM / (R_p)^2}
+            \]
+        </p>
+        <p class="formula">
+            \[
+            \frac{g_e}{g_p} = \left(\frac{R_p}{R_e}\right)^2
+            \]
+        </p>
+
+        <div class="formula">
+            <p>चूँकि R<sub>e</sub> &gt; R<sub>p</sub> है, इसलिए g<sub>p</sub> &gt; g<sub>e</sub></p>
+        </div>
+
+        <p>अतः सिद्ध हुआ कि ध्रुवों पर गुरुत्वीय त्वरण (g<sub>p</sub>) का मान भूमध्य रेखा (g<sub>e</sub>) की अपेक्षा अधिक होता है।</p>
+    </div>
+  </div>
 <div class="qa-box">
 
 <div class="question">
@@ -722,8 +799,7 @@ mg = G\frac{Mm}{R^2}
     </svg>
 
 </div>
-<p>
-माना पृथ्वी का द्रव्यमान \(M\) तथा त्रिज्या \(R\) है। </p>
+<p>माना पृथ्वी का द्रव्यमान \(M\) तथा त्रिज्या \(R\) है। </p>
 
 <p>
 पृथ्वी की सतह पर गुरुत्वीय त्वरण का सूत्र है—

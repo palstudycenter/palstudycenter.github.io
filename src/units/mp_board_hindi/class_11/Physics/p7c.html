@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | Notes</title>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<script>
+window.MathJax={
+ tex:{
+ inlineMath:[
+ ['$','$'],
+ ['\\(','\\)']
+ ]
+}
+};
+</script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<style>
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+
+body{
+background:#f5f7fb;
+line-height:1.7;
+}
+
+
+/* NAVBAR */
+
+    .navbar{
+
+      background:rgba(23,74,126,0.95);
+
+      backdrop-filter:blur(10px);
+
+      box-shadow:0 4px 18px rgba(0,0,0,.18);
+
+      padding:10px 0;
+
+      transition:.3s;
+
+    }
+
+    .navbar-brand{
+
+      font-size:28px;
+
+      font-weight:700;
+
+      color:white !important;
+
+    }
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+      .navbar-brand{
+        font-size:40px;
+      }
+/* CONTENT */
+
+.notes-container{
+
+max-width:900px;
+
+margin:100px auto 50px;
+
+padding:20px;
+
+}
+
+.notes-title {
+    background: #174a7e;
+    color: white;
+    padding: 18px 22px;
+    border-radius: 12px 12px 0 0;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 100px;
+    margin-bottom: 0;
+}
+
+.qa-box{
+
+background:white;
+
+padding:22px;
+
+margin-bottom:18px;
+
+border-radius:14px;
+
+border-left:6px solid #1565c0;
+
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+transition:.25s;
+
+}
+
+
+.qa-box:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+
+.question{
+
+font-weight:bold;
+
+color:#1b3a57;
+
+margin-bottom:8px;
+
+}
+.question-image{
+    text-align:center;
+    margin:15px 0;
+    overflow-x:auto;
+}
+
+.question-image img{
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:8px;
+}
+
+
+
+.answer{
+
+color:#2c3e50;
+
+text-align:justify;
+
+}
+
+
+
+@media(max-width:768px){
+
+.notes-container{
+
+margin-top:80px;
+
+}
+
+
+}
+.formula{
+    overflow-x:auto;
+    overflow-y:hidden;
+    margin:10px 0;
+}
+
+.answer table{
+    width:100%;
+    border-collapse:collapse;
+    margin:12px 0;
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    display:block;
+    overflow-x:auto;
+    box-shadow:0 2px 8px rgba(0,0,0,0.06);
+}
+
+.answer table td, .answer table th{
+    border:1px solid #ddd;
+    padding:10px 12px;
+    text-align:left;
+    vertical-align:top;
+    white-space:normal;
+}
+
+.answer table th{
+    background:#eaf2fb;
+    font-weight:bold;
+    color:#1b3a57;
+}
+
+.answer ol, .answer ul{
+    margin-left:20px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+body {
+    font-size: 20px;
+}
+
+.qa-box {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.question {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.answer {
+    font-size: 20px;
+}
+
+.formula {
+    font-size: 20px;
+    text-align: center;
+    margin: 12px 0;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<!-- NAVBAR -->
+
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+
+पाल <span>स्टडी सेंटर</span>
+
+</a>
+    <button class="navbar-toggler bg-light"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+</div>
+
+</nav>
+
+
+
+
+
+<!-- NOTES -->
+
+<div class="qa-box">
+  <div class="container">
+ <div class="notes-title">📘 Unit 8(A)- द्रव्य के तापीय गुण </div>  
+</div>
+</div>
+
+<div class="qa-box">
+
+    <div class="question">
+        प्रश्न - तरल में कितने प्रकार का प्रवाह होता है?
+    </div>
+
+    <div class="answer">
+
+        <p><b>उत्तर -</b> तरल में मुख्यतः दो प्रकार का प्रवाह होता है:</p>
+
+        <p>
+            <b>1. धारारेखी प्रवाह (Streamline Flow)</b> -
+            इसमें तरल के कण निश्चित एवं नियमित धारारेखाओं के along प्रवाहित होते हैं।
+        </p>
+<div class="question-image">
+      <img src="images/1.png" alt="चित्र">
+</div>
+        <p>
+            <b>2. अशांत प्रवाह (Turbulent Flow)</b> -
+            इसमें तरल के कण अनियमित एवं अव्यवस्थित रूप से प्रवाहित होते हैं।
+        </p>
+<div class="question-image">
+      <img src="images/2.png" alt="चित्र">
+</div>
+    </div>
+
+</div>
+
+<div class="qa-box">
+
+    <div class="question">
+        प्रश्न - धारारेखी प्रवाह तथा अशांत प्रवाह में अंतर लिखिए।
+    </div>
+
+    <div class="answer">
+
+        <table border="1" cellpadding="8" cellspacing="0" style="width:100%; border-collapse:collapse; text-align:center;">
+
+            <tr>
+                <th>क्रमांक</th>
+                <th>धारारेखी प्रवाह</th>
+                <th>अशांत प्रवाह</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>तरल कण नियमित पथ पर चलते हैं।</td>
+                <td>तरल कण अनियमित पथ पर चलते हैं।</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>प्रवाह में व्यवस्थित धारारेखाएँ बनती हैं।</td>
+                <td>प्रवाह में व्यवस्थित धारारेखाएँ नहीं बनती हैं।</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>तरल की गति अपेक्षाकृत कम होती है।</td>
+                <td>तरल की गति अपेक्षाकृत अधिक होती है।</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>इसमें ऊर्जा की हानि कम होती है।</td>
+                <td>इसमें ऊर्जा की हानि अधिक होती है।</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</div>
+
+<div class="qa-box">
+
+    <div class="question">
+        प्रश्न - क्रांतिक वेग किसे कहते हैं?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>उत्तर -</b> वह अधिकतम वेग, जिस तक किसी तरल का प्रवाह
+            <b>धारारेखी</b> रहता है, <b>क्रांतिक वेग</b> कहलाता है।
+            क्रांतिक वेग से अधिक वेग होने पर तरल का प्रवाह
+            <b>अशांत</b> हो जाता है।
+        </p>
+
+    </div>
+
+</div>
+
+<div class="qa-box">
+
+    <div class="question">
+        प्रश्न - श्यानता किसे कहते हैं? श्यानता पर ताप का क्या प्रभाव पड़ता है?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>उत्तर -</b>
+            तरल की विभिन्न परतों के बीच आपेक्षिक गति का विरोध करने वाले
+            आंतरिक घर्षण के गुण को <b>श्यानता</b> कहते हैं।
+        </p>
+
+        <p>
+            <b>ताप का प्रभाव -</b>
+        </p>
+
+        <p>
+            1. द्रवों में ताप बढ़ाने पर श्यानता घटती है।
+        </p>
+
+        <p>
+            2. गैसों में ताप बढ़ाने पर श्यानता बढ़ती है।
+        </p>
+
+    </div>
+
+</div>
+
+<div class="qa-box">
+
+    <div class="question">
+        प्रश्न - आदर्श तरल की श्यानता कितनी होती है?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>उत्तर -</b>
+            आदर्श तरल की श्यानता <b>शून्य</b> होती है।
+        </p>
+
+        <div class="formula">
+            η = 0
+        </div>
+
+        <p>
+            अर्थात् आदर्श तरल में आंतरिक घर्षण नहीं होता है।
+        </p>
+
+    </div>
+
+</div>
+
+<div class="qa-box">
+
+    <div class="question">
+        प्रश्न - श्यान बल किसे कहते हैं? यह किन-किन कारकों पर निर्भर करता है?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>उत्तर -</b>
+            तरल की विभिन्न परतों के बीच आपेक्षिक गति का विरोध करने वाले
+            आंतरिक घर्षण बल को <b>श्यान बल</b> कहते हैं।
+        </p>
+
+        <p>
+            न्यूटन के अनुसार श्यान बल निम्नलिखित तीन कारकों पर निर्भर करता है -
+        </p>
+
+        <p>
+            <b>(i)</b> श्यान बल $F$, परतों के संपर्क तल के क्षेत्रफल $A$
+            के अनुक्रमानुपाती होता है।
+        </p>
+
+        <div class="formula">
+            $F \propto A$
+        </div>
+
+        <p>
+            <b>(ii)</b> श्यान बल $F$, परतों के आपेक्षिक वेग $dv$
+            के अनुक्रमानुपाती होता है।
+        </p>
+
+        <div class="formula">
+            $F \propto dv$
+        </div>
+
+        <p>
+            <b>(iii)</b> श्यान बल $F$, परतों के बीच की लम्बवत दूरी $dx$
+            के व्युत्क्रमानुपाती होता है।
+        </p>
+
+        <div class="formula">
+            $F \propto \frac{1}{dx}$
+        </div>
+
+        <p>
+            अतः उपर्युक्त सभी संबंधों को मिलाने पर -
+        </p>
+
+        <div class="formula">
+            $F \propto A\frac{dv}{dx}$
+        </div>
+
+        <p>
+            अतः,
+        </p>
+
+        <div class="formula">
+            $F = -\eta A\frac{dv}{dx}$
+        </div>
+
+        <p>
+            यहाँ $\eta$ श्यानता गुणांक है तथा
+            $\frac{dv}{dx}$ को <b>वेग प्रवणता</b> कहते हैं।
+            ऋणात्मक चिन्ह यह दर्शाता है कि श्यान बल गति की दिशा के विपरीत लगता है।
+        </p>
+
+    </div>
+
+</div>
+
+<div class="qa-box">
+
+    <div class="question">
+        प्रश्न - श्यानता गुणांक किसे कहते हैं? इसका मात्रक तथा विमीय सूत्र लिखिए।
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>उत्तर -</b>
+            किसी द्रव का श्यानता गुणांक वह बाह्य बल है,
+            जो एकांक क्षेत्रफल वाली दो परतों के बीच
+            एकांक वेग प्रवणता बनाए रखने के लिए आवश्यक होता है।
+        </p>
+
+        <div class="formula">
+            $\eta = \frac{F}{A\frac{dv}{dx}}$
+        </div>
+
+        <p>
+            <b>SI मात्रक -</b>
+            $N\,s\,m^{-2}$ या $Pa\,s$
+        </p>
+
+        <p>
+            <b>विमीय सूत्र -</b>
+        </p>
+
+        <div class="formula">
+            $[\eta] = [ML^{-1}T^{-1}]$
+        </div>
+
+    </div>
+
+</div>
+  <div class="qa-box">
+
+    <div class="question">
+        प्रश्न - रेनॉल्ड संख्या किसे कहते हैं? इसका महत्व लिखिए।
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>उत्तर -</b>
+            रेनॉल्ड संख्या एक विमाहीन राशि है, जो यह बताती है कि
+            किसी द्रव का प्रवाह <b>धारारेखी</b> है या <b>अशांत</b>।
+        </p>
+
+        <div class="formula">
+            $R_e = \frac{\rho vd}{\eta}$
+        </div>
+
+        <p>
+            जहाँ $\rho$ = द्रव का घनत्व, $v$ = द्रव का वेग,
+            $d$ = नली का व्यास तथा $\eta$ = श्यानता गुणांक है।
+        </p>
+
+        <p>
+            <b>महत्व -</b>
+        </p>
+
+        <p>
+            1. $R_e < 1000$ होने पर प्रवाह सामान्यतः
+            <b>धारारेखी</b> होता है।
+        </p>
+
+        <p>
+            2. $R_e > 2000$ होने पर प्रवाह सामान्यतः
+            <b>अशांत</b> होने लगता है।
+        </p>
+
+        <p>
+            3. $R_e$ के बीच के मानों में प्रवाह <b>संक्रमण अवस्था</b> में हो सकता है।
+        </p>
+
+    </div>
+
+  </div>
+<div class="qa-box">
+
+    <div class="question">
+        प्रश्न - असम्पीड्य द्रव तथा अश्यान द्रव किसे कहते हैं?
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>उत्तर -</b>
+        </p>
+
+        <p>
+            <b>1. असम्पीड्य द्रव -</b>
+            वह द्रव जिसके ऊपर दाब लगाने पर उसके आयतन या घनत्व में
+            कोई परिवर्तन नहीं होता है, <b>असम्पीड्य द्रव</b> कहलाता है।
+        </p>
+
+        <p>
+            <b>2. अश्यान द्रव -</b>
+            वह द्रव जिसमें उसकी विभिन्न परतों के बीच आपेक्षिक गति होने पर
+            कोई आंतरिक घर्षण बल नहीं होता है, <b>अश्यान द्रव</b> कहलाता है।
+        </p>
+
+    </div>
+
+</div>
+  <div class="qa-box">
+    <div class="question">
+        प्रश्न - आदर्श द्रव किसे कहते हैं?
+    </div>
+    <div class="answer">
+        <p>
+            <b>उत्तर -</b>
+            वह द्रव जो <b>असम्पीड्य</b> तथा <b>अश्यान</b> होता है,
+            अर्थात् जिसका घनत्व स्थिर रहता है और जिसमें आंतरिक घर्षण नहीं होता,
+            <b>आदर्श द्रव</b> कहलाता है।
+        </p>
+    </div>
+  </div>
+<div class="qa-box">
+
+    <div class="question">
+        प्रश्न - अविरतता का सिद्धांत लिखिए तथा इसके द्वारा सातत्य समीकरण
+        को निगमित कीजिए।
+    </div>
+
+    <div class="answer">
+
+        <p>
+            <b>उत्तर -</b>
+        </p>
+
+        <p>
+            <b>अविरतता का सिद्धांत -</b>
+            यदि कोई आदर्श द्रव किसी असमान
+            अनुप्रस्थ परिच्छेद वाली नली में धारारेखीय प्रवाह में बह रहा हो,
+            तो नली के प्रत्येक स्थान पर उसके अनुप्रस्थ परिच्छेद के क्षेत्रफल
+            तथा द्रव के वेग का गुणनफल नियत रहता है।
+        </p>
+
+        <div class="formula">
+            $Av =$नियतांक
+        </div>
+
+        <p>
+            अतः नली के दो स्थानों पर -
+        </p>
+
+        <div class="formula">
+            $A_1v_1 = A_2v_2 $
+        </div>
+
+            <p> इसे सातत्य समीकरण कहते है।</p>
+            
+     <p>
+            <b>उपपत्ति -</b>
+       <div class="question-image">
+      <img src="images/3.jpg" alt="चित्र">
+       </div>
+            माना कि कोई आदर्श द्रव असमान अनुप्रस्थ परिच्छेद वाली नली
+            $AB$ में धारारेखीय प्रवाह में बह रहा है, जिसका घनत्व $\rho$ है, तो
+            सिरे $A$ पर नली का अनुप्रस्थ क्षेत्रफल $A_1$ तथा द्रव का वेग
+            $v_1$ है। सिरे $B$ पर नली का अनुप्रस्थ क्षेत्रफल $A_2$ तथा
+            द्रव का वेग $v_2$ है।
+        </p>
+
+        <p>
+            $1$ सेकण्ड में सिरे $A$ से द्रव द्वारा तय की गई दूरी $v_1$ होगी।
+            अतः $A$ से प्रति सेकण्ड प्रवेश करने वाले द्रव का आयतन -
+        </p>
+
+        <div class="formula">
+            $V_1 = A_1v_1$
+        </div>
+
+        <p>
+          अतः सिरे $A$ से प्रति सेकण्ड
+            प्रवेश करने वाले द्रव का द्रव्यमान -
+        </p>
+
+        <div class="formula">
+            $m_1 = \rho A_1v_1$
+        </div>
+
+        <p>
+            इसी प्रकार सिरे $B$ से प्रति सेकण्ड बाहर निकलने वाले द्रव का द्रव्यमान -
+        </p>
+
+        <div class="formula">
+            $m_2 = \rho A_2v_2$
+        </div>
+
+        <p>
+            चूँकि नली में द्रव कहीं भी एकत्रित नहीं होता है,
+            इसलिए द्रव्यमान संरक्षण के सिद्धांत से -
+        </p>
+
+        <div class="formula">
+            $m_1 = m_2$
+        </div>
+
+        <div class="formula">
+            $\rho A_1v_1 = \rho A_2v_2$
+        </div>
+
+        <p>
+            दोनों पक्षों में $\rho$ समान होने के कारण -
+        </p>
+
+        <div class="formula">
+            $A_1v_1 = A_2v_2$
+        </div>
+
+
+        <p>
+            इसे<b> सांतत्य समीकरण</b> कहते हैं।
+        </p>
+
+        <p>
+            इससे स्पष्ट है कि नली का क्षेत्रफल कम होने पर द्रव का वेग
+            बढ़ जाता है तथा क्षेत्रफल अधिक होने पर द्रव का वेग कम हो जाता है।
+        </p>
+
+    </div>
+
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न - प्रवाहित तरल में कौन-कौन सी ऊर्जाएँ होती हैं? समझाइए।
+    </div>
+
+    <div class="answer">
+        <p>
+            <b>उत्तर -</b>
+            जब कोई तरल एक स्थान से दूसरे स्थान तक बहता है, तो उसमें मुख्यतः
+            निम्नलिखित तीन प्रकार की ऊर्जाएँ होती हैं -
+        </p>
+
+        <p>
+            <b>(1) गतिज ऊर्जा </b>
+        </p>
+
+        <p>
+            प्रवाहित तरल में  उसके वेग के कारण जो ऊर्जा होती है उसे गतिज ऊर्जा कहते है।
+        </p>    
+          <p>यदि तरल का द्रव्यमान $m$ तथा वेग $v$ है, तो उसकी गतिज ऊर्जा
+            $ = \frac{1}{2}mv^2$
+        </p>
+
+        <p>
+            एकांक द्रव्यमान की गतिज ऊर्जा 
+       $ = \frac{v^2}{2}$ </p>
+
+        <p>
+          एकांक आयतन की गतिज ऊर्जा 
+        $ = \frac{1}{2}\rho v^2$</p>
+
+
+        <p>
+            <b>(2) स्थितिज ऊर्जा </b>
+        </p>
+
+        <p>
+            पृथ्वी की सतह से ऊँचाई पर स्थित प्रवाहित तरल में उसकी स्थिति
+            के कारण जो ऊर्जा होती है उसे स्थितिज ऊर्जा होती है।
+        </p>
+
+        <p>
+            यदि तरल का द्रव्यमान $m$ तथा ऊँचाई $h$ है, तो स्थितिज ऊर्जा $= mgh$
+        </p>
+
+        <p>
+          एकांक द्रव्यमान की स्थितिज ऊर्जा 
+        $= gh$   </p>
+
+        <p>
+      एकांक आयतन की स्थितिज ऊर्जा 
+      $ \rho gh$  </p>
+
+ 
+
+        <p>
+            <b>(3) दाब ऊर्जा </b>
+        </p>
+
+        <p>
+            प्रवाहित तरल पर दाब के कारण उसमें जो ऊर्जा होती है उसे दाब ऊर्जा कहते होती है।
+       </p>  
+        <p>  यदि तरल का दाब $P$, तथा आयतन $V$ हो तो द्रव की दाब ऊर्जा $= PV$
+        </p>
+
+        <p>
+            एकांक आयतन की दाब ऊर्जा  $ = P$
+        </p>
+
+        <p>
+          एकांक द्रव्यमान की दाब ऊर्जा $ = \frac{PV}{m} = \frac{P}{\rho}$
+        </p>
+    </div>
+</div>
+<div class="qa-box">
+    <div class="question">
+        प्रश्न - वेग शीर्ष, स्थैतिक शीर्ष तथा दाब शीर्ष किसे कहते हैं? इनके सूत्र लिखिए।
+    </div>
+
+    <div class="answer">
+        <p><b>उत्तर -</b> प्रवाहित द्रव की विभिन्न ऊर्जाओं से संबंधित शीर्ष निम्नलिखित हैं -</p>
+
+        <p>
+            <b>(1) वेग शीर्ष -</b>
+            द्रव के एकांक भार की गतिज ऊर्जा को वेग शीर्ष कहते हैं।
+        </p>
+
+        <p class="formula">
+            वेग शीर्ष $= \frac{mv^2}{2mg}= \frac{v^2}{2g}$
+        </p>
+
+        <p>
+            <b>(2) स्थैतिक शीर्ष -</b>
+            द्रव के एकांक भार की स्थितिज ऊर्जा को स्थैतिक शीर्ष कहते हैं।
+        </p>
+
+        <p class="formula">
+            स्थैतिक शीर्ष $=\frac{mgh}{mg}=h$
+        </p>
+
+        <p>
+            <b>(3) दाब शीर्ष -</b>
+            द्रव के एकांक भार की दाब ऊर्जा को दाब शीर्ष कहते हैं।
+        </p>
+
+        <p class="formula">
+            दाब शीर्ष $= \frac{PV}{mg}=\frac{P}{\rho g}$
+        </p>
+    </div>
+</div>
+  
+<div class="qa-box">
+
+    <div class="question">
+
+        प्रश्न - बरनौली का प्रमेय लिखिए तथा इसे सिद्ध कीजिए।
+
+    </div>
+
+    <div class="answer">
+
+        <p>
+
+            <b>उत्तर </b>
+            किसी आदर्श, असम्पीड्य तथा अश्यान द्रव के धारारेखीय प्रवाह में
+            द्रव के प्रत्येक बिंदु पर दाब ऊर्जा, गतिज ऊर्जा तथा स्थितिज ऊर्जा
+            का प्रति इकाई आयतन योग नियत रहता है।
+
+        </p>
+
+      
+
+<p class="formula">
+    $P + \frac{1}{2}\rho v^2 + \rho gh =$ नियतांक
+</p>
+
+<p>
+    अतः नली के दो स्थानों पर -
+</p>
+
+<div class="formula">
+    $P_1 + \frac{1}{2}\rho v_1^2 + \rho gh_1 = P_2 + \frac{1}{2}\rho v_2^2 + \rho gh_2$
+</div>  
+        <p>
+            इसे <b>बरनौली का समीकरण</b> कहते हैं।
+        </p>
+
+        <p>
+
+            <b>उपपत्ति -</b>
+          <div class="question-image">
+      <img src="images/4.jpg" alt="चित्र">
+          </div>
+            माना कि कोई आदर्श द्रव असमान अनुप्रस्थ परिच्छेद वाली नली
+            $AB$ में धारारेखीय प्रवाह में बह रहा है। सिरे $A$ पर द्रव का
+            दाब $P_1$, वेग $v_1$ तथा ऊँचाई $h_1$ है। सिरे $B$ पर द्रव का
+            दाब $P_2$, वेग $v_2$ तथा ऊँचाई $h_2$ है।
+
+        </p>
+
+        <p>
+    माना कि $t$ समय में द्रव का $V$ आयतन सिरे $A$ से प्रवेश करता है
+    और उतना ही आयतन सिरे $B$ से बाहर निकलता है। यदि द्रव का घनत्व $\rho$ 
+    हो, तो द्रव का द्रव्यमान -
+</p>
+
+<div class="formula">
+    $m = \rho V \quad ....(1)$
+</div>
+   
+       <p>
+    सिरे $A$ पर दाब बल द्वारा किया गया कार्य $= P_1V$
+       </p>
+        <p>
+            सिरे $B$ पर दाब बल द्वारा किया गया कार्य $= P_2V$
+        </p>
+
+        <p class="formula">
+            अतः दाब बलों द्वारा किया गया कुल कार्य $=P_1V-P_2V$
+        </p>
+
+
+        <p class="formula">
+         सिरे $A$ पर द्रव की प्रारंभिक ऊर्जा $=\frac{1}{2}mv_1^2+mgh_1$
+        </p>
+
+  
+
+        <p class="formula">
+        सिरे $B$ पर द्रव की अंतिम ऊर्जा 
+            $=\frac{1}{2}mv_2^2+mgh_2$
+        </p>
+
+        <p>
+            इसलिए द्रव की कुल यांत्रिक ऊर्जा में परिवर्तन -
+        </p>
+
+        <div class="formula">
+
+            $\Delta E
+            =
+            \frac{1}{2}mv_2^2-\frac{1}{2}mv_1^2
+            +mgh_2-mgh_1$
+
+        </div>
+
+        <p>
+            अब कार्य-ऊर्जा सिद्धांत से -
+        </p>
+
+        <p class="formula">
+    दाब बल द्वारा किया गया कार्य = द्रव की कुल यांत्रिक ऊर्जा में परिवर्तन
+</p>
+
+        <div class="formula">
+
+            $P_1V-P_2V
+            =
+            \frac{1}{2}mv_2^2-\frac{1}{2}mv_1^2
+            +mgh_2-mgh_1$
+
+        </div>
+
+        <p>
+            समीकरण (1) से मान रखने पर  -
+        </p>
+
+        <div class="formula">
+
+            $P_1V-P_2V
+            =
+            \frac{1}{2}\rho Vv_2^2-\frac{1}{2}\rho Vv_1^2
+            +\rho Vgh_2-\rho Vgh_1$
+
+        </div>
+      <div class="formula">
+
+            $P_1-P_2
+            =
+            \frac{1}{2}\rho v_2^2-\frac{1}{2}\rho v_1^2
+            +\rho gh_2-\rho gh_1$
+
+        </div>
+
+
+        <div class="formula">
+
+            $P_1+\frac{1}{2}\rho v_1^2+\rho gh_1
+            =
+            P_2+\frac{1}{2}\rho v_2^2+\rho gh_2$
+
+        </div>
+
+<div class="formula">
+    $P + \frac{1}{2}\rho v^2 + \rho gh =$ नियतांक
+</div>
+
+        
+
+        <p>
+            यही बरनौली का प्रमेय है।
+        </p>
+
+    </div>
+
+</div>
+ 
+<div class="qa-box">
+    <div class="question">
+        प्रश्न - बर्नोली प्रमेय के अनुप्रयोग लिखिए।
+    </div>
+
+    <div class="answer">
+        <p><b>उत्तर -</b> बर्नोली प्रमेय के प्रमुख अनुप्रयोग निम्नलिखित हैं -</p>
+
+        <p>
+            <b>(1) वेंचुरीमीटर -</b>
+            इसका उपयोग पाइप में बहने वाले द्रव के प्रवाह की दर ज्ञात करने में किया जाता है।
+        </p>
+
+        <p>
+            <b>(2) पिटोट नली -</b>
+            इसका उपयोग बहते हुए द्रव या गैस के वेग को मापने में किया जाता है।
+        </p>
+
+        <p>
+            <b>(3) कार्ब्यूरेटर -</b>
+            इसका उपयोग वायु के तीव्र प्रवाह द्वारा ईंधन को खींचकर वायु के साथ मिलाने में किया जाता है।
+        </p>
+
+        <p>
+            <b>(4) विमान के पंखों का उड़ना -</b>
+            विमान के पंखों के ऊपर और नीचे वायु के वेग में अंतर के कारण दाब में अंतर उत्पन्न होता है,
+            जिससे विमान को ऊपर उठाने वाला बल प्राप्त होता है।
+        </p>
+
+        <p>
+            <b>(5) स्प्रे पम्प -</b>
+            इत्र की शीशी, कीटनाशक स्प्रे तथा स्प्रे पम्प में द्रव को ऊपर खींचने के लिए
+            बर्नोली प्रमेय के सिद्धांत का उपयोग किया जाता है।
+        </p>
+
+        <p>
+            <b>(6) तेज आँधी में छत का उड़ना -</b>
+            तेज हवा के कारण छत के ऊपर वायु का दाब कम हो जाता है, जबकि अंदर का दाब अधिक रहता है।
+            इस दाब-अंतर के कारण छत ऊपर उठ सकती है।
+        </p>
+    </div>
+</div>
+        
+<div class="qa-box">
+    <div class="question">
+        <b>प्रश्न स्टोक का नियम क्या है? इसकी सीमाएँ लिखिए।</b>
+    </div>
+
+    <div class="answer">
+        <p>
+            जब कोई छोटा, दृढ़ तथा चिकना गोला किसी अनंत विस्तार वाले समांगी श्यान द्रव में सीमांत वेग से गति करता है, तो उस गोले पर उसकी गति के विपरीत दिशा में एक श्यान बल कार्य करता है। इस बल का मान -
+        </p>
+<ol>
+    <li>गोले की त्रिज्या के अनुक्रमानुपाती होता है, अर्थात् $F \propto r$</li>
+    <li>माध्यम के श्यानता गुणांक $\eta$ के अनुक्रमानुपाती होता है, अर्थात् $F \propto \eta$</li>
+    <li>गोले की चाल के अनुक्रमानुपाती होता है, अर्थात् $F \propto v$</li>
+</ol>
+
+<p>उपर्युक्त सभी को मिलाने पर -</p>
+
+<div class="formula">
+    $F \propto \eta r v$
+</div>
+
+<div class="formula">
+    $F = 6\pi \eta r v$
+</div>
+
+<p>जहाँ $6\pi$ अनुक्रमानुपाती नियतांक है।</p>
+        
+
+    <h4>स्टोक के नियम की शर्तें / सीमाएँ -</h4>
+        <ol>
+    <li>गोला अत्यंत छोटा, चिकना तथा दृढ़ होना चाहिए।</li>
+    <li>गोले का वेग द्रव के क्रान्तिक वेग से कम होना चाहिए ताकि प्रवाह स्तरित बना रहे।</li>
+    <li>द्रव समांगी, शांत होना चाहिए तथा उसका विस्तार गोले की तुलना में अनंत होना चाहिए।</li>
+    <li>गोले पर कोई अन्य बाह्य बल कार्य नहीं करना चाहिए।</li>
+        </ol>
+    </div>
+</div>  
+
+<div class="qa-box">
+    <div class="question">
+        <b>प्रश्न - सीमान्त वेग किसे कहते हैं? इसके लिए सूत्र निगमित कीजिए।</b>
+    </div>
+    <div class="answer">
+        <h4>सीमान्त वेग -</h4>
+       <p>
+    जब किसी गोले को श्यान द्रव में गिराया जाता है तो शुरू में उसका वेग बढ़ता है, परन्तु श्यान बल बढ़ने के कारण कुछ समय बाद वह एक नियत वेग से गिरने लगता है। इसी नियत वेग को <b>सीमान्त वेग</b> कहते हैं।
+</p> 
+
+        <h4>सीमान्त वेग के लिए सूत्र -</h4>
+        <p>
+            माना $r$ त्रिज्या तथा $\rho$ घनत्व का एक गोला $\eta$ श्यानता गुणांक तथा $\sigma$ घनत्व वाले तरल में गिर रहा है। गोले पर लगने वाले तीन बल -
+        </p>
+
+        <ol>
+            <li>गुरुत्वीय बल = $\frac{4}{3}\pi r^3 \rho g$ नीचे की ओर</li>
+            <li>उत्क्षेप बल = $\frac{4}{3}\pi r^3 \sigma g$ ऊपर की ओर</li>
+            <li>श्यान बल $F = 6\pi \eta r v$ ऊपर की ओर</li>
+        </ol>
+
+        <p>सीमान्त वेग की स्थिति में -</p>
+
+<div class="formula boxed">
+            $\frac{4}{3}\pi r^3 \sigma g+6\pi \eta r v = \frac{4}{3}\pi r^3 \rho g $
+        </div>
+
+<div class="formula boxed">
+            $6\pi \eta r v = \frac{4}{3}\pi r^3 \rho g -\frac{4}{3}\pi r^3 \sigma g$
+        </div>
+
+        <div class="formula boxed">
+            $6\pi \eta r v = \frac{4}{3}\pi r^3 (\rho - \sigma)g$
+        </div>
+
+        <div class="formula">
+            $v = \frac{\frac{4}{3}\pi r^3 (\rho - \sigma)g}{6\pi \eta r}$
+        </div>
+
+        <div class="formula boxed">
+            $v = \frac{2 r^2 (\rho - \sigma)g}{9\eta}$
+        </div>
+    </div>
+</div>
+
+  
+<!-- PROTECTION -->
+
+
+<script>
+
+
+document.addEventListener("contextmenu",
+e=>e.preventDefault());
+
+
+document.addEventListener("selectstart",
+e=>e.preventDefault());
+
+
+document.addEventListener("copy",
+e=>{
+
+e.preventDefault();
+
+alert("Copying content is not allowed");
+
+});
+
+
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
+
