@@ -572,8 +572,8 @@ const UNIT_FILE_PATHS = {
         "यूनिट 8(A) - द्रव्य के तापीय गुण" : "../units/mp_board_hindi/class_11/Physics/p8a.html",
         "यूनिट 8(B) - ऊष्मागतिकी" : "../units/mp_board_hindi/class_11/Physics/p8b.html",
         "यूनिट 9 - अणुगति सिद्धांत" : "../units/mp_board_hindi/class_11/Physics/p9.html",
-        "यूनिट 10(A) - दोलन" : "../units/mp_board_hindi/class_11/Physics/p10(A).html",
-        "यूनिट 10(B) - तरंगें" : "../units/mp_board_hindi/class_11/Physics/p10(B).html"
+        "यूनिट 10(A) - दोलन" : "../units/mp_board_hindi/class_11/Physics/p10A.html",
+        "यूनिट 10(B) - तरंगें" : "../units/mp_board_hindi/class_11/Physics/p10B.html"
       },
       "रसायन शास्त्र ":{
         "यूनिट 1 - रासायनिक संयोग के नियम" : "../units/mp_board_hindi/class_11/Chemistry/c1.html",
