@@ -363,18 +363,16 @@ Pal <span>Study Center</span>
 
         If the individual amplitudes of the interfering waves are \(a_1\) and \(a_2\) respectively, then in the condition of constructive interference, their resultant amplitude is as follows.
 
-        <div class="formula">
+        <p class="formula">
         $$
-        A = a_1 + a_2
+        A_{max} = a_1 + a_2
         $$
-        </div>
+        <p>
 
-        <strong>Condition -</strong>
-        <ol>
-            <li>Both waves must be in the same phase.</li>
-            <li>The frequencies of both the superposing waves must be equal.</li>
-            <li>If the waves are polarized, then the planes of polarization of both must be the same.</li>
-        </ol>
+        <p><b>Condition -</b></p>
+<p class="formula">Path difference $\Delta = n\lambda$</p>
+<p class="formula">and Phase difference $\phi = 2n\pi$</p>
+<p class="formula">where $n=0,1,2...$</p>
 
         <strong>(2) Destructive interference</strong> - When two light waves meet at a point in opposite phase, their resultant intensity and amplitude become minimum. Such interference is called destructive interference.
 
@@ -384,13 +382,16 @@ Pal <span>Study Center</span>
 
         If the individual amplitudes of the interfering waves are \(a_1\) and \(a_2\) respectively, then in the condition of destructive interference, their resultant amplitude is as follows.
 
-        <div class="formula">
+        <p class="formula">
         $$
-        A = a_1 - a_2
+        A_{min} = a_1 - a_2
         $$
-        </div>
+        </p>
 
-        <strong>Condition -</strong> Both waves must be in opposite phase.
+        <p><b>Condition -</b></p>
+<p class="formula">Path difference $\Delta = (2n+1)\frac{\lambda}{2}$</p>
+<p class="formula">and Phase difference $\phi = (2n+1)\pi$</p>
+<p class="formula">where $n=0,1,2...$</p>
     </div>
 </div>
 
@@ -400,6 +401,66 @@ Pal <span>Study Center</span>
         In the phenomenon of interference, the total energy of the interfering waves remains constant. Only redistribution of energy takes place. Whatever energy disappears at the point of minimum intensity, an equal amount of extra energy appears at the point of maximum intensity. Hence, the phenomenon of interference conforms to the law of conservation of energy.
     </div>
 </div>
+  <div class="qa-box">
+    <div class="question">Question - Discuss the mathematical analysis of interference.</div>
+    <div class="answer">
+        <style>
+            .scroll-eq {
+                overflow-x: auto;
+                white-space: nowrap;
+                padding: 6px 0;
+                -webkit-overflow-scrolling: touch;
+            }
+        </style>
+
+        <p>Let amplitudes of two waves of same frequency be $a_1$ and $a_2$ and phase difference between them be $\phi$, then -</p>
+        <div class="scroll-eq">$y_1 = a_1 \sin \omega t$</div>
+        <div class="scroll-eq">$y_2 = a_2 \sin(\omega t + \phi)$</div>
+
+        <p>Resultant displacement due to superposition -</p>
+        <div class="scroll-eq">$y = y_1 + y_2$</div>
+        <div class="scroll-eq">$y = a_1 \sin \omega t + a_2 \sin(\omega t + \phi)$</div>
+        <div class="scroll-eq">$y = a_1 \sin \omega t + a_2 (\sin \omega t \cos \phi + \cos \omega t \sin \phi)$</div>
+        <div class="scroll-eq">$y = a_1 \sin \omega t + a_2 \sin \omega t \cos \phi + a_2 \cos \omega t \sin \phi$</div>
+        <div class="scroll-eq">$y =(a_1 + a_2 \cos \phi) \sin \omega t + (a_2 \sin \phi)\cos \omega t $</div>
+
+        <div class="scroll-eq">$y = (A \cos \theta) \sin \omega t + (A \sin \theta) \cos \omega t$ {let}</div>
+   
+        <div class="scroll-eq">$y = A \cos \theta \sin \omega t + A \sin \theta \cos \omega t$</div>
+
+        <div class="scroll-eq">$y = A (\sin \omega t \cos \theta + \cos \omega t \sin \theta)$</div>
+        <div class="scroll-eq">$y = A \sin(\omega t + \theta)$</div>
+        <p>This is the displacement equation of the resultant wave.</p>
+        <p>Where -</p>
+        <div class="scroll-eq">$a_1 + a_2 \cos \phi = A \cos \theta$ ....(1)</div>
+        <div class="scroll-eq">$a_2 \sin \phi = A \sin \theta$ ....(2)</div>
+
+  
+        <p><b>Resultant Amplitude -</b> </br>
+        On squaring and adding equations (1) and (2) -</p>
+        <div class="scroll-eq">$A^2 \cos^2 \theta + A^2 \sin^2 \theta = (a_1 + a_2 \cos \phi)^2 + (a_2 \sin \phi)^2$</div>
+        <div class="scroll-eq">$A^2 = a_1^2 + a_2^2 \cos^2 \phi + 2a_1 a_2 \cos \phi + a_2^2 \sin^2 \phi$</div>
+        <div class="scroll-eq">$A^2 = a_1^2 + a_2^2 + 2a_1 a_2 \cos \phi$</div>
+        <div class="scroll-eq">$A = \sqrt{a_1^2 + a_2^2 + 2a_1 a_2 \cos \phi}$</div>
+        <div class="scroll-eq">$I = I_1 + I_2 + 2\sqrt{I_1 I_2} \cos \phi$</div>
+
+        <p><b>1. For Constructive Interference</b> $ \phi = 0$ hence </p>
+
+        <p class="formula">$A_{max} = \sqrt{a_1^2 + a_2^2 + 2a_1 a_2 \cos 0^{\circ}}$</p>
+        <p class="formula">$A_{max} = \sqrt{a_1^2 + a_2^2 + 2a_1 a_2}$</p>
+        <p class="formula">$A_{max} = \sqrt{(a_1 + a_2)^2}$</p>
+        <p class="formula">$A_{max} = a_1 + a_2$</p>
+
+        <p><b>2. For Destructive Interference</b> $ \phi = \pi $ hence </p>
+
+        <p class="formula">$A_{min} = \sqrt{a_1^2 + a_2^2 + 2a_1 a_2 \cos \pi}$</p>
+        <p class="formula">$A_{min} = \sqrt{a_1^2 + a_2^2 + 2a_1 a_2 (-1)}$</p>
+        <p class="formula">$A_{min} = \sqrt{a_1^2 + a_2^2 - 2a_1 a_2}$</p>
+        <p class="formula">$A_{min} = \sqrt{(a_1 - a_2)^2}$</p>
+        <p class="formula">$A_{min} = a_1 - a_2$</p>
+
+    </div>
+  </div>
 
 <div class="qa-box">
     <div class="question">Q: Explain Young's double-slit experiment for the interference of light.</div>

@@ -369,13 +369,11 @@ margin-top:80px;
         A = a_1 + a_2
         $$
         </div>
-
-        <strong>प्रतिबन्ध (शर्त) -</strong>
-        <ol>
-            <li>दोनों तरंगें समान कला में होना चाहिए।</li>
-            <li>अध्यारोपण करने वाली दोनों तरंगों की आवृत्तियाँ समान होनी चाहिए।</li>
-            <li>यदि तरंगें ध्रुवित हैं तो दोनों के ध्रुवण तल समान होने चाहिए।</li>
-        </ol>
+          <p>शर्त -</p>
+<p class="formula">पथांतर $\Delta = n\lambda$</p>
+<p class="formula">तथा कलांतर $\phi = 2n\pi$</p>
+<p class="formula">जहाँ $n=0,1,2...$</p>
+          
 
         <strong>(2) विनाशी व्यतिकरण</strong> - जब दो प्रकाश तरंगें किसी बिन्दु पर विपरीत कला में मिलती हैं तो उनकी परिणामी तीव्रता एवं आयाम न्यूनतम हो जाते हैं। ऐसे व्यतिकरण को विनाशी व्यतिकरण कहते हैं।
 
@@ -390,17 +388,79 @@ margin-top:80px;
         A = a_1 - a_2
         $$
         </div>
-
-        <strong>प्रतिबन्ध (शर्त)-</strong> दोनों तरंगें विपरीत कला में होना चाहिए।
+      <p>शर्त -</p>
+<p class="formula">पथांतर $\Delta = (2n+1)\frac{\lambda}{2}$</p>
+<p class="formula">तथा कलांतर $\phi = (2n+1)\pi$</p>
+<p class="formula">जहाँ $n=0,1,2...$</p>
     </div>
 </div>
-
-<div class="qa-box">
+  <div class="qa-box">
     <div class="question">प्रश्न: समझाइये कि व्यतिकरण की घटना ऊर्जा संरक्षण के नियम के अनुकूल है। अथवा दो तरंगों के व्यतिकरण होने में कुछ बिन्दुओं की ऊर्जा शून्य हो जाती है। क्या इस ऊर्जा का क्षय हो जाता है?</div>
     <div class="answer">
         व्यतिकरण की घटना में व्यतिकारी तरंगों की कुल ऊर्जा नियत रहती है। इसमें ऊर्जा का केवल पुनर्वितरण होता है। न्यूनतम तीव्रता के स्थान पर जितनी ऊर्जा विलुप्त होती है, उतनी ही अतिरिक्त ऊर्जा अधिकतम तीव्रता के स्थान पर प्रकट हो जाती है। अतः व्यतिकरण की घटना ऊर्जा-संरक्षण के नियम के अनुकूल है।
     </div>
+  </div>
+  <div class="qa-box">
+    <div class="question">प्रश्न - व्यतिकरण की गणितीय विवेचना कीजिए।</div>
+    <div class="answer">
+        <style>
+            .scroll-eq {
+                overflow-x: auto;
+                white-space: nowrap;
+                padding: 6px 0;
+                -webkit-overflow-scrolling: touch;
+            }
+        </style>
+
+        <p>माना समान आवृत्ति की दो तरंगों के आयाम $a_1$ व $a_2$ हैं तथा उनके बीच कलांतर $\phi$ है, तब -</p>
+        <div class="scroll-eq">$y_1 = a_1 \sin \omega t$</div>
+        <div class="scroll-eq">$y_2 = a_2 \sin(\omega t + \phi)$</div>
+
+        <p>अध्यारोपण से परिणामी विस्थापन -</p>
+        <div class="scroll-eq">$y = y_1 + y_2$</div>
+        <div class="scroll-eq">$y = a_1 \sin \omega t + a_2 \sin(\omega t + \phi)$</div>
+        <div class="scroll-eq">$y = a_1 \sin \omega t + a_2 (\sin \omega t \cos \phi + \cos \omega t \sin \phi)$</div>
+        <div class="scroll-eq">$y = a_1 \sin \omega t + a_2 \sin \omega t \cos \phi + a_2 \cos \omega t \sin \phi$</div>
+        <div class="scroll-eq">$y =(a_1 + a_2 \cos \phi) \sin \omega t + (a_2 \sin \phi)\cos \omega t $</div>
+
+  <div class="scroll-eq">$y = (A \cos \theta) \sin \omega t + (A \sin \theta) \cos \omega t${ माना}</div>
+   
+        <div class="scroll-eq">$y = A \cos \theta \sin \omega t + A \sin \theta \cos \omega t$</div>
+
+        <div class="scroll-eq">$y = A (\sin \omega t \cos \theta + \cos \omega t \sin \theta)$</div>
+        <div class="scroll-eq">$y = A \sin(\omega t + \theta)$</div>
+<p>यही परिणामी तरंग का विस्थापन समीकरण है।</p>
+<p>जहां-</p>
+        <div class="scroll-eq">$a_1 + a_2 \cos \phi = A \cos \theta$ ....(1)</div>
+        <div class="scroll-eq">$a_2 \sin \phi = A \sin \theta$ ....(2)</div>
+
+  
+        <p><b>परिणामी आयाम -</b> </br>
+समीकरण (1) व (2) का वर्ग कर जोड़ने पर -</p>
+        <div class="scroll-eq">$A^2 \cos^2 \theta + A^2 \sin^2 \theta = (a_1 + a_2 \cos \phi)^2 + (a_2 \sin \phi)^2$</div>
+        <div class="scroll-eq">$A^2 = a_1^2 + a_2^2 \cos^2 \phi + 2a_1 a_2 \cos \phi + a_2^2 \sin^2 \phi$</div>
+        <div class="scroll-eq">$A^2 = a_1^2 + a_2^2 + 2a_1 a_2 \cos \phi$</div>
+        <div class="scroll-eq">$A = \sqrt{a_1^2 + a_2^2 + 2a_1 a_2 \cos \phi}$</div>
+        <div class="scroll-eq">$I = I_1 + I_2 + 2\sqrt{I_1 I_2} \cos \phi$</div>
+
+        <p><b>1. संपोषी व्यतिकरण के लिए</b> $ \phi = 0$ अतः </p>
+
+<p class="formula">$A_{max} = \sqrt{a_1^2 + a_2^2 + 2a_1 a_2 \cos 0^{\circ}}$</p>
+        <p class="formula">$A_{max} = \sqrt{a_1^2 + a_2^2 + 2a_1 a_2}$</p>
+        <p class="formula">$A_{max} = \sqrt{(a_1 + a_2)^2}$</p>
+        <p class="formula">$A_{max} = a_1 + a_2$</p>
+
+<p><b>2. विनाशी व्यतिकरण के लिए</b> $ \phi = \pi $ अतः </p>
+
+<p class="formula">$A_{min} = \sqrt{a_1^2 + a_2^2 + 2a_1 a_2 \cos \pi}$</p>
+<p class="formula">$A_{min} = \sqrt{a_1^2 + a_2^2 + 2a_1 a_2 (-1)}$</p>
+<p class="formula">$A_{min} = \sqrt{a_1^2 + a_2^2 - 2a_1 a_2}$</p>
+<p class="formula">$A_{min} = \sqrt{(a_1 - a_2)^2}$</p>
+<p class="formula">$A_{min} = a_1 - a_2$</p>
+
 </div>
+</div>
+
 
 <div class="qa-box">
     <div class="question">प्रश्न: प्रकाश के व्यतिकरण का द्वि-स्लिट प्रयोग समझाइए।</div>
@@ -428,6 +488,9 @@ margin-top:80px;
         </ol>
     </div>
 </div>
+
+
+
 
 <div class="qa-box">
     <div class="question">प्रश्न: यंग के द्विस्लिट प्रयोग में केंद्रीय दीप्त फ्रिंज से n वीं दीप्त तथा अदीप्त फ्रिंजों की दूरियों के लिए सूत्र स्थापित कीजिए।</div>
