@@ -119,7 +119,8 @@ const PAL_STUDY_DATA = {
         "यूनिट 7(B) - तरलों के यांत्रिक गुण",
         "यूनिट 7(C) - श्यानता",
         "यूनिट 8(A) - द्रव्य के तापीय गुण",
-        "यूनिट 8(B) - ऊष्मागतिकी",
+        "यूनिट 8(B) - ऊष्मा संचरण",
+        "यूनिट 8(C) - ऊष्मागतिकी",
         "यूनिट 9 - अणुगति सिद्धांत",
         "यूनिट 10(A) - दोलन",
         "यूनिट 10(B) - तरंगें"
@@ -570,7 +571,8 @@ const UNIT_FILE_PATHS = {
         "यूनिट 7(B) - तरलों के यांत्रिक गुण" : "../units/mp_board_hindi/class_11/Physics/p7b.html", 
         "यूनिट 7(C) - श्यानता" : "../units/mp_board_hindi/class_11/Physics/p7c.html",
         "यूनिट 8(A) - द्रव्य के तापीय गुण" : "../units/mp_board_hindi/class_11/Physics/p8a.html",
-        "यूनिट 8(B) - ऊष्मागतिकी" : "../units/mp_board_hindi/class_11/Physics/p8b.html",
+        "यूनिट 8(B) - ऊष्मा संचरण " : "../units/mp_board_hindi/class_11/Physics/p8b.html",
+        "यूनिट 8(C) - ऊष्मागतिकी" : "../units/mp_board_hindi/class_11/Physics/p8c.html",
         "यूनिट 9 - अणुगति सिद्धांत" : "../units/mp_board_hindi/class_11/Physics/p9.html",
         "यूनिट 10(A) - दोलन" : "../units/mp_board_hindi/class_11/Physics/p10A.html",
         "यूनिट 10(B) - तरंगें" : "../units/mp_board_hindi/class_11/Physics/p10B.html"
