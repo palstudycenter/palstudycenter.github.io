@@ -628,7 +628,7 @@ body{
 
     color:#334155;
 
-    font-size:2rem;
+    font-size:1.1rem;
 
     font-weight:800;
 
@@ -692,7 +692,7 @@ body{
 .subject-card{
     position:relative;
 
-    min-height:90px;
+    min-height:85px;
 
     padding:14px 12px 12px;
 
@@ -794,7 +794,7 @@ body{
 .subject-card-body h5{
     margin:0 0 3px;
 
-    font-size:.88rem;
+    font-size:.92rem;
 
     font-weight:800;
 
@@ -844,7 +844,7 @@ body{
     }
 
     .subject-card{
-        min-height:90px;
+        min-height:85px;
 
         padding:12px 10px 10px;
 
@@ -855,7 +855,7 @@ body{
         top:8px;
         right:8px;
 
-        font-size:26px;
+        font-size:30px;
     }
 
     .subject-card-body h5{
