@@ -25,7 +25,8 @@ body{
 ========================================================= */
 
 .navbar{
-    background:#1e293b;
+  
+    background:#174a7e;
 
     box-shadow:
         0 4px 18px rgba(23,74,126,.95);
@@ -46,7 +47,7 @@ body{
 }
 
 .navbar-brand span{
-    font-size:40px;
+    font-size:42px;
 
     font-weight:700;
 
@@ -115,13 +116,11 @@ body{
 
     overflow:hidden;
 
-    background:
-        linear-gradient(
-            135deg,
-            #111827 0%,
-            #1f2937 55%,
-            #334155 100%
-        );
+    background: linear-gradient(
+    135deg,
+    #174a7e 0%,
+    #1e6fa5 100%
+);
 
     color:#fff;
 }
@@ -177,7 +176,14 @@ body{
 /* =========================================================
    HERO CONTENT
 ========================================================= */
+.hero-content {
+    animation: slowFloat 4s ease-in-out infinite alternate;
+}
 
+@keyframes slowFloat {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-8px); }
+}
 .hero-content{
     width:100%;
 
@@ -289,7 +295,7 @@ body{
     border:
         1px solid rgba(255,255,255,.12);
 
-    font-size:.78rem;
+    font-size:85rem;
 
     font-weight:600;
 
@@ -339,7 +345,7 @@ body{
     }
 
     .hero-marquee span{
-        font-size:.80rem;
+        font-size:.85rem;
 
         padding:7px 15px;
     }
@@ -362,7 +368,7 @@ body{
     }
 
     .navbar-brand span{
-        font-size:42px;
+        font-size:43px;
     }
 
     .hero{
@@ -392,7 +398,7 @@ body{
     }
 
     .hero-marquee span{
-        font-size:.66rem;
+        font-size:.85rem;
 
         padding:7px 13px;
     }
