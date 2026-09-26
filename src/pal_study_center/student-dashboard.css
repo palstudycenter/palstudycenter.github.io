@@ -628,7 +628,7 @@ body{
 
     color:#334155;
 
-    font-size:1rem;
+    font-size:2rem;
 
     font-weight:800;
 
@@ -643,9 +643,9 @@ body{
 #studentInfo{
     margin:4px 0 0;
 
-    color:#64748b;
+    color:#475569;
 
-    font-size:.85rem;
+    font-size:.90rem;
 
     line-height:1.5;
 }
@@ -692,7 +692,7 @@ body{
 .subject-card{
     position:relative;
 
-    min-height:100px;
+    min-height:90px;
 
     padding:14px 12px 12px;
 
@@ -844,7 +844,7 @@ body{
     }
 
     .subject-card{
-        min-height:108px;
+        min-height:90px;
 
         padding:12px 10px 10px;
 
