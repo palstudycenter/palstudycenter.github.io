@@ -555,6 +555,16 @@ const UNIT_FILE_PATHS = {
         "EX. 10.2" : "../units/mp_board_hindi/class_12/mathematics/10.2.html",
         "EX. 10.3" : "../units/mp_board_hindi/class_12/mathematics/10.3.html"
       },
+      "हिंदी": {
+  "UNIT 1": "../units/mp_board_hindi/class_12/hindi/1.html",
+  "UNIT 2": "../units/mp_board_hindi/class_12/hindi/2.html",
+  "UNIT 3": "../units/mp_board_hindi/class_12/hindi/3.html",
+  "UNIT 4": "../units/mp_board_hindi/class_12/hindi/4.html",
+  "UNIT 5": "../units/mp_board_hindi/class_12/hindi/5.html",
+  "UNIT 6": "../units/mp_board_hindi/class_12/hindi/6.html",
+  "UNIT 7": "../units/mp_board_hindi/class_12/hindi/7.html",
+  "UNIT 8": "../units/mp_board_hindi/class_12/hindi/8.html"
+      }
     },
     "Class 11th": {
       "भौतिकी": {
