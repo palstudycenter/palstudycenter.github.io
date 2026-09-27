@@ -556,14 +556,14 @@ const UNIT_FILE_PATHS = {
         "EX. 10.3" : "../units/mp_board_hindi/class_12/mathematics/10.3.html"
       },
       "हिंदी": {
-  "UNIT 1": "../units/mp_board_hindi/class_12/hindi/1.html",
-  "UNIT 2": "../units/mp_board_hindi/class_12/hindi/2.html",
-  "UNIT 3": "../units/mp_board_hindi/class_12/hindi/3.html",
-  "UNIT 4": "../units/mp_board_hindi/class_12/hindi/4.html",
-  "UNIT 5": "../units/mp_board_hindi/class_12/hindi/5.html",
-  "UNIT 6": "../units/mp_board_hindi/class_12/hindi/6.html",
-  "UNIT 7": "../units/mp_board_hindi/class_12/hindi/7.html",
-  "UNIT 8": "../units/mp_board_hindi/class_12/hindi/8.html"
+  "यूनिट 1 काव्य खंड (पद्य भाग)": "../units/mp_board_hindi/class_12/hindi/1.html",
+  "यूनिट 2 गद्य खंड (निबंध एवं कहानी)": "../units/mp_board_hindi/class_12/hindi/2.html",
+  "यूनिट 3 अपठित गद्यांश एवं पद्यांश": "../units/mp_board_hindi/class_12/hindi/3.html",
+  "यूनिट 4 व्याकरण भाग": "../units/mp_board_hindi/class_12/hindi/4.html",
+  "यूनिट 5 लेखन कौशल": "../units/mp_board_hindi/class_12/hindi/5.html",
+  "यूनिट 6 सृजनात्मक लेखन": "../units/mp_board_hindi/class_12/hindi/6.html",
+  "यूनिट 7 पाठ्य पुस्तक अध्ययन": "../units/mp_board_hindi/class_12/hindi/7.html",
+  "यूनिट 8 सप्लीमेंट्री रीडर": "../units/mp_board_hindi/class_12/hindi/8.html"
       }
     },
     "Class 11th": {
