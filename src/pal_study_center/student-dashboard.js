@@ -387,3 +387,54 @@ async function loadFeesData() {
 
     feesContent.innerHTML = html;
 }
+
+
+// ========== STUDENT PHOTO UPLOAD LOGIC ==========
+const photoInput = document.getElementById('studentPhotoInput');
+const photoImg = document.getElementById('studentPhoto');
+
+// पुरानी फोटो लोकल से लोड करो
+const savedPhoto = localStorage.getItem('studentPhoto');
+if(savedPhoto){
+  photoImg.src = savedPhoto;
+}
+
+// स्टूडेंट का नाम अवतार में दिखाओ अगर फोटो नहीं है
+const studentNameEl = document.getElementById('studentName');
+if(studentNameEl &&!savedPhoto){
+  const observer = new MutationObserver(()=>{
+    const name = studentNameEl.innerText.trim();
+    if(name){
+      photoImg.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=2563eb&color=fff&size=200`;
+    }
+  });
+  observer.observe(studentNameEl, {childList:true, characterData:true, subtree:true});
+}
+
+photoInput.addEventListener('change', function(e){
+  const file = e.target.files[0];
+  if(!file) return;
+
+  if(file.size > 2 * 1024 * 1024){
+    alert('फोटो 2MB से कम होनी चाहिए');
+    return;
+  }
+
+  const reader = new FileReader();
+  reader.onload = function(event){
+    const base64 = event.target.result;
+    photoImg.src = base64;
+    localStorage.setItem('studentPhoto', base64); // लोकल सेव
+
+    // अगर आपका Backend है तो यहाँ API पर भेजें
+    // uploadPhotoToServer(base64);
+  };
+  reader.readAsDataURL(file);
+});
+
+// भविष्य में Backend के लिए function
+async function uploadPhotoToServer(base64){
+  // const formData = new FormData();
+  // formData.append('photo', photoInput.files[0]);
+  // await fetch('/api/upload-photo', {method:'POST', body:formData});
+}
