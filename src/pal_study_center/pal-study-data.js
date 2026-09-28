@@ -267,7 +267,14 @@ const PAL_STUDY_DATA = {
         "poster",
         "Essay"
       ],
-      "Hindi": []
+       "हिंदी": ["यूनिट 1 काव्य खंड (पद्य भाग)",
+        "यूनिट 2 गद्य खंड (निबंध एवं कहानी)",
+        "यूनिट 3 अपठित गद्यांश एवं पद्यांश",
+        "यूनिट 4 व्याकरण भाग",
+        "यूनिट 5 लेखन कौशल",
+        "यूनिट 6 सृजनात्मक लेखन",
+        "यूनिट 7 पाठ्य पुस्तक अध्ययन",
+        "यूनिट 8 सप्लीमेंट्री रीडर"]
     },
     "Class 10th": {
       "Mathematics": ["Real Numbers", "Polynomials", "Quadratic Equations"],
@@ -746,7 +753,17 @@ const UNIT_FILE_PATHS = {
         "letter": "../units/mp_board_hindi/class_12/english/Gramer/letter.html",
         "poster": "../units/mp_board_hindi/class_12/english/poster.html",
         "Essay": "../units/mp_board_hindi/class_12/english/Essay.html",
-      }
+      },
+  "हिंदी": {
+  "यूनिट 1 काव्य खंड (पद्य भाग)": "../units/mp_board_hindi/class_12/hindi/1.html",
+  "यूनिट 2 गद्य खंड (निबंध एवं कहानी)": "../units/mp_board_hindi/class_12/hindi/2.html",
+  "यूनिट 3 अपठित गद्यांश एवं पद्यांश": "../units/mp_board_hindi/class_12/hindi/3.html",
+  "यूनिट 4 व्याकरण भाग": "../units/mp_board_hindi/class_12/hindi/4.html",
+  "यूनिट 5 लेखन कौशल": "../units/mp_board_hindi/class_12/hindi/5.html",
+  "यूनिट 6 सृजनात्मक लेखन": "../units/mp_board_hindi/class_12/hindi/6.html",
+  "यूनिट 7 पाठ्य पुस्तक अध्ययन": "../units/mp_board_hindi/class_12/hindi/7.html",
+  "यूनिट 8 सप्लीमेंट्री रीडर": "../units/mp_board_hindi/class_12/hindi/8.html"
+      }    
     },
     "Class 10th": {
       "Mathematics": {
