@@ -1,460 +1,95 @@
 <!DOCTYPE html>
 <html lang="hi">
-
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Daily Updates | Pal Study Center</title>
-
-  <meta property="og:image"
-    content="https://raw.githubusercontent.com/nayanpal777/study-center/main/main-img.jpeg" />
-
-  <!-- Favicons -->
+  <title>New Batch | पाल स्टडी सेंटर</title>
+  <meta property="og:image" content="https://raw.githubusercontent.com/nayanpal777/study-center/main/main-img.jpeg" />
   <link href="../assets/img/favicon.jpg" rel="icon">
-  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Vendor CSS Files -->
-  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS -->
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="../assets/css/style.css" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;800&family=Noto+Sans+Devanagari:wght@500;700&display=swap" rel="stylesheet">
   <style>
-
-    body{
-      background:#f4f7fb;
-      font-family:Arial,sans-serif;
-      color:#1f2937;
-    }
-
-    .update-section{
-      padding:70px 15px;
-    }
-
-    .back-btn{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      background:#ffffff;
-      color:#1f4db8;
-      padding:12px 24px;
-      border-radius:14px;
-      text-decoration:none;
-      font-weight:700;
-      margin-bottom:35px;
-      box-shadow:0 5px 18px rgba(0,0,0,0.08);
-      transition:0.3s;
-    }
-
-    .back-btn:hover{
-      transform:translateY(-3px);
-      color:#1f4db8;
-    }
-
-    .hero-box{
-      background:linear-gradient(135deg,#1f4db8,#2563eb,#3b82f6);
-      padding:85px 40px;
-      border-radius:35px;
-      text-align:center;
-      color:#fff;
-      margin-bottom:45px;
-      box-shadow:0 15px 40px rgba(37,99,235,0.25);
-    }
-
-    .hero-box h1{
-      font-size:54px;
-      font-weight:800;
-      margin-bottom:20px;
-    }
-
-    .hero-box p{
-      font-size:20px;
-      line-height:2;
-      max-width:900px;
-      margin:auto;
-      opacity:0.96;
-    }
-
-    .program-card{
-      background:#ffffff;
-      border-radius:30px;
-      padding:40px 35px;
-      height:100%;
-      box-shadow:0 10px 35px rgba(0,0,0,0.06);
-      transition:0.3s;
-      border:1px solid rgba(0,0,0,0.04);
-    }
-
-    .program-card:hover{
-      transform:translateY(-6px);
-    }
-
-    .icon-box{
-      width:78px;
-      height:78px;
-      border-radius:22px;
-      background:linear-gradient(to right,#1f4db8,#3b82f6);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color:#fff;
-      font-size:34px;
-      margin-bottom:25px;
-      box-shadow:0 8px 22px rgba(37,99,235,0.25);
-    }
-
-    .program-card h2{
-      color:#1f4db8;
-      font-size:30px;
-      font-weight:800;
-      margin-bottom:22px;
-    }
-
-    .program-card p{
-      font-size:17px;
-      line-height:2;
-      color:#4b5563;
-      margin-bottom:18px;
-    }
-
-    .program-card ul{
-      padding-left:20px;
-      margin-bottom:20px;
-    }
-
-    .program-card ul li{
-      font-size:16px;
-      line-height:2;
-      color:#4b5563;
-      margin-bottom:6px;
-    }
-
-    .highlight{
-      color:#1f4db8;
-      font-weight:700;
-    }
-
-    .cta-box{
-      background:linear-gradient(to right,#0f172a,#1e3a8a);
-      color:#fff;
-      border-radius:35px;
-      padding:55px 40px;
-      text-align:center;
-      margin-top:45px;
-      box-shadow:0 12px 35px rgba(0,0,0,0.15);
-    }
-
-    .cta-box h2{
-      font-size:42px;
-      font-weight:800;
-      margin-bottom:20px;
-    }
-
-    .cta-box p{
-      font-size:19px;
-      line-height:2;
-      max-width:850px;
-      margin:auto;
-      margin-bottom:30px;
-      opacity:0.95;
-    }
-
-    .apply-btn{
-      display:inline-block;
-      background:#ffffff;
-      color:#1f4db8;
-      padding:15px 34px;
-      border-radius:14px;
-      text-decoration:none;
-      font-size:18px;
-      font-weight:700;
-      transition:0.3s;
-      box-shadow:0 8px 20px rgba(255,255,255,0.15);
-    }
-
-    .apply-btn:hover{
-      transform:translateY(-3px);
-      color:#1f4db8;
-    }
-
-    @media(max-width:768px){
-
-      .hero-box{
-        padding:55px 25px;
-      }
-
-      .hero-box h1{
-        font-size:36px;
-      }
-
-      .hero-box p{
-        font-size:16px;
-      }
-
-      .program-card{
-        padding:30px 22px;
-      }
-
-      .program-card h2{
-        font-size:24px;
-      }
-
-      .program-card p{
-        font-size:16px;
-      }
-
-      .cta-box{
-        padding:40px 22px;
-      }
-
-      .cta-box h2{
-        font-size:30px;
-      }
-
-      .cta-box p{
-        font-size:16px;
-      }
-
-    }
-
+    body{background:#f4f7fb;font-family:'Noto Sans Devanagari','Poppins',sans-serif}
+    .update-section{padding:35px 15px 60px}
+    .back-btn{display:inline-flex;align-items:center;gap:8px;background:#fff;color:#1f4db8!important;padding:10px 20px;border-radius:14px;text-decoration:none;font-weight:700;margin-bottom:22px;box-shadow:0 5px 18px rgba(0,0,0,.08)}
+    .hero-box{background:linear-gradient(135deg,#1f4db8,#2563eb,#3b82f6);padding:38px 28px;border-radius:30px;text-align:center;color:#fff;margin-bottom:28px;box-shadow:0 15px 40px rgba(37,99,235,0.25)}
+    .hero-box h1{font-size:32px;font-weight:800;line-height:1.4}
+    .hero-box .tag{background:#fff;color:#1f4db8;padding:5px 14px;border-radius:20px;font-size:12px;font-weight:700;display:inline-block;margin-bottom:12px}
+    .hero-box p{font-size:15px;opacity:.95;margin-top:10px;line-height:1.8}
+    .main-card{background:#fff;border-radius:28px;padding:36px 30px;box-shadow:0 10px 35px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04)}
+    .icon-circle{width:78px;height:78px;background:linear-gradient(to right,#1f4db8,#3b82f6);border-radius:20px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:34px;margin-bottom:18px;box-shadow:0 8px 22px rgba(37,99,235,0.25)}
+    .main-card h2{color:#1f4db8;font-weight:800;font-size:26px}
+    .main-card .sub-head{color:#dc2626;background:#fef2f2;padding:6px 14px;border-radius:20px;font-size:13px;font-weight:700;display:inline-block;margin:10px 0 16px}
+    .main-card p{color:#475569;font-size:15.5px;line-height:2}
+    .feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
+    .f-box{background:#f8faff;border:1px solid #dbeafe;border-radius:14px;padding:12px 14px;font-size:14px;color:#1e293b;font-weight:500;display:flex;align-items:center;gap:8px}
+    .f-box i{color:#1f4db8}
+    .cta-box{background:linear-gradient(135deg,#eef2ff,#dbeafe);border:2px solid #bfdbfe;border-radius:24px;padding:28px 22px;text-align:center;margin-top:26px}
+    .cta-box h2{font-size:24px;font-weight:800;color:#1f4db8}
+    .offer-badge{background:linear-gradient(to right,#1f4db8,#3b82f6);color:#fff;font-weight:800;padding:8px 18px;border-radius:30px;display:inline-block;margin:14px 0}
+    .apply-btn{display:inline-block;background:#1f4db8;color:#fff!important;padding:13px 28px;border-radius:30px;text-decoration:none;font-weight:700;margin-top:10px;box-shadow:0 8px 20px rgba(37,99,235,.3)}
+    @media(max-width:768px){.feature-grid{grid-template-columns:1fr}.hero-box h1{font-size:24px}.main-card h2{font-size:21px}}
   </style>
-
 </head>
-
 <body>
 
 <section class="update-section">
-
 <div class="container" data-aos="fade-up">
 
-<a href="../index.html" class="back-btn">
-<i class="bi bi-arrow-left"></i>
-Back To Home
-</a>
-
-<!-- Hero Section -->
+<a href="../index.html" class="back-btn"><i class="bi bi-arrow-left"></i> Back To Home</a>
 
 <div class="hero-box">
-
-<h1>Admissions & Daily Updates</h1>
-
-<p>
-Pal Study Center विद्यार्थियों को
-गुणवत्तापूर्ण शिक्षा, अनुशासित वातावरण
-और परिणाम आधारित मार्गदर्शन प्रदान करने के लिए समर्पित है।
-यहाँ विद्यार्थियों को Academic Excellence के साथ
-Confidence एवं Career Growth की दिशा प्रदान की जाती है।
-</p>
-
+  <div class="tag"><i class="bi bi-stars"></i> OCTOBER SPECIAL BATCH</div>
+  <h1>बोर्ड परीक्षा स्पेशल बैच<br>अक्टूबर माह से प्रारंभ</h1>
+  <p>अभी तक तैयारी शुरू नहीं की? चिंता मत कीजिए! पाल स्टडी सेंटर आपके लिए लाया है सुनहरा अवसर</p>
 </div>
 
-<!-- Programs -->
+<div class="row justify-content-center">
+<div class="col-lg-9">
+  <div class="main-card">
+    <div class="icon-circle"><i class="bi bi-rocket-takeoff-fill"></i></div>
+    <h2>Special Crash Course For Late Starters</h2>
+    <div class="sub-head"><i class="bi bi-alarm-fill"></i> अक्टूबर 2026 से शुरू</div>
+    
+    <p>
+      कई विद्यार्थी किन्हीं कारणों से अभी तक बोर्ड परीक्षा की तैयारी शुरू नहीं कर पाए हैं। <br>
+      उन्हीं विद्यार्थियों के लिए <b>पाल स्टडी सेंटर</b> एक स्पेशल फास्ट-ट्रैक बैच शुरू कर रहा है, जिसमें कम समय में पूरे पाठ्यक्रम को स्मार्ट तरीके से कवर करवाया जाएगा।
+    </p>
 
-<div class="row g-4">
+    <div class="feature-grid">
+      <div class="f-box"><i class="bi bi-book-fill"></i> कम समय में पूरा सिलेबस</div>
+      <div class="f-box"><i class="bi bi-pencil-square"></i> Daily Practice + Weekly Test</div>
+      <div class="f-box"><i class="bi bi-people-fill"></i> कक्षा 9 से 12 (MP & CBSE)</div>
+      <div class="f-box"><i class="bi bi-question-circle-fill"></i> रोज़ डाउट सॉल्विंग</div>
+      <div class="f-box"><i class="bi bi-trophy-fill"></i> अनुभवी और रिजल्ट ओरिएंटेड फैकल्टी</div>
+      <div class="f-box"><i class="bi bi-graph-up-arrow"></i> कमजोर विद्यार्थियों पर विशेष ध्यान</div>
+    </div>
 
-<!-- Card 1 -->
+    <p style="font-size:14px;background:#fff7ed;border:1px solid #fed7aa;padding:10px 14px;border-radius:12px;color:#9a3412">
+      <i class="bi bi-lightbulb-fill"></i> <b>नोट:</b> यह बैच विशेष रूप से उन विद्यार्थियों के लिए है जो अभी तक गंभीरता से तैयारी शुरू नहीं कर पाए हैं और बोर्ड में बेहतरीन परिणाम चाहते हैं।
+    </p>
 
-<div class="col-lg-6">
+    <div class="cta-box">
+      <h2>⚡ जल्दी आएं, जल्दी पाएं ⚡</h2>
+      <p style="color:#334155;font-size:14px;margin:6px 0">प्रवेश प्रारंभ - सीमित सीटें ही उपलब्ध हैं!</p>
+      <div class="offer-badge">🎁 पहले 20 विद्यार्थियों को विशेष छूट</div>
+      <br>
+      <a href="https://palstudycenter.github.io/" class="apply-btn"><i class="bi bi-telephone-fill"></i> अभी संपर्क करें</a>
+      <p style="margin-top:12px;font-size:12.5px;color:#64748b">📍 आरएलबी मार्ग, मनासा | पाल स्टडी सेंटर</p>
+    </div>
 
-<div class="program-card">
-
-<div class="icon-box">
-<i class="bi bi-mortarboard-fill"></i>
+  </div>
 </div>
-
-<h2>Admissions Open – Class 12th Science</h2>
-
-<p>
-Class 12th Science विद्यार्थियों के लिए
-विशेष एवं result-oriented coaching program उपलब्ध है।
-</p>
-
-<p class="highlight">
-Subjects Offered:
-</p>
-
-<ul>
-<li>Physics</li>
-<li>Chemistry</li>
-<li>Mathematics</li>
-<li>Biology</li>
-</ul>
-
-<p class="highlight">
-Class Schedule:
-</p>
-
-<ul>
-<li>7:45 AM – 8:45 AM → Physics</li>
-<li>8:45 AM – 9:30 AM → Chemistry</li>
-<li>9:30 AM – 10:15 AM → Mathematics / Biology</li>
-</ul>
-
-<p>
-📍 Location: RLB Marg, Manasa
-</p>
-
 </div>
 
 </div>
-
-<!-- Card 2 -->
-
-<div class="col-lg-6">
-
-<div class="program-card">
-
-<div class="icon-box">
-<i class="bi bi-chat-dots-fill"></i>
-</div>
-
-<h2>Spoken English – Summer Batch</h2>
-
-<p>
-Confidence के साथ English बोलना सीखें।
-यह विशेष batch विद्यार्थियों के communication skills
-एवं personality development को मजबूत करने के लिए तैयार किया गया है।
-</p>
-
-<ul>
-<li>Speaking Practice Sessions</li>
-<li>Confidence Building Activities</li>
-<li>Communication Skills Development</li>
-<li>Interactive Learning Environment</li>
-</ul>
-
-<p class="highlight">
-Timing:
-</p>
-
-<p>
-3:00 PM – 5:00 PM
-</p>
-
-<p>
-सीमित सीटें उपलब्ध हैं — शीघ्र प्रवेश लें।
-</p>
-
-</div>
-
-</div>
-
-<!-- Card 3 -->
-
-<div class="col-lg-12">
-
-<div class="program-card">
-
-<div class="icon-box">
-<i class="bi bi-award-fill"></i>
-</div>
-
-<h2>Special PCM Batch – Navodaya Students</h2>
-
-<p>
-नवोदय विद्यालय के विद्यार्थियों के लिए विशेष PCM batch,
-जिसमें कम समय में सम्पूर्ण syllabus की
-गहन एवं concept-based तैयारी करवाई जाती है।
-</p>
-
-<p class="highlight">
-Subjects:
-</p>
-
-<p>
-Physics • Chemistry • Mathematics
-</p>
-
-<p class="highlight">
-Key Features:
-</p>
-
-<ul>
-
-<li>Complete syllabus coverage by 06 June 2026</li>
-
-<li>Regular tests एवं performance analysis</li>
-
-<li>Doubt solving एवं improvement sessions</li>
-
-<li>Strong concept clarity with revision support</li>
-
-<li>Experienced faculty guidance</li>
-
-<li>Focused preparation for better academic performance</li>
-
-</ul>
-
-<p>
-Admission Open — Limited Seats Available
-</p>
-
-<p>
-अधिक जानकारी एवं registration के लिए:
-<strong>palstudycenter.github.io</strong>
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- CTA -->
-
-<div class="cta-box">
-
-<h2>Start Your Success Journey Today</h2>
-
-<p>
-आज ही Pal Study Center के साथ जुड़ें
-और गुणवत्तापूर्ण शिक्षा, सही मार्गदर्शन
-एवं उज्ज्वल भविष्य की दिशा में
-अपना पहला कदम बढ़ाएँ।
-</p>
-
-<a href="https://palstudycenter.github.io/"
-class="apply-btn">
-
-Apply Now
-
-</a>
-
-</div>
-
-</div>
-
 </section>
 
-<div id="preloader"></div>
-
-<a href="#"
-class="back-to-top d-flex align-items-center justify-content-center">
-
-<i class="bi bi-arrow-up-short"></i>
-
-</a>
-
-<!-- Vendor JS Files -->
-<script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
 <script src="../assets/vendor/aos/aos.js"></script>
 <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="../assets/vendor/typed.js/typed.min.js"></script>
-<script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
-<script src="../assets/vendor/php-email-form/validate.js"></script>
-
-<!-- Template Main JS File -->
 <script src="../assets/js/main.js"></script>
-
 </body>
-
 </html>

@@ -1,392 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pal Study Notes</title>
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 <style>
-
-body{
-  background:#f4f7fb;
-  font-family:Arial,sans-serif;
-}
-
-.site-logo{
-  text-align:center;
-  font-size:42px;
-  font-weight:800;
-  margin-bottom:30px;
-  color:#222;
-}
-
-.top-bar{
-  display:flex;
-  align-items:center;
-  gap:15px;
-  margin-bottom:30px;
-  flex-wrap:wrap;
-}
-
-.back-btn{
-  border:none;
-  background:#111;
-  color:white;
-  padding:10px 18px;
-  border-radius:10px;
-  font-size:16px;
-  cursor:pointer;
-}
-
-.section-title{
-  flex:1;
-  color:white;
-  padding:15px;
-  border-radius:15px;
-  font-size:24px;
-  font-weight:bold;
-  text-align:center;
-  background:linear-gradient(135deg,#396afc,#2948ff,#00c6ff);
-}
-
-.grid-box{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
-}
-
-.main-btn{
-  border:none;
-  padding:20px;
-  border-radius:18px;
-  color:white;
-  font-size:20px;
-  font-weight:bold;
-  cursor:pointer;
-  transition:0.3s;
-  width:100%;
-  box-shadow:0 6px 18px rgba(0,0,0,0.18);
-}
-
-.main-btn:hover{
-  transform:translateY(-5px);
-}
-
+body{ background:#f4f7fb; font-family:Arial,sans-serif; }
+.site-logo{ text-align:center; font-size:42px; font-weight:800; margin-bottom:30px; color:#222; }
+.top-bar{ display:flex; align-items:center; gap:15px; margin-bottom:30px; flex-wrap:wrap; }
+.back-btn{ border:none; background:#111; color:white!important; padding:10px 18px; border-radius:10px; font-size:16px; cursor:pointer; text-decoration:none; display:inline-flex; align-items:center; }
+.section-title{ flex:1; color:white; padding:15px; border-radius:15px; font-size:24px; font-weight:bold; text-align:center; background:#0D47A1; }
+.grid-box{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; }
+.main-btn{ border:none; padding:20px; border-radius:18px; color:white; font-size:20px; font-weight:bold; cursor:pointer; transition:0.3s; width:100%; box-shadow:0 6px 18px rgba(0,0,0,0.18); }
+.main-btn:hover{ transform:translateY(-5px); }
 .page{ display:none; }
-
 </style>
 </head>
-
 <body>
-
 <section class="py-5">
 <div class="container">
-
-<!-- ================= BOARD ================= -->
-<div id="boardPage">
-  <h1 class="site-logo">📘 Pal Study Notes</h1>
-
+<div class="page" id="boardPage">
+  <h1 class="site-logo">📘 पाल स्टडी सेंटर</h1>
   <div class="top-bar">
-    <button class="back-btn" onclick="location.href='./index.html'">
-  ← Back
-    </button>
+    <a href="../index.html" class="back-btn">
+      <i class="bi bi-arrow-left"></i> Back To Home
+    </a>
     <div class="section-title">Select Board</div>
   </div>
-  
-  
-
   <div class="grid-box" id="boardBox"></div>
 </div>
-
-<!-- ================= CLASS ================= -->
 <div class="page" id="classPage">
-  <h1 class="site-logo">📘 Pal Study Notes</h1>
-
+  <h1 class="site-logo">📘 पाल स्टडी सेंटर</h1>
   <div class="top-bar">
     <button class="back-btn" onclick="goBack('boardPage','classPage')">← Back</button>
     <div class="section-title">Select Class</div>
   </div>
-
   <div class="grid-box" id="classBox"></div>
 </div>
-
-<!-- ================= SUBJECT ================= -->
 <div class="page" id="subjectPage">
-  <h1 class="site-logo">📘 पाल स्टडी Notes</h1>
-
+  <h1 class="site-logo">📘 पाल स्टडी सेंटर </h1>
   <div class="top-bar">
     <button class="back-btn" onclick="goBack('classPage','subjectPage')">← Back</button>
     <div class="section-title">Select Subject</div>
   </div>
-
   <div class="grid-box" id="subjectBox"></div>
 </div>
-
-<!-- ================= UNIT ================= -->
 <div class="page" id="unitPage">
-  <h1 class="site-logo">📘 Pal Study Notes</h1>
-
+  <h1 class="site-logo">📘 पाल स्टडी सेंटर </h1>
   <div class="top-bar">
     <button class="back-btn" onclick="goBack('subjectPage','unitPage')">← Back</button>
     <div class="section-title">Select Unit</div>
   </div>
-
   <div class="grid-box" id="unitBox"></div>
 </div>
-
 </div>
 </section>
-
 <script>
-
-/* ================= FULL DATA ================= */
-
 const data = {
-
   "MP Board Hindi Medium": {
-
     "Class 12": {
-
-      "भौतिकी": [
-        "यूनिट 1 विद्युत आवेश एवं क्षेत्र",
-        "यूनिट 2 स्थिर विद्युत विभव एवं धारिता",
-        "यूनिट 3 विद्युत धारा",
-        "यूनिट 4 गतिमान आवेश एवं चुंबकत्व",
-        "यूनिट 5 चुंबकत्व एवं पदार्थ",
-        "यूनिट 6 विद्युत चुंबकीय प्रेरण",
-        "यूनिट 7 प्रत्यावर्ती धारा",
-        "यूनिट 8 विद्युत चुंबकीय तरंगें",
-        "यूनिट 9 प्रकाशिकी",
-        "यूनिट 10 तरंग प्रकाशिकी",
-        "यूनिट 11 पदार्थ की द्वैत प्रकृति",
-        "यूनिट 12 परमाणु",
-        "यूनिट 13 नाभिक",
-        "यूनिट 14 अर्धचालक इलेक्ट्रॉनिक्स"
-      ],
-
-      "रसायन शास्त्र ": [
-        "यूनिट 1 विलयन",
-        "यूनिट 2 विद्युत रसायन",
-        "यूनिट 3 रासायनिक गतिकी",
-        "यूनिट 4 d और f ब्लॉक के तत्व",
-        "यूनिट 5 समन्वय यौगिक",
-        "यूनिट 6 हैलोएल्केन और हैलोएरीन",
-        "यूनिट 7 अल्कोहल",
-        "यूनिट 8 फिनोल",
-        "यूनिट 9 ईथर",
-        "यूनिट 10 एल्डिहाइड एवं कीटोन",
-        "यूनिट 11 कार्बोक्सिलिक अम्ल",
-        "यूनिट 12 अमीन",
-        "यूनिट 13 जैव-अणु"
-      ],
-
-      "जीवविज्ञान": [
-        "यूनिट 1 (A) पुष्पीय पौधों में लैंगिक जनन",
-        "यूनिट 1 (B) मानव जनन",
-        "यूनिट 1 (C) जनन स्वास्थ्य",
-
-        "यूनिट 2 (A) वंशागति के सिद्धांत",
-        "यूनिट 2 (B) वंशागति का आणविक आधार",
-        "यूनिट 2 (C) विकास",
-
-        "यूनिट 3 (A) मानव कल्याण में जीवविज्ञान",
-        "यूनिट 3 (B) मानव स्वास्थ्य एवं रोग",
-        "यूनिट 3 (C) मानव कल्याण में सूक्ष्मजीव",
-
-        "यूनिट 4 (A) जैव प्रौद्योगिकी: सिद्धांत एवं प्रक्रियाएँ",
-        "यूनिट 4 (B) जैव प्रौद्योगिकी एवं उसके उपयोग",
-
-        "यूनिट 5 (A) पारिस्थितिकी",
-        "यूनिट 5 (B) जीव और समष्टियाँ",
-        "पारितंत्र",
-        "यूनिट 5 (C) जैव विविधता एवं संरक्षण"
-      ],
-
-      "गणित": [
-        "यूनिट 1 संबंध एवं फलन",
-        "यूनिट 2 प्रतिलोम त्रिकोणमितीय फलन",
-        "यूनिट 3 आव्यूह",
-        "यूनिट 4 सारणिक",
-        "यूनिट 5 सततता एवं अवकलनीयता",
-        "यूनिट 6 अवकलज के अनुप्रयोग",
-        "यूनिट 7 समाकलन",
-        "यूनिट 8 समाकलन के अनुप्रयोग",
-        "यूनिट 9 अवकल समीकरण",
-        "यूनिट 10 सदिश बीजगणित",
-        "यूनिट 11 त्रिविमीय ज्यामिति",
-        "यूनिट 12 रैखिक प्रोग्रामन",
-        "यूनिट 13 प्रायिकता"
-      ],
-
-      "अग्रेजी": [
-        "Flamingo Unit 1 The Last Lesson",
-        "Unit 2 Lost Spring",
-        "Unit 3 Deep Water",
-        "Unit 4 The Rattrap",
-        "Unit 5 Indigo",
-        "Unit 6 Poets and Pancakes",
-        "Unit 7 The Interview",
-        "Unit 8 Going Places",
-
-        "Vistas Unit 1 The Third Level",
-        "Unit 2 The Tiger King",
-        "Unit 3 Journey to the End of the Earth",
-        "Unit 4 The Enemy",
-        "Unit 5 Should Wizard Hit Mommy",
-        "Unit 6 On the Face of It",
-        "Unit 7 Evans Tries an O-Level",
-        "Unit 8 Memories of Childhood"
-      ],
-
-      "हिंदी": [
-        "यूनिट 1 काव्य खंड (पद्य भाग)",
-        "यूनिट 2 गद्य खंड (निबंध एवं कहानी)",
-        "यूनिट 3 अपठित गद्यांश एवं पद्यांश",
-        "यूनिट 4 व्याकरण भाग",
-        "यूनिट 5 लेखन कौशल",
-        "यूनिट 6 सृजनात्मक लेखन",
-        "यूनिट 7 पाठ्य पुस्तक अध्ययन",
-        "यूनिट 8 सप्लीमेंट्री रीडर"
-      ]
-
+      "भौतिकी": ["यूनिट 1 विद्युत आवेश एवं क्षेत्र","यूनिट 2 स्थिर विद्युत विभव एवं धारिता","यूनिट 3 विद्युत धारा","यूनिट 4 गतिमान आवेश एवं चुंबकत्व","यूनिट 5 चुंबकत्व एवं पदार्थ","यूनिट 6 विद्युत चुंबकीय प्रेरण","यूनिट 7 प्रत्यावर्ती धारा","यूनिट 8 विद्युत चुंबकीय तरंगें","यूनिट 9 प्रकाशिकी","यूनिट 10 तरंग प्रकाशिकी","यूनिट 11 पदार्थ की द्वैत प्रकृति","यूनिट 12 परमाणु","यूनिट 13 नाभिक","यूनिट 14 अर्धचालक इलेक्ट्रॉनिक्स"],
+      "रसायन शास्त्र ": ["यूनिट 1 विलयन","यूनिट 2 विद्युत रसायन","यूनिट 3 रासायनिक गतिकी","यूनिट 4 d और f ब्लॉक के तत्व","यूनिट 5 समन्वय यौगिक","यूनिट 6 हैलोएल्केन और हैलोएरीन","यूनिट 7 अल्कोहल","यूनिट 8 फिनोल","यूनिट 9 ईथर","यूनिट 10 एल्डिहाइड एवं कीटोन","यूनिट 11 कार्बोक्सिलिक अम्ल","यूनिट 12 अमीन","यूनिट 13 जैव-अणु"],
+      "जीवविज्ञान": ["यूनिट 1 (A) पुष्पीय पौधों में लैंगिक जनन","यूनिट 1 (B) मानव जनन","यूनिट 1 (C) जनन स्वास्थ्य","यूनिट 2 (A) वंशागति के सिद्धांत","यूनिट 2 (B) वंशागति का आणविक आधार","यूनिट 2 (C) विकास","यूनिट 3 (A) मानव कल्याण में जीवविज्ञान","यूनिट 3 (B) मानव स्वास्थ्य एवं रोग","यूनिट 3 (C) मानव कल्याण में सूक्ष्मजीव","यूनिट 4 (A) जैव प्रौद्योगिकी: सिद्धांत एवं प्रक्रियाएँ","यूनिट 4 (B) जैव प्रौद्योगिकी एवं उसके उपयोग","यूनिट 5 (A) पारिस्थितिकी","यूनिट 5 (B) जीव और समष्टियाँ","पारितंत्र","यूनिट 5 (C) जैव विविधता एवं संरक्षण"],
+      "गणित": ["यूनिट 1 संबंध एवं फलन","यूनिट 2 प्रतिलोम त्रिकोणमितीय फलन","यूनिट 3 आव्यूह","यूनिट 4 सारणिक","यूनिट 5 सततता एवं अवकलनीयता","यूनिट 6 अवकलज के अनुप्रयोग","यूनिट 7 समाकलन","यूनिट 8 समाकलन के अनुप्रयोग","यूनिट 9 अवकल समीकरण","यूनिट 10 सदिश बीजगणित","यूनिट 11 त्रिविमीय ज्यामिति","यूनिट 12 रैखिक प्रोग्रामन","यूनिट 13 प्रायिकता"],
+      "अग्रेजी": ["Flamingo Unit 1 The Last Lesson","Unit 2 Lost Spring","Unit 3 Deep Water","Unit 4 The Rattrap","Unit 5 Indigo","Unit 6 Poets and Pancakes","Unit 7 The Interview","Unit 8 Going Places","Vistas Unit 1 The Third Level","Unit 2 The Tiger King","Unit 3 Journey to the End of the Earth","Unit 4 The Enemy","Unit 5 Should Wizard Hit Mommy","Unit 6 On the Face of It","Unit 7 Evans Tries an O-Level","Unit 8 Memories of Childhood"],
+      "हिंदी": ["यूनिट 1 काव्य खंड (पद्य भाग)","यूनिट 2 गद्य खंड (निबंध एवं कहानी)","यूनिट 3 अपठित गद्यांश एवं पद्यांश","यूनिट 4 व्याकरण भाग","यूनिट 5 लेखन कौशल","यूनिट 6 सृजनात्मक लेखन","यूनिट 7 पाठ्य पुस्तक अध्ययन","यूनिट 8 सप्लीमेंट्री रीडर"]
     },
-
     "Class 11": {
-      "भौतिकी": [],
-      "रासायन शास्त्र ": [],
-      "गणित": [],
-      "जीवविज्ञान": [],
-      "अग्रेजी": [],
-      "हिंदी": []
+      "भौतिकी": ["यूनिट 1 - भौतिक जगत और मापन","यूनिट 2 - शुद्धगतिकी - सरल रेखा और समतल में गति","यूनिट 3 - गति के नियम और वृत्तीय गति","यूनिट 4 - कार्य, ऊर्जा तथा शक्ति","यूनिट 5 - कणों के निकाय तथा घूर्णी गति","यूनिट 6 - गुरुत्वाकर्षण","यूनिट 7 - पदार्थ के यांत्रिक गुण - ठोस, तरल और श्यानता","यूनिट 8 - द्रव्य के तापीय गुण, ऊष्मा संचरण और ऊष्मागतिकी","यूनिट 9 - अणुगति सिद्धांत","यूनिट 10 - दोलन और तरंगें"],
+      "रासायन शास्त्र ": ["यूनिट 1 - रसायन विज्ञान की कुछ मूल अवधारणाएँ","यूनिट 2 - परमाणु की संरचना","यूनिट 3 - तत्वों का वर्गीकरण एवं गुणधर्मों में आवर्तिता","यूनिट 4 - रासायनिक आबंधन तथा आण्विक संरचना","यूनिट 5 - ऊष्मागतिकी","यूनिट 6 - साम्यावस्था - रासायनिक और आयनिक साम्य","यूनिट 7 - अपचयोपचय अभिक्रियाएँ","यूनिट 8 - कार्बनिक रसायन - कुछ मूल सिद्धांत तथा तकनीकें","यूनिट 9 - हाइड्रोकार्बन"],
+      "गणित": ["यूनिट 1 - समुच्चय","यूनिट 2 - संबंध एवं फलन","यूनिट 3 - त्रिकोणमितीय फलन","यूनिट 4 - सम्मिश्र संख्याएँ और द्विघातीय समीकरण","यूनिट 5 - रैखिक असमिकाएँ","यूनिट 6 - क्रमचय और संचय","यूनिट 7 - द्विपद प्रमेय","यूनिट 8 - अनुक्रम तथा श्रेणी","यूनिट 9 - सरल रेखा","यूनिट 10 - शंकु परिच्छेद","यूनिट 11 - त्रिविमीय ज्यामिति का परिचय","यूनिट 12 - सीमा और अवकलज","यूनिट 13 - सांख्यिकी","यूनिट 14 - प्रायिकता"],
+      "जीवविज्ञान": ["यूनिट 1 - जीव जगत में विविधता","यूनिट 2 - जीवों की संरचनात्मक संगठन - पौधे और प्राणी","यूनिट 3 - कोशिका - संरचना और कार्य","यूनिट 4 - पादप कार्यिकी","यूनिट 5 - मानव शरीर क्रिया विज्ञान"],
+      "अग्रेजी": ["Unit 1 - Prose - The Portrait of a Lady","Unit 2 - Prose - We're Not Afraid to Die...","Unit 3 - Prose - Discovering Tut","Unit 4 - Prose - Landscape of the Soul","Unit 5 - Prose - The Ailing Planet","Unit 6 - Prose - The Browning Version","Unit 7 - Prose - The Adventure","Unit 8 - Prose - Silk Road","Unit 9 - Poetry - A Photograph","Unit 10 - Poetry - The Laburnum Top","Unit 11 - Poetry - The Voice of the Rain","Unit 12 - Poetry - Childhood","Unit 13 - Poetry - Father to Son","Unit 14 - Supplementary - The Summer of the Beautiful White Horse","Unit 15 - Supplementary - The Address","Unit 16 - Supplementary - Mother's Day","Unit 17 - Supplementary - Birth","Unit 18 - Supplementary - The Tale of Melon City","Unit 19 - Grammar - Tenses, Articles, Modals","Unit 20 - Writing Skills - Notice, Letter, Essay"],
+      "हिंदी": ["यूनिट 1 - आरोह - गद्य - नमक का दारोगा - प्रेमचंद","यूनिट 2 - आरोह - गद्य - मियाँ नसीरुद्दीन","यूनिट 3 - आरोह - गद्य - अपू के साथ ढाई साल - सत्यजित राय","यूनिट 4 - आरोह - गद्य - विदाई-संभाषण - बालमुकुंद गुप्त","यूनिट 5 - आरोह - गद्य - गलता लोहा - शेखर जोशी","यूनिट 6 - आरोह - गद्य - स्पीति में बारिश - कृष्णनाथ","यूनिट 7 - आरोह - गद्य - रजनी - मन्नू भंडारी","यूनिट 8 - आरोह - गद्य - जामुन का पेड़ - कृष्णचंदर","यूनिट 9 - आरोह - गद्य - भारत माता - जवाहरलाल नेहरू","यूनिट 10 - आरोह - गद्य - आत्मा का ताप - सैयद हैदर रज़ा","यूनिट 11 - आरोह - पद्य - कबीर","यूनिट 12 - आरोह - पद्य - मीरा","यूनिट 13 - आरोह - पद्य - पथिक","यूनिट 14 - आरोह - पद्य - वे आँखें","यूनिट 15 - आरोह - पद्य - घर की याद","यूनिट 16 - आरोह - पद्य - चंपा","यूनिट 17 - आरोह - पद्य - गज़ल","यूनिट 18 - आरोह - पद्य - हे भूख! मत मचल","यूनिट 19 - आरोह - पद्य - हे मेरे जूही के भाई","यूनिट 20 - आरोह - पद्य - सबसे खतरनाक","यूनिट 21 - वितान - भारतीय गायिकाओं में बेजोड़","यूनिट 22 - वितान - राजस्थान की रजत बूंदें","यूनिट 23 - वितान - आलो-आँधारि","यूनिट 24 - वितान - भारतीय कलाएँ","यूनिट 25 - व्याकरण और लेखन"]
     },
-
     "Class 10": {
-      "विज्ञान": [],
-      "गणित": [],
-      "सामाजिक विज्ञान": [],
-      "अंग्रेजी": [],
-      "हिंदी": []
+      "विज्ञान": ["यूनिट 1 रासायनिक अभिक्रियाएँ एवं समीकरण","यूनिट 2 अम्ल, क्षारक एवं लवण","यूनिट 3 धातु एवं अधातु","यूनिट 4 कार्बन एवं उसके यौगिक","यूनिट 5 तत्वों का आवर्त वर्गीकरण","यूनिट 6 जैव प्रक्रम","यूनिट 7 नियंत्रण एवं समन्वय","यूनिट 8 जीव जनन कैसे करते हैं","यूनिट 9 आनुवंशिकता एवं जैव विकास","यूनिट 10 प्रकाश - परावर्तन तथा अपवर्तन","यूनिट 11 मानव नेत्र तथा रंग-बिरंगा संसार","यूनिट 12 विद्युत","यूनिट 13 विद्युत धारा के चुंबकीय प्रभाव","यूनिट 14 हमारा पर्यावरण"],
+      "गणित": ["यूनिट 1 वास्तविक संख्याएँ","यूनिट 2 बहुपद","यूनिट 3 दो चर वाले रैखिक समीकरण युग्म","यूनिट 4 द्विघात समीकरण","यूनिट 5 समांतर श्रेढ़ियाँ","यूनिट 6 त्रिभुज","यूनिट 7 निर्देशांक ज्यामिति","यूनिट 8 त्रिकोणमिति का परिचय","यूनिट 9 त्रिकोणमिति के कुछ अनुप्रयोग","यूनिट 10 वृत्त","यूनिट 11 वृत्तों से संबंधित क्षेत्रफल","यूनिट 12 पृष्ठीय क्षेत्रफल और आयतन","यूनिट 13 सांख्यिकी","यूनिट 14 प्रायिकता"],
+      "सामाजिक विज्ञान": ["यूनिट 1 राष्ट्रवाद का उदय यूरोप में","यूनिट 2 भारत में राष्ट्रवाद","यूनिट 3 भूमंडलीकृत विश्व का बनना","यूनिट 4 औद्योगीकरण का युग","यूनिट 5 मुद्रण संस्कृति","यूनिट 6 संसाधन एवं विकास","यूनिट 7 वन एवं वन्य जीव","यूनिट 8 जल संसाधन","यूनिट 9 कृषि","यूनिट 10 खनिज तथा ऊर्जा","यूनिट 11 विनिर्माण उद्योग","यूनिट 12 राष्ट्रीय अर्थव्यवस्था की जीवन रेखाएँ","यूनिट 13 सत्ता की साझेदारी","यूनिट 14 संघवाद","यूनिट 15 जाति धर्म लैंगिक मसले","यूनिट 16 राजनीतिक दल","यूनिट 17 लोकतंत्र के परिणाम","यूनिट 18 विकास","यूनिट 19 भारतीय अर्थव्यवस्था के क्षेत्रक","यूनिट 20 मुद्रा और साख","यूनिट 21 वैश्वीकरण"],
+      "अंग्रेजी": ["First Flight - A Letter to God","Nelson Mandela","Two Stories About Flying","From the Diary of Anne Frank","Glimpses of India","Mijbil the Otter","Madam Rides the Bus","The Sermon at Benares","The Proposal","Poetry Section","Footprints - Triumph of Surgery","The Thief's Story","The Midnight Visitor","A Question of Trust","Footprints Without Feet","The Making of a Scientist","The Necklace","Bholi","The Book That Saved the Earth"],
+      "हिंदी": ["क्षितिज-2 पद्य खंड","क्षितिज-2 गद्य खंड","कृतिका-2","व्याकरण","लेखन"]
     },
-
     "Class 9": {
-      "विज्ञान": [],
-      "गणित": [],
-      "सामाजिक विज्ञान": [],
-      "अंग्रेजी": [],
-      "हिंदी": []
+      "विज्ञान": ["यूनिट 1 हमारे आस-पास के पदार्थ","यूनिट 2 क्या हमारे आस-पास के पदार्थ शुद्ध हैं","यूनिट 3 परमाणु एवं अणु","यूनिट 4 परमाणु की संरचना","यूनिट 5 जीवन की मौलिक इकाई","यूनिट 6 ऊतक","यूनिट 7 गति","यूनिट 8 बल तथा गति के नियम","यूनिट 9 गुरुत्वाकर्षण","यूनिट 10 कार्य तथा ऊर्जा","यूनिट 11 ध्वनि","यूनिट 12 खाद्य संसाधनों में सुधार"],
+      "गणित": ["यूनिट 1 संख्या पद्धति","यूनिट 2 बहुपद","यूनिट 3 निर्देशांक ज्यामिति","यूनिट 4 दो चरों वाले रैखिक समीकरण","यूनिट 5 यूक्लिड की ज्यामिति","यूनिट 6 रेखाएँ और कोण","यूनिट 7 त्रिभुज","यूनिट 8 चतुर्भुज","यूनिट 9 वृत्त","यूनिट 10 हीरोन का सूत्र","यूनिट 11 पृष्ठीय क्षेत्रफल और आयतन","यूनिट 12 सांख्यिकी"],
+      "सामाजिक विज्ञान": ["यूनिट 1 फ्रांसीसी क्रांति","यूनिट 2 यूरोप में समाजवाद","यूनिट 3 नात्सीवाद और हिटलर","यूनिट 4 वन्य समाज और उपनिवेशवाद","यूनिट 5 आधुनिक विश्व में चरवाहे","यूनिट 6 भारत आकार और स्थिति","यूनिट 7 भारत का भौतिक स्वरूप","यूनिट 8 अपवाह","यूनिट 9 जलवायु","यूनिट 10 प्राकृतिक वनस्पति","यूनिट 11 जनसंख्या","यूनिट 12 लोकतंत्र क्या क्यों","यूनिट 13 संविधान निर्माण","यूनिट 14 चुनावी राजनीति","यूनिट 15 संस्थाओं का कामकाज","यूनिट 16 लोकतांत्रिक अधिकार","यूनिट 17 पालमपुर गाँव","यूनिट 18 संसाधन के रूप में लोग","यूनिट 19 निर्धनता चुनौती","यूनिट 20 भारत में खाद्य सुरक्षा"],
+      "अंग्रेजी": ["Beehive - The Fun They Had","The Sound of Music","The Little Girl","A Truly Beautiful Mind","The Snake and the Mirror","My Childhood","Reach for the Top","Kathmandu","If I Were You","Poetry - Road Not Taken","Wind","Rain on the Roof","Lake Isle of Innisfree","Legend of Northland","No Men Are Foreign","On Killing a Tree","A Slumber Did My Spirit Seal","Moments - Lost Child","Adventures of Toto","Iswaran the Storyteller","In the Kingdom of Fools","The Happy Prince","The Last Leaf","A House is not a Home","The Beggar"],
+      "हिंदी": ["क्षितिज-1 गद्य","क्षितिज-1 पद्य","कृतिका-1","व्याकरण"]
     }
   },
-
   "MP Board English Medium": {
     "Class 12": {
-      "Physics": ["Unit 1 Electrostatics"],
-      "Chemistry": [],
-      "Mathematics": [],
-      "Biology": [],
-      "English": [],
-      "Hindi": []
+      "Physics": ["Unit 1 Electric Charges and Fields","Unit 2 Electrostatic Potential and Capacitance","Unit 3 Current Electricity","Unit 4 Moving Charges and Magnetism","Unit 5 Magnetism and Matter","Unit 6 Electromagnetic Induction","Unit 7 Alternating Current","Unit 8 Electromagnetic Waves","Unit 9 Ray Optics","Unit 10 Wave Optics","Unit 11 Dual Nature","Unit 12 Atoms","Unit 13 Nuclei","Unit 14 Semiconductor"],
+      "Chemistry": ["Unit 1 Solutions","Unit 2 Electrochemistry","Unit 3 Chemical Kinetics","Unit 4 d and f Block","Unit 5 Coordination Compounds","Unit 6 Haloalkanes and Haloarenes","Unit 7 Alcohols Phenols Ethers","Unit 8 Aldehydes Ketones Acids","Unit 9 Amines","Unit 10 Biomolecules"],
+      "Mathematics": ["Unit 1 to 13 as per NCERT"],
+      "Biology": ["Unit 1 to 13 as per NCERT"],
+      "English": ["Flamingo + Vistas All Chapters"],
+      "Hindi": ["Aaroh + Vitan"]
+    },
+    "Class 11": {
+      "Physics": ["Unit 1 Physical World","Unit 2 Kinematics","Unit 3 Laws of Motion","Unit 4 Work Energy Power","Unit 5 Rotational Motion","Unit 6 Gravitation","Unit 7 Properties of Matter","Unit 8 Thermodynamics","Unit 9 Kinetic Theory","Unit 10 Oscillations and Waves"],
+      "Chemistry": ["Unit 1 Basic Concepts","Unit 2 Structure of Atom","Unit 3 Periodicity","Unit 4 Chemical Bonding","Unit 5 Thermodynamics","Unit 6 Equilibrium","Unit 7 Redox","Unit 8 Organic Basics","Unit 9 Hydrocarbons"],
+      "Mathematics": ["Unit 1 Sets","Unit 2 Relations and Functions","Unit 3 Trigonometric Functions","Unit 4 Complex Numbers","Unit 5 Linear Inequalities","Unit 6 Permutations Combinations","Unit 7 Binomial Theorem","Unit 8 Sequence Series","Unit 9 Straight Lines","Unit 10 Conic Sections","Unit 11 3D Geometry","Unit 12 Limits and Derivatives","Unit 13 Statistics","Unit 14 Probability"],
+      "Biology": ["Unit 1 Diversity","Unit 2 Structural Organisation","Unit 3 Cell Structure","Unit 4 Plant Physiology","Unit 5 Human Physiology"],
+      "English": ["Hornbill + Snapshots"],
+      "Hindi": ["Aaroh + Vitan"]
+    },
+    "Class 10": {
+      "Science": ["Unit 1 Chemical Reactions","Unit 2 Acids Bases Salts","Unit 3 Metals and Non-metals","Unit 4 Carbon Compounds","Unit 5 Periodic Classification","Unit 6 Life Processes","Unit 7 Control and Coordination","Unit 8 How do Organisms Reproduce","Unit 9 Heredity and Evolution","Unit 10 Light","Unit 11 Human Eye","Unit 12 Electricity","Unit 13 Magnetic Effects","Unit 14 Environment"],
+      "Mathematics": ["Unit 1 Real Numbers","Unit 2 Polynomials","Unit 3 Linear Equations","Unit 4 Quadratic Equations","Unit 5 AP","Unit 6 Triangles","Unit 7 Coordinate Geometry","Unit 8 Trigonometry","Unit 9 Applications","Unit 10 Circles","Unit 11 Areas Related to Circles","Unit 12 Surface Areas Volumes","Unit 13 Statistics","Unit 14 Probability"],
+      "Social Science": ["History - Nationalism in Europe","Nationalism in India","Geography - Resources","Water","Agriculture","Civics - Power Sharing","Federalism","Economics - Development","Sectors"],
+      "English": ["First Flight + Footprints"],
+      "Hindi": ["Kshitij + Kritika"]
+    },
+    "Class 9": {
+      "Science": ["Unit 1 Matter in Our Surroundings","Unit 2 Is Matter Pure","Unit 3 Atoms and Molecules","Unit 4 Structure of Atom","Unit 5 Fundamental Unit of Life","Unit 6 Tissues","Unit 7 Motion","Unit 8 Force and Laws","Unit 9 Gravitation","Unit 10 Work and Energy","Unit 11 Sound","Unit 12 Food Resources"],
+      "Mathematics": ["Unit 1 Number Systems","Unit 2 Polynomials","Unit 3 Coordinate Geometry","Unit 4 Linear Equations","Unit 5 Euclid Geometry","Unit 6 Lines and Angles","Unit 7 Triangles","Unit 8 Quadrilaterals","Unit 9 Circles","Unit 10 Heron's Formula","Unit 11 Surface Areas Volumes","Unit 12 Statistics"],
+      "Social Science": ["History - French Revolution","Socialism","Nazism","Geography - India Size","Physical Features","Drainage","Climate","Civics - Democracy","Constitution","Economics - Palampur"],
+      "English": ["Beehive + Moments"],
+      "Hindi": ["Kshitij + Kritika"]
     }
   },
-
   "CBSE": {
     "Class 12": {
-      "Physics": [],
-      "Chemistry": [],
-      "Mathematics": [],
-      "Biology": [],
-      "English": [],
-      "Hindi": []
+      "Physics": ["Unit 1 Electric Charges and Fields","Unit 2 Potential and Capacitance","Unit 3 Current Electricity","Unit 4 Moving Charges","Unit 5 Magnetism and Matter","Unit 6 EMI","Unit 7 AC","Unit 8 EM Waves","Unit 9 Ray Optics","Unit 10 Wave Optics","Unit 11 Dual Nature","Unit 12 Atoms","Unit 13 Nuclei","Unit 14 Semiconductor"],
+      "Chemistry": ["Unit 1 Solutions","Unit 2 Electrochemistry","Unit 3 Chemical Kinetics","Unit 4 d and f Block","Unit 5 Coordination","Unit 6 Haloalkanes","Unit 7 Alcohols Phenols Ethers","Unit 8 Aldehydes Ketones Acids","Unit 9 Amines","Unit 10 Biomolecules"],
+      "Mathematics": ["Unit 1 Relations and Functions","Unit 2 Inverse Trig","Unit 3 Matrices","Unit 4 Determinants","Unit 5 Continuity","Unit 6 Application of Derivatives","Unit 7 Integrals","Unit 8 Application of Integrals","Unit 9 Differential Equations","Unit 10 Vector Algebra","Unit 11 3D Geometry","Unit 12 Linear Programming","Unit 13 Probability"],
+      "Biology": ["Unit 1 Sexual Reproduction","Unit 2 Human Reproduction","Unit 3 Reproductive Health","Unit 4 Principles of Inheritance","Unit 5 Molecular Basis","Unit 6 Evolution","Unit 7 Human Health","Unit 8 Microbes","Unit 9 Biotechnology Principles","Unit 10 Biotechnology Applications","Unit 11 Organisms and Populations","Unit 12 Ecosystem","Unit 13 Biodiversity"],
+      "English": ["Flamingo + Vistas"],
+      "Hindi": ["Aaroh + Vitan"]
+    },
+    "Class 11": {
+      "Physics": ["Unit 1 Physical World and Measurement","Unit 2 Kinematics","Unit 3 Laws of Motion","Unit 4 Work Energy Power","Unit 5 Rotational Motion","Unit 6 Gravitation","Unit 7 Mechanical Properties","Unit 8 Thermal Properties and Thermodynamics","Unit 9 Kinetic Theory","Unit 10 Oscillations and Waves"],
+      "Chemistry": ["Unit 1 Some Basic Concepts","Unit 2 Structure of Atom","Unit 3 Periodicity","Unit 4 Chemical Bonding","Unit 5 Thermodynamics","Unit 6 Equilibrium","Unit 7 Redox","Unit 8 Organic Basics","Unit 9 Hydrocarbons"],
+      "Mathematics": ["Unit 1 Sets","Unit 2 Relations and Functions","Unit 3 Trigonometric Functions","Unit 4 Complex Numbers","Unit 5 Linear Inequalities","Unit 6 Permutations and Combinations","Unit 7 Binomial Theorem","Unit 8 Sequence and Series","Unit 9 Straight Lines","Unit 10 Conic Sections","Unit 11 3D Geometry","Unit 12 Limits and Derivatives","Unit 13 Statistics","Unit 14 Probability"],
+      "Biology": ["Unit 1 Diversity","Unit 2 Structural Organisation","Unit 3 Cell Structure","Unit 4 Plant Physiology","Unit 5 Human Physiology"],
+      "English": ["Hornbill - 8 Chapters + Poetry + Snapshots 5 Chapters"],
+      "Hindi": ["Aaroh - Gadya + Padya + Vitan 4 Chapters"]
+    },
+    "Class 10": {
+      "Science": ["Unit 1 Chemical Reactions","Unit 2 Acids Bases Salts","Unit 3 Metals and Non-metals","Unit 4 Carbon Compounds","Unit 5 Periodic Classification","Unit 6 Life Processes","Unit 7 Control and Coordination","Unit 8 How do Organisms Reproduce","Unit 9 Heredity and Evolution","Unit 10 Light Reflection Refraction","Unit 11 Human Eye","Unit 12 Electricity","Unit 13 Magnetic Effects","Unit 14 Environment"],
+      "Mathematics": ["Unit 1 Real Numbers","Unit 2 Polynomials","Unit 3 Pair of Linear Equations","Unit 4 Quadratic Equations","Unit 5 Arithmetic Progressions","Unit 6 Triangles","Unit 7 Coordinate Geometry","Unit 8 Introduction to Trigonometry","Unit 9 Applications","Unit 10 Circles","Unit 11 Areas Related to Circles","Unit 12 Surface Areas and Volumes","Unit 13 Statistics","Unit 14 Probability"],
+      "Social Science": ["History - Rise of Nationalism in Europe","Nationalism in India","Making of Global World","Age of Industrialisation","Print Culture","Geography - Resources and Development","Forest and Wildlife","Water Resources","Agriculture","Minerals and Energy","Manufacturing Industries","Life Lines","Civics - Power Sharing","Federalism","Gender Religion Caste","Political Parties","Outcomes of Democracy","Economics - Development","Sectors","Money and Credit","Globalisation","Consumer Rights"],
+      "English": ["First Flight 9 Chapters + Poetry + Footprints 9 Stories"],
+      "Hindi": ["Kshitij-2 + Kritika-2"]
+    },
+    "Class 9": {
+      "Science": ["Unit 1 Matter in Our Surroundings","Unit 2 Is Matter Pure","Unit 3 Atoms and Molecules","Unit 4 Structure of Atom","Unit 5 Fundamental Unit of Life","Unit 6 Tissues","Unit 7 Motion","Unit 8 Force and Laws","Unit 9 Gravitation","Unit 10 Work and Energy","Unit 11 Sound","Unit 12 Improvement in Food Resources"],
+      "Mathematics": ["Unit 1 Number Systems","Unit 2 Polynomials","Unit 3 Coordinate Geometry","Unit 4 Linear Equations in Two Variables","Unit 5 Introduction to Euclid's Geometry","Unit 6 Lines and Angles","Unit 7 Triangles","Unit 8 Quadrilaterals","Unit 9 Circles","Unit 10 Heron's Formula","Unit 11 Surface Areas and Volumes","Unit 12 Statistics"],
+      "Social Science": ["History - French Revolution","Socialism in Europe","Nazism and Hitler","Forest Society","Pastoralists","Geography - India Size and Location","Physical Features","Drainage","Climate","Natural Vegetation","Population","Civics - What is Democracy","Constitutional Design","Electoral Politics","Working of Institutions","Democratic Rights","Economics - Palampur","People as Resource","Poverty as Challenge","Food Security"],
+      "English": ["Beehive + Moments"],
+      "Hindi": ["Kshitij-1 + Kritika-1"]
     }
   }
 };
-
-/* ================= CODE ================= */
-
 let currentBoard = "";
 let currentClass = "";
 let currentSubject = "";
-
 function initBoards(){
   const box = document.getElementById("boardBox");
+  box.innerHTML="";
   Object.keys(data).forEach(board=>{
-    box.appendChild(createBtn(board,"#ff512f",()=>{
+    box.appendChild(createBtn(board,"#0D47A1",()=>{
       currentBoard = board;
       loadClasses();
       showPage("classPage");
     }));
   });
 }
-
 function loadClasses(){
   const box = document.getElementById("classBox");
   box.innerHTML = "";
   Object.keys(data[currentBoard]).forEach(cls=>{
-    box.appendChild(createBtn(cls,"#11998e",()=>{
+    box.appendChild(createBtn(cls,"#0D47A1",()=>{
       currentClass = cls;
       loadSubjects();
       showPage("subjectPage");
     }));
   });
 }
-
 function loadSubjects(){
   const box = document.getElementById("subjectBox");
   box.innerHTML = "";
   const subjects = Object.keys(data[currentBoard][currentClass]);
   subjects.forEach(sub=>{
-    box.appendChild(createBtn(sub,"#396afc",()=>{
+    box.appendChild(createBtn(sub,"#0D47A1",()=>{
       currentSubject = sub;
       loadUnits();
       showPage("unitPage");
     }));
   });
 }
-
 function loadUnits(){
   const box = document.getElementById("unitBox");
   box.innerHTML = "";
-
   const units = data[currentBoard]?.[currentClass]?.[currentSubject] || [];
-
   if(units.length === 0){
     box.innerHTML = "<p>No Units Available</p>";
     return;
   }
-
   units.forEach(u=>{
-    box.appendChild(createBtn(u,"#6a11cb",()=>{
-
+    box.appendChild(createBtn(u,"#0D47A1",()=>{
       alert("Access Restricted: यह स्टडी नोट्स केवल PAL Study Center के नामांकित विद्यार्थियों के लिए उपलब्ध हैं।");
-
     }));
   });
 }
-
 function createBtn(text,color,fn){
   const b = document.createElement("button");
   b.className = "main-btn";
   b.innerText = text;
-  b.style.background = "linear-gradient(135deg,"+color+",#2575fc)";
+  b.style.background = "linear-gradient(#0D47A1)";
   b.onclick = fn;
   return b;
 }
-
 function showPage(page){
-  document.querySelectorAll("#boardPage,#classPage,#subjectPage,#unitPage")
-  .forEach(p=>p.style.display="none");
+  document.querySelectorAll("#boardPage,#classPage,#subjectPage,#unitPage").forEach(p=>p.style.display="none");
   document.getElementById(page).style.display="block";
 }
-
 function goBack(show,hide){
   document.getElementById(hide).style.display="none";
   document.getElementById(show).style.display="block";
 }
-
 showPage("boardPage");
 initBoards();
-
 </script>
-
 </body>
 </html>
