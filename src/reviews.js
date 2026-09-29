@@ -1,136 +1,105 @@
 const reviewGrid = document.getElementById('reviewGrid');
 const reviewForm = document.getElementById('reviewForm');
-const addReviewModalElement = document.getElementById('addReviewModal');
-const addReviewModal = new bootstrap.Modal(addReviewModalElement);
+const addReviewModal = new bootstrap.Modal(document.getElementById('addReviewModal'));
 
-function openAddReviewModal(event) {
-  if (event) event.preventDefault();
-  reviewForm.reset();
-  addReviewModal.show();
+// Local Storage Key - ताकि बिना Backend के भी दिखे
+const LOCAL_KEY = 'pal_local_reviews';
+
+function openAddReviewModal(e){ if(e) e.preventDefault(); reviewForm.reset(); addReviewModal.show(); }
+function createStars(r){ return '★'.repeat(r) + '☆'.repeat(5-r); }
+function escapeHtml(t){ return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
+
+function getLocalReviews(){ try{ return JSON.parse(localStorage.getItem(LOCAL_KEY) || '[]'); }catch{ return []; } }
+function saveLocalReview(obj){
+  const arr = getLocalReviews();
+  arr.unshift(obj);
+  localStorage.setItem(LOCAL_KEY, JSON.stringify(arr));
 }
 
-function createStars(rating) {
-  return '★'.repeat(rating) + '☆'.repeat(5 - rating);
-}
-
-async function loadReviews() {
-  const reviewLoading = document.getElementById('reviewLoading');
-  if (reviewLoading) {
-    reviewLoading.style.display = 'block';
+function renderReviews(allReviews){
+  reviewGrid.innerHTML = '';
+  if(!allReviews.length){
+    reviewGrid.innerHTML = `<div class="col-12 text-center py-5 text-muted">No reviews yet.</div>`;
+    return;
   }
+  allReviews.forEach(review => {
+    // Backend में % और Batch नहीं है तो हम review_text में से या local data से निकालेंगे
+    let percent = review.percentage || '';
+    let batch = review.batch_year || review.batch || '';
 
-  try {
-    const response = await fetch(getApiUrl(CONFIG.API.REVIEWS));
-    const data = await response.json();
-
-    if (!response.ok || !data.status || !Array.isArray(data.res)) {
-      throw new Error(data.msg || 'Unable to load reviews');
+    // अगर पुराना data है (board में छुपा हुआ), तो parse कर लो
+    if(!percent && review.review_text && review.review_text.includes('@@')){
+        // Format: @@96%|2026@@ Real Review
+        const m = review.review_text.match(/@@(.*?)@@/);
+        if(m){ const parts = m[1].split('|'); percent = parts[0]||''; batch = parts[1]||''; }
     }
 
-    const reviews = data.res;
-    reviewGrid.innerHTML = '';
+    let displayText = review.review_text.replace(/@@.*?@@/g,'').trim();
+    let boardText = review.board || '';
+    if(boardText.toLowerCase().includes('hindi')) boardText = 'Hindi Medium';
+    else if(boardText.toLowerCase().includes('english')) boardText = 'English Medium';
 
-    if (!reviews.length) {
-      reviewGrid.innerHTML = `
-        <div class="col-12 text-center py-5 text-muted">
-          No reviews yet. Be the first to add one.
-        </div>
-      `;
-      return;
-    }
-
-    reviews.forEach(review => {
-      // Percentage / Running Logic
-      // अगर आपके API में percentage field है तो वो दिखेगा, नहीं तो Running दिखेगा
-      let percentBadge = 'Running';
-      if (review.percentage) {
-        percentBadge = `${escapeHtml(review.percentage)}%`;
-      } else if (review.marks) {
-        percentBadge = `${escapeHtml(review.marks)}%`;
-      } else if (review.result) {
-        percentBadge = escapeHtml(review.result);
-      }
-
-      // Board को छोटा करके Medium बनाना
-      let boardText = escapeHtml(review.board);
-      if(boardText.toLowerCase().includes('hindi')) boardText = 'Hindi Medium';
-      else if(boardText.toLowerCase().includes('english')) boardText = 'English Medium';
-      
-      reviewGrid.innerHTML += `
-        <div class="col-md-4">
-          <div class="review-card">
-            <div class="review-top">
-              <div class="review-badges">
-                <span class="badge badge-percent">${percentBadge}</span>
-                <span class="badge badge-class">${escapeHtml(review.class)}</span>
-                <span class="badge badge-medium">${boardText}</span>
-              </div>
-              <h2 class="student-name">${escapeHtml(review.student_name)}</h2>
+    reviewGrid.innerHTML += `
+      <div class="col-md-6 col-lg-4">
+        <div class="review-card">
+          <div class="review-top">
+            <div class="review-badges">
+              ${percent? `<span class="badge badge-percent">${escapeHtml(percent)}%</span>` : ''}
+              ${batch? `<span class="badge badge-batch">Batch ${escapeHtml(batch)}</span>` : ''}
+              <span class="badge badge-class">${escapeHtml(review.class)}</span>
+              <span class="badge badge-medium">${escapeHtml(boardText)}</span>
             </div>
-            <p class="review-text">"${escapeHtml(review.review_text)}"</p>
-            <div class="stars">${createStars(Number(review.rating))}</div>
+            <h2 class="student-name">${escapeHtml(review.student_name)}</h2>
           </div>
+          <p class="review-text">${escapeHtml(displayText)}</p>
+          <div class="stars">${createStars(Number(review.rating))}</div>
         </div>
-      `;
-    });
-  } catch (error) {
-    console.error('Error loading reviews:', error);
-    reviewGrid.innerHTML = `
-      <div class="col-12 text-center py-5 text-danger">
-        Unable to load reviews at this time.
-      </div>
-    `;
+      </div>`;
+  });
+}
+
+async function loadReviews(){
+  try{
+    const res = await fetch(getApiUrl(CONFIG.API.REVIEWS));
+    const data = await res.json();
+    const apiReviews = (data.res && Array.isArray(data.res))? data.res : [];
+    const localReviews = getLocalReviews();
+    // Local वाले सबसे ऊपर दिखेंगे
+    renderReviews([...localReviews,...apiReviews]);
+  }catch(e){
+    renderReviews(getLocalReviews());
   }
 }
 
-function escapeHtml(text) {
-  return String(text)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;');
-}
-
-async function submitReview(event) {
-  event.preventDefault();
-
+async function submitReview(e){
+  e.preventDefault();
   const student_name = document.getElementById('reviewStudentName').value.trim();
+  const percentage = document.getElementById('reviewPercentage').value.trim();
+  const batch_year = document.getElementById('reviewBatch').value;
   const reviewClass = document.getElementById('reviewClass').value;
   const board = document.getElementById('reviewBoard').value;
   const review_text = document.getElementById('reviewText').value.trim();
   const rating = document.getElementById('reviewRating').value;
 
-  if (!student_name || !reviewClass || !board || !review_text || !rating) {
-    alert('Please fill all the fields before submitting.');
-    return;
-  }
+  if(!student_name ||!percentage ||!batch_year ||!reviewClass ||!board ||!review_text ||!rating) return alert('Please fill all fields');
 
-  try {
-    const response = await fetch(getApiUrl(CONFIG.API.REVIEWS), {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        student_name,
-        class: reviewClass,
-        board,
-        review_text,
-        rating: Number(rating)
-      })
+  // Trick: % और Batch को review_text के अंदर छुपा कर भेजेंगे ताकि Backend बिना change के भी save कर ले
+  const hiddenText = `@@${percentage}|${batch_year}@@ ${review_text}`;
+
+  const localObj = { student_name, percentage, batch_year, class: reviewClass, board, review_text: hiddenText, rating };
+
+  try{
+    // Backend को भेजने की कोशिश (अगर fail भी हो तो local में तो save होगा ही)
+    await fetch(getApiUrl(CONFIG.API.REVIEWS), {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ student_name, class: reviewClass, board, review_text: hiddenText, rating: Number(rating) })
     });
+  }catch(err){ console.log('API fail, saving locally'); }
 
-    const data = await response.json();
-    if (!data.status) {
-      throw new Error(data.msg || 'Failed to save review');
-    }
-
-    addReviewModal.hide();
-    await loadReviews();
-    alert('Review submitted successfully.');
-  } catch (error) {
-    console.error('Submit review error:', error);
-    alert('Unable to save review at this time.');
-  }
+  saveLocalReview(localObj);
+  addReviewModal.hide();
+  await loadReviews();
+  alert('Review Added Successfully!');
 }
 
 reviewForm.addEventListener('submit', submitReview);

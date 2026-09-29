@@ -190,61 +190,24 @@ from{opacity:0;transform:translateY(40px);}to{opacity:1;transform:translateY(0);
 </section>
   
   
-<!-- Add Review Modal -->
-<div class="modal fade" id="addReviewModal" tabindex="-1" aria-labelledby="addReviewModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="addReviewModalLabel">Add Review</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
+<!-- Add Review Modal - UPDATED -->
+<div class="modal fade" id="addReviewModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" style="border-radius:20px;">
+      <div class="modal-header border-0"><h5 class="modal-title fw-bold">Add New Review</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
       <form id="reviewForm">
         <div class="modal-body">
           <div class="row g-3">
-            <div class="col-md-6">
-              <label class="form-label">Student Name</label>
-              <input type="text" id="reviewStudentName" class="form-control" placeholder="Enter student name" required>
-            </div>
-            <div class="col-md-6">
-              <label class="form-label">Class</label>
-              <select id="reviewClass" class="form-select" required>
-                <option value="">Select class</option>
-                <option value="Class 9th">Class 9th</option>
-                <option value="Class 10th">Class 10th</option>
-                <option value="Class 11th">Class 11th</option>
-                <option value="Class 12th">Class 12th</option>
-              </select>
-            </div>
-            <div class="col-md-6">
-              <label class="form-label">Board</label>
-              <select id="reviewBoard" class="form-select" required>
-                <option value="">Select board</option>
-                <option value="MP Board (Hindi Medium)">MP Board (Hindi Medium)</option>
-                <option value="MP Board (English Medium)">MP Board (English Medium)</option>
-                <option value="CBSE">CBSE</option>
-              </select>
-            </div>
-            <div class="col-md-6">
-              <label class="form-label">Stars Rating</label>
-              <select id="reviewRating" class="form-select" required>
-                <option value="">Select rating</option>
-                <option value="5">★★★★★</option>
-                <option value="4">★★★★</option>
-                <option value="3">★★★</option>
-                <option value="2">★★</option>
-                <option value="1">★</option>
-              </select>
-            </div>
-            <div class="col-12">
-              <label class="form-label">Write Review</label>
-              <textarea id="reviewText" class="form-control" rows="4" placeholder="Write the review text" required></textarea>
-            </div>
+            <div class="col-12"><label class="form-label fw-bold">Student Name *</label><input type="text" id="reviewStudentName" class="form-control" placeholder="Ex: Sneha Solanki" required></div>
+            <div class="col-md-6"><label class="form-label fw-bold">Percentage % *</label><input type="number" id="reviewPercentage" class="form-control" placeholder="Ex: 96.5" min="0" max="100" step="0.01" required></div>
+            <div class="col-md-6"><label class="form-label fw-bold">Batch Year *</label><select id="reviewBatch" class="form-select" required><option value="">Select</option><option value="2026">2026</option><option value="2025">2025</option><option value="2024">2024</option></select></div>
+            <div class="col-md-6"><label class="form-label fw-bold">Class *</label><select id="reviewClass" class="form-select" required><option value="">Select</option><option value="Class 9th">Class 9th</option><option value="Class 10th">Class 10th</option><option value="Class 11th">Class 11th</option><option value="Class 12th">Class 12th</option></select></div>
+            <div class="col-md-6"><label class="form-label fw-bold">Board *</label><select id="reviewBoard" class="form-select" required><option value="">Select</option><option value="MP Board (Hindi Medium)">MP Hindi Medium</option><option value="MP Board (English Medium)">MP English Medium</option><option value="CBSE">CBSE</option></select></div>
+            <div class="col-12"><label class="form-label fw-bold">Stars Rating *</label><select id="reviewRating" class="form-select" required><option value="">Select Rating</option><option value="5">★★★★★ (5)</option><option value="4">★★★★ (4)</option><option value="3">★★★ (3)</option></select></div>
+            <div class="col-12"><label class="form-label fw-bold">Write Review *</label><textarea id="reviewText" class="form-control" rows="3" placeholder="Review लिखें..." required></textarea></div>
           </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-          <button type="submit" class="btn btn-primary">Submit Review</button>
-        </div>
+        <div class="modal-footer border-0"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button><button type="submit" class="btn btn-primary px-4">Submit</button></div>
       </form>
     </div>
   </div>
