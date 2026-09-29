@@ -40,12 +40,34 @@ async function loadReviews() {
     }
 
     reviews.forEach(review => {
+      // Percentage / Running Logic
+      // अगर आपके API में percentage field है तो वो दिखेगा, नहीं तो Running दिखेगा
+      let percentBadge = 'Running';
+      if (review.percentage) {
+        percentBadge = `${escapeHtml(review.percentage)}%`;
+      } else if (review.marks) {
+        percentBadge = `${escapeHtml(review.marks)}%`;
+      } else if (review.result) {
+        percentBadge = escapeHtml(review.result);
+      }
+
+      // Board को छोटा करके Medium बनाना
+      let boardText = escapeHtml(review.board);
+      if(boardText.toLowerCase().includes('hindi')) boardText = 'Hindi Medium';
+      else if(boardText.toLowerCase().includes('english')) boardText = 'English Medium';
+      
       reviewGrid.innerHTML += `
         <div class="col-md-4">
           <div class="review-card">
-            <h2>${escapeHtml(review.student_name)}</h2>
-            <p class="student-info">${escapeHtml(review.board)} | ${escapeHtml(review.class)}</p>
-            <p class="review-text">${escapeHtml(review.review_text)}</p>
+            <div class="review-top">
+              <div class="review-badges">
+                <span class="badge badge-percent">${percentBadge}</span>
+                <span class="badge badge-class">${escapeHtml(review.class)}</span>
+                <span class="badge badge-medium">${boardText}</span>
+              </div>
+              <h2 class="student-name">${escapeHtml(review.student_name)}</h2>
+            </div>
+            <p class="review-text">"${escapeHtml(review.review_text)}"</p>
             <div class="stars">${createStars(Number(review.rating))}</div>
           </div>
         </div>
