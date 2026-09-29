@@ -261,7 +261,7 @@ Pal <span>Study Center</span>
 <!-- CONTENT -->
 <div class="container">
 
- <div class="notes-title">📘 Unit 5(A) - Electromagnetic Induction</div
+ <div class="notes-title">📘 Unit 4(A) - Electromagnetic Induction</div
 >
 
 <div class="qa-box">
@@ -713,33 +713,139 @@ The factors that affect the coefficient of mutual induction between two solenoid
 
 <div class="qa-box">
     <div class="question">
-        Q: Write the difference between self-induction and mutual induction.
+        Question: Prove that $M = \sqrt{L_1 L_2}$
+    </div>
+    <div class="answer">
+        <div class="question-image">
+            <img src="images/image15.png" alt="Two co-planar circular coils">
+        </div>
+        Let us consider two co-planar circular coils with radius $r$ and number of turns $n_1$ and $n_2$.
+        <br><br>
+        When current $I$ flows through the primary coil, the magnetic field produced at the center is
+        <p class="formula">
+        $
+        B=\frac{\mu_0 n_1 I}{2r}
+        $
+        </p>
+        Magnetic flux linked with the first coil —
+        <p class="formula">
+        $
+        \phi_1 = B \times 
+        $ Effective area of first coil
+        </p>
+        <p class="formula">
+        $
+        \phi_1 = \left(\frac{\mu_0 n_1 I}{2r}\right)\times n_1(\pi r^2)
+        $
+        </p>
+        <p class="formula">
+        $
+        \phi_1 = \frac{\mu_0 \pi n_1^2 r I}{2}
+        $
+        </p>
+        Hence, the self-inductance of the first coil is —
+        <p class="formula">
+        $
+        L_1=\frac{\phi_1}{I}
+        $
+        </p>
+        <p class="formula">
+        $
+        L_1=\frac{\mu_0 \pi n_1^2 r}{2}
+        $
+        </p>
+        Similarly, the self-inductance of the second coil is —
+        <p class="formula">
+        $
+        L_2=\frac{\mu_0 \pi n_2^2 r}{2}
+        $
+        </p>
+        Magnetic flux linked with the second coil —
+        <p class="formula">
+        $
+        \phi_2 = B \times 
+        $ Effective area of second coil
+        </p>
+        <p class="formula">
+        $
+        \phi_2 = \left(\frac{\mu_0 n_1 I}{2r}\right)\times n_2(\pi r^2)
+        $
+        </p>
+        <p class="formula">
+        $
+        \phi_2 = \frac{\mu_0 \pi n_1 n_2 r I}{2}
+        $
+        </p>
+        Hence, the mutual inductance is —
+        <p class="formula">
+        $
+        M=\frac{\phi_2}{I}
+        $
+        </p>
+        <p class="formula">
+        $
+        M=\frac{\mu_0 \pi n_1 n_2 r}{2}
+        $
+        </p>
+        Product of $L_1$ and $L_2$ —
+        <p class="formula">
+        $
+        L_1 L_2 = \frac{\mu_0 \pi n_1^2 r}{2} \times \frac{\mu_0 \pi n_2^2 r}{2}
+        $
+        </p>
+        <p class="formula">
+        $
+        L_1 L_2 = \left(\frac{\mu_0 \pi n_1 n_2 r}{2}\right)^2
+        $
+        </p>
+        <p class="formula">
+        $
+        L_1 L_2 = M^2
+        $
+        </p>
+        <p class="formula">
+        $
+        \boxed{M=\sqrt{L_1 L_2}}
+        $
+        </p>
+        Hence Proved.
+    </div>
+</div>
+
+  <div class="qa-box">
+    <div class="question">
+        Question: Write the difference between Self Induction and Mutual Induction.
     </div>
     <div class="answer">
         <table>
             <tr>
-                <th>Self-induction</th>
-                <th>Mutual induction</th>
+                <th>S.No.</th>
+                <th>Self Induction</th>
+                <th>Mutual Induction</th>
             </tr>
             <tr>
-                <td>
-                    <ol>
-                        <li>This phenomenon occurs in the same coil when the current flowing through it changes.</li>
-                        <li>Only one coil is involved in this phenomenon.</li>
-                        <li>The induced current affects the main current.</li>
-                    </ol>
-                </td>
-                <td>
-                    <ol>
-                        <li>This phenomenon occurs in another coil placed near the coil in which the current is changing.</li>
-                        <li>Two coils are involved in this phenomenon.</li>
-                        <li>The induced current is produced in the second coil, so the main current is not affected.</li>
-                    </ol>
-                </td>
+                <td>1.</td>
+                <td>The phenomenon of induced e.m.f. produced in the same coil due to change in current in that coil is called Self Induction.</td>
+                <td>The phenomenon of induced e.m.f. produced in a nearby second coil due to change in current in one coil is called Mutual Induction.</td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>Only one coil is involved in it.</td>
+                <td>Two coils are involved - Primary and Secondary.</td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>The self-induced current opposes the main current.</td>
+                <td>There is no change in the main current of the primary coil, induced current is produced in the secondary coil.</td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td>The coefficient of self-induction is $L = \frac{\phi}{I}$.</td>
+                <td>The coefficient of mutual induction is $M = \frac{\phi_2}{I_1}$.</td>
             </tr>
         </table>
     </div>
-</div>
+  </div>
 
 <div class="qa-box">
     <div class="question">
