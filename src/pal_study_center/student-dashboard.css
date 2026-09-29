@@ -176,13 +176,14 @@ body{
 /* =========================================================
    HERO CONTENT
 ========================================================= */
-.hero-content {
-    animation: slowFloat 4s ease-in-out infinite alternate;
-}
-
-@keyframes slowFloat {
-    0% { transform: translateY(0px); }
-    100% { transform: translateY(-8px); }
+.hero-content{
+    width:100%;
+    max-width:850px;
+    margin:auto;
+    position:relative;
+    z-index:2;
+    animation:none !important;
+    transform:none !important;
 }
 .hero-content{
     width:100%;
