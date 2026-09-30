@@ -22,7 +22,13 @@ window.MathJax = {
     }
 };
 </script>
-
+  
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$', '$']] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
 <style>
@@ -42,7 +48,7 @@ body{
 /* NAVBAR */
 
 .navbar{
-    background:rgba(15,23,42,0.90);
+    background:rgba(23,74,126,0.95);
     backdrop-filter:blur(10px);
     box-shadow:0 4px 18px rgba(0,0,0,.18);
     padding:10px 0;
@@ -68,17 +74,21 @@ body{
 
 /* CHAPTER TITLE */
 
-.notes-title{
-    background:#e3f2fd;
-    color:#1565c0;
-    padding:15px 20px;
-    border-left:6px solid #1565c0;
-    border-radius:50px;
-    font-size:28px;
-    font-weight:bold;
-    margin-bottom:30px;
-    text-align:center;
+
+.notes-title {
+    background: #174a7e;
+    color: white;
+    padding: 18px 22px;
+    border-radius: 12px 12px 0 0;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 100px;
+    margin-bottom: 0;
 }
+
+
+
+
 
 /* QUESTION ANSWER BOX */
 
@@ -224,7 +234,7 @@ body{
 <div class="notes-container">
 
     <div class="notes-title">
-        📘 अध्याय — कार्बोक्सिलिक अम्ल (वसीय अम्ल)
+        📘 8(B) कार्बोक्सिलिक अम्ल (वसीय अम्ल)
     </div>
 
     <!-- ================= प्रश्न 1 ================= -->
@@ -266,16 +276,25 @@ body{
 
             <p class="sub-heading">1. ऐलिफैटिक अम्ल</p>
 
-            <p>इनमें –COOH समूह ऐल्किल (R) समूह से जुड़ा रहता है। जैसे —</p>
+            <p>इनमें –COOH समूह ऐल्किल (R) समूह से जुड़ा रहता है। अतः इनका सामान्य सूत्र R-COOH होता है।  </p>
+            
+          <p><b>उदाहरण:</b></p>
 
-            <div class="formula">\( R\text{-}COOH \)</div>
+    
+
+            <div class="formula">
+             $ H-COOH  $ <br><br>
+              $ CH_3-COOH $
+            </div>
 
             <p class="sub-heading">2. ऐरोमैटिक अम्ल</p>
 
-            <p>इनमें –COOH समूह ऐरिल (Ar) समूह से जुड़ा रहता है। जैसे —</p>
+            <p>इनमें –COOH समूह ऐरिल (Ar) समूह से जुड़ा रहता है। अतः इनका सामान्य सूत्र Ar-COOH होता है। </p>
 
-            <div class="formula">\( Ar\text{-}COOH \)</div>
-
+          <p><b>उदाहरण:</b></p>
+           <div class="formula">
+           $ C_6H_5 - COOH $
+            </div>
         </div>
 
     </div>
@@ -364,32 +383,15 @@ body{
                     आदि शब्द लगाते हैं।</li>
             </ol>
 
-            <div class="important">
-                <b>नोट:</b> स्रोत नोट्स में इस चरण-सूची में दोनों बार
-                "–OH समूह" लिखा गया था (जो एल्कोहॉल नामकरण की शब्दावली है);
-                चूँकि यह अनुच्छेद कार्बोक्सिलिक अम्ल (–COOH समूह) के नामकरण के
-                बारे में है, अतः ऊपर इसे प्रसंग के अनुरूप "–COOH समूह" के रूप
-                में सुधारा गया है।
-            </div>
 
             <p><b>उदाहरण:</b></p>
 
             <div class="formula">
-                \[
-                CH_3COOH \rightarrow \text{मिथेनोइक अम्ल}
-                \]
-                \[
-                C_2H_5COOH \rightarrow \text{एथेनोइक अम्ल}
-                \]
+  $ H\text{-}COOH \rightarrow $ मिथेनोइक अम्ल <br>
+  $ CH_3\text{-}COOH \rightarrow $ एथेनोइक अम्ल
             </div>
 
-            <div class="important">
-                <b>नोट:</b> स्रोत में दिए गए ये सूत्र-नाम युग्म आपस में मेल
-                नहीं खाते — मानक IUPAC नामकरण के अनुसार CH₃COOH (2 कार्बन)
-                <b>एथेनोइक अम्ल</b> तथा C₂H₅COOH (3 कार्बन, प्रोपेनोइक अम्ल)
-                होना चाहिए था, न कि क्रमशः "मिथेनोइक" व "एथेनोइक"। स्रोत की
-                मूल प्रविष्टि यहाँ ज्यों की त्यों रखी गई है।
-            </div>
+    
 
         </div>
 
@@ -414,47 +416,31 @@ body{
             <p>
                 जब एक ही आणविक सूत्र वाले मोनोकार्बोक्सिलिक अम्ल विभिन्न
                 प्रकार की कार्बन श्रृंखलाओं में (सीधी या शाखायुक्त) उपस्थित
-                हों तो इसे श्रृंखला समावयवता कहते हैं। उदाहरण —
+                हों तो इसे श्रृंखला समावयवता कहते हैं। जैसे - C₄H₈O₂ अणुसूत्र से निम्न दो समावयवी प्रदर्शित होते है।
             </p>
 
             <div class="formula">
-                \[
-                CH_3\text{-}CH_2\text{-}CH_2\text{-}COOH
-                \quad \text{तथा} \quad
-                (CH_3)_2CH\text{-}COOH
-                \]
+  $ CH_3\text{-}CH_2\text{-}CH_2\text{-}COOH \rightarrow $ ब्यूटेनोइक अम्ल <br>
+  $ CH_3\text{-}\underset{\underset{CH_3}{|}}{CH}\text{-}COOH \rightarrow $ 2-मेथिलप्रोपेनोइक अम्ल
             </div>
 
-            <div class="important">
-                <b>नोट:</b> स्रोत में इस उदाहरण के ऊपर "C₄H₉OH के लिए –" लिखा
-                गया है, जो एल्कोहॉल का सूत्र है; जबकि नीचे दिए गए दोनों
-                उदाहरण वास्तव में C₄H₈O₂ (ब्यूटैनोइक अम्ल के समावयवी) हैं। यह
-                सूत्र स्रोत की मूल असंगति है, इसे सुधारा नहीं गया है।
-            </div>
+            
 
             <p class="sub-heading">2. क्रियात्मक समावयवता</p>
 
             <p>
                 जब एक ही आणविक सूत्र के यौगिक अलग-अलग क्रियात्मक समूह
                 प्रदर्शित करते हैं तो इसे क्रियात्मक समावयवता कहते हैं।
-                उदाहरण —
+                जैसे -  C₃H₆O₂ अणुसूत्र से निम्न दो समावयवी प्रदर्शित होते है।
             </p>
+            
 
             <div class="formula">
-                \[
-                CH_3\text{-}CH_2\text{-}COOH
-                \quad \text{तथा} \quad
-                CH_3\text{-}COO\text{-}CH_3
-                \]
+  $ CH_3\text{-}CH_2\text{-}COOH \rightarrow $ प्रोपेनोइक अम्ल <br>
+  $ CH_3\text{-}COO\text{-}CH_3 \rightarrow $ मेथिल एथेनोएट
             </div>
+          
 
-            <div class="important">
-                <b>नोट:</b> स्रोत में इस उदाहरण के ऊपर "C₂H₆O के लिए –" लिखा
-                गया है (जो एथिल अल्कोहॉल/डाइमेथिल ईथर का सूत्र है); जबकि नीचे
-                दिए गए उदाहरण वास्तव में C₃H₆O₂ (प्रोपेनोइक अम्ल तथा मेथिल
-                एसीटेट, एस्टर) हैं। यह भी स्रोत की मूल असंगति है, ज्यों की
-                त्यों रखी गई है।
-            </div>
 
         </div>
 
@@ -471,27 +457,13 @@ body{
 
         <div class="answer">
 
-            <div class="important">
-                <b>नोट:</b> स्रोत के कुछ समीकरणों में जल (H₂O) उपोत्पाद
-                स्पष्ट रूप से नहीं दर्शाया गया है; जहाँ स्रोत में यह अनुपस्थित
-                था, वहाँ समीकरण ज्यों का त्यों (बिना जोड़े) रखा गया है।
-            </div>
-
             <p>मोनोकार्बोक्सिलिक अम्ल बनाने की सामान्य विधियाँ निम्न हैं।</p>
 
             <p class="sub-heading">1. ऐल्कोहॉलों के अम्लीय KMnO₄ द्वारा ऑक्सीकरण से</p>
 
             <div class="formula">
-                \[
-                H\text{-}CH_2\text{-}OH + 2[O]
-                \xrightarrow{KMnO_4}
-                H\text{-}COOH
-                \]
-                \[
-                CH_3\text{-}CH_2\text{-}OH + 2[O]
-                \xrightarrow{KMnO_4}
-                CH_3COOH
-                \]
+  $ H\text{-}CH_2\text{-}OH + 2[O] \xrightarrow{KMnO_4} H\text{-}COOH + H_2O $ <br>
+  $ CH_3\text{-}CH_2\text{-}OH + 2[O] \xrightarrow{KMnO_4} CH_3COOH + H_2O $
             </div>
 
             <p class="sub-heading">2. एल्डिहाइड के अम्लीय KMnO₄ द्वारा ऑक्सीकरण से</p>
@@ -517,7 +489,7 @@ body{
             <div class="formula">
                 \[
                 CH_3CN + 2H_2O
-                \xrightarrow{\text{तनु अम्ल}}
+                \xrightarrow{\text{dil.HCl}}
                 CH_3COOH + NH_3
                 \]
             </div>
@@ -530,7 +502,7 @@ body{
             <div class="formula">
                 \[
                 CH_3COOC_2H_5 + H_2O
-                \xrightarrow{\text{तनु } HCl}
+                \xrightarrow{\text{dil. } HCl}
                 CH_3COOH + C_2H_5OH
                 \]
             </div>
@@ -725,12 +697,6 @@ body{
 
         <div class="answer">
 
-            <div class="important">
-                <b>नोट:</b> स्रोत में कई समीकरण असंतुलित (unbalanced) रूप में
-                दिए गए हैं (जैसे जिंक व सोडियम कार्बोनेट वाली अभिक्रियाएँ);
-                यहाँ उन्हें स्रोत के अनुसार ज्यों का त्यों रखा गया है, गुणांक
-                बदलकर संतुलित नहीं किया गया है।
-            </div>
 
             <p>मोनोकार्बोक्सिलिक अम्लों के रासायनिक गुण निम्न हैं।</p>
 
@@ -763,7 +729,7 @@ body{
 
             <div class="formula">
                 \[
-                CH_3COOH + Zn \rightarrow (CH_3COO)_2Zn + H_2
+                2 CH_3COOH + Zn \rightarrow (CH_3COO)_2Zn + H_2
                 \]
             </div>
 
@@ -894,13 +860,6 @@ body{
                 \]
             </div>
 
-            <div class="important">
-                <b>नोट:</b> स्रोत में यह समीकरण दो पंक्तियों में बिखरा हुआ और
-                अस्पष्ट रूप से छपा था ("...CH₃CH₃ + + NaOH + CO₂" के बाद
-                अगली पंक्ति में अकेला "H₂")। ऊपर इसे मानक कोल्बे विद्युत्-
-                अपघटन समीकरण के रूप में संतुलित करते हुए पुनर्गठित किया गया
-                है।
-            </div>
 
             <p><b>3. श्मिट अभिक्रिया</b> — जब अक्रिय विलायक जैसे CHCl₃ में
                 घुले हुए हाइड्रेजोइक अम्ल की वसा अम्लों पर सल्फ्यूरिक अम्ल की
@@ -1032,15 +991,7 @@ body{
                 \]
             </div>
 
-            <div class="important">
-                <b>नोट:</b> स्रोत में इस पथ की एक कड़ी अस्पष्ट/अपूर्ण रूप में
-                छपी थी ("...CH₄ ⟶(+Cl₂)⟶CH₃Cl⟶(+Cl₂)⟶(aq KOH)⟶" — दूसरा
-                "+Cl₂" चरण जलअपघटन चरण के साथ मिलकर छपा है)। ऊपर इसे
-                रासायनिक रूप से सुसंगत बनाते हुए (CH₄ → CH₃Cl → CH₃OH)
-                प्रस्तुत किया गया है, जो स्रोत के अगले चरण (CH₃OH → HCHO) से
-                मेल खाता है।
-            </div>
-
+      
         </div>
 
     </div>
@@ -1121,10 +1072,9 @@ body{
 
             <p><b>उपकरण चित्र:</b></p>
 
-            <div class="formula">
-                <img src="images/image2.png"
-                     alt="प्रयोगशाला में फॉर्मिक अम्ल बनाने की विधि — आसवन उपकरण का चित्र">
-            </div>
+         <div class="question-image">
+            <img src="images/image2.png" alt="चित्र">
+           </div>     
 
         </div>
 
@@ -1176,10 +1126,7 @@ body{
                 <li>विद्युत् लेपन (electroplating) में।</li>
             </ol>
 
-            <p><i>(स्रोत में इस प्रश्न की सूची केवल इन्हीं दो बिंदुओं तक
-                सीमित थी; प्रतीत होता है कि सूची अपूर्ण/संक्षिप्त छोड़ी गई
-                है, अतः अतिरिक्त उपयोग यहाँ नहीं जोड़े गए हैं।)</i></p>
-
+      
         </div>
 
     </div>
@@ -1291,10 +1238,10 @@ body{
                 होता है। हवा को बर्तन के निचले हिस्से में बने छेदों से
                 प्रवेश करने दिया जाता है।</p>
 
-            <div class="formula">
-                <img src="images/image4.png"
-                     alt="शीघ्र सिरका विधि का उपकरण — तनु ऐल्कोहॉल विलयन, छिद्रित तख्ता, लकड़ी का डेंग, वायु प्रवेश छिद्र तथा एकत्रित सिरका दर्शाता आरेख">
-            </div>
+           <div class="question-image">
+            <img src="images/image4.png" alt="चित्र">
+           </div>     
+
 
             <p><b>विधि:</b> एथेनॉल का तनु घोल (10–12%) धीरे-धीरे बर्तन के
                 ऊपरी हिस्से से नीचे टपकाया जाता है। जब एथेनॉल का घोल बीच की
@@ -1469,13 +1416,7 @@ body{
                     C₉H₁₀O है।</li>
             </ol>
 
-            <div class="important">
-                <b>नोट:</b> स्रोत में अणुसूत्र "C 9 H 10 0" (अंक शून्य) के
-                रूप में मुद्रित था, जो स्पष्टतः ऑक्सीजन (O) अक्षर का
-                OCR/टंकण दोष है; इसे C₉H₁₀O के रूप में यांत्रिक रूप से
-                सुधारा गया है, विषय-वस्तु नहीं बदली गई है।
-            </div>
-
+            
         </div>
 
     </div>
@@ -1484,65 +1425,23 @@ body{
     <!-- ================= प्रश्न 28 (अभ्यास प्रश्न) ================= -->
 
     <div class="qa-box">
+  <div class="question">प्रश्न: निम्नलिखित अभ्यास प्रश्नों के उत्तर दीजिए।</div>
+  <div class="answer">
 
-        <div class="question">
-            प्रश्न: निम्नलिखित अभ्यास प्रश्नों के उत्तर दीजिए।
-        </div>
+    <p class="sub-heading">1. HCOOH, CH₃COOH, CCl₃COOH, C₆H₅COOH में सबसे अधिक अम्लीय कौन है?</p>
+    <div class="formula">$ CCl_3COOH \rightarrow $ ट्राईक्लोरो एसीटिक अम्ल (3 Cl के -I प्रभाव के कारण)</div>
 
-        <div class="answer">
+    <p class="sub-heading">2. फॉर्मिक अम्ल और एसीटिक अम्ल में अधिक अम्लीय कौन है?</p>
+    <div class="formula">$ HCOOH > CH_3COOH \rightarrow $ फॉर्मिक अम्ल (CH₃ +I प्रभाव से अम्लता घटाता है)</div>
 
-            <p class="sub-heading">1. सबसे अधिक अम्लीय कौन है?</p>
+    <p class="sub-heading">3. कौन-सा यौगिक HgCl₂ से सफेद अवक्षेप देता है?</p>
+    <div class="formula">$ HCOOH \rightarrow $ फॉर्मिक अम्ल (मेथेनोइक अम्ल)</div>
 
-            <div class="formula">\( CF_3COOH \)</div>
+    <p class="sub-heading">4. अम्लीयता का सही क्रम बताइए।</p>
+    <div class="formula">$ CCl_3COOH > CHCl_2COOH > CH_2ClCOOH > HCOOH > C_6H_5COOH > CH_3COOH $</div>
 
-            <p class="sub-heading">2. निम्न में सबसे अधिक अम्लीय कौन है?</p>
-
-            <div class="formula">\( CF_3COOH \)</div>
-
-            <div class="important">
-                <b>नोट:</b> स्रोत में इस प्रश्न के लिए तुलना हेतु दिए गए
-                विकल्प/यौगिक-सूची अनुपस्थित थी (संभवतः किसी चित्र/तालिका के
-                रूप में थी जो टेक्स्ट-निष्कर्षण में नहीं आई); केवल अंतिम
-                उत्तर "CF₃COOH" स्रोत में उपलब्ध था, वही यहाँ रखा गया है।
-            </div>
-
-            <p class="sub-heading">3. कौन-सा यौगिक HgCl₂ से सफेद अवक्षेप देता है?</p>
-
-            <div class="formula">\( CH_3COOH \)</div>
-
-            <div class="important">
-                <b>नोट:</b> स्रोत में दिया गया उत्तर "CH₃COOH" है, परन्तु
-                मानक रसायन विज्ञान के अनुसार यह अभिक्रिया फॉर्मिक अम्ल
-                (HCOOH) की पहचान परीक्षण है — फॉर्मिक अम्ल अपने अपचायक
-                (–CHO जैसे) गुण के कारण HgCl₂ को अपचयित कर सफेद अवक्षेप
-                (Hg₂Cl₂) देता है, जबकि एसिटिक अम्ल ऐसा नहीं करता। यह संभावित
-                स्रोत त्रुटि है; उत्तर स्रोत के अनुसार ज्यों का त्यों रखा
-                गया है, चयनात्मक रूप से सुधारा नहीं गया है।
-            </div>
-
-            <p class="sub-heading">4. अम्लीयता का सही क्रम बताइए।</p>
-
-            <div class="formula">
-                \[
-                CH_2ClCOOH \;>\; CH_3COOH \;>\; CHCl_2COOH
-                \]
-            </div>
-
-            <div class="important">
-                <b>नोट:</b> स्रोत में यह क्रम "सही क्रम" के रूप में दिया गया
-                है; परन्तु मानक प्रेरणिक प्रभाव (–I) के अनुसार अधिक क्लोरीन
-                प्रतिस्थापन (CHCl₂COOH, डाइक्लोरो) से अम्लीयता अधिक बढ़नी
-                चाहिए, अर्थात अपेक्षित क्रम CHCl₂COOH &gt; CH₂ClCOOH &gt;
-                CH₃COOH होना चाहिए। स्रोत का यह क्रम संभावित त्रुटि है; मूल
-                पाठ ज्यों का त्यों प्रस्तुत किया गया है।
-            </div>
-
-        </div>
-
+  </div>
     </div>
-
-</div>
-
 <!-- PROTECTION -->
 
 <script>

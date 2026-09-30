@@ -341,31 +341,73 @@ Pal <span>Study Center</span>
 
 <div class="qa-box">
     <div class="question">
-        Q: Why is alternating current more dangerous than direct current? (2025)<br>Or<br>Between alternating current and direct current of the same potential, which is safer and why?
+        Question: Establish the relation between root mean square value and peak value of alternating voltage.<br>Or<br>Prove that the root mean square value of voltage is $1/\sqrt{2}$ times its peak value.
     </div>
     <div class="answer">
-        In alternating current the potential difference keeps changing continuously. Its virtual (rms) value is usually 220 volts.<br><br>Hence its actual <strong>maximum value, i.e. peak value</strong> -<div class="formula">$$ I_0 = \sqrt{2}\,I_{rms} $$</div><div class="formula">$$ I_0 = 1.41220) $$</div><div class="formula">$$ I_0 = 331\text{ volts} $$</div>That is, the voltage of a 220-volt AC supply actually keeps changing between +311 volts and −311 volts.<br><br>Whereas in direct current the voltage always remains constant. If the DC voltage is 220 volts, it will always remain 220 volts.<br><br>Thus alternating current is more dangerous than direct current.
+        Let at any instant the alternating voltage be \(V = V_0\sin\omega t\).<br><br>Hence, the root mean square value of alternating voltage -
+        <div class="formula">$$ V^2_{rms} = \frac{1}{T}\int_0^T V^2\,dt $$</div>
+        <div class="formula">$$ V^2_{rms} = \frac{1}{T}\int_0^T (V_0\sin\omega t)^2\,dt $$</div>
+        <div class="formula">$$ V^2_{rms} = \frac{V_0^2}{T}\int_0^T \sin^2\omega t\,dt $$</div>
+        <div class="formula">$$ V^2_{rms} = \frac{V_0^2}{2T}\int_0^T (1-\cos2\omega t)\,dt $$</div>
+        <div class="formula">$$ V^2_{rms} = \frac{V_0^2}{2T}\Big[t-\frac{\sin2\omega t}{2\omega}\Big]_0^T $$</div>
+        <div class="formula">$$ V^2_{rms} = \frac{V_0^2}{2T}\Big[\Big(T-\frac{\sin2\omega T}{2\omega}\Big)-\Big(0-\frac{\sin0}{2\omega}\Big)\Big] $$</div>
+        <div class="formula">$$ V^2_{rms} = \frac{V_0^2}{2T}\Big[T-\frac{\sin2\omega(2\pi/\omega)}{2\omega}\Big] $$</div>
+        <div class="formula">$$ V^2_{rms} = \frac{V_0^2}{2T}\big[T-\frac{\sin4\pi}{2\omega}\big] $$</div>
+        <div class="formula">$$ V^2_{rms} = \frac{V_0^2}{2T}[T-0] $$</div>
+        <div class="formula">$$ V^2_{rms} = \frac{V_0^2}{2} $$</div>
+        <div class="formula">$$ V_{rms} = \frac{V_0}{\sqrt{2}} $$</div>
+    </div>
+</div>
+<div class="qa-box">
+    <div class="question">
+        Question: Why is alternating current more dangerous than direct current? (2025)
+    </div>
+    <div class="answer">
+        <p>The effective value of alternating current (AC) coming in homes is \(V_{rms} = 220V\).
+        Hence its peak value is -</p>
+        
+        <div class="formula">$$ V_0 = \sqrt{2} \times V_{rms} = 1.414 \times 220 \approx 311V $$</div>
+
+        <p>i.e., the voltage of 220V AC varies between +311V to -311V.</p>
+
+        <p>Whereas the voltage of direct current (DC) does not change with time. 220V DC always remains 220V.</p>
+
+        <p>Therefore, at the same voltage, the shock of AC is more dangerous, hence DC is relatively safer.</p>
     </div>
 </div>
 
 <div class="qa-box">
     <div class="question">
-        Q: What is the peak-to-peak value of an alternating emf?
+        Q: What is meant by peak-to-peak value of alternating emf?
     </div>
     <div class="answer">
-        It is equal to the sum of the positive peak value and the negative peak value.<br><br>That is, the peak-to-peak value of the emf = 2E = 2√20
+        <p>It is equal to the sum of positive peak value and negative peak value.</p>
+
+        <p class="formula">$ E_{p-p} = E_0 - (-E_0) = 2E_0 = 2\sqrt{2} E_{rms} $</p>
     </div>
 </div>
-
 <div class="qa-box">
     <div class="question">
         Q: What are resistance, reactance and impedance? Explain.
     </div>
     <div class="answer">
-        <strong>Resistance</strong> - The obstruction offered by a conductor to the path of electric current is called resistance. It is denoted by \(R\).<br><br><strong>Reactance</strong> - The obstruction produced in the path of alternating current by only an inductor or only a capacitor in an AC circuit is called reactance. It is denoted by \(X\).<br><br><strong>Impedance</strong> - The obstruction offered by two or more of the components — ohmic resistance, inductor and capacitor — in an AC circuit is called impedance. It is denoted by \(Z\).
+        <p><strong>1. Resistance (R) -</strong> The obstruction offered by a conductor to the path of electric current is called resistance. It is denoted by R. Its unit is ohm (Ω).</p>
+
+        <p><strong>2. Reactance (X) -</strong> The obstruction produced in the path of alternating current by only an inductor or only a capacitor in an AC circuit is called reactance. It is denoted by X.</p>
+        
+        <p>Inductive Reactance: <span class="formula">$ X_L = \omega L = 2\pi f L $</span></p>
+        <p>Capacitive Reactance: <span class="formula">$ X_C = \frac{1}{\omega C} = \frac{1}{2\pi f C} $</span></p>
+        
+
+        <p><strong>3. Impedance (Z) -</strong> The total obstruction offered by two or more of the components — resistance, inductor and capacitor — in an AC circuit is called impedance. It is denoted by Z.</p>
+        
+       
+        <p>For RL Circuit: <span class="formula">$ Z_{RL} = \sqrt{R^2 + X_L^2} $</span></p>
+        <p>For RC Circuit: <span class="formula">$ Z_{RC} = \sqrt{R^2 + X_C^2} $</span></p>
+        <p>For LC Circuit: <span class="formula">$ Z_{LC} = |X_L - X_C| $</span></p>
+         <p>For LCR Circuit: <span class="formula">$  Z_{LCR}  = \sqrt{R^2 + (X_L - X_C)^2} $</span></p>
     </div>
 </div>
-
 <div class="qa-box">
     <div class="question">
         Q: Write the difference between resistance, reactance and impedance.
@@ -410,7 +452,7 @@ Pal <span>Study Center</span>
         Q: What is the resistance of a coil of inductance \(L\) in a direct current circuit?
     </div>
     <div class="answer">
-        For direct current, the frequency \(v=0\)<br><br>The resistance of the coil in the circuit, i.e. the inductive reactance<div class="formula">$$ X_c = \omega L $$</div><div class="formula">$$ X_c = 2\pi v L $$</div><div class="formula">$$ X_c = 0 $$</div>
+        For direct current, the frequency \(v=0\)<br><br>The resistance of the coil in the circuit, i.e. the inductive reactance<div class="formula">$$ X_L = \omega L $$</div><div class="formula">$$ X_L = 2\pi v L $$</div><div class="formula">$$ X_L = 0 $$</div>
     </div>
 </div>
 
@@ -422,7 +464,7 @@ Pal <span>Study Center</span>
         <img src="images/image5.png" alt="Pure resistance (R) circuit">
     </div>
     <div class="answer">
-        Let the equation of the alternating voltage across the resistance \(R\) at some instant be-<div class="formula">$$ V = V_0\sin\omega t \quad ...(1) $$</div>If the value of the current flowing through the resistance \(R\) at the same instant is \(I\), then by Ohm's law \(I=V/R\)<div class="formula">$$ I = \frac{V_0\sin\omega t}{R} $$</div><div class="formula">$$ I = \Big(\frac{V_0}{R}\Big)\sin\omega t $$</div><div class="formula">$$ I = I_0\sin\omega t \quad ...(2) $$</div>where \(I_0 = V_0/R\) = the peak value of the alternating current.<br><br>The effective resistance of the circuit -<div class="formula">$$ R = \frac{V_0}{I_0} $$</div><strong>Phase difference</strong> - From equations (1) and (2) it is clear that the alternating voltage and current are in the same phase.<div class="question-image"><img src="images/image3.png" alt="Waveform and phasor diagram of V and I in a pure resistance circuit"></div>
+        Let the equation of the alternating voltage across the resistance \(R\) at some instant be-<div class="formula">$$ V = V_0\sin\omega t \quad ...(1) $$</div>If the value of the current flowing through the resistance \(R\) at the same instant is \(I\), then by Ohm's law \(I=V/R\)<div class="formula">$$ I = \frac{V_0\sin\omega t}{R} $$</div><div class="formula">$$ I = \Big(\frac{V_0}{R}\Big)\sin\omega t $$</div><div class="formula">$$ I = I_0\sin\omega t \quad ...(2) $$</div>where \(I_0=\dfrac{V_0}{R}\) = the peak value of the alternating current.<br><br>The effective resistance of the circuit -<div class="formula">$$ R = \frac{V_0}{I_0} $$</div><strong>Phase difference</strong> - From equations (1) and (2) it is clear that the alternating voltage and current are in the same phase.<div class="question-image"><img src="images/image3.png" alt="Waveform and phasor diagram of V and I in a pure resistance circuit"></div>
     </div>
 </div>
 
