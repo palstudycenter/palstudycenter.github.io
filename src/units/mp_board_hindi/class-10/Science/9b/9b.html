@@ -1,0 +1,1745 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PAL STUDY CENTER | Notes</title>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<script>
+window.MathJax={
+ tex:{
+ inlineMath:[
+ ['$','$'],
+ ['\\(','\\)']
+ ]
+}
+};
+</script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+<style>
+<style>
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+
+body{
+background:#f5f7fb;
+line-height:1.7;
+}
+
+
+/* NAVBAR */
+
+    .navbar{
+
+      background:rgba(23,74,126,0.95);
+
+      backdrop-filter:blur(10px);
+
+      box-shadow:0 4px 18px rgba(0,0,0,.18);
+
+      padding:10px 0;
+
+      transition:.3s;
+
+    }
+
+    .navbar-brand{
+
+      font-size:28px;
+
+      font-weight:700;
+
+      color:white !important;
+
+    }
+
+.navbar-brand span{
+    color:#93c5fd;
+}
+      .navbar-brand{
+        font-size:40px;
+      }
+/* CONTENT */
+
+.notes-container{
+
+max-width:900px;
+
+margin:100px auto 50px;
+
+padding:20px;
+
+}
+
+
+.notes-title {
+    background: #174a7e;
+    color: white;
+    padding: 18px 22px;
+    border-radius: 12px 12px 0 0;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 100px;
+    margin-bottom: 0;
+}
+
+
+.qa-box{
+
+background:white;
+
+padding:22px;
+
+margin-bottom:18px;
+
+border-radius:14px;
+
+border-left:6px solid #1565c0;
+
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+transition:.25s;
+
+}
+
+
+.qa-box:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+
+.question{
+
+font-weight:bold;
+
+color:#1b3a57;
+
+margin-bottom:8px;
+
+}
+.question-image{
+    text-align:center;
+    margin:15px 0;
+    overflow-x:auto;
+}
+
+.question-image img{
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:auto;
+    border-radius:8px;
+}
+
+
+.answer{
+
+color:#2c3e50;
+
+text-align:justify;
+
+}
+
+
+
+@media(max-width:768px){
+
+.notes-container{
+
+margin-top:80px;
+
+}
+
+
+}
+.formula{
+    overflow-x:auto;
+    overflow-y:hidden;
+    margin:10px 0;
+}
+.answer table{
+    width:100%;
+    border-collapse:collapse;
+    margin:12px 0;
+    display:table;      /* block हटाकर table करें */
+    overflow-x:auto;
+}
+
+.answer th,
+.answer td{
+    border:1px solid #ddd;
+    padding:10px;
+    vertical-align:middle;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+
+
+<div class="container">
+
+<a class="navbar-brand" href="../index.html">
+
+पाल <span>स्टडी सेंटर</span>
+
+</a>
+    <button class="navbar-toggler bg-light"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+</div>
+
+</nav>
+
+
+<!-- CONTENT -->
+<div class="container">
+
+ <div class="notes-title">📘 Unit 6(B) - अपवर्तन</div
+>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: प्रकाश का अपवर्तन से आप क्या समझते हैं?
+    </div>
+    <div class="answer">
+        जब प्रकाश किरण एक माध्यम से दूसरे माध्यम में प्रवेश करती है तो वह अपने मार्ग से विचलित हो जाती है। इस घटना को प्रकाश का अपवर्तन कहते हैं।
+
+        <br><br>
+
+        <ol>
+            <li>जब प्रकाश किरण विरल माध्यम से सघन माध्यम में प्रवेश करती है तो वह अपवर्तन के पश्चात् अभिलंब की ओर झुक जाती है। </li>
+          <div class="question-image">
+            <img src="images/1.png" alt="चित्र">
+          </div>
+          <li>जब प्रकाश किरण सघन माध्यम से विरल माध्यम में प्रवेश करती है तो वह अपवर्तन के पश्चात् अभिलंब से दूर हट जाती है। </li>
+          <div class="question-image">
+            <img src="images/2.png" alt="चित्र">
+      </div>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: एक प्रकाश की किरण प्रकाशिक विरल माध्यम से प्रकाशिक सघन माध्यम में तिर्यक प्रवेश करती है तो प्रकाश की किरण का वेग और आवृत्ति पर क्या प्रभाव पड़ेगा? लिखिए। (2024)
+    </div>
+    <div class="answer">
+        एक प्रकाश की किरण प्रकाशिक विरल माध्यम से प्रकाशिक सघन माध्यम में तिर्यक प्रवेश करती है तो प्रकाश की किरण का वेग कम हो जायेगा तथा उसकी आवृत्ति अपरिवर्तित रहेगी।
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: प्रकाश के अपवर्तन के नियम लिखिए। <br>अथवा<br> प्रश्न: स्नेल का नियम लिखिए।
+    </div>
+    <div class="answer">
+        अपवर्तन के दो नियम हैं-
+
+        <ol>
+            <li>आपतित किरण, अपवर्तित किरण और आपतन बिन्दु पर अभिलम्ब तीनों एक ही तल में होते हैं।</li>
+            <li>किसी प्रकाश के लिए आपतन कोण की ज्या और अपवर्तन कोण की ज्या में एक निश्चित अनुपात होता है जिसे पहले माध्यम के सापेक्ष दूसरे माध्यम का अपवर्तनांक कहते हैं। इसे ग्रीक अक्षर \({}_1\mu_2\) (म्यू) से प्रदर्शित करते हैं। इसे स्नेल का नियम कहते हैं।</li>
+        </ol>
+
+        इस प्रकार
+
+        <div class="formula">
+            $$
+            {}_1\mu_2 = \frac{\sin i}{\sin r}
+            $$
+        </div>
+
+        जहाँ—
+
+        <ul>
+            <li>\({}_1\mu_2\) = पहले माध्यम के सापेक्ष दूसरे माध्यम का अपवर्तनांक</li>
+            <li>\(i\) = आपतन कोण</li>
+            <li>\(r\) = अपवर्तन कोण।</li>
+        </ul>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: अपवर्तनांक की परिभाषा लिखिए।
+    </div>
+    <div class="answer">
+        जब प्रकाश किरण एक माध्यम से दूसरे माध्यम में प्रवेश करती है तो दोनों माध्यमों में प्रकाश वेगों के अनुपात को पहले माध्यम के सापेक्ष दूसरे माध्यम का अपवर्तनांक कहते हैं। इसे ग्रीक अक्षर \({}_1\mu_2\) (म्यू) से प्रदर्शित करते हैं।
+
+        <br><br>
+
+        इस प्रकार
+
+        <div class="formula">
+            $$
+            {}_1\mu_2 = \frac{V_1}{V_2}
+            $$
+        </div>
+
+        जहाँ—
+
+        <ul>
+            <li>\({}_1\mu_2\) = पहले माध्यम के सापेक्ष दूसरे माध्यम का अपवर्तनांक</li>
+            <li>\(i\) = आपतन कोण</li>
+            <li>\(r\) = अपवर्तन कोण।</li>
+        </ul>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: किसी माध्यम का अपवर्तनांक कौन से कारकों पर निर्भर करता है?
+    </div>
+    <div class="answer">
+        किसी माध्यम का अपवर्तनांक निम्न कारकों पर निर्भर करता है। (2022)
+
+        <ol>
+            <li>माध्यम की भौतिक अवस्था पर।</li>
+            <li>माध्यम के रंग पर।</li>
+            <li>माध्यम के जोड़े की प्रकृति पर।</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: तारे टिमटिमाते हैं जबकि चन्द्रमा नहीं। क्यों?
+    </div>
+
+    <div class="answer">
+        तारों का प्रकाश वायुमंडल की अलग-अलग परतों से होकर आता है।
+        इन परतों का तापमान और घनत्व बदलता रहता है, इसलिए तारों का
+        प्रकाश बार-बार थोड़ा मुड़ता है। इसी कारण तारे टिमटिमाते दिखाई देते हैं।
+
+        <br><br>
+
+        चन्द्रमा पृथ्वी के पास है और बड़ा दिखाई देता है। उससे बहुत अधिक
+        प्रकाश हमारी आँखों तक पहुँचता है, इसलिए प्रकाश में होने वाले छोटे
+        बदलाव दिखाई नहीं देते। इसी कारण चन्द्रमा टिमटिमाता हुआ दिखाई नहीं देता।
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: गर्मियों में दोपहर के समय पेड़ और मकान हिलते हुए क्यों दिखाई देते हैं?
+    </div>
+
+    <div class="answer">
+        गर्मियों में दोपहर के समय धरती के पास की हवा बहुत गर्म हो जाती है।
+        गर्म और ठंडी हवा की परतों का घनत्व और अपवर्तनांक अलग-अलग होता है।
+        इसलिए पेड़ और मकान से आने वाला प्रकाश थोड़ा-थोड़ा मुड़ता रहता है।
+        इसी कारण पेड़ और मकान हमें हिलते हुए दिखाई देते हैं।
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: सिद्ध कीजिए कि \({}_a\mu_w \times {}_w\mu_g \times {}_g\mu_a = 1\)
+    </div>
+    <div class="answer">
+      <div class="question-image">
+            <img src="images/5.jpg" alt="चित्र">
+      </div>
+
+       मानलो कोई प्रकाश किरण AB कई माध्यमों में क्रमशः अपवर्तित होती है। पहला तथा अन्तिम माध्यम एक ही है।
+
+        <br><br>
+
+        माना वायु, जल और कांच में प्रकाश की चाल क्रमशः \(V_a\), \(V_w\) और \(V_g\) हैं।
+
+        <br><br>
+
+        बिन्दु B पर प्रकाश किरण वायु से जल में प्रवेश करती है। अतः
+
+        <div class="formula">
+            $$
+            {}_a\mu_w = \frac{V_a}{V_w} \quad \text{……(1)}
+            $$
+        </div>
+
+        बिन्दु C पर प्रकाश किरण जल से कांच में प्रवेश करती है। अतः
+
+        <div class="formula">
+            $$
+            {}_w\mu_g = \frac{V_w}{V_g} \quad \text{……(2)}
+            $$
+        </div>
+
+        बिन्दु D पर प्रकाश किरण कांच से वायु में प्रवेश करती है। अतः
+
+        <div class="formula">
+            $$
+            {}_g\mu_a = \frac{V_g}{V_a} \quad \text{……(3)}
+            $$
+        </div>
+
+        समीकरण (1), (2) तथा (3) का गुणा करने पर
+
+        <div class="formula">
+            $$
+            {}_a\mu_w \times {}_w\mu_g \times {}_g\mu_a = \frac{V_a}{V_w}\times\frac{V_w}{V_g}\times\frac{V_g}{V_a}
+            $$
+        </div>
+
+        <div class="formula">
+            $$
+            \boxed{{}_a\mu_w \times {}_w\mu_g \times {}_g\mu_a = 1}
+            $$
+        </div>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: प्रकाश की उत्क्रमणीयता का सिद्धान्त क्या है? समझाइए।
+    </div>
+    <div class="answer">
+        यदि कोई प्रकाश किरण विभिन्न माध्यमों से अपवर्तित हो रही हो तो उसके मार्ग को उत्क्रमित करने पर वह जिस मार्ग से जा रही थी उसी मार्ग से विपरीत दिशा में लौट जाती है। इसे प्रकाश की उत्क्रमणीयता का सिद्धान्त कहते हैं।
+
+      <div class="question-image">
+            <img src="images/4.png" alt="चित्र">
+      </div>
+
+        अर्थात्
+
+        <div class="formula">
+            $$
+            {}_1\mu_2 = \frac{1}{{}_2\mu_1}
+            $$
+        </div>
+
+        जहाँ—
+
+        <ul>
+            <li>\({}_1\mu_2\) = पहले माध्यम के सापेक्ष दूसरे माध्यम का अपवर्तनांक</li>
+            <li>\({}_2\mu_1\) = दूसरे माध्यम के सापेक्ष पहले माध्यम का अपवर्तनांक</li>
+        </ul>
+    </div>
+</div>
+  
+<div class="qa-box">
+    <div class="question">
+        <strong>प्रश्न: सघन माध्यम में स्थित वस्तु की वास्तविक गहराई, आभासी गहराई और माध्यम के अपवर्तनांक के मध्य संबंध स्थापित कीजिए।</strong>
+    </div>
+<div class="answer">
+    <div class="question-image">
+        <img src="images/3.png" alt="किरण आरेख">
+    </div>
+
+    माना कि एक वस्तु \(P\) सघन माध्यम में स्थित है। अपवर्तन के कारण वस्तु अपने वास्तविक स्थान से ऊपर उठी हुई दिखाई देती है और उसका आभासी प्रतिबिंब \(P'\) बनता है।
+
+    <br><br>
+
+    चूँकि \(PL \parallel MN\), अतः
+    \[
+    \angle PQN=\angle OPQ=i
+    \]
+    \[
+    \angle MQR=\angle OP'Q=r
+    \]
+    अब समकोण \(\triangle POQ\) —
+
+    <div class="formula">
+        $$
+        \sin i=\frac{OQ}{PQ}
+        $$
+    </div>
+अब समकोण \(\triangle P'OQ\) —
+
+    <div class="formula">
+        $$
+        \sin r=\frac{OQ}{P'Q}
+        $$
+    </div>
+
+    अब स्नेल के नियम से—
+
+    <div class="formula">
+        $$
+        {}_w\mu_a=\frac{\sin i}{\sin r}
+        $$
+    </div>
+
+    <div class="formula">
+        $$
+        {}_a\mu_w=\frac{\sin r}{\sin i}
+        $$
+    </div>
+
+
+    <div class="formula">
+        $$
+        {}_a\mu_w=
+        \frac{\frac{OQ}{P'Q}}
+        {\frac{OQ}{PQ}}
+        $$
+    </div>
+
+    <div class="formula">
+        $$
+        {}_a\mu_w=
+        \frac{OQ}{P'Q}\times\frac{PQ}{OQ}
+        $$
+    </div>
+
+    <div class="formula">
+        $$
+        {}_a\mu_w=\frac{PQ}{P'Q}
+        $$
+    </div>
+
+    जब \(O\) और \(Q\) अत्यंत निकट हों, तब
+    <div class="formula">
+        $$
+        PQ\approx PO
+        $$
+    </div>
+
+    <div class="formula">
+        $$
+        P'Q\approx P'O
+        $$
+    </div>
+
+    अतः,
+
+    <div class="formula">
+        $$
+        {}_a\mu_w=\frac{PO}{P'O}
+        $$
+    </div>
+
+<div class="formula" style="display: flex; justify-content: center; align-items: center; width: 100%;">
+    <span style="display: inline-flex; align-items: center; gap: 8px;">
+        <span>μ =</span>
+
+        <span style="display: inline-block; text-align: center; vertical-align: middle;">
+            <span style="display: block; border-bottom: 1px solid #000; padding: 2px 12px;">
+                वास्तविक गहराई
+            </span>
+            <span style="display: block; padding: 2px 12px;">
+                आभासी गहराई
+            </span>
+        </span>
+    </span>
+</div>
+    अतः सघन माध्यम का अपवर्तनांक वास्तविक गहराई और आभासी गहराई के अनुपात के बराबर होता है।
+</div>
+
+</div>
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: क्रांतिक कोण किसे कहते हैं? क्रांतिक कोण किन कारकों पर निर्भर करता है?
+    </div>
+    <div class="answer">
+        जब कोई प्रकाश किरण सघन माध्यम से विरल माध्यम में प्रवेश करती है तो सघन माध्यम में वह आपतन कोण जिसके संगत विरल माध्यम में अपवर्तन कोण का मान \(90^\circ\) होता है, क्रांतिक कोण कहलाता है। इसे \(i_c\) से प्रदर्शित करते हैं।
+
+      <div class="question-image">
+            <img src="images/6a.png" alt="चित्र">
+      </div>
+
+        <strong>क्रांतिक कोण को प्रभावित करने वाले कारक</strong> - क्रांतिक कोण का मान निम्न कारकों पर निर्भर करता है—
+
+        <ol>
+            <li><strong>प्रयुक्त प्रकाश के रंग पर -</strong> बैंगनी रंग के लिये अपवर्तनांक सर्वाधिक होता है। अतः क्रान्तिक कोण का मान बैंगनी रंग के लिये सबसे कम तथा लाल रंग के लिए सबसे अधिक होता है।</li>
+            <li><strong>सघन और विरल माध्यम के जोड़े पर -</strong> क्रांतिक कोण का मान सघन और विरल माध्यम के जोड़े पर निर्भर करता है। काँच और वायु के जोड़े के लिए क्रांतिक कोण का मान लगभग \(42^\circ\), जल और वायु के जोड़े के लिए लगभग \(49^\circ\) तथा हीरे और वायु के जोड़े के लिये \(24^\circ\) होता है।</li>
+            <li><strong>ताप पर -</strong> ताप बढ़ाने पर माध्यम का अपवर्तनांक घटता है। अतः क्रांतिक कोण का मान बढ़ता है।</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: क्रांतिक कोण और अपवर्तनांक में सम्बन्ध स्थापित कीजिए। <br>अथवा<br> प्रश्न: क्रांतिक कोण तथा माध्यम के अपवर्तनांक में सम्बन्ध प्राप्त कीजिए।
+    </div>
+    <div class="answer">
+      <div class="question-image">
+            <img src="images/6b.png" alt="चित्र">
+      </div>
+
+        मानलो कोई प्रकाश किरण सघन माध्यम (काँच) से विरल माध्यम (वायु) में जा रही है। यदि सघन माध्यम में क्रान्तिक कोण \(i_c\) के लिए विरल माध्यम में अपवर्तन कोण \(r = 90^\circ\) है।
+
+        <br><br>
+
+        अतः स्नेल के नियम से
+
+        <div class="formula">
+            $$
+            {}_{\text{स}}\mu_{\text{वि}} = \frac{\sin i_c}{\sin 90^\circ}
+            $$
+        </div>
+
+        <div class="formula">
+            $$
+            {}_{\text{स}}\mu_{\text{वि}} = \frac{\sin i_c}{1}
+            $$
+        </div>
+
+        <div class="formula">
+            $$
+            \frac{1}{\sin i_c} = \frac{1}{{}_{\text{स}}\mu_{\text{वि}}}
+            $$
+        </div>
+
+        <div class="formula">
+            $$
+            \boxed{\operatorname{cosec} i_c = {}_{\text{वि}}\mu_{\text{स}}}
+            $$
+        </div>
+
+
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: सामान्य काँच की तुलना में हीरे का अपवर्तनांक काफी अधिक होता है। क्या हीरा तराशने वालों के लिए इस तथ्य का उपयोग होता है?
+    </div>
+    <div class="answer">
+        सामान्य काँच (\(\mu = 1.5\) लगभग) की तुलना में हीरे का अपवर्तनांक काफी अधिक (\(\mu = 2.42\)) होता है जिससे हीरे का क्रांतिक कोण लगभग \(24^\circ\) होता है। इस प्रकार हीरे पर \(24^\circ\) से \(90^\circ\) कोण पर आपतित किरणों का कई बार पूर्ण आंतरिक परावर्तन हो जाता है जिससे हीरे की चमक बढ़ जाती है।
+
+        <br><br>
+
+        हीरे को तराशने वालों के लिए यह तथ्य बहुत ही महत्वपूर्ण होता है।
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: हीरा क्यों चमकता है? कारण बताइए।
+    </div>
+    <div class="answer">
+        हीरे का अपवर्तनांक 2.42 है जिसके लिये क्रांतिक कोण का मान बहुत ही कम, लगभग \(24^\circ\) होता है। जब प्रकाश कटे हुये तल वाले हीरे में प्रवेश करता है तो क्रांतिक कोण का मान कम होने के कारण ही बार-बार उसका पूर्ण आंतरिक परावर्तन होता है। प्रवेश हुआ प्रकाश केवल कुछ बिन्दुओं से बाहर निकलता है जहाँ आपतन कोण का मान क्रांतिक कोण से कम होता है। इस दिशा में सभी किरणें निकलती हैं, जिससे हीरे की चमक बढ़ जाती है।
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: पूर्ण आन्तरिक परावर्तन किसे कहते हैं? इसके लिए आवश्यक शर्तें लिखिए।
+    </div>
+    <div class="answer">
+        जब कोई प्रकाश किरण सघन माध्यम से विरल माध्यम में प्रवेश करती है और जब आपतन कोण का मान क्रान्तिक कोण के मान से अधिक होता है, तो प्रकाश किरण दूसरे माध्यम में प्रवेश करने के बजाय उसी माध्यम में परावर्तित हो जाती है। इस घटना को प्रकाश का पूर्ण आन्तरिक परावर्तन कहते हैं।
+
+    <div class="question-image">
+            <img src="images/6.png" alt="चित्र">
+    </div>
+
+        <strong>आवश्यक शर्तें -</strong>
+
+        <ol>
+            <li>प्रकाश किरण को सघन माध्यम से विरल माध्यम में जाना चाहिए।</li>
+            <li>आपतन कोण के मान को क्रान्तिक कोण के मान से अधिक होना चाहिए।</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: पूर्ण आन्तरिक परावर्तन के अनुप्रयोग लिखिए।
+    </div>
+    <div class="answer">
+        पूर्ण आन्तरिक परावर्तन के अनुप्रयोग निम्न हैं—
+
+        <ol>
+            <li>गर्म प्रदेशों की मरीचिका।</li>
+            <li>ठंडे प्रदेशों की मरीचिका।</li>
+            <li>प्रकाशिक तंतु।</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: प्रकाशिक तंतु किसे कहते हैं?
+    </div>
+    <div class="answer">
+        प्रकाशिक तंतु पूर्ण आंतरिक परावर्तन पर आधारित ऐसी युक्ति है जिसकी सहायता से प्रकाश सिग्नल को उसी तीव्रता के साथ टेढ़े-मेढ़े मार्ग से अल्प दूरी तक ले जाया जा सकता है।
+    </div>
+  <div class="question-image">
+            <img src="images/7.png" alt="चित्र">
+  </div>
+ <strong>संरचना:</strong> <br> प्रकाशिक तंतु मुख्यतः तीन भागों से बना होता है— <ol> <li><strong>क्रोड (Core):</strong> यह तंतु का मध्य भाग है, जिसमें प्रकाश का संचरण होता है।</li> <li><strong>आवरण (Cladding):</strong> यह क्रोड के चारों ओर होता है तथा इसका अपवर्तनांक क्रोड से कम होता है।</li> <li><strong>सुरक्षात्मक आवरण (Coating):</strong> यह तंतु को बाहरी क्षति से बचाता है।</li> </ol> <strong>कार्यविधि:</strong> <br> प्रकाशिक तंतु पूर्ण आंतरिक परावर्तन के सिद्धांत पर कार्य करता है। जब प्रकाश उचित कोण पर क्रोड में प्रवेश करता है, तो वह क्रोड और आवरण की सीमा पर बार-बार पूर्ण आंतरिक परावर्तन करता हुआ आगे बढ़ता है। इस प्रकार प्रकाश संकेत बिना बाहर निकले तंतु के दूसरे सिरे तक पहुँच जाता है। </div> 
+</div>
+
+
+<div class="qa-box" style="max-width: 98%; margin: 10 auto;">
+
+    <div class="question">
+
+        <strong>प्रश्न: उत्तल गोलीय पृष्ठ के लिए अपवर्तन का सूत्र निगमित कीजिए</strong>
+
+    </div>
+
+    <div class="answer">
+
+        <div class="question-image">
+
+            <img src="images/25.png" alt="किरण आरेख">
+
+        </div>
+
+        <p>
+            माना \(APB\) एक उत्तल गोलीय पृष्ठ है। इसके सघन माध्यम का अपवर्तनांक
+            \(\mu\) है। माना बिंदु-वस्तु \(O\) का वास्तविक प्रतिबिम्ब \(I\) पर बनता है।
+            माना आपतित किरण \(OM\), अपवर्तित किरण \(IM\) तथा अभिलम्ब \(CL\) मुख्य अक्ष के साथ
+            क्रमशः \(\alpha\), \(\beta\) तथा \(\gamma\) कोण बनाते हैं। तब —
+        </p>
+
+        <p style="text-align: center;">
+            कोण =
+            <span class="fraction">
+                <span class="top">चाप</span>
+                <span class="bottom">त्रिज्या</span>
+            </span>
+        </p>
+
+        <div class="formula">
+
+            $$
+
+            \alpha = \frac{MP}{OP} = \frac{MP}{-u}
+
+            $$
+
+        </div>
+
+        <div class="formula">
+
+            $$
+
+            \beta = \frac{MP}{IP} = \frac{MP}{+v}
+
+            $$
+
+        </div>
+
+        <div class="formula">
+
+            $$
+
+            \gamma = \frac{MP}{CP} = \frac{MP}{+R}
+
+            $$
+
+        </div>
+
+        माना यदि आपतन कोण \(i\) हो तो समकोण \(\triangle OMC\) में बहिष्कोण प्रमेय से —
+
+        <div class="formula">
+
+            $$
+
+            i = \alpha + \gamma
+
+            $$
+
+        </div>
+
+        इसी प्रकार यदि अपवर्तन कोण \(r\) हो तो समकोण \(\triangle IMC\) में बहिष्कोण प्रमेय से —
+
+        <div class="formula">
+
+            $$
+
+            \gamma = r + \beta
+
+            $$
+
+        </div>
+
+        <div class="formula">
+
+            $$
+
+            r = \gamma - \beta
+
+            $$
+
+        </div>
+
+        अब स्नेल के नियम से —
+
+        <div class="formula">
+
+            $$
+
+            \mu = \frac{\sin i}{\sin r}
+
+            $$
+
+        </div>
+
+        छोटे कोणों के लिए \(\sin\theta \approx \theta\), इसलिए —
+
+        <div class="formula">
+
+            $$
+
+            \mu = \frac{i}{r}
+
+            $$
+
+        </div>
+
+        <div class="formula">
+
+            $$
+
+            \mu r = i
+
+            $$
+
+        </div>
+
+        <div class="formula">
+
+            $$
+
+            \mu(\gamma - \beta) = \alpha + \gamma
+
+            $$
+
+        </div>
+
+        <div class="formula">
+
+            $$
+
+            \mu\gamma - \mu\beta = \alpha + \gamma
+
+            $$
+
+        </div>
+
+        <div class="formula">
+
+            $$
+
+            \mu\gamma - \gamma = \mu\beta + \alpha
+
+            $$
+
+        </div>
+
+        <div class="formula">
+
+            $$
+
+            \mu\beta + \alpha = \gamma(\mu - 1)
+
+            $$
+
+        </div>
+
+        <div class="formula">
+
+            $$
+
+            \mu\beta + \alpha = \gamma(\mu - 1)
+
+            $$
+
+        </div>
+
+        <div class="formula">
+
+            $$
+
+            \mu\left(\frac{MP}{+v}\right)
+            + \left(\frac{MP}{-u}\right)
+            =
+            \left(\frac{MP}{+R}\right)(\mu - 1)
+
+            $$
+
+        </div>
+
+        <div class="formula">
+
+            $$
+
+            \frac{\mu MP}{v} - \frac{MP}{u}
+            =
+            \frac{MP(\mu - 1)}{R}
+
+            $$
+
+        </div>
+
+        दोनों पक्षों में \(MP\) से भाग देने पर —
+
+        <div class="formula">
+
+            $$
+
+            \boxed{
+            \frac{\mu}{v} - \frac{1}{u}
+            =
+            \frac{\mu - 1}{R}
+            }
+
+            $$
+
+        </div>
+
+        यही उत्तल गोलीय पृष्ठ के लिए अपवर्तन का सूत्र है।
+
+    </div>
+
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        <strong>प्रश्न: अवतल गोलीय पृष्ठ के लिए अपवर्तन का सूत्र निगमित कीजिए</strong>
+    </div>
+    <div class="answer">
+        <div class="question-image">
+            <img src="images/26.png" alt="किरण आरेख">
+        </div>
+        <p>
+            माना \(APB\) एक अवतल गोलीय पृष्ठ है। इसके सघन माध्यम का अपवर्तनांक
+            \(\mu\) है। माना बिंदु-वस्तु \(O\) का वास्तविक प्रतिबिम्ब \(I\) पर बनता है।
+            माना आपतित किरण \(OM\), अपवर्तित किरण \(IM\) तथा अभिलम्ब \(CL\) मुख्य अक्ष के साथ
+            क्रमशः \(\alpha\), \(\beta\) तथा \(\gamma\) कोण बनाते हैं। तब —
+        </p>
+        <p>
+            कोण =
+            <span class="fraction">
+                <span class="top">चाप</span>
+                <span class="bottom">त्रिज्या</span>
+            </span>
+        </p>
+        <div class="formula">$$\alpha = \frac{MP}{OP} = \frac{MP}{-u}$$</div>
+        <div class="formula">$$\beta = \frac{MP}{IP} = \frac{MP}{-v}$$</div>
+        <div class="formula">$$\gamma = \frac{MP}{CP} = \frac{MP}{-R}$$</div>
+
+        <p>माना यदि आपतन कोण i हो तो समकोण \(\triangle OMC\) में बहिष्कोण प्रमेय से —</p>
+        <div class="formula">$$\gamma = \alpha + i$$</div>
+        <div class="formula">$$i = \gamma - \alpha$$</div>
+
+        <p>इसी प्रकार यदि अपवर्तन कोण r हो तो समकोण \(\triangle IMC\) में बहिष्कोण प्रमेय से —</p>
+        <div class="formula">$$\gamma = \beta + r$$</div>
+        <div class="formula">$$r = \gamma - \beta$$</div>
+
+        <p>अब स्नेल के नियम से —</p>
+        <div class="formula">$$\mu = \frac{\sin i}{\sin r}$$</div>
+        <p>छोटे कोणों के लिए \(\sin\theta \approx \theta\), इसलिए —</p>
+        <div class="formula">$$\mu = \frac{i}{r}$$</div>
+        <div class="formula">$$\mu r = i$$</div>
+        <div class="formula">$$\mu(\gamma - \beta) = \gamma - \alpha$$</div>
+        <div class="formula">$$\mu\gamma - \mu\beta = \gamma - \alpha$$</div>
+        
+<div class="formula">$$\gamma(\mu - 1) = \mu\beta - \alpha$$</div>
+
+<div class="formula">$$\mu\beta - \alpha=\gamma(\mu - 1) 
+$$</div>
+
+        <p>मान रखने पर —</p>
+       
+ <div class="formula">$$ \mu\left(\frac{MP}{-v}\right) - \left(\frac{MP}{-u}\right)=\left(\frac{MP}{-R}\right)(\mu - 1) $$</div>
+
+     
+        <p>दोनों पक्षों में (\(-MP\)) से भाग देने पर —</p>
+        <div class="formula">$$\boxed{\frac{\mu}{v} - \frac{1}{u} = \frac{\mu - 1}{R}}$$</div>
+        <p>यही अवतल गोलीय पृष्ठ के लिए अपवर्तन का सूत्र है।</p>
+    </div>
+</div>
+  
+  
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: लेंस किसे कहते हैं? लेंस कितने प्रकार के होते हैं?
+    </div>
+    <div class="answer">
+        वह पारदर्शी माध्यम जिसकी कम से कम एक सतह वक्र होती है, लेंस कहलाता है। लेंस प्रकाश को अपवर्तन द्वारा अभिसरित या अपसारित करता है।
+    <br>
+        लेंस दो प्रकार के होते हैं—
+
+        <ol>
+        
+          <li><strong>उत्तल लेंस -</strong> यह लेंस बीच में मोटा और किनारों पर पतला होता है। यह प्रकाश किरणों को अभिसरित करता है। अतः इसे अभिसारी लेंस भी कहते हैं। (चित्र)</li>
+       <div class="question-image">
+            <img src="images/8.jpg" alt="चित्र">
+       </div> 
+          <li><strong>अवतल लेंस -</strong> यह लेंस बीच में पतला और किनारों पर मोटा होता है। यह प्रकाश किरणों को अपसारित करता है। अतः इसे अपसारी लेंस भी कहते हैं। (चित्र)</li>
+     <div class="question-image">
+            <img src="images/9.jpg" alt="चित्र">
+       </div> 
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: समझाइए कि किस तरह उत्तल लेंस, अभिसारी लेंस की तरह कार्य करता है?
+    </div>
+    <div class="answer">
+        उत्तल लेंस को छोटे-छोटे प्रिज्मों से मिलकर बना मान सकते हैं जिनका आधार लेंस के केन्द्रीय भाग की ओर होता है। प्रिज्म में यह गुण होता है कि वह किरणों को आधार की ओर मोड़ देता है। अतः प्रत्येक प्रिज्म पर आपतित समान्तर किरणें लेंस से अपवर्तन के पश्चात् एक बिन्दु पर मिल जाती हैं।
+
+        <br><br>
+
+        इस प्रकार उत्तल लेंस किरणों को अभिसरित (एक बिन्दु पर केन्द्रित) कर देता है। अतः उत्तल लेंस को अभिसारी लेंस कहते हैं।
+   <div class="question-image">
+            <img src="images/10.png" alt="चित्र">
+   </div>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: समझाइए कि किस तरह अवतल लेंस, अपसारी लेंस की तरह कार्य करता है?
+    </div>
+    <div class="answer">
+        अवतल लेंस को छोटे-छोटे प्रिज्मों से मिलकर बना मान सकते हैं जिनका आधार लेंस के केन्द्रीय भाग के ऊपर की ओर होता है। प्रिज्म में यह गुण होता है कि वह किरणों को आधार की ओर मोड़ देता है। अतः प्रिज्म पर आपतित समान्तर किरणें लेंस से अपवर्तन के पश्चात् फैल जाती हैं।
+    <br><br>
+        इस प्रकार अवतल लेंस किरणों को अपसरित कर देता है (फैला देता है)। ये किरणें एक बिन्दु से आती हुई प्रतीत होती हैं। अतः अवतल लेंस को अपसारी लेंस भी कहते हैं।
+    </div>
+  <div class="question-image">
+            <img src="images/12.png" alt="चित्र">
+  </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: वायु का बुलबुला जल में किस प्रकार व्यवहार करता है तथा क्यों?
+    </div>
+    <div class="answer">
+        जल में वायु का बुलबुला अवतल लेंस की तरह व्यवहार करता है क्योंकि वायु का अपवर्तनांक जल से कम होता है, जिससे प्रकाश किरणें अपसरित हो जाती हैं।
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: लेंस के लिए निम्न को परिभाषित कीजिए।
+    </div>
+    <div class="answer">
+        <ul>
+            <li><strong>मुख्य अक्ष -</strong> लेंस के दोनों वक्र केंद्रों को मिलाने वाली सीधी रेखा को मुख्य अक्ष कहते हैं। यह लेंस के केंद्र से होकर गुजरती है।</li>
+            <li><strong>प्रकाशीय केंद्र -</strong> लेंस के बीचों-बीच स्थित वह बिंदु जिससे होकर जाने वाली किरण बिना मुड़े (अपवर्तित हुए) सीधी निकल जाती है, उसे प्रकाशीय केंद्र (\(O\)) कहते हैं।</li>
+            <li><strong>प्रथम मुख्य फोकस -</strong> मुख्य अक्ष पर स्थित वह बिन्दु जिससे होकर आपतित होने वाली किरणें (उत्तल लेंस में) या जिसकी दिशा में आपतित होने वाली किरणें (अवतल लेंस में) लेंस से अपवर्तन के पश्चात् मुख्य अक्ष के समान्तर हो जाती हैं, लेंस का प्रथम मुख्य फोकस कहलाता है। चित्र में \(F_1\) प्रथम मुख्य फोकस है।</li>
+           <div class="question-image">
+            <img src="images/11.png" alt="चित्र">
+           </div>
+          <li><strong>द्वितीय मुख्य फोकस -</strong> मुख्य अक्ष के समान्तर आपतित किरणें लेंस से अपवर्तन के पश्चात् मुख्य अक्ष के जिस बिन्दु पर मिलती हैं (उत्तल लेंस में) या मुख्य अक्ष के जिस बिन्दु से फैलती हुई प्रतीत होती हैं (अवतल लेंस में), उसे लेंस का द्वितीय मुख्य फोकस कहते हैं। चित्र में \(F_2\) द्वितीय मुख्य फोकस है। द्वितीय मुख्य फोकस को लेंस का मुख्य फोकस भी कहते हैं।</li>
+           <div class="question-image">
+            <img src="images/13.png" alt="चित्र">
+           </div>
+          <li><strong>फोकस दूरी -</strong> लेंस के प्रकाशीय केंद्र (\(O\)) और उसके फोकस (\(F\)) के बीच की दूरी को फोकस दूरी कहते हैं। इसे प्रतीक \(f\) से दर्शाया जाता है।</li>
+        </ul>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: लेंसों के द्वारा प्रतिबिंब की रचना के नियम लिखिए।
+    </div>
+    <div class="answer">
+        लेंसों के द्वारा प्रतिबिंब की रचना के निम्न नियम हैं—
+
+        <ol>
+            <li><strong>पहला नियम -</strong> जो किरण मुख्य अक्ष के समांतर आपतित होती है वह लेंस से अपवर्तन के बाद मुख्य फोकस से होकर जाती है (उत्तल लेंस में ) या मुख्य फोकस से होकर आती हुई प्रतीत होती है ( अवतल लेंस में )</li>
+           <div class="question-image">
+            <img src="images/22.png" alt="चित्र">
+           </div>
+          <li><strong>दूसरा नियम -</strong> जो किरण प्रथम मुख्य फोकस से होकर आपतित होती है (उत्तल लेंस में ) या प्रथम मुख्य फोकस की दिशा में आपतित होती है (अवतल लेंस में ) वह किरण अपवर्तन के बाद मुख्य अक्ष के समांतर हो जाती है ।</li>
+         <div class="question-image">
+            <img src="images/23.png" alt="चित्र">
+         </div>
+          <li><strong>तीसरा नियम -</strong> जब कोई किरण लेंस के प्रकाशीय केंद्र (\(O\)) से होकर गुजरती है, तो वह अपवर्तित नहीं होती, अर्थात् सीधी रेखा में आगे बढ़ती है।</li>
+        <div class="question-image">
+            <img src="images/24.png" alt="चित्र">
+        </div>
+        </ol>
+
+    </div>
+</div>
+<div class="qa-box">
+    <div class="question">
+        <strong>प्रश्न: पतले लेंस के लिए लेंस सूत्र \(\frac{1}{f} = \frac{1}{v} - \frac{1}{u}\) निगमित कीजिए।</strong>
+    </div>
+    <div class="answer">
+        <div class="question-image">
+            <img src="images/27.png" alt="लेंस सूत्र का किरण आरेख">
+        </div>
+        
+        <p>
+            माना एक पतला उत्तल लेंस \(L\) है जिसके दोनों पृष्ठों की वक्रता त्रिज्याएँ \(R_1\) और \(R_2\) हैं। लेंस के पदार्थ का अपवर्तनांक \(\mu\) है। 
+        </p>
+
+        <p><strong>प्रथम पृष्ठ पर अपवर्तन:</strong></p>
+      <p>
+माना द्वितीय पृष्ठ की अनुपस्थिति मे, मुख्य अक्ष पर रखी बिन्दु वस्तु \(O\) का प्रथम गोलीय पृष्ठ से अपवर्तन के पश्चात प्रतिबिम्ब \(I'\) बनता है। इसमें प्रकाश किरण वायु से माध्यम मे प्रवेश करती है। इस स्थिति में -
+</p>
+<div class="formula">
+    $$ u = -u $$
+    $$ v = v' $$
+    $$ R = R_1$$
+    $$\mu = \mu$$
+</div>
+
+        <p>गोलीय पृष्ठ के सूत्र \(\frac{\mu}{v} - \frac{1}{u} = \frac{\mu-1}{R}\) से -</p>
+        <div class="formula">
+            $$\frac{\mu}{v'} - \frac{1}{u} = \frac{\mu-1}{R_1}\tag{1}$$
+        </div>
+
+
+        <p><strong>द्वितीय पृष्ठ पर अपवर्तन:</strong></p>
+      <p>
+ प्रथम पृष्ठ से बना प्रतिबिम्ब, द्वितीय पृष्ठ के लिए वस्तु का कार्य करता है। माना \(I'\) का द्वितीय पृष्ठ से अपवर्तन के पश्चात प्रतिबिम्ब  \(I\) पर बनता है। इसमें प्रकाश किरण माध्यम से वायु में प्रवेश करती है। इस स्थिति में -
+  </p>
+<div class="formula">
+    $$ u = v' $$
+    $$ v = v $$
+    $$ R = R_2$$
+    $$\mu = \frac{1}{\mu}$$
+</div>
+   <p>गोलीय पृष्ठ के सूत्र \(\frac{\mu}{v} - \frac{1}{u} = \frac{\mu-1}{R}\) से -</p>
+         
+        <div class="formula">
+            $$\frac{\frac{1}{\mu}}{v} - \frac{1}{v'} = \frac{\frac{1}{\mu}-1}{R_2}$$
+        </div>
+      <div class="formula">
+            $$\frac{1}{v} - \frac{\mu}{v'} = \frac{1-\mu}{R_2}$$
+      </div>
+        <div class="formula">
+            $$\frac{1}{v} - \frac{\mu}{v'} = -\frac{\mu-1}{R_2}\tag{2}$$
+        </div>
+
+        <p>दोनों समीकरणों को जोड़ने पर:</p>
+        <div class="formula">
+            $$\frac{\mu}{v'} - \frac{1}{u} + \frac{1}{v} - \frac{\mu}{v'} = \frac{\mu-1}{R_1} - \frac{\mu-1}{R_2}$$
+        </div>
+        <div class="formula">
+            $$\frac{1}{v} - \frac{1}{u} = (\mu-1)\left(\frac{1}{R_1} - \frac{1}{R_2}\right)$$
+        </div>
+
+      
+        <p>जब वस्तु अनन्त पर होती है \(u = \infty\) तो प्रतिबिम्ब फोकस पर बनता है \(v = f\)। </p>
+        <div class="formula">
+            $$\frac{1}{f} - \frac{1}{\infty} = (\mu-1)\left(\frac{1}{R_1} - \frac{1}{R_2}\right)$$
+        </div>
+        <div class="formula">
+            $$\frac{1}{f} = (\mu-1)\left(\frac{1}{R_1} - \frac{1}{R_2}\right)$$
+        </div>
+        <p>यह लेंस मेकर सूत्र है।</p>
+
+    </div>    
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        <strong>प्रश्न: सिद्ध करो की \(\frac{1}{f_1} + \frac{1}{f_2} = \frac{1}{f}\) </strong>
+    </div>
+    <div class="answer">
+        <div class="question-image">
+            <img src="images/29.png" alt="लेंस सूत्र का किरण आरेख">
+        </div>
+        
+        <p>
+            माना दो उत्तल लेंस \(L_1\) तथा \(L_2\) है जिनकी फोकस दूरिया क्रमशः \(f_1\) और \(f_2\) हैं। 
+        </p>
+
+        <p><strong>प्रथम लेंस \(L_1\) से अपवर्तन :</strong></p>
+        <p>
+            माना द्वितीय लेंस की अनुपस्थिति मे, मुख्य अक्ष पर रखी बिन्दु वस्तु \(O\) का प्रथम लेंस से अपवर्तन के पश्चात प्रतिबिम्ब \(I_1\) बनता है। इस स्थिति में -
+        </p>
+        <div class="formula">
+            $$ u = u $$
+            $$ v = v_1 $$
+            $$ f = f_1 $$
+        </div>
+
+        <p>लेंस सूत्र \(\frac{1}{f} = \frac{1}{v} - \frac{1}{u}\) से -</p>
+        
+        <div class="formula">
+            $$\frac{1}{f_1} = \frac{1}{v_1} - \frac{1}{u} \tag{1}$$
+        </div>
+
+        <p><strong>द्वितीय लेंस \(L_2\) से अपवर्तन:</strong></p>
+        <p>
+            प्रथम लेंस से बना प्रतिबिम्ब, द्वितीय लेंस के लिए वस्तु का कार्य करता है। माना \(I_1\) का द्वितीय लेंस से अपवर्तन के पश्चात प्रतिबिम्ब \(I\) पर बनता है। इस स्थिति में -
+        </p>
+        <div class="formula">
+            $$ u = v_1 $$
+            $$ v = v $$
+            $$ f = f_2 $$
+        </div>
+        <p>लेंस सूत्र \(\frac{1}{f} = \frac{1}{v} - \frac{1}{u}\) से -</p>
+        
+        <div class="formula">
+            $$\frac{1}{f_2} = \frac{1}{v} - \frac{1}{v_1} \tag{2}$$
+        </div>
+
+        <p>दोनों समीकरणों को जोड़ने पर:</p>
+       
+        <div class="formula">
+            $$\frac{1}{f_1}+\frac{1}{f_2} = \frac{1}{v_1} - \frac{1}{u} + \frac{1}{v} - \frac{1}{v_1}$$
+        </div>
+
+        <div class="formula">
+            $$\frac{1}{f_1}+\frac{1}{f_2} = \frac{1}{v} - \frac{1}{u} $$
+        </div>
+      
+        <p>जब वस्तु अनन्त पर होती है \(u = \infty\) तो प्रतिबिम्ब संयुक्त फोकस पर बनता है \(v = f\)। </p>
+
+        <div class="formula">
+            $$\frac{1}{f_1}+\frac{1}{f_2} = \frac{1}{f} - \frac{1}{\infty} $$
+        </div>
+        <div class="formula">
+            $$\frac{1}{f_1}+\frac{1}{f_2} = \frac{1}{f} - 0 $$
+        </div>
+        <div class="formula">
+            $$\frac{1}{f_1}+\frac{1}{f_2} = \frac{1}{f} $$
+        </div>
+        <p>यही संयुक्त फोकस दूरी का सूत्र है।</p>
+
+    </div>    
+</div>
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: लेंस सूत्र लिखिए तथा इसे सिद्ध कीजिए।
+    </div>
+    <div class="answer">
+लेंस सूत्र
+ <div class="formula">
+            $$ \frac{1}{f} = \frac{1}{v} - \frac{1}{u} $$
+        </div>
+<div class="formula">
+    जहाँ 
+    <br>
+    \(f\) = फोकस दूरी
+    <br>
+    \(v\) = प्रतिबिंब दूरी
+    <br>
+    \(u\) = वस्तु दूरी
+</div>
+
+        <div class="question-image">
+            <img src="images/28.png" alt="चित्र">
+        </div>
+        <p>
+            माना कि L एक उत्तल लेंस है जिसका प्रकाशीय केंद्र O तथा फोकस F है। इसकी मुख्य अक्ष के किसी बिन्दु पर एक वस्तु AB रखी है जिसका लेंस से अपवर्तन के पश्चात प्रतिबिंब A'B' पर बनता है।
+        </p>
+ 
+        <p>समकोण \(\triangle ABO\) तथा \(\triangle A'B'O\) में -</p>
+        <div class="formula">
+            $$ \frac{AB}{A'B'} = \frac{OB}{OB'} \tag{1} $$
+        </div>
+        <p>इसी प्रकार, समकोण \(\triangle LOF\) तथा \(\triangle A'B'F\) में -</p>
+        <div class="formula">
+            $$ \frac{LO}{A'B'} = \frac{OF}{B'F} $$
+        </div>
+      
+        <div class="formula">
+            $$ \frac{AB}{A'B'} = \frac{OF}{B'F} \tag{2} \quad( {\because LO = AB}) $$
+        </div>
+        <p>समीकरण (1) व (2) की तुलना करने पर,</p>
+      
+        <div class="formula">
+            $$ \frac{OB}{OB'} = \frac{OF}{B'F} $$
+            $$ \frac{OB}{OB'} = \frac{OF}{OB' - OF} $$
+        </div>
+        <p>चिह्न परंपरा के अनुसार</p>
+        <div class="formula">
+            $$ OB = -u $$
+            $$ OB' = +v $$
+            $$ OF = +f $$
+        </div>
+        <p>चिन्ह सहित मान रखने पर,</p>
+        <div class="formula">
+            $$ \frac{-u}{v} = \frac{f}{v - f} $$
+            $$ -u(v - f) = v f $$
+            $$ -uv + uf = vf $$
+            $$ uf - vf = uv $$
+            $$ uf = uv + vf $$
+            $$ uv = uf - vf $$
+        </div>
+       दोनों ओर uvf का भाग देने पर 
+<div class="formula">
+            $$ \frac{uv}{uvf} = \frac{uf}{uvf} - \frac{vf}{uvf} $$
+          </div>
+      
+  <div class="formula">
+            $$ \boxed{\frac{1}{f} = \frac{1}{v} - \frac{1}{u}} $$
+        </div>
+        <p>यही लेंस सूत्र है।</p>
+    </div>
+</div>
+  
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: उत्तल लेंसों में विभिन्न वस्तुओं की स्थितियों के लिए प्रतिबिंब निर्माण की प्रकृति, आकार और स्थिति का वर्णन कीजिए।
+    </div>
+    <div class="answer">
+        उत्तल लेंसों में विभिन्न वस्तुओं की स्थितियों के लिए प्रतिबिंब निर्माण—
+
+        <ol>
+            <li><strong>जब वस्तु अनंत पर हो -</strong> जब वस्तु अनंत पर होती है तो उत्तल लेंस से अपवर्तन के पश्चात् प्रतिबिंब लेंस के दूसरी ओर फोकस पर बनता है। प्रतिबिंब वास्तविक, उल्टा तथा बहुत छोटा, या बिंदु-आकार का होता है।</li>
+            <div class="question-image">
+            <img src="images/14.jpg" alt="चित्र">
+            </div>
+          <li><strong>जब वस्तु \(2F\) से परे स्थित हो -</strong> जब वस्तु \(2F\) से परे होती है तो उत्तल लेंस से अपवर्तन के पश्चात् प्रतिबिंब लेंस के दूसरी ओर \(F\) और \(2F\) के बीच बनता है। प्रतिबिंब वास्तविक, उल्टा तथा वस्तु से छोटा होता है।</li>
+          <div class="question-image">
+            <img src="images/15.jpg" alt="चित्र">
+          </div>
+          <li><strong>जब वस्तु \(2F\) पर स्थित हो -</strong> जब वस्तु \(2F\) पर स्थित होती है तो उत्तल लेंस से अपवर्तन के पश्चात् प्रतिबिंब लेंस के दूसरी ओर \(2F\) पर बनता है। प्रतिबिंब वास्तविक, उल्टा तथा वस्तु के आकार का होता है।</li>
+          <div class="question-image">
+            <img src="images/16.jpg" alt="चित्र">
+          </div>
+          <li><strong>जब वस्तु \(2F\) और \(F\) के मध्य स्थित हो -</strong> जब वस्तु \(2F\) और \(F\) के मध्य स्थित होती है तो उत्तल लेंस से अपवर्तन के पश्चात् प्रतिबिंब लेंस के दूसरी ओर \(2F\) से परे बनता है। प्रतिबिंब वास्तविक, उल्टा तथा वस्तु से बड़ा होता है।</li>
+          <div class="question-image">
+            <img src="images/17.jpg" alt="चित्र">
+          </div>
+          <li><strong>जब वस्तु \(F\) से परे स्थित हो -</strong> जब वस्तु \(F\) से परे होती है तो उत्तल लेंस से अपवर्तन के पश्चात् प्रतिबिंब लेंस के दूसरी ओर अनंत पर बनता है। प्रतिबिंब वास्तविक, उल्टा तथा वस्तु से बहुत बड़ा होता है।</li>
+           <div class="question-image">
+            <img src="images/18.jpg" alt="चित्र">
+           </div>
+          <li><strong>जब वस्तु \(F\) और \(O\) के मध्य स्थित हो -</strong> जब वस्तु \(F\) और \(O\) के मध्य स्थित होती है तो उत्तल लेंस से अपवर्तन के पश्चात् प्रतिबिंब वस्तु की ओर ही बनता है। प्रतिबिंब आभासी, सीधा तथा वस्तु से बड़ा होता है।</li>
+        <div class="question-image">
+            <img src="images/19.jpg" alt="चित्र">
+        </div>
+        </ol>
+    </div>
+</div>
+
+  
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: उत्तल लेंस के उपयोग लिखिए।
+    </div>
+    <div class="answer">
+        उत्तल लेंस के उपयोग निम्न हैं—
+
+        <ol>
+            <li><strong>आवर्धक काँच बनाने में -</strong> यह वस्तु का बड़ा प्रतिबिंब दिखाता है।</li>
+            <li><strong>दृष्टिदोष सुधारने में -</strong> हाइपरोमेट्रोपिया (दूर दृष्टि दोष) को ठीक करने के लिए चश्मे में उत्तल लेंस लगाए जाते हैं।</li>
+            <li><strong>कैमरे में -</strong> प्रकाश को एक बिंदु पर केंद्रित करने के लिए कैमरे के लेंस में उत्तल लेंस का प्रयोग होता है।</li>
+            <li><strong>सूक्ष्मदर्शी और दूरदर्शी में -</strong> वस्तुओं को बड़ा और स्पष्ट दिखाने के लिए प्रयोग किया जाता है।</li>
+            <li><strong>प्रोजेक्टर में -</strong> पर्दे पर वस्तु का बड़ा प्रतिबिंब बनाने के लिए उपयोग किया जाता है।</li>
+        </ol>
+    </div>
+</div>
+
+  <div class="qa-box">
+
+<div class="question">
+    <strong>प्रश्न: अवतल लेंस में वस्तु के लिए प्रतिबिंब निर्माण की प्रकृति, आकार और स्थिति का वर्णन कीजिए।</strong>
+</div>
+
+<div class="answer">
+    अवतल लेंस में वस्तु की स्थिति के आधार पर प्रतिबिंब निर्माण की प्रमुख स्थितियाँ निम्नलिखित हैं—
+
+<ol>
+    <li>
+        <strong>जब वस्तु अनंत पर हो:</strong>
+        <br>
+        प्रतिबिंब लेंस के प्रकाशिक केन्द्र और फोकस के बीच, फोकस के बहुत निकट बनता है। प्रतिबिंब आभासी, सीधा और अत्यंत छोटा होता है।
+    </li>
+
+    <div class="question-image">
+            <img src="images/20.jpg" alt="चित्र">
+    </div>
+
+    <li>
+        <strong>जब वस्तु सीमित दूरी पर हो:</strong>
+        <br>
+        प्रतिबिंब वस्तु की ओर लेंस के प्रकाशिक केन्द्र और फोकस के बीच बनता है। प्रतिबिंब आभासी, सीधा और वस्तु से छोटा होता है।
+    </li>
+  <div class="question-image">
+            <img src="images/21.jpg" alt="चित्र">
+  </div>
+</ol>
+
+</div>
+
+</div>
+    
+  
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: अवतल लेंस के उपयोग लिखिए।
+    </div>
+    <div class="answer">
+        अवतल लेंस के उपयोग—
+
+        <ol>
+            <li><strong>दृष्टिदोष सुधारने में -</strong> मायोपिया (निकट दृष्टि दोष) को ठीक करने के लिए चश्मे में अवतल लेंस का प्रयोग किया जाता है।</li>
+            <li>लेज़र बीम को फैलाने के लिए प्रयोग किया जाता है।</li>
+            <li>कैमरा और दूरबीन में किरणों को नियंत्रित करने और स्पष्ट चित्र प्राप्त करने के लिए उपयोग होता है।</li>
+            <li>सुरक्षा उपकरणों जैसे डोर पीप होल (दरवाज़े की झिरी) में वस्तु का छोटा और विस्तृत दृश्य दिखाने के लिए प्रयोग किया जाता है।</li>
+            <li>वैज्ञानिक प्रयोगों में किरणों को फैलाने और फोकस दूरी मापने के लिए अवतल लेंस का उपयोग किया जाता है।</li>
+        </ol>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: लेंस की क्षमता से क्या अभिप्राय है? इसका मात्रक लिखिए।
+    </div>
+    <div class="answer">
+        किसी लेंस मीटर में व्यक्त फोकस दूरी के व्युत्क्रम को लेंस की क्षमता कहते हैं। इसे \(P\) से व्यक्त करते हैं।
+
+        <br>
+
+        अर्थात् लेंस की क्षमता—
+
+        <div class="formula">
+            $$
+            P = \frac{1}{f}\ (\text{मी में}) = \frac{100}{f}\ (\text{सेमी में})
+            $$
+        </div>
+
+       इसका मात्रक <strong>डायोप्टर</strong> होता है।
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        चिन्ह परिपाटी (Sign Convention)
+    </div>
+    <div class="answer">
+        अवतल लेंस तथा उत्तल लेंस से संख्यात्मक प्रश्नों के लिए लेंस सूत्रों में चिन्हों के प्रयोग हेतु कार्तीय चिन्ह परिपाटी अपनाई जाती है। इसके अनुसार—
+
+        <br><br>
+
+        समस्त दूरियां लेंस के प्रकाशीय केंद्र को मूल बिंदु मानकर मुख्य अक्ष के अनुदिश मापी जाती हैं।
+
+        <ul>
+            <li><strong>वस्तु दूरी (\(u\)):</strong> हमेशा ऋणात्मक (−)।</li>
+            <li><strong>प्रतिबिंब दूरी (\(v\)):</strong> यदि प्रतिबिंब वास्तविक बनता है → धनात्मक (+); यदि प्रतिबिंब आभासी बनता है → ऋणात्मक (−)।</li>
+            <li><strong>आवर्धन (\(m\)):</strong> यदि प्रतिबिंब वास्तविक है → ऋणात्मक (−); यदि प्रतिबिंब आभासी है → धनात्मक (+)।</li>
+            <li><strong>फोकस दूरी (\(f\)):</strong> उत्तल लेंस के लिए → धनात्मक (+); अवतल लेंस के लिए → ऋणात्मक (−)।</li>
+            <li><strong>वस्तु की ऊँचाई (\(O\)):</strong> मुख्य अक्ष के ऊपर → धनात्मक (+); मुख्य अक्ष के नीचे → ऋणात्मक (−)।</li>
+            <li><strong>प्रतिबिंब की ऊँचाई (\(I\)):</strong> वास्तविक प्रतिबिंब → ऋणात्मक (−); आभासी प्रतिबिंब → धनात्मक (+)।</li>
+        </ul>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: किसी उत्तल लेंस की वायु में फोकस दूरी 20 cm है। जल में इसकी फोकस दूरी क्या है? (वायु-जल का अपवर्तनांक 1.33 तथा वायु-काँच का अपवर्तनांक 1.5 है।) (2023)
+    </div>
+    <div class="answer">
+        <em>(स्रोत दस्तावेज़ में इस संख्यात्मक प्रश्न का हल उपलब्ध नहीं है — केवल प्रश्न ही मूल नोट्स में दिया गया है।)</em>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: किसी माध्यम का वायु के सापेक्ष क्रांतिक कोण 45° है। इस माध्यम का अपवर्तनांक ज्ञात करें। (2025 पूरक)
+    </div>
+    <div class="answer">
+        <em>(स्रोत दस्तावेज़ में इस संख्यात्मक प्रश्न का हल उपलब्ध नहीं है — केवल प्रश्न ही मूल नोट्स में दिया गया है।)</em>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: यदि लेंस की क्षमता +2D तब इसकी फोकस दूरी ज्ञात करें। (2024 पूरक)
+    </div>
+    <div class="answer">
+        <em>(स्रोत दस्तावेज़ में इस संख्यात्मक प्रश्न का हल उपलब्ध नहीं है — केवल प्रश्न ही मूल नोट्स में दिया गया है।)</em>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: किसी उभयोत्तल लेंस के दो फलकों की वक्रता त्रिज्याएँ 10 सेमी. तथा 15 सेमी. है (वायु का अपवर्तनांक = 1) उसकी फोकस दूरी 12 सेमी. है। लेंस के काँच का अपवर्तनांक ज्ञात कीजिए। (म. प्र. 2019, 23)
+    </div>
+    <div class="answer">
+        <em>(स्रोत दस्तावेज़ में इस संख्यात्मक प्रश्न का हल उपलब्ध नहीं है — केवल प्रश्न ही मूल नोट्स में दिया गया है।)</em>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: एक उत्तल लेंस की फोकस दूरी 20 सेमी है। इसे 25 सेमी फोकस दूरी वाले अवतल लेंस के संपर्क में रखा गया है। संयुक्त लेंस की फोकस दूरी और क्षमता ज्ञात कीजिए।
+    </div>
+    <div class="answer">
+        <em>(स्रोत दस्तावेज़ में इस संख्यात्मक प्रश्न का हल उपलब्ध नहीं है — केवल प्रश्न ही मूल नोट्स में दिया गया है।)</em>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: 4.0 सेमी व्यास वाले काँच के एक ठोस गोले (\(\mu = 1.5\)) के अंदर एक वायु का बुलबुला है, जो गोले की सतह से व्यास के अनुदिश देखने पर सतह से 1 सेमी की दूरी पर दिखाई देता है। बुलबुले की वास्तविक स्थिति क्या है?
+    </div>
+    <div class="answer">
+        <em>(स्रोत दस्तावेज़ में इस संख्यात्मक प्रश्न का हल उपलब्ध नहीं है — केवल प्रश्न ही मूल नोट्स में दिया गया है।)</em>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: 40 सेमी वक्रता त्रिज्या वाले एक अवतल दर्पण के सामने 5 सेमी लंबी एक वस्तु रखी गई है। दर्पण से वस्तु की दूरी 40 सेमी है। प्रतिबिंब की दूरी और साइज़ ज्ञात कीजिए। (2020)
+    </div>
+    <div class="answer">
+        <em>(स्रोत दस्तावेज़ में इस संख्यात्मक प्रश्न का हल उपलब्ध नहीं है — केवल प्रश्न ही मूल नोट्स में दिया गया है।)</em>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: एक समतलोत्तल लेंस की वक्रता त्रिज्या 20 सेमी है। काँच का अपवर्तनांक 1.5 है। लेंस की फोकस दूरी ज्ञात कीजिए। (2020)
+    </div>
+    <div class="answer">
+        <em>(स्रोत दस्तावेज़ में इस संख्यात्मक प्रश्न का हल उपलब्ध नहीं है — केवल प्रश्न ही मूल नोट्स में दिया गया है।)</em>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: एक तालाब के किनारे खड़ा एक व्यक्ति पानी की सतह से 2 मीटर नीचे एक मछली देखता है। यदि पानी का अपवर्तनांक 1.33 है, तो मछली की वास्तविक गहराई क्या होगी?
+    </div>
+    <div class="answer">
+        <em>(स्रोत दस्तावेज़ में इस संख्यात्मक प्रश्न का हल उपलब्ध नहीं है — केवल प्रश्न ही मूल नोट्स में दिया गया है।)</em>
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: ऑप्टिकल फाइबर के माध्यम से प्रकाश का संचरण किस घटना के कारण होता है?
+    </div>
+    <div class="answer">
+        प्रकाश का प्रकाशिक फाइबर के माध्यम से संचरण, प्रकाश के पूर्ण आंतरिक परावर्तन की घटना के कारण होता है।
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: पारदर्शी द्रव में डूबे लेंस किस स्थिति में अदृश्य हो जाता है?
+    </div>
+    <div class="answer">
+        लेंस तब अदृश्य हो जाता है जब उसके पदार्थ का अपवर्तनांक द्रव के अपवर्तनांक के बराबर हो जाता है।
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: पानी में डूबे लेंस की फोकस दूरी पर क्या प्रभाव पड़ेगा?
+    </div>
+    <div class="answer">
+        किसी लेंस को पानी में डुबाने पर उसकी फोकस दूरी लगभग चार गुना हो जाती है।
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: कारण बताइए, किसी लेंस को द्रव के अन्दर डुबाने पर उसकी फोकस दूरी बढ़ जाती है; क्यों?
+    </div>
+    <div class="answer">
+        लेंस निर्माता के सूत्र के अनुसार लेंस की फोकस दूरी—
+
+        <br><br>
+
+        <em>(यहाँ मूल दस्तावेज़ में लेंस निर्माता सूत्र का समीकरण छूट गया है — स्रोत में यह पंक्ति सीधे अगली व्याख्या से जुड़ जाती है।)</em>
+
+        <br><br>
+
+        जब एक लेंस को उस द्रव में डुबोया जाता है जिसका वायु के सापेक्ष अपवर्तनांक लेंस के पदार्थ (कांच) के वायु के सापेक्ष अपवर्तनांक से कम है, तो लेंस की फोकस दूरी बढ़ जाती है क्योंकि दिए गए द्रव के सापेक्ष कांच का अपवर्तनांक, वायु के सापेक्ष कांच के अपवर्तनांक से कम होता है।
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: "पानी के अंदर एक हवा का बुलबुला, जिसका पृष्ठ उत्तल है, अवतल लेंस की तरह व्यवहार करता है।" इस कथन को सिद्ध कीजिए।
+    </div>
+    <div class="answer">
+        किसी लेंस के पदार्थ का अपवर्तनांक उस माध्यम पर निर्भर करता है जिसमें उसे रखा जाता है। इस प्रकार लेंस की प्रकृति उसके आस-पास के माध्यम को बदलने पर बदल जाती है।
+
+        <br><br>
+
+        <em>(स्रोत में यहाँ लेंस निर्माता सूत्र से \(\mu\) के मान की गणना वाला मध्यवर्ती चरण उपलब्ध नहीं है।)</em>
+
+        <br><br>
+
+        पानी के अंदर हवा के बुलबुले के लिए, जिसका सतह उत्तल है, \(\mu\) का मान 1 से कम है क्योंकि पानी के संबंध में हवा का अपवर्तनांक 1 से कम है। इस प्रकार, सूत्र के अनुसार पानी के अंदर हवा के बुलबुले (उत्तल लेंस) की फोकस दूरी ऋणात्मक होती है जो लेंस की अवतल प्रकृति का प्रतिनिधित्व करती है। इस प्रकार, पानी में हवा का बुलबुला जिसका सतह उत्तल है, अवतल लेंस की तरह व्यवहार करता है।
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        प्रश्न: दो उत्तल लेंसों को किस प्रकार रखा जाना चाहिए ताकि उस पर आपतित प्रकाश समान्तर किरणपुंज के रूप में निकले?
+    </div>
+    <div class="answer">
+        दो उत्तल लेंसों की प्रणाली पर आपतित प्रकाश की एक समानांतर किरण, यदि प्रणाली से अपवर्तन के बाद एक समानांतर किरण के रूप में निकलती है, तो प्रणाली एक समतल कांच की प्लेट की तरह व्यवहार करती है, अर्थात् प्रणाली की फोकस दूरी अनंत होती है।
+
+        <br><br>
+
+        अब, मान लीजिए कि फोकस दूरी \(f_1\) और \(f_2\) के दो उत्तल लेंसों को \(d\) दूरी पर रखा गया है, तो सूत्र
+
+        <br><br>
+
+        <em>(स्रोत में यहाँ दो लेंसों के संयोजन का सूत्र (समीकरण) छूट गया है — मूल नोट्स सीधे निष्कर्ष पर पहुँच जाते हैं।)</em>
+
+        <br><br>
+
+        से, अर्थात्, दोनों लेंसों को \(f_1+f_2\) की दूरी पर रखा जाना चाहिए।
+    </div>
+</div>
+
+<div class="qa-box">
+    <div class="question">
+        एक शब्द में उत्तर दीजिए।
+    </div>
+    <div class="answer">
+        <ol>
+            <li>लेंस किसे कहते हैं? – दो वक्र सतहों या एक वक्र और एक समतल सतह से बनी पारदर्शी वस्तु को लेंस कहते हैं।</li>
+            <li>लेंस के प्रकार कितने होते हैं? – लेंस दो प्रकार के होते हैं — (i) उत्तल लेंस (ii) अवतल लेंस।</li>
+            <li>उत्तल लेंस का दूसरा नाम क्या है? – <strong>अभिसारी लेंस।</strong></li>
+            <li>कौन-सा लेंस अपसारी लेंस कहलाता है? – <strong>अवतल लेंस।</strong></li>
+            <li>वायु में रखा लेंस जल में रखने पर उसकी फोकस दूरी पर क्या प्रभाव पड़ता है? – <strong>फोकस दूरी बढ़ जाती है।</strong></li>
+            <li>लेंस की फोकस दूरी न्यूनतम किस रंग की किरणों के लिए होती है? – <strong>बैंगनी रंग के लिए।</strong></li>
+            <li>जल में वायु का बुलबुला किस प्रकार का लेंस होता है? – <strong>अवतल लेंस।</strong></li>
+            <li>माइक्रोस्कोप के नेत्र लेंस की फोकस दूरी घटाने पर आवर्धन शक्ति पर क्या प्रभाव पड़ता है? – <strong>आवर्धन शक्ति बढ़ जाती है।</strong></li>
+            <li>दूरबीन की आवर्धन शक्ति बढ़ाने के लिए क्या करना चाहिए? – <strong>अधिक फोकस दूरी वाले ऑब्जेक्टिव लेंस का प्रयोग करना चाहिए।</strong></li>
+            <li>लेंस की शक्ति का सूत्र क्या है? – \(P=\dfrac{1}{f}\) (जहाँ \(f\) = फोकस दूरी मीटर में)।</li>
+            <li>लेंस की शक्ति की इकाई क्या है? – <strong>डायॉप्टर।</strong></li>
+            <li>लेंस की फोकस दूरी उसकी शक्ति पर कैसे निर्भर करती है? – <strong>फोकस दूरी शक्ति के व्युत्क्रमानुपाती होती है।</strong></li>
+            <li>उत्तल लेंस का उपयोग कहाँ किया जाता है? – <strong>आवर्धक काँच, कैमरा, माइक्रोस्कोप, दूरबीन आदि में।</strong></li>
+            <li>अवतल लेंस का उपयोग कहाँ किया जाता है? – <strong>मायोपिया (निकट दृष्टिदोष) के चश्मे में तथा दूरबीन में।</strong></li>
+        </ol>
+    </div>
+</div>
+
+</div>
+
+<!-- SCRIPT -->
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("show");
+}
+
+document.addEventListener("click", function(e){
+    if(!e.target.closest(".navbar")){
+        document.getElementById("menu").classList.remove("show");
+    }
+});
+</script>
+
+<!-- Content Protection Scripts -->
+<script>
+// Disable right-click context menu
+document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+
+// Disable text selection
+document.addEventListener("selectstart", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+
+// Disable copy keyboard shortcut (Ctrl+C, Cmd+C)
+document.addEventListener("keydown", function(e) {
+    // Disable PrintScreen and related screenshot keys
+    if (e.key === "PrintScreen" ||
+        e.keyCode === 44 ||  // PrintScreen
+        (e.ctrlKey && e.shiftKey && e.key === "S") ||  // Windows Snipping Tool
+        (e.keyCode === 91 && e.shiftKey && e.key === "5")) {  // Mac Screenshot
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+C and Cmd+C (copy)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "c" || e.keyCode === 67)) {
+        e.preventDefault();
+        alert("Copying content is not allowed on this page.");
+        return false;
+    }
+
+    // Disable Ctrl+A (select all)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "a" || e.keyCode === 65)) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+X (cut)
+    if ((e.ctrlKey || e.metaKey) && (e.key === "x" || e.keyCode === 88)) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable F12 (Developer Tools)
+    if (e.keyCode === 123) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+Shift+I (Developer Tools)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "i" || e.keyCode === 73)) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Disable Ctrl+Shift+J (Console)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === "j" || e.keyCode === 74)) {
+        e.preventDefault();
+        return false;
+    }
+}, false);
+
+// Prevent copy on mouse up
+document.addEventListener("mouseup", function() {
+    document.selection.empty ? document.selection.empty() : window.getSelection().removeAllRanges();
+}, false);
+
+// Disable paste
+document.addEventListener("paste", function(e) {
+    e.preventDefault();
+    alert("Pasting content is not allowed on this page.");
+    return false;
+}, false);
+
+// Add user-select: none CSS dynamically
+document.addEventListener("DOMContentLoaded", function() {
+    document.body.style.userSelect = "none";
+    document.body.style.webkitUserSelect = "none";
+    document.body.style.msUserSelect = "none";
+    document.body.style.mozUserSelect = "none";
+});
+
+// Prevent image download
+document.addEventListener("dragstart", function(e) {
+    e.preventDefault();
+    return false;
+}, false);
+</script>
+
+</body>
+</html>
