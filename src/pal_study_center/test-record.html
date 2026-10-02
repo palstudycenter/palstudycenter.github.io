@@ -29,7 +29,7 @@ body{padding-top:70px;background:#f4f7ff;font-family:Poppins;}
 </div>
 
 <div class="card p-2" style="border-radius:16px; border:0; box-shadow:0 8px 20px rgba(0,0,0,.07);">
-<div class="d-flex justify-content-between p-2"><h6 class="fw-bold mb-0">📝 All Tests - <span id="className"></span></h6><small class="text-muted">T1-T100</small></div>
+<div class="d-flex justify-content-between p-2"><h6 class="fw-bold mb-0">📝 My Tests - <span id="className"></span></h6><small class="text-muted">Only My Record</small></div>
 <div class="table-responsive table-scroll"><table class="table table-bordered align-middle text-center mb-0"><thead class="table-dark"><tr id="h2"></tr></thead><tbody id="b2"></tbody></table></div>
 </div>
 </div>
@@ -44,58 +44,49 @@ function renderAll(){
   let inactiveIds = JSON.parse(localStorage.getItem('pal_inactive_ids')||'[]').map(String);
   if(!allStudents.length) allStudents=[{id:user.id||1, name:user.name, class:user.class, board:user.board}];
 
-  // Admin जैसा ही Filter
-  let data=allStudents.filter(s=>{
+  // Rank के लिए पूरी Class
+  let fullList=allStudents.filter(s=>{
     if(inactiveIds.includes(String(s.id))) return false;
     if(user.class && (s.class||'').trim()!== (user.class||'').trim()) return false;
     if(user.board && (s.board||'').trim()!== (user.board||'').trim()) return false;
     return true;
   }).map(s=>{
-   let sid = String(s.id);
-   let m=TM[sid]||TM[String(s.id)]||TM[s.name]||{};
-   let tot=0,c=0,lat='-', ln='';
-   for(let k=1;k<=TC;k++){
-     let val=m[k];
-     if(val!=='' && val!=null &&!isNaN(val)){tot+=parseInt(val);c++;lat=val;ln='T'+k;}
-   }
-   return {...s, _sid:sid, per:c?tot/(c*20)*100:0, lat, ln, m, count:c};
+   let m=TM[String(s.id)]||TM[s.name]||{};
+   let tot=0,c=0;
+   for(let k=1;k<=TC;k++){ let v=m[k]; if(v!=='' && v!=null &&!isNaN(v)){tot+=parseInt(v);c++;} }
+   return {...s, _sid:String(s.id), per:c?tot/(c*20)*100:0, m, count:c};
   }).sort((a,b)=>b.per-a.per);
 
-  // FIX: खुद को Name + id दोनों से ढूंढो (case insensitive)
   let myName = (user.name||'').trim().toLowerCase();
   let myId = String(user.id||'').trim().toLowerCase();
-  let myIdx=data.findIndex(d=> String(d._sid).toLowerCase()===myId || (d.name||'').trim().toLowerCase()===myName);
+  let myIdx=fullList.findIndex(d=> String(d._sid).toLowerCase()===myId || (d.name||'').trim().toLowerCase()===myName);
   if(myIdx==-1) myIdx=0;
-  let myData=data[myIdx]||{per:0,lat:'-',ln:'',count:0};
+  let myData=fullList[myIdx];
 
+  // Top Cards
   document.getElementById('className').innerText=user.class||'';
   document.getElementById('myRank').innerText='#'+(myIdx+1);
-  document.getElementById('myRankTotal').innerText='out of '+data.length;
+  document.getElementById('myRankTotal').innerText='out of '+fullList.length;
   document.getElementById('myPer').innerText=myData.per.toFixed(1)+'%';
-  document.getElementById('myLat').innerText=myData.lat!='-'?myData.lat+'/20':'-/20';
-  document.getElementById('myLatName').innerText=myData.ln||'No Test';
-  document.getElementById('myAttempt').innerText= myData.count + ' / '+TC;
-  document.getElementById('myAttemptPer').innerText= myData.count + '% Completed';
+  let tot=0,c=0,lat='-',ln='';
+  for(let k=1;k<=TC;k++){ let v=myData.m[k]; if(v!=='' && v!=null &&!isNaN(v)){tot+=parseInt(v);c++;lat=v;ln='T'+k;} }
+  document.getElementById('myLat').innerText=lat!='-'?lat+'/20':'-/20';
+  document.getElementById('myLatName').innerText=ln||'No Test';
+  document.getElementById('myAttempt').innerText= c + ' / '+TC;
+  document.getElementById('myAttemptPer').innerText= c + '% Completed';
 
-  let h='<th style="position:sticky;left:0;background:#212529;min-width:50px;z-index:4;">Rank</th><th style="position:sticky;left:50px;background:#212529;min-width:130px;z-index:4;text-align:left;">Name</th>';
+  // TABLE - सिर्फ मेरा ही Record
+  let h='<th style="min-width:130px;text-align:left;">Name</th>';
   for(let i=1;i<=TC;i++) h+=`<th style="min-width:60px;">T${i}</th>`;
   document.getElementById('h2').innerHTML=h;
-  let html='';
-  data.forEach((r,i)=>{
-    let isMe = i===myIdx;
-    let style=isMe?'style="background:#dbeafe;font-weight:700;"':'';
-    let rank=i==0?'🥇':i==1?'🥈':i==2?'🥉':i+1;
-    html+=`<tr ${style}><td style="position:sticky;left:0;background:${isMe?'#dbeafe':'#fff'};z-index:2;">${rank}</td><td style="position:sticky;left:50px;background:${isMe?'#dbeafe':'#fff'};text-align:left;z-index:2;">${r.name}</td>`;
-    for(let k=1;k<=TC;k++) html+=`<td>${r.m[k]!=null && r.m[k]!==''?'<b>'+r.m[k]+'</b>':'<span style="color:#ccc;">-</span>'}</td>`;
-    html+='</tr>';
-  });
+  let html=`<tr style="background:#dbeafe;font-weight:700;"><td style="text-align:left;">${myData.name}</td>`;
+  for(let k=1;k<=TC;k++) html+=`<td>${myData.m[k]!=null && myData.m[k]!==''?'<b>'+myData.m[k]+'</b>':'<span style="color:#ccc;">-</span>'}</td>`;
+  html+='</tr>';
   document.getElementById('b2').innerHTML=html;
 }
 
 renderAll();
 window.addEventListener('pageshow', renderAll);
-window.addEventListener('focus', renderAll);
-document.addEventListener('visibilitychange', ()=>{ if(!document.hidden) renderAll(); });
 setInterval(renderAll, 1500);
 </script>
 </body></html>
