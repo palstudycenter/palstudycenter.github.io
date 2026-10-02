@@ -11,9 +11,10 @@ async function loadStudents() {
     const json = await response.json();
     if (json.status && Array.isArray(json.res)) {
       students = json.res.filter(s => s && s.usertype === 'student');
+      localStorage.setItem('pal_students_list_cache', JSON.stringify(students));
       renderAll();
     }
-  } catch (e) { console.error(e); }
+  } catch (e) { console.error(e); students = JSON.parse(localStorage.getItem('pal_students_list_cache')||'[]'); renderAll(); }
 }
 function setStudentFilterMode(mode){
   studentMode = mode;
@@ -23,12 +24,8 @@ function setStudentFilterMode(mode){
 }
 function toggleStudentActive(id){
   id = String(id);
-  if(inactiveIds.includes(id)){
-    inactiveIds = inactiveIds.filter(x=>x!=id);
-  } else {
-    if(!confirm('इस Student को Inactive करना है?')) return;
-    inactiveIds.push(id);
-  }
+  if(inactiveIds.includes(id)){ inactiveIds = inactiveIds.filter(x=>x!=id); }
+  else { if(!confirm('इस Student को Inactive करना है?')) return; inactiveIds.push(id); }
   localStorage.setItem('pal_inactive_ids', JSON.stringify(inactiveIds));
   renderAll();
 }
@@ -68,7 +65,6 @@ function openProfile(i) {
 }
 window.addEventListener('DOMContentLoaded', loadStudents);
 
-/*... Reviews Code Same... */
 function parseReviewAdmin(review){ let text=review.review_text||''; let percent=review.percentage||''; let batch=review.batch_year||review.batch||''; if(text.includes('@@')){ const m=text.match(/@@([^@]+)@@/); if(m){ const parts=m[1].split('|'); if(!percent) percent=parts[0]||''; if(!batch) batch=parts[1]||''; } text=text.replace(/@@[^@]+@@/g,'').trim(); } return {cleanText:text,percent,batch}; }
 function createStars(rating){ const count=Math.min(Math.max(Number(rating)||0,0),5); return '★'.repeat(count)+'☆'.repeat(5-count); }
 function renderReviewCard(review){ const {cleanText,percent,batch}=parseReviewAdmin(review); return `<div class="card mb-3" id="review-card-${review.id}"><div class="card-body"><div class="d-flex justify-content-between"><div><h5>${escapeHtml(review.student_name)} <small class="text-muted">${escapeHtml(review.board)} | ${escapeHtml(review.class)} | ${percent? percent+'%':''} | Batch ${batch}</small></h5><div class="mb-2"><strong>Rating:</strong> ${createStars(Number(review.rating))}</div></div><div class="btn-group"><button class="btn btn-sm btn-outline-primary" onclick="enableReviewEdit(${review.id})">Edit</button><button class="btn btn-sm btn-outline-success" onclick="approveReview(${review.id})">Approve</button><button class="btn btn-sm btn-outline-danger" onclick="unapproveReview(${review.id})">Delete</button></div></div><p id="review-text-${review.id}" class="border p-3 rounded">${escapeHtml(cleanText)}</p><textarea class="form-control d-none" id="review-edit-${review.id}" rows="3">${escapeHtml(cleanText)}</textarea><div class="row g-2 mt-2 d-none" id="review-extra-${review.id}"><div class="col-6"><input id="review-percent-${review.id}" class="form-control" value="${escapeHtml(percent)}"></div><div class="col-6"><input id="review-batch-${review.id}" class="form-control" value="${escapeHtml(batch)}"></div></div><div id="review-actions-${review.id}"></div></div></div>`; }
@@ -80,7 +76,7 @@ async function unapproveReview(id){ if(!confirm('Delete?')) return; const r=awai
 async function approveReview(id){ const el=document.getElementById(`review-edit-${id}`); const txt=el&&!el.classList.contains('d-none')?el.value.trim():document.getElementById(`review-text-${id}`).textContent.trim(); const p=document.getElementById(`review-percent-${id}`)?.value.trim()||''; const b=document.getElementById(`review-batch-${id}`)?.value.trim()||''; await fetch(getApiUrl(`${CONFIG.API.REVIEWS}/${id}`),{method:'PATCH',headers:{'Content-Type':'application/json'},body:JSON.stringify({review_text:txt.replace(/@@[^@]+@@/g,'').trim(),percentage:p,batch_year:b,approved:true,is_approved:1})}); document.getElementById(`review-card-${id}`).remove(); alert('Approved'); }
 async function openReviewsPopup(e){ if(e) e.preventDefault(); await loadReviewsForAdmin(); new bootstrap.Modal(document.getElementById('reviewModal')).show(); }
 
-/* TEST RECORDS FIX */
+/* TEST RECORDS FIX - RANK */
 function showTests(){
  let fBoard=document.getElementById("filterBoard")?.value||"";
  let fClass=document.getElementById("filterClass")?.value||"";
@@ -88,31 +84,46 @@ function showTests(){
    let isI=inactiveIds.includes(String(s.id));
    if(studentMode==='active' && isI) return false;
    if(studentMode==='inactive' &&!isI) return false;
-   return (!fClass||s.class==fClass)&&(!fBoard||s.board==fBoard);
+   return (!fClass|| (s.class||'').trim()==fClass.trim())&&(!fBoard|| (s.board||'').trim()==fBoard.trim());
  });
  if(!TC || TC<100) TC=100;
-
  let h=`<th style="position:sticky;left:0;top:0;background:#212529;min-width:40px;z-index:10;">#</th>
-        <th style="position:sticky;left:40px;top:0;background:#212529;min-width:120px;z-index:10;text-align:left;">Name</th>
+        <th style="position:sticky;left:40px;top:0;background:#212529;min-width:120px;z-index:10;text-align:left;border-right:2px solid #000;">Name</th>
         <th style="min-width:70px;top:0;background:#212529;">औसत %</th>
         <th style="min-width:70px;top:0;background:#212529;">Latest</th>`;
  for(let i=1;i<=TC;i++) h+=`<th style="min-width:65px;top:0;background:#212529;">T${i}</th>`;
  document.getElementById('th').innerHTML=h;
-
- let rows=list.map(s=>{ let m=TM[s.id]||TM[String(s.id)]||{}; let tot=0,c=0,lat='-'; for(let k=1;k<=TC;k++){ if(m[k]!==''&&m[k]!=null){ let v=parseInt(m[k]); if(!isNaN(v)){tot+=v;c++;lat=v;} } } return {...s,per:c?tot/(c*20)*100:0,lat,m}; }).sort((a,b)=>b.per-a.per);
-
+ let rows=list.map(s=>{
+   let sid=String(s.id);
+   let m=TM[sid]||TM[s.name]||{};
+   let tot=0,c=0,lat='-';
+   for(let k=1;k<=TC;k++){ let v=m[k]; if(v!=='' && v!=null &&!isNaN(v)){tot+=parseInt(v);c++;lat=v;} }
+   return {...s, _sid:sid, per:c?tot/(c*20)*100:0, lat, m};
+ }).sort((a,b)=>b.per-a.per);
  let b='';
  rows.forEach((r,i)=>{
-   b+=`<tr>
-   <td style="position:sticky;left:0;background:#fff;z-index:2;font-weight:700;">${i+1}</td>
-   <td style="position:sticky;left:40px;background:#fff;z-index:2;text-align:left;font-weight:600;border-right:2px solid #000;">${r.name}</td>
-   <td style="background:#e7f0ff;font-weight:700;">${r.per.toFixed(1)}%</td>
-   <td style="background:#fff8e1;">${r.lat!=='-'?r.lat:''}</td>`;
-   for(let k=1;k<=TC;k++){
-     b+=`<td><input value="${r.m[k]||''}" onchange="saveT('${r.id}',${k},this.value)" style="width:50px;text-align:center;border:1px solid #ddd;border-radius:5px;padding:3px;"></td>`;
-   }
+   b+=`<tr><td style="position:sticky;left:0;background:#fff;z-index:2;">${i+1}</td><td style="position:sticky;left:40px;background:#fff;z-index:2;text-align:left;font-weight:600;border-right:2px solid #000;">${r.name}</td><td style="background:#e7f0ff;font-weight:700;">${r.per.toFixed(1)}%</td><td style="background:#fff8e1;">${r.lat!=='-'?r.lat:''}</td>`;
+   for(let k=1;k<=TC;k++){ let val=r.m[k]||''; b+=`<td><input type="number" value="${val}" onchange="saveT('${r._sid}','${r.name}',${k},this.value)" style="width:50px;text-align:center;border:1px solid #ddd;border-radius:5px;padding:3px;"></td>`; }
    b+='</tr>';
  });
  document.getElementById('tb').innerHTML=b;
 }
-function saveT(id,t,v){ if(!TM[id]) TM[id]={}; TM[id][t]=v; localStorage.setItem('tm',JSON.stringify(TM)); }
+
+function saveT(id, name, t, v){
+  id=String(id);
+  if(!TM[id]) TM[id]={};
+  TM[id][t]=v;
+  if(name){
+    if(!TM[name]) TM[name]={};
+    TM[name][t]=v;
+  }
+  localStorage.setItem('tm', JSON.stringify(TM));
+  localStorage.setItem('tc', TC);
+  localStorage.setItem('pal_students_list_cache', JSON.stringify(students));
+}
+
+function addTest(){
+  TC++;
+  localStorage.setItem('tc', TC);
+  showTests();
+}
