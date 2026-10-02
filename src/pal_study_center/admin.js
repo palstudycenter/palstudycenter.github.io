@@ -84,26 +84,35 @@ async function openReviewsPopup(e){ if(e) e.preventDefault(); await loadReviewsF
 function showTests(){
  let fBoard=document.getElementById("filterBoard")?.value||"";
  let fClass=document.getElementById("filterClass")?.value||"";
- let list=students.filter(s=>{ let isI=inactiveIds.includes(String(s.id)); if(studentMode==='active' && isI) return false; if(studentMode==='inactive' && !isI) return false; return (!fClass||s.class==fClass)&&(!fBoard||s.board==fBoard); });
- 
- let h=`<th style="position:sticky;left:0;background:#212529;min-width:50px;z-index:4;top:0;">#</th>
-        <th style="position:sticky;left:50px;background:#212529;min-width:160px;z-index:4;text-align:left;top:0;">Name</th>
-        <th style="position:sticky;left:210px;background:#212529;min-width:80px;z-index:4;top:0;">औसत %</th>
-        <th style="position:sticky;left:290px;background:#212529;min-width:80px;z-index:4;top:0;border-right:3px solid #000;">Latest</th>`;
- for(let i=1;i<=TC;i++) h+=`<th style="min-width:65px;top:0;">T${i}</th>`;
+ let list=students.filter(s=>{
+   let isI=inactiveIds.includes(String(s.id));
+   if(studentMode==='active' && isI) return false;
+   if(studentMode==='inactive' &&!isI) return false;
+   return (!fClass||s.class==fClass)&&(!fBoard||s.board==fBoard);
+ });
+ if(!TC || TC<100) TC=100;
+
+ let h=`<th style="position:sticky;left:0;top:0;background:#212529;min-width:40px;z-index:10;">#</th>
+        <th style="position:sticky;left:40px;top:0;background:#212529;min-width:120px;z-index:10;text-align:left;">Name</th>
+        <th style="min-width:70px;top:0;background:#212529;">औसत %</th>
+        <th style="min-width:70px;top:0;background:#212529;">Latest</th>`;
+ for(let i=1;i<=TC;i++) h+=`<th style="min-width:65px;top:0;background:#212529;">T${i}</th>`;
  document.getElementById('th').innerHTML=h;
 
- let rows=list.map(s=>{ let m=TM[s.id]||{}; let tot=0,c=0,lat='-',ln=''; for(let k=1;k<=TC;k++){ if(m[k]!=''&&m[k]!=null&&m[k]!==''){tot+=+m[k];c++;lat=m[k];ln='T'+k;} } return {...s,per:c?tot/(c*20)*100:0,lat,ln,m}; }).sort((a,b)=>b.per-a.per);
+ let rows=list.map(s=>{ let m=TM[s.id]||TM[String(s.id)]||{}; let tot=0,c=0,lat='-'; for(let k=1;k<=TC;k++){ if(m[k]!==''&&m[k]!=null){ let v=parseInt(m[k]); if(!isNaN(v)){tot+=v;c++;lat=v;} } } return {...s,per:c?tot/(c*20)*100:0,lat,m}; }).sort((a,b)=>b.per-a.per);
 
- let b=''; 
- rows.forEach((r,i)=>{ 
+ let b='';
+ rows.forEach((r,i)=>{
    b+=`<tr>
    <td style="position:sticky;left:0;background:#fff;z-index:2;font-weight:700;">${i+1}</td>
-   <td style="position:sticky;left:50px;background:#fff;z-index:2;text-align:left;font-weight:600;">${r.name}</td>
-   <td style="position:sticky;left:210px;background:#e7f0ff;z-index:2;font-weight:700;">${r.per.toFixed(1)}%</td>
-   <td style="position:sticky;left:290px;background:#fff8e1;z-index:2;border-right:3px solid #000;">${r.lat!=='-'?r.lat+'/20':''}<small style="display:block;font-size:9px;">${r.ln}</small></td>`;
-   for(let k=1;k<=TC;k++) b+=`<td><input value="${r.m[k]||''}" onchange="saveT('${r.id}',${k},this.value)" style="width:55px;text-align:center;border:1px solid #ddd;border-radius:6px;padding:3px;"></td>`;
-   b+='</tr>'; 
+   <td style="position:sticky;left:40px;background:#fff;z-index:2;text-align:left;font-weight:600;border-right:2px solid #000;">${r.name}</td>
+   <td style="background:#e7f0ff;font-weight:700;">${r.per.toFixed(1)}%</td>
+   <td style="background:#fff8e1;">${r.lat!=='-'?r.lat:''}</td>`;
+   for(let k=1;k<=TC;k++){
+     b+=`<td><input value="${r.m[k]||''}" onchange="saveT('${r.id}',${k},this.value)" style="width:50px;text-align:center;border:1px solid #ddd;border-radius:5px;padding:3px;"></td>`;
+   }
+   b+='</tr>';
  });
  document.getElementById('tb').innerHTML=b;
 }
+function saveT(id,t,v){ if(!TM[id]) TM[id]={}; TM[id][t]=v; localStorage.setItem('tm',JSON.stringify(TM)); }
