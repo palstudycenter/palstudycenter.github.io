@@ -35,44 +35,54 @@ body{padding-top:70px;background:#f4f7ff;font-family:Poppins;}
 </div>
 
 <script>
-let user = JSON.parse(localStorage.getItem("currentUser") || '{"name":"Test","class":"Class 10th","id":"1"}');
+let user = JSON.parse(localStorage.getItem("currentUser") || localStorage.getItem("pal_current_user") || '{"name":"Test","class":"Class 10th","id":"1"}');
 
 function renderAll(){
   let TM = JSON.parse(localStorage.getItem('tm') || '{}');
   let TC = parseInt(localStorage.getItem('tc')||'100',10);
   let allStudents=JSON.parse(localStorage.getItem('pal_students_list_cache')||'[]');
-  if(!allStudents.length) allStudents=[{id:user.id||1, name:user.name, class:user.class}];
+  let inactiveIds = JSON.parse(localStorage.getItem('pal_inactive_ids')||'[]').map(String);
+  if(!allStudents.length) allStudents=[{id:user.id||1, name:user.name, class:user.class, board:user.board}];
 
-  let data=allStudents.filter(s=>s.class==user.class).map(s=>{
-   let m=TM[s.id]||TM[String(s.id)]||TM[s.name]||{};
+  // Admin जैसा ही Filter
+  let data=allStudents.filter(s=>{
+    if(inactiveIds.includes(String(s.id))) return false;
+    if(user.class && (s.class||'').trim()!== (user.class||'').trim()) return false;
+    if(user.board && (s.board||'').trim()!== (user.board||'').trim()) return false;
+    return true;
+  }).map(s=>{
+   let sid = String(s.id);
+   let m=TM[sid]||TM[String(s.id)]||TM[s.name]||{};
    let tot=0,c=0,lat='-', ln='';
    for(let k=1;k<=TC;k++){
      let val=m[k];
      if(val!=='' && val!=null &&!isNaN(val)){tot+=parseInt(val);c++;lat=val;ln='T'+k;}
    }
-   return {...s, per:c?tot/(c*20)*100:0, lat, ln, m, count:c};
+   return {...s, _sid:sid, per:c?tot/(c*20)*100:0, lat, ln, m, count:c};
   }).sort((a,b)=>b.per-a.per);
 
-  // FIX: id से rank ढूंढो, name से नहीं
-  let myIdx=data.findIndex(d=> String(d.id)==String(user.id) || d.name==user.name);
+  // FIX: खुद को Name + id दोनों से ढूंढो (case insensitive)
+  let myName = (user.name||'').trim().toLowerCase();
+  let myId = String(user.id||'').trim().toLowerCase();
+  let myIdx=data.findIndex(d=> String(d._sid).toLowerCase()===myId || (d.name||'').trim().toLowerCase()===myName);
   if(myIdx==-1) myIdx=0;
-  let myData=data[myIdx];
+  let myData=data[myIdx]||{per:0,lat:'-',ln:'',count:0};
 
   document.getElementById('className').innerText=user.class||'';
   document.getElementById('myRank').innerText='#'+(myIdx+1);
   document.getElementById('myRankTotal').innerText='out of '+data.length;
-  document.getElementById('myPer').innerText=myData?myData.per.toFixed(1)+'%':'0%';
-  document.getElementById('myLat').innerText=myData && myData.lat!='-'?myData.lat+'/20':'-/20';
-  document.getElementById('myLatName').innerText=myData && myData.ln?myData.ln:'No Test';
-  document.getElementById('myAttempt').innerText= myData? myData.count + ' / '+TC : '0 / '+TC;
-  document.getElementById('myAttemptPer').innerText= myData? myData.count + '% Completed' : '0% Completed';
+  document.getElementById('myPer').innerText=myData.per.toFixed(1)+'%';
+  document.getElementById('myLat').innerText=myData.lat!='-'?myData.lat+'/20':'-/20';
+  document.getElementById('myLatName').innerText=myData.ln||'No Test';
+  document.getElementById('myAttempt').innerText= myData.count + ' / '+TC;
+  document.getElementById('myAttemptPer').innerText= myData.count + '% Completed';
 
   let h='<th style="position:sticky;left:0;background:#212529;min-width:50px;z-index:4;">Rank</th><th style="position:sticky;left:50px;background:#212529;min-width:130px;z-index:4;text-align:left;">Name</th>';
   for(let i=1;i<=TC;i++) h+=`<th style="min-width:60px;">T${i}</th>`;
   document.getElementById('h2').innerHTML=h;
   let html='';
   data.forEach((r,i)=>{
-    let isMe=String(r.id)==String(user.id) || r.name==user.name;
+    let isMe = i===myIdx;
     let style=isMe?'style="background:#dbeafe;font-weight:700;"':'';
     let rank=i==0?'🥇':i==1?'🥈':i==2?'🥉':i+1;
     html+=`<tr ${style}><td style="position:sticky;left:0;background:${isMe?'#dbeafe':'#fff'};z-index:2;">${rank}</td><td style="position:sticky;left:50px;background:${isMe?'#dbeafe':'#fff'};text-align:left;z-index:2;">${r.name}</td>`;
@@ -83,9 +93,9 @@ function renderAll(){
 }
 
 renderAll();
-// यही 3 line Rank को Auto Update करेगी
 window.addEventListener('pageshow', renderAll);
 window.addEventListener('focus', renderAll);
 document.addEventListener('visibilitychange', ()=>{ if(!document.hidden) renderAll(); });
+setInterval(renderAll, 1500);
 </script>
 </body></html>
