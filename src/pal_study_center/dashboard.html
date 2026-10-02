@@ -4,186 +4,98 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Admin Dashboard | Pal Study Center</title>
-
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 <link rel="stylesheet" href="admin.css">
+<style>
+/* TEST TABLE SCROLLING FIX */
+.test-table-wrap{ max-height:65vh; overflow:auto; border-radius:12px; border:1px solid #dee2e6; }
+#testTable{ margin:0; }
+#testTable thead th{ position:sticky; top:0; z-index:5; background:#212529; color:#fff; }
+#testTable th.sticky, #testTable td.sticky{ position:sticky; z-index:4; background:#fff; }
+#testTable th.sticky-head{ z-index:6; background:#212529; }
+.col-rank{ left:0; min-width:60px; }
+.col-name{ left:60px; min-width:150px; }
+.col-per{ left:210px; min-width:90px; }
+.col-latest{ left:300px; min-width:110px; }
+#testTable tbody tr:hover td.sticky{ background:#dbeafe !important; }
+.student-card{ display:flex; justify-content:space-between; align-items:center; padding:10px 12px; border-radius:12px; margin-bottom:8px; background:#f8f9ff; border:1px solid #e9e9ff; }
+</style>
 </head>
-
 <body>
-
-<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg fixed-top glass-nav">
 <div class="container">
 <a class="navbar-brand fw-bold">पाल स्टडी सेंटर ADMIN</a>
-
 <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">☰</button>
-
 <div class="collapse navbar-collapse" id="menu">
 <ul class="navbar-nav ms-auto">
 <li class="nav-item"><a class="nav-link" href="#" onclick="openTestSeriesPopup(event)">Test Series</a></li>
 <li class="nav-item"><a class="nav-link" href="#" onclick="openReviewsPopup(event)">Reviews</a></li>
-  <li class="nav-item"><a class="nav-link" href="#" onclick="openNoticesPopup(event)">Notice</a></li>
+<li class="nav-item"><a class="nav-link" href="#" onclick="openNoticesPopup(event)">Notice</a></li>
 <li class="nav-item"><a class="nav-link text-danger" href="login.html">Logout</a></li>
 </ul>
 </div>
 </div>
 </nav>
 
-<!-- MAIN -->
 <div class="container admin-container">
-
-<!-- FILTER -->
 <div class="card-box mt-4">
 <h4>🎯 Student Filter</h4>
-
 <div class="row g-3">
-<div class="col-md-6">
-<select id="filterBoard" class="form-select" onchange="filterStudents()">
-<option value="">All Boards</option>
-<option value="MP Board (Hindi Medium)">MP Hindi</option>
-<option value="MP Board (English Medium)">MP English</option>
-<option value="CBSE">CBSE</option>
-</select>
+<div class="col-md-6"><select id="filterBoard" class="form-select" onchange="filterStudents()"><option value="">All Boards</option><option value="MP Board (Hindi Medium)">MP Hindi</option><option value="MP Board (English Medium)">MP English</option><option value="CBSE">CBSE</option></select></div>
+<div class="col-md-6"><select id="filterClass" class="form-select" onchange="filterStudents()"><option value="">All Classes</option><option value="Class 9th">Class 9</option><option value="Class 10th">Class 10</option><option value="Class 11th">Class 11</option><option value="Class 12th">Class 12</option></select></div>
 </div>
-
-<div class="col-md-6">
-<select id="filterClass" class="form-select" onchange="filterStudents()">
-<option value="">All Classes</option>
-<option value="Class 9th">Class 9</option>
-<option value="Class 10th">Class 10</option>
-<option value="Class 11th">Class 11</option>
-<option value="Class 12th">Class 12</option>
-</select>
-</div>
+<!-- ACTIVE / INACTIVE BUTTONS ADDED -->
+<div class="mt-3 d-flex gap-2 flex-wrap">
+  <button class="btn btn-sm btn-success" onclick="setStudentFilterMode('active')">✅ Active</button>
+  <button class="btn btn-sm btn-secondary" onclick="setStudentFilterMode('inactive')">🚫 Inactive (छोड़ गए)</button>
+  <button class="btn btn-sm btn-outline-dark" onclick="setStudentFilterMode('all')">All दिखाओ</button>
+  <small id="modeLabel" class="ms-2 text-muted align-self-center"></small>
 </div>
 </div>
 
-<!-- STUDENT LIST -->
 <section id="students">
-<div class="card-box">
-<h4>👨‍🎓 Students</h4>
-<div id="studentList"></div>
-</div>
+<div class="card-box"><h4>👨‍🎓 Students</h4><div id="studentList"></div></div>
 </section>
+
 <section id="testRecords">
 <div class="card-box">
-<h4>📝 Test Records</h4>
+<h4>📝 Test Records (T1-T100)</h4>
 <button class="btn btn-dark btn-sm" onclick="addTest()">+ Add Test</button>
-<div class="table-responsive mt-3">
-<table class="table table-bordered" id="testTable">
+<small class="ms-2 text-muted">Name, %, Latest Fix है | T1-T100 Scroll होगा →</small>
+<div class="test-table-wrap mt-3">
+<table class="table table-bordered align-middle text-center" id="testTable">
 <thead><tr id="th"></tr></thead>
 <tbody id="tb"></tbody>
 </table>
 </div>
 </div>
 </section>
-<!-- FULL SCREEN PROFILE -->
-<div id="profileOverlay" class="profile-overlay hidden">
-<div class="profile-modal">
-  <!-- MASTER CONTROL -->
-<div class="master-control">
-<h5>🔐 Student Dashboard Control</h5>
 
-<label class="switch">
-<input type="checkbox" id="dashToggle" onchange="toggleDashboardLock()">
-<span class="slider"></span>
-</label>
+<div id="profileOverlay" class="profile-overlay hidden"><div class="profile-modal"><div class="master-control"><h5>🔐 Student Dashboard Control</h5><label class="switch"><input type="checkbox" id="dashToggle" onchange="toggleDashboardLock()"><span class="slider"></span></label><span id="dashStatus">Unlocked</span></div><button class="close-btn" onclick="closeProfile()">✖</button><img id="pImg" class="profile-img"><h3 id="pName"></h3><p id="pPhone"></p><p id="pBoard"></p><p id="pClass"></p><hr><h4>📚 Subjects Control</h4><div id="subjectBox"></div><hr></div></div>
 
-<span id="dashStatus">Unlocked</span>
-</div>
+<section id="notice"><div class="card-box mt-4 mb-5"><h4>📢 Notice</h4><div class="mb-3"><label for="noticeMessage" class="form-label">Message for filtered students</label><textarea id="noticeMessage" class="form-control" rows="4" placeholder="Write notice for selected board/class"></textarea></div><button id="publishNoticeButton" class="btn btn-warning mt-2" onclick="publishNotice()">Publish</button></div></section>
 
-<button class="close-btn" onclick="closeProfile()">✖</button>
-
-<img id="pImg" class="profile-img">
-
-<h3 id="pName"></h3>
-<p id="pPhone"></p>
-<p id="pBoard"></p>
-<p id="pClass"></p>
-
-<hr>
-
-<h4>📚 Subjects Control</h4>
-<div id="subjectBox"></div>
-
-<hr>
-
-</div>
-</div>
-
-<!-- NOTICE -->
-<section id="notice">
-<div class="card-box mt-4 mb-5">
-<h4>📢 Notice</h4>
-<div class="mb-3">
-  <label for="noticeMessage" class="form-label">Message for filtered students</label>
-  <textarea id="noticeMessage" class="form-control" rows="4" placeholder="Write notice for selected board/class"></textarea>
-</div>
-<button id="publishNoticeButton" class="btn btn-warning mt-2" onclick="publishNotice()">Publish</button>
-</div>
-</section>
-
-<!-- Notice List Modal -->
-<div class="modal fade" id="noticeModal" tabindex="-1" aria-labelledby="noticeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="noticeModalLabel">Published Notices</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div id="noticeModalContent">Loading notices...</div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Test Series Modal -->
-<div class="modal fade" id="testSeriesModal" tabindex="-1" aria-labelledby="testSeriesModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="testSeriesModalLabel">Test Series Links</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div id="testSeriesModalContent">Loading links...</div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Reviews Modal -->
-<div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="reviewModalLabel">Student Reviews</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div id="reviewModalContent">Loading reviews...</div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
+<div class="modal fade" id="noticeModal" tabindex="-1"><div class="modal-dialog modal-xl modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Published Notices</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div id="noticeModalContent">Loading...</div></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
+<div class="modal fade" id="testSeriesModal" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Test Series Links</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div id="testSeriesModalContent">Loading...</div></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
+<div class="modal fade" id="reviewModal" tabindex="-1"><div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Student Reviews</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div id="reviewModalContent">Loading...</div></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div></div></div>
 </div>
 
 <script src="../../config.js"></script>
 <script src="admin.js"></script>
-
-    <!-- Bootstrap Bundle with Popper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+// Show current mode label
+document.addEventListener('DOMContentLoaded', ()=>{
+  let m = localStorage.getItem('pal_student_mode')||'active';
+  let el = document.getElementById('modeLabel');
+  if(el) el.innerText = 'Mode: ' + m.toUpperCase();
+  let oldSet = window.setStudentFilterMode;
+  window.setStudentFilterMode = function(mode){
+    oldSet(mode);
+    document.getElementById('modeLabel').innerText = 'Mode: ' + mode.toUpperCase();
+  }
+});
+</script>
 </body>
-</html>
+</html> 
