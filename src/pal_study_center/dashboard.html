@@ -9,30 +9,8 @@
 <link rel="stylesheet" href="admin.css?v=11">
 
 <style>
-.test-table-wrap{ width:100% !important; overflow-x:auto !important; overflow-y:auto !important; max-height:65vh; display:block !important; border:1px solid #dee2e6; border-radius:12px; }
-#testTable{ width:max-content !important; min-width:1500px !important; margin:0 !important; border-collapse:separate !important; border-spacing:0 !important; }
-#testTable thead th{ position:sticky !important; top:0 !important; z-index:5 !important; background:#212529 !important; color:#fff !important; }
-
-/* ये 4 कॉलम Fix है - इनका Background White और Shadow जरूरी है */
-#testTable th.sticky, #testTable td.sticky{
-  position:sticky !important;
-  background:#ffffff !important;
-  z-index:4 !important;
-}
-#testTable th.sticky{
-  z-index:7 !important;
-  background:#212529 !important;
-}
-#testTable td.col-name, #testTable td.col-per{
-  background:#f8f9fa !important;
-  font-weight:600;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-}
-
-.col-rank{ left:0 !important; width:50px !important; min-width:50px !important; max-width:50px !important; }
-.col-name{ left:50px !important; width:170px !important; min-width:170px !important; max-width:170px !important; }
-.col-per{ left:220px !important; width:90px !important; min-width:90px !important; max-width:90px !important; }
-.col-latest{ left:310px !important; width:90px !important; min-width:90px !important; max-width:90px !important; border-right:3px solid #000 !important; box-shadow: 4px 0 8px rgba(0,0,0,0.15) !important; }
+.test-table-wrap{ max-height:60vh; overflow:auto; border-radius:12px; border:1px solid #dee2e6; display:block; }
+.test-table-wrap thead th{ position:sticky; top:0; z-index:3; background:#212529 !important; color:#fff; }
 </style>
   
 </head>
