@@ -13,8 +13,10 @@ body{padding-top:70px;background:#f4f7ff;font-family:Poppins;}
 .top-card p{opacity:.9; margin:0; font-size:11px; letter-spacing:1px; text-transform:uppercase;}
 .top-card small{font-size:12px; opacity:.9;}
 .icon-box{width:50px;height:50px;border-radius:14px;background:rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;font-size:24px;}
-.table-scroll{ max-height:55vh; overflow:auto; border-radius:12px; }
-.table-scroll thead th{ position:sticky; top:0; z-index:3; }
+.table-scroll{ max-height:85vh; overflow:auto; border-radius:12px; border:1px solid #ddd; }
+.table-scroll thead th{ position:sticky; top:0; z-index:3; background:#212529; }
+.sticky-name{ position:sticky!important; top:0!important; left:0!important; z-index:5!important; background:#212529!important; color:#fff; text-align:left; border-right:2px solid #000; min-width:160px; }
+.sticky-name-body{ position:sticky!important; left:0!important; z-index:2!important; background:#dbeafe!important; font-weight:700; text-align:left; border-right:2px solid #000; }
 </style>
 </head>
 <body>
@@ -44,7 +46,6 @@ function renderAll(){
   let inactiveIds = JSON.parse(localStorage.getItem('pal_inactive_ids')||'[]').map(String);
   if(!allStudents.length) allStudents=[{id:user.id||1, name:user.name, class:user.class, board:user.board}];
 
-  // Rank के लिए पूरी Class
   let fullList=allStudents.filter(s=>{
     if(inactiveIds.includes(String(s.id))) return false;
     if(user.class && (s.class||'').trim()!== (user.class||'').trim()) return false;
@@ -63,9 +64,8 @@ function renderAll(){
   if(myIdx==-1) myIdx=0;
   let myData=fullList[myIdx];
 
-  // Top Cards
   document.getElementById('className').innerText=user.class||'';
-  document.getElementById('myRank').innerText='#'+(myIdx+1);
+  document.getElementById('myRank').innerText=(myIdx+1);
   document.getElementById('myRankTotal').innerText='out of '+fullList.length;
   document.getElementById('myPer').innerText=myData.per.toFixed(1)+'%';
   let tot=0,c=0,lat='-',ln='';
@@ -75,11 +75,10 @@ function renderAll(){
   document.getElementById('myAttempt').innerText= c + ' / '+TC;
   document.getElementById('myAttemptPer').innerText= c + '% Completed';
 
-  // TABLE - सिर्फ मेरा ही Record
-  let h='<th style="min-width:130px;text-align:left;">Name</th>';
+  let h='<th class="sticky-name">Name</th>';
   for(let i=1;i<=TC;i++) h+=`<th style="min-width:60px;">T${i}</th>`;
   document.getElementById('h2').innerHTML=h;
-  let html=`<tr style="background:#dbeafe;font-weight:700;"><td style="text-align:left;">${myData.name}</td>`;
+  let html=`<tr><td class="sticky-name-body">${myData.name}</td>`;
   for(let k=1;k<=TC;k++) html+=`<td>${myData.m[k]!=null && myData.m[k]!==''?'<b>'+myData.m[k]+'</b>':'<span style="color:#ccc;">-</span>'}</td>`;
   html+='</tr>';
   document.getElementById('b2').innerHTML=html;
