@@ -167,3 +167,25 @@ async function openReviewsPopup(event) {
   const modal = new bootstrap.Modal(document.getElementById('reviewModal'));
   modal.show();
 }
+
+
+let TC = localStorage.getItem('tc')||5; let TM = JSON.parse(localStorage.getItem('tm')||'{}');
+function showTests(){
+ let fBoard=document.getElementById("filterBoard").value; let fClass=document.getElementById("filterClass").value;
+ let list=students.filter(s=>(!fClass||s.class==fClass)&&(!fBoard||s.board==fBoard));
+ let h='<th>#</th><th>Name</th><th style="background:#0d6efd;color:#fff;">% </th><th style="background:orange;color:#fff;">Latest</th>';
+ for(let i=1;i<=TC;i++) h+=`<th>T${i}</th>`; document.getElementById('th').innerHTML=h;
+ let rows=list.map(s=>{
+  let m=TM[s.id]||{}; let tot=0,c=0,lat='-'; let ln='';
+  for(let k=1;k<=TC;k++){ if(m[k]!=''&&m[k]!=null){tot+=+m[k];c++;lat=m[k];ln='T'+k;} }
+  return {...s, per:c?tot/(c*20)*100:0, lat, ln, m};
+ }).sort((a,b)=>b.per-a.per);
+ let b=''; rows.forEach((r,i)=>{
+  b+=`<tr><td>${i+1}</td><td>${r.name}</td><td style="background:#e7f0ff;font-weight:700;">${r.per.toFixed(1)}%</td><td style="background:#fff8e1;font-weight:700;">${r.lat}</td>`;
+  for(let k=1;k<=TC;k++) b+=`<td><input value="${r.m[k]||''}" onchange="saveT('${r.id}',${k},this.value)" style="width:55px;text-align:center;"></td>`;
+  b+='</tr>';
+ }); document.getElementById('tb').innerHTML=b;
+}
+function saveT(id,t,v){ if(!TM[id]) TM[id]={}; TM[id][t]=v; localStorage.setItem('tm',JSON.stringify(TM)); showTests(); }
+function addTest(){ TC++; localStorage.setItem('tc',TC); showTests(); }
+let oldD=displayStudents; displayStudents=function(){ oldD(); showTests(); }
