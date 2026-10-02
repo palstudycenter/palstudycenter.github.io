@@ -9,7 +9,7 @@ async function loadStudents() {
     const json = await response.json();
     if (json.status && Array.isArray(json.res)) {
       students = json.res.filter(s => s && s.usertype === 'student');
-      displayStudents();
+      renderAll();
     }
   } catch (error) { console.error(error); }
 }
@@ -17,18 +17,24 @@ async function loadStudents() {
 function setStudentFilterMode(mode){
   studentMode = mode;
   localStorage.setItem('pal_student_mode', mode);
-  displayStudents();
+  document.getElementById('modeLabel').innerText = 'Mode: ' + mode.toUpperCase();
+  renderAll();
 }
 
 function toggleStudentActive(id){
   if(inactiveIds.includes(id)){
     inactiveIds = inactiveIds.filter(x=>x!=id);
   } else {
-    if(!confirm('क्या इस Student को Inactive करना है? Test List में नहीं दिखेगा')) return;
+    if(!confirm('इस Student को Inactive करना है?')) return;
     inactiveIds.push(id);
   }
   localStorage.setItem('pal_inactive_ids', JSON.stringify(inactiveIds));
+  renderAll();
+}
+
+function renderAll(){
   displayStudents();
+  showTests();
 }
 
 function displayStudents() {
@@ -37,30 +43,39 @@ function displayStudents() {
   list.innerHTML = "";
   let board = document.getElementById("filterBoard")?.value || "";
   let cls = document.getElementById("filterClass")?.value || "";
+  let countActive = 0;
 
   students.forEach((u, i) => {
     let isInactive = inactiveIds.includes(u.id);
+
+    // यहाँ Main Filter है - Active mode में Inactive नहीं दिखेगा
     if(studentMode==='active' && isInactive) return;
     if(studentMode==='inactive' &&!isInactive) return;
 
     let okClass = cls === "" || u.class === cls;
     let okBoard = board === "" || u.board === board;
-    if (okClass && okBoard) {
-      list.innerHTML += `
-      <div class="student-card d-flex justify-content-between align-items-center" style="${isInactive?'opacity:0.6;background:#ffe0e0;border:1px dashed red;':''};padding:8px;border-radius:10px;margin-bottom:8px;">
+    if (!okClass ||!okBoard) return;
+
+    if(!isInactive) countActive++;
+
+    list.innerHTML += `
+      <div class="student-card" style="${isInactive?'background:#ffe0e0;border:1px dashed red;opacity:0.7':''}">
         <div onclick="openProfile(${i})" style="cursor:pointer;">
-          <b>${u.name} ${isInactive?'(Inactive)':''}</b><br>
+          <b>${u.name} ${isInactive?'<span style="color:red;font-size:11px;">(Inactive)</span>':''}</b><br>
           <small>${u.class} ${u.board? '| ' + u.board : ''}</small>
         </div>
-        <button class="btn btn-sm ${isInactive?'btn-success':'btn-outline-danger'}" onclick="event.stopPropagation(); toggleStudentActive('${u.id}')">
-          ${isInactive?'Active':'Inactive'}
+        <button class="btn btn-sm ${isInactive?'btn-success':'btn-outline-danger'}" onclick="toggleStudentActive('${u.id}')">
+          ${isInactive?'Active करो':'Inactive करो'}
         </button>
       </div>`;
-    }
   });
+
+  if(list.innerHTML===""){
+    list.innerHTML = `<div class="text-center text-muted py-3">कोई Student नहीं मिला। Mode: ${studentMode}</div>`;
+  }
 }
 
-function filterStudents() { displayStudents(); }
+function filterStudents() { renderAll(); }
 function escapeHtml(text) {
   return String(text).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
@@ -73,7 +88,7 @@ function openProfile(i) {
 }
 window.addEventListener('DOMContentLoaded', loadStudents);
 
-/* ====== REVIEW ADMIN ====== */
+/* REVIEW ADMIN */
 function parseReviewAdmin(review){
   let text = review.review_text || '';
   let percent = review.percentage || '';
@@ -162,7 +177,7 @@ async function openReviewsPopup(event) {
   modal.show();
 }
 
-/* ====== TEST RECORDS - FINAL FIX ====== */
+/* TEST RECORDS */
 let TC = localStorage.getItem('tc')||100;
 let TM = JSON.parse(localStorage.getItem('tm')||'{}');
 
@@ -204,4 +219,3 @@ function showTests(){
 }
 function saveT(id,t,v){ if(!TM[id]) TM[id]={}; TM[id][t]=v; localStorage.setItem('tm',JSON.stringify(TM)); showTests(); }
 function addTest(){ TC++; localStorage.setItem('tc',TC); showTests(); }
-let oldD=displayStudents; displayStudents=function(){ oldD(); showTests(); }
