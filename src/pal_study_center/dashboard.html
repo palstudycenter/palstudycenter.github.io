@@ -9,44 +9,31 @@
 <link rel="stylesheet" href="admin.css?v=11">
 
 <style>
-.test-table-wrap{ 
-  width:100% !important;
-  max-height:65vh; 
-  overflow-x:auto !important; 
-  overflow-y:auto !important;
-  border-radius:12px; 
-  border:1px solid #dee2e6; 
-  display:block !important;
-  -webkit-overflow-scrolling: touch;
+.test-table-wrap{ width:100% !important; overflow-x:auto !important; overflow-y:auto !important; max-height:65vh; display:block !important; border:1px solid #dee2e6; border-radius:12px; }
+#testTable{ width:max-content !important; min-width:1500px !important; margin:0 !important; border-collapse:separate !important; border-spacing:0 !important; }
+#testTable thead th{ position:sticky !important; top:0 !important; z-index:5 !important; background:#212529 !important; color:#fff !important; }
+
+/* ये 4 कॉलम Fix है - इनका Background White और Shadow जरूरी है */
+#testTable th.sticky, #testTable td.sticky{
+  position:sticky !important;
+  background:#ffffff !important;
+  z-index:4 !important;
 }
-#testTable{ 
-  margin:0 !important; 
-  width:max-content !important; 
-  min-width:1200px !important; 
-  border-collapse:separate !important;
-  border-spacing:0 !important;
+#testTable th.sticky{
+  z-index:7 !important;
+  background:#212529 !important;
 }
-#testTable thead th{ 
-  position:sticky !important; 
-  top:0 !important; 
-  z-index:5 !important; 
-  background:#212529 !important; 
-  color:#fff !important; 
+#testTable td.col-name, #testTable td.col-per{
+  background:#f8f9fa !important;
+  font-weight:600;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 }
-#testTable th.sticky, #testTable td.sticky{ 
-  position:sticky !important; 
-  z-index:4 !important; 
-  background:#fff !important; 
-}
-#testTable th.sticky-head{ 
-  z-index:6 !important; 
-  background:#212529 !important; 
-}
-.col-rank{ left:0 !important; width:55px; min-width:55px; }
-.col-name{ left:55px !important; width:160px; min-width:160px; }
-.col-per{ left:215px !important; width:85px; min-width:85px; }
-.col-latest{ left:300px !important; width:95px; min-width:95px; border-right:3px solid #000 !important; }
-</style>   
+
+.col-rank{ left:0 !important; width:50px !important; min-width:50px !important; max-width:50px !important; }
+.col-name{ left:50px !important; width:170px !important; min-width:170px !important; max-width:170px !important; }
+.col-per{ left:220px !important; width:90px !important; min-width:90px !important; max-width:90px !important; }
+.col-latest{ left:310px !important; width:90px !important; min-width:90px !important; max-width:90px !important; border-right:3px solid #000 !important; box-shadow: 4px 0 8px rgba(0,0,0,0.15) !important; }
+</style>
   
 </head>
 <body>
@@ -86,7 +73,7 @@
 
 <section id="testRecords">
 <div class="card-box">
-<h4>📝 Test Records (T1-T100)</h4>
+<h4>📝 Test Records</h4>
 <button class="btn btn-dark btn-sm" onclick="addTest()">+ Add Test</button>
 <small class="ms-2 text-muted">Name, %, Latest Fix है | T1-T100 Scroll होगा →</small>
 <div class="test-table-wrap mt-3">
