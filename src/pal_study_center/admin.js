@@ -127,3 +127,72 @@ function addTest(){
   localStorage.setItem('tc', TC);
   showTests();
 }
+
+
+/* ====== NOTICE ADMIN - MISSING PART ====== */
+async function openNoticesPopup(event){
+  if(event) event.preventDefault();
+  await loadNoticesForAdmin();
+  const modal = new bootstrap.Modal(document.getElementById('noticeModal'));
+  modal.show();
+}
+
+async function loadNoticesForAdmin(){
+  const content = document.getElementById('noticeModalContent');
+  if(!content) return;
+  content.innerHTML = '<div class="text-center py-4">Loading notices...</div>';
+  try{
+    const res = await fetch(getApiUrl(CONFIG.API.NOTICES));
+    const json = await res.json();
+    const notices = json.res || json.data || [];
+    if(notices.length === 0){
+      content.innerHTML = '<div class="text-center py-4 text-muted">No notices found.</div>';
+      return;
+    }
+    content.innerHTML = notices.map(n => `
+      <div class="card mb-2" id="notice-card-${n.id}">
+        <div class="card-body d-flex justify-content-between">
+          <div>
+            <p class="mb-1">${escapeHtml(n.message || n.notice || '')}</p>
+            <small class="text-muted">${n.board||'All'} | ${n.class||'All'} | ${new Date(n.created_at).toLocaleString()}</small>
+          </div>
+          <button class="btn btn-sm btn-outline-danger" onclick="deleteNotice(${n.id})">Delete</button>
+        </div>
+      </div>
+    `).join('');
+  }catch(e){
+    content.innerHTML = '<div class="text-danger py-4">Unable to load notices.</div>';
+  }
+}
+
+async function publishNotice(){
+  const msgEl = document.getElementById('noticeMessage');
+  const board = document.getElementById('filterBoard')?.value || '';
+  const cls = document.getElementById('filterClass')?.value || '';
+  const message = msgEl.value.trim();
+  if(!message) return alert('कृपया Notice लिखें');
+  
+  try{
+    const res = await fetch(getApiUrl(CONFIG.API.NOTICES),{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ message, board, class: cls })
+    });
+    const json = await res.json();
+    if(json.status){
+      alert('Notice Published!');
+      msgEl.value = '';
+    }else{
+      alert('Failed to publish');
+    }
+  }catch(e){ alert('Error: '+e.message); }
+}
+
+async function deleteNotice(id){
+  if(!confirm('Delete this notice?')) return;
+  try{
+    const res = await fetch(getApiUrl(`${CONFIG.API.NOTICES}/${id}`),{method:'DELETE'});
+    const json = await res.json();
+    if(json.status) document.getElementById(`notice-card-${id}`)?.remove();
+  }catch(e){ alert('Delete failed'); }
+}
