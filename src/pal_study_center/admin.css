@@ -219,3 +219,17 @@ input:checked ~ .switch-text{
   font-size:13px;
   font-weight:600;
 }
+
+/* === TEST TABLE FIX FINAL === */
+.test-table-wrap{ max-height:65vh; overflow:auto!important; border-radius:12px; border:1px solid #dee2e6; display:block; }
+#testTable{ margin:0; width:max-content!important; min-width:100%; border-collapse:separate; border-spacing:0; }
+#testTable thead th{ position:sticky!important; top:0; z-index:5; background:#212529!important; color:#fff; }
+#testTable th.sticky, #testTable td.sticky{ position:sticky!important; z-index:4; background:#fff; }
+#testTable th.sticky-head{ z-index:6!important; background:#212529!important; }
+.col-rank{ left:0!important; width:55px; min-width:55px; }
+.col-name{ left:55px!important; width:160px; min-width:160px; }
+.col-per{ left:215px!important; width:85px; min-width:85px; }
+.col-latest{ left:300px!important; width:95px; min-width:95px; border-right:2px solid #000!important; }
+.test-table-wrap::-webkit-scrollbar{ height:10px; width:10px; }
+.test-table-wrap::-webkit-scrollbar-thumb{ background:#888; border-radius:10px; }
+#studentList{ max-height:60vh; overflow-y:auto; }
