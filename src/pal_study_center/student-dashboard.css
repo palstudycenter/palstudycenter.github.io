@@ -1184,8 +1184,8 @@ img{
   align-self:flex-start !important;
 }
 .hero-photo-wrapper img{
-  width:100% !important;
-  height:100% !important;
+  width:110% !important;
+  height:110% !important;
   object-fit:cover !important;
   display:block !important;
 }
@@ -1193,4 +1193,50 @@ img{
   width:100% !important;
   overflow:hidden !important;
   white-space:nowrap !important;
+}
+
+.hero-btn-group{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:12px;
+}
+.hero-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:8px 18px;
+  font-weight:600;
+  font-size:12.5px;
+  border-radius:30px;
+  text-decoration:none;
+  transition:all .3s ease;
+  letter-spacing:.2px;
+  line-height:1;
+}
+/* Fees - White वाला */
+.hero-btn.fees{
+  background:#fff;
+  color:#0a1931!important;
+  box-shadow:0 0 0 3px rgba(255,255,255,.10), 0 4px 12px rgba(0,0,0,.20);
+}
+.hero-btn.fees:hover{
+  background:#ff9800;
+  color:#fff!important;
+  transform:translateY(-2px);
+}
+/* Test - Outline वाला */
+.hero-btn.test{
+  background:transparent;
+  color:#fff!important;
+  border:1.5px solid rgba(255,255,255,.55);
+}
+.hero-btn.test:hover{
+  background:#fff;
+  color:#0a1931!important;
+  transform:translateY(-2px);
+  border-color:#fff;
+}
+.hero-btn i{
+  font-size:14px;
 }
