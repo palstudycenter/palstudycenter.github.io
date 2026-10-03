@@ -14,11 +14,9 @@
     html{ scroll-behavior:smooth; }
     body{ background:#f5f7fb; overflow-x:hidden; width:100%; }
 
-    /* NAVBAR */
     .navbar{ background:rgba(8,15,44,0.95); backdrop-filter:blur(10px); padding: 8px 0; }
     .navbar-brand{ color:#fff !important; font-size:28px; font-weight:800; }
 
-    /* HERO */
     .hero{
       min-height: 60vh;
       background: linear-gradient(rgba(5,15,50,0.82), rgba(5,15,50,0.88)), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1600&auto=format&fit=crop');
@@ -38,7 +36,6 @@
     }
     .back-btn:hover{ transform:translateY(-3px); color:#1f4db8; }
 
-    /* FILTER */
     .filter-box{ text-align:center; margin-bottom:40px; margin-top: 10px; }
     .filter-btn{
       border:2px solid #0d6efd; background:white; color:#0d6efd;
@@ -47,7 +44,6 @@
     }
     .filter-btn.active{ background:#0d6efd; color:white; }
 
-    /* ACHIEVERS */
     .achievers{ padding:40px 0 70px; }
     .section-title h2{ font-size:36px; font-weight:800; text-align:center; margin-bottom:10px; color:#08152c; }
     .section-title p{ text-align:center; color:#6c757d; margin-bottom:40px; }
@@ -65,42 +61,11 @@
     }
     .achiever-content{ text-align:center; padding:16px 14px 20px; }
     .achiever-content h4{ font-weight:700; font-size:17px; margin-bottom:12px; color:#1a1a1a; }
-.achiever-badges {
-  display: flex;
-  justify-content: center;
-  gap: 6px;
-  margin: 10px 0;
-  flex-wrap: wrap;
-}
-.badge-percent {
-  background: #0d6efd;
-  color: white;
-  padding: 3px 10px;
-  border-radius: 20px;
-  font-size: 13px;
-  font-weight: 600;
-}
-.badge-class {
-  background: #198754;
-  color: white;
-  padding: 3px 10px;
-  border-radius: 20px;
-  font-size: 13px;
-}
-.badge-year {
-  background: #6c757d;
-  color: white;
-  padding: 3px 10px;
-  border-radius: 20px;
-  font-size: 13px;
-}
-.board-name{
-  font-size: 14px;
-  color: #666;
-  margin-top: 5px;
-}
-    
-    
+    .achiever-badges { display: flex; justify-content: center; gap: 6px; margin: 10px 0; flex-wrap: wrap; }
+    .badge-percent { background: #0d6efd; color: white; padding: 3px 10px; border-radius: 20px; font-size: 13px; font-weight: 600; }
+    .badge-class { background: #198754; color: white; padding: 3px 10px; border-radius: 20px; font-size: 13px; }
+    .badge-year { background: #6c757d; color: white; padding: 3px 10px; border-radius: 20px; font-size: 13px; }
+    .board-name{ font-size: 14px; color: #666; margin-top: 5px; }
   </style>
 </head>
 <body>
@@ -116,164 +81,61 @@
     <a href="../index.html" class="back-btn"><i class="bi bi-arrow-left"></i> Back To Home</a>
     <h1>हमारे <span>होनहार छात्र</span></h1>
     <p>पिछले वर्षों में पाल स्टडी सेंटर से पढ़कर उत्कृष्ट अंक प्राप्त करने वाले विद्यार्थी</p>
-
-      
-      <p>MP Board & CBSE - Class 10th & 12th Toppers</p>
+    <p>MP Board & CBSE - Class 10th & 12th Toppers</p>
     
     <div class="filter-box">
-      <button class="filter-btn active" onclick="filterData('all', this)">All Students</button>
+      <button class="filter-btn" onclick="filterData('2026', this)">2026 Batch</button>
       <button class="filter-btn" onclick="filterData('2025', this)">2025 Batch</button>
       <button class="filter-btn" onclick="filterData('2024', this)">2024 Batch</button>
       <button class="filter-btn" onclick="filterData('2023', this)">2023 Batch</button>
+   <button class="filter-btn active" onclick="filterData('all', this)">All Students</button>
     </div>
   </div>
 </section>
 
 <section class="achievers">
   <div class="container">
-    
-
     <div class="row g-4" id="studentList">
       
-    
-      <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-year="2025">
-        <div class="achiever-card">
-          <div class="text-center pt-4">
-            <img src="../assets/img/students/1.png" class="achiever-img" alt="harshita panwar">
-          </div>
-          <div class="achiever-content">
-            <h4>हर्षिता पंवार</h4>
-            <div class="achiever-badges">
-              <span class="badge-percent">94%</span>
-              <span class="badge-class">Class 12th</span>
-              <span class="badge-year">2025</span>
-            </div>
-            <p class="board-name">MP Board</p>
-          </div>
-        </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-year="2026">
+        <div class="achiever-card"><div class="text-center pt-4"><img src="../assets/img/students/9.png" class="achiever-img" alt="Saloni patidar"></div><div class="achiever-content"><h4>सलोनी पाटीदार</h4><div class="achiever-badges"><span class="badge-percent">86%</span><span class="badge-class">Class 11th</span><span class="badge-year">2026</span></div><p class="board-name">CBSE</p></div></div>
       </div>
-<div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-year="2023">
-        <div class="achiever-card">
-          <div class="text-center pt-4">
-            <img src="../assets/img/students/2.png" class="achiever-img" alt="utshav jain">
-          </div>
-          <div class="achiever-content">
-            <h4>उत्सव जैन</h4>
-            <div class="achiever-badges">
-              <span class="badge-percent">94%</span>
-              <span class="badge-class">Class 12th</span>
-              <span class="badge-year">2023</span>
-            </div>
-            <p class="board-name">CBSE</p>
-          </div>
-        </div>
-</div>
-      
-    
-      <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-year="2023">
-        <div class="achiever-card">
-          <div class="text-center pt-4">
-            <img src="../assets/img/students/3.png" class="achiever-img" alt="anjali sharma">
-          </div>
-          <div class="achiever-content">
-            <h4>अंजली शर्मा</h4>
-            <div class="achiever-badges">
-              <span class="badge-percent">96.6%</span>
-              <span class="badge-class">Class 12th</span>
-              <span class="badge-year">2023</span>
-            </div>
-            <p class="board-name">CBSE</p>
-          </div>
-        </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-year="2026">
+        <div class="achiever-card"><div class="text-center pt-4"><img src="../assets/img/students/10.png" class="achiever-img" alt="diksha patidar"></div><div class="achiever-content"><h4>दीक्षा पाटीदार</h4><div class="achiever-badges"><span class="badge-percent">82%</span><span class="badge-class">Class 11th</span><span class="badge-year">2026</span></div><p class="board-name">CBSE</p></div></div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-year="2026">
+        <div class="achiever-card"><div class="text-center pt-4"><img src="../assets/img/students/11.png" class="achiever-img" alt="vivek kinja"></div><div class="achiever-content"><h4>विवेक किंजा</h4><div class="achiever-badges"><span class="badge-percent">84%</span><span class="badge-class">Class 11th</span><span class="badge-year">2026</span></div><p class="board-name">CBSE</p></div></div>
       </div>
 
-    
-      <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-year="2023">
-        <div class="achiever-card">
-          <div class="text-center pt-4">
-            <img src="../assets/img/students/4.png" class="achiever-img" alt="pratima mali">
-          </div>
-          <div class="achiever-content">
-            <h4>प्रतिमा माली</h4>
-            <div class="achiever-badges">
-              <span class="badge-percent">92.4%</span>
-              <span class="badge-class">Class 12th</span>
-              <span class="badge-year">2023</span>
-            </div>
-            <p class="board-name">CBSE</p>
-          </div>
-        </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-year="2025">
+        <div class="achiever-card"><div class="text-center pt-4"><img src="../assets/img/students/1.png" class="achiever-img" alt="harshita panwar"></div><div class="achiever-content"><h4>हर्षिता पंवार</h4><div class="achiever-badges"><span class="badge-percent">94%</span><span class="badge-class">Class 12th</span><span class="badge-year">2025</span></div><p class="board-name">MP Board</p></div></div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-year="2025">
+        <div class="achiever-card"><div class="text-center pt-4"><img src="../assets/img/students/8.png" class="achiever-img" alt="Muskan Patidar"></div><div class="achiever-content"><h4>मुस्कान पाटीदार</h4><div class="achiever-badges"><span class="badge-percent">84%</span><span class="badge-class">Class 12th</span><span class="badge-year">2025</span></div><p class="board-name">MP Board</p></div></div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-year="2025">
+        <div class="achiever-card"><div class="text-center pt-4"><img src="../assets/img/students/7.png" class="achiever-img" alt="pradip patidar"></div><div class="achiever-content"><h4>प्रदीप पाटीदार</h4><div class="achiever-badges"><span class="badge-percent">84%</span><span class="badge-class">Class 12th</span><span class="badge-year">2025</span></div><p class="board-name">MP Board</p></div></div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-year="2025">
+        <div class="achiever-card"><div class="text-center pt-4"><img src="../assets/img/students/8.png" class="achiever-img" alt="divyata shrivastav"></div><div class="achiever-content"><h4>दिव्यता श्री वास्तव</h4><div class="achiever-badges"><span class="badge-percent">86%</span><span class="badge-class">Class 12th</span><span class="badge-year">2025</span></div><p class="board-name">MP Board</p></div></div>
       </div>
 
-    
       <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-year="2024">
-        <div class="achiever-card">
-          <div class="text-center pt-4">
-            <img src="../assets/img/students/5.png" class="achiever-img" alt="sumit kanawer">
-          </div>
-          <div class="achiever-content">
-            <h4>सुमित कनावर</h4>
-            <div class="achiever-badges">
-              <span class="badge-percent">90%</span>
-              <span class="badge-class">Class 12th</span>
-              <span class="badge-year">2024</span>
-            </div>
-            <p class="board-name">CBSE</p>
-          </div>
-        </div>
+        <div class="achiever-card"><div class="text-center pt-4"><img src="../assets/img/students/5.png" class="achiever-img" alt="sumit kanawer"></div><div class="achiever-content"><h4>सुमित कनावर</h4><div class="achiever-badges"><span class="badge-percent">90%</span><span class="badge-class">Class 12th</span><span class="badge-year">2024</span></div><p class="board-name">CBSE</p></div></div>
       </div>
-    
       <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-year="2024">
-        <div class="achiever-card">
-          <div class="text-center pt-4">
-            <img src="../assets/img/students/6.png" class="achiever-img" alt="shivam wadhava">
-          </div>
-          <div class="achiever-content">
-            <h4>शिवम वधवा</h4>
-            <div class="achiever-badges">
-              <span class="badge-percent">86%</span>
-              <span class="badge-class">Class 12th</span>
-              <span class="badge-year">2024</span>
-            </div>
-            <p class="board-name">CBSE</p>
-          </div>
-        </div>
-      </div>
-    
-      <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-year="2025">
-        <div class="achiever-card">
-          <div class="text-center pt-4">
-            <img src="../assets/img/students/7.png" class="achiever-img" alt="pradip patidar">
-          </div>
-          <div class="achiever-content">
-            <h4>प्रदीप पाटीदार</h4>
-            <div class="achiever-badges">
-              <span class="badge-percent">84%</span>
-              <span class="badge-class">Class 12th</span>
-              <span class="badge-year">2025</span>
-            </div>
-            <p class="board-name">MP Board</p>
-          </div>
-        </div>
+        <div class="achiever-card"><div class="text-center pt-4"><img src="../assets/img/students/6.png" class="achiever-img" alt="shivam wadhava"></div><div class="achiever-content"><h4>शिवम वधवा</h4><div class="achiever-badges"><span class="badge-percent">86%</span><span class="badge-class">Class 12th</span><span class="badge-year">2024</span></div><p class="board-name">CBSE</p></div></div>
       </div>
       
-      <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-year="2025">
-        <div class="achiever-card">
-          <div class="text-center pt-4">
-            <img src="../assets/img/students/8.png" class="achiever-img" alt="divyata shrivastav">
-          </div>
-          <div class="achiever-content">
-            <h4>दिव्यता श्री वास्तव </h4>
-            <div class="achiever-badges">
-              <span class="badge-percent">86%</span>
-              <span class="badge-class">Class 12th</span>
-              <span class="badge-year">2025</span>
-            </div>
-            <p class="board-name">MP Board</p>
-          </div>
-        </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-year="2023">
+        <div class="achiever-card"><div class="text-center pt-4"><img src="../assets/img/students/2.png" class="achiever-img" alt="utshav jain"></div><div class="achiever-content"><h4>उत्सव जैन</h4><div class="achiever-badges"><span class="badge-percent">94%</span><span class="badge-class">Class 12th</span><span class="badge-year">2023</span></div><p class="board-name">CBSE</p></div></div>
       </div>
-      <!-- यहाँ और Students Add करते जाओ - बस data-year बदलना है -->
+      <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-year="2023">
+        <div class="achiever-card"><div class="text-center pt-4"><img src="../assets/img/students/3.png" class="achiever-img" alt="anjali sharma"></div><div class="achiever-content"><h4>अंजली शर्मा</h4><div class="achiever-badges"><span class="badge-percent">96.6%</span><span class="badge-class">Class 12th</span><span class="badge-year">2023</span></div><p class="board-name">CBSE</p></div></div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 achiever-item" data-year="2023">
+        <div class="achiever-card"><div class="text-center pt-4"><img src="../assets/img/students/4.png" class="achiever-img" alt="pratima mali"></div><div class="achiever-content"><h4>प्रतिमा माली</h4><div class="achiever-badges"><span class="badge-percent">92.4%</span><span class="badge-class">Class 12th</span><span class="badge-year">2023</span></div><p class="board-name">CBSE</p></div></div>
+      </div>
 
     </div>
   </div>
