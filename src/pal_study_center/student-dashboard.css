@@ -1180,7 +1180,7 @@ img{
   box-shadow:0 5px 15px rgba(0,0,0,0.3) !important;
   /* फोटो को थोड़ा ऊपर करने के लिए */
   position:relative !important;
-  top:25px !important;
+  top:12px !important;
   align-self:flex-start !important;
 }
 .hero-photo-wrapper img{

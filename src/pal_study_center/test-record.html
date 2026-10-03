@@ -5,18 +5,25 @@
 <style>
 body{padding-top:70px;background:#f4f7ff;font-family:Poppins;}
 .top-card{border-radius:18px; border:0; box-shadow:0 8px 20px rgba(0,0,0,.08); height:130px; display:flex; align-items:center;}
-.rank-card{background: linear-gradient(135deg,#0d6efd,#174a7e); color:#fff;}
-.per-card{background: linear-gradient(135deg,#00c853,#009624); color:#fff;}
-.latest-card{background: linear-gradient(135deg,#ff9800,#ff5722); color:#fff;}
-.attempt-card{background: linear-gradient(135deg,#9c27b0,#673ab7); color:#fff;}
-.top-card h2{font-weight:800; font-size:30px; margin:4px 0;}
+.rank-card,.per-card,.latest-card,.attempt-card{background: linear-gradient(135deg,#174a7e 0%,#1e6fa5 100%); color:#fff;}
+.top-card h2{font-weight:800; font-size:25px; margin:4px 0;}
 .top-card p{opacity:.9; margin:0; font-size:11px; letter-spacing:1px; text-transform:uppercase;}
 .top-card small{font-size:12px; opacity:.9;}
 .icon-box{width:50px;height:50px;border-radius:14px;background:rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;font-size:24px;}
 .table-scroll{ max-height:85vh; overflow:auto; border-radius:12px; border:1px solid #ddd; }
 .table-scroll thead th{ position:sticky; top:0; z-index:3; background:#212529; }
 .sticky-name{ position:sticky!important; top:0!important; left:0!important; z-index:5!important; background:#212529!important; color:#fff; text-align:left; border-right:2px solid #000; min-width:160px; }
-.sticky-name-body{ position:sticky!important; left:0!important; z-index:2!important; background:#dbeafe!important; font-weight:700; text-align:left; border-right:2px solid #000; }
+.sticky-name-body{ 
+  position:sticky!important; 
+  left:0!important; 
+  z-index:2!important; 
+  background: linear-gradient(135deg,#174a7e 0%,#1e6fa5 100%)!important; 
+  color:#fff!important;
+  font-weight:700; 
+  text-align:left; 
+  border-right:2px solid #000; 
+}
+
 </style>
 </head>
 <body>
@@ -25,7 +32,7 @@ body{padding-top:70px;background:#f4f7ff;font-family:Poppins;}
 <div class="container mt-2">
 <div class="row g-3 mb-3">
   <div class="col-6"><div class="card top-card rank-card p-3 w-100"><div class="d-flex justify-content-between w-100 align-items-center"><div><p>Rank</p><h2 id="myRank">-</h2><small id="myRankTotal">out of -</small></div><div class="icon-box"><i class="bi bi-trophy-fill"></i></div></div></div></div>
-  <div class="col-6"><div class="card top-card per-card p-3 w-100"><div class="d-flex justify-content-between w-100 align-items-center"><div><p>औसत प्रतिशत</p><h2 id="myPer">0%</h2><small>Overall Score</small></div><div class="icon-box"><i class="bi bi-graph-up-arrow"></i></div></div></div></div>
+  <div class="col-6"><div class="card top-card per-card p-3 w-100"><div class="d-flex justify-content-between w-100 align-items-center"><div><p>Average %</p><h2 id="myPer">0%</h2><small>Overall Score</small></div><div class="icon-box"><i class="bi bi-graph-up-arrow"></i></div></div></div></div>
   <div class="col-6"><div class="card top-card latest-card p-3 w-100"><div class="d-flex justify-content-between w-100 align-items-center"><div><p>Latest Test</p><h2 id="myLat">- /20</h2><small id="myLatName">No Test</small></div><div class="icon-box"><i class="bi bi-star-fill"></i></div></div></div></div>
   <div class="col-6"><div class="card top-card attempt-card p-3 w-100"><div class="d-flex justify-content-between w-100 align-items-center"><div><p>Attempted</p><h2 id="myAttempt">0 / 100</h2><small id="myAttemptPer">0% Completed</small></div><div class="icon-box"><i class="bi bi-check2-square"></i></div></div></div></div>
 </div>
@@ -68,12 +75,16 @@ function renderAll(){
   document.getElementById('myRank').innerText=(myIdx+1);
   document.getElementById('myRankTotal').innerText='out of '+fullList.length;
   document.getElementById('myPer').innerText=myData.per.toFixed(1)+'%';
+
   let tot=0,c=0,lat='-',ln='';
   for(let k=1;k<=TC;k++){ let v=myData.m[k]; if(v!=='' && v!=null &&!isNaN(v)){tot+=parseInt(v);c++;lat=v;ln='T'+k;} }
   document.getElementById('myLat').innerText=lat!='-'?lat+'/20':'-/20';
   document.getElementById('myLatName').innerText=ln||'No Test';
-  document.getElementById('myAttempt').innerText= c + ' / '+TC;
-  document.getElementById('myAttemptPer').innerText= c + '% Completed';
+
+  // --- 4th Card Fix ---
+  document.getElementById('myAttempt').innerText = c + ' / ' + TC;
+  let percentCompleted = TC > 0? (c / TC * 100) : 0;
+  document.getElementById('myAttemptPer').innerText = percentCompleted.toFixed(1) + '% Completed';
 
   let h='<th class="sticky-name">Name</th>';
   for(let i=1;i<=TC;i++) h+=`<th style="min-width:60px;">T${i}</th>`;
