@@ -17,6 +17,7 @@ const CONFIG = {
     STUDENT_LOGIN: '/StudentLogin',
     GET_STUDENTS: '/students',
     GET_STUDENT_NOTICES: '/students/:id/notices',
+    TEST_RECORDS: '/students/test-records',
     NOTICES: '/notices',
     REVIEWS: '/reviews',
     DELETE_STUDENT: '/DeleteStudent',

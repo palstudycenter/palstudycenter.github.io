@@ -43,33 +43,42 @@ body{padding-top:70px;background:#f4f7ff;font-family:Poppins;}
 </div>
 </div>
 
+<script src="../../config.js"></script>
 <script>
 let user = JSON.parse(localStorage.getItem("currentUser") || localStorage.getItem("pal_current_user") || '{"name":"Test","class":"Class 10th","id":"1"}');
 
-function renderAll(){
-  let TM = JSON.parse(localStorage.getItem('tm') || '{}');
-  let TC = parseInt(localStorage.getItem('tc')||'100',10);
-  let allStudents=JSON.parse(localStorage.getItem('pal_students_list_cache')||'[]');
-  let inactiveIds = JSON.parse(localStorage.getItem('pal_inactive_ids')||'[]').map(String);
-  if(!allStudents.length) allStudents=[{id:user.id||1, name:user.name, class:user.class, board:user.board}];
+function normalizeTestRecords(raw = {}) {
+  const normalized = {};
+  Object.entries(raw || {}).forEach(([key, value]) => {
+    const label = String(key || '').trim();
+    let numKey = Number(label);
+    if (Number.isNaN(numKey) && /^T\d+$/i.test(label)) {
+      numKey = Number(label.replace(/^T/i, ''));
+    }
+    const cleanValue = Number(value);
+    if (!Number.isNaN(numKey) && !Number.isNaN(cleanValue)) {
+      normalized[numKey] = cleanValue;
+    }
+  });
+  return normalized;
+}
 
-  let fullList=allStudents.filter(s=>{
-    if(inactiveIds.includes(String(s.id))) return false;
-    if(user.class && (s.class||'').trim()!== (user.class||'').trim()) return false;
-    if(user.board && (s.board||'').trim()!== (user.board||'').trim()) return false;
-    return true;
-  }).map(s=>{
-   let m=TM[String(s.id)]||TM[s.name]||{};
-   let tot=0,c=0;
-   for(let k=1;k<=TC;k++){ let v=m[k]; if(v!=='' && v!=null &&!isNaN(v)){tot+=parseInt(v);c++;} }
-   return {...s, _sid:String(s.id), per:c?tot/(c*20)*100:0, m, count:c};
-  }).sort((a,b)=>b.per-a.per);
+async function loadStudentTestRecords() {
+  const studentId = user && user.id ? Number(user.id) : null;
+  const savedRecords = JSON.parse(localStorage.getItem('pal_student_test_records') || '{}');
 
-  let myName = (user.name||'').trim().toLowerCase();
-  let myId = String(user.id||'').trim().toLowerCase();
-  let myIdx=fullList.findIndex(d=> String(d._sid).toLowerCase()===myId || (d.name||'').trim().toLowerCase()===myName);
-  if(myIdx==-1) myIdx=0;
-  let myData=fullList[myIdx];
+  if (studentId) {
+    try {
+      const response = await fetch(`${CONFIG.BASE_URL}/students/${studentId}/test-records`);
+      const data = await response.json();
+      if (response.ok && data.status && data.res && typeof data.res === 'object') {
+        localStorage.setItem('pal_student_test_records', JSON.stringify(data.res));
+        return data.res;
+      }
+    } catch (error) {
+      console.warn('Unable to fetch student test records from backend:', error);
+    }
+  }
 
   document.getElementById('className').innerText=user.class||'';
   document.getElementById('myRank').innerText=(myIdx+1);
@@ -85,18 +94,54 @@ function renderAll(){
   document.getElementById('myAttempt').innerText = c + ' / ' + TC;
   let percentCompleted = TC > 0? (c / TC * 100) : 0;
   document.getElementById('myAttemptPer').innerText = percentCompleted.toFixed(1) + '% Completed';
+  return savedRecords;
+}
 
-  let h='<th class="sticky-name">Name</th>';
-  for(let i=1;i<=TC;i++) h+=`<th style="min-width:60px;">T${i}</th>`;
-  document.getElementById('h2').innerHTML=h;
-  let html=`<tr><td class="sticky-name-body">${myData.name}</td>`;
-  for(let k=1;k<=TC;k++) html+=`<td>${myData.m[k]!=null && myData.m[k]!==''?'<b>'+myData.m[k]+'</b>':'<span style="color:#ccc;">-</span>'}</td>`;
-  html+='</tr>';
-  document.getElementById('b2').innerHTML=html;
+async function renderAll(){
+  let records = await loadStudentTestRecords();
+  let TM = normalizeTestRecords(records);
+  let TC = Math.max(1, ...Object.keys(TM).map(Number), 1);
+
+  let myName = (user.name || '').trim().toLowerCase();
+  let myId = String(user.id || '').trim().toLowerCase();
+  let myData = { name: user.name || 'Student', m: TM };
+
+  document.getElementById('className').innerText = user.class || '';
+  document.getElementById('myRank').innerText = '1';
+  document.getElementById('myRankTotal').innerText = 'out of 1';
+
+  let perTotal = 0, count = 0, lat = '-', latName = 'No Test';
+  Object.entries(TM).forEach(([key, value]) => {
+    const num = Number(key);
+    if (!Number.isNaN(num) && value !== '' && value != null && !isNaN(value)) {
+      perTotal += Number(value);
+      count++;
+      lat = Number(value);
+      latName = `T${num}`;
+    }
+  });
+
+  const averagePercent = count ? (perTotal / (count * 20)) * 100 : 0;
+  document.getElementById('myPer').innerText = averagePercent.toFixed(1) + '%';
+  document.getElementById('myLat').innerText = lat !== '-' ? lat + '/20' : '-/20';
+  document.getElementById('myLatName').innerText = latName;
+  document.getElementById('myAttempt').innerText = count + ' / ' + TC;
+  document.getElementById('myAttemptPer').innerText = count ? ((count / TC) * 100).toFixed(0) + '% Completed' : '0% Completed';
+
+  let h = '<th class="sticky-name">Name</th>';
+  for (let i = 1; i <= TC; i++) h += `<th style="min-width:60px;">T${i}</th>`;
+  document.getElementById('h2').innerHTML = h;
+
+  let html = `<tr><td class="sticky-name-body">${myData.name}</td>`;
+  for (let k = 1; k <= TC; k++) {
+    const value = TM[k];
+    html += `<td>${value != null && value !== '' && !isNaN(value) ? '<b>' + value + '</b>' : '<span style="color:#ccc;">-</span>'}</td>`;
+  }
+  html += '</tr>';
+  document.getElementById('b2').innerHTML = html;
 }
 
 renderAll();
 window.addEventListener('pageshow', renderAll);
-setInterval(renderAll, 1500);
 </script>
 </body></html>

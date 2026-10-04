@@ -4,18 +4,88 @@ let studentMode = localStorage.getItem('pal_student_mode') || 'active';
 let inactiveIds = JSON.parse(localStorage.getItem('pal_inactive_ids') || '[]').map(String);
 let TC = parseInt(localStorage.getItem('tc')||'100',10);
 let TM = JSON.parse(localStorage.getItem('tm')||'{}');
+let pendingTestRecords = {};
+
+function dedupeStudentsById(list = []) {
+  const map = new Map();
+  list.forEach((student) => {
+    if (!student || !student.id && !student.student_id) return;
+    const sid = String(student.id ?? student.student_id ?? '');
+    if (!sid) return;
+    if (!map.has(sid)) {
+      map.set(sid, student);
+    }
+  });
+  return Array.from(map.values());
+}
 
 async function loadStudents() {
   try {
     const response = await fetch(getApiUrl(CONFIG.API.GET_STUDENTS));
     const json = await response.json();
     if (json.status && Array.isArray(json.res)) {
-      students = json.res.filter(s => s && s.usertype === 'student');
+      students = dedupeStudentsById(json.res.filter(s => s && s.usertype === 'student'));
       localStorage.setItem('pal_students_list_cache', JSON.stringify(students));
+      await loadTestRecordsFromBackend();
       renderAll();
     }
-  } catch (e) { console.error(e); students = JSON.parse(localStorage.getItem('pal_students_list_cache')||'[]'); renderAll(); }
+  } catch (e) { console.error(e); students = dedupeStudentsById(JSON.parse(localStorage.getItem('pal_students_list_cache')||'[]')); renderAll(); }
 }
+
+function normalizeTestMap(rawTests = {}) {
+  const map = {};
+  Object.entries(rawTests || {}).forEach(([key, value]) => {
+    const label = String(key || '').trim();
+    let numKey = Number(label);
+
+    if (Number.isNaN(numKey) && /^T\d+$/i.test(label)) {
+      numKey = Number(label.replace(/^T/i, ''));
+    }
+
+    const cleanValue = Number(value);
+    if (!Number.isNaN(numKey) && !Number.isNaN(cleanValue)) {
+      map[numKey] = cleanValue;
+    }
+  });
+  return map;
+}
+
+async function loadTestRecordsFromBackend() {
+  try {
+    const response = await fetch(getApiUrl(CONFIG.API.TEST_RECORDS));
+    const json = await response.json();
+    if (!json.status || !Array.isArray(json.res)) return;
+
+    const loadedTm = {};
+    let maxTest = 0;
+
+    json.res.forEach((student) => {
+      const sid = String(student.id || student.student_id || '');
+      const tests = student.tests || student.test_records || {};
+      const byTest = normalizeTestMap(tests);
+
+      if (Object.keys(byTest).length) {
+        loadedTm[sid] = byTest;
+        Object.keys(byTest).forEach((key) => {
+          const n = Number(key);
+          if (!Number.isNaN(n) && n > maxTest) maxTest = n;
+        });
+      }
+
+      if (student.name && !loadedTm[student.name] && Object.keys(byTest).length) {
+        loadedTm[student.name] = { ...byTest };
+      }
+    });
+
+    TM = loadedTm;
+    if (maxTest > 0) TC = maxTest;
+    localStorage.setItem('tm', JSON.stringify(TM));
+    localStorage.setItem('tc', String(TC));
+  } catch (e) {
+    console.error('Failed to load test records from backend', e);
+  }
+}
+
 function setStudentFilterMode(mode){
   studentMode = mode;
   localStorage.setItem('pal_student_mode', mode);
@@ -80,7 +150,8 @@ async function openReviewsPopup(e){ if(e) e.preventDefault(); await loadReviewsF
 function showTests(){
  let fBoard=document.getElementById("filterBoard")?.value||"";
  let fClass=document.getElementById("filterClass")?.value||"";
- let list=students.filter(s=>{
+ let uniqueStudents = dedupeStudentsById(students);
+ let list=uniqueStudents.filter(s=>{
    let isI=inactiveIds.includes(String(s.id));
    if(studentMode==='active' && isI) return false;
    if(studentMode==='inactive' &&!isI) return false;
@@ -95,31 +166,83 @@ function showTests(){
  document.getElementById('th').innerHTML=h;
  let rows=list.map(s=>{
    let sid=String(s.id);
-   let m=TM[sid]||TM[s.name]||{};
+   let m = normalizeTestMap(TM[sid] || TM[s.name] || {});
    let tot=0,c=0,lat='-';
-   for(let k=1;k<=TC;k++){ let v=m[k]; if(v!=='' && v!=null &&!isNaN(v)){tot+=parseInt(v);c++;lat=v;} }
+   for(let k=1;k<=TC;k++){ let v = m[k]; if(v!=='' && v!=null &&!isNaN(v)){tot+=parseInt(v);c++;lat=v;} }
    return {...s, _sid:sid, per:c?tot/(c*20)*100:0, lat, m};
  }).sort((a,b)=>b.per-a.per);
  let b='';
  rows.forEach((r,i)=>{
    b+=`<tr><td style="position:sticky;left:0;background:#fff;z-index:2;">${i+1}</td><td style="position:sticky;left:40px;background:#fff;z-index:2;text-align:left;font-weight:600;border-right:2px solid #000;">${r.name}</td><td style="background:#e7f0ff;font-weight:700;">${r.per.toFixed(1)}%</td><td style="background:#fff8e1;">${r.lat!=='-'?r.lat:''}</td>`;
-   for(let k=1;k<=TC;k++){ let val=r.m[k]||''; b+=`<td><input type="number" value="${val}" onchange="saveT('${r._sid}','${r.name}',${k},this.value)" style="width:50px;text-align:center;border:1px solid #ddd;border-radius:5px;padding:3px;"></td>`; }
+   for(let k=1;k<=TC;k++){ let val = r.m[k] ?? ''; b+=`<td><input type="number" value="${val}" oninput="queueTestValue('${r._sid}','${r.name}',${k},this.value)" style="width:50px;text-align:center;border:1px solid #ddd;border-radius:5px;padding:3px;"></td>`; }
    b+='</tr>';
  });
  document.getElementById('tb').innerHTML=b;
 }
 
-function saveT(id, name, t, v){
-  id=String(id);
+function queueTestValue(id, name, t, v){
+  id = String(id);
+  const numericValue = (v === '' || v === null || v === undefined) ? null : Number(v);
+  if (numericValue === null || Number.isNaN(numericValue)) return;
+
   if(!TM[id]) TM[id]={};
-  TM[id][t]=v;
+  TM[id][Number(t)] = numericValue;
+
   if(name){
     if(!TM[name]) TM[name]={};
-    TM[name][t]=v;
+    TM[name][Number(t)] = numericValue;
   }
+
+  if (!pendingTestRecords[id]) pendingTestRecords[id] = {};
+  pendingTestRecords[id][Number(t)] = numericValue;
+
   localStorage.setItem('tm', JSON.stringify(TM));
-  localStorage.setItem('tc', TC);
+  localStorage.setItem('tc', String(TC));
   localStorage.setItem('pal_students_list_cache', JSON.stringify(students));
+}
+
+async function submitPendingTestRecords(){
+  const entries = Object.entries(pendingTestRecords);
+  if (!entries.length) {
+    alert('Submit करने के लिए कोई नया Test Record नहीं है।');
+    return;
+  }
+
+  let submitted = 0;
+  for (const [studentId, records] of entries) {
+    for (const [testNumber, marks] of Object.entries(records)) {
+      const payload = {
+        student_id: Number(studentId),
+        test_name: `T${Number(testNumber)}`,
+        marks: Number(marks)
+      };
+
+      try {
+        const response = await fetch(getApiUrl(CONFIG.API.TEST_RECORDS), {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const json = await response.json();
+        if (json.status) {
+          submitted++;
+        } else {
+          console.error('Test record save failed:', json);
+        }
+      } catch (e) {
+        console.error('Failed to save test record to backend:', e);
+      }
+    }
+  }
+
+  pendingTestRecords = {};
+  if (submitted > 0) {
+    await loadTestRecordsFromBackend();
+    renderAll();
+    alert(`${submitted} Test Record submitted successfully.`);
+  } else {
+    alert('No record was submitted successfully.');
+  }
 }
 
 function addTest(){

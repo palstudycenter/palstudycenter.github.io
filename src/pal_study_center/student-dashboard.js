@@ -279,17 +279,30 @@ async function openFeesModal(event) {
     await loadFeesData();
 }
 
-function openTestRecord(event) {
+async function openTestRecord(event) {
     if (event) event.preventDefault();
-    const className = user.class || '';
-    const url = TEST_RECORD_LINKS[className];
 
-    if (url) {
-        window.open(url, '_blank');
+    if (!user || !user.id) {
+        alert('Student data not available.');
         return;
     }
 
-    alert('Test record link is not available for your class.');
+    try {
+        const response = await fetch(`${CONFIG.BASE_URL}/students/${user.id}/test-records`);
+        const data = await response.json();
+
+        if (response.ok && data.status && data.res && typeof data.res === 'object') {
+            localStorage.setItem('pal_student_test_records', JSON.stringify(data.res));
+            window.location.href = 'test-record.html';
+            return;
+        }
+
+        throw new Error(data.msg || 'Unable to load test records');
+    } catch (error) {
+        console.warn('Error loading student test records:', error);
+        localStorage.setItem('pal_student_test_records', JSON.stringify({}));
+        window.location.href = 'test-record.html';
+    }
 }
 
 async function loadFeesData() {

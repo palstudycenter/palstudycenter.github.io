@@ -53,7 +53,10 @@
 <section id="testRecords">
 <div class="card-box">
 <h4>📝 Test Records</h4>
-<button class="btn btn-dark btn-sm" onclick="addTest()">+ Add Test</button>
+<div class="d-flex gap-2 flex-wrap mb-3">
+  <button class="btn btn-dark btn-sm" onclick="addTest()">+ Add Test</button>
+  <button class="btn btn-primary btn-sm" onclick="submitPendingTestRecords()">Submit</button>
+</div>
   <div class="test-table-wrap mt-3">
 <table class="table table-bordered align-middle text-center" id="testTable">
 <thead><tr id="th"></tr></thead>
