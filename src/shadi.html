@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>पाल परिवार - Final Updated</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<style>
+body{background:#fdf6ee;font-family:Poppins,sans-serif}
+
+  .header{background:linear-gradient(135deg,#174a7e 0%,#1e6fa5 100%);color:#fff;padding:15px;border-radius:15px!important;margin:12px;box-shadow:0 6px 18px rgba(0,0,0,.08)}
+  
+  .card{border-radius:15px;border:none;box-shadow:0 6px 18px rgba(0,0,0,.06)}
+.vendor-card{border-left:6px solid #6d28d9}
+
+  /* भोजन व्यवस्था - White जैसा Excel सेक्शन */
+.food-card{background:#ffffff!important;color:#111827!important;box-shadow:0 6px 18px rgba(0,0,0,.06)!important;border-radius:15px!important}
+.food-card h6{color:#111827!important;font-weight:800!important}
+.food-card::before{display:none}
+
+/* अंदर के कार्ड - Blue जैसे Excel बटन */
+#foodStats .bg-white,
+#foodStats .rounded,
+#foodStats .shadow-sm{
+  background:linear-gradient(135deg,#174a7e 0%,#1e6fa5 100%)!important;
+  color:#fff!important;
+  border:none!important;
+  border-radius:12px!important;
+}
+#foodStats b{color:#fff!important}
+#foodStats small{color:rgba(255,255,255,0.85)!important}
+#foodStats .text-danger{color:#FDE68A!important}
+  
+  .task-done{text-decoration:line-through;opacity:.6}
+.activity{border-left:3px solid #25D366;padding-left:8px;margin-bottom:6px;font-size:12px}
+#catTabs{gap:10px}
+#actionTabs{gap:10px}
+
+.cat-btn{border-radius:22px!important;padding:6px 18px!important;font-weight:600!important;font-size:13px!important;border:none!important;background:linear-gradient(135deg,#174a7e 0%,#1e6fa5 100%)!important;color:#fff!important;min-width:95px;box-shadow:0 4px 10px rgba(23,74,126,.3)!important;transition:0.2s}
+.cat-btn.active{background:#fff!important;color:#174a7e!important;border:2px solid #174a7e!important;box-shadow:0 2px 8px rgba(0,0,0,.08)!important}
+  
+  .action-btn{background:rgba(255,255,255,0.15)!important;color:#fff!important;border:1.5px solid rgba(255,255,255,0.4)!important}
+.action-btn:hover{background:#fff!important;color:#174a7e!important}
+.action-btn.active{background:#fff!important;color:#174a7e!important}
+#subFilterBox{background:#fff;border-radius:14px;padding:14px;box-shadow:0 4px 16px rgba(0,0,0,.08);margin-top:12px;display:none;border:1px solid #f3f4f6}
+.sub-btn{border-radius:20px!important;padding:5px 14px!important;font-size:12px!important;font-weight:600!important;margin:4px!important;border:1px solid #d0d0d0!important;background:#f9fafb!important}
+.sub-title{font-size:13px;font-weight:800;margin:10px 0 6px 4px;color:#111827}
+.divider-line{border:none;border-top:1.5px dashed #d1d5db;margin:12px 0}
+.sub-btn.active{background:#111827!important;color:#fff!important;border-color:#111827!important}
+.freeze-col{position:sticky;left:0;background:#fff;z-index:2;border-right:2px solid #d1d5db;min-width:240px;max-width:240px;padding:10px!important}
+.wa-btn{background:#25D366;color:#fff;border:none;border-radius:20px;padding:5px 12px;font-size:11px;font-weight:700;margin-top:8px;width:100%}
+.surname-text{font-size:14px;font-weight:700;color:#1f2937}
+.sthan-text{font-size:13px;font-weight:600;color:#4b5563}
+.program-badge{background:#f9fafb;color:#1f2937;border:1.5px solid #d1d5db;font-size:12px;padding:6px 12px;border-radius:20px;margin:4px;display:inline-block;font-weight:600;cursor:pointer}
+.nek-wrap{display:flex;gap:8px;margin-top:8px;text-align:left}
+.nek-box{flex:1;background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:6px}
+.nek-box.mila{background:#f0fdf4;border-color:#bbf7d0}
+.nek-title{font-size:11px;font-weight:800;margin-bottom:4px}
+.nek-title.diya{color:#92400e}.nek-title.mila{color:#15803d}
+.nek-line{font-size:12px;line-height:15px;margin-bottom:3px}
+
+  /* तीनों बटन एक ही Blue Gradient में */
+#excelBox .btn-success,
+#excelBox .btn-primary,
+#excelBox .btn-outline-dark{
+  background: linear-gradient(135deg, #174a7e 0%, #1e6fa5 100%)!important;
+  color:#fff!important;
+  border:none!important;
+  border-radius:22px!important;
+  font-weight:700!important;
+  box-shadow:0 4px 12px rgba(23,74,126,0.35)!important;
+  width:100%!important;
+  margin-top:8px!important;
+}
+#catTabs .cat-btn{background:rgba(255,255,255,0.15)!important;color:#fff!important;border:1.5px solid rgba(255,255,255,0.4)!important}
+#catTabs .cat-btn.active{background:#fff!important;color:#174a7e!important}  
+</style>
+</head>
+<body>
+<div class="header text-center">
+<div style="text-align:center; padding:8px 0;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 110" width="100" height="110">
+  <g fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round">
+    <!-- मुकुट -->
+    <path d="M 50 5 L 58 18 L 52 16 L 50 8 L 48 16 L 42 18 Z" stroke-width="1.5"/>
+    <path d="M 35 20 Q 50 5 65 20 L 62 28 Q 50 18 38 28 Z" stroke-width="1.5"/>
+    <path d="M 30 28 Q 50 20 70 28 L 68 35 Q 50 27 32 35 Z" stroke-width="1.5"/>
+    <path d="M 28 35 Q 50 25 72 35 L 70 45 Q 50 35 30 45 Z" stroke-width="1.8"/>
+    <!-- सिर और कान -->
+    <path d="M 30 45 Q 28 65 38 75" stroke-width="1.5"/>
+    <path d="M 70 45 Q 72 65 62 75" stroke-width="1.5"/>
+    <path d="M 30 48 Q 10 42 5 55 Q 12 70 30 75 Q 35 65 30 48" stroke-width="1.5"/>
+    <path d="M 70 48 Q 90 42 95 55 Q 88 70 70 75 Q 65 65 70 48" stroke-width="1.5"/>
+    <!-- आँखें और तिलक -->
+    <path d="M 38 58 Q 44 55 50 58 Q 44 60 38 58" stroke-width="1.2"/>
+    <path d="M 62 58 Q 56 55 50 58 Q 56 60 62 58" stroke-width="1.2"/>
+    <path d="M 50 50 L 50 62 M 46 55 Q 50 65 54 55" stroke-width="1.2"/>
+    <!-- सूंड - सही घुमाव -->
+    <path d="M 50 62 Q 52 75 45 85 Q 35 95 25 85 Q 18 78 25 70 Q 30 66 35 70" stroke-width="1.8"/>
+    <path d="M 45 85 Q 55 88 62 78 Q 68 68 65 58" stroke-width="1.5"/>
+  </g>
+  </svg>
+  <div style="font-weight:900; color:#FDE68A; font-size:14px; margin-top:2px; letter-spacing:1.2px; text-shadow:0 1px 3px rgba(0,0,0,0.6);">॥ श्री गणेशाय नमः ॥</div>
+</div>
+
+<div class="d-flex justify-content-center gap-2 flex-wrap" id="actionTabs">
+<button onclick="showFullView()" class="btn btn-sm cat-btn action-btn active" id="btnHome">🏠 होम</button>
+<button onclick="showVendorSection()" class="btn btn-sm cat-btn action-btn" id="btnVendor">🔧 वेंडर / बैंड</button>
+<button onclick="showFamilySection()" class="btn btn-sm cat-btn action-btn" id="btnFamily">👨‍👩‍👧 फैमिली टीम</button>
+<button onclick="showDevSection()" class="btn btn-sm cat-btn action-btn" id="btnDev">🕉️ देव कार्य</button>
+</div>
+  
+<div class="mt-3 pt-3" style="border-top:1px dashed rgba(255,255,255,0.35)">
+  <div class="d-flex justify-content-center gap-2 flex-wrap mt-2" id="catTabs"></div>
+</div>  
+<div id="subFilterBox" class="container text-start mt-3"></div>
+  </div>
+
+<div class="container my-3 tab-content">
+<div class="tab-pane fade show active" id="tab-guest">
+<div class="card p-3 food-card mb-3" id="foodBox"><h6 style="color:#fff;font-weight:800">🍛 भोजन व्यवस्था - पूरी डिटेल</h6><div class="row text-center g-2 mt-1" id="foodStats"></div></div>
+<div class="row g-2">
+<div class="col-lg-12" id="excelBox"><div class="card p-3 text-center"><input type="file" id="excelFile" accept=".xlsx,.xls" style="display:none"><button onclick="document.getElementById('excelFile').click()" class="btn btn-success btn-sm w-100 my-2">Choose Excel</button><div id="fileName" class="small text-success fw-bold mb-2"></div><button onclick="importExcel()" class="btn btn-primary btn-sm w-100">Upload Excel</button><button onclick="exportCategoryWise()" class="btn btn-outline-dark btn-sm w-100 mt-2">Export Excel</button></div></div>
+
+  <div class="col-12" id="listBox" style="display:none"><div class="card p-3"><div class="d-flex justify-content-between align-items-center flex-wrap gap-2"><h6 class="mb-0"><span id="listCat">मनासा</span> - <span id="count">0</span> परिवार | <span id="totalPeople" class="fw-bold text-danger">0</span> लोग</h6><div class="d-flex gap-2"><button onclick="showFullView()" class="btn btn-sm btn-dark">⬅️ वापस</button><input id="search" onkeyup="handleSearch()" class="form-control form-control-sm" style="width:120px" placeholder="Search"></div></div><div id="guestList" class="mt-2"></div></div></div>
+
+<div class="col-12" id="foodMenuBox" style="display:none"></div>
+
+</div>
+</div>
+
+<div class="tab-pane fade" id="tab-vendor"><div class="row g-3 mt-1">
+<div class="col-lg-4"><div class="card p-3"><h6>वेंडर जोड़ें - नया सिस्टम</h6>
+<select id="vType" class="form-select form-select-sm my-1">
+  <optgroup label="वेन्यू & डेकोरेशन"><option>🏨 रिसोर्ट वाला</option><option>⛺ टेंट वाला</option><option>💡 लाइट वाला</option><option>🌸 डेकोरेशन फूल वाला</option></optgroup>
+  <optgroup label="बारात & मनोरंजन"><option>🥁 बैंड बाजा</option><option>🐴 घोड़ी बग्गी वाला</option><option>🎵 डीजे वाला</option><option>🚌 बारात बस वाला</option></optgroup>
+  <optgroup label="भोजन व्यवस्था"><option>🍪 हलवाई</option><option>🍛 केटर्स</option><option>🧺 राशन वाला</option><option>👩‍🍳 घर का भोजन बनाने वाली बाई</option></optgroup>
+  <optgroup label="फोटो-वीडियो"><option>📸 फोटोग्राफर</option><option>🎥 वीडियोग्राफर</option></optgroup>
+  <optgroup label="धार्मिक कार्य"><option>📿 पंडित जी</option><option>🙏 हरिजन</option></optgroup>
+  <optgroup label="व्यक्तिगत तैयारी"><option>✂️ टेलर</option><option>💈 नाई</option><option>💄 पार्लर वाली</option></optgroup>
+  <optgroup label="घर & सफाई"><option>🧹 काम वाली बाई</option><option>🧼 मामा सफाई वाला</option></optgroup>
+</select>
+<input id="vName" class="form-control form-control-sm my-1" placeholder="नाम">
+<input id="vPhone" class="form-control form-control-sm my-1" placeholder="फोन">
+<input id="vPrice" type="number" class="form-control form-control-sm my-1" placeholder="कुल पैसा">
+<input id="vAdvance" type="number" class="form-control form-control-sm my-1" placeholder="एडवांस">
+<select id="vStatus" class="form-select form-select-sm my-1"><option>Book करना है</option><option>Booked</option><option>Advance दिया</option><option>पेमेंट बाकी</option></select>
+<div class="bg-light p-2 rounded mt-2" style="border:1px dashed #ccc"><b style="font-size:12px">📅 तारीख और समय (एक से अधिक जोड़ सकते हैं)</b><div id="scheduleList"></div><div class="d-flex gap-1 mt-2"><input id="tempDate" type="date" class="form-control form-control-sm"><input id="tempTime" type="time" class="form-control form-control-sm"></div><input id="tempNote" class="form-control form-control-sm mt-1" placeholder="काम क्या है? ex: बारात, रिसेप्शन"><button onclick="addScheduleRow()" class="btn btn-sm btn-dark w-100 mt-1" type="button">+ तारीख जोड़ें</button></div>
+<button onclick="addVendor()" class="btn btn-sm btn-dark w-100 mt-2">वेंडर जोड़ें</button></div><div class="card p-3 mt-2"><b>कुल: ₹<span id="totalCost">0</span> | एडवांस: ₹<span id="totalAdv">0</span> | बाकी: ₹<span id="totalBal">0</span></b></div></div>
+<div class="col-lg-8"><div class="row g-2" id="vendorList"></div></div></div></div>
+
+<div class="tab-pane fade" id="tab-family"><div class="row g-3 mt-1"><div class="col-lg-4"><div class="card p-3"><h6>फैमिली मेंबर जोड़ें</h6><input id="fName" class="form-control form-control-sm my-1" placeholder="नाम"><input id="fRole" class="form-control form-control-sm my-1" placeholder="जिम्मेदारी"><button onclick="addFamily()" class="btn btn-sm btn-dark w-100">मेंबर जोड़ें</button><hr><h6>काम दें</h6><select id="taskTo" class="form-select form-select-sm my-1"></select><input id="taskText" class="form-control form-control-sm my-1" placeholder="काम"><button onclick="addTask()" class="btn btn-sm w-100 text-white" style="background:#6d28d9">टास्क दें</button></div><div class="card p-3 mt-2"><h6>Live Activity</h6><div id="activityFeed" style="max-height:300px;overflow:auto"></div></div></div><div class="col-lg-8"><div id="familyList" class="row g-2"></div></div></div></div>
+<div class="tab-pane fade" id="tab-dev">
+  <div class="row g-3 mt-2">
+    <div class="col-lg-4">
+      <div class="card p-3">
+        <h6>🙏 नया देव पूजन जोड़ें</h6>
+        <input id="dName" class="form-control form-control-sm my-1" placeholder="देव का नाम - गणेश जी">
+        <input id="dDate" type="date" class="form-control form-control-sm my-1">
+        <input id="dTime" type="time" class="form-control form-control-sm my-1">
+        <input id="dPlace" class="form-control form-control-sm my-1" placeholder="स्थान">
+        <textarea id="dDetail" class="form-control form-control-sm my-1" placeholder="क्या पूजा करनी है?"></textarea>
+        <button onclick="addDev()" class="btn btn-sm w-100 mt-2" style="background:#174a7e;color:#fff;">+ सेव करें</button>
+      </div>
+    </div>
+    <div class="col-lg-8">
+      <div class="row g-2" id="devList"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+let defaultGuests=[];
+let guests=JSON.parse(localStorage.getItem('palGuests_BC_Original')||JSON.stringify(defaultGuests));
+let nautaniyaGuests = JSON.parse(localStorage.getItem('nautaniyaGuests')||'[]');
+let categories=[...new Set([...guests.map(g=>g.cat),...nautaniyaGuests.map(g=>g.cat)])]; if(!categories.length) categories=["मनासा","नीमच"];
+let currentCat=categories[0]; let subSurnameFilter=null; let subSthanFilter=null; let subProgramFilter=null;
+let foodMenus = JSON.parse(localStorage.getItem('foodMenus')||'{}');
+let vendors=JSON.parse(localStorage.getItem('wedVendors')||'[]'); let members=JSON.parse(localStorage.getItem('wedMembers')||'[]'); let activities=JSON.parse(localStorage.getItem('wedActivity')||'[]'); let isFilteredView=false;
+let tempSchedules = [];
+function saveAll(){localStorage.setItem('palGuests_BC_Original',JSON.stringify(guests));localStorage.setItem('nautaniyaGuests',JSON.stringify(nautaniyaGuests));localStorage.setItem('wedVendors',JSON.stringify(vendors));localStorage.setItem('wedMembers',JSON.stringify(members));localStorage.setItem('wedActivity',JSON.stringify(activities));}
+
+  function renderCats(){
+ 
+    document.getElementById('catTabs').innerHTML=categories.map(c=>{
+    let isNau = c.toLowerCase().includes('नौतानिया') || c.toLowerCase().includes('nautaniya');
+   let cnt = isNau? nautaniyaGuests.filter(g=>g.cat==c).length : guests.filter(g=>g.cat==c).length;
+   return `<button onclick="filterByCat('${c}')" class="btn btn-sm cat-btn ${isFilteredView && currentCat==c?'active':''}">${c} (${cnt})</button>`;
+ }).join('');
+}
+function extractSurname(name){let clean=name.replace(/श्री/g,'').trim(); let parts=clean.split(' ').filter(p=>p); if(!parts.length) return ''; let last=parts[parts.length-1]; if(['जी'].includes(last) && parts.length>1) last=parts[parts.length-2]; return last;}
+function getSubFilters(){
+ let isNau = currentCat && (currentCat === "नौतानिया" || currentCat.toLowerCase()==="nautaniya");
+ let list = isNau? nautaniyaGuests.filter(g=>g.cat==currentCat) : guests.filter(g=>g.cat==currentCat);
+ let surnames=[...new Set(list.map(g=> (g.extra?.सरनेम || extractSurname(g.name)).trim()).filter(Boolean))];
+ let sthans=[...new Set(list.map(g=> (g.extra?.स्थान || '').trim()).filter(Boolean))];
+ let programs=[...new Set(list.flatMap(g=> g.events||[]).map(e=>e.trim()).filter(Boolean))];
+ return {surnames, sthans, programs};
+}
+function renderSubFilters(){
+ let box=document.getElementById('subFilterBox');
+ if(!isFilteredView || currentCat===null){ box.style.display='none'; return; }
+ let {surnames, sthans, programs}=getSubFilters();
+ box.style.display='block';
+ let html=`<div class="sub-title">1. फंक्शंस</div><div class="d-flex flex-wrap"><button onclick="setProgramFilter(null)" class="btn sub-btn ${subProgramFilter===null?'active':''}">सभी</button>`;
+ programs.forEach(s=>{ html+=`<button onclick="setProgramFilter('${s}')" class="btn sub-btn ${subProgramFilter===s?'active':''}">${s}</button>`; });
+ html+=`</div><hr class="divider-line"><div class="sub-title">2. परिवार</div><div class="d-flex flex-wrap"><button onclick="setSurnameFilter(null)" class="btn sub-btn ${subSurnameFilter===null?'active':''}">सभी</button>`;
+ surnames.forEach(s=>{ html+=`<button onclick="setSurnameFilter('${s}')" class="btn sub-btn ${subSurnameFilter===s?'active':''}">${s}</button>`; });
+ html+=`</div><hr class="divider-line"><div class="sub-title">3. निवास क्षेत्र</div><div class="d-flex flex-wrap"><button onclick="setSthanFilter(null)" class="btn sub-btn ${subSthanFilter===null?'active':''}">सभी</button>`;
+ sthans.forEach(s=>{ html+=`<button onclick="setSthanFilter('${s}')" class="btn sub-btn ${subSthanFilter===s?'active':''}">${s}</button>`; });
+ html+=`</div>`;
+ box.innerHTML=html;
+}
+function setProgramFilter(p){subProgramFilter=p; renderSubFilters(); renderGuests();}
+function setSurnameFilter(s){subSurnameFilter=s; renderSubFilters(); renderGuests();}
+function setSthanFilter(s){subSthanFilter=s; renderSubFilters(); renderGuests();}
+
+
+function clearTopActive(){
+  document.getElementById('btnHome').classList.remove('active');
+  document.getElementById('btnVendor').classList.remove('active');
+  document.getElementById('btnFamily').classList.remove('active');
+  let b=document.getElementById('btnDev'); if(b) b.classList.remove('active');
+}
+function filterByCat(cat){
+  currentCat=cat; isFilteredView=true; subSurnameFilter=null; subSthanFilter=null; subProgramFilter=null;
+  document.getElementById('foodBox').style.display='none';
+  document.getElementById('excelBox').style.display='none';
+  document.getElementById('foodMenuBox').style.display='none';
+  document.getElementById('listBox').style.display='block';
+  document.getElementById('listCat').innerText=cat;
+  document.getElementById('tab-guest').classList.add('show','active');
+  document.getElementById('tab-vendor').classList.remove('show','active');
+  document.getElementById('tab-family').classList.remove('show','active');
+  document.getElementById('tab-dev').classList.remove('show','active');
+  renderCats(); renderSubFilters(); renderGuests();
+}
+function showAllView(){
+  currentCat=null; isFilteredView=true;
+  document.getElementById('foodBox').style.display='none';
+  document.getElementById('excelBox').style.display='none';
+  document.getElementById('foodMenuBox').style.display='none';
+  document.getElementById('listBox').style.display='block';
+  document.getElementById('subFilterBox').style.display='none';
+  document.getElementById('tab-guest').classList.add('show','active');
+  document.getElementById('tab-vendor').classList.remove('show','active');
+  document.getElementById('tab-family').classList.remove('show','active');
+  document.getElementById('tab-dev').classList.remove('show','active');
+  renderCats(); renderGuestsAll();
+}
+function showFullView(){
+  clearTopActive(); document.getElementById('btnHome').classList.add('active');
+  isFilteredView=false; currentCat=categories[0];
+  document.getElementById('foodBox').style.display='block';
+  document.getElementById('excelBox').style.display='block';
+  document.getElementById('foodMenuBox').style.display='none';
+  document.getElementById('listBox').style.display='none';
+  document.getElementById('subFilterBox').style.display='none';
+  document.getElementById('tab-guest').classList.add('show','active');
+  document.getElementById('tab-vendor').classList.remove('show','active');
+  document.getElementById('tab-family').classList.remove('show','active');
+  document.getElementById('tab-dev').classList.remove('show','active');
+  renderCats(); renderFood();
+}
+function showVendorSection(){
+  clearTopActive(); document.getElementById('btnVendor').classList.add('active');
+  isFilteredView=false;
+  document.getElementById('subFilterBox').style.display='none';
+  document.getElementById('foodBox').style.display='none';
+  document.getElementById('excelBox').style.display='none';
+  document.getElementById('foodMenuBox').style.display='none';
+  document.getElementById('listBox').style.display='none';
+  document.getElementById('tab-guest').classList.remove('show','active');
+  document.getElementById('tab-family').classList.remove('show','active');
+  document.getElementById('tab-dev').classList.remove('show','active');
+  document.getElementById('tab-vendor').classList.add('show','active');
+  renderCats(); renderVendors();
+}
+function showFamilySection(){
+  clearTopActive(); document.getElementById('btnFamily').classList.add('active');
+  isFilteredView=false;
+  document.getElementById('subFilterBox').style.display='none';
+  document.getElementById('foodBox').style.display='none';
+  document.getElementById('excelBox').style.display='none';
+  document.getElementById('foodMenuBox').style.display='none';
+  document.getElementById('listBox').style.display='none';
+  document.getElementById('tab-guest').classList.remove('show','active');
+  document.getElementById('tab-vendor').classList.remove('show','active');
+  document.getElementById('tab-dev').classList.remove('show','active');
+  document.getElementById('tab-family').classList.add('show','active');
+  renderCats(); renderFamily();
+}
+function showDevSection(){
+  clearTopActive();
+  let b=document.getElementById('btnDev'); if(b) b.classList.add('active');
+  isFilteredView=false;
+  document.getElementById('subFilterBox').style.display='none';
+  document.getElementById('foodBox').style.display='none';
+  document.getElementById('excelBox').style.display='none';
+  document.getElementById('foodMenuBox').style.display='none';
+  document.getElementById('listBox').style.display='none';
+  document.getElementById('tab-guest').classList.remove('show','active');
+  document.getElementById('tab-vendor').classList.remove('show','active');
+  document.getElementById('tab-family').classList.remove('show','active');
+  document.getElementById('tab-dev').classList.add('show','active');
+  renderCats(); renderDevs();
+    }
+
+
+function handleSearch(){ if(currentCat===null) renderGuestsAll(); else renderGuests(); }
+function applyAllFilters(list){
+ let search=(document.getElementById('search').value||'').toLowerCase();
+ return list.filter(g=>{
+   if(search &&!g.name.toLowerCase().includes(search)) return false;
+   if(subSurnameFilter && (g.extra?.सरनेम||'').trim()!==subSurnameFilter) return false;
+   if(subSthanFilter && (g.extra?.स्थान||'').trim()!==subSthanFilter) return false;
+   if(subProgramFilter &&!(g.events||[]).includes(subProgramFilter)) return false;
+   return true;
+ });
+}
+function formatExtra(extra){ if(!extra) return ''; return Object.entries(extra).map(([k,v])=>{ if(!v || k==='सरनेम' || k==='स्थान') return ''; return `<span class="extra-badge"><b>${k}:</b> ${v}</span>`; }).join(''); }
+function sendWhatsAppInvite(name, phone, events, surname, sthan){
+ if(!phone){ alert('फोन नहीं'); return; }
+ let clean=phone.toString().replace(/[^0-9]/g,''); if(clean.length==10) clean='91'+clean;
+ let msg=`🙏 नमस्ते ${name} जी\n\nपाल परिवार की ओर से आमंत्रण 💍\n\n🎉 ${events.join(', ')}\n\n📍 ${sthan}\n👤 ${surname}\n\n- पाल परिवार, मनासा`;
+ window.open(`https://wa.me/${clean}?text=${encodeURIComponent(msg)}`,'_blank');
+}
+function sendSingleProgramInvite(name, phone, singleProg, surname, sthan){
+ if(!phone){ alert('फोन नहीं'); return; }
+ let clean=phone.toString().replace(/[^0-9]/g,''); if(clean.length==10) clean='91'+clean;
+ let msg=`🙏 नमस्ते ${name} जी\n\nआपको ${singleProg} कार्यक्रम में आमंत्रित किया है।\n\n📍 ${sthan}\n👤 ${surname}\n\n- पाल परिवार`;
+ window.open(`https://wa.me/${clean}?text=${encodeURIComponent(msg)}`,'_blank');
+}
+function formatRashiMulti(text){
+ if(!text || text.toString().trim()==='' || text=='-') return '<div class="nek-line" style="color:#9ca3af">-</div>';
+ return text.toString().split('+').map(p=>{
+   let part = p.trim(); if(!part) return '';
+   let amtMatch = part.match(/[\d,]+/);
+   let descMatch = part.match(/\((.*?)\)/);
+   let amt = amtMatch? amtMatch[0] : part;
+   let desc = descMatch? descMatch[1] : '';
+   let display = `₹${amt}`.replace('₹₹','₹');
+   if(desc){ return `<div class="nek-line"><b>${display}</b> <span style="color:#6b7280">(${desc})</span></div>`; }
+   else { return `<div class="nek-line"><b>${display}</b></div>`; }
+ }).join('');
+}
+function renderGuests(){
+ let isNautania = currentCat && (currentCat === "नौतानिया" || currentCat.toLowerCase() === "nautaniya");
+ let baseList = isNautania? nautaniyaGuests.filter(g=>g.cat==currentCat) : guests.filter(g=> g.cat==currentCat);
+ let filtered=applyAllFilters(baseList);
+ document.getElementById('count').innerText=filtered.length;
+ document.getElementById('totalPeople').innerText= isNautania? filtered.length : filtered.reduce((s,g)=>s+g.members,0);
+ document.getElementById('guestList').innerHTML=filtered.map(g=>{
+  let surname=g.extra?.सरनेम||''; let sthan=g.extra?.स्थान||'';
+  let safeName=g.name.replace(/'/g,"\\'");
+  let phoneBtn=g.phone? `<button class="wa-btn" onclick="sendWhatsAppInvite('${safeName}','${g.phone}',${JSON.stringify(g.events).replace(/"/g,'&quot;')},'${surname}','${sthan}')"><i class="bi bi-whatsapp"></i> ${g.phone}</button>` : `<button class="wa-btn" style="background:#9ca3af" disabled>फोन नहीं</button>`;
+  let progBadges=g.events.map(ev=>`<span class="program-badge" onclick="sendSingleProgramInvite('${safeName}','${g.phone}','${ev}','${surname}','${sthan}')">🎉 ${ev}</span>`).join('');
+  let diyaHTML = formatRashiMulti(g.givenGift || (isNautania? g.amount : ''));
+  let milaHTML = formatRashiMulti(g.receivedGift);
+  let nekSection = `<div class="nek-wrap"><div class="nek-box"><div class="nek-title diya">नेक दिया</div>${diyaHTML}</div><div class="nek-box mila"><div class="nek-title mila">नेक मिला</div>${milaHTML}</div></div>`;
+  return `<div class="card p-0 mb-2 d-flex flex-row" style="overflow:hidden"><div class="freeze-col"><b style="font-size:14px">${g.name} ${!isNautania?`<small>(${g.members})</small>`:''}</b><br><div class="surname-text">B: ${surname}</div><div class="sthan-text">C: ${sthan}</div>${phoneBtn}${nekSection}</div><div style="flex-grow:1;padding:10px"><small class="text-muted">प्रोग्राम</small><div class="mt-1">${progBadges}</div></div></div>`;
+ }).join('')||'<p class="text-center text-muted">कोई नहीं</p>';
+}
+function renderGuestsAll(){let filtered=applyAllFilters(guests); document.getElementById('listCat').innerText='सभी'; document.getElementById('count').innerText=filtered.length; document.getElementById('totalPeople').innerText=filtered.reduce((s,g)=>s+(g.members||0),0); document.getElementById('guestList').innerHTML=filtered.map(g=> `<div class="card p-2 mb-2"><b>${g.name} (${g.members})</b> | दिया: ${g.givenGift} | मिला: ${g.receivedGift}</div>`).join('');}
+
+  function renderFood(){
+ let allPrograms=new Set(); guests.forEach(g=>{ (g.events||[]).forEach(ev=>{ if(ev && ev.trim()) allPrograms.add(ev.trim()); }); });
+ let programs=[...allPrograms]; if(!programs.length) programs=["शादी"];
+ let html=''; programs.forEach(p=>{ let total=0, fam=0; guests.forEach(g=>{ if(g.events && g.events.includes(p)){ total+= (g.members||0); fam++; } }); html+=`<div class="col-6 col-md-3" onclick="showFoodProgram('${p}')" style="cursor:pointer"><div class="bg-white p-2 rounded shadow-sm" style="border-radius:12px"><b style="color:#111827">${p}</b><br><small style="color:#6b7280">परिवार: ${fam}</small><br><span class="fw-bold text-danger" style="font-size:16px">👥 ${total} लोग</span></div></div>`; });
+ html+=`<div class="col-12 mt-2"><span class="badge bg-light text-dark" style="font-size:13px;padding:8px 14px;border-radius:20px">कुल भोजन: ${guests.reduce((s,g)=>s+(g.members||0),0)} लोग | कुल परिवार: ${guests.length}</span></div>`;
+ document.getElementById('foodStats').innerHTML=html;
+}
+
+  function showFoodProgram(progName){
+  let data = foodMenus[progName];
+  let menuText = data?.menu || 'मेनू नहीं लिखा';
+  let day = data?.day || '-';
+  let time = data?.time || '-';
+  let filtered = guests.filter(g => g.events && g.events.includes(progName));
+  let totalFam = filtered.length;
+  let totalPeople = filtered.reduce((s,g)=>s+(g.members||0),0);
+  let menuList = menuText.split(/[\n,]+/).map(l=>l.trim()).filter(Boolean).map((item,i)=>{
+    let hasNum = /^\d+[\.\)]/.test(item);
+    return `<div style="padding:7px 0;border-bottom:1px dashed #eee;font-size:14px">${hasNum? item : (i+1)+'. '+item}</div>`;
+  }).join('');
+  document.getElementById('foodBox').style.display='none';
+  document.getElementById('excelBox').style.display='none';
+  document.getElementById('listBox').style.display='none';
+  document.getElementById('foodMenuBox').style.display='block';
+  document.getElementById('foodMenuBox').innerHTML = `
+    <div class="card p-3 mb-3" style="background:#fff;border-radius:14px">
+      <h5 class="text-center mb-3">🍛 ${progName}</h5>
+      <div class="row">
+        <div class="col-7" style="border-right:2px solid #f3f4f6">
+          <b style="font-size:12px;color:#6b7280">मेनू लिस्ट</b>
+          <div class="mt-2">${menuList}</div>
+        </div>
+        <div class="col-5 text-center">
+          <div style="background:#f3f4f6;padding:8px;border-radius:10px;margin-bottom:10px">
+            <b style="font-size:14px">👨‍👩‍👧 ${totalFam} परिवार</b><br>
+            <b style="font-size:14px;color:#dc2626">👥 ${totalPeople} लोग</b>
+          </div>
+          <div style="background:#f0f9ff;padding:10px;border-radius:10px;margin-bottom:10px">
+            <div style="font-size:12px;color:#6b7280">दिन</div><b style="font-size:15px">${day}</b>
+          </div>
+          <div style="background:#fffbeb;padding:10px;border-radius:10px">
+            <div style="font-size:12px;color:#6b7280">समय</div><b style="font-size:15px">⏰ ${time}</b>
+          </div>
+        </div>
+      </div>
+      <button onclick="showFullView()" class="btn btn-sm btn-dark w-100 mt-3">⬅️ वापस</button>
+    </div>`;
+}
+    
+function importExcel(){
+ let input=document.getElementById('excelFile'); let file=input.files[0]; if(!file){ alert('पहले Excel चुनें'); return; }
+ document.getElementById('fileName').innerText='⏳ पढ़ रहा हूँ: '+file.name;
+ let reader=new FileReader();
+ reader.onload=function(e){
+  try{
+   let wb=XLSX.read(new Uint8Array(e.target.result),{type:'array'});
+   let newGuests=[]; let newCats=[]; let newNautania=[];
+   // Menu Sheet पढ़ो - Fixed
+ 
+   let menuSheetName = wb.SheetNames.find(n=> n.toLowerCase().trim() === 'menu');
+   if(menuSheetName){
+   
+     let menuRows = XLSX.utils.sheet_to_json(wb.Sheets[menuSheetName]);
+     console.log('Excel Menu Rows:', menuRows);
+     foodMenus = {};
+     menuRows.forEach(r=>{
+       let keys = Object.keys(r);
+       let pKey = keys.find(k=>k.toLowerCase().includes('prog'));
+       let mKey = keys.find(k=>k.toLowerCase().includes('menu'));
+       let dKey = keys.find(k=>k.toLowerCase().includes('day') || k.toLowerCase().includes('दिन'));
+       let tKey = keys.find(k=>k.toLowerCase().includes('time') || k.toLowerCase().includes('समय'));
+       let p = pKey? r[pKey].toString().trim() : '';
+       if(!p) return;
+       foodMenus[p] = {
+         menu: mKey? r[mKey].toString().trim() : '',
+         day: dKey? r[dKey].toString().trim() : '',
+         time: tKey? r[tKey].toString().trim() : ''
+       };
+     });
+     
+     localStorage.setItem('foodMenus', JSON.stringify(foodMenus));
+   }
+    
+   wb.SheetNames.forEach(sheet=>{
+    if(sheet.toLowerCase().trim() === 'menu') return; // Menu को मेहमान में मत गिनो
+    let cleanSheet=sheet.trim(); let rows=XLSX.utils.sheet_to_json(wb.Sheets[sheet],{header:1}); if(!rows.length) return;
+    if(cleanSheet === "नौतानिया" || cleanSheet.toLowerCase() === "nautaniya"){
+        if(!newCats.includes(cleanSheet)) newCats.push(cleanSheet);
+        rows.forEach((r,i)=>{ if(i==0) return; if(!r[0]) return; let name=r[0]?r[0].toString():''; let surname=r[1]?r[1].toString().trim():''; let sthan=r[2]?r[2].toString().trim():''; let phone=r[3]?r[3].toString():''; let rashi=r[4]?r[4].toString().trim():''; let prog=r[5]?r[5].toString():''; let givenGift=r[6]?r[6].toString().trim():''; let receivedGift=r[7]?r[7].toString().trim():''; let extra={सरनेम:surname||extractSurname(name),स्थान:sthan}; newNautania.push({cat:cleanSheet,name:name,phone:phone,amount:rashi,events:prog?prog.split(',').map(s=>s.trim()).filter(s=>s):["शादी"],extra:extra,givenGift:givenGift,receivedGift:receivedGift,members:0}); }); return;
+    }
+         if(sheet.toLowerCase().trim() === 'menu') return;
+    if(!newCats.includes(sheet)) newCats.push(sheet);
+    rows.forEach((r,i)=>{ if(i==0) return; if(!r[0]) return; let name=r[0]?r[0].toString():''; let surname=r[1]?r[1].toString().trim():''; let sthan=r[2]?r[2].toString().trim():''; let phone=r[3]?r[3].toString():''; let members=parseInt(r[4])||1; let prog=r[5]?r[5].toString():''; let givenGift=r[6]?r[6].toString().trim():''; let receivedGift=r[7]?r[7].toString().trim():''; let extra={सरनेम:surname||extractSurname(name),स्थान:sthan}; newGuests.push({cat:sheet,name:name,phone:phone,members:members,events:prog?prog.split(',').map(s=>s.trim()).filter(s=>s):["शादी"],extra:extra,givenGift:givenGift,receivedGift:receivedGift}); });
+   });
+   guests=newGuests; nautaniyaGuests=newNautania; categories=newCats; currentCat=categories[0]||"मनासा"; saveAll(); renderCats(); renderFood();
+   document.getElementById('fileName').innerText='✓ हो गया: '+file.name; alert('अपडेट हो गई - Menu भी सेव हो गया: ' + Object.keys(foodMenus).length + ' प्रोग्राम'); showFullView();
+  }catch(err){ alert('Error: '+err.message); }
+ };
+ reader.readAsArrayBuffer(file);
+} 
+  
+function exportCategoryWise(){
+ let wb=XLSX.utils.book_new();
+ categories.forEach(cat=>{
+  let isNau = cat.toLowerCase().includes('नौतानिया') || cat.toLowerCase().includes('nautaniya');
+  let list = isNau? nautaniyaGuests.filter(g=>g.cat==cat) : guests.filter(g=>g.cat==cat);
+  let data=list.map(g=>{ if(isNau) return {नाम:g.name,सरनेम:g.extra?.सरनेम||'',स्थान:g.extra?.स्थान||'',फोन:g.phone,राशि_E:g.amount,प्रोग्राम_F:g.events.join(', '),दिया_G:g.givenGift,मिला_H:g.receivedGift}; else return {नाम:g.name,सरनेम:g.extra?.सरनेम||'',स्थान:g.extra?.स्थान||'',फोन:g.phone,कुल_लोग:g.members,प्रोग्राम:g.events.join(', '),दिया:g.givenGift,मिला:g.receivedGift}; });
+  let ws=XLSX.utils.json_to_sheet(data); XLSX.utils.book_append_sheet(wb,ws,cat);
+ });
+ XLSX.writeFile(wb,"Pal_Original_Buttons.xlsx");
+}
+// ===== नया मल्टीपल डेट-टाइम सिस्टम =====
+function addScheduleRow(){
+  let d=document.getElementById('tempDate').value;
+  let t=document.getElementById('tempTime').value;
+  let n=document.getElementById('tempNote').value || 'कार्य';
+  if(!d){ alert('तारीख चुनो'); return; }
+  tempSchedules.push({date:d, time:t, note:n});
+  renderTempSchedules();
+  document.getElementById('tempDate').value=''; document.getElementById('tempTime').value=''; document.getElementById('tempNote').value='';
+}
+function renderTempSchedules(){
+  document.getElementById('scheduleList').innerHTML = tempSchedules.map((s,i)=>`<div class="small bg-white p-1 rounded mt-1 d-flex justify-content-between"><span>📅 ${s.date} ⏰ ${s.time} - ${s.note}</span><span onclick="tempSchedules.splice(${i},1);renderTempSchedules()" style="cursor:pointer;color:red">✕</span></div>`).join('');
+}
+function addVendor(){
+  let v={
+    id:Date.now(),
+    type:document.getElementById('vType').value,
+    name:document.getElementById('vName').value,
+    phone:document.getElementById('vPhone').value,
+    price:+document.getElementById('vPrice').value||0,
+    adv:+document.getElementById('vAdvance').value||0,
+    status:document.getElementById('vStatus').value,
+    schedules: [...tempSchedules],
+    date: tempSchedules[0]?.date || ''
+  };
+  if(!v.name){ alert('नाम लिखें'); return; }
+  if(!v.schedules.length){ alert('कम से कम 1 तारीख-समय जोड़ें'); return; }
+  vendors.push(v); tempSchedules=[]; renderTempSchedules(); saveAll(); renderVendors();
+  document.getElementById('vName').value=''; document.getElementById('vPhone').value=''; document.getElementById('vPrice').value=''; document.getElementById('vAdvance').value='';
+}
+function sendVendorReminder(v, scheduleIndex){
+  if(!v.phone){ alert('फोन नहीं'); return; }
+  let clean=v.phone.toString().replace(/[^0-9]/g,''); if(clean.length==10) clean='91'+clean;
+  let s = v.schedules[scheduleIndex];
+  if(!s) return;
+  let workDate = new Date(s.date).toLocaleDateString('hi-IN',{day:'numeric',month:'long',year:'numeric'});
+  let msg = `🙏 नमस्ते ${v.name} जी (${v.type})\n\nआपका कार्य याद दिलाना था:\n📅 तारीख: ${workDate}\n⏰ समय: ${s.time || 'समय तय नहीं'}\n🔧 काम: ${s.note}\n💰 कुल: ₹${v.price} | बाकी: ₹${v.price - v.adv}\n\nकृपया समय पर पहुंचें।\n- पाल परिवार, मनासा`;
+  window.open(`https://wa.me/${clean}?text=${encodeURIComponent(msg)}`,'_blank');
+}
+function renderVendors(){
+  let total=0,adv=0;
+  document.getElementById('vendorList').innerHTML=vendors.map((v,i)=>{
+    total+=v.price; adv+=v.adv;
+    // पुराने वेंडर जिनमें schedules नहीं है उनके लिए fallback
+    if(!v.schedules ||!v.schedules.length){ v.schedules = [{date: v.date || '', time: '', note: v.type}]; }
+    let scheduleHtml = v.schedules.map((s,si)=>{
+      return `<div onclick="sendVendorReminder(vendors[${i}],${si})" style="cursor:pointer;background:#e6f9ed;border:1px solid #25D366;border-radius:10px;padding:6px 8px;margin-top:6px;display:flex;justify-content:space-between;align-items:center">
+        <span style="font-size:11px;font-weight:700;color:#111">📅 ${s.date} ⏰ ${s.time} - ${s.note}</span>
+        <span style="background:#25D366;color:#fff;border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center"><i class="bi bi-whatsapp" style="font-size:11px"></i></span>
+      </div>`;
+    }).join('');
+    return `<div class="col-md-6"><div class="card p-2 vendor-card"><b>${v.type} - ${v.name}</b><br><small>💰 ₹${v.price} | एडवांस ₹${v.adv} | 📞 ${v.phone}</small><div class="mt-1">${scheduleHtml}</div><div class="mt-2 d-flex justify-content-between align-items-center"><span class="badge bg-success">${v.status}</span><button onclick="vendors.splice(${i},1);saveAll();renderVendors()" class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button></div></div></div>`;
+  }).join('');
+  document.getElementById('totalCost').innerText=total; document.getElementById('totalAdv').innerText=adv; document.getElementById('totalBal').innerText=total-adv;
+}
+function addFamily(){let m={id:Date.now(),name:document.getElementById('fName').value,role:document.getElementById('fRole').value,tasks:[]}; if(!m.name) return; members.push(m); saveAll(); renderFamily(); document.getElementById('fName').value=document.getElementById('fRole').value='';}
+function renderFamily(){document.getElementById('taskTo').innerHTML=members.map(m=>`<option value="${m.id}">${m.name}</option>`).join(''); document.getElementById('familyList').innerHTML=members.map((m,mi)=> `<div class="col-md-6"><div class="card p-2"><b>${m.name}</b> <small>${m.role}</small><div class="mt-2">${m.tasks.map((t,ti)=>`<div class="form-check"><input class="form-check-input" type="checkbox" ${t.done?'checked':''} onchange="toggleTask(${mi},${ti})"><label class="form-check-label ${t.done?'task-done':''}">${t.text}</label></div>`).join('')||'<small>कोई काम नहीं</small>'}</div></div></div>`).join('');}
+function addTask(){let id=+document.getElementById('taskTo').value; let text=document.getElementById('taskText').value; if(!text) return; let mem=members.find(m=>m.id==id); if(!mem) return; mem.tasks.push({text,done:false}); saveAll(); renderFamily(); document.getElementById('taskText').value='';}
+function toggleTask(mi,ti){members[mi].tasks[ti].done=!members[mi].tasks[ti].done; saveAll(); renderFamily();}
+document.getElementById('excelFile').addEventListener('change', function(){ if(this.files[0]){ document.getElementById('fileName').innerText='✓ चुनी गई: '+this.files[0].name; setTimeout(function(){ importExcel(); },300); } });
+renderCats(); renderFood(); renderVendors(); renderFamily();
+</script>
+</body>
+</html>
