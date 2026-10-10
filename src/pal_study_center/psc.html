@@ -75,7 +75,8 @@ body{background:#fdf6ee;font-family:Poppins,sans-serif}
 <button onclick="showTab('create')" class="btn btn-sm action-btn" id="bC">➕ नया खाता</button>
 </div>
 <div class="scroll-row d-flex gap-2 mt-2" style="border-top:1px dashed rgba(255,255,255,0.35);padding-top:10px">
-<button onclick="showTab('vendor')" class="btn btn-sm action-btn" id="bVendor">🔧 वेंडर</button>
+
+  <button onclick="showTab('vendor')" class="btn btn-sm action-btn" id="bVendor">🔧 वेंडर</button>
 <button onclick="showTab('family')" class="btn btn-sm action-btn" id="bFamily">👨‍👩‍👧 फैमिली</button>
 <button onclick="showTab('dev')" class="btn btn-sm action-btn" id="bDev">🕉️ देव</button>
 <button onclick="showTab('guest')" class="btn btn-sm action-btn" id="bGuest">👥 मेहमान</button>
@@ -439,6 +440,7 @@ function openGuestDetail(id,type){
  let backFunc = type=='nautaniya'? `showTab('home')` : `backToGuestList('${type}')`;
  document.getElementById(boxId).innerHTML=`<div class="ledger-white-card"><div class="ledger-top"><div class="d-flex justify-content-between"><div class="d-flex gap-2"><button onclick="${backFunc}" class="btn btn-sm text-white" style="background:#174a7e;border-radius:20px">⬅️</button><div><b>👤 ${g.name}</b><br><small>${g.extra?.सरनेम||''} | ${g.extra?.स्थान||''} | ${g.phone||''}</small></div></div><button onclick="openSingleAdd(${g.id},'${type}')" class="btn btn-sm text-white" style="background:#0f766e;border-radius:20px">+ ऐड</button></div></div><div class="ledger-scroll"><div class="ledger-main"><div class="ledger-col left-80"><div style="display:flex"><div class="ledger-col" style="border-right:1.5px solid #174a7e"><div class="col-title jama">✅ आया</div><div class="header-row"><div>राशि</div><div>दिनांक</div><div>विवरण</div></div>${ayaRows}</div><div class="ledger-col"><div class="col-title gaya">❌ दिया</div><div class="header-row"><div>राशि</div><div>दिनांक</div><div>विवरण</div></div>${diyaRows}</div></div></div><div class="ledger-col right-20"><div class="col-title" style="background:#eff6ff;color:#1e40af">🎉 प्रोग्राम</div><div style="padding:8px">${progList}</div></div></div></div></div>`;
 }
+  
 function backToGuestList(type){
  if(type=='nautaniya'){showTab('home');}
  else{document.getElementById('guestMainFilter').style.display='block';document.getElementById('guestSubFilter').style.display='block';document.getElementById('guestListWrap').style.display='block';document.getElementById('guestDetailBox').style.display='none';document.getElementById('bhojanProgList').style.display='none';document.getElementById('menuDetailBox').style.display='none';renderGuestCards();}
@@ -599,5 +601,4 @@ renderHome();
 </script>
 </body>
 </html>
-
 
