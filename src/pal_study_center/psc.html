@@ -407,23 +407,75 @@ function onCTypeChange(){
 
 function onNatureChange(){
  let nat=document.getElementById('vNature').value;
- let cash=khatas.filter(k=>k.type=='नकद'), bank=khatas.filter(k=>k.type=='बैंक'), all=khatas;
- function opt(l){return l.map(k=>`<option value="${k.id}">${k.name} (${k.type})</option>`).join('');}
+ let cash=khatas.filter(k=>k.type=='नकद');
+ let bank=khatas.filter(k=>k.type=='बैंक');
+ let all=khatas;
+ 
+ function opt(l){
+   if(l.length==0) return '<option value="">कोई खाता नहीं</option>';
+   return l.map(k=>`<option value="${k.id}">${k.name} (${k.type})</option>`).join('');
+ }
+ 
  let from=[],to=[];
- if(nat=='aay'){from=all.filter(k=>k.type=='आय');to=[...cash,...bank];}
- else if(nat=='kharch'){from=[...cash,...bank];to=all.filter(k=>k.type=='व्यय');}
- else if(nat=='udhar_diya'){from=[...cash,...bank];to=all.filter(k=>k.type=='उधारी दी');}
- else if(nat=='udhar_vapas_aaya'){from=all.filter(k=>k.type=='उधारी दी');to=[...cash,...bank];}
- else if(nat=='udhar_liya'){from=all.filter(k=>k.type=='उधारी ली');to=[...cash,...bank];}
- else if(nat=='udhar_vapas_diya'){from=[...cash,...bank];to=all.filter(k=>k.type=='उधारी ली');}
- else if(nat=='asset_kharida'){from=[...cash,...bank];to=all.filter(k=>k.type=='एसेट');}
- else if(nat=='asset_becha'){from=all.filter(k=>k.type=='एसेट');to=[...cash,...bank];}
- else if(nat=='bank_to_cash'){from=bank;to=cash;}
- else if(nat=='cash_to_bank'){from=cash;to=bank;}
- else if(nat=='family_diya'){from=[...cash,...bank];to=all.filter(k=>k.type=='परिवार');}
- else if(nat=='family_liya'){from=all.filter(k=>k.type=='परिवार');to=[...cash,...bank];}
- else if(nat=='loan_emi'){from=[...cash,...bank];to=all.filter(k=>k.type=='लोन');}
- else{from=all;to=all;}
+
+ if(nat=='aay'){
+   from=all.filter(k=>k.type=='आय');
+   to=[...cash,...bank];
+ }
+ else if(nat=='kharch'){
+   from=[...cash,...bank];
+   to=all.filter(k=>k.type=='व्यय');
+ }
+ else if(nat=='udhar_diya'){
+   from=[...cash,...bank];
+   to=all.filter(k=>k.type=='उधारी दी');
+ }
+ else if(nat=='udhar_vapas_aaya'){
+   from=all.filter(k=>k.type=='उधारी दी');
+   to=[...cash,...bank];
+ }
+ else if(nat=='udhar_liya'){
+   from=all.filter(k=>k.type=='उधारी ली');
+   to=[...cash,...bank];
+ }
+ else if(nat=='udhar_vapas_diya'){
+   from=[...cash,...bank];
+   to=all.filter(k=>k.type=='उधारी ली');
+ }
+ else if(nat=='asset_kharida'){
+   from=[...cash,...bank];
+   to=all.filter(k=>k.type=='एसेट');
+ }
+ else if(nat=='asset_becha'){
+   from=all.filter(k=>k.type=='एसेट');
+   to=[...cash,...bank];
+ }
+ else if(nat=='bank_to_cash'){
+   from=bank;
+   to=cash;
+ }
+ else if(nat=='cash_to_bank'){
+   from=cash;
+   to=bank;
+ }
+ else if(nat=='family_diya'){
+   from=[...cash,...bank];
+   to=all.filter(k=>k.type=='परिवार');
+ }
+ else if(nat=='family_liya'){
+   from=all.filter(k=>k.type=='परिवार');
+   to=[...cash,...bank];
+ }
+ else if(nat=='loan_emi'){
+   from=[...cash,...bank];
+   to=all.filter(k=>k.type=='लोन');
+ }
+ else{
+   document.getElementById('vFrom').innerHTML='<option value="">-- पहले प्रकार चुनें --</option>';
+   document.getElementById('vTo').innerHTML='<option value="">-- पहले प्रकार चुनें --</option>';
+   return;
+ }
+
  document.getElementById('vFrom').innerHTML=opt(from);
  document.getElementById('vTo').innerHTML=opt(to);
 }
