@@ -993,13 +993,14 @@ function openMenuCard(prog){
  let info=menuInfo[prog]||{date:'',time:''};
  document.getElementById('menuDetailBox').innerHTML=`<div class="ledger-white-card"><div class="ledger-top"><div class="d-flex justify-content-between align-items-center"><div class="d-flex align-items-center gap-2"><button onclick="openBhojanProgList()" class="btn btn-sm" style="background:#fff;color:#174a7e!important;border-radius:20px;font-weight:800">⬅️ वापस</button><b>🎉 ${prog}</b></div><span style="background:#fff;color:#174a7e;border-radius:12px;padding:4px 10px;font-size:11px;font-weight:800">📅 ${info.date||'-'} ⏰ ${info.time||'-'}</span></div></div><div style="display:flex;min-height:260px"><div style="flex:0 0 50%;border-right:2px solid #174a7e;background:#fff;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12px;gap:8px"><div style="background:#f0f7ff;border-radius:12px;padding:10px;width:90%;text-align:center;border:1.5px solid #dbeafe"><div style="font-size:11px;color:#174a7e;font-weight:800">📅 दिन</div><div style="font-size:13px;font-weight:900">${info.date||'--'}</div><div style="font-size:11px;color:#174a7e;font-weight:800;margin-top:6px">⏰ समय</div><div style="font-size:13px;font-weight:900">${info.time||'--'}</div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;width:90%"><div style="background:#ecfdf5;border-radius:12px;padding:8px;text-align:center"><div style="font-size:10px;color:#0f766e;font-weight:800">👨‍👩‍👧 परिवार</div><div style="font-size:20px;font-weight:900">${families.length}</div><small style="font-size:10px">${list.length} लिस्ट</small></div><div style="background:#fffbeb;border-radius:12px;padding:8px;text-align:center"><div style="font-size:10px;color:#b45309;font-weight:800">👥 लोग</div><div style="font-size:20px;font-weight:900">${totalPeople}</div><small style="font-size:10px">कुल</small></div></div></div><div style="flex:0 0 50%;background:#fdf6ee;padding:10px"><div class="col-title" style="background:#eff6ff;color:#1e40af;border-radius:8px;margin-bottom:8px">🍛 मेनू - ${menus[prog].length} आइटम</div><div>${menus[prog].map(m=>`<div class="menu-item"><span>🍽️ ${m.name}</span></div>`).join('')||'<small>Excel में Menu शीट में नहीं मिला</small>'}</div></div></div></div>`;
 }
+  
 function importExcel(){
  let file=document.getElementById('excelFile').files[0]; if(!file) return;
  document.getElementById('fileName').innerText=file.name+' पढ़ रहा...';
  let reader=new FileReader();
  reader.onload=function(e){
   let wb=XLSX.read(new Uint8Array(e.target.result),{type:'array'});
-  let ng=[],nn=[],nc=[],idc=1; let newMenus={},newMenuInfo={};
+  let ng=[],nn=[],nc=[],idc=Date.now(); let newMenus={},newMenuInfo={};
   wb.SheetNames.forEach(sh=>{
    let rows=XLSX.utils.sheet_to_json(wb.Sheets[sh],{header:1}); if(!rows.length) return;
    if(sh.toLowerCase().trim()=='menu'){
@@ -1009,13 +1010,32 @@ function importExcel(){
    if(!nc.includes(sh)) nc.push(sh);
    rows.forEach((r,i)=>{if(i==0||!r[0])return;let name=r[0].toString().trim();let obj={id:idc++,cat:sh,name:name,extra:{सरनेम:r[1]||'',स्थान:r[2]||''},phone:r[3]||'',members:parseInt(r[4])||1,events:r[5]?r[5].toString().split(',').map(s=>s.trim()):["शादी"],ayaList:[],diyaList:[]};if(sh.toLowerCase().includes('नौतानिया'))nn.push(obj);else ng.push(obj);});
   });
-  guests=ng; nautaniyaGuests=nn; categories=nc; currentCat=categories[0]; menus=newMenus; menuInfo=newMenuInfo;
+
+  // FIX: पुराने डाटा को हटाना नहीं, जोड़ना है
+  // नाम से चेक करके डुप्लीकेट रोकेंगे
+  ng.forEach(newG=>{
+    let exists = guests.some(old=> old.name.trim().toLowerCase() == newG.name.trim().toLowerCase() && old.cat == newG.cat);
+    if(!exists) guests.push(newG);
+  });
+  nn.forEach(newG=>{
+    let exists = nautaniyaGuests.some(old=> old.name.trim().toLowerCase() == newG.name.trim().toLowerCase());
+    if(!exists) nautaniyaGuests.push(newG);
+  });
+
+  categories=[...new Set([...categories,...nc])];
+  if(!currentCat) currentCat=categories[0];
+  Object.keys(newMenus).forEach(k=>{ menus[k]=newMenus[k]; });
+  Object.keys(newMenuInfo).forEach(k=>{ menuInfo[k]=newMenuInfo[k]; });
+
   savePrabandhan();
-  document.getElementById('fileName').innerText=`${guests.length} मेहमान, ${nn.length} नौटानिया, ${Object.keys(newMenus).length} मेनू प्रोग्राम`;
+  localStorage.setItem('palGuests_BC_Original', JSON.stringify(guests));
+
+  document.getElementById('fileName').innerText=`${guests.length} कुल मेहमान (Add वाले सुरक्षित हैं)`;
   showTab('guest');
  };
  reader.readAsArrayBuffer(file);
 }
+  
 function downloadGuestTemplate(){
  let ws=XLSX.utils.aoa_to_sheet([["Name","सरनेम","स्थान","Phone","Members","Events"],["राम यादव","यादव","मनासा","99999",4,"शादी,हल्दी"]]);
  let ws2=XLSX.utils.aoa_to_sheet([["Program","Dish","Date","Time"],["शादी","पनीर","12-05-2026","7 PM"],["शादी","दाल","12-05-2026","7 PM"]]);
