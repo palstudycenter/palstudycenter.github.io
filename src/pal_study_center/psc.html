@@ -51,6 +51,7 @@ body{background:#fdf6ee;font-family:Poppins,sans-serif}
   gap:6px!important;
   grid-template-columns:1fr 1fr 1fr!important;
 } 
+  
 </style>
 </head>
 <body>
@@ -151,34 +152,39 @@ ______________________________________________
     </div>
   </div>
 
-  <!-- 1. STUDENTS TAB -->
-  <div id="admin-tab-students" class="card p-3 mt-2" style="border:1.5px solid #174a7e">
+
+<!-- 1. STUDENTS TAB -->
+  <div id="admin-tab-students" class="card p-3 mt-2" style="border:none;box-shadow:none">
     
     <input id="adminSearch" oninput="filterAdminStudents()" placeholder="🔍 नाम से सर्च..." class="form-control form-control-sm mt-2">
     
     <small style="color:#666; margin-top:8px; display:block">Board Filter</small>
-    <div class="filter-grid mt-1" style="grid-template-columns:1fr 1fr 1fr">
-      <button onclick="setBoardFilter(this,'MP Board (Hindi Medium)')" class="filter-btn" style="height:44px">HINDI</button>
-      <button onclick="setBoardFilter(this,'MP Board (English Medium)')" class="filter-btn" style="height:44px">ENGLISH</button>
-      <button onclick="setBoardFilter(this,'CBSE')" class="filter-btn" style="height:44px">CBSE</button>
+    <div class="filter-grid mt-1" style="grid-template-columns:1fr 1fr 1fr; gap:6px">
+      <button onclick="setBoardFilter(this,'MP Board (Hindi Medium)')" class="filter-btn" style="height:34px;font-size:14px;font-weight:600">HINDI</button>
+      <button onclick="setBoardFilter(this,'MP Board (English Medium)')" class="filter-btn" style="height:34px;font-size:14px;font-weight:600">ENGLISH</button>
+      <button onclick="setBoardFilter(this,'CBSE')" class="filter-btn" style="height:34px;font-size:14px;font-weight:600">CBSE</button>
     </div>
 
     <small style="color:#666; margin-top:8px; display:block">Class Filter</small>
-    <div class="filter-grid mt-1" style="grid-template-columns:1fr 1fr 1fr 1fr">
-      <button onclick="setClassFilter(this,'Class 9th')" class="filter-btn" style="height:44px">9th</button>
-      <button onclick="setClassFilter(this,'Class 10th')" class="filter-btn" style="height:44px">10th</button>
-      <button onclick="setClassFilter(this,'Class 11th')" class="filter-btn" style="height:44px">11th</button>
-      <button onclick="setClassFilter(this,'Class 12th')" class="filter-btn" style="height:44px">12th</button>
+    <div class="filter-grid mt-1" style="grid-template-columns:1fr 1fr 1fr 1fr; gap:6px">
+      <button onclick="setClassFilter(this,'Class 9th')" class="filter-btn" style="height:34px;font-size:14px;font-weight:600">9th</button>
+      <button onclick="setClassFilter(this,'Class 10th')" class="filter-btn" style="height:34px;font-size:14px;font-weight:600">10th</button>
+      <button onclick="setClassFilter(this,'Class 11th')" class="filter-btn" style="height:34px;font-size:14px;font-weight:600">11th</button>
+      <button onclick="setClassFilter(this,'Class 12th')" class="filter-btn" style="height:34px;font-size:14px;font-weight:600">12th</button>
     </div>
 
     <small style="color:#666; margin-top:8px; display:block">Status Filter</small>
-    <div class="filter-grid mt-1" style="grid-template-columns:1fr 1fr">
-      <button id="btnActive" onclick="setAdminMode('active')" class="filter-btn active" style="height:44px">Active (<span id="adminCount">0</span>)</button>
-      <button id="btnInactive" onclick="setAdminMode('inactive')" class="filter-btn" style="height:44px">Inactive</button>
+    <div class="filter-grid mt-1" style="grid-template-columns:1fr 1fr; gap:6px">
+      <button id="btnActive" onclick="setAdminMode('active')" class="filter-btn active" style="height:40px;font-size:14px;font-weight:600;line-height:1.2;display:flex;flex-direction:column;align-items:center;justify-content:center">
+        <span>Active</span>
+        <span id="adminCount" style="font-size:11px">0</span>
+      </button>
+      <button id="btnInactive" onclick="setAdminMode('inactive')" class="filter-btn" style="height:40px;font-size:14px;font-weight:600">Inactive</button>
     </div>
     <div id="adminStudentList" class="mt-2" style="max-height:40vh;overflow:auto"></div>
   </div>
 
+  
   <!-- 2. TESTS TAB -->
   <div id="admin-tab-tests" style="display:none" class="card p-2 mt-2">
     <small style="color:#666; margin-bottom:4px; display:block">Test Filter</small>
