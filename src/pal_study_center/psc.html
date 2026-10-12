@@ -388,13 +388,17 @@ function filterKhata(el,f){
 }
   
  
-
-  
 function renderAll(){
  let list=khatas.filter(k=>k.type==currentFilter);
  let html=list.map(k=>{
   let b=getBal(k.id);
-  return `<div class="khata-btn" onclick="openDetail(${k.id})"><div><b style="color:#174a7e">${k.name}</b><br><small>${k.type}</small></div><span class="badge" style="background:#174a7e">₹${b.display}</span></div>`;
+  return `<div class="khata-btn" style="display:flex;justify-content:space-between;align-items:center;">
+    <div onclick="openDetail(${k.id})" style="flex:1;cursor:pointer"><div><b style="color:#174a7e">${k.name}</b><br><small>${k.type}</small></div></div>
+    <div style="display:flex;align-items:center;gap:8px">
+      <span class="badge" style="background:#174a7e">₹${b.display}</span>
+      <button onclick="event.stopPropagation(); deleteKhata('${k.id}')" class="btn btn-sm btn-outline-danger">हटाएं</button>
+    </div>
+  </div>`;
  }).join('')||'<small>इस प्रकार में कोई खाता नहीं</small>';
  document.getElementById('allList').innerHTML=`<h6 style="color:#174a7e">${currentFilter} (${list.length})</h6>`+html;
  ["नकद","बैंक","आय","व्यय","उधारी दी","उधारी ली","एसेट","परिवार","लोन"].forEach(t=>{
@@ -403,6 +407,17 @@ function renderAll(){
  });
 }
 
+function deleteKhata(id){
+ let used = vouchers.some(v=>v.from==id || v.to==id);
+ if(used){ alert('ये खाता लेन-देन में इस्तेमाल हुआ है, पहले लेन-देन हटाओ'); return; }
+ if(!confirm('खाता हटाना है?')) return;
+ khatas = khatas.filter(k=>String(k.id)!=String(id));
+ save(); renderAll(); renderVoucher();
+}
+  
+
+
+   
 function openDetail(id){
  document.getElementById('filterWrap').style.display='none';
  document.getElementById('listWrap').style.display='none';
@@ -1096,7 +1111,22 @@ function calcPL(){
    </div>`;
 }
 
-  
+// पुराने सिलेक्टर को खत्म करने का जुगाड़
+let oldRenderAll = renderAll;
+renderAll = function(){
+  oldRenderAll();
+  // renderAll के बाद फिर से सभी खाते भर दो
+  let fromSel = document.getElementById('vFrom');
+  let toSel = document.getElementById('vTo');
+  if(fromSel && toSel){
+    let opts = '<option value="">-- खाता चुनें --</option>';
+    khatas.forEach(k=>{
+      opts += `<option value="${k.id}">${k.name} (${k.group})</option>`;
+    });
+    fromSel.innerHTML = opts;
+    toSel.innerHTML = opts;
+  }
+  }  
 </script>
 
   <div id="plModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:9999;align-items:center;justify-content:center">
