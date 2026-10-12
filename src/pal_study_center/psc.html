@@ -366,38 +366,9 @@ function showTab(t){
  }
   }
 
-  
- function getAllAccounts(){
-  let all = [];
-  if(typeof shubhLabh!== 'undefined') Object.keys(shubhLabh).forEach(k=> all.push({name:k, group:'शुभ-लाभ'}));
-  if(typeof kharchaData!== 'undefined') Object.keys(kharchaData).forEach(k=> all.push({name:k, group:'खर्चा'}));
-  if(typeof lenDenData!== 'undefined') Object.keys(lenDenData).forEach(k=> all.push({name:k, group:'लेन-देन'}));
-  if(typeof ledgerAccounts!== 'undefined') Object.keys(ledgerAccounts).forEach(k=> all.push({name:k, group: ledgerAccounts[k].group || 'अन्य'}));
-  if(typeof ledgerData!== 'undefined'){
-    Object.keys(ledgerData).forEach(k=> all.push({name:k, group: ledgerData[k].group || 'General'}));
-  }
-  let unique = []; let seen = new Set();
-  all.forEach(a=>{ if(!seen.has(a.name)){ seen.add(a.name); unique.push(a); } });
-  return unique;
-}
-
-function renderFromToDropdown(){
-  let accounts = getAllAccounts();
-  let fromSel = document.getElementById('txnFrom');
-  let toSel = document.getElementById('txnTo');
-  if(!fromSel ||!toSel) return;
-  let options = '<option value="">-- खाता चुनें --</option>';
-  accounts.forEach(acc=>{
-    options += `<option value="${acc.name}">${acc.name} (${acc.group})</option>`;
-  });
-  fromSel.innerHTML = options;
-  toSel.innerHTML = options;
-}
-
-function openLedger(sub){
+  function openLedger(sub){
  ['khata','voucher','create'].forEach(x=>{
-  let el = document.getElementById('tab-'+x);
-  if(el) el.style.display='none';
+  document.getElementById('tab-'+x).style.display='none';
  });
  document.getElementById('tab-'+sub).style.display='block';
  if(sub=='khata'){
@@ -406,20 +377,17 @@ function openLedger(sub){
   document.getElementById('detailBox').style.display='none';
   renderAll();
  }
- if(sub=='voucher'){
-  renderVoucher();
-  onNatureChange();
-  renderFromToDropdown();
- }
+ if(sub=='voucher'){renderVoucher();onNatureChange();}
 }
 
 function filterKhata(el,f){
  currentFilter=f;
- document.querySelectorAll('#filterBar.filter-btn').forEach(b=>b.classList.remove('active'));
+ document.querySelectorAll('#filterBar .filter-btn').forEach(b=>b.classList.remove('active'));
  if(el) el.classList.add('active');
  renderAll();
-   } 
-
+}
+  
+ 
 
   
 function renderAll(){
@@ -564,6 +532,18 @@ function onNatureChange(){
 
 function renderVoucher(){
  document.getElementById('vDate').valueAsDate=new Date();
+
+ let fromSel = document.getElementById('vFrom');
+ let toSel = document.getElementById('vTo');
+ if(fromSel && toSel){
+   let opts = '<option value="">-- खाता चुनें --</option>';
+   khatas.forEach(k=>{
+     opts += `<option value="${k.id}">${k.name} (${k.group})</option>`;
+   });
+   fromSel.innerHTML = opts;
+   toSel.innerHTML = opts;
+ }
+
  let hist=vouchers.slice().reverse().slice(0,10).map(v=>{
   let f=khatas.find(x=>x.id==v.from)?.name||'?', t=khatas.find(x=>x.id==v.to)?.name||'?';
   return `<div class="card p-2 mb-1 small"><b>₹${v.amt}</b> ${f} → ${t} | ${v.date} | ${v.nar||''}</div>`;
@@ -585,7 +565,7 @@ function createKhata(){
 }
 
 function saveVoucher(){
- let v={id:Date.now(),date:document.getElementById('vDate').value,amt:+document.getElementById('vAmt').value,from:+document.getElementById('vFrom').value,to:+document.getElementById('vTo').value,nar:document.getElementById('vNar').value.trim()};
+ let v={id:Date.now(),date:document.getElementById('vDate').value,amt:+document.getElementById('vAmt').value,from:document.getElementById('vFrom').value,to:document.getElementById('vTo').value,nar:document.getElementById('vNar').value.trim()};
  if(!v.date || !v.amt || !v.from || !v.to){alert('सब भरें');return;}
  vouchers.push(v);
  save();
