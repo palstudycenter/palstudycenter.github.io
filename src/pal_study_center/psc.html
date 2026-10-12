@@ -530,9 +530,9 @@ function onNatureChange(){
  document.getElementById('vTo').innerHTML=opt(to);
 }
 
-
 function renderVoucher(){
  document.getElementById('vDate').valueAsDate=new Date();
+
  let fromSel = document.getElementById('vFrom');
  let toSel = document.getElementById('vTo');
  if(fromSel && toSel){
@@ -543,13 +543,14 @@ function renderVoucher(){
    fromSel.innerHTML = opts;
    toSel.innerHTML = opts;
  }
+
  let hist=vouchers.slice().reverse().slice(0,10).map(v=>{
   let f=khatas.find(x=>x.id==v.from)?.name||'?', t=khatas.find(x=>x.id==v.to)?.name||'?';
   return `<div class="card p-2 mb-1 small"><b>₹${v.amt}</b> ${f} → ${t} | ${v.date} | ${v.nar||''}</div>`;
  }).join('')||'<small>कोई लेन-देन नहीं</small>';
  document.getElementById('vHist').innerHTML=`<h6>पिछले 10 लेन-देन</h6>`+hist;
 }
-  
+
 function createKhata(){
  let k={id:Date.now(),type:document.getElementById('cType').value,name:document.getElementById('cName').value.trim(),op:+document.getElementById('cOp').value||0,side:document.getElementById('cSide').value};
  if(!k.name){alert('नाम लिखें');return;}
@@ -565,15 +566,22 @@ function createKhata(){
 
 
 function saveVoucher(){
- let v={id:Date.now(),date:document.getElementById('vDate').value,amt:+document.getElementById('vAmt').value,from:document.getElementById('vFrom').value,to:document.getElementById('vTo').value,nar:document.getElementById('vNar').value.trim()};
+ let v={
+   id:Date.now(),
+   date:document.getElementById('vDate').value,
+   amt:+document.getElementById('vAmt').value,
+   from:document.getElementById('vFrom').value, // + हटाया
+   to:document.getElementById('vTo').value,     // + हटाया
+   nar:document.getElementById('vNar').value.trim()
+ };
  if(!v.date || !v.amt || !v.from || !v.to){alert('सब भरें');return;}
  vouchers.push(v);
  save();
  renderVoucher();
  renderAll();
- alert('लेन-देन सेव हो गया - अब खाताबही में जाकर देखो एंट्री आ गई है');
+ alert('✅ Direct Transfer हो गया');
  document.getElementById('vAmt').value='';document.getElementById('vNar').value='';
-    }
+}
   
 function toggleTool(t){
  let c=document.getElementById('box-calc'), cal=document.getElementById('box-cal');
