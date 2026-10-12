@@ -1072,6 +1072,35 @@ function calcPL(){
      <div class="mt-2 p-2 text-center" style="background:${color};color:white;border-radius:20px;font-weight:800">${profit>=0?'✅ '+year+' में लाभ हुआ है':'⚠️ '+year+' में हानि हुई है'}</div>
    </div>`;
 }
+
+
+
+
+
+
+
+  // Step 2 FINAL FIX - सभी खाते कनेक्ट
+setTimeout(()=>{
+  function getAllLedgerAccounts(){
+    let all = new Set();
+    if(window.guests) guests.forEach(g=> all.add(g.name));
+    if(window.ledgerData) Object.keys(ledgerData).forEach(k=> all.add(k));
+    if(window.shubhLabh) Object.keys(shubhLabh).forEach(k=> all.add(k));
+    if(window.accounts) Object.keys(accounts).forEach(k=> all.add(k));
+    // अगर आपके 4 ग्रुप हैं तो
+    document.querySelectorAll('[id*=From] select, [id*=To] select, #txnFrom, #txnTo').forEach(()=>{});
+    return Array.from(all);
+  }
+
+  let acc = getAllLedgerAccounts();
+  let html = '<option value="">खाता चुनें</option>' + acc.map(a=> `<option value="${a}">${a}</option>`).join('');
+
+  if(document.getElementById('txnFrom')) document.getElementById('txnFrom').innerHTML = html;
+  if(document.getElementById('txnTo')) document.getElementById('txnTo').innerHTML = html;
+  
+  console.log('Ledger fix applied - total accounts:', acc.length);
+}, 1000);
+  
 </script>
 
   <div id="plModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:9999;align-items:center;justify-content:center">
