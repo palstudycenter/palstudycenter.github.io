@@ -94,6 +94,7 @@ ______________________________________________
       <div class="col-6"><button onclick="openLedger('create')" class="home-tool-btn" id="bCreate">➕ नया खाता</button></div>
       <div class="col-6"><button onclick="openLedger('voucher')" class="home-tool-btn" id="bVoucher">💸 लेन-देन</button></div> 
       <div class="col-6"><button onclick="openLedger('khata')" class="home-tool-btn" id="bKhata">📖 खाताबही</button></div>
+     
       <div class="col-6"><button onclick="openAnnualPL()" class="home-tool-btn" id="bPL">📊 लाभ-हानि</button></div>
     </div>
   </div>
@@ -1111,22 +1112,7 @@ function calcPL(){
    </div>`;
 }
 
-// पुराने सिलेक्टर को खत्म करने का जुगाड़
-let oldRenderAll = renderAll;
-renderAll = function(){
-  oldRenderAll();
-  // renderAll के बाद फिर से सभी खाते भर दो
-  let fromSel = document.getElementById('vFrom');
-  let toSel = document.getElementById('vTo');
-  if(fromSel && toSel){
-    let opts = '<option value="">-- खाता चुनें --</option>';
-    khatas.forEach(k=>{
-      opts += `<option value="${k.id}">${k.name} (${k.group})</option>`;
-    });
-    fromSel.innerHTML = opts;
-    toSel.innerHTML = opts;
-  }
-  }  
+
 </script>
 
   <div id="plModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:9999;align-items:center;justify-content:center">

@@ -1,395 +1,248 @@
 <!DOCTYPE html>
 <html lang="hi">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Profile - Pal Study Center</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Profile</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Profile CSS -->
-    <link href="profile.css" rel="stylesheet">
+  <style>
+body{background:#fdf6ee;font-family:Poppins,sans-serif}
+.header{background:linear-gradient(135deg,#174a7e 0%,#1e6fa5 100%);color:#fff;padding:10px 12px 12px;border-radius:0 0 18px 18px}
+.card{border-radius:15px;border:none;box-shadow:0 6px 18px rgba(0,0,0,.06)}
+.filter-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px}
+.action-btn{background:rgba(255,255,255,0.18)!important;color:#fff!important;border:1.5px solid rgba(255,255,255,.45)!important;border-radius:22px!important;font-weight:600!important;padding:5px 10px!important;font-size:11px;backdrop-filter:blur(6px)}
+.glass-btn{background:rgba(255,255,255,0.18)!important;color:#fff!important;border:1.5px solid rgba(255,255,255,.45)!important;border-radius:18px!important;font-weight:700!important;min-height:44px!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;font-size:10px;backdrop-filter:blur(8px)}
+.glass-btn small{font-size:8px;opacity:.9}
+.ledger-white-card{background:#fff;border-radius:16px;border:1px solid #dbeafe;overflow:hidden}
+.ledger-top{background:#f0f7ff;padding:8px 10px;border-bottom:1.5px solid #dbeafe;font-weight:700;color:#174a7e;font-size:12px}
+.ledger-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-behavior:smooth}
+.ledger-main{display:flex;min-width:720px}
+.ledger-col{flex:1;min-width:350px}
+.ledger-col.left{border-right:2px solid #174a7e}
+.col-title{text-align:center;padding:6px;font-weight:800;font-size:10px}
+.col-title.jama{background:#ecfdf5;color:#0f766e}
+.col-title.gaya{background:#fffbeb;color:#b45309}
+
+.header-row{display:grid;grid-template-columns:80px 90px 60px;background:#f0f7ff;font-size:9px;font-weight:800;border-bottom:1px solid #dbeafe}
+.header-row div{padding:5px;border-right:1px solid #e6eef7;text-align:center;display:flex;align-items:center;justify-content:center;white-space:nowrap}
+.entry-grid{display:grid;grid-template-columns:80px 90px 60px;border-bottom:1px dashed #e5e7eb;font-size:10px}
+.entry-grid div{padding:6px;border-right:1px solid #f3f4f6;min-height:32px;display:flex;align-items:center;justify-content:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.entry-grid div:nth-child(2){color:#174a7e;background:#f0f7ff;font-size:9.5px}
+.entry-grid div:first-child{color:#0f766e;font-weight:800;font-size:11px}
+    
+    /* SMOOTH SUBJECT BUTTONS - PAGE LOOK KE HISAB SE */
+#subjectBox{padding:6px;display:flex;flex-direction:column;gap:8px;max-height:420px;overflow-y:auto;scroll-behavior:smooth}
+
+#subjectBox .vendor-card{
+  background:linear-gradient(135deg,#174a7e 0%,#1e6fa5 100%)!important;
+  border-radius:12px!important;
+  padding:10px 14px!important;
+  box-shadow:0 4px 12px rgba(23,74,126,.25);
+  display:flex;justify-content:space-between;align-items:center;
+  margin:6px;transition:.25s;
+  border:0!important;
+}
+#subjectBox .vendor-card:active{transform:scale(.97)}
+#subjectBox .vendor-card span{color:#fff!important;font-weight:700!important;font-size:11.5px!important}
+#subjectBox .vendor-card span i{color:#FDE68A!important}
+    
+    .btn-toggle-switch{border:none;border-radius:20px;padding:5px 12px;font-size:10px;font-weight:800;color:#fff;min-width:50px;transition:.3s}
+.btn-toggle-switch.on{background:linear-gradient(135deg,#22c55e,#16a34a)}
+.btn-toggle-switch.off{background:linear-gradient(135deg,#e5e7eb,#cbd5e1);color:#64748b!important}
+</style>
 </head>
-
 <body>
-
-    <!-- Mobile Header with Back Button -->
-    <div class="mobile-header">
-        <button class="back-to-dash" onclick="goBack()">
-            <i class="bi bi-arrow-left"></i>
-        </button>
-        <div class="mobile-header-title">पाल <span>ERP</span></div>
-        <div style="width: 24px;"></div>
+<div class="header">
+  <div class="d-flex justify-content-between align-items-center">
+    <button onclick="history.back()" class="action-btn">⬅️</button>
+    <div style="font-weight:800;font-size:10px;color:#FDE68A">॥ श्री गणेशाय नमः ॥</div>
+    <span id="dashStatus" class="badge bg-light text-dark" style="font-size:9px">ACTIVE</span>
+  </div>
+  <div class="d-flex align-items-center gap-2 mt-2">
+    <img id="pImg" style="width:42px;height:42px;border-radius:50%;border:1.5px solid #fff" src="https://via.placeholder.com/100">
+    <div style="line-height:1.1">
+      <div id="pName" style="font-weight:800;font-size:13px">Name</div>
+      <small id="pPhone" style="color:#FDE68A;font-size:10px;font-weight:600"></small><br>
+      <small id="pBoard" style="font-size:9px;opacity:.8"></small> <small id="pClass" style="font-size:9px;opacity:.8"></small>
     </div>
+  </div>
+  <div class="filter-grid mt-2">
+    <button onclick="sendFeeReminder()" class="glass-btn">💰 फीस रिमाइंडर<small>WhatsApp</small></button>
+    <button onclick="sendLeaveNotice()" class="glass-btn">🏖️ अवकाश<small>Auto Msg</small></button>
+    <button onclick="openAddFee()" class="glass-btn">➕ Add<small>Fees</small></button>
+  </div>
+</div>
 
-    <!-- Profile Container -->
-    <div class="profile-container">
-        <!-- Profile Header Card -->
-        <div class="profile-header-card">
-            <div class="profile-header-flex">
-                <div class="profile-info-block">
-                    <div class="profile-big-avatar" id="profileAvatar">N</div>
-                    <div class="profile-text-details">
-                        <h2 id="profileName">Student Name</h2>
-                        <p>
-                            <i class="bi bi-mortarboard-fill"></i>
-                            <span id="profileClass">Class</span> | <span id="profileBoard">Board</span>
-                        </p>
-                        <p>
-                            <i class="bi bi-telephone-fill"></i>
-                            <span id="profilePhone">+91 XXXX</span>
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Study Access Control -->
-                <div class="access-control">
-                    <span class="access-label">Study Access:</span>
-                    <button class="btn-toggle-switch on" id="accessToggle" onclick="toggleStudentAccess()">
-                        <i class="bi bi-check-lg"></i> ON
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Access Banner -->
-        <div class="access-banner enabled" id="accessBanner">
-            <i class="bi bi-check-circle-fill"></i>
-            <span id="bannerText">✅ Notes & Study Material Access is Active for this student</span>
-        </div>
-
-        <!-- Monthly Fee Record Section -->
-        <div class="glass-card">
-            <h4>
-                <i class="bi bi-currency-rupee" style="color: var(--primary-color);"></i>
-                💰 Monthly Fee Record
-            </h4>
-            <p style="color: #94a3b8; font-size: 13px; margin-bottom: 20px;">फ़ीस बदलने पर फ़ीस स्टेटस ऑटोमेटिकली स्टूडेंट पोर्टल पर अपडेट हो जाएगी।</p>
-            <div class="month-grid" id="feeGrid"></div>
-        </div>
-
-        <!-- Active Courses Section -->
-        <div class="glass-card">
-            <h4>
-                <i class="bi bi-journal-check" style="color: var(--primary-color);"></i>
-                📘 Active Courses
-            </h4>
-            <div class="courses-grid" id="coursesGrid"></div>
-        </div>
-
-        <!-- Back Button -->
-        <button class="back-btn" onclick="goBack()">
-            <i class="bi bi-arrow-left"></i> Back to Student Directory
-        </button>
-
+<div class="container mt-2" style="max-width:600px">
+  <div id="addFeeBox" style="display:none" class="card p-2 mb-2">
+    <div class="row g-2">
+      <div class="col-6"><input id="feeDate" type="date" class="form-control form-control-sm"></div>
+      <div class="col-6">
+        <select id="feeMonth" class="form-select form-select-sm">
+          <option value="">माह चुनें</option>
+          <option>जनवरी</option><option>फरवरी</option><option>मार्च</option><option>अप्रैल</option><option>मई</option><option>जून</option>
+          <option>जुलाई</option><option>अगस्त</option><option>सितंबर</option><option>अक्टूबर</option><option>नवंबर</option><option>दिसंबर</option>
+        </select>
+      </div>
+      <div class="col-6"><input id="feeAmount" type="number" class="form-control form-control-sm" placeholder="₹"></div>
+      <div class="col-6"><select id="feeMode" class="form-select form-select-sm"><option>Cash</option><option>UPI</option><option>Bank</option></select></div>
+      <div class="col-12"><button onclick="saveStudentFee()" class="btn w-100 text-white btn-sm" style="background:#174a7e">Save</button></div>
     </div>
+  </div>
 
-    <!-- Scripts -->
-    <script src="../../config.js"></script>
-    <script>
-        let currentStudent = null;
-        let currentStudentIndex = null;
+  <div class="ledger-white-card">
+    <div class="ledger-top d-flex justify-content-between"><span>📒 Ledger - Left/Right Scroll</span><small>swipe करें</small></div>
+    <div class="ledger-scroll">
+      <div class="ledger-main">
+        <div class="ledger-col left">
+          <div class="col-title jama">💰 फीस - Date/Month (Dashboard Connect)</div>
+        <div class="header-row"><div>राशि</div><div>तारीख</div><div>माह</div></div>
+          
+          <div id="feeList"></div>
+        </div>
+        <div class="ledger-col">
+          <div class="col-title gaya">📚 Active Course On/Off - Board से</div>
+          <div class="header-row"><div style="grid-column:1/-1">Subject - Toggle Dashboard Connect</div></div>
+          <div id="subjectBox"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-        // Load student data on page load
-        async function loadProfileData() {
-            const studentData = localStorage.getItem("viewingStudent");
-            if (!studentData) {
-                alert("No student data found. Redirecting...");
-                window.location.href = "dashboard.html";
-                return;
-            }
+<script src="../../config.js"></script>
+<script>
+let stu = {};
+try{ stu = JSON.parse(localStorage.getItem('viewingStudent')||'{}'); }catch(e){}
+if(!stu ||!stu.name){ stu = {id:'demo1',name:'Demo Student',phone:'9876543210',board:'MP Board (Hindi Medium)',class:'Class 10th',access:true}; }
 
-            currentStudent = JSON.parse(studentData);
-            currentStudentIndex = localStorage.getItem("viewingStudentIndex");
+document.getElementById('pName').innerText=stu.name||'';
+document.getElementById('pPhone').innerText='📞 '+(stu.phone||stu.mobile||'');
+document.getElementById('pBoard').innerText=stu.board||'';
+document.getElementById('pClass').innerText=stu.class||'';
+if(stu.photo) document.getElementById('pImg').src=stu.photo;
 
-            // Set student info
-            const firstLetter = currentStudent.name ? currentStudent.name.charAt(0).toUpperCase() : 'S';
-            document.getElementById("profileAvatar").innerText = firstLetter;
-            document.getElementById("profileName").innerText = currentStudent.name;
-            document.getElementById("profileClass").innerText = currentStudent.class || "N/A";
-            document.getElementById("profileBoard").innerText = currentStudent.board || "N/A";
-            document.getElementById("profilePhone").innerText = "+91 " + (currentStudent.phone || "XXXX");
+function openAddFee(){ let b=document.getElementById('addFeeBox'); b.style.display=b.style.display=='none'?'block':'none'; }
+function sendFeeReminder(){ let ph=(stu.phone||stu.mobile||'').toString().replace(/\D/g,''); window.open(`https://wa.me/91${ph}?text=${encodeURIComponent('नमस्ते '+stu.name+' जी, फीस बकाया है - पाल स्टडी')}`,'_blank'); }
+function sendLeaveNotice(){ let ph=(stu.phone||stu.mobile||'').toString().replace(/\D/g,''); window.open(`https://wa.me/91${ph}?text=${encodeURIComponent('नमस्ते '+stu.name+' जी, कल अवकाश रहेगा - पाल स्टडी')}`,'_blank'); }
 
-            // Initialize fees with all 12 months as "unpaid" (hash format)
-            if (!currentStudent.fees) {
-                const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-                currentStudent.fees = {};
-                months.forEach(month => {
-                    currentStudent.fees[month] = "unpaid";
-                });
-            }
+// ========= PURANA WORKING LOGIC - DASHBOARD CONNECT =========
+function getSubjects(cls){
+  if(cls && (cls.includes('11') || cls.includes('12'))){
+    return ["Physics","Chemistry","Mathematics","Biology","English","Hindi"];
+  }
+  return ["Science","Social Science","Mathematics","English","Hindi"];
+}
 
-            // Set access status
-            const hasAccess = currentStudent.access !== false;
-            updateAccessUI(hasAccess);
-
-            // Render fee grid
-            renderFeeGrid();
-
-            // Load course access data from server if possible, otherwise use local course state
-            await loadCourseData();
-
-            // Load fee data from server
-            await loadFeeData();
+async function loadCourseData(){
+  if(!stu.courses) stu.courses={};
+  if(stu.id){
+    try{
+      const response = await fetch(`${CONFIG.BASE_URL}/students/${stu.id}/subjects`);
+      const data = await response.json();
+      if(response.ok && data.status && data.res && typeof data.res === 'object' &&!Array.isArray(data.res)){
+        if(Object.keys(data.res).length===0){
+          stu.access=false;
+          stu.courses={};
+        }else{
+          Object.entries(data.res).forEach(([subject,value])=>{
+            stu.courses[subject]=value===1;
+          });
         }
+      }
+    }catch(err){ console.warn('course load fail',err.message); }
+  }
+  if(Object.keys(stu.courses).length===0){
+    const subjects=getSubjects(stu.class);
+    subjects.forEach(s=>stu.courses[s]=true);
+  }
+  renderCourses();
+}
 
-        async function loadCourseData() {
-            if (currentStudent.id) {
-                try {
-                    const response = await fetch(`${CONFIG.BASE_URL}/students/${currentStudent.id}/subjects`);
-                    const data = await response.json();
-                    if (response.ok && data.status && data.res && typeof data.res === 'object' && !Array.isArray(data.res)) {
-                        // data.res is a hash: { "Science": 1, "Mathematics": 0, ... }
-                        // If res is empty {}, no subjects assigned → turn study access OFF
-                        if (Object.keys(data.res).length === 0) {
-                            currentStudent.access = false;
-                            currentStudent.courses = {};
-                            updateAccessUI(false);
-                        } else {
-                            currentStudent.courses = {};
-                            Object.entries(data.res).forEach(([subject, value]) => {
-                                currentStudent.courses[subject] = value === 1;
-                            });
-                        }
-                    }
-                } catch (err) {
-                    console.warn('Unable to load course data from server:', err.message);
-                }
-            }
+function renderCourses(){
+  const box=document.getElementById("subjectBox");
+  box.innerHTML="";
+  if(stu.access===false){
+    box.innerHTML='<div style="padding:12px;text-align:center;color:#888;font-size:10px">Access OFF है</div>';
+    return;
+  }
+  const subjects=getSubjects(stu.class);
+  subjects.forEach(subject=>{
+    const isEnabled=stu.courses[subject]!==false;
+    box.innerHTML+=`
+      <div class="vendor-card">
+        <span style="font-weight:700;font-size:11px"><i class="bi bi-book"></i> ${subject}</span>
+        <button class="btn-toggle-switch ${isEnabled?'on':'off'}" onclick="toggleCourseAccess('${subject}')">
+          ${isEnabled?'ON':'OFF'}
+        </button>
+      </div>`;
+  });
+}
 
-            if (!currentStudent.courses) {
-                const subjects = getSubjects(currentStudent.class);
-                currentStudent.courses = {};
-                subjects.forEach(subject => {
-                    currentStudent.courses[subject] = true;
-                });
-            }
+async function toggleCourseAccess(subject){
+  if(!stu.courses) stu.courses={};
+  const cur=stu.courses[subject]!==false;
+  stu.courses[subject]=!cur;
+  renderCourses();
+  localStorage.setItem("viewingStudent",JSON.stringify(stu));
+  const subjectsHash={};
+  Object.entries(stu.courses).forEach(([s,enabled])=>{ subjectsHash[s]=enabled?1:0; });
+  await updateCourseStatusOnServer(subjectsHash);
+}
 
-            renderCourses();
-        }
+async function updateCourseStatusOnServer(subjectsHash){
+  if(!stu.id) return;
+  try{
+    const response=await fetch(`${CONFIG.BASE_URL}/students/${stu.id}/subjects`,{
+      method:'PATCH',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({subjects:subjectsHash})
+    });
+    const data=await response.json();
+    if(!response.ok ||!data.status) console.warn('Failed to update',data.msg);
+  }catch(err){ console.warn('Unable to update',err.message); }
+}
 
-        async function loadFeeData() {
-            if (currentStudent.id) {
-                try {
-                    const response = await fetch(`${CONFIG.BASE_URL}/students/${currentStudent.id}/fees`);
-                    const data = await response.json();
-                    if (response.ok && data.status && data.res && typeof data.res === 'object' && !Array.isArray(data.res)) {
-                        // data.res is a hash: { "January": "paid", "February": "unpaid", ... }
-                        currentStudent.fees = data.res;
-                        renderFeeGrid();
-                    }
-                } catch (err) {
-                    console.warn('Unable to load fee data from server:', err.message);
-                }
-            }
-        }
+// ========= FEE - REFRESH SAFE + BOARD CONNECT =========
+async function saveStudentFee(){
+  let amt=document.getElementById('feeAmount').value; if(!amt) return alert('Amount डालें');
+  let payload={
+    student_id:stu.id,
+    date:document.getElementById('feeDate').value || new Date().toISOString().split('T')[0],
+    month:document.getElementById('feeMonth').value,
+    amount:amt,
+    mode:document.getElementById('feeMode').value,
+    board:stu.board, class:stu.class
+  };
+  let allFees=JSON.parse(localStorage.getItem('pal_fees_'+stu.id)||'[]');
+  allFees.unshift(payload);
+  localStorage.setItem('pal_fees_'+stu.id,JSON.stringify(allFees));
+  localStorage.setItem('viewingStudent',JSON.stringify(stu));
+  try{
+    if(typeof getApiUrl==='function')
+      await fetch(getApiUrl(CONFIG.API.FEES),{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+  }catch(e){}
+  loadFees();
+  document.getElementById('addFeeBox').style.display='none';
+  document.getElementById('feeAmount').value='';
+}
 
-        function updateAccessUI(hasAccess) {
-            const toggle = document.getElementById("accessToggle");
-            const banner = document.getElementById("accessBanner");
-            const bannerText = document.getElementById("bannerText");
+async function loadFees(){
+  let allFees=JSON.parse(localStorage.getItem('pal_fees_'+stu.id)||'[]');
+  try{
+    if(typeof getApiUrl==='function'){
+      let r=await fetch(getApiUrl(CONFIG.API.FEES+'?student_id='+stu.id));
+      let j=await r.json();
+      if(j.res && j.res.length) allFees=j.res;
+    }
+  }catch(e){}
+  let html=allFees.length? allFees.map(f=>`<div class="entry-grid"><div>₹${f.amount}</div><div>${f.date||''}</div><div>${f.month||''}</div></div>`).join('') : '<div style="padding:8px;text-align:center;color:#888;font-size:10px">No Fees - Add से जोड़ें</div>';
+  document.getElementById('feeList').innerHTML=html;
+}
 
-            if (hasAccess) {
-                toggle.classList.remove("off");
-                toggle.classList.add("on");
-                toggle.innerHTML = '<i class="bi bi-check-lg"></i> ON';
-                banner.classList.remove("disabled");
-                banner.classList.add("enabled");
-                bannerText.innerText = "✅ Notes & Study Material Access is Active for this student";
-            } else {
-                toggle.classList.remove("on");
-                toggle.classList.add("off");
-                toggle.innerHTML = '<i class="bi bi-x-lg"></i> OFF';
-                banner.classList.remove("enabled");
-                banner.classList.add("disabled");
-                bannerText.innerText = "❌ Access is suspended. Student cannot read study notes.";
-            }
-        }
-
-        function renderFeeGrid() {
-            const feeGrid = document.getElementById("feeGrid");
-            feeGrid.innerHTML = "";
-
-            const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-            months.forEach(month => {
-                // Hash uses lowercase: "paid", "unpaid", "not_applicable"
-                const status = currentStudent.fees[month] || "unpaid";
-                feeGrid.innerHTML += `
-                    <div class="month-card fee-${status}">
-                        <b>${month.substring(0, 3).toUpperCase()}</b>
-                        <select onchange="changeFee('${month}', this.value)">
-                            <option value="paid" ${status === 'paid' ? 'selected' : ''}>Paid</option>
-                            <option value="unpaid" ${status === 'unpaid' ? 'selected' : ''}>Unpaid</option>
-                            <option value="not_applicable" ${status === 'not_applicable' ? 'selected' : ''}>Not applicable</option>
-                        </select>
-                    </div>
-                `;
-            });
-        }
-
-        function renderCourses() {
-            const coursesGrid = document.getElementById("coursesGrid");
-            coursesGrid.innerHTML = "";
-
-            // Initialize courses data if not present
-            if (!currentStudent.courses) {
-                const subjects = getSubjects(currentStudent.class);
-                currentStudent.courses = {};
-                subjects.forEach(subject => {
-                    currentStudent.courses[subject] = currentStudent.access !== false; // Default based on access state
-                });
-            }
-
-            if (currentStudent.access === false) {
-                coursesGrid.innerHTML = `
-                    <div class="access-suspended-message">
-                        Note access is currently suspended. Enable Study Access to see active courses.
-                    </div>
-                `;
-                return;
-            }
-
-            const subjects = getSubjects(currentStudent.class);
-            subjects.forEach(subject => {
-                const isEnabled = currentStudent.courses[subject] !== false;
-                coursesGrid.innerHTML += `
-                    <div class="course-card">
-                        <div class="course-info">
-                            <i class="bi bi-book"></i>
-                            <span class="course-name">${subject}</span>
-                        </div>
-                        <button class="btn-toggle-switch ${isEnabled ? 'on' : 'off'}" onclick="toggleCourseAccess('${subject}')">
-                            <i class="bi bi-${isEnabled ? 'check-lg' : 'x-lg'}"></i> ${isEnabled ? 'ON' : 'OFF'}
-                        </button>
-                    </div>
-                `;
-            });
-        }
-
-        async function toggleCourseAccess(subject) {
-            if (!currentStudent.courses) {
-                currentStudent.courses = {};
-            }
-            const currentStatus = currentStudent.courses[subject] !== false;
-            const nextStatus = !currentStatus;
-            currentStudent.courses[subject] = nextStatus;
-            renderCourses();
-            saveStudentData();
-            // Build full hash with 1/0 values
-            const subjectsHash = {};
-            Object.entries(currentStudent.courses).forEach(([s, enabled]) => {
-                subjectsHash[s] = enabled ? 1 : 0;
-            });
-            await updateCourseStatusOnServer(subjectsHash);
-        }
-
-        async function updateCourseStatusOnServer(subjectsHash) {
-            if (!currentStudent.id) {
-                return;
-            }
-
-            try {
-                const response = await fetch(`${CONFIG.BASE_URL}/students/${currentStudent.id}/subjects`, {
-                    method: 'PATCH',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    // Send the full hash: { "Science": 1, "Mathematics": 0, ... }
-                    body: JSON.stringify({ subjects: subjectsHash })
-                });
-                const data = await response.json();
-                if (!response.ok || !data.status) {
-                    console.warn('Failed to update subject status on server:', data.msg || data.err);
-                }
-            } catch (err) {
-                console.warn('Unable to update subject status to server:', err.message);
-            }
-        }
-
-        function getSubjects(cls) {
-            if (cls && (cls.includes('11') || cls.includes('12'))) {
-                return ["Physics", "Chemistry", "Mathematics", "Biology", "English", "Hindi"];
-            }
-            return ["Science", "Social Science", "Mathematics", "English", "Hindi"];
-        }
-
-        async function toggleStudentAccess() {
-            currentStudent.access = currentStudent.access === false ? true : false;
-            updateAccessUI(currentStudent.access);
-
-            const subjects = getSubjects(currentStudent.class);
-            if (!currentStudent.courses) {
-                currentStudent.courses = {};
-            }
-
-            subjects.forEach(subject => {
-                currentStudent.courses[subject] = currentStudent.access;
-            });
-
-            renderCourses();
-            saveStudentData();
-
-            if (currentStudent.id) {
-                // Build full hash with 1/0 values for all subjects
-                const subjectsHash = {};
-                subjects.forEach(subject => {
-                    subjectsHash[subject] = currentStudent.access ? 1 : 0;
-                });
-                await updateCourseStatusOnServer(subjectsHash);
-            }
-        }
-
-        function changeFee(month, value) {
-            // value is lowercase: "paid", "unpaid", "not_applicable"
-            currentStudent.fees[month] = value;
-            renderFeeGrid();
-            saveStudentData();
-            updateFeeOnServer(month, value);
-        }
-
-        async function updateFeeOnServer(month, status) {
-            if (!currentStudent.id) {
-                return;
-            }
-
-            try {
-                const response = await fetch(`${CONFIG.BASE_URL}/students/${currentStudent.id}/fees`, {
-                    method: 'PATCH',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    // API expects hash with month as key: { "May": "paid" }
-                    body: JSON.stringify({ [month]: status })
-                });
-                const data = await response.json();
-                if (!response.ok || !data.status) {
-                    console.warn('Failed to update fee status on server:', data.msg || data.err);
-                }
-            } catch (err) {
-                console.warn('Unable to update fee status to server:', err.message);
-            }
-        }
-
-        function saveStudentData() {
-            localStorage.setItem("viewingStudent", JSON.stringify(currentStudent));
-        }
-
-        function goBack() {
-            window.location.href = "dashboard.html";
-        }
-
-        // Initialize on page load
-        document.addEventListener("DOMContentLoaded", loadProfileData);
-    </script>
-
-    <!-- Bootstrap Bundle with Popper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+// INIT
+loadFees();
+loadCourseData();
+</script>
 </body>
-
 </html>
