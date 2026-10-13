@@ -305,100 +305,48 @@ async function openTestRecord(event) {
     }
 }
 
+
 async function loadFeesData() {
     const feesContent = document.getElementById('feesContent');
-    feesContent.innerHTML = `
-        <div class="text-center text-muted">
-            <div class="spinner-border" role="status"></div>
-            <p>Loading fees...</p>
-        </div>
-    `;
+    feesContent.innerHTML = `<div class="text-center p-3"><div class="spinner-border"></div><p>Loading...</p></div>`;
 
-    // fees hash: { "January": "paid", "February": "unpaid", "March": "not_applicable", ... }
     let feesHash = null;
+    try {
+        const res = await fetch(`${CONFIG.BASE_URL}/students/${user.id}/fees`);
+        const data = await res.json();
+        if(res.ok && data.status && data.res) feesHash = data.res;
+    } catch(e){}
 
-    if (user.id && typeof CONFIG !== 'undefined') {
-        try {
-            const response = await fetch(`${CONFIG.BASE_URL}/students/${user.id}/fees`);
-            const data = await response.json();
-
-            if (response.ok && data.status && data.res && typeof data.res === 'object' && !Array.isArray(data.res)) {
-                feesHash = data.res;
-            } else {
-                console.warn('Unable to load fees from server:', data.msg || data.err);
-            }
-        } catch (error) {
-            console.warn('Error fetching fees:', error);
-        }
-    }
-
-    if (!feesHash || !Object.keys(feesHash).length) {
-        feesContent.innerHTML = `
-            <div class="text-center py-4 text-muted">
-                No fees data available.
-            </div>
-        `;
+    if (!feesHash) {
+        feesContent.innerHTML = `<div class="text-center py-4 text-muted">No fees data</div>`;
         return;
     }
 
-    // Group fees by status (lowercase keys from hash)
-    const groupedFees = {
-        'paid': [],
-        'unpaid': []
-    };
+    // ADMIN PANEL JAISA DESIGN
+    let html = `<div class="header-row"><div>राशि</div><div>तारीख</div><div>माह</div></div>`;
 
-    Object.entries(feesHash).forEach(([month, status]) => {
-        if (status === 'paid') {
-            groupedFees['paid'].push(month);
-        } else if (status === 'unpaid') {
-            groupedFees['unpaid'].push(month);
-        }
-        // 'not_applicable' months are intentionally skipped in display
-    });
-
-    let html = '';
-
-    // Render Paid section
-    if (groupedFees['paid'].length > 0) {
-        html += `
-            <div class="fees-status-group">
-                <div class="fees-status-header fees-status-paid">
-                    <i class="bi bi-check-circle-fill"></i>
-                    Paid (${groupedFees['paid'].length})
-                </div>
-                <div class="fees-month-grid">
-                    ${groupedFees['paid'].map(month => `
-                        <div class="fees-month-item">
-                            <span class="fees-month-label">Month</span>
-                            <span class="fees-month-name">${month.substring(0, 3)}</span>
-                        </div>
-                    `).join('')}
-                </div>
-            </div>
-        `;
-    }
-
-    // Render Unpaid section
-    if (groupedFees['unpaid'].length > 0) {
-        html += `
-            <div class="fees-status-group">
-                <div class="fees-status-header fees-status-unpaid">
-                    <i class="bi bi-exclamation-circle-fill"></i>
-                    Unpaid (${groupedFees['unpaid'].length})
-                </div>
-                <div class="fees-month-grid">
-                    ${groupedFees['unpaid'].map(month => `
-                        <div class="fees-month-item">
-                            <span class="fees-month-label">Month</span>
-                            <span class="fees-month-name">${month.substring(0, 3)}</span>
-                        </div>
-                    `).join('')}
-                </div>
-            </div>
-        `;
+    // अगर feesHash Array है (Admin वाला नया API - amount,date,month)
+    if(Array.isArray(feesHash)){
+        feesHash.forEach(f=>{
+            html += `<div class="entry-grid"><div>₹${f.amount}</div><div>${f.date}</div><div>${f.month}</div></div>`;
+        });
+    } else {
+        // अगर अभी भी पुराना Hash है (January:paid) तो उसी को Table में बदलो
+        Object.entries(feesHash).forEach(([month, status])=>{
+            if(status === 'not_applicable') return;
+            let amt = status === 'paid' ? '₹500' : 'Due';
+            let date = status === 'paid' ? 'Paid' : '-';
+            html += `<div class="entry-grid"><div>${amt}</div><div>${date}</div><div>${month.substring(0,3)}</div></div>`;
+        });
     }
 
     feesContent.innerHTML = html;
 }
 
+
+
+
+
+
+    
 

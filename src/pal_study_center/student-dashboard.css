@@ -1241,3 +1241,38 @@ img{
 .hero-btn i{
   font-size:14px;
 }
+
+
+
+
+
+/* = ADMIN JAISA FEE RECORD FOR STUDENT = */
+#feesContent .header-row{
+  display:grid!important;
+  grid-template-columns:80px 90px 60px!important;
+  background:#f0f7ff!important;
+  font-size:9px!important;
+  font-weight:800!important;
+  text-transform:uppercase!important;
+  border-bottom:1px solid #dbeafe!important;
+}
+#feesContent .header-row div{
+  padding:7px 5px!important;
+  text-align:center!important;
+  border-right:1px solid #e6eef7!important;
+}
+#feesContent .entry-grid{
+  display:grid!important;
+  grid-template-columns:80px 90px 60px!important;
+  font-size:10.5px!important;
+  border-bottom:1px dashed #e5e7eb!important;
+  background:#fff!important;
+}
+#feesContent .entry-grid div{
+  padding:8px 5px!important;
+  text-align:center!important;
+  border-right:1px solid #f3f4f6!important;
+  white-space:nowrap!important;
+}
+#feesContent .entry-grid div:first-child{ color:#0f766e!important; font-weight:800!important; }
+#feesContent .entry-grid div:nth-child(2){ color:#174a7e!important; background:#f8fbff!important; font-size:9.5px!important; }
