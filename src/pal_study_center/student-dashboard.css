@@ -1246,7 +1246,7 @@ img{
 
 
 
-/* = ADMIN JAISA FEE RECORD FOR STUDENT = */
+/* = FINAL - ADMIN JAISA FEE RECORD FOR STUDENT = */
 #feesContent .header-row{
   display:grid!important;
   grid-template-columns:80px 90px 60px!important;
@@ -1260,6 +1260,9 @@ img{
   padding:7px 5px!important;
   text-align:center!important;
   border-right:1px solid #e6eef7!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
 }
 #feesContent .entry-grid{
   display:grid!important;
@@ -1273,6 +1276,9 @@ img{
   text-align:center!important;
   border-right:1px solid #f3f4f6!important;
   white-space:nowrap!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
 }
 #feesContent .entry-grid div:first-child{ color:#0f766e!important; font-weight:800!important; }
 #feesContent .entry-grid div:nth-child(2){ color:#174a7e!important; background:#f8fbff!important; font-size:9.5px!important; }

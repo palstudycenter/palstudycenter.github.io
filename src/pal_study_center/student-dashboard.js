@@ -306,43 +306,32 @@ async function openTestRecord(event) {
 }
 
 
+
 async function loadFeesData() {
     const feesContent = document.getElementById('feesContent');
     feesContent.innerHTML = `<div class="text-center p-3"><div class="spinner-border"></div><p>Loading...</p></div>`;
 
-    let feesHash = null;
+    let allFees = [];
+    try{ allFees = JSON.parse(localStorage.getItem('pal_fees_'+user.id)||'[]'); }catch(e){}
+
     try {
-        const res = await fetch(`${CONFIG.BASE_URL}/students/${user.id}/fees`);
+        const url = typeof getApiUrl === 'function' ? getApiUrl(CONFIG.API.FEES+'?student_id='+user.id) : `${CONFIG.BASE_URL}/fees?student_id=${user.id}`;
+        const res = await fetch(url);
         const data = await res.json();
-        if(res.ok && data.status && data.res) feesHash = data.res;
+        if(data.res && data.res.length) allFees = data.res;
     } catch(e){}
 
-    if (!feesHash) {
-        feesContent.innerHTML = `<div class="text-center py-4 text-muted">No fees data</div>`;
+    if (!allFees.length) {
+        feesContent.innerHTML = `<div class="text-center py-4 text-muted">No fees record yet</div>`;
         return;
     }
 
-    // ADMIN PANEL JAISA DESIGN
     let html = `<div class="header-row"><div>राशि</div><div>तारीख</div><div>माह</div></div>`;
-
-    // अगर feesHash Array है (Admin वाला नया API - amount,date,month)
-    if(Array.isArray(feesHash)){
-        feesHash.forEach(f=>{
-            html += `<div class="entry-grid"><div>₹${f.amount}</div><div>${f.date}</div><div>${f.month}</div></div>`;
-        });
-    } else {
-        // अगर अभी भी पुराना Hash है (January:paid) तो उसी को Table में बदलो
-        Object.entries(feesHash).forEach(([month, status])=>{
-            if(status === 'not_applicable') return;
-            let amt = status === 'paid' ? '₹500' : 'Due';
-            let date = status === 'paid' ? 'Paid' : '-';
-            html += `<div class="entry-grid"><div>${amt}</div><div>${date}</div><div>${month.substring(0,3)}</div></div>`;
-        });
-    }
-
+    allFees.forEach(f=>{
+        html += `<div class="entry-grid"><div>₹${f.amount}</div><div>${f.date||''}</div><div>${f.month||''}</div></div>`;
+    });
     feesContent.innerHTML = html;
 }
-
 
 
 
