@@ -92,13 +92,37 @@ function setStudentFilterMode(mode){
   document.getElementById('modeLabel').innerText = 'Mode: ' + mode.toUpperCase();
   renderAll();
 }
-function toggleStudentActive(id){
+
+async function toggleStudentActive(id){
   id = String(id);
-  if(inactiveIds.includes(id)){ inactiveIds = inactiveIds.filter(x=>x!=id); }
-  else { if(!confirm('इस Student को Inactive करना है?')) return; inactiveIds.push(id); }
+  let isMakingInactive =!inactiveIds.includes(id);
+  if(isMakingInactive){
+    if(!confirm('इस Student को Inactive करना है? सभी Subjects OFF हो जाएंगे।')) return;
+    inactiveIds.push(id);
+    try{
+      let stuObj = students.find(s=> String(s.id)==id);
+      let subList = [];
+      if(stuObj && stuObj.class && (stuObj.class.includes('11') || stuObj.class.includes('12'))){
+        subList = ["Physics","Chemistry","Mathematics","Biology","English","Hindi"];
+      }else{
+        subList = ["Science","Social Science","Mathematics","English","Hindi"];
+      }
+      let hash = {};
+      subList.forEach(s=> hash[s]=0);
+      await fetch(`${CONFIG.BASE_URL}/students/${id}/subjects`,{
+        method:'PATCH',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({subjects: hash})
+      });
+    }catch(e){ console.warn('Subject OFF failed', e); }
+  } else {
+    inactiveIds = inactiveIds.filter(x=>x!=id);
+  }
   localStorage.setItem('pal_inactive_ids', JSON.stringify(inactiveIds));
   renderAll();
 }
+
+
 function renderAll(){ displayStudents(); showTests(); }
 function displayStudents() {
   let list = document.getElementById("studentList");

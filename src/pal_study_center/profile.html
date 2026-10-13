@@ -124,9 +124,26 @@ document.getElementById('pClass').innerText=stu.class||'';
 if(stu.photo) document.getElementById('pImg').src=stu.photo;
 
 function openAddFee(){ let b=document.getElementById('addFeeBox'); b.style.display=b.style.display=='none'?'block':'none'; }
-function sendFeeReminder(){ let ph=(stu.phone||stu.mobile||'').toString().replace(/\D/g,''); window.open(`https://wa.me/91${ph}?text=${encodeURIComponent('नमस्ते '+stu.name+' जी, फीस बकाया है - पाल स्टडी')}`,'_blank'); }
-function sendLeaveNotice(){ let ph=(stu.phone||stu.mobile||'').toString().replace(/\D/g,''); window.open(`https://wa.me/91${ph}?text=${encodeURIComponent('नमस्ते '+stu.name+' जी, कल अवकाश रहेगा - पाल स्टडी')}`,'_blank'); }
 
+  function sendFeeReminder(){
+  let ph=(stu.pPhone||stu.parentPhone||stu.phone||stu.mobile||'').toString().replace(/\D/g,'');
+  if(ph.length==10) ph='91'+ph;
+  let allFees=JSON.parse(localStorage.getItem('pal_fees_'+stu.id)||'[]');
+  let lastFee = allFees[0] || {};
+  let month = lastFee.month || document.getElementById('feeMonth').value || 'इस माह';
+  let amt = lastFee.amount || '500';
+  let msg = `नमस्ते अभिभावक जी 🙏\n\nआपसे निवेदन है कि ${stu.name} की ${month} माह की फीस ₹${amt} जमा करना शेष है।\nकृपया शीघ्र जमा कराने की कृपा करें।\n\nधन्यवाद 🙏\n- पाल स्टडी सेंटर, मनासा`;
+  window.open(`https://wa.me/${ph}?text=${encodeURIComponent(msg)}`,'_blank');
+}
+
+function sendLeaveNotice(){
+  let ph=(stu.phone||stu.mobile||'').toString().replace(/\D/g,'');
+  if(ph.length==10) ph='91'+ph;
+  let today = new Date().toLocaleDateString('hi-IN');
+  let msg = `नमस्ते ${stu.name}\n\nआवश्यक कार्य होने से आज ${today} को पाल स्टडी सेंटर पर अवकाश रहेगा।\n\n- पाल स्टडी सेंटर`;
+  window.open(`https://wa.me/${ph}?text=${encodeURIComponent(msg)}`,'_blank');
+  }
+  
 // ========= PURANA WORKING LOGIC - DASHBOARD CONNECT =========
 function getSubjects(cls){
   if(cls && (cls.includes('11') || cls.includes('12'))){
