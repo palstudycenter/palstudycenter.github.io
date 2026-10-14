@@ -81,7 +81,6 @@ ______________________________________________
 <div class="d-flex justify-content-center gap-2 mt-2">
 <button id="bH" onclick="showTab('home')" class="action-btn active">🏠 होम</button>
 <button id="bK" onclick="showTab('ledger')" class="action-btn">📒 लेजर</button>
-<button id="bS" onclick="showTab('student')" class="action-btn">🎓 स्टूडेंट कंट्रोल</button>
 <button id="bO" onclick="showTab('prabandhan')" class="action-btn">📋 प्रबंधन</button>
 </div>
   
@@ -99,8 +98,6 @@ ______________________________________________
     </div>
   </div>
 </div>
-<div id="studentSubSec" style="display:none"><div class="card p-2"><button class="home-tool-btn" onclick="openStudent()">👨‍🎓 स्टूडेंट मैनेजर</button></div></div>
-
 <div id="tab-home">
 
   <div class="row g-2"><div class="col-6"><button onclick="toggleTool('calc')" class="home-tool-btn">💰 ब्याज कैलकुलेटर</button></div><div class="col-6"><button onclick="toggleTool('cal')" class="home-tool-btn">📅 कैलेंडर</button></div></div>
@@ -132,116 +129,6 @@ ______________________________________________
 </div></div>
 
 <div id="tab-create" style="display:none"><div class="card p-3"><h6>➕ नया खाता</h6><select id="cType" onchange="onCTypeChange()" class="form-select form-select-sm my-2"><option value="नकद">💵 नकद</option><option value="बैंक">🏦 बैंक</option><option value="आय">💰 आय</option><option value="व्यय">🏠 व्यय</option><option value="उधारी दी">🤝 उधारी दी</option><option value="उधारी ली">🙏 उधारी ली</option><option value="एसेट">🏆 एसेट</option><option value="परिवार">👨‍👩‍👧 परिवार</option><option value="लोन">🏦 लोन</option></select><input id="cName" list="suggestName" class="form-control form-control-sm my-2" placeholder="नाम लिखें"><datalist id="suggestName"></datalist><input id="cOp" type="number" class="form-control form-control-sm my-2" placeholder="ओपनिंग राशि"><select id="cSide" class="form-select form-select-sm my-2"><option value="jama">✅ जमा</option><option value="dena">❌ देना</option></select><button onclick="createKhata()" class="btn w-100 text-white" style="background:#174a7e">सेव खाता</button></div></div>
-
-<div id="tab-student" style="display:none">
-  <!-- Top Menu -->
-  
-  <div class="card p-2">
-  <div class="d-flex justify-content-between align-items-center" style="margin-bottom:10px">
-  <h6 style="color:#174a7e;margin:0">🎓 Admin Panel - Live</h6>
-  <button onclick="loadAdminStudents()" class="btn btn-sm text-white" style="background:#174a7e">🔄 Reload</button>
-  </div>
-    <div class="filter-grid" style="grid-template-columns:1fr 1fr 1fr 1fr 1fr">
-  <button onclick="switchAdminTab('students')" id="admTab_students" class="filter-btn active" style="height:44px; font-size:11px">👨‍🎓<br>Students</button>
-  <button onclick="switchAdminTab('tests')" id="admTab_tests" class="filter-btn" style="height:44px; font-size:11px">📝<br>Tests</button>
-  <button onclick="switchAdminTab('notice')" id="admTab_notice" class="filter-btn" style="height:44px; font-size:11px">📢<br>Notice</button>
-  <button onclick="switchAdminTab('reviews')" id="admTab_reviews" class="filter-btn" style="height:44px; font-size:11px">⭐<br>Reviews</button>
-  <button onclick="switchAdminTab('auto')" id="admTab_auto" class="filter-btn" style="height:44px; font-size:11px; background:#0f766e; color:white">💬<br>Auto Msg</button>
-    </div>
-  </div>
-
-
-<!-- 1. STUDENTS TAB -->
-  <div id="admin-tab-students" class="card p-3 mt-2" style="border:none;box-shadow:none">
-    
-    <input id="adminSearch" oninput="filterAdminStudents()" placeholder="🔍 नाम से सर्च..." class="form-control form-control-sm mt-2">
-    
-    <small style="color:#666; margin-top:8px; display:block">Board Filter</small>
-    <div class="filter-grid mt-1" style="grid-template-columns:1fr 1fr 1fr; gap:6px">
-      <button onclick="setBoardFilter(this,'MP Board (Hindi Medium)')" class="filter-btn" style="height:34px;font-size:14px;font-weight:600">HINDI</button>
-      <button onclick="setBoardFilter(this,'MP Board (English Medium)')" class="filter-btn" style="height:34px;font-size:14px;font-weight:600">ENGLISH</button>
-      <button onclick="setBoardFilter(this,'CBSE')" class="filter-btn" style="height:34px;font-size:14px;font-weight:600">CBSE</button>
-    </div>
-
-    <small style="color:#666; margin-top:8px; display:block">Class Filter</small>
-    <div class="filter-grid mt-1" style="grid-template-columns:1fr 1fr 1fr 1fr; gap:6px">
-      <button onclick="setClassFilter(this,'Class 9th')" class="filter-btn" style="height:34px;font-size:14px;font-weight:600">9th</button>
-      <button onclick="setClassFilter(this,'Class 10th')" class="filter-btn" style="height:34px;font-size:14px;font-weight:600">10th</button>
-      <button onclick="setClassFilter(this,'Class 11th')" class="filter-btn" style="height:34px;font-size:14px;font-weight:600">11th</button>
-      <button onclick="setClassFilter(this,'Class 12th')" class="filter-btn" style="height:34px;font-size:14px;font-weight:600">12th</button>
-    </div>
-
-    <small style="color:#666; margin-top:8px; display:block">Status Filter</small>
-    <div class="filter-grid mt-1" style="grid-template-columns:1fr 1fr; gap:6px">
-      <button id="btnActive" onclick="setAdminMode('active')" class="filter-btn active" style="height:40px;font-size:14px;font-weight:600;line-height:1.2;display:flex;flex-direction:column;align-items:center;justify-content:center">
-        <span>Active</span>
-        <span id="adminCount" style="font-size:11px">0</span>
-      </button>
-      <button id="btnInactive" onclick="setAdminMode('inactive')" class="filter-btn" style="height:40px;font-size:14px;font-weight:600">Inactive</button>
-    </div>
-    <div id="adminStudentList" class="mt-2" style="max-height:40vh;overflow:auto"></div>
-  </div>
-
-  
-  <!-- 2. TESTS TAB -->
-  <div id="admin-tab-tests" style="display:none" class="card p-2 mt-2">
-    <small style="color:#666; margin-bottom:4px; display:block">Test Filter</small>
-    <div class="d-flex justify-content-between">
-      <h6 style="color:#174a7e">📝 Test Records</h6>
-      <div class="d-flex gap-1"><button onclick="addAdminTest()" class="btn btn-sm text-white" style="background:#174a7e">+ Test</button><button onclick="submitAdminTests()" class="btn btn-sm text-white" style="background:#0f766e">Submit</button></div>
-    </div>
-    <div class="mt-2" style="overflow:auto;max-height:55vh">
-      <table class="table table-bordered text-center mb-0" style="font-size:12px"><thead style="background:#f0f7ff;position:sticky;top:0"><tr id="th"></tr></thead><tbody id="tb"></tbody></table>
-    </div>
-  </div>
-
-  <!-- 3. NOTICE TAB -->
-  <div id="admin-tab-notice" style="display:none" class="card p-3 mt-2">
-    <small style="color:#666; margin-bottom:4px; display:block">Notice Filter</small>
-    <h6 style="color:#174a7e">📢 Notice Board</h6>
-    <input id="noticeTitle" class="form-control form-control-sm my-1" placeholder="Notice Title">
-    <textarea id="noticeMsg" class="form-control form-control-sm my-1" placeholder="Message लिखें..."></textarea>
-    <select id="noticeBoard" class="form-select form-select-sm my-1">
-      <option value="ALL">सभी Board के लिए</option>
-      <option value="MP Board (Hindi Medium)">MP Hindi</option>
-      <option value="MP Board (English Medium)">MP English</option>
-      <option value="CBSE">CBSE</option>
-    </select>
-    <button onclick="sendNotice()" class="btn w-100 text-white mt-1" style="background:#174a7e">📤 Notice भेजो</button>
-    <div id="noticeList" class="mt-2"></div>
-  </div>
-
-  <!-- 4. REVIEWS TAB -->
-  <div id="admin-tab-reviews" style="display:none" class="card p-3 mt-2">
-    <small style="color:#666; margin-bottom:4px; display:block">Review Filter</small>
-    <h6 style="color:#174a7e">⭐ Student Reviews</h6>
-    <div id="reviewList"></div>
-  </div>
-  <!-- 5. AUTO MESSAGE TAB -->
-<div id="admin-tab-auto" style="display:none" class="card p-3 mt-2">
-  <small style="color:#666; margin-bottom:4px; display:block">Auto Message Filter</small>
-  <h6 style="color:#0f766e">💬 Auto Message - Active Students</h6>
-  <input id="autoSearch" oninput="filterAutoStudents()" placeholder="🔍 नाम से सर्च..." class="form-control form-control-sm my-2">
-  <div id="autoStudentList" style="max-height:30vh; overflow:auto; border:1px solid #eee; border-radius:8px"></div>
-
-  
-</div>
-  
-  
-  <!-- Student Card -->
-  <div id="autoStudentCard" style="display:none; border:1.5px solid #0f766e; border-radius:10px; padding:10px; margin-top:10px; background:#f0fdfa">
-    <div class="d-flex justify-content-between align-items-center">
-      <b id="auto_sName" style="color:#174a7e"></b>
-      <span onclick="document.getElementById('autoStudentCard').style.display='none'" style="cursor:pointer; font-size:18px">❌</span>
-    </div>
-    <small id="auto_sDetails" style="color:#666"></small>
-    <div class="filter-grid mt-2" style="grid-template-columns:1fr 1fr">
-      <button onclick="sendFeeReminder()" style="height:50px; background:#174a7e; color:white; border:none; border-radius:8px; font-size:12px">💰<br>फीस रिमाइंडर</button>
-      <button onclick="sendLeaveNotice()" style="height:50px; background:#e67e22; color:white; border:none; border-radius:8px; font-size:12px">🏖️<br>अवकाश सूचना</button>
-    </div>
-  </div>
-</div>
-
 
 <div id="tab-prabandhan" style="display:none">
 <div class="card p-2"><h6 style="color:#174a7e;font-size:12px;font-weight:800;margin:0 0 8px 4px">📋 प्रबंधन - शादी वाले 6 वर्किंग</h6>
@@ -325,8 +212,7 @@ khatas=[
 ];
 }
 let currentFilter='नकद';
-let students=JSON.parse(localStorage.getItem('palStudents')||'[]');
-function save(){localStorage.setItem('khata_final_v7',JSON.stringify(khatas));localStorage.setItem('voucher_final_v7',JSON.stringify(vouchers));localStorage.setItem('palStudents',JSON.stringify(students));}
+function save(){localStorage.setItem('khata_final_v7',JSON.stringify(khatas));localStorage.setItem('voucher_final_v7',JSON.stringify(vouchers));}
 
 function getBal(id){
  let k=khatas.find(x=>x.id==id);
@@ -345,15 +231,13 @@ function getBal(id){
 }
 
 function showTab(t){
- ['home','khata','voucher','create','student','prabandhan','vendor','family','dev','guest','nautaniya','bhojan'].forEach(x=>{
+ ['home','khata','voucher','create','prabandhan','vendor','family','dev','guest','nautaniya','bhojan'].forEach(x=>{
   let el=document.getElementById('tab-'+x); if(el) el.style.display='none';
  });
  document.getElementById('ledgerSubSec').style.display='none';
- document.getElementById('studentSubSec').style.display='none';
  document.querySelectorAll('.header .action-btn').forEach(b=>b.classList.remove('active'));
  if(t=='home'){document.getElementById('tab-home').style.display='block';document.getElementById('bH').classList.add('active');}
  else if(t=='ledger'){document.getElementById('ledgerSubSec').style.display='block';document.getElementById('bK').classList.add('active');}
- else if(t=='student'){document.getElementById('tab-student').style.display='block';document.getElementById('bS').classList.add('active');loadAdminStudents();}
  else if(t=='prabandhan'){document.getElementById('tab-prabandhan').style.display='block';document.getElementById('bO').classList.add('active');updatePrabandhanCount();}
  else if(['vendor','family','dev','guest','nautaniya','bhojan'].includes(t)){
   document.getElementById('tab-'+t).style.display='block';
@@ -612,207 +496,10 @@ function calcInt(){let f=new Date(document.getElementById('intFrom').value),to=n
 function initCal(){let sel=document.getElementById('calMonth');for(let i=0;i<12;i++){let d=new Date(2026,i,1);sel.innerHTML+=`<option value="${i}" ${i==new Date().getMonth()?'selected':''}>${d.toLocaleString('hi-IN',{month:'long'})} 2026</option>`;}renderCalendar();document.getElementById('intFrom').valueAsDate=new Date();document.getElementById('intTo').valueAsDate=new Date(new Date().setMonth(new Date().getMonth()+1));}
 function renderCalendar(){let m=+document.getElementById('calMonth').value,y=2026,first=new Date(y,m,1).getDay(),days=new Date(y,m+1,0).getDate(),body=document.getElementById('calBody');body.innerHTML='';for(let i=0;i<first;i++) body.innerHTML+=`<div></div>`;for(let d=1;d<=days;d++) body.innerHTML+=`<div class="cal-day"><b>${d}</b></div>`;}
 
-  function formatMonth(ym){if(!ym) return '';let [y,m]=ym.split('-');let months=['','जनवरी','फरवरी','मार्च','अप्रैल','मई','जून','जुलाई','अगस्त','सितंबर','अक्टूबर','नवंबर','दिसंबर'];return `${months[parseInt(m)]} ${y}`;}
-function saveStudents(){localStorage.setItem('palStudents',JSON.stringify(students));}
-
-function addStudent(){
- let curMonth=new Date().toISOString().slice(0,7);
- let st={id:Date.now(),name:document.getElementById('sName').value.trim(),cls:document.getElementById('sClass').value.trim(),fee:document.getElementById('sFee').value||'1500',sPhone:document.getElementById('sPhone').value.trim(),pPhone:document.getElementById('sParentPhone').value.trim(),status:'Unpaid',month:curMonth};
- if(!st.name) return alert('नाम लिखें');
- students.push(st); saveStudents(); renderStudents();
- document.getElementById('sName').value='';document.getElementById('sClass').value='';document.getElementById('sFee').value='';document.getElementById('sPhone').value='';document.getElementById('sParentPhone').value='';
-}
-function toggleDetail(id){let el=document.getElementById('det-'+id);el.style.display=el.style.display=='none'?'block':'none';}
-
-function renderStudents(){
- let fClass=document.getElementById('filterClass')?.value||'';
- let list=fClass? students.filter(s=>s.cls==fClass) : students;
- let groups={}; list.forEach(s=>{let k=s.cls||'बिना क्लास'; if(!groups[k]) groups[k]=[]; groups[k].push(s);});
- let html=`<small style="color:#6b7280">कुल ${list.length} स्टूडेंट</small>`;
- for(let cls in groups){
-  html+=`<div class="mt-3 mb-1"><b style="color:#174a7e;border-bottom:2px solid #174a7e">${cls} (${groups[cls].length})</b></div>`;
-  html+=groups[cls].map(s=>`<div class="card p-2 mb-1"><div class="d-flex justify-content-between"><div onclick="toggleDetail(${s.id})" style="flex:1;cursor:pointer"><b>${s.name}</b> <small style="color:${s.status=='Paid'?'green':'#d97706'}"> ${s.status} | ${formatMonth(s.month)} | ₹${s.fee}</small></div><div class="d-flex gap-1"><button onclick="let st=students.find(x=>x.id==${s.id}); st.status=st.status=='Paid'?'Unpaid':'Paid'; saveStudents(); renderStudents();" class="btn btn-sm" style="background:${s.status=='Paid'?'#dcfce7':'#fef3c7'}">✅</button><button onclick="if(confirm('हटाना है?')){students=students.filter(x=>x.id!=${s.id});saveStudents();renderStudents();}" style="background:#fee2e2;border:none;border-radius:50%;width:28px;height:28px">🗑️</button></div></div><div id="det-${s.id}" style="display:none"><hr class="my-1"><small>📱 ${s.sPhone||'-'} | 👨‍👩‍👧 ${s.pPhone||'-'}</small><div class="d-flex gap-1 mt-1"><input type="month" value="${s.month}" onchange="let st=students.find(x=>x.id==${s.id}); st.month=this.value; saveStudents(); renderStudents();" class="form-control form-control-sm" style="width:140px"><input type="number" value="${s.fee}" onchange="let st=students.find(x=>x.id==${s.id}); st.fee=this.value; saveStudents();" class="form-control form-control-sm" style="width:90px"></div></div></div>`).join('');
- }
- document.getElementById('studentList').innerHTML=html||'<small>कोई स्टूडेंट नहीं</small>';
-}
-  
-function openStudent(){
- document.getElementById('tab-student').style.display='block';
- renderStudents();
-}
 initCal();renderAll();onCTypeChange();
 
 
 </script>
-  
-<script src="../config.js"></script>
-<script>
-let adminStudents=[], adminMode='active';
-let currentBoard='', currentClass='';
-let inactiveIds=JSON.parse(localStorage.getItem('pal_inactive_ids')||'[]').map(String);
-let TC=parseInt(localStorage.getItem('tc')||'10'), TM=JSON.parse(localStorage.getItem('tm')||'{}'), pending={};
-
-function getApiUrl(ep){ return CONFIG.BASE_URL + ep; }
-
-async function loadAdminStudents(){
- try{
-  let r=await fetch(getApiUrl(CONFIG.API.GET_STUDENTS));
-  let j=await r.json();
-  if(j.status){
-    adminStudents=j.res.filter(s=>s.usertype=='student');
-    filterAdminStudents();
-  }
- }catch(e){ alert('Backend लोड नहीं हो रहा - config.js चेक करो'); }
-}
-function setBoardFilter(el,val){
-  if(currentBoard===val){ currentBoard=''; el.classList.remove('active'); }
-  else { currentBoard=val; el.parentElement.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active')); el.classList.add('active'); }
-  filterAdminStudents();
-}
-function setClassFilter(el,val){
-  if(currentClass===val){ currentClass=''; el.classList.remove('active'); }
-  else { currentClass=val; el.parentElement.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active')); el.classList.add('active'); }
-  filterAdminStudents();
-}
-function setAdminMode(m){
-  adminMode=m;
-  document.getElementById('btnActive').classList.toggle('active',m=='active');
-  document.getElementById('btnInactive').classList.toggle('active',m=='inactive');
-  filterAdminStudents();
-}
-function filterAdminStudents(){ displayAdminStudents(); showAdminTests(); }
-function displayAdminStudents(){
- let filtered=adminStudents.filter(s=>{
-  let isI=inactiveIds.includes(String(s.id));
-  if(adminMode=='active'&&isI) return false;
-  if(adminMode=='inactive'&&!isI) return false;
-  if(currentClass&&s.class!=currentClass) return false;
-  if(currentBoard&&s.board!=currentBoard) return false;
-  return true;
- });
- document.getElementById('adminCount').innerText=filtered.length;
- document.getElementById('adminStudentList').innerHTML=filtered.map(u=>`<div class="d-flex justify-content-between p-2 border-bottom"><div><b>${u.name}</b><br><small>${u.class} | ${u.board||''}</small></div><button class="btn btn-sm" style="border:1px solid #174a7e" onclick="toggleAdminActive('${u.id}')">${inactiveIds.includes(String(u.id))?'Active करो':'Inactive करो'}</button></div>`).join('')||'<div class="p-3 text-center small">कोई स्टूडेंट नहीं</div>';
-}
-function toggleAdminActive(id){
- id=String(id);
- if(inactiveIds.includes(id)) inactiveIds=inactiveIds.filter(x=>x!=id);
- else inactiveIds.push(id);
- localStorage.setItem('pal_inactive_ids',JSON.stringify(inactiveIds));
- filterAdminStudents();
-}
-function showAdminTests(){
- let list=adminStudents.filter(s=>{
-  let isI=inactiveIds.includes(String(s.id));
-  if(adminMode=='active'&&isI) return false;
-  if(adminMode=='inactive'&&!isI) return false;
-  return (!currentClass||s.class==currentClass)&&(!currentBoard||s.board==currentBoard);
- });
- let h=`<th>#</th><th>Name</th><th>%</th>`;
- for(let i=1;i<=TC;i++) h+=`<th>T${i}</th>`;
- document.getElementById('th').innerHTML=h;
- let b='';
- list.forEach((r,i)=>{
-  let m=TM[String(r.id)]||{}; let tot=0,c=0;
-  for(let k=1;k<=TC;k++){ if(m[k]!=null && m[k]!=='') {tot+=+m[k]; c++;}}
-  let per=c?tot/(c*20)*100:0;
-  b+=`<tr><td>${i+1}</td><td>${r.name}</td><td>${per.toFixed(0)}%</td>`;
-  for(let k=1;k<=TC;k++) b+=`<td><input style="width:40px;text-align:center" value="${m[k]??''}" oninput="queueAdmin('${r.id}',${k},this.value)"></td>`;
-  b+='</tr>';
- });
- document.getElementById('tb').innerHTML=b;
-}
-function queueAdmin(id,t,v){
- if(!TM[id]) TM[id]={}; TM[id][t]=+v;
- if(!pending[id]) pending[id]={}; pending[id][t]=+v;
- localStorage.setItem('tm',JSON.stringify(TM));
-}
-function addAdminTest(){ TC++; localStorage.setItem('tc',TC); showAdminTests(); }
-async function submitAdminTests(){
- try{
-  for(let sid in pending){ for(let tn in pending[sid]){
-      await fetch(getApiUrl(CONFIG.API.TEST_RECORDS),{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({student_id:Number(sid),test_name:`T${tn}`,marks:Number(pending[sid][tn])})});
-  }} alert('Submit हो गया'); pending={};
- }catch(e){ alert('Error '+e.message); }
-}
-
-function switchAdminTab(t){
-  ['students','tests','notice','reviews','auto'].forEach(x=>{
-    let tabEl = document.getElementById('admin-tab-'+x);
-    let btnEl = document.getElementById('admTab_'+x);
-    if(tabEl) tabEl.style.display='none';
-    if(btnEl) btnEl.classList.remove('active');
-  });
-  document.getElementById('admin-tab-'+t).style.display='block';
-  document.getElementById('admTab_'+t).classList.add('active');
-  if(t=='reviews') loadAdminReviews();
-  if(t=='notice') loadNotices();
-  if(t=='auto') loadAutoStudents();
-}
-async function loadAdminReviews(){
-  try{
-    let r=await fetch(getApiUrl(CONFIG.API.GET_REVIEWS));
-    let j=await r.json();
-    document.getElementById('reviewList').innerHTML = j.res.map(rv=>`<div class="card p-2 mb-1 small"><b>${rv.name}</b> ⭐${rv.rating}<br>${rv.message}</div>`).join('') || 'कोई Review नहीं';
-  }catch(e){ document.getElementById('reviewList').innerHTML='Load नहीं हुआ'; }
-}
-async function loadNotices(){
-  try{
-    let r=await fetch(getApiUrl(CONFIG.API.GET_NOTICES));
-    let j=await r.json();
-    document.getElementById('noticeList').innerHTML = j.res.map(n=>`<div class="card p-2 mb-1 small"><b>${n.title}</b> - ${n.board}<br>${n.message}</div>`).join('') || '';
-  }catch(e){}
-}
-async function sendNotice(){
-  let data={title:noticeTitle.value, message:noticeMsg.value, board:noticeBoard.value};
-  if(!data.title ||!data.message) return alert('Title/Message लिखें');
-  try{
-    await fetch(getApiUrl(CONFIG.API.SEND_NOTICE),{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
-    alert('Notice भेज दिया'); noticeTitle.value=''; noticeMsg.value=''; loadNotices();
-  }catch(e){ alert('Error '+e.message); }
-}
-
-// AUTO MESSAGE LOGIC
-let autoStudents = [];
-let selectedStudent = null;
-function loadAutoStudents(){
-  autoStudents = adminStudents.filter(s=>!inactiveIds.includes(String(s.id)) );
-  
-  renderAutoStudents(autoStudents);
-} 
-function renderAutoStudents(list){
-  let html = '';
-  list.forEach(s=>{
-    let pPhone = s.parent_phone || s.phone || '';
-    let sPhone = s.phone || '';
-    let cls = s.class || '';
-    let board = s.board || '';
-    html += `<div onclick="openAutoCard('${s.name}','${pPhone}','${sPhone}','${cls}','${board}')" style="padding:8px; border-bottom:1px solid #eee; cursor:pointer">👨‍🎓 ${s.name} - ${cls} <small style="color:#666">(${board})</small></div>`;
-  });
-  document.getElementById('autoStudentList').innerHTML = html || 'कोई Active Student नहीं';
-}
-function filterAutoStudents(){
-  let q = document.getElementById('autoSearch').value.toLowerCase();
-  renderAutoStudents(autoStudents.filter(s=>s.name.toLowerCase().includes(q)));
-}
-function openAutoCard(name, parentNo, studentNo, cls, board){
-  selectedStudent = {name, parentNo, studentNo, cls, board};
-  document.getElementById('auto_sName').innerText = name;
-  document.getElementById('auto_sDetails').innerText = `${cls} | ${board} | Parent: ${parentNo} | Student: ${studentNo}`;
-  document.getElementById('autoStudentCard').style.display = 'block';
-}
-function sendFeeReminder(){
-  if(!selectedStudent) return;
-  let msg = `नमस्कार अभिभावक, ${selectedStudent.name}\n\nबेहतर सेवाओं के लिए महीने की 5 तारीख तक अनिवार्य रूप से फीस जमा करें।\n\n- Balaji Coaching Classes`;
-  let num = (selectedStudent.parentNo+'').replace(/[^0-9]/g,'').slice(-10);
-  window.open(`https://wa.me/91${num}?text=${encodeURIComponent(msg)}`,'_blank');
-}
-function sendLeaveNotice(){
-  if(!selectedStudent) return;
-  let msg = `नमस्कार ${selectedStudent.name},\n\nकल कोचिंग में अवकाश रहेगा।\n\n- Balaji Coaching Classes`;
-  let num = (selectedStudent.studentNo+'').replace(/[^0-9]/g,'').slice(-10);
-  window.open(`https://wa.me/91${num}?text=${encodeURIComponent(msg)}`,'_blank');
-}
-   </script>
   
 <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 
@@ -1009,7 +696,7 @@ function saveSingleAdd(id,type){let rashi=document.getElementById('mRashi').valu
 function delGuestEntry(id,type,listType,idx){if(!confirm('हटाना?'))return;let list=type=='nautaniya'?nautaniyaGuests:guests;let g=list.find(x=>x.id==id);if(listType=='aya')g.ayaList.splice(idx,1);else g.diyaList.splice(idx,1);savePrabandhan();openGuestDetail(id,type);}
 
 function openBhojanProgList(){
- ['home','khata','voucher','create','vendor','family','dev','guest','nautaniya','student','prabandhan'].forEach(x=>{let el=document.getElementById('tab-'+x);if(el)el.style.display='none';});
+ ['home','khata','voucher','create','vendor','family','dev','guest','nautaniya','prabandhan'].forEach(x=>{let el=document.getElementById('tab-'+x);if(el)el.style.display='none';});
  document.getElementById('tab-guest').style.display='block';
  document.getElementById('guestMainFilter').style.display='none';
  document.getElementById('guestSubFilter').style.display='none';
