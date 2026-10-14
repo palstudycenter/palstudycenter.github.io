@@ -26,6 +26,7 @@ const CONFIG = {
     
     // Dashboard endpoints
     CREATE_DASHBOARD: '/Dashboard/createDashboard',
+    FEES: '/fees'
   }
 };
 
