@@ -312,28 +312,46 @@ async function loadFeesData() {
     feesContent.innerHTML = `<div class="text-center p-3"><div class="spinner-border"></div><p>Loading...</p></div>`;
 
     let allFees = [];
+    
+    // 1. Local से पहले लाओ ताकि उसी Device पर तुरंत दिखे
     try{ allFees = JSON.parse(localStorage.getItem('pal_fees_'+user.id)||'[]'); }catch(e){}
 
+    // 2. Server से लाओ - यही दूसरे Device पर दिखाएगा
     try {
-        const url = typeof getApiUrl === 'function' ? getApiUrl(CONFIG.API.FEES+'?student_id='+user.id) : `${CONFIG.BASE_URL}/fees?student_id=${user.id}`;
+        let url;
+        if (typeof getApiUrl === 'function' && CONFIG.API.FEES) {
+            url = getApiUrl(CONFIG.API.FEES+'?student_id='+user.id);
+        } else {
+            url = `${CONFIG.BASE_URL}/fees?student_id=${user.id}`;
+        }
+        
+        console.log('Fetching Fees from:', url);
         const res = await fetch(url);
         const data = await res.json();
-        if(data.res && data.res.length) allFees = data.res;
-    } catch(e){}
+        console.log('Fees Response:', data);
+
+        if(data.res && Array.isArray(data.res) && data.res.length) allFees = data.res;
+        else if(data.data && Array.isArray(data.data) && data.data.length) allFees = data.data;
+        else if(Array.isArray(data) && data.length) allFees = data;
+
+        // Server वाला मिला तो Local में भी Save कर दो ताकि Offline भी दिखे
+        if(allFees.length) localStorage.setItem('pal_fees_'+user.id, JSON.stringify(allFees));
+
+    } catch(e){
+        console.warn('Server Fees Load Fail:', e);
+    }
 
     if (!allFees.length) {
         feesContent.innerHTML = `<div class="text-center py-4 text-muted">No fees record yet</div>`;
         return;
     }
 
-    let html = `<div class="header-row"><div>राशि</div><div>तारीख</div><div>माह</div></div>`;
+    let html = `<div style="display:grid;grid-template-columns:80px 90px 60px;background:#f0f7ff;font-size:10px;font-weight:800;border-bottom:1px solid #dbeafe"><div style="padding:5px;text-align:center">राशि</div><div style="padding:5px;text-align:center">तारीख</div><div style="padding:5px;text-align:center">माह</div></div>`;
     allFees.forEach(f=>{
-        html += `<div class="entry-grid"><div>₹${f.amount}</div><div>${f.date||''}</div><div>${f.month||''}</div></div>`;
+        html += `<div style="display:grid;grid-template-columns:80px 90px 60px;border-bottom:1px dashed #e5e7eb;font-size:10px"><div style="padding:6px;text-align:center">₹${f.amount}</div><div style="padding:6px;text-align:center">${f.date||''}</div><div style="padding:6px;text-align:center">${f.month||''}</div></div>`;
     });
     feesContent.innerHTML = html;
 }
-
-
 
 
 
