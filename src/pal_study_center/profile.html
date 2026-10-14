@@ -59,14 +59,23 @@ body{background:#fdf6ee;font-family:Poppins,sans-serif}
     <div style="font-weight:800;font-size:10px;color:#FDE68A">॥ श्री गणेशाय नमः ॥</div>
     <span id="dashStatus" class="badge bg-light text-dark" style="font-size:9px">ACTIVE</span>
   </div>
-  <div class="d-flex align-items-center gap-2 mt-2">
-    <img id="pImg" style="width:42px;height:42px;border-radius:50%;border:1.5px solid #fff" src="https://via.placeholder.com/100">
-    <div style="line-height:1.1">
-      <div id="pName" style="font-weight:800;font-size:13px">Name</div>
-      <small id="pPhone" style="color:#FDE68A;font-size:10px;font-weight:600"></small><br>
-      <small id="pBoard" style="font-size:9px;opacity:.8"></small> <small id="pClass" style="font-size:9px;opacity:.8"></small>
+  
+  <div class="d-flex align-items-center gap-3 mt-3">
+    <div style="position:relative;">
+      <img id="pImg" style="width:64px;height:64px;border-radius:18px;border:2px solid #fff; object-fit:cover; box-shadow:0 6px 16px rgba(0,0,0,.25);" src="https://via.placeholder.com/100">
+      <span style="position:absolute; bottom:-4px; right:-4px; background:#22c55e; width:14px; height:14px; border-radius:50%; border:2px solid #fff; display:block;"></span>
+    </div>
+    <div style="line-height:1.2;">
+      <div id="pName" style="font-weight:900;font-size:17px; color:#fff;">Name</div>
+      <div id="pPhone" style="color:#FDE68A;font-size:12px;font-weight:700; margin-top:2px;"></div>
+      <div style="display:flex; gap:6px; margin-top:6px;">
+        <small id="pBoard" style="font-size:9px; opacity:.9; color:#fff; letter-spacing:.3px;"></small>
+        <small style="font-size:9px; opacity:.5; color:#fff;">•</small>
+        <small id="pClass" style="font-size:10px; font-weight:800; color:#FDE68A;"></small>
+      </div>
     </div>
   </div>
+  
   <div class="filter-grid mt-2">
     <button onclick="sendFeeReminder()" class="glass-btn">💰 फीस रिमाइंडर<small>WhatsApp</small></button>
     <button onclick="sendLeaveNotice()" class="glass-btn">🏖️ अवकाश<small>Auto Msg</small></button>
