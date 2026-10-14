@@ -409,14 +409,18 @@ function renderAll(){
 }
 
 function deleteKhata(id){
- let used = vouchers.some(v=>v.from==id || v.to==id);
- if(used){ alert('ये खाता लेन-देन में इस्तेमाल हुआ है, पहले लेन-देन हटाओ'); return; }
- if(!confirm('खाता हटाना है?')) return;
+ let related = vouchers.filter(v=>String(v.from)==String(id) || String(v.to)==String(id));
+ if(related.length > 0){
+   if(!confirm(`इस खाते में ${related.length} लेन-देन जुड़े हैं।\nक्या खाता + सारी Entry दोनों हटानी हैं?`)) return;
+   vouchers = vouchers.filter(v=>String(v.from)!=String(id) && String(v.to)!=String(id));
+ }
+ if(!confirm('खाता पक्का हटाना है?')) return;
  khatas = khatas.filter(k=>String(k.id)!=String(id));
- save(); renderAll(); renderVoucher();
+ save(); 
+ renderAll(); 
+ renderVoucher();
+ if(document.getElementById('detailBox').style.display=='block') backToList();
 }
-  
-
 
    
 function openDetail(id){
