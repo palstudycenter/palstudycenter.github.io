@@ -373,11 +373,14 @@ function onNatureChange(){
  
  let from=[],to=[];
 
- // सामान्य खाते-से-खाते ट्रांसफर में सभी खाते दोनों सूचियों में उपलब्ध रहें।
+  // किसी भी खाते से किसी भी खाते में - सही Logic
  if(nat=='direct_transfer'){
-   from=all;
-   to=all;
+   // व्यय से कभी पैसा नहीं लिया जाता
+   from=all.filter(k=>k.type!='व्यय');
+   // आय में कभी पैसा नहीं दिया जाता
+   to=all.filter(k=>k.type!='आय');
  }
+   
  else if(nat=='aay'){
    from=all.filter(k=>k.type=='आय');
    to=[...cash,...bank];
