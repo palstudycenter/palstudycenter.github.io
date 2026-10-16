@@ -111,9 +111,7 @@ ______________________________________________
     <div class="row g-2">
       <div class="col-6"><button onclick="openLedger('create')" class="home-tool-btn" id="bCreate">➕ नया खाता</button></div>
       <div class="col-6"><button onclick="openLedger('voucher')" class="home-tool-btn" id="bVoucher">💸 लेन-देन</button></div> 
-      <div class="col-6"><button onclick="openLedger('khata')" class="home-tool-btn" id="bKhata">📖 खाताबही</button></div>
-     
-      <div class="col-6"><button onclick="openAnnualPL()" class="home-tool-btn" id="bPL">📊 बैलेंस शीट</button></div>
+      <div class="col-12"><button onclick="openLedger('khata')" class="home-tool-btn" id="bKhata">📖 खाताबही</button></div>
     </div>
   </div>
 </div>
@@ -126,8 +124,21 @@ ______________________________________________
 </div>
 
 <div id="tab-khata" style="display:none">
-<div id="filterWrap">
+
+  <div id="filterWrap">
   <div class="row g-2">
+
+    <div class="col-12">
+      <div class="card p-2" style="border:1.5px solid #174a7e;border-radius:12px;">
+        <div style="background:#174a7e;color:#fff;font-weight:800;font-size:11px;padding:5px 8px;border-radius:8px;text-align:center;margin-bottom:6px">📊 आय / व्यय व लाभ-हानि</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px">
+          <button onclick="filterKhata(this,'आय')" class="filter-btn">💰 आय<small id="amt-आय">₹0</small></button>
+          <button onclick="filterKhata(this,'व्यय')" class="filter-btn">🏠 व्यय<small id="amt-व्यय">₹0</small></button>
+          <div style="background:#f0f7ff;color:#174a7e;border:1.5px solid #174a7e;border-radius:8px;padding:6px;text-align:center;font-size:11px;font-weight:800;display:flex;flex-direction:column;justify-content:center">लाभ<br><span id="profit-mini">₹0</span></div>
+        </div>
+      </div>
+    </div>
+    
     <div class="col-6">
       <div class="card p-2" style="border:1.5px solid #174a7e;border-radius:12px;height:100%">
         <div style="background:#174a7e;color:#fff;font-weight:800;font-size:11px;padding:4px 8px;border-radius:8px;text-align:center;margin-bottom:6px">🟢 संपत्ति <br><span id="tot-asset">₹0</span></div>
@@ -136,30 +147,31 @@ ______________________________________________
           <button onclick="filterKhata(this,'बैंक')" class="filter-btn">🏦 बैंक<small id="amt-बैंक">₹0</small></button>
           <button onclick="filterKhata(this,'एसेट')" class="filter-btn">🏆 एसेट<small id="amt-एसेट">₹0</small></button>
           <button onclick="filterKhata(this,'उधारी दी')" class="filter-btn">🤝 दी<small id="amt-उधारी दी">₹0</small></button>
-          <button onclick="filterKhata(this,'आय')" class="filter-btn">💰 आय<small id="amt-आय">₹0</small></button>
-          <button onclick="filterKhata(this,'व्यय')" class="filter-btn">🏠 व्यय<small id="amt-व्यय">₹0</small></button>
         </div>
-        <div style="background:#f0f7ff;color:#174a7e;border:1.5px solid #174a7e;border-radius:8px;padding:4px;text-align:center;margin-top:6px;font-size:10px;font-weight:700">लाभ: <span id="profit-mini">₹0</span></div>
       </div>
     </div>
+
     <div class="col-6">
       <div class="card p-2" style="border:1.5px solid #174a7e;border-radius:12px;height:100%">
-        <div style="background:#174a7e;color:#fff;font-weight:800;font-size:11px;padding:4px 8px;border-radius:8px;text-align:center;margin-bottom:6px">🔴 देनदारी + पूंजी <br><span id="tot-liab">₹0</span></div>
+        <div style="background:#174a7e;color:#fff;font-weight:800;font-size:11px;padding:4px 8px;border-radius:8px;text-align:center;margin-bottom:6px">🔵 देनदारी + पूंजी <br><span id="tot-liab">₹0</span></div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
           <button onclick="filterKhata(this,'उधारी ली')" class="filter-btn">🙏 ली<small id="amt-उधारी ली">₹0</small></button>
           <button onclick="filterKhata(this,'लोन')" class="filter-btn">🏦 लोन<small id="amt-लोन">₹0</small></button>
           <button onclick="filterKhata(this,'परिवार')" class="filter-btn" style="grid-column:span 2">👨‍👩‍👧 परिवार<small id="amt-परिवार">₹0</small></button>
         </div>
-        <div style="background:#f0f7ff;border:1.5px solid #174a7e;border-radius:8px;padding:6px;text-align:center;margin-top:6px">
-          <small style="font-size:9px;color:#174a7e">कुल + लाभ</small><br><b id="tot-liab-full" style="font-size:12px;color:#174a7e">₹0</b>
-          <div id="balance-status" style="font-size:9px;font-weight:800;margin-top:2px;color:#174a7e"></div>
-        </div>
       </div>
     </div>
-  </div>
-</div>
-  
 
+    <div class="col-12">
+      <div class="card p-2" style="border:1.5px solid #174a7e;border-radius:10px;background:#f0f7ff;display:flex;justify-content:space-between;align-items:center;padding:8px 12px !important">
+        <div style="font-size:11px;font-weight:800;color:#174a7e">📘 बैलेंस शीट (कुल + लाभ): <b id="tot-liab-full">₹0</b></div>
+        <div id="balance-status" style="font-size:10px;font-weight:800"></div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+  
 <div id="listWrap" class="mt-2" style="display:none">
   <div class="card p-3">
     <div class="d-flex justify-content-between align-items-center mb-2">
@@ -320,7 +332,9 @@ function showTab(t){
  document.getElementById('ledgerSubSec').style.display='none';
  document.querySelectorAll('.header .action-btn').forEach(b=>b.classList.remove('active'));
  if(t=='home'){document.getElementById('tab-home').style.display='block';document.getElementById('bH').classList.add('active');}
+
  else if(t=='ledger'){document.getElementById('ledgerSubSec').style.display='block';document.getElementById('bK').classList.add('active');}
+
  else if(t=='prabandhan'){document.getElementById('tab-prabandhan').style.display='block';document.getElementById('bO').classList.add('active');updatePrabandhanCount();}
  else if(['vendor','family','dev','guest','nautaniya','bhojan'].includes(t)){
   document.getElementById('tab-'+t).style.display='block';
@@ -914,26 +928,6 @@ function calcPL(){
     <div id="plResult" class="mt-3"></div>
   </div>
   </div>
-
-  <button onclick="auditBalance()" style="position:fixed;bottom:10px;right:10px;z-index:9999;padding:10px;background:red;color:white;border-radius:8px">ऑडिट चेक</button>
-<script>
-function auditBalance(){
-  let msg="";
-  let totalOp=0;
-  khatas.forEach(k=>{
-    let op=+k.op||0;
-    if(!op) return;
-    let isAssetSide=['नकद','बैंक','एसेट','उधारी दी','व्यय'].includes(k.type);
-    let sign=k.side=='jama'?1:-1;
-    let effect=isAssetSide?sign*op:-sign*op;
-    totalOp+=effect;
-    msg+=`${k.name} (${k.type}) op=${op} side=${k.side}\n`;
-  });
-  msg+=`\nOpening से अंतर: ${totalOp}\n`;
-  msg+=`स्क्रीन पर अंतर -7629 से मिलना चाहिए`;
-  alert(msg);
-}
-</script>
 
 </body>
 </html>
