@@ -11,8 +11,26 @@ body{background:#fdf6ee;font-family:Poppins,sans-serif}
 .action-btn{background:rgba(255,255,255,0.15)!important;color:#fff!important;border:1.5px solid rgba(255,255,255,.4)!important;border-radius:22px!important;font-weight:600!important;padding:6px 12px!important;font-size:13px}
 .action-btn.active{background:#fff!important;color:#174a7e!important}
 .filter-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
-.filter-btn{background:linear-gradient(135deg,#174a7e 0%,#1e6fa5 100%)!important;color:#fff!important;border:none!important;border-radius:12px!important;font-weight:700!important;min-height:88px!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important}
-.filter-btn.active{background:#fff!important;color:#174a7e!important;border:2px solid #174a7e!important}
+
+.filter-btn{
+ background:linear-gradient(135deg,#174a7e 0%,#1e6fa5 100%)!important;
+ color:#fff!important;
+ border:none!important;
+ border-radius:12px!important;
+ font-weight:700!important;
+ min-height:88px!important;
+ display:flex!important;
+ flex-direction:column!important;
+ align-items:center!important;
+ justify-content:center!important;
+}
+.filter-btn.active{
+ background:#fff!important;
+ color:#174a7e!important;
+ border:2px solid #174a7e!important;
+}  
+  
+  .filter-btn.active{background:#fff!important;color:#174a7e!important;border:2px solid #174a7e!important}
 .khata-btn{background:#fff;border:1px solid #e6eef7;border-radius:12px;padding:10px;width:100%;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}
 .ledger-white-card{background:#fff;border-radius:16px;border:1px solid #dbeafe;overflow:hidden}
 .ledger-top{background:#f0f7ff;padding:10px;border-bottom:1.5px solid #dbeafe;font-weight:700;color:#174a7e}
@@ -108,43 +126,107 @@ ______________________________________________
 </div>
 
 <div id="tab-khata" style="display:none">
-<div id="filterWrap"><div class="card p-2"><div class="filter-grid" id="filterBar">
-<button onclick="filterKhata(this,'नकद')" class="filter-btn active">💵 नकद<small id="amt-नकद">₹0</small></button>
-<button onclick="filterKhata(this,'बैंक')" class="filter-btn">🏦 बैंक<small id="amt-बैंक">₹0</small></button>
-<button onclick="filterKhata(this,'आय')" class="filter-btn">💰 आय<small id="amt-आय">₹0</small></button>
-<button onclick="filterKhata(this,'व्यय')" class="filter-btn">🏠 व्यय<small id="amt-व्यय">₹0</small></button>
-<button onclick="filterKhata(this,'उधारी दी')" class="filter-btn">🤝 दी<small id="amt-उधारी दी">₹0</small></button>
-<button onclick="filterKhata(this,'उधारी ली')" class="filter-btn">🙏 ली<small id="amt-उधारी ली">₹0</small></button>
-<button onclick="filterKhata(this,'एसेट')" class="filter-btn">🏆 एसेट<small id="amt-एसेट">₹0</small></button>
-<button onclick="filterKhata(this,'परिवार')" class="filter-btn">👨‍👩‍👧 परिवार<small id="amt-परिवार">₹0</small></button>
-<button onclick="filterKhata(this,'लोन')" class="filter-btn">🏦 लोन<small id="amt-लोन">₹0</small></button>
-</div></div></div>
-<div id="listWrap" class="mt-2"><div class="card p-3"><div id="allList"></div></div></div>
+<div id="filterWrap">
+  <div class="row g-2">
+    <div class="col-6">
+      <div class="card p-2" style="border:1.5px solid #174a7e;border-radius:12px;height:100%">
+        <div style="background:#174a7e;color:#fff;font-weight:800;font-size:11px;padding:4px 8px;border-radius:8px;text-align:center;margin-bottom:6px">🟢 संपत्ति <br><span id="tot-asset">₹0</span></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
+          <button onclick="filterKhata(this,'नकद')" class="filter-btn active">💵 नकद<small id="amt-नकद">₹0</small></button>
+          <button onclick="filterKhata(this,'बैंक')" class="filter-btn">🏦 बैंक<small id="amt-बैंक">₹0</small></button>
+          <button onclick="filterKhata(this,'एसेट')" class="filter-btn">🏆 एसेट<small id="amt-एसेट">₹0</small></button>
+          <button onclick="filterKhata(this,'उधारी दी')" class="filter-btn">🤝 दी<small id="amt-उधारी दी">₹0</small></button>
+          <button onclick="filterKhata(this,'आय')" class="filter-btn">💰 आय<small id="amt-आय">₹0</small></button>
+          <button onclick="filterKhata(this,'व्यय')" class="filter-btn">🏠 व्यय<small id="amt-व्यय">₹0</small></button>
+        </div>
+        <div style="background:#f0f7ff;color:#174a7e;border:1.5px solid #174a7e;border-radius:8px;padding:4px;text-align:center;margin-top:6px;font-size:10px;font-weight:700">लाभ: <span id="profit-mini">₹0</span></div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="card p-2" style="border:1.5px solid #174a7e;border-radius:12px;height:100%">
+        <div style="background:#174a7e;color:#fff;font-weight:800;font-size:11px;padding:4px 8px;border-radius:8px;text-align:center;margin-bottom:6px">🔴 देनदारी + पूंजी <br><span id="tot-liab">₹0</span></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
+          <button onclick="filterKhata(this,'उधारी ली')" class="filter-btn">🙏 ली<small id="amt-उधारी ली">₹0</small></button>
+          <button onclick="filterKhata(this,'लोन')" class="filter-btn">🏦 लोन<small id="amt-लोन">₹0</small></button>
+          <button onclick="filterKhata(this,'परिवार')" class="filter-btn" style="grid-column:span 2">👨‍👩‍👧 परिवार<small id="amt-परिवार">₹0</small></button>
+        </div>
+        <div style="background:#f0f7ff;border:1.5px solid #174a7e;border-radius:8px;padding:6px;text-align:center;margin-top:6px">
+          <small style="font-size:9px;color:#174a7e">कुल + लाभ</small><br><b id="tot-liab-full" style="font-size:12px;color:#174a7e">₹0</b>
+          <div id="balance-status" style="font-size:9px;font-weight:800;margin-top:2px;color:#174a7e"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+<div id="listWrap" class="mt-2" style="display:none">
+  <div class="card p-3">
+    <div class="d-flex justify-content-between align-items-center mb-2">
+      <button onclick="backToFilter()" class="btn btn-sm text-white" style="background:#174a7e;border-radius:20px;font-size:11px">⬅️ बैक</button>
+      <h6 id="listTitle" style="color:#174a7e;margin:0;font-size:13px;font-weight:800"></h6>
+      <span style="width:50px"></span>
+    </div>
+    <div id="allList"></div>
+  </div>
+</div>
+
 <div id="detailBox" style="display:none"></div>
 </div>
-
-<div id="tab-voucher" style="display:none"><div class="card p-3"><h6 class="text-center">💸 लेन-देन - पूरा वर्किंग</h6>
-<select id="vNature" onchange="onNatureChange()" class="form-select form-select-sm"><option value="">-- प्रकार चुनें --</option><option value="aay">💰 आय</option><option value="kharch">🏠 खर्च</option><option value="udhar_diya">🤝 उधारी दी</option><option value="udhar_vapas_aaya">💵 वापस आई</option><option value="udhar_liya">🙏 उधारी ली</option><option value="udhar_vapas_diya">↩️ वापस दी</option><option value="asset_kharida">🏆 एसेट खरीदा</option><option value="asset_becha">💍 एसेट बेचा</option><option value="direct_transfer">🔁 किसी भी खाते से किसी भी खाते में ट्रांसफर</option><option value="bank_to_cash">🏦 बैंक से नकद</option><option value="cash_to_bank">💵 नकद से बैंक</option><option value="family_diya">👨‍👩‍👧 दिया</option><option value="family_liya">👨‍👩‍👧 लिया</option><option value="loan_emi">🏦 EMI भरी</option></select>
-<div class="row g-2 mt-2"><div class="col-6"><input id="vDate" type="date" class="form-control form-control-sm"></div><div class="col-6"><input id="vAmt" type="number" class="form-control form-control-sm" placeholder="राशि"></div><div class="col-6"><select id="vFrom" class="form-select form-select-sm"></select><small>से (From)</small></div><div class="col-6"><select id="vTo" class="form-select form-select-sm"></select><small>में (To)</small></div><div class="col-12"><input id="vNar" class="form-control form-control-sm" placeholder="विवरण - जैसे फंक्शन हलवाई"></div><div class="col-12"><button onclick="saveVoucher()" class="btn w-100 text-white" style="background:#174a7e">सेव लेन-देन</button></div></div>
-<div id="vHist" class="mt-3"></div>
-</div></div>
-
-<div id="tab-create" style="display:none"><div class="card p-3"><h6>➕ नया खाता</h6><select id="cType" onchange="onCTypeChange()" class="form-select form-select-sm my-2"><option value="नकद">💵 नकद</option><option value="बैंक">🏦 बैंक</option><option value="आय">💰 आय</option><option value="व्यय">🏠 व्यय</option><option value="उधारी दी">🤝 उधारी दी</option><option value="उधारी ली">🙏 उधारी ली</option><option value="एसेट">🏆 एसेट</option><option value="परिवार">👨‍👩‍👧 परिवार</option><option value="लोन">🏦 लोन</option></select><input id="cName" list="suggestName" class="form-control form-control-sm my-2" placeholder="नाम लिखें"><datalist id="suggestName"></datalist><input id="cOp" type="number" class="form-control form-control-sm my-2" placeholder="ओपनिंग राशि"><select id="cSide" class="form-select form-select-sm my-2"><option value="jama">✅ जमा</option><option value="dena">❌ देना</option></select><button onclick="createKhata()" class="btn w-100 text-white" style="background:#174a7e">सेव खाता</button></div></div>
-
-<div id="tab-prabandhan" style="display:none">
-<div class="card p-2"><h6 style="color:#174a7e;font-size:12px;font-weight:800;margin:0 0 8px 4px">📋 प्रबंधन - शादी वाले 6 वर्किंग</h6>
-<div class="filter-grid">
-<button onclick="showTab('vendor')" class="filter-btn">🔧<br>वेंडर<small id="cnt-vendor">0</small></button>
-<button onclick="showTab('family')" class="filter-btn">👨‍👩‍👧<br>फैमिली<small id="cnt-family">0</small></button>
-<button onclick="showTab('dev')" class="filter-btn">🕉️<br>देव<small id="cnt-dev">0</small></button>
-<button onclick="showTab('guest')" class="filter-btn">👥<br>मेहमान<small id="cnt-guest">0</small></button>
-<button onclick="showTab('nautaniya')" class="filter-btn">🙏<br>नौटानिया<small id="cnt-nautaniya">0</small></button>
-<button onclick="openBhojanProgList()" class="filter-btn">🍛<br>मेनू<small id="cnt-bhojan">0</small></button>
-</div></div>
-<div class="card p-2 mt-2"><div class="row g-2"><div class="col-6"><button onclick="document.getElementById('excelFile').click()" class="home-tool-btn">📥 Excel अपलोड</button><input type="file" id="excelFile" hidden accept=".xlsx,.xls" onchange="importExcel()"></div><div class="col-6"><button onclick="downloadGuestTemplate()" class="home-tool-btn">📄 Template</button></div></div><div id="fileName" class="small mt-1 text-center" style="color:#174a7e"></div></div>
+<!-- LEDGER: CREATE -->
+<div id="tab-create" style="display:none">
+  <div class="card p-3">
+    <h6 style="color:#174a7e;font-weight:800">➕ नया खाता बनाएं</h6>
+    <select id="cType" onchange="onCTypeChange()" class="form-select form-select-sm my-2">
+      <option value="नकद">नकद</option><option value="बैंक">बैंक</option>
+      <option value="आय">आय</option><option value="व्यय">व्यय</option>
+      <option value="उधारी दी">उधारी दी</option><option value="उधारी ली">उधारी ली</option>
+      <option value="एसेट">एसेट</option><option value="परिवार">परिवार</option><option value="लोन">लोन</option>
+    </select>
+    <input id="cName" list="suggestName" class="form-control form-control-sm my-2" placeholder="खाते का नाम">
+    <datalist id="suggestName"></datalist>
+    <div class="row g-2"><div class="col-6"><input id="cOp" type="number" class="form-control form-control-sm" placeholder="ओपनिंग बैलेंस"></div>
+    <div class="col-6"><select id="cSide" class="form-select form-select-sm"><option value="jama">जमा</option><option value="dena">देना</option></select></div></div>
+    <button onclick="createKhata()" class="btn w-100 mt-3 text-white" style="background:#174a7e">सेव करें</button>
+  </div>
 </div>
 
+<!-- LEDGER: VOUCHER -->
+<div id="tab-voucher" style="display:none">
+  <div class="card p-3">
+    <h6 style="color:#174a7e;font-weight:800">💸 लेन-देन (Voucher)</h6>
+    <select id="vNature" onchange="onNatureChange()" class="form-select form-select-sm my-2">
+      <option value="">-- प्रकार चुनें --</option>
+      <option value="contra">Contra - नकद/बैंक</option>
+      <option value="receipt">Receipt - आया</option>
+      <option value="payment">Payment - गया</option>
+      <option value="journal">Journal</option>
+      <option value="purchase">Purchase - एसेट खरीदा</option>
+      <option value="sales">Sales - एसेट बेचा</option>
+    </select>
+    <input id="vDate" type="date" class="form-control form-control-sm my-2">
+    <div class="row g-2"><div class="col-6"><select id="vFrom" class="form-select form-select-sm"></select></div><div class="col-6"><select id="vTo" class="form-select form-select-sm"></select></div></div>
+    <div class="row g-2 mt-1"><div class="col-6"><input id="vAmt" type="number" class="form-control form-control-sm" placeholder="राशि"></div><div class="col-6"><input id="vNar" class="form-control form-control-sm" placeholder="विवरण"></div></div>
+    <button onclick="saveVoucher()" class="btn w-100 mt-3 text-white" style="background:#174a7e">लेन-देन सेव</button>
+    <div id="vHist" class="mt-3"></div>
+  </div>
+</div>
 
+<!-- PRABANDHAN MENU -->
+<div id="tab-prabandhan" style="display:none">
+  <div class="card p-2">
+    <h6 style="color:#174a7e;font-weight:800">📋 प्रबंधन</h6>
+    <div class="row g-2 mt-1">
+      <div class="col-6"><button onclick="showTab('vendor')" class="home-tool-btn">🔧 वेंडर (<span id="cnt-vendor">0</span>)</button></div>
+      <div class="col-6"><button onclick="showTab('family')" class="home-tool-btn">👨‍👩‍👧 फैमिली (<span id="cnt-family">0</span>)</button></div>
+      <div class="col-6"><button onclick="showTab('dev')" class="home-tool-btn">🕉️ देव (<span id="cnt-dev">0</span>)</button></div>
+      <div class="col-6"><button onclick="showTab('guest')" class="home-tool-btn">👥 मेहमान (<span id="cnt-guest">0</span>)</button></div>
+      <div class="col-6"><button onclick="showTab('nautaniya')" class="home-tool-btn">🙏 नौटानिया (<span id="cnt-nautaniya">0</span>)</button></div>
+      <div class="col-6"><button onclick="showTab('bhojan')" class="home-tool-btn">🍛 भोजन (<span id="cnt-bhojan">0</span>)</button></div>
+      <div class="col-12 mt-2"><div class="card p-2"><input type="file" id="excelFile" class="form-control form-control-sm"><button onclick="importExcel()" class="btn btn-sm w-100 mt-2 text-white" style="background:#174a7e">Excel Import</button><small id="fileName"></small><button onclick="downloadGuestTemplate()" class="btn btn-sm w-100 mt-2" style="background:#f0f7ff">Template डाउनलोड</button></div></div>
+    </div>
+  </div>
+</div>
   
 <div id="tab-vendor" style="display:none"><div class="row g-2"><div class="col-lg-4"><div class="card p-3"><div class="d-flex justify-content-between"><h6 style="color:#174a7e">🔧 वेंडर</h6><button onclick="showTab('prabandhan')" class="btn btn-sm text-white" style="background:#174a7e">⬅️</button></div><select id="vType" class="form-select form-select-sm my-1"><option>🏨 रिसोर्ट</option><option>⛺ टेंट</option><option>💡 लाइट</option><option>🍪 हलवाई</option><option>📸 फोटोग्राफर</option><option>📿 पंडित जी</option></select><input id="vName" class="form-control form-control-sm my-1" placeholder="नाम"><input id="vPhone" class="form-control form-control-sm my-1" placeholder="फोन"><input id="vPrice" type="number" class="form-control form-control-sm my-1" placeholder="कुल"><input id="vAdvance" type="number" class="form-control form-control-sm my-1" placeholder="एडवांस"><div class="bg-light p-2 rounded mt-2"><b style="font-size:11px">📅 तारीख</b><div id="scheduleList"></div><div class="d-flex gap-1 mt-2"><input id="tempDate" type="date" class="form-control form-control-sm"><input id="tempTime" type="time" class="form-control form-control-sm"></div><input id="tempNote" class="form-control form-control-sm mt-1" placeholder="काम"><button onclick="addScheduleRow()" class="btn btn-sm w-100 mt-1 text-white" style="background:#174a7e">+ जोड़ें</button></div><button onclick="addVendor()" class="btn btn-sm w-100 mt-2 text-white" style="background:#174a7e">वेंडर जोड़ें</button></div><div class="card p-2 mt-2"><b>कुल: ₹<span id="totalCost">0</span> | एड: ₹<span id="totalAdv">0</span> | बाकी: ₹<span id="totalBal">0</span></b></div></div><div class="col-lg-8"><div class="row g-2" id="vendorList"></div></div></div></div>
 
@@ -252,14 +334,15 @@ function showTab(t){
  }
   }
 
-  function openLedger(sub){
+function openLedger(sub){
  ['khata','voucher','create'].forEach(x=>{
-  document.getElementById('tab-'+x).style.display='none';
+  let el=document.getElementById('tab-'+x);
+  if(el) el.style.display='none';
  });
  document.getElementById('tab-'+sub).style.display='block';
  if(sub=='khata'){
   document.getElementById('filterWrap').style.display='block';
-  document.getElementById('listWrap').style.display='block';
+  document.getElementById('listWrap').style.display='none';
   document.getElementById('detailBox').style.display='none';
   renderAll();
  }
@@ -268,14 +351,31 @@ function showTab(t){
 
 function filterKhata(el,f){
  currentFilter=f;
- document.querySelectorAll('#filterBar .filter-btn').forEach(b=>b.classList.remove('active'));
+ document.querySelectorAll('#tab-khata .filter-btn').forEach(b=>b.classList.remove('active'));
  if(el) el.classList.add('active');
+ document.getElementById('filterWrap').style.display='none';
+ document.getElementById('listWrap').style.display='block';
+ document.getElementById('detailBox').style.display='none';
  renderAll();
 }
+function backToFilter(){
+ document.getElementById('filterWrap').style.display='block';
+ document.getElementById('listWrap').style.display='none';
+ document.getElementById('detailBox').style.display='none';
+}
+function backToList(){
+ document.getElementById('filterWrap').style.display='none';
+ document.getElementById('listWrap').style.display='block';
+ document.getElementById('detailBox').style.display='none';
+   }  
   
- 
+ function getTypeTotal(t){ return khatas.filter(k=>k.type==t).reduce((s,k)=>s+getBal(k.id).display,0); }
+
 function renderAll(){
  let list=khatas.filter(k=>k.type==currentFilter);
+ let titleEl=document.getElementById('listTitle');
+ if(titleEl) titleEl.innerText=currentFilter+' ('+list.length+')';
+
  let html=list.map(k=>{
   let b=getBal(k.id);
   return `<div class="khata-btn" style="display:flex;justify-content:space-between;align-items:center;">
@@ -286,12 +386,27 @@ function renderAll(){
     </div>
   </div>`;
  }).join('')||'<small>इस प्रकार में कोई खाता नहीं</small>';
- document.getElementById('allList').innerHTML=`<h6 style="color:#174a7e">${currentFilter} (${list.length})</h6>`+html;
+ 
+ document.getElementById('allList').innerHTML=html;
+
+ // totals
  ["नकद","बैंक","आय","व्यय","उधारी दी","उधारी ली","एसेट","परिवार","लोन"].forEach(t=>{
   let tot=khatas.filter(k=>k.type==t).reduce((s,k)=>s+getBal(k.id).display,0);
   let el=document.getElementById('amt-'+t); if(el) el.innerText='₹'+tot;
  });
-}
+
+ let totAsset = getTypeTotal('नकद')+getTypeTotal('बैंक')+getTypeTotal('एसेट')+getTypeTotal('उधारी दी');
+ let totLiab = getTypeTotal('उधारी ली')+getTypeTotal('लोन')+getTypeTotal('परिवार');
+ let profit = getTypeTotal('आय') - getTypeTotal('व्यय');
+ let totLiabFull = totLiab + profit;
+
+ let el1=document.getElementById('tot-asset'); if(el1) el1.innerText='₹'+totAsset;
+ let el2=document.getElementById('tot-liab'); if(el2) el2.innerText='₹'+totLiab;
+ let el3=document.getElementById('profit-mini'); if(el3) el3.innerText='₹'+profit;
+ let el4=document.getElementById('tot-liab-full'); if(el4) el4.innerText='₹'+totLiabFull;
+ let el5=document.getElementById('balance-status'); 
+ if(el5) el5.innerHTML = totAsset==totLiabFull ? '✅ बैलेंस बराबर' : '⚠️ अंतर ₹'+(totAsset-totLiabFull);
+                                              } 
 
 function deleteKhata(id){
  let related = vouchers.filter(v=>String(v.from)==String(id) || String(v.to)==String(id));
@@ -345,12 +460,6 @@ function openDetail(id){
  }
 }
 
-function backToList(){
- document.getElementById('filterWrap').style.display='block';
- document.getElementById('listWrap').style.display='block';
- document.getElementById('detailBox').style.display='none';
- renderAll();
-}
 
 function onCTypeChange(){
  let t=document.getElementById('cType').value;
@@ -361,104 +470,30 @@ function onCTypeChange(){
 }
 
 function onNatureChange(){
- let nat=document.getElementById('vNature').value;
- let cash=khatas.filter(k=>k.type=='नकद');
- let bank=khatas.filter(k=>k.type=='बैंक');
- let all=khatas;
- 
- function opt(l){
-   if(l.length==0) return '<option value="">कोई खाता नहीं</option>';
-   return l.map(k=>`<option value="${k.id}">${k.name} (${k.type})</option>`).join('');
- }
-
-
-let from=[],to=[];
-if(nat=='direct_transfer'){
-  const notAllowed = ['आय','व्यय'];
-  from=all.filter(k=>!notAllowed.includes(k.type));
-  to=all.filter(k=>!notAllowed.includes(k.type));
+  const nat = document.getElementById('vNature').value;
+  const cashBank = khatas.filter(k=>['नकद','बैंक'].includes(k.type));
+  let fromList=[], toList=[], nar='';
+  if(nat=='contra'){ fromList=cashBank; toList=cashBank; nar='नकद जमा/निकासी'; }
+  if(nat=='receipt'){ fromList=khatas.filter(k=>['आय','उधारी दी','उधारी ली','परिवार','लोन','एसेट'].includes(k.type)); toList=cashBank; nar='रुपया आया'; }
+  if(nat=='payment'){ fromList=cashBank; toList=khatas.filter(k=>['व्यय','उधारी दी','उधारी ली','परिवार','लोन','एसेट'].includes(k.type)); nar='रुपया गया / खर्च'; }
+  if(nat=='journal'){ fromList=khatas; toList=khatas; nar='हिसाब समायोजन'; }
+  if(nat=='purchase'){ fromList=cashBank; toList=khatas.filter(k=>k.type=='एसेट'); nar='एसेट खरीदा'; }
+  if(nat=='sales'){ fromList=khatas.filter(k=>k.type=='एसेट'); toList=cashBank; nar='एसेट बेचा'; }
+  if(nat==''){ 
+    document.getElementById('vFrom').innerHTML='<option value="">-- पहले प्रकार चुनें --</option>';
+    document.getElementById('vTo').innerHTML='<option value="">-- पहले प्रकार चुनें --</option>';
+    document.getElementById('vNar').value='';
+    return;
   }
-  
- 
-   
- else if(nat=='aay'){
-   from=all.filter(k=>k.type=='आय');
-   to=[...cash,...bank];
- }
- else if(nat=='kharch'){
-   from=[...cash,...bank];
-   to=all.filter(k=>k.type=='व्यय');
- }
- else if(nat=='udhar_diya'){
-   from=[...cash,...bank];
-   to=all.filter(k=>k.type=='उधारी दी');
- }
- else if(nat=='udhar_vapas_aaya'){
-   from=all.filter(k=>k.type=='उधारी दी');
-   to=[...cash,...bank];
- }
- else if(nat=='udhar_liya'){
-   from=all.filter(k=>k.type=='उधारी ली');
-   to=[...cash,...bank];
- }
- else if(nat=='udhar_vapas_diya'){
-   from=[...cash,...bank];
-   to=all.filter(k=>k.type=='उधारी ली');
- }
- else if(nat=='asset_kharida'){
-   from=[...cash,...bank];
-   to=all.filter(k=>k.type=='एसेट');
- }
- else if(nat=='asset_becha'){
-   from=all.filter(k=>k.type=='एसेट');
-   to=[...cash,...bank];
- }
- else if(nat=='bank_to_cash'){
-   from=bank;
-   to=cash;
- }
- else if(nat=='cash_to_bank'){
-   from=cash;
-   to=bank;
- }
- else if(nat=='family_diya'){
-   from=[...cash,...bank];
-   to=all.filter(k=>k.type=='परिवार');
- }
- else if(nat=='family_liya'){
-   from=all.filter(k=>k.type=='परिवार');
-   to=[...cash,...bank];
- }
- else if(nat=='loan_emi'){
-   from=[...cash,...bank];
-   to=all.filter(k=>k.type=='लोन');
- }
- else{
-   document.getElementById('vFrom').innerHTML='<option value="">-- पहले प्रकार चुनें --</option>';
-   document.getElementById('vTo').innerHTML='<option value="">-- पहले प्रकार चुनें --</option>';
-   return;
- }
-
- document.getElementById('vFrom').innerHTML=opt(from);
- document.getElementById('vTo').innerHTML=opt(to);
+  document.getElementById('vFrom').innerHTML = fromList.map(k=>`<option value="${k.id}">${k.name} [${k.type}]</option>`).join('') || '<option>खाता नहीं</option>';
+  document.getElementById('vTo').innerHTML = toList.map(k=>`<option value="${k.id}">${k.name} [${k.type}]</option>`).join('') || '<option>खाता नहीं</option>';
+  document.getElementById('vNar').value = nar;
 }
-
+ 
 function renderVoucher(){
  document.getElementById('vDate').valueAsDate=new Date();
-
- let fromSel = document.getElementById('vFrom');
- let toSel = document.getElementById('vTo');
- if(fromSel && toSel){
-   let opts = '<option value="">-- खाता चुनें --</option>';
-   khatas.forEach(k=>{
-     opts += `<option value="${k.id}">${k.name} (${k.group})</option>`;
-   });
-   fromSel.innerHTML = opts;
-   toSel.innerHTML = opts;
- }
-
  let hist=vouchers.slice().reverse().slice(0,10).map(v=>{
-  let f=khatas.find(x=>x.id==v.from)?.name||'?', t=khatas.find(x=>x.id==v.to)?.name||'?';
+  let f=khatas.find(x=>String(x.id)==String(v.from))?.name||'?', t=khatas.find(x=>String(x.id)==String(v.to))?.name||'?';
   return `<div class="card p-2 mb-1 small"><b>₹${v.amt}</b> ${f} → ${t} | ${v.date} | ${v.nar||''}</div>`;
  }).join('')||'<small>कोई लेन-देन नहीं</small>';
  document.getElementById('vHist').innerHTML=`<h6>पिछले 10 लेन-देन</h6>`+hist;
@@ -477,24 +512,25 @@ function createKhata(){
  renderAll();
 }
 
-
 function saveVoucher(){
  let v={
    id:Date.now(),
    date:document.getElementById('vDate').value,
    amt:+document.getElementById('vAmt').value,
-   from:document.getElementById('vFrom').value, // + हटाया
-   to:document.getElementById('vTo').value,     // + हटाया
-   nar:document.getElementById('vNar').value.trim()
+   from:document.getElementById('vFrom').value,
+   to:document.getElementById('vTo').value,
+   nar:document.getElementById('vNar').value.trim(),
+   vType: document.getElementById('vNature').value
  };
  if(!v.date || !v.amt || !v.from || !v.to){alert('सब भरें');return;}
  vouchers.push(v);
  save();
  renderVoucher();
  renderAll();
- alert('✅ Direct Transfer हो गया');
+ alert('✅ '+ (v.vType || 'Voucher') +' सेव हो गया');
  document.getElementById('vAmt').value='';document.getElementById('vNar').value='';
 }
+
   
 function toggleTool(t){
  let c=document.getElementById('box-calc'), cal=document.getElementById('box-cal');
@@ -750,8 +786,6 @@ function importExcel(){
    rows.forEach((r,i)=>{if(i==0||!r[0])return;let name=r[0].toString().trim();let obj={id:idc++,cat:sh,name:name,extra:{सरनेम:r[1]||'',स्थान:r[2]||''},phone:r[3]||'',members:parseInt(r[4])||1,events:r[5]?r[5].toString().split(',').map(s=>s.trim()):["शादी"],ayaList:[],diyaList:[]};if(sh.toLowerCase().includes('नौतानिया'))nn.push(obj);else ng.push(obj);});
   });
 
-  // FIX: पुराने डाटा को हटाना नहीं, जोड़ना है
-  // नाम से चेक करके डुप्लीकेट रोकेंगे
   ng.forEach(newG=>{
     let exists = guests.some(old=> old.name.trim().toLowerCase() == newG.name.trim().toLowerCase() && old.cat == newG.cat);
     if(!exists) guests.push(newG);
@@ -774,7 +808,7 @@ function importExcel(){
  };
  reader.readAsArrayBuffer(file);
 }
-  
+
 function downloadGuestTemplate(){
  let ws=XLSX.utils.aoa_to_sheet([["Name","सरनेम","स्थान","Phone","Members","Events"],["राम यादव","यादव","मनासा","99999",4,"शादी,हल्दी"]]);
  let ws2=XLSX.utils.aoa_to_sheet([["Program","Dish","Date","Time"],["शादी","पनीर","12-05-2026","7 PM"],["शादी","दाल","12-05-2026","7 PM"]]);
@@ -783,58 +817,72 @@ function downloadGuestTemplate(){
 }
 updatePrabandhanCount();
 
+  
 function openAnnualPL(){ 
   document.getElementById('plModal').style.display='flex'; 
   calcPL(); 
 }
 
 function calcPL(){
-  // FY Start - 1 अप्रैल से रनिंग वर्ष
+  const fyYear = document.getElementById('plYear').value;
   const today = new Date();
   const fyStart = today.getMonth() >= 3 ? new Date(today.getFullYear(), 3, 1) : new Date(today.getFullYear() - 1, 3, 1);
-  const fyYear = document.getElementById('plYear').value;
 
-  // --- 1. रनिंग वर्ष का लाभ-हानि (आय - व्यय) ---
-  let totalAay = 0, totalVyay = 0;
-  vouchers.forEach(v=>{
-    let vd = new Date(v.date);
-    if(fyYear!='all' && !v.date.includes(fyYear)) return;
-    if(fyYear=='2026' && vd < fyStart) return; // 2026 चुना तो सिर्फ अप्रैल से
+  let filteredVouchers = vouchers.filter(v=>{
+    if(!v.date) return false;
+    if(fyYear!='all' && !v.date.includes(fyYear)) return false;
+    if(fyYear=='2026'){
+      let vd = new Date(v.date);
+      if(vd < fyStart) return false;
+    }
+    return true;
+  });
 
+  let fyAay = 0, fyVyay = 0;
+  filteredVouchers.forEach(v=>{
     let fromK = khatas.find(k=>String(k.id)==String(v.from));
     let toK = khatas.find(k=>String(k.id)==String(v.to));
-    if(fromK && fromK.type=='आय') totalAay += +v.amt;
-    if(toK && toK.type=='आय') totalAay += +v.amt; // आय खाते में जमा
-    if(toK && toK.type=='व्यय') totalVyay += +v.amt;
+    if(fromK && fromK.type=='आय') fyAay += +v.amt;
+    if(toK && toK.type=='व्यय') fyVyay += +v.amt;
   });
-  // सही तरीका - खातों के बैलेंस से
-  const getTypeTotal = (type) => khatas.filter(k=>k.type==type).reduce((s,k)=>s+getBal(k.id).display,0);
-  
-  // आय और व्यय का कुल display ही उनका टोटल है
-  let currAay = getTypeTotal('आय');
-  let currVyay = getTypeTotal('व्यय');
-  let currLabhHani = currAay - currVyay;
+  let fyProfit = fyAay - fyVyay;
 
-  // --- 2. बैलेंस शीट ---
-  let cash = getTypeTotal('नकद');
-  let bank = getTypeTotal('बैंक');
-  let asset = getTypeTotal('एसेट');
-  let udhariDi = getTypeTotal('उधारी दी');
-  let udhariLi = getTypeTotal('उधारी ली');
-  let loan = getTypeTotal('लोन');
-  let parivar = getTypeTotal('परिवार');
+  const getTypeTotalAll = (type) => khatas.filter(k=>k.type==type).reduce((s,k)=>s+getBal(k.id).display,0);
+  
+  function getTypeTotalFY(type){
+    let tot = 0;
+    khatas.filter(k=>k.type==type).forEach(k=>{
+      let initial = k.side=='jama' ? (+k.op||0) : -(+k.op||0);
+      let j=0,g=0;
+      filteredVouchers.forEach(v=>{
+        if(String(v.to)==String(k.id)) j+= +v.amt;
+        if(String(v.from)==String(k.id)) g+= +v.amt;
+      });
+      let shesh = initial + j - g;
+      let display = shesh;
+      if(k.type=='आय') display = -shesh;
+      if(k.type=='लोन' || k.type=='उधारी ली') display = Math.abs(shesh);
+      tot += display;
+    });
+    return tot;
+  }
+
+  let cash = fyYear=='all' ? getTypeTotalAll('नकद') : getTypeTotalFY('नकद');
+  let bank = fyYear=='all' ? getTypeTotalAll('बैंक') : getTypeTotalFY('बैंक');
+  let asset = fyYear=='all' ? getTypeTotalAll('एसेट') : getTypeTotalFY('एसेट');
+  let udhariDi = fyYear=='all' ? getTypeTotalAll('उधारी दी') : getTypeTotalFY('उधारी दी');
+  let udhariLi = fyYear=='all' ? getTypeTotalAll('उधारी ली') : getTypeTotalFY('उधारी ली');
+  let loan = fyYear=='all' ? getTypeTotalAll('लोन') : getTypeTotalFY('लोन');
+  let parivar = fyYear=='all' ? getTypeTotalAll('परिवार') : getTypeTotalFY('परिवार');
 
   let totalAsset = cash + bank + asset + udhariDi;
   let totalLiability = udhariLi + loan + parivar;
 
-  let profit = currLabhHani;
-  let isBalanced = totalAsset == (totalLiability + profit);
-
   document.getElementById('plResult').innerHTML=`
    <div style="background:#f8fafc;border-radius:12px;padding:10px;line-height:1.6;font-size:12px">
-     <b style="color:#174a7e">📊 बैलेंस शीट - ${fyYear} (आज तक)</b>
+     <b style="color:#174a7e">📊 बैलेंस शीट - ${fyYear} ${fyYear=='2026'?'(अप्रैल से आज तक)':''}</b>
      <table class="table table-sm mt-2" style="font-size:12px">
-       <tr style="background:#ecfdf5"><th colspan=2>एसेट (आपके पास)</th></tr>
+       <tr style="background:#ecfdf5"><th colspan=2>एसेट - ${filteredVouchers.length} लेनदेन</th></tr>
        <tr><td>नकद</td><td align="right">₹${cash}</td></tr>
        <tr><td>बैंक</td><td align="right">₹${bank}</td></tr>
        <tr><td>एसेट</td><td align="right">₹${asset}</td></tr>
@@ -846,18 +894,16 @@ function calcPL(){
        <tr><td>उधारी ली</td><td align="right">₹${udhariLi}</td></tr>
        <tr><td>लोन</td><td align="right">₹${loan}</td></tr>
        <tr><td>परिवार</td><td align="right">₹${parivar}</td></tr>
-       <tr style="background:${profit>=0?'#ecfdf5':'#fee2e2'};font-weight:800"><td>चालू वर्ष लाभ-हानि (${profit>=0?'लाभ':'हानि'})</td><td align="right">₹${profit}</td></tr>
-       <tr style="background:#f0f7ff;font-weight:800"><td>कुल</td><td align="right">₹${totalLiability + profit}</td></tr>
+       <tr style="background:${fyProfit>=0?'#ecfdf5':'#fee2e2'};font-weight:800"><td>लाभ ${fyYear}</td><td align="right">₹${fyProfit}</td></tr>
+       <tr style="background:#f0f7ff;font-weight:800"><td>कुल</td><td align="right">₹${totalLiability + fyProfit}</td></tr>
      </table>
-     <div class="p-2 text-center rounded" style="background:${isBalanced?'#059669':'#dc2626'};color:white;font-weight:800">
-       ${isBalanced?'✔️ बैलेंस शीट बराबर है':'❌ बैलेंस गड़बड़'} | फंड फ्लो: एसेट ${totalAsset} = लायबिलिटी+लाभ ${totalLiability + profit}
-     </div>
      <div class="mt-2 d-flex justify-content-between">
-       <span>कुल आय: <b style="color:green">₹${currAay}</b></span>
-       <span>कुल व्यय: <b style="color:red">₹${currVyay}</b></span>
+       <span>FY आय: <b style="color:green">₹${fyAay}</b></span>
+       <span>FY व्यय: <b style="color:red">₹${fyVyay}</b></span>
      </div>
    </div>`;
-}
+  }
+  
 
 </script>
 
