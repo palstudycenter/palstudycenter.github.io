@@ -915,6 +915,26 @@ function calcPL(){
   </div>
   </div>
 
+  <button onclick="auditBalance()" style="position:fixed;bottom:10px;right:10px;z-index:9999;padding:10px;background:red;color:white;border-radius:8px">ऑडिट चेक</button>
+<script>
+function auditBalance(){
+  let msg="";
+  let totalOp=0;
+  khatas.forEach(k=>{
+    let op=+k.op||0;
+    if(!op) return;
+    let isAssetSide=['नकद','बैंक','एसेट','उधारी दी','व्यय'].includes(k.type);
+    let sign=k.side=='jama'?1:-1;
+    let effect=isAssetSide?sign*op:-sign*op;
+    totalOp+=effect;
+    msg+=`${k.name} (${k.type}) op=${op} side=${k.side}\n`;
+  });
+  msg+=`\nOpening से अंतर: ${totalOp}\n`;
+  msg+=`स्क्रीन पर अंतर -7629 से मिलना चाहिए`;
+  alert(msg);
+}
+</script>
+
 </body>
 </html>
     
