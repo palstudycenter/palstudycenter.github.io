@@ -303,16 +303,16 @@ function getBal(id){
  let initial = k.side=='jama' ? (+k.op||0) : -(+k.op||0);
  let jama=0,gaya=0;
  vouchers.forEach(v=>{
-  if(v.to==id) jama+= +v.amt;
-  if(v.from==id) gaya+= +v.amt;
+  if(String(v.to)==String(id)) jama+= +v.amt;
+  if(String(v.from)==String(id)) gaya+= +v.amt;
  });
  let shesh = initial + jama - gaya;
  let display = shesh;
  if(k.type=='आय') display = -shesh;
- if(k.type=='लोन' || k.type=='उधारी ली') display = Math.abs(shesh);
+ if(['लोन','उधारी ली','परिवार'].includes(k.type)) display = Math.abs(shesh);
  return {jama,gaya,shesh,display,name:k.name,type:k.type};
 }
-
+  
 function showTab(t){
  ['home','khata','voucher','create','prabandhan','vendor','family','dev','guest','nautaniya','bhojan'].forEach(x=>{
   let el=document.getElementById('tab-'+x); if(el) el.style.display='none';
