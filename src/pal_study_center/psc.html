@@ -426,17 +426,18 @@ function renderAll(){
  let titleEl=document.getElementById('listTitle');
  if(titleEl) titleEl.innerText=currentFilter+' ('+list.length+')';
 
-let html = `<div style="display:flex; gap:10px; overflow-x:auto; padding-bottom:10px;">` + list.map(k=>{
+let html = `<div style="display:flex; flex-direction:column; gap:8px; max-height:450px; overflow-y:auto; padding-right:4px;">` + list.map(k=>{
   let b=getBal(k.id);
-  return `<div class="khata-btn" style="flex:0 0 auto; min-width:170px; display:flex; flex-direction:column; gap:8px; align-items:flex-start;">
-    <div onclick="openDetail(${k.id})" style="cursor:pointer; width:100%"><b style="color:#174a7e">${k.name}</b><br><small>${k.type}</small></div>
-    <div style="display:flex; align-items:center; gap:8px">
-      <span class="badge" style="background:#174a7e">₹${b.display}</span>
-      <button onclick="event.stopPropagation(); deleteKhata('${k.id}')" class="btn btn-sm btn-outline-danger">हटाएं</button>
+  return `<div class="khata-btn" style="display:flex; flex-direction:row; justify-content:space-between; align-items:center; padding:10px 12px; border-radius:10px;">
+    <div onclick="openDetail(${k.id})" style="cursor:pointer;"><b style="color:#174a7e; font-size:13px;">${k.name}</b><br><small style="font-size:11px;">${k.type}</small></div>
+    <div style="display:flex; align-items:center; gap:8px;">
+      <span class="badge" style="background:#174a7e; font-size:11px;">₹${b.display}</span>
+      <button onclick="event.stopPropagation(); deleteKhata('${k.id}')" class="btn btn-sm btn-outline-danger" style="font-size:10px; padding:3px 8px;">हटाएं</button>
     </div>
   </div>`;
 }).join('') + `</div>` || '<small>इस प्रकार में कोई खाता नहीं</small>';
-  
+
+document.getElementById('allList').innerHTML=html;
  document.getElementById('allList').innerHTML=html;
 
  // totals
