@@ -526,27 +526,29 @@ function onCTypeChange(){
  else dl.innerHTML='';
 }
 
+
 function onNatureChange(){
   const nat = document.getElementById('vNature').value;
   const cashBank = khatas.filter(k=>['नकद','बैंक'].includes(k.type));
   let fromList=[], toList=[], nar='';
+  
   if(nat=='contra'){ fromList=cashBank; toList=cashBank; nar='नकद जमा/निकासी'; }
-  if(nat=='receipt'){ fromList=khatas.filter(k=>['आय','उधारी दी','उधारी ली','परिवार','लोन','एसेट'].includes(k.type)); toList=cashBank; nar='रुपया आया'; }
+  if(nat=='receipt'){ fromList=khatas.filter(k=>['आय','उधारी दी','उधारी ली','परिवार','लोन'].includes(k.type)); toList=cashBank; nar='रुपया आया'; }
   if(nat=='payment'){ fromList=cashBank; toList=khatas.filter(k=>['व्यय','उधारी दी','उधारी ली','परिवार','लोन','एसेट'].includes(k.type)); nar='रुपया गया / खर्च'; }
-  if(nat=='journal'){ fromList=khatas; toList=khatas; nar='हिसाब समायोजन'; }
+  if(nat=='journal'){ fromList=khatas.filter(k=>!['नकद','बैंक'].includes(k.type)); toList=khatas.filter(k=>!['नकद','बैंक'].includes(k.type)); nar='हिसाब समायोजन'; }
   if(nat=='purchase'){ fromList=cashBank; toList=khatas.filter(k=>k.type=='एसेट'); nar='एसेट खरीदा'; }
   if(nat=='sales'){ fromList=khatas.filter(k=>k.type=='एसेट'); toList=cashBank; nar='एसेट बेचा'; }
+
   if(nat==''){ 
     document.getElementById('vFrom').innerHTML='<option value="">-- पहले प्रकार चुनें --</option>';
     document.getElementById('vTo').innerHTML='<option value="">-- पहले प्रकार चुनें --</option>';
-    document.getElementById('vNar').value='';
-    return;
+    document.getElementById('vNar').value=''; return;
   }
-  document.getElementById('vFrom').innerHTML = fromList.map(k=>`<option value="${k.id}">${k.name} [${k.type}]</option>`).join('') || '<option>खाता नहीं</option>';
-  document.getElementById('vTo').innerHTML = toList.map(k=>`<option value="${k.id}">${k.name} [${k.type}]</option>`).join('') || '<option>खाता नहीं</option>';
+  document.getElementById('vFrom').innerHTML = fromList.map(k=>`<option value="${k.id}">${k.name} [${k.type}]</option>`).join('') || '<option value="">खाता नहीं</option>';
+  document.getElementById('vTo').innerHTML = toList.map(k=>`<option value="${k.id}">${k.name} [${k.type}]</option>`).join('') || '<option value="">खाता नहीं</option>';
   document.getElementById('vNar').value = nar;
 }
- 
+  
 function renderVoucher(){
  document.getElementById('vDate').valueAsDate=new Date();
  let hist=vouchers.slice().reverse().slice(0,10).map(v=>{
@@ -580,6 +582,7 @@ function saveVoucher(){
    vType: document.getElementById('vNature').value
  };
  if(!v.date || !v.amt || !v.from || !v.to){alert('सब भरें');return;}
+ if(v.from == v.to){ alert('एक ही खाते में लेन-देन नहीं हो सकता'); return; }
  vouchers.push(v);
  save();
  renderVoucher();
