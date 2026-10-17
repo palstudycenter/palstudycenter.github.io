@@ -456,7 +456,13 @@ let html = `<div style="display:flex; gap:10px; overflow-x:auto; padding-bottom:
  let el4=document.getElementById('tot-liab-full'); if(el4) el4.innerText='₹'+totLiabFull;
  let el5=document.getElementById('balance-status'); 
  if(el5) el5.innerHTML = totAsset==totLiabFull ? '✅ बैलेंस बराबर' : '⚠️ अंतर ₹'+(totAsset-totLiabFull);
-                                              } 
+   // --- आपके मूल tab-balance वाले id के लिए (ये जोड़ो) ---
+ let b1=document.getElementById('bs-tot-asset'); if(b1) b1.innerText='₹'+totAsset;
+ let b2=document.getElementById('bs-profit'); if(b2) b2.innerText='₹'+profit;
+ let b3=document.getElementById('bs-tot-liab'); if(b3) b3.innerText='₹'+ (getTypeTotal('उधारी ली')+getTypeTotal('लोन'));
+ let b4=document.getElementById('bs-tot-capital'); if(b4) b4.innerText='₹'+ getTypeTotal('परिवार');
+ let b5=document.getElementById('bs-tot-right'); if(b5) b5.innerText='₹'+totLiabFull;
+ let b6=document.getElementById('bs-final'); if(b6) b6.innerText='₹'+totAsset+' = ₹'+totLiabFull + (totAsset==totLiabFull?' ✅':' ⚠️');                                            } 
 
 function deleteKhata(id){
  let related = vouchers.filter(v=>String(v.from)==String(id) || String(v.to)==String(id));
