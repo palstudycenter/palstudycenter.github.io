@@ -254,14 +254,11 @@ async function loadNotices() {
             return;
         }
 
-        noticeContainer.innerHTML = notices.map(notice => `
+  noticeContainer.innerHTML = notices.map(notice => `
             <div class="notice-card">
-                <div class="notice-header">
-                    <strong>Notice</strong>
-                </div>
                 <p>${notice.message}</p>
             </div>
-        `).join('');
+        `).join('');      
     } catch (error) {
         console.warn('Error loading notices:', error);
         noticeContainer.innerHTML = `
