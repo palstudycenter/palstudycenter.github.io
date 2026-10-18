@@ -4,46 +4,26 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>पाल स्टडी सेंटर - Admin</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <style>
+<style>
 body{background:#fdf6ee;font-family:Poppins,sans-serif}
-
-.header{background:linear-gradient(135deg,#174a7e 0%,#1e6fa5 100%);color:#fff;padding:16px;border-radius:0 0 20px 20px}
-.filter-fixed{background:#fff;border-radius:0 0 15px 15px;box-shadow:0 6px 18px rgba(0,0,0,.08);padding:10px;position:sticky;top:78px;z-index:102;margin:0 auto;max-width:520px;border:1px solid #e6eef7;border-top:none}
+.filter-fixed{background:#fff;border-radius:15px;box-shadow:0 6px 18px rgba(0,0,0,.08);padding:10px;position:sticky;top:10px;z-index:102;margin:0 auto;max-width:520px;border:2px solid #174a7e;}
 .card{border-radius:15px;border:none;box-shadow:0 6px 18px rgba(0,0,0,.06)}
-.action-btn{background:rgba(255,255,255,0.15)!important;color:#fff!important;border:1.5px solid rgba(255,255,255,.4)!important;border-radius:22px!important;font-weight:600!important;padding:6px 12px!important;font-size:13px}
-.action-btn.active{background:#fff!important;color:#174a7e!important}
-
 .filter-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px}
 .filter-btn{background:linear-gradient(135deg,#174a7e 0%,#1e6fa5 100%)!important;color:#fff!important;border:none!important;border-radius:10px!important;font-weight:700!important;min-height:44px!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;font-size:11px}
 .filter-btn.active{background:#fff!important;color:#174a7e!important;border:2px solid #174a7e!important}
-.student-card{background:#fff;border:1px solid #e6eef7;border-radius:12px;padding:10px;width:100%;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;cursor:pointer}
 
-/* === FIX OVERLAP - ALL TABS SAME PATTERN === */
-#tab-students, #tab-tests, #tab-notice{
-  position:sticky;
-  top:248px;
-  z-index:101;
-  max-width:520px;
-  margin:0 auto;
-}
-#tab-students.card, #tab-tests.card, #tab-notice.card{
-  background:#fff;
-  border-radius:0 0 15px 15px;
-  border:1px solid #e6eef7;
-  border-top:none;
-  box-shadow:0 10px 20px rgba(0,0,0,.06);
-  margin-top:0!important;
-  overflow:hidden;
-  display:flex;
-  flex-direction:column;
-  max-height:calc(100vh - 260px);
-}
+/* Top Nav Buttons - White पर Blue */
+.nav-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr;gap:5px;margin-bottom:10px}
+.nav-btn{background:linear-gradient(135deg,#174a7e 0%,#1e6fa5 100%)!important;color:#fff!important;border:none!important;border-radius:10px!important;font-weight:700!important;min-height:44px!important;font-size:10px}
+.nav-btn.active{background:#fff!important;color:#174a7e!important;border:2px solid #174a7e!important}
+
+.student-card{background:#fff;border:1px solid #e6eef7;border-radius:12px;padding:10px;width:100%;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;cursor:pointer}
+#tab-students, #tab-tests, #tab-notice{position:sticky;top:248px;z-index:101;max-width:520px;margin:0 auto;}
+#tab-students.card, #tab-tests.card, #tab-notice.card{background:#fff;border-radius:0 0 15px 15px;border:1px solid #e6eef7;border-top:none;box-shadow:0 10px 20px rgba(0,0,0,.06);margin-top:0!important;overflow:hidden;display:flex;flex-direction:column;max-height:calc(100vh - 260px);}
 #studentList{overflow-y:auto;flex:1;max-height:45vh;padding:2px}
 #noticeModalContent{overflow-y:auto;flex:1;max-height:35vh}
 .test-table-wrap{overflow:auto;flex:1;max-height:45vh;border-radius:0 0 12px 12px;border:none;border-top:1px solid #dbeafe;background:#fff}
 #testTable thead th{position:sticky;top:0;background:#174a7e!important;color:#fff;font-size:10px;z-index:1}
-
 .profile-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);display:flex;justify-content:center;align-items:center;z-index:9999;padding:12px}
 .profile-modal-new{width:100%;max-width:520px;max-height:90vh;background:#fff;border-radius:20px;display:flex;overflow:hidden;position:relative}
 .profile-left{width:38%;background:#f8fafc;border-right:1px solid #eef2f7;padding:16px;text-align:center;overflow-y:auto}
@@ -51,59 +31,34 @@ body{background:#fdf6ee;font-family:Poppins,sans-serif}
 .close-btn-new{position:absolute;top:8px;right:10px;border:none;background:#f1f5f9;border-radius:50%;width:30px;height:30px}
 .hidden{display:none!important}
 .container-fix{max-width:520px;margin:auto;padding:12px}
-  </style>
-
+</style>
 </head>
 <body>
 
-<div class="header text-center">
-<div style="display:flex;justify-content:center;align-items:center;margin-bottom:4px">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 110" width="56" height="62">
-  <g fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M 50 5 L 58 18 L 52 16 L 50 8 L 48 16 L 42 18 Z" stroke-width="1.5"/>
-    <path d="M 35 20 Q 50 5 65 20 L 62 28 Q 50 18 38 28 Z" stroke-width="1.5"/>
-    <path d="M 30 28 Q 50 20 70 28 L 68 35 Q 50 27 32 35 Z" stroke-width="1.5"/>
-    <path d="M 28 35 Q 50 25 72 35 L 70 45 Q 50 35 30 45 Z" stroke-width="1.8"/>
-    <path d="M 30 45 Q 28 65 38 75" stroke-width="1.5"/>
-    <path d="M 70 45 Q 72 65 62 75" stroke-width="1.5"/>
-    <path d="M 30 48 Q 10 42 5 55 Q 12 70 30 75 Q 35 65 30 48" stroke-width="1.5"/>
-    <path d="M 70 48 Q 90 42 95 55 Q 88 70 70 75 Q 65 65 70 48" stroke-width="1.5"/>
-    <path d="M 38 58 Q 44 55 50 58 Q 44 60 38 58" stroke-width="1.2"/>
-    <path d="M 62 58 Q 56 55 50 58 Q 56 60 62 58" stroke-width="1.2"/>
-    <path d="M 50 50 L 50 62 M 46 55 Q 50 65 54 55" stroke-width="1.2"/>
-    <path d="M 50 62 Q 52 75 45 85 Q 35 95 25 85 Q 18 78 25 70 Q 30 66 35 70" stroke-width="1.8"/>
-    <path d="M 45 85 Q 55 88 62 78 Q 68 68 65 58" stroke-width="1.5"/>
-  </g>
-</svg>
-</div>
-<div style="font-weight:900;color:#FDE68A">॥ श्री गणेशाय नमः ॥</div>
-______________________________________________
-<div class="d-flex justify-content-center gap-2 mt-2">
-<button id="bH" onclick="window.location.href='psc.html'" class="action-btn active">🏠 होम</button>  
-<button id="bK" onclick="showTab('students')" class="action-btn">👨‍🎓 स्टूडेंट</button>
-<button id="bT" onclick="showTab('tests')" class="action-btn">📝 टेस्ट</button>
-<button id="bN" onclick="showTab('notice')" class="action-btn">📢 नोटिस</button>
-<button id="bR" onclick="openReviewsPopup(event)" class="action-btn">⭐ रिव्यू</button>
-</div>
-</div>
+<!-- FILTER SECTION - अब इसमें ऊपर Nav Buttons भी हैं -->
+<div class="filter-fixed" id="fixedFilter">
+  <!-- 5 BUTTONS - White पर Blue -->
+  <div class="nav-grid">
+    <button id="bH" onclick="window.location.href='psc.html'" class="filter-btn nav-btn active">🏠<br>होम</button>  
+    <button id="bK" onclick="showTab('students')" class="filter-btn nav-btn">👨‍🎓<br>स्टूडेंट</button>
+    <button id="bT" onclick="showTab('tests')" class="filter-btn nav-btn">📝<br>टेस्ट</button>
+    <button id="bN" onclick="showTab('notice')" class="filter-btn nav-btn">📢<br>नोटिस</button>
+    <button id="bR" onclick="openReviewsPopup(event)" class="filter-btn nav-btn">⭐<br>रिव्यू</button>
+  </div>
 
-<!-- FILTER SECTION - FIXED ALWAYS VISIBLE BELOW MAIN BUTTONS -->
-<div class="filter-fixed" id="fixedFilter" style="border:2px solid #174a7e; border-radius:14px; box-shadow:0 0 0 3px #dbeafe, 0 6px 18px rgba(0,0,0,.08); background:#fff; padding:8px 10px;">
+  <hr style="margin:6px 0; border-color:#dbeafe">
   <div style="display:flex;justify-content:space-between;align-items:center"><h6 style="color:#174a7e;margin:0;font-size:12px">🎯 Filter</h6><small id="modeLabel" style="color:#0f766e;font-weight:800;font-size:10px">ACTIVE</small></div>
-  
   <small style="color:#1e293b;display:block;margin-top:6px;font-size:10px;font-weight:800">Filter 1 - Status</small>
   <div class="filter-grid mt-1" style="grid-template-columns:1fr 1fr; gap:5px">
     <button id="cardActive" onclick="setFilterModeCard('active')" class="filter-btn active" style="min-height:38px!important">🟢 Active</button>
     <button id="cardInactive" onclick="setFilterModeCard('inactive')" class="filter-btn" style="min-height:38px!important">⚪ Inactive</button>
   </div>
-  
   <small style="color:#1e293b;display:block;margin-top:6px;font-size:10px;font-weight:800">Filter 2 - Board</small>
   <div class="filter-grid mt-1" style="gap:5px">
     <button id="boardHindi" onclick="setBoardCard('MP Board (Hindi Medium)')" class="filter-btn" style="min-height:38px!important">Hindi</button>
     <button id="boardEnglish" onclick="setBoardCard('MP Board (English Medium)')" class="filter-btn" style="min-height:38px!important">English</button>
     <button id="boardCBSE" onclick="setBoardCard('CBSE')" class="filter-btn" style="min-height:38px!important">CBSE</button>
   </div>
-  
   <small style="color:#1e293b;display:block;margin-top:6px;font-size:10px;font-weight:800">Filter 3 - Class</small>
   <div class="filter-grid mt-1" style="grid-template-columns:1fr 1fr 1fr 1fr; gap:5px">
     <button id="class9" onclick="setClassCard('Class 9th')" class="filter-btn" style="min-height:36px!important">9th</button>
@@ -114,12 +69,7 @@ ______________________________________________
 </div> 
 
 <div class="container-fix">
-
-<!-- HOME -->
-<div id="tab-home">
-</div>
-
-<!-- STUDENTS - ONLY LIST -->
+<div id="tab-home"></div>
 <div id="tab-students" style="display:none">
   <div class="card p-2 mt-2">
     <div class="d-flex justify-content-between"><h6 style="color:#174a7e;margin:0">👨‍🎓 Student List</h6><small style="color:#666">Filter ऊपर से लागू है</small></div>
@@ -127,16 +77,12 @@ ______________________________________________
     <div id="studentList" class="mt-2"></div>
   </div>
 </div>
-
-<!-- TESTS -->
 <div id="tab-tests" style="display:none">
   <div class="card p-2 mt-2">
     <div class="d-flex justify-content-between"><h6 style="color:#174a7e;margin:0">📝 Test Records</h6><div class="d-flex gap-1"><button onclick="addTest()" class="btn btn-sm text-white" style="background:#174a7e">+ Add</button><button onclick="submitPendingTestRecords()" class="btn btn-sm text-white" style="background:#0f766e">Submit</button></div></div>
     <div class="test-table-wrap mt-2"><table class="table table-bordered text-center mb-0" id="testTable"><thead><tr id="th"></tr></thead><tbody id="tb"></tbody></table></div>
   </div>
 </div>
-
-<!-- NOTICE -->
 <div id="tab-notice" style="display:none">
   <div class="card p-3 mt-2">
     <h6 style="color:#174a7e">📢 Notice (Filter Students को)</h6>
@@ -148,34 +94,26 @@ ______________________________________________
   <div id="noticeModalContent" class="mt-2" style="white-space:pre-wrap; word-break:break-word; line-height:1.6;"></div>  
   </div>
 </div>
-
 </div>
 
-<!-- PROFILE -->
 <div id="profileOverlay" class="profile-overlay hidden" onclick="if(event.target==this) closeProfile()"><div class="profile-modal-new"><button class="close-btn-new" onclick="closeProfile()">✖</button><div class="profile-left"><img id="pImg" style="width:70px;height:70px;border-radius:50%" src=""><h6 id="pName" class="mt-2" style="color:#174a7e"></h6><small id="pPhone"></small><small id="pBoard"></small><small id="pClass"></small><hr><input type="checkbox" id="dashToggle" onchange="toggleDashboardLock()"><small id="dashStatus"></small></div><div class="profile-right"><div id="subjectBox"></div></div></div></div>
 <div class="modal fade" id="reviewModal" tabindex="-1"><div class="modal-dialog modal-xl modal-dialog-centered"><div class="modal-content"><div class="modal-body"><div id="reviewModalContent"></div></div></div></div></div>
-
 <select id="filterBoard" class="d-none"><option value=""></option><option value="MP Board (Hindi Medium)"></option><option value="MP Board (English Medium)"></option><option value="CBSE"></option></select>
 <select id="filterClass" class="d-none"><option value=""></option><option value="Class 9th"></option><option value="Class 10th"></option><option value="Class 11th"></option><option value="Class 12th"></option></select>
-
 <script src="../../config.js"></script>
 <script src="admin.js?v=19"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 <script>
 function showTab(name){
   document.getElementById('tab-home').style.display=name=='home'?'block':'none';
   document.getElementById('tab-students').style.display=name=='students'?'block':'none';
   document.getElementById('tab-tests').style.display=name=='tests'?'block':'none';
   document.getElementById('tab-notice').style.display=name=='notice'?'block':'none';
-  document.querySelectorAll('.action-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
   let map={home:'bH',students:'bK',tests:'bT',notice:'bN'};
   if(map[name]) document.getElementById(map[name]).classList.add('active');
   if(name=='students') filterStudents();
   if(name=='notice' && typeof loadNoticesForAdmin==='function') loadNoticesForAdmin();
-  if(['students','tests','notice'].includes(name)){
-    setTimeout(()=> window.scrollTo({top:0, behavior:'smooth'}), 80);
-  }
 }
 function setFilterModeCard(m){ setStudentFilterMode(m); cardActive.classList.toggle('active',m=='active'); cardInactive.classList.toggle('active',m=='inactive'); }
 function setBoardCard(v){ let s=filterBoard; s.value=s.value==v?'':v; document.querySelectorAll('[id^=board]').forEach(c=>c.classList.remove('active')); if(s.value){ if(v.includes('Hindi')) boardHindi.classList.add('active'); else if(v.includes('English')) boardEnglish.classList.add('active'); else boardCBSE.classList.add('active'); } filterStudents(); }
@@ -183,7 +121,5 @@ function setClassCard(v){ let s=filterClass; s.value=s.value==v?'':v; document.q
 function filterAdminStudents(){ let q=adminSearch.value.toLowerCase(); document.querySelectorAll('#studentList > div').forEach(d=>{d.style.display=d.innerText.toLowerCase().includes(q)?'':'none'}); }
 document.addEventListener('DOMContentLoaded',()=>{ let m=localStorage.getItem('pal_student_mode')||'active'; modeLabel.innerText=m.toUpperCase(); });
 </script>
-
-  
 </body>
 </html>
