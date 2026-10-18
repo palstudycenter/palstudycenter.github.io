@@ -99,8 +99,10 @@ ______________________________________________
 <div class="d-flex justify-content-center gap-2 mt-2">
 <button id="bH" onclick="showTab('home')" class="action-btn active">🏠 होम</button>
 <button id="bK" onclick="showTab('ledger')" class="action-btn">📒 लेजर</button>
-<button id="bS" onclick="window.location.href='dashboard.html'" class="action-btn">🎓 स्टूडेंट कंट्रोल</button>  
-<button id="bO" onclick="showTab('prabandhan')" class="action-btn">📋 प्रबंधन</button>
+
+<button id="bS" onclick="showTab('studentControl')" class="action-btn">🎓 स्टूडेंट कंट्रोल</button>  
+
+  <button id="bO" onclick="showTab('prabandhan')" class="action-btn">📋 प्रबंधन</button>
 </div>
   
 </div>
@@ -321,9 +323,19 @@ ______________________________________________
 </div>
   
 <div id="tab-bhojan" style="display:none"></div>
+
+  <div id="tab-studentControl" style="display:none">
+  <div class="card p-0" style="border:1.5px solid #174a7e; border-radius:12px; overflow:hidden; min-height:80vh;">
+    <div style="background:#174a7e; color:#fff; padding:8px 12px; display:flex; justify-content:space-between; align-items:center;">
+      <b>🎓 स्टूडेंट कंट्रोल</b>
+      <button onclick="document.getElementById('studentFrame').src='dashboard.html'" class="btn btn-sm" style="background:#fff; color:#174a7e; border-radius:20px; font-size:11px; font-weight:800;">🔄 Reload</button>
+    </div>
+    <iframe id="studentFrame" src="dashboard.html" style="width:100%; height:85vh; border:none; background:#fff;"></iframe>
+  </div>
+</div>
+
 <div id="singleAddModal" style="display:none"></div>
 </div>
-  
 <script>  
 let khatas=JSON.parse(localStorage.getItem('khata_final_v7')||'[]');
 let vouchers=JSON.parse(localStorage.getItem('voucher_final_v7')||'[]');
@@ -361,15 +373,18 @@ function getBal(id){
 }
   
 function showTab(t){
- ['home','khata','voucher','create','balance','prabandhan','vendor','family','dev','guest','nautaniya','bhojan'].forEach(x=>{
+ ['home','khata','voucher','create','balance','prabandhan','vendor','family','dev','guest','nautaniya','bhojan','studentControl'].forEach(x=>{
   let el=document.getElementById('tab-'+x); if(el) el.style.display='none';
  });
  document.getElementById('ledgerSubSec').style.display='none';
  document.querySelectorAll('.header .action-btn').forEach(b=>b.classList.remove('active'));
+ 
  if(t=='home'){document.getElementById('tab-home').style.display='block';document.getElementById('bH').classList.add('active');}
-
  else if(t=='ledger'){document.getElementById('ledgerSubSec').style.display='block';document.getElementById('bK').classList.add('active');}
-
+ else if(t=='studentControl'){
+    document.getElementById('tab-studentControl').style.display='block';
+    document.getElementById('bS').classList.add('active');
+ }
  else if(t=='prabandhan'){document.getElementById('tab-prabandhan').style.display='block';document.getElementById('bO').classList.add('active');updatePrabandhanCount();}
  else if(['vendor','family','dev','guest','nautaniya','bhojan'].includes(t)){
   document.getElementById('tab-'+t).style.display='block';
@@ -381,7 +396,7 @@ function showTab(t){
   if(t=='nautaniya'){document.getElementById('nauListWrap').style.display='block';document.getElementById('nauDetailBox').style.display='none';renderGuestCats('nautaniya');renderGuestCards();}
   if(t=='bhojan'){openBhojanProgList();}
  }
-  }
+}
 
 function openLedger(sub){
  ['khata','voucher','create','balance'].forEach(x=>{
