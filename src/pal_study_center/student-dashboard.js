@@ -303,23 +303,23 @@ async function openTestRecord(event) {
 }
 
 
-
 async function loadFeesData() {
     const feesContent = document.getElementById('feesContent');
     feesContent.innerHTML = `<div class="text-center p-3"><div class="spinner-border"></div><p>Loading...</p></div>`;
 
     let allFees = [];
+    let sid = user.id || user._id || user.phone;
     
     // 1. Local से पहले लाओ ताकि उसी Device पर तुरंत दिखे
-    try{ allFees = JSON.parse(localStorage.getItem('pal_fees_'+user.id)||'[]'); }catch(e){}
+    try{ allFees = JSON.parse(localStorage.getItem('pal_fees_'+sid)||'[]'); }catch(e){}
 
     // 2. Server से लाओ - यही दूसरे Device पर दिखाएगा
     try {
         let url;
         if (typeof getApiUrl === 'function' && CONFIG.API.FEES) {
-            url = getApiUrl(CONFIG.API.FEES+'?student_id='+user.id);
+            url = getApiUrl(CONFIG.API.FEES+'?student_id='+sid);
         } else {
-            url = `${CONFIG.BASE_URL}/fees?student_id=${user.id}`;
+            url = `${CONFIG.BASE_URL}/fees?student_id=${sid}`;
         }
         
         console.log('Fetching Fees from:', url);
@@ -332,7 +332,7 @@ async function loadFeesData() {
         else if(Array.isArray(data) && data.length) allFees = data;
 
         // Server वाला मिला तो Local में भी Save कर दो ताकि Offline भी दिखे
-        if(allFees.length) localStorage.setItem('pal_fees_'+user.id, JSON.stringify(allFees));
+        if(allFees.length) localStorage.setItem('pal_fees_'+sid, JSON.stringify(allFees));
 
     } catch(e){
         console.warn('Server Fees Load Fail:', e);
@@ -349,6 +349,7 @@ async function loadFeesData() {
     });
     feesContent.innerHTML = html;
 }
+
 
 
 
