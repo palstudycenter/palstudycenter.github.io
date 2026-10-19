@@ -146,7 +146,7 @@ async function login(){
       localStorage.setItem("currentUser", JSON.stringify(data.data || {}));
       showStatusMessage('loginStatus', 'Login successful. Redirecting...');
       if (data.data && data.data.usertype === 'admin') {
-        window.location.href = "dashboard.html";
+        window.location.href = "psc.html";
       } else {
         window.location.href = "student-dashboard.html";
       }
