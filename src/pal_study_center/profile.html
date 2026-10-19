@@ -5,114 +5,83 @@
 <title>Student Profile</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-
-  <style>
+<style>
 body{background:#fdf6ee;font-family:Poppins,sans-serif}
-.header{background:linear-gradient(135deg,#174a7e 0%,#1e6fa5 100%);color:#fff;padding:10px 12px 12px;border-radius:0 0 18px 18px}
 .card{border-radius:15px;border:none;box-shadow:0 6px 18px rgba(0,0,0,.06)}
 .filter-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px}
-.action-btn{background:rgba(255,255,255,0.18)!important;color:#fff!important;border:1.5px solid rgba(255,255,255,.45)!important;border-radius:22px!important;font-weight:600!important;padding:5px 10px!important;font-size:11px;backdrop-filter:blur(6px)}
-.glass-btn{background:rgba(255,255,255,0.18)!important;color:#fff!important;border:1.5px solid rgba(255,255,255,.45)!important;border-radius:18px!important;font-weight:700!important;min-height:44px!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;font-size:10px;backdrop-filter:blur(8px)}
-.glass-btn small{font-size:8px;opacity:.9}
-.ledger-white-card{background:#fff;border-radius:16px;border:1px solid #dbeafe;overflow:hidden}
-.ledger-top{background:#f0f7ff;padding:8px 10px;border-bottom:1.5px solid #dbeafe;font-weight:700;color:#174a7e;font-size:12px}
-.ledger-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-behavior:smooth}
+.action-btn{background:#f1f5f9!important;color:#174a7e!important;border:1.5px solid #dbeafe!important;border-radius:20px!important;font-weight:800!important;padding:5px 12px!important;font-size:11px}
+.filter-btn{background:linear-gradient(135deg,#174a7e 0%,#1e6fa5 100%)!important;color:#fff!important;border:none!important;border-radius:10px!important;font-weight:700!important;min-height:44px!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;font-size:10px}
+.ledger-white-card{background:#fff;border-radius:16px;border:1.5px solid #174a7e;overflow:hidden}
+.ledger-top{background:#f0f7ff;padding:8px 10px;border-bottom:1.5px solid #dbeafe;font-weight:700;color:#174a7e;font-size:12px;border-top:1.5px solid #dbeafe}
+.ledger-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
 .ledger-main{display:flex;min-width:720px}
 .ledger-col{flex:1;min-width:350px}
 .ledger-col.left{border-right:2px solid #174a7e}
 .col-title{text-align:center;padding:6px;font-weight:800;font-size:10px}
 .col-title.jama{background:#ecfdf5;color:#0f766e}
 .col-title.gaya{background:#fffbeb;color:#b45309}
-
 .header-row{display:grid;grid-template-columns:80px 90px 60px;background:#f0f7ff;font-size:9px;font-weight:800;border-bottom:1px solid #dbeafe}
-.header-row div{padding:5px;border-right:1px solid #e6eef7;text-align:center;display:flex;align-items:center;justify-content:center;white-space:nowrap}
+.header-row div{padding:5px;border-right:1px solid #e6eef7;text-align:center;display:flex;align-items:center;justify-content:center}
 .entry-grid{display:grid;grid-template-columns:80px 90px 60px;border-bottom:1px dashed #e5e7eb;font-size:10px}
-.entry-grid div{padding:6px;border-right:1px solid #f3f4f6;min-height:32px;display:flex;align-items:center;justify-content:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.entry-grid div:nth-child(2){color:#174a7e;background:#f0f7ff;font-size:9.5px}
+.entry-grid div{padding:6px;border-right:1px solid #f3f4f6;min-height:32px;display:flex;align-items:center;justify-content:center}
+.entry-grid div:nth-child(2){color:#174a7e;background:#f0f7ff}
 .entry-grid div:first-child{color:#0f766e;font-weight:800;font-size:11px}
-    
-    /* SMOOTH SUBJECT BUTTONS - PAGE LOOK KE HISAB SE */
-#subjectBox{padding:6px;display:flex;flex-direction:column;gap:8px;max-height:420px;overflow-y:auto;scroll-behavior:smooth}
-
-#subjectBox .vendor-card{
-  background:linear-gradient(135deg,#174a7e 0%,#1e6fa5 100%)!important;
-  border-radius:12px!important;
-  padding:10px 14px!important;
-  box-shadow:0 4px 12px rgba(23,74,126,.25);
-  display:flex;justify-content:space-between;align-items:center;
-  margin:6px;transition:.25s;
-  border:0!important;
-}
-#subjectBox .vendor-card:active{transform:scale(.97)}
+#subjectBox{padding:6px;display:flex;flex-direction:column;gap:8px;max-height:420px;overflow-y:auto}
+#subjectBox .vendor-card{background:linear-gradient(135deg,#174a7e 0%,#1e6fa5 100%)!important;border-radius:12px!important;padding:10px 14px!important;display:flex;justify-content:space-between;align-items:center;margin:6px;border:0!important}
 #subjectBox .vendor-card span{color:#fff!important;font-weight:700!important;font-size:11.5px!important}
 #subjectBox .vendor-card span i{color:#FDE68A!important}
-    
-    .btn-toggle-switch{border:none;border-radius:20px;padding:5px 12px;font-size:10px;font-weight:800;color:#fff;min-width:50px;transition:.3s}
+.btn-toggle-switch{border:none;border-radius:20px;padding:5px 12px;font-size:10px;font-weight:800;color:#fff;min-width:50px}
 .btn-toggle-switch.on{background:linear-gradient(135deg,#22c55e,#16a34a)}
 .btn-toggle-switch.off{background:linear-gradient(135deg,#e5e7eb,#cbd5e1);color:#64748b!important}
 </style>
 </head>
 <body>
-<div class="header">
-  <div class="d-flex justify-content-between align-items-center">
-    <button onclick="history.back()" class="action-btn">⬅️</button>
-    <div style="font-weight:800;font-size:10px;color:#FDE68A">॥ श्री गणेशाय नमः ॥</div>
-    <span id="dashStatus" class="badge bg-light text-dark" style="font-size:9px">ACTIVE</span>
-  </div>
-  
-  <div class="d-flex align-items-center gap-3 mt-3">
-    <div style="position:relative;">
-      <img id="pImg" style="width:64px;height:64px;border-radius:18px;border:2px solid #fff; object-fit:cover; box-shadow:0 6px 16px rgba(0,0,0,.25);" src="https://via.placeholder.com/100">
-      <span style="position:absolute; bottom:-4px; right:-4px; background:#22c55e; width:14px; height:14px; border-radius:50%; border:2px solid #fff; display:block;"></span>
-    </div>
-    <div style="line-height:1.2;">
-      <div id="pName" style="font-weight:900;font-size:17px; color:#fff;">Name</div>
-      <div id="pPhone" style="color:#FDE68A;font-size:12px;font-weight:700; margin-top:2px;"></div>
-      <div style="display:flex; gap:6px; margin-top:6px;">
-        <small id="pBoard" style="font-size:9px; opacity:.9; color:#fff; letter-spacing:.3px;"></small>
-        <small style="font-size:9px; opacity:.5; color:#fff;">•</small>
-        <small id="pClass" style="font-size:10px; font-weight:800; color:#FDE68A;"></small>
-      </div>
-    </div>
-  </div>
-  
-  <div class="filter-grid mt-2">
-    <button onclick="sendFeeReminder()" class="glass-btn">💰 फीस रिमाइंडर<small>WhatsApp</small></button>
-    <button onclick="sendLeaveNotice()" class="glass-btn">🏖️ अवकाश<small>Auto Msg</small></button>
-    <button onclick="openAddFee()" class="glass-btn">➕ Add<small>Fees</small></button>
-  </div>
-</div>
-
-<div class="container mt-2" style="max-width:600px">
-  <div id="addFeeBox" style="display:none" class="card p-2 mb-2">
-    <div class="row g-2">
-      <div class="col-6"><input id="feeDate" type="date" class="form-control form-control-sm"></div>
-      <div class="col-6">
-        <select id="feeMonth" class="form-select form-select-sm">
-          <option value="">माह चुनें</option>
-          <option>जनवरी</option><option>फरवरी</option><option>मार्च</option><option>अप्रैल</option><option>मई</option><option>जून</option>
-          <option>जुलाई</option><option>अगस्त</option><option>सितंबर</option><option>अक्टूबर</option><option>नवंबर</option><option>दिसंबर</option>
-        </select>
-      </div>
-      <div class="col-6"><input id="feeAmount" type="number" class="form-control form-control-sm" placeholder="₹"></div>
-      <div class="col-6"><select id="feeMode" class="form-select form-select-sm"><option>Cash</option><option>UPI</option><option>Bank</option></select></div>
-      <div class="col-12"><button onclick="saveStudentFee()" class="btn w-100 text-white btn-sm" style="background:#174a7e">Save</button></div>
-    </div>
-  </div>
-
+<div class="container mt-3" style="max-width:600px">
   <div class="ledger-white-card">
-    <div class="ledger-top d-flex justify-content-between"><span>📒 Ledger - Left/Right Scroll</span><small>swipe करें</small></div>
+    <!-- TOP PART - पहले Header में था, अब White Card में -->
+    <div style="padding:12px;background:#fff">
+      <div class="d-flex justify-content-between align-items-center">
+        <button onclick="history.back()" class="action-btn">⬅️ Back</button>
+        <div style="font-weight:800;font-size:10px;color:#174a7e">॥ श्री गणेशाय नमः ॥</div>
+        <span id="dashStatus" class="badge" style="background:#ecfdf5;color:#0f766e;font-size:9px;border:1px solid #a7f3d0">ACTIVE</span>
+      </div>
+      <div class="mt-3" style="line-height:1.3">
+        <div id="pName" style="font-weight:900;font-size:18px;color:#174a7e">Name</div>
+        <div id="pPhone" style="color:#0f766e;font-size:12px;font-weight:700;margin-top:2px"></div>
+        <div style="display:flex;gap:6px;margin-top:4px">
+          <small id="pBoard" style="font-size:10px;color:#475569"></small>
+          <small style="font-size:10px;color:#94a3b8">•</small>
+          <small id="pClass" style="font-size:11px;font-weight:800;color:#174a7e"></small>
+        </div>
+      </div>
+      <div class="filter-grid mt-3">
+        <button onclick="sendFeeReminder()" class="filter-btn">💰 फीस रिमाइंडर<small style="font-size:8px;opacity:.9">WhatsApp</small></button>
+        <button onclick="sendLeaveNotice()" class="filter-btn">🏖️ अवकाश<small style="font-size:8px;opacity:.9">Auto Msg</small></button>
+        <button onclick="openAddFee()" class="filter-btn">➕ Add<small style="font-size:8px;opacity:.9">Fees</small></button>
+      </div>
+      <div id="addFeeBox" style="display:none" class="card p-2 mt-3" style="background:#f8fafc">
+        <div class="row g-2">
+          <div class="col-6"><input id="feeDate" type="date" class="form-control form-control-sm"></div>
+          <div class="col-6"><select id="feeMonth" class="form-select form-select-sm"><option value="">माह चुनें</option><option>जनवरी</option><option>फरवरी</option><option>मार्च</option><option>अप्रैल</option><option>मई</option><option>जून</option><option>जुलाई</option><option>अगस्त</option><option>सितंबर</option><option>अक्टूबर</option><option>नवंबर</option><option>दिसंबर</option></select></div>
+          <div class="col-6"><input id="feeAmount" type="number" class="form-control form-control-sm" placeholder="₹"></div>
+          <div class="col-6"><select id="feeMode" class="form-select form-select-sm"><option>Cash</option><option>UPI</option><option>Bank</option></select></div>
+          <div class="col-12"><button onclick="saveStudentFee()" class="btn w-100 text-white btn-sm" style="background:#174a7e">Save</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTTOM PART - Left/Right Ledger वैसा ही -->
+    <div class="ledger-top d-flex justify-content-between"><span>📒 Ledger</span><small>swipe करें</small></div>
     <div class="ledger-scroll">
       <div class="ledger-main">
         <div class="ledger-col left">
-          <div class="col-title jama">💰 फीस - Date/Month (Dashboard Connect)</div>
-        <div class="header-row"><div>राशि</div><div>तारीख</div><div>माह</div></div>
-          
+          <div class="col-title jama">💰 फीस - Date/Month</div>
+          <div class="header-row"><div>राशि</div><div>तारीख</div><div>माह</div></div>
           <div id="feeList"></div>
         </div>
         <div class="ledger-col">
-          <div class="col-title gaya">📚 Active Course On/Off - Board से</div>
-          <div class="header-row"><div style="grid-column:1/-1">Subject - Toggle Dashboard Connect</div></div>
+          <div class="col-title gaya">📚 Active Course On/Off</div>
+          <div class="header-row"><div style="grid-column:1/-1">Subject - Toggle</div></div>
           <div id="subjectBox"></div>
         </div>
       </div>
@@ -125,16 +94,12 @@ body{background:#fdf6ee;font-family:Poppins,sans-serif}
 let stu = {};
 try{ stu = JSON.parse(localStorage.getItem('viewingStudent')||'{}'); }catch(e){}
 if(!stu ||!stu.name){ stu = {id:'demo1',name:'Demo Student',phone:'9876543210',board:'MP Board (Hindi Medium)',class:'Class 10th',access:true}; }
-
 document.getElementById('pName').innerText=stu.name||'';
 document.getElementById('pPhone').innerText='📞 '+(stu.phone||stu.mobile||'');
 document.getElementById('pBoard').innerText=stu.board||'';
 document.getElementById('pClass').innerText=stu.class||'';
-if(stu.photo) document.getElementById('pImg').src=stu.photo;
-
 function openAddFee(){ let b=document.getElementById('addFeeBox'); b.style.display=b.style.display=='none'?'block':'none'; }
-
-  function sendFeeReminder(){
+function sendFeeReminder(){
   let ph=(stu.pPhone||stu.parentPhone||stu.phone||stu.mobile||'').toString().replace(/\D/g,'');
   if(ph.length==10) ph='91'+ph;
   let allFees=JSON.parse(localStorage.getItem('pal_fees_'+stu.id)||'[]');
@@ -144,23 +109,17 @@ function openAddFee(){ let b=document.getElementById('addFeeBox'); b.style.displ
   let msg = `नमस्ते अभिभावक जी 🙏\n\nआपसे निवेदन है कि ${stu.name} की ${month} माह की फीस ₹${amt} जमा करना शेष है।\nकृपया शीघ्र जमा कराने की कृपा करें।\n\nधन्यवाद 🙏\n- पाल स्टडी सेंटर, मनासा`;
   window.open(`https://wa.me/${ph}?text=${encodeURIComponent(msg)}`,'_blank');
 }
-
 function sendLeaveNotice(){
   let ph=(stu.phone||stu.mobile||'').toString().replace(/\D/g,'');
   if(ph.length==10) ph='91'+ph;
   let today = new Date().toLocaleDateString('hi-IN');
   let msg = `नमस्ते ${stu.name}\n\nआवश्यक कार्य होने से आज ${today} को पाल स्टडी सेंटर पर अवकाश रहेगा।\n\n- पाल स्टडी सेंटर`;
   window.open(`https://wa.me/${ph}?text=${encodeURIComponent(msg)}`,'_blank');
-  }
-  
-// ========= PURANA WORKING LOGIC - DASHBOARD CONNECT =========
+}
 function getSubjects(cls){
-  if(cls && (cls.includes('11') || cls.includes('12'))){
-    return ["Physics","Chemistry","Mathematics","Biology","English","Hindi"];
-  }
+  if(cls && (cls.includes('11') || cls.includes('12'))){ return ["Physics","Chemistry","Mathematics","Biology","English","Hindi"]; }
   return ["Science","Social Science","Mathematics","English","Hindi"];
 }
-
 async function loadCourseData(){
   if(!stu.courses) stu.courses={};
   if(stu.id){
@@ -168,130 +127,46 @@ async function loadCourseData(){
       const response = await fetch(`${CONFIG.BASE_URL}/students/${stu.id}/subjects`);
       const data = await response.json();
       if(response.ok && data.status && data.res && typeof data.res === 'object' &&!Array.isArray(data.res)){
-        if(Object.keys(data.res).length===0){
-          stu.access=false;
-          stu.courses={};
-        }else{
-          Object.entries(data.res).forEach(([subject,value])=>{
-            stu.courses[subject]=value===1;
-          });
-        }
+        if(Object.keys(data.res).length===0){ stu.access=false; stu.courses={}; }
+        else{ Object.entries(data.res).forEach(([subject,value])=>{ stu.courses[subject]=value===1; }); }
       }
-    }catch(err){ console.warn('course load fail',err.message); }
+    }catch(err){}
   }
-  if(Object.keys(stu.courses).length===0){
-    const subjects=getSubjects(stu.class);
-    subjects.forEach(s=>stu.courses[s]=true);
-  }
+  if(Object.keys(stu.courses).length===0){ const subjects=getSubjects(stu.class); subjects.forEach(s=>stu.courses[s]=true); }
   renderCourses();
 }
-
 function renderCourses(){
-  const box=document.getElementById("subjectBox");
-  box.innerHTML="";
-  if(stu.access===false){
-    box.innerHTML='<div style="padding:12px;text-align:center;color:#888;font-size:10px">Access OFF है</div>';
-    return;
-  }
+  const box=document.getElementById("subjectBox"); box.innerHTML="";
+  if(stu.access===false){ box.innerHTML='<div style="padding:12px;text-align:center;color:#888;font-size:10px">Access OFF है</div>'; return; }
   const subjects=getSubjects(stu.class);
   subjects.forEach(subject=>{
     const isEnabled=stu.courses[subject]!==false;
-    box.innerHTML+=`
-      <div class="vendor-card">
-        <span style="font-weight:700;font-size:11px"><i class="bi bi-book"></i> ${subject}</span>
-        <button class="btn-toggle-switch ${isEnabled?'on':'off'}" onclick="toggleCourseAccess('${subject}')">
-          ${isEnabled?'ON':'OFF'}
-        </button>
-      </div>`;
+    box.innerHTML+=`<div class="vendor-card"><span><i class="bi bi-book"></i> ${subject}</span><button class="btn-toggle-switch ${isEnabled?'on':'off'}" onclick="toggleCourseAccess('${subject}')">${isEnabled?'ON':'OFF'}</button></div>`;
   });
 }
-
 async function toggleCourseAccess(subject){
-  if(!stu.courses) stu.courses={};
-  const cur=stu.courses[subject]!==false;
-  stu.courses[subject]=!cur;
-  renderCourses();
-  localStorage.setItem("viewingStudent",JSON.stringify(stu));
-  const subjectsHash={};
-  Object.entries(stu.courses).forEach(([s,enabled])=>{ subjectsHash[s]=enabled?1:0; });
-  await updateCourseStatusOnServer(subjectsHash);
+  if(!stu.courses) stu.courses={}; const cur=stu.courses[subject]!==false; stu.courses[subject]=!cur; renderCourses(); localStorage.setItem("viewingStudent",JSON.stringify(stu));
+  const subjectsHash={}; Object.entries(stu.courses).forEach(([s,enabled])=>{ subjectsHash[s]=enabled?1:0; }); await updateCourseStatusOnServer(subjectsHash);
 }
-
 async function updateCourseStatusOnServer(subjectsHash){
   if(!stu.id) return;
-  try{
-    const response=await fetch(`${CONFIG.BASE_URL}/students/${stu.id}/subjects`,{
-      method:'PATCH',headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({subjects:subjectsHash})
-    });
-    const data=await response.json();
-    if(!response.ok ||!data.status) console.warn('Failed to update',data.msg);
-  }catch(err){ console.warn('Unable to update',err.message); }
+  try{ const response=await fetch(`${CONFIG.BASE_URL}/students/${stu.id}/subjects`,{ method:'PATCH',headers:{'Content-Type':'application/json'}, body:JSON.stringify({subjects:subjectsHash}) }); }catch(err){}
 }
-
-// ========= FEE - FINAL FIX (ALL DEVICE SYNC) =========
 async function saveStudentFee(){
-  let amt=document.getElementById('feeAmount').value; 
-  if(!amt) return alert('Amount डालें');
-  
+  let amt=document.getElementById('feeAmount').value; if(!amt) return alert('Amount डालें');
   let sid = stu.id || stu._id || stu.phone || stu.mobile;
-
-  let payload={
-    student_id: sid,
-    phone: stu.phone || stu.mobile || '',
-    date: document.getElementById('feeDate').value || new Date().toISOString().split('T')[0],
-    month: document.getElementById('feeMonth').value || '',
-    amount: amt,
-    mode: document.getElementById('feeMode').value,
-    board: stu.board, 
-    class: stu.class
-  };
-
-  let allFees=JSON.parse(localStorage.getItem('pal_fees_'+sid)||'[]');
-  allFees.unshift(payload);
-  localStorage.setItem('pal_fees_'+sid,JSON.stringify(allFees));
-  localStorage.setItem('pal_fees_'+(stu.id||sid),JSON.stringify(allFees));
-  localStorage.setItem('viewingStudent',JSON.stringify(stu));
-
-  try{
-    let url = getApiUrl(CONFIG.API.FEES);
-    await fetch(url,{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify(payload)
-    });
-  }catch(e){
-    console.log('Fee Save Error', e);
-  }
-
-  loadFees();
-  document.getElementById('addFeeBox').style.display='none';
-  document.getElementById('feeAmount').value='';
+  let payload={ student_id: sid, phone: stu.phone || stu.mobile || '', date: document.getElementById('feeDate').value || new Date().toISOString().split('T')[0], month: document.getElementById('feeMonth').value || '', amount: amt, mode: document.getElementById('feeMode').value, board: stu.board, class: stu.class };
+  let allFees=JSON.parse(localStorage.getItem('pal_fees_'+sid)||'[]'); allFees.unshift(payload); localStorage.setItem('pal_fees_'+sid,JSON.stringify(allFees)); localStorage.setItem('pal_fees_'+(stu.id||sid),JSON.stringify(allFees)); localStorage.setItem('viewingStudent',JSON.stringify(stu));
+  try{ let url = getApiUrl(CONFIG.API.FEES); await fetch(url,{ method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload) }); }catch(e){}
+  loadFees(); document.getElementById('addFeeBox').style.display='none'; document.getElementById('feeAmount').value='';
 }
-
 async function loadFees(){
-  let sid = stu.id || stu._id || stu.phone || stu.mobile;
-  let allFees=JSON.parse(localStorage.getItem('pal_fees_'+sid)||'[]');
-  
-  try{
-    let url = getApiUrl(CONFIG.API.FEES+'?student_id='+sid);
-    let r=await fetch(url);
-    let j=await r.json();
-    if(j.res && Array.isArray(j.res) && j.res.length) allFees=j.res;
-    else if(j.data && Array.isArray(j.data) && j.data.length) allFees=j.data;
-    else if(Array.isArray(j) && j.length) allFees=j;
-    
-    if(allFees.length) localStorage.setItem('pal_fees_'+sid, JSON.stringify(allFees));
-  }catch(e){}
-  
+  let sid = stu.id || stu._id || stu.phone || stu.mobile; let allFees=JSON.parse(localStorage.getItem('pal_fees_'+sid)||'[]');
+  try{ let url = getApiUrl(CONFIG.API.FEES+'?student_id='+sid); let r=await fetch(url); let j=await r.json(); if(j.res && Array.isArray(j.res) && j.res.length) allFees=j.res; else if(j.data && Array.isArray(j.data) && j.data.length) allFees=j.data; else if(Array.isArray(j) && j.length) allFees=j; if(allFees.length) localStorage.setItem('pal_fees_'+sid, JSON.stringify(allFees)); }catch(e){}
   let html=allFees.length? allFees.map(f=>`<div class="entry-grid"><div>₹${f.amount}</div><div>${f.date||''}</div><div>${f.month||''}</div></div>`).join('') : '<div style="padding:8px;text-align:center;color:#888;font-size:10px">No Fees - Add से जोड़ें</div>';
   document.getElementById('feeList').innerHTML=html;
 }
-
-  
-// INIT
-loadFees();
-loadCourseData();
+loadFees(); loadCourseData();
 </script>
 </body>
 </html>
