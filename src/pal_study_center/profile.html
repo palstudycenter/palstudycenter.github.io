@@ -156,7 +156,6 @@ async function saveStudentFee(){
   let sid = stu.id || stu._id || stu.phone || stu.mobile;
   let payload={ student_id: sid, phone: stu.phone || stu.mobile || '', date: document.getElementById('feeDate').value || new Date().toISOString().split('T')[0], month: document.getElementById('feeMonth').value || '', amount: amt, mode: document.getElementById('feeMode').value, board: stu.board, class: stu.class };
   let allFees=JSON.parse(localStorage.getItem('pal_fees_'+sid)||'[]'); allFees.unshift(payload); localStorage.setItem('pal_fees_'+sid,JSON.stringify(allFees)); localStorage.setItem('pal_fees_'+(stu.id||sid),JSON.stringify(allFees)); localStorage.setItem('viewingStudent',JSON.stringify(stu));
-
   let mode = document.getElementById('feeMode').value;
   let allKhatas = JSON.parse(localStorage.getItem('khata_final_v7')||'[]');
   let toId = "1";
@@ -167,8 +166,7 @@ async function saveStudentFee(){
     let f = allKhatas.find(k=>k.name.includes('8338'));
     if(f) toId = String(f.id);
   }
-  window.top.postMessage({ type: 'COACHING_FEE_ADDED', amount: amt, name: stu.name, toId: toId }, '*');
-
+  window.top.postMessage({ type: 'COACHING_FEE_ADDED', amount: amt, name: stu.name, className: stu.class, toId: toId }, '*');
   try{ let url = getApiUrl(CONFIG.API.FEES); await fetch(url,{ method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload) }); }catch(e){}
   loadFees(); document.getElementById('addFeeBox').style.display='none'; document.getElementById('feeAmount').value='';
 }

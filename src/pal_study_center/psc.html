@@ -449,6 +449,7 @@ window.addEventListener('message', function(event){
   if(event.data && event.data.type === 'COACHING_FEE_ADDED'){
     let fee = parseFloat(event.data.amount);
     let studentName = event.data.name;
+    let className = event.data.className || '';
     let toId = event.data.toId || "1";
     let newVoucher = {
       id: Date.now(),
@@ -456,7 +457,7 @@ window.addEventListener('message', function(event){
       amt: fee,
       from: "3",
       to: toId,
-      nar: studentName + ' - कोचिंग फीस',
+      nar: studentName + ' - ' + className,
       vType: 'receipt'
     };
     vouchers.push(newVoucher);
@@ -464,7 +465,6 @@ window.addEventListener('message', function(event){
     renderAll();
   }
 });
-
   
 </script>
 </body>
