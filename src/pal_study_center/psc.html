@@ -443,6 +443,29 @@ function calcInt(){let f=new Date(document.getElementById('intFrom').value),to=n
 function initCal(){let sel=document.getElementById('calMonth');for(let i=0;i<12;i++){let d=new Date(2026,i,1);sel.innerHTML+=`<option value="${i}" ${i==new Date().getMonth()?'selected':''}>${d.toLocaleString('hi-IN',{month:'long'})} 2026</option>`;}renderCalendar();document.getElementById('intFrom').valueAsDate=new Date();document.getElementById('intTo').valueAsDate=new Date(new Date().setMonth(new Date().getMonth()+1));}
 function renderCalendar(){let m=+document.getElementById('calMonth').value,y=2026,first=new Date(y,m,1).getDay(),days=new Date(y,m+1,0).getDate(),body=document.getElementById('calBody');body.innerHTML='';for(let i=0;i<first;i++) body.innerHTML+=`<div></div>`;for(let d=1;d<=days;d++) body.innerHTML+=`<div class="cal-day"><b>${d}</b></div>`;}
 initCal();renderAll();onCTypeChange();
+
+
+window.addEventListener('message', function(event){
+  if(event.data && event.data.type === 'COACHING_FEE_ADDED'){
+    let fee = parseFloat(event.data.amount);
+    let studentName = event.data.name;
+    let toId = event.data.toId || "1";
+    let newVoucher = {
+      id: Date.now(),
+      date: new Date().toISOString().split('T')[0],
+      amt: fee,
+      from: "3",
+      to: toId,
+      nar: studentName + ' - कोचिंग फीस',
+      vType: 'receipt'
+    };
+    vouchers.push(newVoucher);
+    save();
+    renderAll();
+  }
+});
+
+  
 </script>
 </body>
 </html>

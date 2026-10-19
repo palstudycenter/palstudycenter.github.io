@@ -64,7 +64,7 @@ body{background:#fdf6ee;font-family:Poppins,sans-serif}
             <div class="col-6"><input id="feeDate" type="date" class="form-control form-control-sm" style="font-size:10px;height:30px"></div>
             <div class="col-6"><select id="feeMonth" class="form-select form-select-sm" style="font-size:10px;height:30px"><option value="">माह चुनें</option><option>जनवरी</option><option>फरवरी</option><option>मार्च</option><option>अप्रैल</option><option>मई</option><option>जून</option><option>जुलाई</option><option>अगस्त</option><option>सितंबर</option><option>अक्टूबर</option><option>नवंबर</option><option>दिसंबर</option></select></div>
             <div class="col-6"><input id="feeAmount" type="number" class="form-control form-control-sm" placeholder="₹" style="font-size:10px;height:30px"></div>
-            <div class="col-6"><select id="feeMode" class="form-select form-select-sm" style="font-size:10px;height:30px"><option>Cash</option><option>UPI</option><option>Bank</option></select></div>
+           <div class="col-6"><select id="feeMode" class="form-select form-select-sm" style="font-size:10px;height:30px"><option>Cash</option><option>Bank 4798</option><option>Bank 8338</option></select></div> 
             <div class="col-12"><button onclick="saveStudentFee()" class="btn w-100 text-white btn-sm" style="background:#174a7e;font-size:10px;height:30px">Save</button></div>
           </div>
         </div>
@@ -150,14 +150,29 @@ async function updateCourseStatusOnServer(subjectsHash){
   if(!stu.id) return;
   try{ await fetch(`${CONFIG.BASE_URL}/students/${stu.id}/subjects`,{ method:'PATCH',headers:{'Content-Type':'application/json'}, body:JSON.stringify({subjects:subjectsHash}) }); }catch(err){}
 }
+
 async function saveStudentFee(){
   let amt=document.getElementById('feeAmount').value; if(!amt) return alert('Amount डालें');
   let sid = stu.id || stu._id || stu.phone || stu.mobile;
   let payload={ student_id: sid, phone: stu.phone || stu.mobile || '', date: document.getElementById('feeDate').value || new Date().toISOString().split('T')[0], month: document.getElementById('feeMonth').value || '', amount: amt, mode: document.getElementById('feeMode').value, board: stu.board, class: stu.class };
   let allFees=JSON.parse(localStorage.getItem('pal_fees_'+sid)||'[]'); allFees.unshift(payload); localStorage.setItem('pal_fees_'+sid,JSON.stringify(allFees)); localStorage.setItem('pal_fees_'+(stu.id||sid),JSON.stringify(allFees)); localStorage.setItem('viewingStudent',JSON.stringify(stu));
+
+  let mode = document.getElementById('feeMode').value;
+  let allKhatas = JSON.parse(localStorage.getItem('khata_final_v7')||'[]');
+  let toId = "1";
+  if(mode.includes('4798')){
+    let f = allKhatas.find(k=>k.name.includes('4798'));
+    if(f) toId = String(f.id);
+  } else if(mode.includes('8338')){
+    let f = allKhatas.find(k=>k.name.includes('8338'));
+    if(f) toId = String(f.id);
+  }
+  window.top.postMessage({ type: 'COACHING_FEE_ADDED', amount: amt, name: stu.name, toId: toId }, '*');
+
   try{ let url = getApiUrl(CONFIG.API.FEES); await fetch(url,{ method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload) }); }catch(e){}
   loadFees(); document.getElementById('addFeeBox').style.display='none'; document.getElementById('feeAmount').value='';
 }
+  
 async function loadFees(){
   let sid = stu.id || stu._id || stu.phone || stu.mobile; let allFees=JSON.parse(localStorage.getItem('pal_fees_'+sid)||'[]');
   try{ let url = getApiUrl(CONFIG.API.FEES+'?student_id='+sid); let r=await fetch(url); let j=await r.json(); if(j.res && Array.isArray(j.res) && j.res.length) allFees=j.res; else if(j.data && Array.isArray(j.data) && j.data.length) allFees=j.data; else if(Array.isArray(j) && j.length) allFees=j; if(allFees.length) localStorage.setItem('pal_fees_'+sid, JSON.stringify(allFees)); }catch(e){}
