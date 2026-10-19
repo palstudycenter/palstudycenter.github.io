@@ -11,36 +11,20 @@ body{background:#fdf6ee;font-family:Poppins,sans-serif}
 .action-btn{background:rgba(255,255,255,0.15)!important;color:#fff!important;border:1.5px solid rgba(255,255,255,.4)!important;border-radius:22px!important;font-weight:600!important;padding:6px 12px!important;font-size:13px}
 .action-btn.active{background:#fff!important;color:#174a7e!important}
 .filter-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
-
 .filter-btn{
  background:linear-gradient(135deg,#174a7e 0%,#1e6fa5 100%)!important;
- color:#fff!important;
- border:none!important;
- border-radius:12px!important;
- font-weight:700!important;
- min-height:88px!important;
- display:flex!important;
- flex-direction:column!important;
- align-items:center!important;
- justify-content:center!important;
+ color:#fff!important;border:none!important;border-radius:12px!important;
+ font-weight:700!important;min-height:88px!important;display:flex!important;
+ flex-direction:column!important;align-items:center!important;justify-content:center!important;
 }
-.filter-btn.active{
- background:#fff!important;
- color:#174a7e!important;
- border:2px solid #174a7e!important;
-}  
-  
-  .filter-btn.active{background:#fff!important;color:#174a7e!important;border:2px solid #174a7e!important}
+.filter-btn.active{background:#fff!important;color:#174a7e!important;border:2px solid #174a7e!important}
 .khata-btn{background:#fff;border:1px solid #e6eef7;border-radius:12px;padding:10px;width:100%;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}
 .ledger-white-card{background:#fff;border-radius:16px;border:1px solid #dbeafe;overflow:hidden}
 .ledger-top{background:#f0f7ff;padding:10px;border-bottom:1.5px solid #dbeafe;font-weight:700;color:#174a7e}
-.ledger-scroll{overflow-x:auto}
-.ledger-main{display:flex;min-width:700px}
-.ledger-col{flex:1}
-.ledger-col.left{border-right:2px solid #174a7e}
+.ledger-scroll{overflow-x:auto}.ledger-main{display:flex;min-width:700px}
+.ledger-col{flex:1}.ledger-col.left{border-right:2px solid #174a7e}
 .col-title{text-align:center;padding:7px;font-weight:800;font-size:11px}
-.col-title.jama{background:#ecfdf5;color:#0f766e}
-.col-title.gaya{background:#fffbeb;color:#b45309}
+.col-title.jama{background:#ecfdf5;color:#0f766e}.col-title.gaya{background:#fffbeb;color:#b45309}
 .header-row{display:grid;grid-template-columns:60px 90px 1fr;background:#f0f7ff;font-size:10px;font-weight:800;border-bottom:1px solid #dbeafe}
 .header-row div{padding:6px;border-right:1px solid #e6eef7;text-align:center;display:flex;align-items:center;justify-content:center}
 .entry-grid{display:grid;grid-template-columns:60px 90px 1fr;border-bottom:1px dashed #e5e7eb;font-size:11px}
@@ -52,59 +36,21 @@ body{background:#fdf6ee;font-family:Poppins,sans-serif}
 .cal-day{background:#fff;border:1px solid #e6eef7;border-radius:8px;padding:6px;text-align:center;min-height:56px}
 .vendor-card{border-left:5px solid #174a7e}
 .prog-item{background:#fff;border:1px solid #dbeafe;border-radius:10px;padding:8px 6px;margin-bottom:6px;text-align:center;font-size:11px;font-weight:700;color:#174a7e}
-.guest-add-modal{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;z-index:9999}
-.guest-add-box{background:#fff;border-radius:18px;padding:16px;width:92%;max-width:360px}
-.guest-radio{display:flex;gap:8px;margin:10px 0}.guest-radio label{flex:1;text-align:center;padding:9px;border-radius:12px;border:1.5px solid #dbeafe;font-weight:800;cursor:pointer;background:#f8fafc}
-.guest-radio input{display:none}.guest-radio input:checked + label.aya{background:#0f766e;color:#fff}.guest-radio input:checked + label.diya{background:#b45309;color:#fff}
-.menu-item{background:#fff;border:1px solid #dbeafe;border-radius:10px;padding:6px 8px;margin-bottom:6px;font-size:11px}
-
- #tab-guest .filter-btn, #tab-nautaniya .filter-btn{
-  min-height:52px!important;
-  font-size:11px!important;
-  line-height:1.15!important;
-  padding:5px 3px!important;
-  border-radius:10px!important;
-}
-#tab-guest .filter-grid, #tab-nautaniya .filter-grid{
-  gap:6px!important;
-  grid-template-columns:1fr 1fr 1fr!important;
-} 
-  
 </style>
 </head>
 <body>
 <div class="header text-center">
 <div style="display:flex;justify-content:center;align-items:center;margin-bottom:4px">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 110" width="56" height="62">
-  <g fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M 50 5 L 58 18 L 52 16 L 50 8 L 48 16 L 42 18 Z" stroke-width="1.5"/>
-    <path d="M 35 20 Q 50 5 65 20 L 62 28 Q 50 18 38 28 Z" stroke-width="1.5"/>
-    <path d="M 30 28 Q 50 20 70 28 L 68 35 Q 50 27 32 35 Z" stroke-width="1.5"/>
-    <path d="M 28 35 Q 50 25 72 35 L 70 45 Q 50 35 30 45 Z" stroke-width="1.8"/>
-    <path d="M 30 45 Q 28 65 38 75" stroke-width="1.5"/>
-    <path d="M 70 45 Q 72 65 62 75" stroke-width="1.5"/>
-    <path d="M 30 48 Q 10 42 5 55 Q 12 70 30 75 Q 35 65 30 48" stroke-width="1.5"/>
-    <path d="M 70 48 Q 90 42 95 55 Q 88 70 70 75 Q 65 65 70 48" stroke-width="1.5"/>
-    <path d="M 38 58 Q 44 55 50 58 Q 44 60 38 58" stroke-width="1.2"/>
-    <path d="M 62 58 Q 56 55 50 58 Q 56 60 62 58" stroke-width="1.2"/>
-    <path d="M 50 50 L 50 62 M 46 55 Q 50 65 54 55" stroke-width="1.2"/>
-    <path d="M 50 62 Q 52 75 45 85 Q 35 95 25 85 Q 18 78 25 70 Q 30 66 35 70" stroke-width="1.8"/>
-    <path d="M 45 85 Q 55 88 62 78 Q 68 68 65 58" stroke-width="1.5"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 110" width="56" height="62"><g fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M 50 5 L 58 18 L 52 16 L 50 8 L 48 16 L 42 18 Z" stroke-width="1.5"/><path d="M 35 20 Q 50 5 65 20 L 62 28 Q 50 18 38 28 Z" stroke-width="1.5"/><path d="M 30 28 Q 50 20 70 28 L 68 35 Q 50 27 32 35 Z" stroke-width="1.5"/><path d="M 28 35 Q 50 25 72 35 L 70 45 Q 50 35 30 45 Z" stroke-width="1.8"/><path d="M 30 45 Q 28 65 38 75" stroke-width="1.5"/><path d="M 70 45 Q 72 65 62 75" stroke-width="1.5"/><path d="M 30 48 Q 10 42 5 55 Q 12 70 30 75 Q 35 65 30 48" stroke-width="1.5"/><path d="M 70 48 Q 90 42 95 55 Q 88 70 70 75 Q 65 65 70 48" stroke-width="1.5"/><path d="M 38 58 Q 44 55 50 58 Q 44 60 38 58" stroke-width="1.2"/><path d="M 62 58 Q 56 55 50 58 Q 56 60 62 58" stroke-width="1.2"/><path d="M 50 50 L 50 62 M 46 55 Q 50 65 54 55" stroke-width="1.2"/><path d="M 50 62 Q 52 75 45 85 Q 35 95 25 85 Q 18 78 25 70 Q 30 66 35 70" stroke-width="1.8"/><path d="M 45 85 Q 55 88 62 78 Q 68 68 65 58" stroke-width="1.5"/></g></svg>
 </div>
 <div style="font-weight:900;color:#FDE68A">॥ श्री गणेशाय नमः ॥</div>
 ______________________________________________
-
 <div class="d-flex justify-content-center gap-2 mt-2">
 <button id="bH" onclick="showTab('home')" class="action-btn active">🏠 होम</button>
 <button id="bK" onclick="showTab('ledger')" class="action-btn">📒 लेजर</button>
-
 <button id="bS" onclick="showTab('studentControl')" class="action-btn">🎓 स्टूडेंट कंट्रोल</button>  
-
-  <button id="bO" onclick="showTab('prabandhan')" class="action-btn">📋 प्रबंधन</button>
+<button id="bO" onclick="showTab('prabandhan')" class="action-btn">📋 प्रबंधन</button>
 </div>
-  
 </div>
 <div class="container mt-3">
 
@@ -120,34 +66,27 @@ ______________________________________________
 </div>
   
 <div id="tab-home">
-
   <div class="row g-2"><div class="col-6"><button onclick="toggleTool('calc')" class="home-tool-btn">💰 ब्याज कैलकुलेटर</button></div><div class="col-6"><button onclick="toggleTool('cal')" class="home-tool-btn">📅 कैलेंडर</button></div></div>
-
   <div id="box-calc" style="display:none" class="card p-3 mt-3"><div class="row g-2"><div class="col-6"><input id="intFrom" type="date" class="form-control form-control-sm"></div><div class="col-6"><input id="intTo" type="date" class="form-control form-control-sm"></div><div class="col-6"><input id="intP" type="number" class="form-control form-control-sm" value="10000"></div><div class="col-6"><input id="intR" type="number" class="form-control form-control-sm" value="12"></div><div class="col-12"><button onclick="calcInt()" class="btn w-100 text-white" style="background:#174a7e">गणना</button><div id="intRes" class="mt-2 p-2 rounded" style="background:#f0f7ff;font-weight:700"></div></div></div></div>
 <div id="box-cal" style="display:none" class="card p-3 mt-3"><div class="d-flex justify-content-between"><h6>📅 कैलेंडर 2026</h6><select id="calMonth" onchange="renderCalendar()" class="form-select form-select-sm" style="width:140px"></select></div><div class="cal-grid mt-2 fw-bold small text-center"><div>रवि</div><div>सोम</div><div>मंगल</div><div>बुध</div><div>गुरु</div><div>शुक्र</div><div>शनि</div></div><div id="calBody" class="cal-grid mt-1"></div></div>
 </div>
 
 <div id="tab-khata" style="display:none">
-
   <div id="filterWrap">
   <div class="row g-2">
-
          <div class="col-12">
       <div class="card p-2" style="border:1.5px solid #174a7e;border-radius:12px; height:100%">
         <div style="display:flex; gap:8px; height:100%">
-          <!-- लेफ्ट 50% - आय व्यय -->
           <div style="flex:1; display:grid; grid-template-columns:1fr 1fr; gap:6px;">
             <button onclick="filterKhata(this,'आय')" class="filter-btn" style="min-height:92px!important;">💰 आय<small id="amt-आय">₹0</small></button>
             <button onclick="filterKhata(this,'व्यय')" class="filter-btn" style="min-height:92px!important;">🏠 व्यय<small id="amt-व्यय">₹0</small></button>
           </div>
-          <!-- राइट 50% - लाभ -->
           <div style="flex:1; display:flex;">
             <button class="filter-btn" style="min-height:92px!important; width:100%; background:#fff!important; color:#174a7e!important; border:2px solid #174a7e!important; font-size:13px!important;">💹 लाभ<br><small id="profit-mini" style="font-size:15px; font-weight:900;">₹0</small></button>
           </div>
         </div>
       </div>
          </div>   
-    
     <div class="col-6">
       <div class="card p-2" style="border:1.5px solid #174a7e;border-radius:12px;height:100%">
         <div style="background:#174a7e;color:#fff;font-weight:800;font-size:11px;padding:4px 8px;border-radius:8px;text-align:center;margin-bottom:6px">🟢 संपत्ति <br><span id="tot-asset">₹0</span></div>
@@ -159,9 +98,7 @@ ______________________________________________
         </div>
       </div>
     </div>
-
     <div class="col-6" style="display:flex; flex-direction:column; gap:8px; height:100%">
-      <!-- ऊपर - देनदारी -->
       <div class="card p-2" style="border:1.5px solid #174a7e;border-radius:12px; flex:0.65; display:flex; flex-direction:column; justify-content:center;">
         <div style="background:#174a7e;color:#fff;font-weight:800;font-size:11px;padding:4px 8px;border-radius:8px;text-align:center;margin-bottom:6px">🔵 देनदारी <br><span id="tot-liab">₹0</span></div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
@@ -169,18 +106,12 @@ ______________________________________________
           <button onclick="filterKhata(this,'लोन')" class="filter-btn">🏦 लोन<small id="amt-लोन">₹0</small></button>
         </div>
       </div>
-
-      <!-- नीचे - पूंजी -->
       <div class="card p-2" style="border:1.5px solid #174a7e;border-radius:12px; flex:0.35; display:flex; flex-direction:column; justify-content:center;">
         <button onclick="filterKhata(this,'परिवार')" class="filter-btn" style="min-height:88px!important;">👨‍👩‍👧 पूंजी<small id="amt-परिवार">₹0</small></button>
       </div>
     </div>
-
-     
-
   </div>
   </div>
-  
 <div id="listWrap" class="mt-2" style="display:none">
   <div class="card p-3">
     <div class="d-flex justify-content-between align-items-center mb-2">
@@ -191,10 +122,9 @@ ______________________________________________
     <div id="allList"></div>
   </div>
 </div>
-
 <div id="detailBox" style="display:none"></div>
 </div>
-<!-- LEDGER: CREATE -->
+
 <div id="tab-create" style="display:none">
   <div class="card p-3" style="border-radius:16px; border:1.5px solid #174a7e">
     <h6 style="color:#174a7e; font-weight:900; margin-bottom:12px">➕ नया खाता</h6>
@@ -214,7 +144,6 @@ ______________________________________________
   </div>
 </div>
 
-<!-- LEDGER: VOUCHER -->
 <div id="tab-voucher" style="display:none">
   <div class="card p-3" style="border-radius:16px; border:1.5px solid #174a7e">
     <h6 style="color:#174a7e;font-weight:900; margin-bottom:12px">💸 लेन-देन</h6>
@@ -241,8 +170,7 @@ ______________________________________________
   </div>
 </div>
   
-<!-- LEDGER: BALANCE -->
-  <div id="tab-balance" style="display:none">
+<div id="tab-balance" style="display:none">
   <div class="card p-2" style="border:1.5px solid #174a7e; border-radius:12px; overflow:hidden; padding:0 !important;">
     <div style="background:#174a7e;color:#fff;font-weight:800;font-size:11px;padding:6px;text-align:center;">📒 बैलेंस शीट</div>
     <div style="display:flex;">
@@ -259,76 +187,16 @@ ______________________________________________
     </div>
     <div style="background:#174a7e;color:#fff;text-align:center;padding:7px;font-weight:900;font-size:11px;" id="bs-final">₹0 = ₹0</div>
   </div>
-  </div>
-  
-<!-- PRABANDHAN MENU -->
-<div id="tab-prabandhan" style="display:none">
-  <div class="card p-2">
-    <h6 style="color:#174a7e;font-weight:800">📋 प्रबंधन</h6>
-    <div class="row g-2 mt-1">
-      <div class="col-6"><button onclick="showTab('vendor')" class="home-tool-btn">🔧 वेंडर (<span id="cnt-vendor">0</span>)</button></div>
-      <div class="col-6"><button onclick="showTab('family')" class="home-tool-btn">👨‍👩‍👧 फैमिली (<span id="cnt-family">0</span>)</button></div>
-      <div class="col-6"><button onclick="showTab('dev')" class="home-tool-btn">🕉️ देव (<span id="cnt-dev">0</span>)</button></div>
-      <div class="col-6"><button onclick="showTab('guest')" class="home-tool-btn">👥 मेहमान (<span id="cnt-guest">0</span>)</button></div>
-      <div class="col-6"><button onclick="showTab('nautaniya')" class="home-tool-btn">🙏 नौटानिया (<span id="cnt-nautaniya">0</span>)</button></div>
-      <div class="col-6"><button onclick="showTab('bhojan')" class="home-tool-btn">🍛 भोजन (<span id="cnt-bhojan">0</span>)</button></div>
-      <div class="col-12 mt-2"><div class="card p-2"><input type="file" id="excelFile" class="form-control form-control-sm"><button onclick="importExcel()" class="btn btn-sm w-100 mt-2 text-white" style="background:#174a7e">Excel Import</button><small id="fileName"></small><button onclick="downloadGuestTemplate()" class="btn btn-sm w-100 mt-2" style="background:#f0f7ff">Template डाउनलोड</button></div></div>
-    </div>
-  </div>
 </div>
-  
-<div id="tab-vendor" style="display:none"><div class="row g-2"><div class="col-lg-4"><div class="card p-3"><div class="d-flex justify-content-between"><h6 style="color:#174a7e">🔧 वेंडर</h6><button onclick="showTab('prabandhan')" class="btn btn-sm text-white" style="background:#174a7e">⬅️</button></div><select id="vType" class="form-select form-select-sm my-1"><option>🏨 रिसोर्ट</option><option>⛺ टेंट</option><option>💡 लाइट</option><option>🍪 हलवाई</option><option>📸 फोटोग्राफर</option><option>📿 पंडित जी</option></select><input id="vName" class="form-control form-control-sm my-1" placeholder="नाम"><input id="vPhone" class="form-control form-control-sm my-1" placeholder="फोन"><input id="vPrice" type="number" class="form-control form-control-sm my-1" placeholder="कुल"><input id="vAdvance" type="number" class="form-control form-control-sm my-1" placeholder="एडवांस"><div class="bg-light p-2 rounded mt-2"><b style="font-size:11px">📅 तारीख</b><div id="scheduleList"></div><div class="d-flex gap-1 mt-2"><input id="tempDate" type="date" class="form-control form-control-sm"><input id="tempTime" type="time" class="form-control form-control-sm"></div><input id="tempNote" class="form-control form-control-sm mt-1" placeholder="काम"><button onclick="addScheduleRow()" class="btn btn-sm w-100 mt-1 text-white" style="background:#174a7e">+ जोड़ें</button></div><button onclick="addVendor()" class="btn btn-sm w-100 mt-2 text-white" style="background:#174a7e">वेंडर जोड़ें</button></div><div class="card p-2 mt-2"><b>कुल: ₹<span id="totalCost">0</span> | एड: ₹<span id="totalAdv">0</span> | बाकी: ₹<span id="totalBal">0</span></b></div></div><div class="col-lg-8"><div class="row g-2" id="vendorList"></div></div></div></div>
 
-<div id="tab-family" style="display:none"><div class="row g-2"><div class="col-lg-4"><div class="card p-3"><div class="d-flex justify-content-between"><h6>फैमिली</h6><button onclick="showTab('prabandhan')" class="btn btn-sm text-white" style="background:#174a7e">⬅️</button></div><input id="fName" class="form-control form-control-sm my-1" placeholder="नाम"><input id="fRole" class="form-control form-control-sm my-1" placeholder="जिम्मेदारी"><button onclick="addFamily()" class="btn btn-sm w-100 text-white" style="background:#174a7e">मेंबर जोड़ें</button><hr><select id="taskTo" class="form-select form-select-sm my-1"></select><input id="taskText" class="form-control form-control-sm my-1" placeholder="काम"><button onclick="addTask()" class="btn btn-sm w-100 text-white" style="background:#174a7e">टास्क दें</button></div></div><div class="col-lg-8"><div id="familyList" class="row g-2"></div></div></div></div>
-
-<div id="tab-dev" style="display:none"><div class="row g-2"><div class="col-lg-4"><div class="card p-3"><div class="d-flex justify-content-between"><h6>🕉️ देव</h6><button onclick="showTab('prabandhan')" class="btn btn-sm text-white" style="background:#174a7e">⬅️</button></div><input id="dName" class="form-control form-control-sm my-1" placeholder="देव"><input id="dDate" type="date" class="form-control form-control-sm my-1"><input id="dTime" type="time" class="form-control form-control-sm my-1"><input id="dPlace" class="form-control form-control-sm my-1" placeholder="स्थान"><textarea id="dDetail" class="form-control form-control-sm my-1" placeholder="विवरण"></textarea><button onclick="addDev()" class="btn btn-sm w-100 mt-2 text-white" style="background:#174a7e">+ सेव</button></div></div><div class="col-lg-8"><div class="row g-2" id="devList"></div></div></div></div>
-
-
-  <div id="tab-guest" style="display:none">
-  <div id="guestMainFilter">
-    <div class="card p-2">
-      <div class="d-flex justify-content-between align-items-center mb-2">
-        <h6 style="font-size:12px;color:#174a7e;font-weight:800;margin:0">👥 मेहमान - कैटेगरी</h6>
-        <button onclick="showTab('prabandhan')" class="btn btn-sm text-white" style="background:#174a7e;border-radius:20px;padding:4px 12px;font-size:11px">⬅️ बैक मेनू</button>
-      </div>
-      <div class="filter-grid" id="guestCatBar"></div>
-    </div>
-  </div>
-  <div id="guestSubFilter" class="mt-2">
-    <div class="card p-2"><h6 style="font-size:11px;color:#174a7e;font-weight:800;margin:0 0 6px 4px">फंक्शन</h6><div class="filter-grid" id="guestProgBar"></div></div>
-    <div class="card p-2 mt-2"><h6 style="font-size:11px;color:#174a7e;font-weight:800;margin:0 0 6px 4px">परिवार</h6><div class="filter-grid" id="guestSurnameBar"></div></div>
-    <div class="card p-2 mt-2"><h6 style="font-size:11px;color:#174a7e;font-weight:800;margin:0 0 6px 4px">स्थान</h6><div class="filter-grid" id="guestSthanBar"></div></div>
-  </div>
-  <div id="guestListWrap" class="mt-2"><div class="card p-3"><div class="d-flex justify-content-between"><h6 style="color:#174a7e;margin:0"><span id="listCat">मेहमान</span> (<span id="count">0</span>)</h6><div class="d-flex gap-1"><input id="search" onkeyup="renderGuestCards()" class="form-control form-control-sm" style="width:110px" placeholder="Search"><button onclick="showTab('prabandhan')" class="btn btn-sm text-white" style="background:#174a7e">⬅️</button></div></div><div id="guestCardList" class="mt-2"></div></div></div>
-  <div id="guestDetailBox" style="display:none"></div>
-  <div id="bhojanProgList" style="display:none"></div>
-  <div id="menuDetailBox" style="display:none"></div>
-  </div>
-  
-<div id="tab-nautaniya" style="display:none">
-  <div class="card p-2">
-    <div class="d-flex justify-content-between align-items-center mb-2">
-      <h6 style="font-size:12px;color:#174a7e;font-weight:800;margin:0">🙏 नौटानिया - कैटेगरी</h6>
-      <button onclick="showTab('prabandhan')" class="btn btn-sm text-white" style="background:#174a7e;border-radius:20px;padding:4px 12px;font-size:11px">⬅️ बैक मेनू</button>
-    </div>
-    <div class="filter-grid" id="nauCatBar"></div>
-  </div>
-  <div class="mt-2">
-    <div class="card p-2"><h6 style="font-size:11px;color:#174a7e;font-weight:800;margin:0 0 6px 4px">फंक्शन</h6><div class="filter-grid" id="nauProgBar"></div></div>
-    <div class="card p-2 mt-2"><h6 style="font-size:11px;color:#174a7e;font-weight:800;margin:0 0 6px 4px">परिवार</h6><div class="filter-grid" id="nauSurnameBar"></div></div>
-    <div class="card p-2 mt-2"><h6 style="font-size:11px;color:#174a7e;font-weight:800;margin:0 0 6px 4px">स्थान</h6><div class="filter-grid" id="nauSthanBar"></div></div>
-  </div>
-  <div id="nauListWrap" class="mt-2"><div class="card p-3"><div class="d-flex justify-content-between"><h6 style="color:#174a7e">नौटानिया - <span id="countNau">0</span></h6><button onclick="showTab('prabandhan')" class="btn btn-sm text-white" style="background:#174a7e">⬅️</button></div><input id="searchNau" onkeyup="renderGuestCards()" class="form-control form-control-sm mt-2" placeholder="Search"><div id="nauCardList" class="mt-2"></div></div></div>
-  <div id="nauDetailBox" style="display:none"></div>
-</div>
-  
-<div id="tab-bhojan" style="display:none"></div>
-
- <div id="tab-studentControl" style="display:none; margin:0; padding:0;">
+<!-- स्टूडेंट कंट्रोल और प्रबंधन दोनों Iframe स्टाइल में -->
+<div id="tab-studentControl" style="display:none; margin:0; padding:0;">
   <iframe id="studentFrame" src="dashboard.html" style="width:100%; height:100vh; border:none; background:#fdf6ee; display:block;"></iframe>
- </div> 
+</div> 
+<div id="tab-prabandhan-frame" style="display:none; margin:0; padding:0;">
+  <iframe id="prabandhanFrame" src="management.html" style="width:100%; height:100vh; border:none; background:#fdf6ee; display:block;"></iframe>
+</div>
 
-<div id="singleAddModal" style="display:none"></div>
 </div>
 <script>  
 let khatas=JSON.parse(localStorage.getItem('khata_final_v7')||'[]');
@@ -349,7 +217,6 @@ khatas=[
 }
 let currentFilter='नकद';
 function save(){localStorage.setItem('khata_final_v7',JSON.stringify(khatas));localStorage.setItem('voucher_final_v7',JSON.stringify(vouchers));}
-
 function getBal(id){
  let k=khatas.find(x=>x.id==id);
  if(!k) return {jama:0,gaya:0,shesh:0,display:0};
@@ -367,7 +234,7 @@ function getBal(id){
 }
   
 function showTab(t){
- ['home','khata','voucher','create','balance','prabandhan','vendor','family','dev','guest','nautaniya','bhojan','studentControl'].forEach(x=>{
+ ['home','khata','voucher','create','balance','prabandhan-frame','studentControl'].forEach(x=>{
   let el=document.getElementById('tab-'+x); if(el) el.style.display='none';
  });
  document.getElementById('ledgerSubSec').style.display='none';
@@ -379,16 +246,10 @@ function showTab(t){
     document.getElementById('tab-studentControl').style.display='block';
     document.getElementById('bS').classList.add('active');
  }
- else if(t=='prabandhan'){document.getElementById('tab-prabandhan').style.display='block';document.getElementById('bO').classList.add('active');updatePrabandhanCount();}
- else if(['vendor','family','dev','guest','nautaniya','bhojan'].includes(t)){
-  document.getElementById('tab-'+t).style.display='block';
-  document.getElementById('bO').classList.add('active');
-  if(t=='vendor') renderVendors();
-  if(t=='family') renderFamily();
-  if(t=='dev') renderDevs();
-  if(t=='guest'){document.getElementById('guestMainFilter').style.display='block';document.getElementById('guestSubFilter').style.display='block';document.getElementById('guestListWrap').style.display='block';document.getElementById('guestDetailBox').style.display='none';document.getElementById('bhojanProgList').style.display='none';document.getElementById('menuDetailBox').style.display='none';renderGuestCats('guest');renderGuestCards();}
-  if(t=='nautaniya'){document.getElementById('nauListWrap').style.display='block';document.getElementById('nauDetailBox').style.display='none';renderGuestCats('nautaniya');renderGuestCards();}
-  if(t=='bhojan'){openBhojanProgList();}
+ else if(t=='prabandhan'){
+    document.getElementById('tab-prabandhan-frame').style.display='block';
+    document.getElementById('bO').classList.add('active');
+    document.getElementById('prabandhanFrame').src = 'management.html?v='+Date.now();
  }
 }
 
@@ -407,7 +268,6 @@ function openLedger(sub){
  if(sub=='voucher'){renderVoucher();onNatureChange();}
  if(sub=='balance'){renderAll();}
 }
-
 function filterKhata(el,f){
  currentFilter=f;
  document.querySelectorAll('#tab-khata .filter-btn').forEach(b=>b.classList.remove('active'));
@@ -426,15 +286,12 @@ function backToList(){
  document.getElementById('filterWrap').style.display='none';
  document.getElementById('listWrap').style.display='block';
  document.getElementById('detailBox').style.display='none';
-   }  
-  
- function getTypeTotal(t){ return khatas.filter(k=>k.type==t).reduce((s,k)=>s+getBal(k.id).display,0); }
-
+}  
+function getTypeTotal(t){ return khatas.filter(k=>k.type==t).reduce((s,k)=>s+getBal(k.id).display,0); }
 function renderAll(){
  let list=khatas.filter(k=>k.type==currentFilter);
  let titleEl=document.getElementById('listTitle');
  if(titleEl) titleEl.innerText=currentFilter+' ('+list.length+')';
-
 let html = `<div style="display:flex; flex-direction:column; gap:8px; max-height:450px; overflow-y:auto; padding-right:4px;">` + list.map(k=>{
   let b=getBal(k.id);
   return `<div class="khata-btn" style="display:flex; flex-direction:row; justify-content:space-between; align-items:center; padding:10px 12px; border-radius:10px;">
@@ -445,35 +302,25 @@ let html = `<div style="display:flex; flex-direction:column; gap:8px; max-height
     </div>
   </div>`;
 }).join('') + `</div>` || '<small>इस प्रकार में कोई खाता नहीं</small>';
-
 document.getElementById('allList').innerHTML=html;
- document.getElementById('allList').innerHTML=html;
-
- // totals
  ["नकद","बैंक","आय","व्यय","उधारी दी","उधारी ली","एसेट","परिवार","लोन"].forEach(t=>{
   let tot=khatas.filter(k=>k.type==t).reduce((s,k)=>s+getBal(k.id).display,0);
   let el=document.getElementById('amt-'+t); if(el) el.innerText='₹'+tot;
  });
-
  let totAsset = getTypeTotal('नकद')+getTypeTotal('बैंक')+getTypeTotal('एसेट')+getTypeTotal('उधारी दी');
  let totLiab = getTypeTotal('उधारी ली')+getTypeTotal('लोन')+getTypeTotal('परिवार');
  let profit = getTypeTotal('आय') - getTypeTotal('व्यय');
  let totLiabFull = totLiab + profit;
-
  let el1=document.getElementById('tot-asset'); if(el1) el1.innerText='₹'+totAsset;
  let el2=document.getElementById('tot-liab'); if(el2) el2.innerText='₹'+totLiab;
  let el3=document.getElementById('profit-mini'); if(el3) el3.innerText='₹'+profit;
- let el4=document.getElementById('tot-liab-full'); if(el4) el4.innerText='₹'+totLiabFull;
- let el5=document.getElementById('balance-status'); 
- if(el5) el5.innerHTML = totAsset==totLiabFull ? '✅ बैलेंस बराबर' : '⚠️ अंतर ₹'+(totAsset-totLiabFull);
-   // --- आपके मूल tab-balance वाले id के लिए (ये जोड़ो) ---
  let b1=document.getElementById('bs-tot-asset'); if(b1) b1.innerText='₹'+totAsset;
  let b2=document.getElementById('bs-profit'); if(b2) b2.innerText='₹'+profit;
  let b3=document.getElementById('bs-tot-liab'); if(b3) b3.innerText='₹'+ (getTypeTotal('उधारी ली')+getTypeTotal('लोन'));
  let b4=document.getElementById('bs-tot-capital'); if(b4) b4.innerText='₹'+ getTypeTotal('परिवार');
  let b5=document.getElementById('bs-tot-right'); if(b5) b5.innerText='₹'+totLiabFull;
- let b6=document.getElementById('bs-final'); if(b6) b6.innerText='₹'+totAsset+' = ₹'+totLiabFull + (totAsset==totLiabFull?' ✅':' ⚠️');                                            } 
-
+ let b6=document.getElementById('bs-final'); if(b6) b6.innerText='₹'+totAsset+' = ₹'+totLiabFull + (totAsset==totLiabFull?' ✅':' ⚠️');
+} 
 function deleteKhata(id){
  let related = vouchers.filter(v=>String(v.from)==String(id) || String(v.to)==String(id));
  if(related.length > 0){
@@ -482,13 +329,9 @@ function deleteKhata(id){
  }
  if(!confirm('खाता पक्का हटाना है?')) return;
  khatas = khatas.filter(k=>String(k.id)!=String(id));
- save(); 
- renderAll(); 
- renderVoucher();
+ save(); renderAll(); renderVoucher();
  if(document.getElementById('detailBox').style.display=='block') backToList();
 }
-
-   
 function openDetail(id){
  document.getElementById('filterWrap').style.display='none';
  document.getElementById('listWrap').style.display='none';
@@ -525,8 +368,6 @@ function openDetail(id){
   </div>`;
  }
 }
-
-
 function onCTypeChange(){
  let t=document.getElementById('cType').value;
  let dl=document.getElementById('suggestName');
@@ -534,20 +375,16 @@ function onCTypeChange(){
  else if(t=='व्यय') dl.innerHTML='<option value="फंक्शन - हलवाई"><option value="फंक्शन - टेंट"><option value="रेनोवेशन - पेंटर"><option value="रेनोवेशन - टाइल्स"><option value="घर खर्च">';
  else dl.innerHTML='';
 }
-
-
 function onNatureChange(){
   const nat = document.getElementById('vNature').value;
   const cashBank = khatas.filter(k=>['नकद','बैंक'].includes(k.type));
   let fromList=[], toList=[], nar='';
-  
   if(nat=='contra'){ fromList=cashBank; toList=cashBank; nar='नकद जमा/निकासी'; }
   if(nat=='receipt'){ fromList=khatas.filter(k=>['आय','उधारी दी','उधारी ली','परिवार','लोन'].includes(k.type)); toList=cashBank; nar='रुपया आया'; }
   if(nat=='payment'){ fromList=cashBank; toList=khatas.filter(k=>['व्यय','उधारी दी','उधारी ली','परिवार','लोन','एसेट'].includes(k.type)); nar='रुपया गया / खर्च'; }
   if(nat=='journal'){ fromList=khatas.filter(k=>!['नकद','बैंक'].includes(k.type)); toList=khatas.filter(k=>!['नकद','बैंक'].includes(k.type)); nar='हिसाब समायोजन'; }
   if(nat=='purchase'){ fromList=cashBank; toList=khatas.filter(k=>k.type=='एसेट'); nar='एसेट खरीदा'; }
   if(nat=='sales'){ fromList=khatas.filter(k=>k.type=='एसेट'); toList=cashBank; nar='एसेट बेचा'; }
-
   if(nat==''){ 
     document.getElementById('vFrom').innerHTML='<option value="">-- पहले प्रकार चुनें --</option>';
     document.getElementById('vTo').innerHTML='<option value="">-- पहले प्रकार चुनें --</option>';
@@ -557,7 +394,6 @@ function onNatureChange(){
   document.getElementById('vTo').innerHTML = toList.map(k=>`<option value="${k.id}">${k.name} [${k.type}]</option>`).join('') || '<option value="">खाता नहीं</option>';
   document.getElementById('vNar').value = nar;
 }
-  
 function renderVoucher(){
  document.getElementById('vDate').valueAsDate=new Date();
  let hist=vouchers.slice().reverse().slice(0,10).map(v=>{
@@ -566,20 +402,14 @@ function renderVoucher(){
  }).join('')||'<small>कोई लेन-देन नहीं</small>';
  document.getElementById('vHist').innerHTML=`<h6>पिछले 10 लेन-देन</h6>`+hist;
 }
-
 function createKhata(){
  let k={id:Date.now(),type:document.getElementById('cType').value,name:document.getElementById('cName').value.trim(),op:+document.getElementById('cOp').value||0,side:document.getElementById('cSide').value};
  if(!k.name){alert('नाम लिखें');return;}
  khatas.push(k); save();
  openLedger('khata');
  currentFilter=k.type;
- document.querySelectorAll('#filterBar .filter-btn').forEach(b=>b.classList.remove('active'));
- let map={'नकद':0,'बैंक':1,'आय':2,'व्यय':3,'उधारी दी':4,'उधारी ली':5,'एसेट':6,'परिवार':7,'लोन':8};
- let btns=document.querySelectorAll('#filterBar .filter-btn');
- if(btns[map[k.type]]) btns[map[k.type]].classList.add('active');
  renderAll();
 }
-
 function saveVoucher(){
  let v={
    id:Date.now(),
@@ -599,8 +429,6 @@ function saveVoucher(){
  alert('✅ '+ (v.vType || 'Voucher') +' सेव हो गया');
  document.getElementById('vAmt').value='';document.getElementById('vNar').value='';
 }
-
-  
 function toggleTool(t){
  let c=document.getElementById('box-calc'), cal=document.getElementById('box-cal');
  if(t=='calc'){c.style.display=c.style.display=='none'?'block':'none';cal.style.display='none';}
@@ -609,286 +437,7 @@ function toggleTool(t){
 function calcInt(){let f=new Date(document.getElementById('intFrom').value),to=new Date(document.getElementById('intTo').value),p=+document.getElementById('intP').value||0,r=+document.getElementById('intR').value||0;if(!f||!to||to<=f){document.getElementById('intRes').innerText='तारीख सही चुनें';return;}let diff=Math.ceil((to-f)/86400000);let si=p*r/100*diff/365;document.getElementById('intRes').innerHTML=`दिन ${diff} | ब्याज ₹${si.toFixed(0)} | कुल ₹${(p+si).toFixed(0)}`;}
 function initCal(){let sel=document.getElementById('calMonth');for(let i=0;i<12;i++){let d=new Date(2026,i,1);sel.innerHTML+=`<option value="${i}" ${i==new Date().getMonth()?'selected':''}>${d.toLocaleString('hi-IN',{month:'long'})} 2026</option>`;}renderCalendar();document.getElementById('intFrom').valueAsDate=new Date();document.getElementById('intTo').valueAsDate=new Date(new Date().setMonth(new Date().getMonth()+1));}
 function renderCalendar(){let m=+document.getElementById('calMonth').value,y=2026,first=new Date(y,m,1).getDay(),days=new Date(y,m+1,0).getDate(),body=document.getElementById('calBody');body.innerHTML='';for(let i=0;i<first;i++) body.innerHTML+=`<div></div>`;for(let d=1;d<=days;d++) body.innerHTML+=`<div class="cal-day"><b>${d}</b></div>`;}
-
 initCal();renderAll();onCTypeChange();
-
-
 </script>
-  
-<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
-
-<script>
-// --- प्रबंधन का 100% SAMPLE जैसा ACCURATE CODE ---
-let vendors=JSON.parse(localStorage.getItem('wedVendors')||'[]');
-let members=JSON.parse(localStorage.getItem('wedMembers')||'[]');
-let devs=JSON.parse(localStorage.getItem('devList')||'[]');
-let guests=JSON.parse(localStorage.getItem('palGuests_BC_Original')||'[]');
-let nautaniyaGuests=JSON.parse(localStorage.getItem('nautaniyaGuests')||'[]');
-let menus=JSON.parse(localStorage.getItem('palMenus')||'{}');
-let menuInfo=JSON.parse(localStorage.getItem('palMenuInfo')||'{}');
-let tempSchedules=[];
-
-function savePrabandhan(){
- localStorage.setItem('wedVendors',JSON.stringify(vendors));
- localStorage.setItem('wedMembers',JSON.stringify(members));
- localStorage.setItem('devList',JSON.stringify(devs));
- localStorage.setItem('palGuests_BC_Original',JSON.stringify(guests));
- localStorage.setItem('nautaniyaGuests',JSON.stringify(nautaniyaGuests));
- localStorage.setItem('palMenus',JSON.stringify(menus));
- localStorage.setItem('palMenuInfo',JSON.stringify(menuInfo));
- updatePrabandhanCount();
-}
-function updatePrabandhanCount(){
- let m={vendor:vendors.length,family:members.length,dev:devs.length,guest:guests.length,nautaniya:nautaniyaGuests.length,bhojan:Object.keys(menus).length};
- Object.keys(m).forEach(k=>{let el=document.getElementById('cnt-'+k); if(el) el.innerText=m[k];});
-}
-function addScheduleRow(){let d=document.getElementById('tempDate').value;let t=document.getElementById('tempTime').value;let n=document.getElementById('tempNote').value||'कार्य';if(!d){alert('तारीख चुनो');return;}tempSchedules.push({date:d,time:t,note:n});renderTemp();}
-function renderTemp(){document.getElementById('scheduleList').innerHTML=tempSchedules.map((s,i)=>`<div class="small bg-white p-1 rounded mt-1 d-flex justify-content-between" style="border:1px solid #dbeafe"><span>📅 ${s.date} ⏰ ${s.time} - ${s.note}</span><span onclick="tempSchedules.splice(${i},1);renderTemp()" style="cursor:pointer">✕</span></div>`).join('');}
-function addVendor(){let v={id:Date.now(),type:document.getElementById('vType').value,name:document.getElementById('vName').value,phone:document.getElementById('vPhone').value,price:+document.getElementById('vPrice').value||0,adv:+document.getElementById('vAdvance').value||0,schedules:[...tempSchedules]};if(!v.name){alert('नाम');return;}vendors.push(v);tempSchedules=[];savePrabandhan();renderVendors();}
-function renderVendors(){let total=0,adv=0;document.getElementById('vendorList').innerHTML=vendors.map((v,i)=>{total+=v.price;adv+=v.adv;let sch=(v.schedules||[]).map(s=>`<div style="background:#f0f7ff;border-radius:6px;padding:3px 6px;margin-top:3px;font-size:11px">📅 ${s.date} ⏰ ${s.time} - ${s.note}</div>`).join('');return `<div class="col-md-6"><div class="card p-2 vendor-card"><b style="color:#174a7e">${v.type} - ${v.name}</b><br><small>₹${v.price} | Adv ₹${v.adv} | ${v.phone}</small><div>${sch}</div><button onclick="vendors.splice(${i},1);savePrabandhan();renderVendors()" class="btn btn-sm btn-outline-dark mt-1">🗑️</button></div></div>`;}).join('');document.getElementById('totalCost').innerText=total;document.getElementById('totalAdv').innerText=adv;document.getElementById('totalBal').innerText=total-adv;}
-function addFamily(){let m={id:Date.now(),name:document.getElementById('fName').value,role:document.getElementById('fRole').value,tasks:[]};if(!m.name)return;members.push(m);savePrabandhan();renderFamily();}
-function renderFamily(){document.getElementById('taskTo').innerHTML=members.map(m=>`<option value="${m.id}">${m.name}</option>`).join('');document.getElementById('familyList').innerHTML=members.map((m,mi)=>`<div class="col-md-6"><div class="card p-2"><b style="color:#174a7e">${m.name}</b> <small>${m.role}</small><div class="mt-2">${m.tasks.map((t,ti)=>`<div class="form-check"><input class="form-check-input" type="checkbox" ${t.done?'checked':''} onchange="members[${mi}].tasks[${ti}].done=!members[${mi}].tasks[${ti}].done;savePrabandhan();renderFamily()"><label class="form-check-label">${t.text}</label></div>`).join('')||'<small>कोई काम नहीं</small>'}</div></div></div>`).join('');}
-function addTask(){let id=+document.getElementById('taskTo').value;let text=document.getElementById('taskText').value;if(!text)return;let mem=members.find(m=>m.id==id);if(!mem)return;mem.tasks.push({text,done:false});savePrabandhan();renderFamily();}
-function addDev(){let d={id:Date.now(),name:document.getElementById('dName').value,date:document.getElementById('dDate').value,time:document.getElementById('dTime').value,place:document.getElementById('dPlace').value,detail:document.getElementById('dDetail').value};if(!d.name)return;devs.push(d);savePrabandhan();renderDevs();}
-function renderDevs(){document.getElementById('devList').innerHTML=devs.map((d,i)=>`<div class="col-md-6"><div class="card p-2" style="border-left:5px solid #174a7e"><b>🕉️ ${d.name}</b><br><small>📅 ${d.date} ⏰ ${d.time} 📍 ${d.place||''}</small><br><small>${d.detail||''}</small><br><button onclick="devs.splice(${i},1);savePrabandhan();renderDevs()" class="btn btn-sm btn-outline-dark mt-1">🗑️</button></div></div>`).join('');}
-
-let categories=[...new Set(guests.map(g=>g.cat))]; if(!categories.length) categories=["मनासा","नीमच"];
-let currentCat=categories[0]; let subProg=null,subSurname=null,subSthan=null; let nauSubProg=null,nauSubSurname=null,nauSubSthan=null;
-
-function renderGuestCats(type){
- let isNau=type=='nautaniya';
- let baseCats=isNau?[...new Set(nautaniyaGuests.map(g=>g.cat))]:categories;
- if(!baseCats.length) baseCats=categories;
- if(!isNau&&!baseCats.includes(currentCat)) currentCat=baseCats[0];
- if(isNau) currentCat=baseCats[0]||currentCat;
- let barId=isNau?'nauCatBar':'guestCatBar';
- if(isNau){
-  document.getElementById(barId).innerHTML=baseCats.map(c=>`<button onclick="setGuestCat('${c}','nautaniya')" class="btn btn-sm filter-btn ${currentCat==c?'active':''}">${c}<br>(${nautaniyaGuests.filter(g=>g.cat==c).length})</button>`).join('');
-  renderNauSubFilters();
- }else{
-  document.getElementById(barId).innerHTML=baseCats.map(c=>`<button onclick="setGuestCat('${c}','guest')" class="btn btn-sm filter-btn ${currentCat==c?'active':''}">${c}<br>(${guests.filter(g=>g.cat==c).length})</button>`).join('');
-  renderGuestSubFilters();
- }
-}
-function setGuestCat(c,type){currentCat=c;subProg=null;subSurname=null;subSthan=null;nauSubProg=null;nauSubSurname=null;nauSubSthan=null;renderGuestCats(type);renderGuestCards();}
-function renderGuestSubFilters(){
- let list=guests.filter(g=>g.cat==currentCat);
- let programs=[...new Set(list.flatMap(g=>g.events||[]).map(e=>e.trim()).filter(Boolean))];
- let surnames=[...new Set(list.map(g=>(g.extra?.सरनेम||'').trim()).filter(Boolean))];
- let sthans=[...new Set(list.map(g=>(g.extra?.स्थान||'').trim()).filter(Boolean))];
- document.getElementById('guestProgBar').innerHTML=`<button onclick="setSubProg(null)" class="btn btn-sm filter-btn ${!subProg?'active':''}">सभी</button>`+programs.map(p=>`<button onclick="setSubProg('${p}')" class="btn btn-sm filter-btn ${subProg==p?'active':''}">${p}</button>`).join('');
- document.getElementById('guestSurnameBar').innerHTML=`<button onclick="setSubSurname(null)" class="btn btn-sm filter-btn ${!subSurname?'active':''}">सभी</button>`+surnames.map(s=>`<button onclick="setSubSurname('${s}')" class="btn btn-sm filter-btn ${subSurname==s?'active':''}">${s}</button>`).join('');
- document.getElementById('guestSthanBar').innerHTML=`<button onclick="setSubSthan(null)" class="btn btn-sm filter-btn ${!subSthan?'active':''}">सभी</button>`+sthans.map(s=>`<button onclick="setSubSthan('${s}')" class="btn btn-sm filter-btn ${subSthan==s?'active':''}">${s}</button>`).join('');
-}
-function setSubProg(p){subProg=p;renderGuestSubFilters();renderGuestCards();}
-function setSubSurname(s){subSurname=s;renderGuestSubFilters();renderGuestCards();}
-function setSubSthan(s){subSthan=s;renderGuestSubFilters();renderGuestCards();}
-function renderNauSubFilters(){
- let list=nautaniyaGuests.filter(g=>g.cat==currentCat);
- let programs=[...new Set(list.flatMap(g=>g.events||[]).map(e=>e.trim()).filter(Boolean))];
- let surnames=[...new Set(list.map(g=>(g.extra?.सरनेम||'').trim()).filter(Boolean))];
- let sthans=[...new Set(list.map(g=>(g.extra?.स्थान||'').trim()).filter(Boolean))];
- document.getElementById('nauProgBar').innerHTML=`<button onclick="setNauSubProg(null)" class="btn btn-sm filter-btn ${!nauSubProg?'active':''}">सभी</button>`+programs.map(p=>`<button onclick="setNauSubProg('${p}')" class="btn btn-sm filter-btn ${nauSubProg==p?'active':''}">${p}</button>`).join('');
- document.getElementById('nauSurnameBar').innerHTML=`<button onclick="setNauSubSurname(null)" class="btn btn-sm filter-btn ${!nauSubSurname?'active':''}">सभी</button>`+surnames.map(s=>`<button onclick="setNauSubSurname('${s}')" class="btn btn-sm filter-btn ${nauSubSurname==s?'active':''}">${s}</button>`).join('');
- document.getElementById('nauSthanBar').innerHTML=`<button onclick="setNauSubSthan(null)" class="btn btn-sm filter-btn ${!nauSubSthan?'active':''}">सभी</button>`+sthans.map(s=>`<button onclick="setNauSubSthan('${s}')" class="btn btn-sm filter-btn ${nauSubSthan==s?'active':''}">${s}</button>`).join('');
-}
-function setNauSubProg(p){nauSubProg=p;renderNauSubFilters();renderGuestCards();}
-function setNauSubSurname(s){nauSubSurname=s;renderNauSubFilters();renderGuestCards();}
-function setNauSubSthan(s){nauSubSthan=s;renderNauSubFilters();renderGuestCards();}
-
-function renderGuestCards(){
- let isNau=document.getElementById('tab-nautaniya').style.display=='block';
- let base=isNau?nautaniyaGuests.filter(g=>g.cat==currentCat):guests.filter(g=>g.cat==currentCat);
- if(!isNau){
-  if(subProg) base=base.filter(g=>(g.events||[]).includes(subProg));
-  if(subSurname) base=base.filter(g=>(g.extra?.सरनेम||'').trim()==subSurname);
-  if(subSthan) base=base.filter(g=>(g.extra?.स्थान||'').trim()==subSthan);
- }else{
-  if(nauSubProg) base=base.filter(g=>(g.events||[]).includes(nauSubProg));
-  if(nauSubSurname) base=base.filter(g=>(g.extra?.सरनेम||'').trim()==nauSubSurname);
-  if(nauSubSthan) base=base.filter(g=>(g.extra?.स्थान||'').trim()==nauSubSthan);
- }
- let search=(document.getElementById(isNau?'searchNau':'search').value||'').toLowerCase();
- if(search) base=base.filter(g=>g.name.toLowerCase().includes(search));
- if(isNau){
-  document.getElementById('countNau').innerText=base.length;
-  document.getElementById('nauCardList').innerHTML=base.map(g=>`
-<div class="khata-btn" onclick="openGuestDetail(${g.id},'nautaniya')" style="padding:8px 10px!important">
-  <div style="flex:1;min-width:0;text-align:left">
-    <b style="color:#174a7e;font-size:12px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${g.name}</b>
-    <small style="font-size:10px;color:#475569;display:block">${g.extra?.सरनेम||''} • ${g.extra?.स्थान||''}</small>
-  </div>
-  <span class="badge" style="background:#174a7e;font-size:9px;padding:3px 6px;flex-shrink:0;max-width:80px;overflow:hidden">${g.phone||''}</span>
-</div>`).join('')||'<small>कोई नहीं</small>';
- }else{
-  document.getElementById('count').innerText=base.length;
-  document.getElementById('listCat').innerText=currentCat;
-  document.getElementById('guestCardList').innerHTML=base.map(g=>`
-<div class="khata-btn" onclick="openGuestDetail(${g.id},'guest')" style="padding:8px 10px!important">
-  <div style="flex:1;min-width:0;text-align:left">
-    <b style="color:#174a7e;font-size:12px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${g.name} (${g.members||1})</b>
-    <small style="font-size:10px;color:#475569;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${g.extra?.सरनेम||''} • ${g.extra?.स्थान||''} • ${(g.events||[]).join(', ')}</small>
-  </div>
-  <div style="text-align:right;flex-shrink:0;margin-left:8px">
-    <span class="badge" style="background:#174a7e;font-size:9px;padding:3px 6px;max-width:80px;overflow:hidden;display:block">${g.phone||'No Phone'}</span>
-  </div>
-</div>`).join('')||'<small>कोई नहीं</small>';
- }
-}
-
-function openGuestDetail(id,type){
- let list=type=='nautaniya'?nautaniyaGuests:guests; let g=list.find(x=>x.id==id); if(!g) return;
- if(type=='nautaniya'){document.getElementById('nauListWrap').style.display='none';document.getElementById('nauDetailBox').style.display='block';}
- else{document.getElementById('guestMainFilter').style.display='none';document.getElementById('guestSubFilter').style.display='none';document.getElementById('guestListWrap').style.display='none';document.getElementById('guestDetailBox').style.display='block';}
- let boxId=type=='nautaniya'?'nauDetailBox':'guestDetailBox';
- let backFunc=type=='nautaniya'?`showTab('nautaniya')`:`backToGuestList()`;
-
- // अक्षर बड़े + पीछे डिलीट सिंबल
- let ayaRows=g.ayaList.map((x,i)=>`
-   <div class="entry-grid" style="font-size:13px!important; font-weight:600;">
-     <div style="font-size:13px">₹${x.rashi}</div>
-     <div style="font-size:12px">${x.date||'-'}</div>
-     <div style="font-size:13px; justify-content:space-between!important;"> 
-       <span>${x.detail}</span> 
-       <span onclick="delGuestEntry(${g.id},'${type}','aya',${i})" style="background:#fee2e2; padding:2px 7px; border-radius:12px; cursor:pointer; margin-left:8px;">🗑️</span>
-     </div>
-   </div>`).join('')||'<div class="p-2 small text-center">कोई आया नहीं</div>';
-
- let diyaRows=g.diyaList.map((x,i)=>`
-   <div class="entry-grid" style="font-size:13px!important; font-weight:600;">
-     <div style="font-size:13px">₹${x.rashi}</div>
-     <div style="font-size:12px">${x.date||'-'}</div>
-     <div style="font-size:13px; justify-content:space-between!important;">
-       <span>${x.detail}</span>
-       <span onclick="delGuestEntry(${g.id},'${type}','diya',${i})" style="background:#fee2e2; padding:2px 7px; border-radius:12px; cursor:pointer; margin-left:8px;">🗑️</span>
-     </div>
-   </div>`).join('')||'<div class="p-2 small text-center">कोई गया नहीं</div>';
-
- let progList=(g.events||[]).map(ev=>`<button onclick="sendProgWhatsApp(${g.id},'${type}','${ev}')" class="filter-btn" style="min-height:48px!important;font-size:10px;flex:0 0 auto;width:90px">🎉 ${ev}</button>`).join('')||'<small>कोई फंक्शन नहीं</small>';
-
- document.getElementById(boxId).innerHTML=`
-  <div class="ledger-white-card">
-   <div class="ledger-top">
-     <div class="d-flex justify-content-between">
-       <div class="d-flex gap-2"><button onclick="${backFunc}" class="btn btn-sm text-white" style="background:#174a7e;border-radius:20px">⬅️</button><div><b>👤 ${g.name}</b><br><small>${g.extra?.सरनेम||''} | ${g.extra?.स्थान||''} | ${g.phone||''}</small></div></div>
-       <button onclick="openSingleAdd(${g.id},'${type}')" class="btn btn-sm text-white" style="background:#0f766e;border-radius:20px">+ ऐड</button>
-     </div>
-     <div style="display:flex;gap:6px;overflow-x:auto;margin-top:10px;padding-bottom:4px">${progList}</div>
-   </div>
-   <div class="ledger-scroll">
-     <div class="ledger-main" style="min-width:700px">
-       <div class="ledger-col left"><div class="col-title jama">✅ आया - ${g.ayaList.length}</div><div class="header-row"><div>राशि</div><div>दिनांक</div><div>विवरण</div></div>${ayaRows}</div>
-       <div class="ledger-col"><div class="col-title gaya">❌ गया - ${g.diyaList.length}</div><div class="header-row"><div>राशि</div><div>दिनांक</div><div>विवरण</div></div>${diyaRows}</div>
-     </div>
-   </div>
-  </div>`;
-}
-  
-
-function sendProgWhatsApp(id,type,prog){
- let list=type=='nautaniya'?nautaniyaGuests:guests; let g=list.find(x=>x.id==id); if(!g) return;
- let phone=(g.phone||'').toString().replace(/\D/g,'');
- if(phone.length==10) phone='91'+phone;
- let msg=`नमस्ते ${g.name} जी 🙏%0A%0Aसहृदय निवेदन है कि हमारे यहाँ *शादी* के शुभ अवसर पर ${prog} कार्यक्रम रखा गया है।%0A%0Aआपकी उपस्थिति से हमें बड़ा हर्ष होगा, कृपया परिवार सहित पधारकर आशीर्वाद प्रदान करें।%0A%0A📍 ${g.extra?.स्थान||''}%0A👨‍👩‍👧 ${g.extra?.सरनेम||''} परिवार%0A%0Aविनीत - पाल परिवार, मनासा`;
- if(phone) window.open(`https://wa.me/${phone}?text=${msg}`,'_blank');
- else window.open(`https://wa.me/?text=${msg}`,'_blank');
-}
-  
-function backToGuestList(){
- document.getElementById('guestMainFilter').style.display='block';
- document.getElementById('guestSubFilter').style.display='block';
- document.getElementById('guestListWrap').style.display='block';
- document.getElementById('guestDetailBox').style.display='none';
- document.getElementById('bhojanProgList').style.display='none';
- document.getElementById('menuDetailBox').style.display='none';
- renderGuestCards();
-}
-  
-function backToGuestList(){document.getElementById('guestMainFilter').style.display='block';document.getElementById('guestSubFilter').style.display='block';document.getElementById('guestListWrap').style.display='block';document.getElementById('guestDetailBox').style.display='none';document.getElementById('bhojanProgList').style.display='none';document.getElementById('menuDetailBox').style.display='none';renderGuestCards();}
-function openSingleAdd(id,type){let modal=document.getElementById('singleAddModal');modal.innerHTML=`<div class="guest-add-modal" style="display:flex"><div class="guest-add-box"><h6 style="text-align:center">➕ आया / दिया</h6><div class="guest-radio"><input type="radio" name="entryType" id="rAya" value="aya" checked><label for="rAya" class="aya">✅ आया</label><input type="radio" name="entryType" id="rDiya" value="diya"><label for="rDiya" class="diya">❌ दिया</label></div><input id="mRashi" type="number" class="form-control form-control-sm my-1" placeholder="राशि"><input id="mDate" type="date" class="form-control form-control-sm my-1"><input id="mDetail" class="form-control form-control-sm my-1" placeholder="विवरण"><div class="d-flex gap-2 mt-2"><button onclick="document.getElementById('singleAddModal').style.display='none'" class="btn btn-sm w-50" style="background:#f1f5f9">बंद</button><button onclick="saveSingleAdd(${id},'${type}')" class="btn btn-sm w-50 text-white" style="background:#174a7e">सेव</button></div></div></div>`;modal.style.display='block';document.getElementById('mDate').valueAsDate=new Date();}
-function saveSingleAdd(id,type){let rashi=document.getElementById('mRashi').value;let date=document.getElementById('mDate').value;let detail=document.getElementById('mDetail').value||'नेक';let et=document.querySelector('input[name="entryType"]:checked').value;if(!rashi){alert('राशि');return;}let list=type=='nautaniya'?nautaniyaGuests:guests;let g=list.find(x=>x.id==id);if(et=='aya')g.ayaList.push({rashi,date,detail});else g.diyaList.push({rashi,date,detail});savePrabandhan();document.getElementById('singleAddModal').style.display='none';openGuestDetail(id,type);}
-function delGuestEntry(id,type,listType,idx){if(!confirm('हटाना?'))return;let list=type=='nautaniya'?nautaniyaGuests:guests;let g=list.find(x=>x.id==id);if(listType=='aya')g.ayaList.splice(idx,1);else g.diyaList.splice(idx,1);savePrabandhan();openGuestDetail(id,type);}
-
-function openBhojanProgList(){
- ['home','khata','voucher','create','vendor','family','dev','guest','nautaniya','prabandhan'].forEach(x=>{let el=document.getElementById('tab-'+x);if(el)el.style.display='none';});
- document.getElementById('tab-guest').style.display='block';
- document.getElementById('guestMainFilter').style.display='none';
- document.getElementById('guestSubFilter').style.display='none';
- document.getElementById('guestListWrap').style.display='none';
- document.getElementById('guestDetailBox').style.display='none';
- document.getElementById('bhojanProgList').style.display='block';
- document.getElementById('menuDetailBox').style.display='none';
- let allEvents=[...new Set(guests.flatMap(g=>g.events||["शादी"]).map(e=>e.trim()).filter(Boolean))];
- if(!allEvents.length) allEvents=["शादी","हल्दी","मेहंदी","रिसेप्शन"];
- document.getElementById('bhojanProgList').innerHTML=`<div class="card p-2"><div class="d-flex justify-content-between align-items-center"><h6 style="color:#174a7e;margin:0">🍛 मेनू - प्रोग्राम</h6><button onclick="showTab('prabandhan')" class="btn btn-sm text-white" style="background:#174a7e;border-radius:20px">⬅️ प्रबंधन</button></div><div class="filter-grid mt-2">${allEvents.map(ev=>{
-  let list=guests.filter(g=>(g.events||[]).includes(ev));
-  let cnt=list.length;
-  let people=list.reduce((s,g)=>s+(g.members||1),0);
-  let families=[...new Set(list.map(g=>(g.extra?.सरनेम||'').trim()).filter(Boolean))].length;
-  return `<button onclick="openMenuCard('${ev}')" class="filter-btn" style="height:92px;line-height:1.2">${ev}<br><small style="font-size:11px;font-weight:600">${cnt} परिवार | ${people} लोग<br>${families} सरनेम</small></button>`;
- }).join('')}</div></div>`;
-}
-function openMenuCard(prog){
- document.getElementById('bhojanProgList').style.display='none';document.getElementById('menuDetailBox').style.display='block';
- let list=guests.filter(g=>(g.events||[]).includes(prog));
- let families=[...new Set(list.map(g=>(g.extra?.सरनेम||'').trim()).filter(Boolean))];
- let totalPeople=list.reduce((s,g)=>s+(g.members||1),0);
- if(!menus[prog]) menus[prog]=[];
- let info=menuInfo[prog]||{date:'',time:''};
- document.getElementById('menuDetailBox').innerHTML=`<div class="ledger-white-card"><div class="ledger-top"><div class="d-flex justify-content-between align-items-center"><div class="d-flex align-items-center gap-2"><button onclick="openBhojanProgList()" class="btn btn-sm" style="background:#fff;color:#174a7e!important;border-radius:20px;font-weight:800">⬅️ वापस</button><b>🎉 ${prog}</b></div><span style="background:#fff;color:#174a7e;border-radius:12px;padding:4px 10px;font-size:11px;font-weight:800">📅 ${info.date||'-'} ⏰ ${info.time||'-'}</span></div></div><div style="display:flex;min-height:260px"><div style="flex:0 0 50%;border-right:2px solid #174a7e;background:#fff;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12px;gap:8px"><div style="background:#f0f7ff;border-radius:12px;padding:10px;width:90%;text-align:center;border:1.5px solid #dbeafe"><div style="font-size:11px;color:#174a7e;font-weight:800">📅 दिन</div><div style="font-size:13px;font-weight:900">${info.date||'--'}</div><div style="font-size:11px;color:#174a7e;font-weight:800;margin-top:6px">⏰ समय</div><div style="font-size:13px;font-weight:900">${info.time||'--'}</div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;width:90%"><div style="background:#ecfdf5;border-radius:12px;padding:8px;text-align:center"><div style="font-size:10px;color:#0f766e;font-weight:800">👨‍👩‍👧 परिवार</div><div style="font-size:20px;font-weight:900">${families.length}</div><small style="font-size:10px">${list.length} लिस्ट</small></div><div style="background:#fffbeb;border-radius:12px;padding:8px;text-align:center"><div style="font-size:10px;color:#b45309;font-weight:800">👥 लोग</div><div style="font-size:20px;font-weight:900">${totalPeople}</div><small style="font-size:10px">कुल</small></div></div></div><div style="flex:0 0 50%;background:#fdf6ee;padding:10px"><div class="col-title" style="background:#eff6ff;color:#1e40af;border-radius:8px;margin-bottom:8px">🍛 मेनू - ${menus[prog].length} आइटम</div><div>${menus[prog].map(m=>`<div class="menu-item"><span>🍽️ ${m.name}</span></div>`).join('')||'<small>Excel में Menu शीट में नहीं मिला</small>'}</div></div></div></div>`;
-}
-  
-function importExcel(){
- let file=document.getElementById('excelFile').files[0]; if(!file) return;
- document.getElementById('fileName').innerText=file.name+' पढ़ रहा...';
- let reader=new FileReader();
- reader.onload=function(e){
-  let wb=XLSX.read(new Uint8Array(e.target.result),{type:'array'});
-  let ng=[],nn=[],nc=[],idc=Date.now(); let newMenus={},newMenuInfo={};
-  wb.SheetNames.forEach(sh=>{
-   let rows=XLSX.utils.sheet_to_json(wb.Sheets[sh],{header:1}); if(!rows.length) return;
-   if(sh.toLowerCase().trim()=='menu'){
-    rows.forEach((r,i)=>{if(i==0||!r[0])return;let prog=r[0].toString().trim();let dish=r[1]?r[1].toString().trim():'';let day=r[2]?r[2].toString().trim():'';let time=r[3]?r[3].toString().trim():'';if(!newMenus[prog])newMenus[prog]=[];if(dish)newMenus[prog].push({name:dish});if(day||time)newMenuInfo[prog]={date:day,time:time};});
-    return;
-   }
-   if(!nc.includes(sh)) nc.push(sh);
-   rows.forEach((r,i)=>{if(i==0||!r[0])return;let name=r[0].toString().trim();let obj={id:idc++,cat:sh,name:name,extra:{सरनेम:r[1]||'',स्थान:r[2]||''},phone:r[3]||'',members:parseInt(r[4])||1,events:r[5]?r[5].toString().split(',').map(s=>s.trim()):["शादी"],ayaList:[],diyaList:[]};if(sh.toLowerCase().includes('नौतानिया'))nn.push(obj);else ng.push(obj);});
-  });
-
-  ng.forEach(newG=>{
-    let exists = guests.some(old=> old.name.trim().toLowerCase() == newG.name.trim().toLowerCase() && old.cat == newG.cat);
-    if(!exists) guests.push(newG);
-  });
-  nn.forEach(newG=>{
-    let exists = nautaniyaGuests.some(old=> old.name.trim().toLowerCase() == newG.name.trim().toLowerCase());
-    if(!exists) nautaniyaGuests.push(newG);
-  });
-
-  categories=[...new Set([...categories,...nc])];
-  if(!currentCat) currentCat=categories[0];
-  Object.keys(newMenus).forEach(k=>{ menus[k]=newMenus[k]; });
-  Object.keys(newMenuInfo).forEach(k=>{ menuInfo[k]=newMenuInfo[k]; });
-
-  savePrabandhan();
-  localStorage.setItem('palGuests_BC_Original', JSON.stringify(guests));
-
-  document.getElementById('fileName').innerText=`${guests.length} कुल मेहमान (Add वाले सुरक्षित हैं)`;
-  showTab('guest');
- };
- reader.readAsArrayBuffer(file);
-}
-
-function downloadGuestTemplate(){
- let ws=XLSX.utils.aoa_to_sheet([["Name","सरनेम","स्थान","Phone","Members","Events"],["राम यादव","यादव","मनासा","99999",4,"शादी,हल्दी"]]);
- let ws2=XLSX.utils.aoa_to_sheet([["Program","Dish","Date","Time"],["शादी","पनीर","12-05-2026","7 PM"],["शादी","दाल","12-05-2026","7 PM"]]);
- let wb=XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb,ws,"मनासा"); XLSX.utils.book_append_sheet(wb,ws2,"Menu");
- XLSX.writeFile(wb,"Shadi_Template_Full.xlsx");
-}
-updatePrabandhanCount();
-
-</script>
-
 </body>
 </html>
-    
-
