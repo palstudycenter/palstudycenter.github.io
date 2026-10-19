@@ -166,7 +166,8 @@ async function saveStudentFee(){
     let f = allKhatas.find(k=>k.name.includes('8338'));
     if(f) toId = String(f.id);
   }
-  window.top.postMessage({ type: 'COACHING_FEE_ADDED', amount: amt, name: stu.name, className: stu.class, toId: toId }, '*');
+    let cls = stu.class || stu.Class || stu.course || stu.standard || stu.board || '';
+  window.top.postMessage({ type: 'COACHING_FEE_ADDED', amount: amt, name: stu.name, className: cls, toId: toId }, '*');
   try{ let url = getApiUrl(CONFIG.API.FEES); await fetch(url,{ method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload) }); }catch(e){}
   loadFees(); document.getElementById('addFeeBox').style.display='none'; document.getElementById('feeAmount').value='';
 }
