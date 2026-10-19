@@ -12,17 +12,17 @@ body{background:#fdf6ee;font-family:Poppins,sans-serif}
 .filter-btn{background:linear-gradient(135deg,#174a7e 0%,#1e6fa5 100%)!important;color:#fff!important;border:none!important;border-radius:10px!important;font-weight:700!important;min-height:44px!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;font-size:11px}
 .filter-btn.active{background:#fff!important;color:#174a7e!important;border:2px solid #174a7e!important}
 
-/* Top Nav Buttons - White पर Blue */
-.nav-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr;gap:5px;margin-bottom:10px}
+/* Top Nav Buttons - अब 4 बटन */
+.nav-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:5px;margin-bottom:10px}
 .nav-btn{background:linear-gradient(135deg,#174a7e 0%,#1e6fa5 100%)!important;color:#fff!important;border:none!important;border-radius:10px!important;font-weight:700!important;min-height:44px!important;font-size:10px}
 .nav-btn.active{background:#fff!important;color:#174a7e!important;border:2px solid #174a7e!important}
 
 .student-card{background:#fff;border:1px solid #e6eef7;border-radius:12px;padding:10px;width:100%;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;cursor:pointer}
-#tab-students, #tab-tests, #tab-notice{position:sticky;top:248px;z-index:101;max-width:520px;margin:0 auto;}
-#tab-students.card, #tab-tests.card, #tab-notice.card{background:#fff;border-radius:0 0 15px 15px;border:1px solid #e6eef7;border-top:none;box-shadow:0 10px 20px rgba(0,0,0,.06);margin-top:0!important;overflow:hidden;display:flex;flex-direction:column;max-height:calc(100vh - 260px);}
-#studentList{overflow-y:auto;flex:1;max-height:45vh;padding:2px}
-#noticeModalContent{overflow-y:auto;flex:1;max-height:35vh}
-.test-table-wrap{overflow:auto;flex:1;max-height:45vh;border-radius:0 0 12px 12px;border:none;border-top:1px solid #dbeafe;background:#fff}
+#tab-students, #tab-tests, #tab-notice{position:sticky;top:50px;z-index:101;max-width:520px;margin:0 auto;}
+#tab-students.card, #tab-tests.card, #tab-notice.card{background:#fff;border-radius:0 0 15px 15px;border:1px solid #e6eef7;border-top:none;box-shadow:0 10px 20px rgba(0,0,0,.06);margin-top:0!important;overflow:hidden;display:flex;flex-direction:column;max-height:calc(100vh - 70px);}
+#studentList{overflow-y:auto;flex:1;max-height:75vh;padding:2px}
+#noticeModalContent{overflow-y:auto;flex:1;max-height:65vh}
+.test-table-wrap{overflow:auto;flex:1;max-height:75vh;border-radius:0 0 12px 12px;border:none;border-top:1px solid #dbeafe;background:#fff}
 #testTable thead th{position:sticky;top:0;background:#174a7e!important;color:#fff;font-size:10px;z-index:1}
 .profile-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);display:flex;justify-content:center;align-items:center;z-index:9999;padding:12px}
 .profile-modal-new{width:100%;max-width:520px;max-height:90vh;background:#fff;border-radius:20px;display:flex;overflow:hidden;position:relative}
@@ -35,11 +35,15 @@ body{background:#fdf6ee;font-family:Poppins,sans-serif}
 </head>
 <body>
 
-<!-- FILTER SECTION - अब इसमें ऊपर Nav Buttons भी हैं -->
+<!-- Back Button - पहले Hidden -->
+<div id="backBar" style="display:none; max-width:520px; margin:10px auto 8px auto; padding:0 2px;">
+  <button onclick="backToFilter()" class="btn btn-sm" style="background:#fff; border:2px solid #174a7e; color:#174a7e; border-radius:20px; font-weight:800; font-size:12px;">← Back to Filter</button>
+</div>
+
+<!-- FILTER SECTION -->
 <div class="filter-fixed" id="fixedFilter">
-  <!-- 5 BUTTONS - White पर Blue -->
+  <!-- 4 BUTTONS - होम हटा दिया -->
   <div class="nav-grid">
-    <button id="bH" onclick="window.location.href='psc.html'" class="filter-btn nav-btn active">🏠<br>होम</button>  
     <button id="bK" onclick="showTab('students')" class="filter-btn nav-btn">👨‍🎓<br>स्टूडेंट</button>
     <button id="bT" onclick="showTab('tests')" class="filter-btn nav-btn">📝<br>टेस्ट</button>
     <button id="bN" onclick="showTab('notice')" class="filter-btn nav-btn">📢<br>नोटिस</button>
@@ -104,14 +108,32 @@ body{background:#fdf6ee;font-family:Poppins,sans-serif}
 <script src="admin.js?v=19"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
+// Back to Filter Function - नया जोड़ा
+function backToFilter(){
+  document.getElementById('fixedFilter').style.display='block';
+  document.getElementById('backBar').style.display='none';
+  document.getElementById('tab-students').style.display='none';
+  document.getElementById('tab-tests').style.display='none';
+  document.getElementById('tab-notice').style.display='none';
+  document.getElementById('tab-home').style.display='none';
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
+}
+
 function showTab(name){
   document.getElementById('tab-home').style.display=name=='home'?'block':'none';
   document.getElementById('tab-students').style.display=name=='students'?'block':'none';
   document.getElementById('tab-tests').style.display=name=='tests'?'block':'none';
   document.getElementById('tab-notice').style.display=name=='notice'?'block':'none';
   document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
-  let map={home:'bH',students:'bK',tests:'bT',notice:'bN'};
+  let map={students:'bK',tests:'bT',notice:'bN'};
   if(map[name]) document.getElementById(map[name]).classList.add('active');
+
+  // Filter Hide Logic - सिर्फ 3 Tab पर, Review पर नहीं
+  if(name=='students' || name=='tests' || name=='notice'){
+    document.getElementById('fixedFilter').style.display='none';
+    document.getElementById('backBar').style.display='block';
+  }
+
   if(name=='students') filterStudents();
   if(name=='notice' && typeof loadNoticesForAdmin==='function') loadNoticesForAdmin();
 }
