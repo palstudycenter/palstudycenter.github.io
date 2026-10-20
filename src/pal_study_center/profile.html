@@ -152,33 +152,63 @@ async function updateCourseStatusOnServer(subjectsHash){
 }
 
 async function saveStudentFee(){
-  let amt=document.getElementById('feeAmount').value; if(!amt) return alert('Amount डालें');
-  let sid = stu.id || stu._id || stu.phone || stu.mobile;
-  let payload={ student_id: sid, phone: stu.phone || stu.mobile || '', date: document.getElementById('feeDate').value || new Date().toISOString().split('T')[0], month: document.getElementById('feeMonth').value || '', amount: amt, mode: document.getElementById('feeMode').value, board: stu.board, class: stu.class };
-  let allFees=JSON.parse(localStorage.getItem('pal_fees_'+sid)||'[]'); allFees.unshift(payload); localStorage.setItem('pal_fees_'+sid,JSON.stringify(allFees)); localStorage.setItem('pal_fees_'+(stu.id||sid),JSON.stringify(allFees)); localStorage.setItem('viewingStudent',JSON.stringify(stu));
-  let mode = document.getElementById('feeMode').value;
-  let allKhatas = JSON.parse(localStorage.getItem('khata_final_v7')||'[]');
-  let toId = "1";
-  if(mode.includes('4798')){
-    let f = allKhatas.find(k=>k.name.includes('4798'));
-    if(f) toId = String(f.id);
-  } else if(mode.includes('8338')){
-    let f = allKhatas.find(k=>k.name.includes('8338'));
-    if(f) toId = String(f.id);
+  let amt=document.getElementById('feeAmount').value; 
+  if(!amt) return alert('Amount डालें');
+  let sid = String(stu.id || stu._id || '').trim();
+  if(!sid) return alert('Student ID नहीं मिला');
+  
+  let payload={ 
+    student_id: Number(sid) || sid, 
+    phone: stu.phone || stu.mobile || '', 
+    date: document.getElementById('feeDate').value || new Date().toISOString().split('T')[0], 
+    month: document.getElementById('feeMonth').value || '', 
+    amount: Number(amt), 
+    mode: document.getElementById('feeMode').value,
+    board: stu.board || '',
+    class: stu.class || ''
+  };
+
+  // Local में तुरंत दिखाओ
+  let allFees=JSON.parse(localStorage.getItem('pal_fees_'+sid)||'[]'); 
+  allFees.unshift(payload); 
+  localStorage.setItem('pal_fees_'+sid,JSON.stringify(allFees));
+
+  // Server पर भेजो
+  try{
+    let url = getApiUrl(CONFIG.API.FEES);
+    let r=await fetch(url,{ method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload) });
+    let j=await r.json();
+    console.log('Server Response:', j);
+    if(j.status || j.success) alert('Fees Server पर Save हो गई ✓');
+    else alert('Server Error: '+JSON.stringify(j));
+  }catch(e){
+    console.error(e);
+    alert('Server पर नहीं गई, Local में Save है - Error: '+e.message);
   }
-    let cls = stu.class || stu.Class || stu.course || stu.standard || stu.board || '';
-  window.top.postMessage({ type: 'COACHING_FEE_ADDED', amount: amt, name: stu.name, className: cls, toId: toId }, '*');
-  try{ let url = getApiUrl(CONFIG.API.FEES); await fetch(url,{ method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload) }); }catch(e){}
-  loadFees(); document.getElementById('addFeeBox').style.display='none'; document.getElementById('feeAmount').value='';
+
+  loadFees(); 
+  document.getElementById('addFeeBox').style.display='none'; 
+  document.getElementById('feeAmount').value='';
 }
   
 async function loadFees(){
-  let sid = stu.id || stu._id || stu.phone || stu.mobile; let allFees=JSON.parse(localStorage.getItem('pal_fees_'+sid)||'[]');
-  try{ let url = getApiUrl(CONFIG.API.FEES+'?student_id='+sid); let r=await fetch(url); let j=await r.json(); if(j.res && Array.isArray(j.res) && j.res.length) allFees=j.res; else if(j.data && Array.isArray(j.data) && j.data.length) allFees=j.data; else if(Array.isArray(j) && j.length) allFees=j; if(allFees.length) localStorage.setItem('pal_fees_'+sid, JSON.stringify(allFees)); }catch(e){}
-  let html=allFees.length? allFees.map(f=>`<div class="entry-grid"><div>₹${f.amount}</div><div>${f.date||''}</div><div>${f.month||''}</div></div>`).join('') : '<div style="padding:8px;text-align:center;color:#888;font-size:10px">No Fees - Add से जोड़ें</div>';
+  let sid = String(stu.id || stu._id || '').trim();
+  let allFees=JSON.parse(localStorage.getItem('pal_fees_'+sid)||'[]');
+  try{ 
+    let url = getApiUrl(CONFIG.API.FEES+'?student_id='+sid); 
+    let r=await fetch(url); 
+    let j=await r.json(); 
+    let arr = j.res || j.data || [];
+    if(Array.isArray(arr) && arr.length){
+      allFees=arr; 
+      localStorage.setItem('pal_fees_'+sid, JSON.stringify(allFees));
+    }
+  }catch(e){ console.warn('Fees Load Fail', e); }
+  let html=allFees.length? allFees.map(f=>`<div class="entry-grid"><div>₹${f.amount}</div><div>${f.date||f.created_at?.split('T')[0]||''}</div><div>${f.month||''}</div></div>`).join('') : '<div style="padding:8px;text-align:center;color:#888;font-size:10px">No Fees - Add से जोड़ें</div>';
   document.getElementById('feeList').innerHTML=html;
 }
 loadFees(); loadCourseData();
+  
 </script>
 </body>
 </html>
