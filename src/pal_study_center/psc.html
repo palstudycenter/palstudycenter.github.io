@@ -6,7 +6,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <style>
 
-  body{background:#fdf6ee;font-family:Poppins,sans-serif; padding-top:195px}
+  body{background:#fdf6ee;font-family:Poppins,sans-serif; padding-top:215px}
 .header{background:linear-gradient(135deg,#174a7e 0%,#1e6fa5 100%);color:#fff;padding:16px;border-radius:0 0 20px 20px; position:fixed; top:0; left:0; right:0; width:100%; z-index:9999}
   
   .card{border-radius:15px;border:none;box-shadow:0 6px 18px rgba(0,0,0,.06)}
@@ -46,10 +46,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 110" width="56" height="62"><g fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round"><path d="M 50 5 L 58 18 L 52 16 L 50 8 L 48 16 L 42 18 Z" stroke-width="1.5"/><path d="M 35 20 Q 50 5 65 20 L 62 28 Q 50 18 38 28 Z" stroke-width="1.5"/><path d="M 30 28 Q 50 20 70 28 L 68 35 Q 50 27 32 35 Z" stroke-width="1.5"/><path d="M 28 35 Q 50 25 72 35 L 70 45 Q 50 35 30 45 Z" stroke-width="1.8"/><path d="M 30 45 Q 28 65 38 75" stroke-width="1.5"/><path d="M 70 45 Q 72 65 62 75" stroke-width="1.5"/><path d="M 30 48 Q 10 42 5 55 Q 12 70 30 75 Q 35 65 30 48" stroke-width="1.5"/><path d="M 70 48 Q 90 42 95 55 Q 88 70 70 75 Q 65 65 70 48" stroke-width="1.5"/><path d="M 38 58 Q 44 55 50 58 Q 44 60 38 58" stroke-width="1.2"/><path d="M 62 58 Q 56 55 50 58 Q 56 60 62 58" stroke-width="1.2"/><path d="M 50 50 L 50 62 M 46 55 Q 50 65 54 55" stroke-width="1.2"/><path d="M 50 62 Q 52 75 45 85 Q 35 95 25 85 Q 18 78 25 70 Q 30 66 35 70" stroke-width="1.8"/><path d="M 45 85 Q 55 88 62 78 Q 68 68 65 58" stroke-width="1.5"/></g></svg>
 </div>
 <div style="font-weight:900;color:#FDE68A">॥ श्री गणेशाय नमः ॥</div>
-______________________________________________
+<div style="font-weight:800; color:#fff; font-size:30px; margin-top:4px; letter-spacing:1px;">पाल स्टडी सेंटर</div>
 <div class="d-flex justify-content-center gap-2 mt-2">
 <button id="bH" onclick="showTab('home')" class="action-btn active">🏠 होम</button>
-<button id="bK" onclick="showTab('ledger')" class="action-btn">📒 लेजर</button>
+<button id="bK" onclick="showTab('ledger')" class="action-btn">📒 खाता</button>
 <button id="bS" onclick="showTab('studentControl')" class="action-btn">🎓 स्टूडेंट कंट्रोल</button>  
 <button id="bO" onclick="showTab('prabandhan')" class="action-btn">📋 प्रबंधन</button>
 </div>
@@ -68,9 +68,11 @@ ______________________________________________
 </div>
   
 <div id="tab-home">
-  <div class="row g-2"><div class="col-6"><button onclick="toggleTool('calc')" class="home-tool-btn">💰 ब्याज कैलकुलेटर</button></div><div class="col-6"><button onclick="toggleTool('cal')" class="home-tool-btn">📅 कैलेंडर</button></div></div>
+  <div class="row g-2"><div class="col-6"><button onclick="toggleTool('calc')" class="home-tool-btn">💰 कैलकुलेटर</button></div><div class="col-6"><button onclick="toggleTool('cal')" class="home-tool-btn">📅 कैलेंडर</button></div></div>
+ 
   <div id="box-calc" style="display:none" class="card p-3 mt-3"><div class="row g-2"><div class="col-6"><input id="intFrom" type="date" class="form-control form-control-sm"></div><div class="col-6"><input id="intTo" type="date" class="form-control form-control-sm"></div><div class="col-6"><input id="intP" type="number" class="form-control form-control-sm" value="10000"></div><div class="col-6"><input id="intR" type="number" class="form-control form-control-sm" value="12"></div><div class="col-12"><button onclick="calcInt()" class="btn w-100 text-white" style="background:#174a7e">गणना</button><div id="intRes" class="mt-2 p-2 rounded" style="background:#f0f7ff;font-weight:700"></div></div></div></div>
-<div id="box-cal" style="display:none" class="card p-3 mt-3"><div class="d-flex justify-content-between"><h6>📅 कैलेंडर 2026</h6><select id="calMonth" onchange="renderCalendar()" class="form-select form-select-sm" style="width:140px"></select></div><div class="cal-grid mt-2 fw-bold small text-center"><div>रवि</div><div>सोम</div><div>मंगल</div><div>बुध</div><div>गुरु</div><div>शुक्र</div><div>शनि</div></div><div id="calBody" class="cal-grid mt-1"></div></div>
+
+  <div id="box-cal" style="display:none;overflow:hidden" class="card p-3 mt-3 position-relative"><div class="d-flex justify-content-between align-items-center"><h6>📅 कैलेंडर (दशहरा 2026 से दशहरा 2027)</h6><select id="calMonth" onchange="renderCalendar()" class="form-select form-select-sm" style="width:150px"></select></div><div class="cal-grid mt-2 fw-bold small text-center"><div>रवि</div><div>सोम</div><div>मंगल</div><div>बुध</div><div>गुरु</div><div>शुक्र</div><div>शनि</div></div><div id="calBody" class="cal-grid mt-1"></div><div id="calSelectedInfo" style="display:none;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:92%;background:#fff;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.25);border:2px solid #174a7e;z-index:10;padding:14px"></div></div>
 </div>
 
 <div id="tab-khata" style="display:none">
@@ -439,11 +441,112 @@ function toggleTool(t){
  if(t=='calc'){c.style.display=c.style.display=='none'?'block':'none';cal.style.display='none';}
  else{cal.style.display=cal.style.display=='none'?'block':'none';c.style.display='none';}
 }
+  
 function calcInt(){let f=new Date(document.getElementById('intFrom').value),to=new Date(document.getElementById('intTo').value),p=+document.getElementById('intP').value||0,r=+document.getElementById('intR').value||0;if(!f||!to||to<=f){document.getElementById('intRes').innerText='तारीख सही चुनें';return;}let diff=Math.ceil((to-f)/86400000);let si=p*r/100*diff/365;document.getElementById('intRes').innerHTML=`दिन ${diff} | ब्याज ₹${si.toFixed(0)} | कुल ₹${(p+si).toFixed(0)}`;}
-function initCal(){let sel=document.getElementById('calMonth');for(let i=0;i<12;i++){let d=new Date(2026,i,1);sel.innerHTML+=`<option value="${i}" ${i==new Date().getMonth()?'selected':''}>${d.toLocaleString('hi-IN',{month:'long'})} 2026</option>`;}renderCalendar();document.getElementById('intFrom').valueAsDate=new Date();document.getElementById('intTo').valueAsDate=new Date(new Date().setMonth(new Date().getMonth()+1));}
-function renderCalendar(){let m=+document.getElementById('calMonth').value,y=2026,first=new Date(y,m,1).getDay(),days=new Date(y,m+1,0).getDate(),body=document.getElementById('calBody');body.innerHTML='';for(let i=0;i<first;i++) body.innerHTML+=`<div></div>`;for(let d=1;d<=days;d++) body.innerHTML+=`<div class="cal-day"><b>${d}</b></div>`;}
-initCal();renderAll();onCTypeChange();
+// ===== नया हिन्दू कैलेंडर - दशहरा 2026 से दशहरा 2027 =====
+function localISO(d){let y=d.getFullYear();let m=String(d.getMonth()+1).padStart(2,'0');let day=String(d.getDate()).padStart(2,'0');return `${y}-${m}-${day}`;}
 
+ const HINDU_FESTIVALS = {
+// 2026
+"20-10-2026":{festival:"विजयादशमी / दशहरा",holiday:true},
+"25-10-2026":{festival:"शरद पूर्णिमा",holiday:false},
+"29-10-2026":{festival:"करवा चौथ",holiday:false},
+"06-11-2026":{festival:"धनतेरस",holiday:false},
+"08-11-2026":{festival:"दीपावली",holiday:true},
+"10-11-2026":{festival:"गोवर्धन पूजा",holiday:true},
+"11-11-2026":{festival:"भाई दूज",holiday:true},
+"15-11-2026":{festival:"छठ पूजा",holiday:false},
+"20-12-2026":{festival:"गीता जयंती",holiday:false},
+
+// 2027
+"15-01-2027":{festival:"मकर संक्रांति / पोंगल",holiday:true},
+"11-02-2027":{festival:"बसंत पंचमी",holiday:false},
+"06-03-2027":{festival:"महाशिवरात्रि",holiday:true},
+"21-03-2027":{festival:"होलिका दहन",holiday:true},
+"22-03-2027":{festival:"होली",holiday:true},
+"07-04-2027":{festival:"गुड़ी पड़वा / उगादी / नववर्ष 2084",holiday:true},
+"15-04-2027":{festival:"राम नवमी",holiday:true},
+"19-04-2027":{festival:"महावीर जयंती",holiday:true},
+"20-04-2027":{festival:"हनुमान जयंती",holiday:false},
+"08-05-2027":{festival:"अक्षय तृतीया / परशुराम जयंती",holiday:true},
+"20-05-2027":{festival:"बुद्ध पूर्णिमा",holiday:true},
+"13-06-2027":{festival:"गंगा दशहरा",holiday:false},
+"05-07-2027":{festival:"जगन्नाथ रथ यात्रा",holiday:false},
+"18-07-2027":{festival:"गुरु पूर्णिमा",holiday:false},
+"17-08-2027":{festival:"रक्षा बंधन",holiday:true},
+"25-08-2027":{festival:"कृष्ण जन्माष्टमी",holiday:true},
+"04-09-2027":{festival:"गणेश चतुर्थी",holiday:true},
+"30-09-2027":{festival:"शरद नवरात्रि प्रारंभ",holiday:true},
+"09-10-2027":{festival:"विजयादशमी / दशहरा 2027",holiday:true},
+"29-10-2027":{festival:"दीपावली 2027",holiday:true},
+"30-10-2027":{festival:"गोवर्धन पूजा 2027",holiday:true},
+"31-10-2027":{festival:"भाई दूज 2027",holiday:true}
+}; 
+  
+const TITHI_NAMES=["प्रतिपदा","द्वितीया","तृतीया","चतुर्थी","पंचमी","षष्ठी","सप्तमी","अष्टमी","नवमी","दशमी","एकादशी","द्वादशी","त्रयोदशी","चतुर्दशी","पूर्णिमा","प्रतिपदा","द्वितीया","तृतीया","चतुर्थी","पंचमी","षष्ठी","सप्तमी","अष्टमी","नवमी","दशमी","एकादशी","द्वादशी","त्रयोदशी","चतुर्दशी","अमावस्या"];
+
+function getHinduDataObj(dateObj){
+  // सही Julian Day निकालना
+  let year = dateObj.getFullYear();
+  let month = dateObj.getMonth() + 1;
+  let day = dateObj.getDate();
+  let hour = dateObj.getHours() + dateObj.getMinutes()/60;
+
+  // सूर्य और चंद्रमा की सही डिग्री (Meeus Algorithm का सरल रूप)
+  let jd = 367*year - Math.floor(7*(year+Math.floor((month+9)/12))/4) + Math.floor(275*month/9) + day + hour/24 + 1721013.5;
+  let T = (jd - 2451545.0) / 36525;
+  
+  let L0 = (280.46646 + 36000.76983 * T) % 360; // Sun mean longitude
+  let M0 = (218.3165 + 481267.8813 * T) % 360; // Moon mean longitude
+  
+  let elongation = (M0 - L0 + 360) % 360; // सूर्य-चंद्र अंतर
+  
+  let idx = Math.floor(elongation / 12); // 0-29 तिथि
+  if(idx < 0) idx += 30;
+  if(idx >= 30) idx = 29;
+  
+  let paksha = idx < 15 ? "शुक्ल" : "कृष्ण";
+  
+  let d=String(day).padStart(2,'0');
+  let m=String(month).padStart(2,'0');
+  let iso=`${d}-${m}-${year}`;
+
+  return {
+    dateStr: iso,
+    tithi: paksha + " " + TITHI_NAMES[idx],
+    festival: (HINDU_FESTIVALS[iso]?.festival||""),
+    holiday: (HINDU_FESTIVALS[iso]?.holiday||false)
+  };
+                   }
+  function initCal(){
+  let sel=document.getElementById('calMonth');sel.innerHTML="";
+  let months=[{y:2026,m:9},{y:2026,m:10},{y:2026,m:11},{y:2027,m:0},{y:2027,m:1},{y:2027,m:2},{y:2027,m:3},{y:2027,m:4},{y:2027,m:5},{y:2027,m:6},{y:2027,m:7},{y:2027,m:8},{y:2027,m:9}];
+  months.forEach(obj=>{let d=new Date(obj.y,obj.m,1);sel.innerHTML+=`<option value="${obj.y}-${obj.m}" ${obj.y==2026&&obj.m==9?'selected':''}>${d.toLocaleString('hi-IN',{month:'long',year:'numeric'})}</option>`;});
+  renderCalendar();
+  if(document.getElementById('intFrom')) document.getElementById('intFrom').valueAsDate=new Date();
+  if(document.getElementById('intTo')) document.getElementById('intTo').valueAsDate=new Date(new Date().setMonth(new Date().getMonth()+1));
+}
+  
+function renderCalendar(){
+  let val=document.getElementById('calMonth').value;
+  let [y,m]=val.split('-').map(Number);
+  let first=new Date(y,m,1).getDay(),days=new Date(y,m+1,0).getDate(),body=document.getElementById('calBody');
+  body.innerHTML='';for(let i=0;i<first;i++) body.innerHTML+=`<div></div>`;
+  let today=new Date();
+  let todayStr=`${String(today.getDate()).padStart(2,'0')}-${String(today.getMonth()+1).padStart(2,'0')}-${today.getFullYear()}`;
+  for(let d=1;d<=days;d++){let dateObj=new Date(y,m,d);let iso=`${String(d).padStart(2,'0')}-${String(m+1).padStart(2,'0')}-${y}`;let h=getHinduDataObj(dateObj);let isFest=h.festival!="";let isToday=iso==todayStr;body.innerHTML+=`<div class="cal-day ${isFest?'fest-day':''} ${isToday?'today':''}" onclick="showDayDetail('${iso}')" style="${isFest?'border:2px solid #e11d48;background:#fff1f2':''}"><b>${d}</b><div style="font-size:8px;color:#64748b">${h.tithi.split(' ')[1]}</div>${isFest?`<div style="font-size:7px;color:#e11d48;font-weight:700">${h.festival.substring(0,11)}</div>`:''}</div>`;}
+}
+  
+function showDayDetail(iso){
+  let p=iso.split('-');
+  let dateObj=new Date(p[2],p[1]-1,p[0]);
+  let h=getHinduDataObj(dateObj);
+  let info=document.getElementById('calSelectedInfo');
+  if(!info) return;
+  info.style.display='block';
+  info.innerHTML=`<div style="display:flex;justify-content:space-between;align-items:center"><b style="color:#174a7e;font-size:14px">📅 ${dateObj.toLocaleDateString('hi-IN',{weekday:'long', day:'numeric', month:'long'})}</b><span onclick="document.getElementById('calSelectedInfo').style.display='none'" style="cursor:pointer;background:#174a7e;color:#fff;border-radius:50%;width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-size:12px">✕</span></div><div class="mt-2 p-2 rounded" style="background:#f0f7ff;font-size:13px"><b>तिथि:</b> ${h.tithi}<br><b>वार:</b> ${dateObj.toLocaleDateString('hi-IN',{weekday:'long'})}</div>${h.festival?`<div class="mt-2 p-2 rounded text-center" style="background:#fff1f2;border:1.5px dashed #e11d48;color:#e11d48;font-weight:800;font-size:13px">🎉 ${h.festival}<br><small style="font-size:11px">${h.holiday?'PSC छुट्टी':''}</small></div>`:`<div class="mt-2 small text-center text-muted">कोई विशेष त्यौहार नहीं</div>`}`;
+}
+initCal();renderAll();onCTypeChange();
 
 window.addEventListener('message', function(event){
   if(event.data && event.data.type === 'COACHING_FEE_ADDED'){
