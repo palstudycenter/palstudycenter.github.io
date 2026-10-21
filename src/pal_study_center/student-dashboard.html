@@ -346,111 +346,24 @@
      FEES RECORD MODAL
 ====================================================== -->
 
-<div
-    class="modal fade"
-    id="feesModal"
-    tabindex="-1"
-    aria-hidden="true">
-
-
-    <div
-        class="modal-dialog modal-lg modal-dialog-centered">
-
-
-        <div class="modal-content">
-
-
-            <!-- HEADER -->
-
-            <div class="modal-header">
-
-
-                <h5 class="modal-title">
-
-
-                    <i class="bi bi-currency-rupee"></i>
-
-                    Monthly Fee Record
-
-
-                </h5>
-
-
-                <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close">
-                </button>
-
-
-            </div>
-
-
-            <!-- BODY -->
-
-            <div class="modal-body">
-
-
-                <div
-                    id="feesContent"
-                    style="
-                        max-height:500px;
-                        overflow-y:auto;
-                    ">
-
-
-                    <div class="text-center text-muted">
-
-
-                        <div
-                            class="spinner-border"
-                            role="status">
-                        </div>
-
-
-                        <p class="mt-2">
-
-                            Loading fees...
-
-                        </p>
-
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
-
-            <!-- FOOTER -->
-
-            <div class="modal-footer">
-
-
-                <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal">
-
-                    Close
-
-                </button>
-
-
-            </div>
-
-
+<!-- Fees Modal - Profile जैसा White Theme - नया -->
+<div class="modal fade" id="feesModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content" style="border-radius:16px; overflow:hidden; border:1.5px solid #174a7e;">
+      <div class="modal-body p-0" style="background:#fff;">
+        <div id="feesContent" style="max-height:500px; overflow-y:auto;">
+          <div class="text-center text-muted p-3">
+            <div class="spinner-border" role="status"></div>
+            <p class="mt-2">Loading fees...</p>
+          </div>
         </div>
-
-
+      </div>
     </div>
-
-
+  </div>
 </div>
 
+
+            
 
 
 <!-- =====================================================
