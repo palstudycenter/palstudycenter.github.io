@@ -269,8 +269,6 @@ async function loadNotices() {
     }
 }
 
-
-
 async function openTestRecord(event) {
     if (event) event.preventDefault();
 
