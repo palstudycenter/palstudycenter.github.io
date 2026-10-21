@@ -47,14 +47,22 @@
 </div>
 <div style="font-weight:900;color:#FDE68A">॥ श्री गणेशाय नमः ॥</div>
 <div style="font-weight:800; color:#fff; font-size:30px; margin-top:4px; letter-spacing:1px;">पाल स्टडी सेंटर</div>
-<div class="d-flex justify-content-center gap-2 mt-2">
+
+<div class="d-flex gap-2 mt-2" style="overflow-x:auto; white-space:nowrap; flex-wrap:nowrap; -webkit-overflow-scrolling:touch; scrollbar-width:none; padding-bottom:4px;">
 <button id="bH" onclick="showTab('home')" class="action-btn active">🏠 होम</button>
-<button id="bK" onclick="showTab('ledger')" class="action-btn">📒 खाता</button>
+<button onclick="window.open('https://palstudycenter.github.io/','_blank')" class="action-btn">📚 PSC</button>
 <button id="bS" onclick="showTab('studentControl')" class="action-btn">🎓 स्टूडेंट कंट्रोल</button>  
-  <button id="bE" onclick="showTab('english')" class="action-btn">🇬🇧 English</button>
+<button id="bK" onclick="showTab('ledger')" class="action-btn">📒 खाता</button>
+<button id="bE" onclick="showTab('english')" class="action-btn">🇬🇧 English</button>
 <button id="bO" onclick="showTab('prabandhan')" class="action-btn">📋 प्रबंधन</button>
 </div>
 </div>
+
+<style>
+.d-flex.gap-2::-webkit-scrollbar{display:none}
+.action-btn{flex:0 0 auto}
+</style>  
+
 <div class="container mt-3">
 
 <div id="ledgerSubSec" style="display:none">
