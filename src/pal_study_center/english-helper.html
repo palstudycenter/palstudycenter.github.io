@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>english-helper.html</title>
+<style>
+body{margin:0;background:#f0f7ff;font-family:system-ui}
+.top{background:#174a7e;color:#fff;padding:12px;text-align:center;position:sticky;top:0;z-index:20}
+.search{margin:10px;background:#fff;border:1.5px solid #bfdbfe;border-radius:12px;padding:10px;display:flex;gap:6px;align-items:center}
+.main-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;padding:0 10px}
+/* उल्टा - सभी Blue, Active White */
+.mbtn{background:#174a7e;color:#fff;border:1.5px solid #174a7e;border-radius:12px;padding:12px 6px;text-align:center;font-weight:800;font-size:12px}
+.mbtn.active{background:#fff;color:#174a7e;border-color:#174a7e}
+.mbtn span{display:block;font-size:10px;font-weight:400;opacity:.8;margin-top:2px}
+.content{margin:10px;background:#fff;border-radius:14px;border:1px solid #dbeafe;max-height:60vh;overflow-y:auto;display:none}
+.content.show{display:block}
+.card{padding:12px;border-bottom:1px solid #eff6ff}
+.tip{background:#eff6ff;padding:5px 7px;border-radius:6px;font-size:10px;margin-top:5px;color:#1e3a8a}
+.mic-btn{border:none;background:#e0f2fe;padding:8px 10px;border-radius:8px;font-size:14px}
+.mic-btn.listening{background:#ef4444;color:#fff;animation:pulse 1s infinite}
+@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.1)}100%{transform:scale(1)}}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <b>👨‍🏫 english-helper.html</b>
+  <div id="info" style="font-size:10px;opacity:.9">सब 24h में Auto Delete | बोलकर हिंदी टाइप</div>
+</div>
+
+<div class="search">
+  <input id="hiInp" placeholder="हिंदी लिखो या 🎤 बोलो" style="flex:1;border:none;outline:none;font-size:13px;background:transparent">
+  <button id="hiMicBtn" class="mic-btn" onclick="startHindiVoice()">🎤</button>
+  <button onclick="doTrans()" style="background:#174a7e;color:#fff;border:none;padding:8px 14px;border-radius:8px;font-weight:800">बोलो</button>
+</div>
+<div id="transRes" style="display:none;margin:0 10px;background:#f0fdf4;border:1px solid #bbf7d0;padding:10px;border-radius:10px"></div>
+<div id="saveMsg" style="display:none;margin:6px 10px;background:#dbeafe;padding:8px;border-radius:8px;font-size:12px;font-weight:700;text-align:center"></div>
+
+<div class="main-grid">
+  <div class="mbtn active" id="btn-coaching" onclick="openSec('coaching',this)">🏫<br>कोचिंग में<span>Sir कैसे बोलें</span></div>
+  <div class="mbtn" id="btn-family" onclick="openSec('family',this)">🏠<br>परिवार में<span>घर पर बात</span></div>
+  <div class="mbtn" id="btn-my" onclick="openSec('my',this)">💬<br>मैं खुद<span id="myCount">0</span></div>
+  <div class="mbtn" id="btn-challenge" onclick="openSec('challenge',this)">🎯<br>Daily 5<span>Challenge</span></div>
+  <div class="mbtn" id="btn-loud" onclick="openSec('loud',this)">📢<br>Loud Mode<span>तेज़ बोलो</span></div>
+  <div class="mbtn" onclick="clearAll()">🗑️<br>Clear<span>अभी हटाओ</span></div>
+</div>
+
+<div id="sec-coaching" class="content show"></div>
+<div id="sec-family" class="content"></div>
+<div id="sec-my" class="content"></div>
+<div id="sec-challenge" class="content"></div>
+<div id="sec-loud" class="content"></div>
+
+<script>
+const KEY='english_helper_24h_all_v9';
+const DEFAULT_DATA = [
+  {h:"बच्चों, ध्यान से सुनो", e:"Students, listen carefully", cat:"coaching"},
+  {h:"मैं अभी समझा रहा हूँ", e:"I am explaining right now", cat:"coaching"},
+  {h:"अपनी कॉपी दिखाओ", e:"Show me your notebook", cat:"coaching"},
+  {h:"शांत हो जाओ", e:"Everyone, be quiet please", cat:"coaching"},
+  {h:"बहुत बढ़िया", e:"Excellent, well done", cat:"coaching"},
+  {h:"कल मिलते हैं", e:"We will meet tomorrow", cat:"coaching"},
+  {h:"मैं थोड़ी देर में आ रहा हूँ", e:"I will be there in a while", cat:"family"},
+  {h:"मुझे आराम चाहिए", e:"I need some rest", cat:"family"},
+  {h:"काम पूरा हो गया", e:"I have completed my work", cat:"family"},
+  {h:"मैं थक गया हूँ", e:"I am very tired today", cat:"family"},
+  {h:"कोई बात नहीं", e:"No problem, it happens", cat:"family"},
+  {h:"मैं कोशिश कर रहा हूँ", e:"I am trying to speak English", cat:"my"},
+  {h:"मैं हर दिन सीख रहा हूँ", e:"I am learning every day", cat:"my"},
+  {h:"मैं कर लूँगा", e:"I will do it", cat:"my"}
+];
+
+function getDB(){
+  let a=JSON.parse(localStorage.getItem(KEY)||'[]');
+  let now=Date.now();
+  let filtered=a.filter(x=> now - x.time < 24*60*60*1000);
+  if(filtered.length!==a.length) localStorage.setItem(KEY, JSON.stringify(filtered));
+  if(filtered.length===0){
+    let withTime=DEFAULT_DATA.map(d=>({...d, time:Date.now(), tip:'Default'}));
+    localStorage.setItem(KEY, JSON.stringify(withTime));
+    return withTime;
+  }
+  return filtered;
+}
+function saveDB(a){ if(a.length>80) a=a.slice(-80); localStorage.setItem(KEY, JSON.stringify(a)); renderAll(); }
+
+function openSec(id,btn){
+  document.querySelectorAll('.mbtn').forEach(b=>b.classList.remove('active'));
+  if(btn) btn.classList.add('active');
+  else { let b=document.getElementById('btn-'+id); if(b) b.classList.add('active'); }
+  document.querySelectorAll('.content').forEach(c=>c.classList.remove('show'));
+  document.getElementById('sec-'+id).classList.add('show');
+}
+
+function cardHTML(it){
+  return `<div class="card">
+    <div style="font-weight:900;font-size:14px">${it.e}</div>
+    <div style="font-size:11px;color:#64748b">${it.h}</div>
+    <div style="display:flex;gap:6px;margin-top:7px">
+      <button onclick="speakLoud('${it.e.replace(/'/g,"\\'")}')" style="flex:1;border:none;background:#174a7e;color:#fff;padding:8px;border-radius:8px;font-weight:700;font-size:12px">🔊 सुनो</button>
+      <button onclick="practice('${it.e.replace(/'/g,"\\'")}')" style="flex:1;border:none;background:#e0f2fe;padding:8px;border-radius:8px;font-weight:700;font-size:12px">🎤 बोलूँ</button>
+    </div>
+    <div style="font-size:9px;color:#94a3b8;margin-top:4px">⏰ ${Math.max(1,Math.round((24*60*60*1000 - (Date.now()-it.time))/3600000))}h बाद Delete</div>
+  </div>`;
+}
+
+function renderAll(){
+  let db=getDB();
+  document.getElementById('sec-coaching').innerHTML=db.filter(x=>x.cat==='coaching').map(cardHTML).join('')||'<div style="padding:20px;text-align:center;color:#94a3b8">Delete हो गया</div>';
+  document.getElementById('sec-family').innerHTML=db.filter(x=>x.cat==='family').map(cardHTML).join('');
+  document.getElementById('sec-my').innerHTML=db.filter(x=>x.cat==='my').map(cardHTML).join('')||'<div style="padding:20px;text-align:center;color:#94a3b8">कोई वाक्य नहीं - ऊपर हिंदी बोलकर Save करो, यहीं दिखेगा</div>';
+  document.getElementById('sec-loud').innerHTML=`<div style="padding:10px;background:#174a7e;color:#fff;font-weight:800;font-size:12px">📢 Loud Mode - एक क्लिक में तेज़</div>`+db.map(it=>`<div class="card" style="display:flex;justify-content:space-between;align-items:center"><div><b style="font-size:13px">${it.e}</b><div style="font-size:11px;color:#64748b">${it.h}</div></div><button onclick="speakLoud('${it.e.replace(/'/g,"\\'")}')" style="border:none;background:#174a7e;color:#fff;padding:10px 14px;border-radius:20px;font-weight:800">📢</button></div>`).join('');
+  let chal=[{h:"आज मौसम अच्छा है",e:"The weather is nice today"},{h:"टाइम चाहिए",e:"I need some time"},{h:"मदद करो",e:"Can you help me?"},{h:"रास्ते में हूँ",e:"I am on my way"},{h:"समझ गया",e:"I understood"}];
+  document.getElementById('sec-challenge').innerHTML=`<div style="padding:10px;font-weight:800;font-size:12px;background:#dbeafe">🎯 Daily 5 Challenge</div>`+chal.map(it=>`<div class="card"><div style="font-weight:800">${it.e}</div><div style="font-size:11px;color:#64748b">${it.h}</div><button onclick="practice('${it.e.replace(/'/g,"\\'")}')" style="margin-top:6px;border:none;background:#174a7e;color:#fff;padding:7px 12px;border-radius:20px;font-weight:700;font-size:11px">🎤 बोलो</button></div>`).join('');
+  document.getElementById('info').innerText=`कुल: ${db.length} वाक्य | सब 24h में Auto Delete`;
+  document.getElementById('myCount').innerText=db.filter(x=>x.cat==='my').length;
+}
+
+// FIX 1: हिंदी बोलकर टाइप - बिना alert के
+function startHindiVoice(){
+  let SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  if(!SR){ alert('इस Browser में Mic नहीं चलता, Chrome में खोलो'); return; }
+  let r=new SR(); r.lang='hi-IN'; r.interimResults=false;
+  let btn=document.getElementById('hiMicBtn');
+  btn.classList.add('listening'); btn.innerText='● सुन रहा हूँ';
+  r.onresult=(e)=>{
+    let txt=e.results[0][0].transcript;
+    document.getElementById('hiInp').value=txt;
+    btn.classList.remove('listening'); btn.innerText='🎤';
+    doTrans();
+  };
+  r.onerror=(e)=>{ btn.classList.remove('listening'); btn.innerText='🎤'; console.log(e); };
+  r.onend=()=>{ btn.classList.remove('listening'); btn.innerText='🎤'; };
+  r.start();
+}
+
+async function doTrans(){
+  let hi=document.getElementById('hiInp').value.trim(); if(!hi) return;
+  document.getElementById('transRes').innerHTML='<div style="font-size:12px">Translating...</div>';
+  document.getElementById('transRes').style.display='block';
+  let en=hi;
+  try{
+    let res=await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(hi)}&langpair=hi|en`);
+    let j=await res.json();
+    en=j.responseData.translatedText;
+  }catch(e){ en=hi; }
+  document.getElementById('transRes').innerHTML=`<div style="font-weight:900">${en}</div><div style="font-size:11px;color:#64748b">${hi}</div><div style="display:flex;gap:6px;margin-top:6px"><button onclick="speakLoud('${en.replace(/'/g,"\\'")}')" style="flex:1;border:none;background:#fff;padding:7px;border-radius:8px;font-weight:700">🔊 सुनो</button><button onclick="saveVoice('${hi.replace(/'/g,"\\'")}','${en.replace(/'/g,"\\'")}')" style="flex:1;border:none;background:#174a7e;color:#fff;padding:7px;border-radius:8px;font-weight:700">✅ Save करो</button></div>`;
+  speakLoud(en);
+}
+
+function speakLoud(t){
+  // FIX 2: बोलने का सिस्टम - Cancel करके फिर बोलना
+  try{
+    window.speechSynthesis.cancel();
+    let u=new SpeechSynthesisUtterance(t);
+    u.lang='en-US'; u.rate=0.9; u.volume=1;
+    // आवाज़ लोड होने का इंतज़ार
+    let voices=window.speechSynthesis.getVoices();
+    if(voices.length) u.voice=voices.find(v=>v.lang.includes('en'))||voices[0];
+    window.speechSynthesis.speak(u);
+  }catch(e){ console.log(e); }
+}
+
+function saveVoice(h,e){
+  let db=getDB();
+  db.push({h,e,cat:'my',tip:'आपने Save किया',time:Date.now()});
+  saveDB(db);
+  document.getElementById('transRes').style.display='none';
+  document.getElementById('hiInp').value='';
+  // FIX 3: Save कहाँ दिखेगा - अब Message के साथ "मैं खुद" में दिखेगा
+  document.getElementById('saveMsg').style.display='block';
+  document.getElementById('saveMsg').innerText=`✅ Save हो गया: "${e}" - अब "मैं खुद" में देखो, 24h में Auto Delete होगा`;
+  setTimeout(()=>document.getElementById('saveMsg').style.display='none',4000);
+  openSec('my');
+}
+
+function clearAll(){ if(!confirm('सब हटाना है?')) return; localStorage.removeItem(KEY); renderAll(); }
+function practice(target){
+  let SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  if(!SR){ alert('Chrome में खोलो'); return; }
+  let r=new SR(); r.lang='en-US';
+  r.onresult=(e)=>{ let said=e.results[0][0].transcript; speakLoud(target); };
+  r.start();
+}
+renderAll();
+</script>
+</body>
+</html>
