@@ -5,35 +5,32 @@
 <title>english-helper.html</title>
 <style>
 body{margin:0;background:#f0f7ff;font-family:system-ui}
-.top{background:#174a7e;color:#fff;padding:12px;text-align:center;position:sticky;top:0;z-index:30}
-.main-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;padding:10px;background:#f0f7ff;position:sticky;top:52px;z-index:25}
+.main-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;padding:10px;background:#f0f7ff;position:sticky;top:0;z-index:25}
 .mbtn{background:#174a7e;color:#fff;border:1.5px solid #174a7e;border-radius:12px;padding:12px 6px;text-align:center;font-weight:800;font-size:12px}
-.mbtn.active{background:#fff;color:#174a7e}
-.mbtn.home{background:#fff;color:#174a7e;border-color:#174a7e}
 .mbtn span{display:block;font-size:10px;font-weight:400;opacity:.8;margin-top:2px}
-.content{margin:10px;background:#fff;border-radius:14px;border:1px solid #dbeafe;max-height:58vh;overflow-y:auto;display:none}
+.content{margin:10px;background:#fff;border-radius:14px;border:1px solid #dbeafe;max-height:85vh;overflow-y:auto;display:none}
 .content.show{display:block}
 .card{padding:12px;border-bottom:1px solid #eff6ff;display:flex;justify-content:space-between;align-items:center;gap:8px}
 .mic-btn{border:none;background:#e0f2fe;padding:8px 10px;border-radius:8px}
 .mic-btn.listening{background:#ef4444;color:#fff}
-.searchWrap{margin:10px;background:#fff;border:1.5px solid #bfdbfe;border-radius:14px;padding:10px;display:flex;gap:8px;align-items:flex-start;box-shadow:0 -4px 12px rgba(0,0,0,.06)}
+.searchWrap{margin:10px;background:#fff;border:1.5px solid #bfdbfe;border-radius:14px;padding:10px;display:flex;gap:8px;align-items:flex-start}
 .searchWrap textarea{flex:1;border:none;outline:none;font-size:13px;background:transparent;resize:none;min-height:42px;max-height:140px}
 #catPoll{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.4);z-index:60;justify-content:flex-end}
 #catPoll.show{display:flex}
 .pollBox{background:#fff;width:100%;max-width:380px;border-radius:20px 20px 0 0;padding:16px}
 .pollOpt{border:1.5px solid #e2e8f0;border-radius:12px;padding:12px;display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;font-weight:700;font-size:13px}
 .pollOpt.sel{border-color:#174a7e;background:#f0f7ff;color:#174a7e}
+#backBar{display:none;padding:10px;background:#fff;border-bottom:1px solid #dbeafe;position:sticky;top:0;z-index:26}
+#backBar.show{display:block}
 </style>
 </head>
 <body>
 
-<div class="top">
-  <b>English Helper</b>
-  <div id="info" style="font-size:10px;opacity:.8;margin-top:2px">Home - Translate Mode</div>
+<div id="backBar">
+  <button onclick="goHome()" style="border:none;background:#174a7e;color:#fff;padding:10px 16px;border-radius:10px;font-weight:800;font-size:13px">← Back to Home</button>
 </div>
 
 <div id="mainGrid" class="main-grid">
-  <div class="mbtn home active" id="btn-home" onclick="goHome()">🏠<br>Home<span>Translate</span></div>
   <div class="mbtn" id="btn-coaching" onclick="openSec('coaching',this)">🏫<br>Coaching<span>Daily Class</span></div>
   <div class="mbtn" id="btn-family" onclick="openSec('family',this)">🏠<br>Family<span>At Home</span></div>
   <div class="mbtn" id="btn-friends" onclick="openSec('friends',this)">🤝<br>Friends<span>Chat</span></div>
@@ -48,16 +45,16 @@ body{margin:0;background:#f0f7ff;font-family:system-ui}
 <div id="sec-my" class="content"></div>
 <div id="sec-challenge" class="content"></div>
 
-<div id="transRes" style="display:none;margin:0 10px;background:#f0fdf4;border:1px solid #bbf7d0;padding:10px;border-radius:10px"></div>
-<div id="saveMsg" style="display:none;margin:6px 10px;background:#dbeafe;padding:8px;border-radius:8px;font-size:12px;font-weight:700;text-align:center"></div>
-
 <div id="searchWrap" class="searchWrap">
-  <textarea id="hiInp" placeholder="हिंदी लिखो - सिंगल लाइन या पूरा पैराग्राफ भी चलेगा..."></textarea>
+  <textarea id="hiInp" placeholder="हिंदी लिखो..."></textarea>
   <div style="display:flex;flex-direction:column;gap:6px">
     <button id="hiMicBtn" class="mic-btn" onclick="startHindiVoice()">🎤</button>
-    <button onclick="doTrans()" style="background:#174a7e;color:#fff;border:none;padding:8px 12px;border-radius:8px;font-weight:800">बोलो</button>
+    <button onclick="doTrans()" style="background:#174a7e;color:#fff;border:none;padding:10px 14px;border-radius:8px;font-weight:800">Translate</button>
   </div>
 </div>
+
+<div id="transRes" style="display:none;margin:10px;background:#f0fdf4;border:1px solid #bbf7d0;padding:10px;border-radius:10px"></div>
+<div id="saveMsg" style="display:none;margin:6px 10px;background:#dbeafe;padding:8px;border-radius:8px;font-size:12px;font-weight:700;text-align:center"></div>
 
 <div id="catPoll" onclick="closePoll()">
   <div class="pollBox" onclick="event.stopPropagation()">
@@ -76,7 +73,6 @@ body{margin:0;background:#f0f7ff;font-family:system-ui}
 
 <script>
 const KEY='english_helper_24h_all_v9';
-// --- Daily 5 Auto Pool ---
 const DAILY_POOL=[
 {h:"आज क्लास समय पर शुरू होगी।",e:"Today the class will start on time."},
 {h:"कल का होमवर्क सबको लाना है।",e:"Everyone must bring tomorrow's homework."},
@@ -97,113 +93,23 @@ const DAILY_POOL=[
 function getDaily5(){let idx=new Date().getDate()%DAILY_POOL.length;let list=[];for(let i=0;i<5;i++)list.push(DAILY_POOL[(idx+i)%DAILY_POOL.length]);return list;}
 function getTicks(){let k='daily_tick_'+new Date().toISOString().slice(0,10);return JSON.parse(localStorage.getItem(k)||'[false,false,false,false,false]');}
 function saveTick(i){let k='daily_tick_'+new Date().toISOString().slice(0,10);let t=getTicks();t[i]=!t[i];localStorage.setItem(k,JSON.stringify(t));renderAll();}
-
 function getDB(){let a=JSON.parse(localStorage.getItem(KEY)||'[]');let now=Date.now();let f=a.filter(x=>now-x.time<24*60*60*1000);if(f.length!==a.length)localStorage.setItem(KEY,JSON.stringify(f));return f;}
 function saveDB(a){if(a.length>120)a=a.slice(-120);localStorage.setItem(KEY,JSON.stringify(a));renderAll();}
-
-let activeSec=null;
-let lastTransH='',lastTransE='';
-let pendingH='',pendingE='',selectedCat='my';
-
-function goHome(){
-  activeSec=null;
-  document.querySelectorAll('.content').forEach(c=>c.classList.remove('show'));
-  document.querySelectorAll('.mbtn').forEach(b=>b.classList.remove('active'));
-  document.getElementById('btn-home').classList.add('active');
-  document.getElementById('searchWrap').style.display='flex';
-  document.getElementById('transRes').style.display='none';
-  let inf=document.getElementById('info'); if(inf) inf.innerText='Home - Translate Mode';
-}
-function openSec(id,btn){
-  activeSec=id;
-  document.querySelectorAll('.mbtn').forEach(b=>b.classList.remove('active'));
-  if(btn) btn.classList.add('active');
-  document.querySelectorAll('.content').forEach(c=>c.classList.remove('show'));
-  document.getElementById('sec-'+id).classList.add('show');
-  document.getElementById('searchWrap').style.display='none';
-  document.getElementById('transRes').style.display='none';
-}
-
+let activeSec=null,lastTransH='',lastTransE='',pendingH='',pendingE='',selectedCat='my';
+function goHome(){activeSec=null;document.querySelectorAll('.content').forEach(c=>c.classList.remove('show'));document.getElementById('mainGrid').style.display='grid';document.getElementById('searchWrap').style.display='flex';document.getElementById('backBar').classList.remove('show');}
+function openSec(id){activeSec=id;document.getElementById('mainGrid').style.display='none';document.getElementById('searchWrap').style.display='none';document.getElementById('transRes').style.display='none';document.getElementById('backBar').classList.add('show');document.querySelectorAll('.content').forEach(c=>c.classList.remove('show'));document.getElementById('sec-'+id).classList.add('show');}
 function esc(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
-function cardHTML(it,idx){
-  let hrs=Math.max(0,Math.round((24*60*60*1000-(Date.now()-it.time))/3600000));
-  return `<div class="card">
-    <div style="flex:1;min-width:0">
-      <div style="font-weight:900;font-size:13px;white-space:pre-wrap">${esc(it.e)}</div>
-      <div style="font-size:11px;color:#64748b;white-space:pre-wrap">${esc(it.h)}</div>
-      <div style="font-size:9px;color:#94a3b8">⏰ ${hrs}h बाद Delete</div>
-    </div>
-    <div style="display:flex;flex-direction:column;gap:6px">
-      <button onclick="speakByIdx(${idx})" style="border:none;background:#174a7e;color:#fff;padding:8px 12px;border-radius:20px;font-weight:800;font-size:11px">📢 Loud</button>
-      <button onclick="shareByIdx(${idx})" style="border:none;background:#e0f2fe;padding:6px 10px;border-radius:20px;font-weight:700;font-size:11px">📤 Share</button>
-    </div>
-  </div>`;
-}
-function renderAll(){
-  let db=getDB();
-  document.getElementById('sec-coaching').innerHTML=db.map((it,i)=>it.cat==='coaching'?cardHTML(it,i):'').join('')||'<div style="padding:30px;text-align:center;color:#94a3b8">खाली है</div>';
-  document.getElementById('sec-family').innerHTML=db.map((it,i)=>it.cat==='family'?cardHTML(it,i):'').join('')||'<div style="padding:30px;text-align:center;color:#94a3b8">खाली है</div>';
-  document.getElementById('sec-friends').innerHTML=db.map((it,i)=>it.cat==='friends'?cardHTML(it,i):'').join('')||'<div style="padding:30px;text-align:center;color:#94a3b8">खाली है</div>';
-  document.getElementById('sec-my').innerHTML=db.map((it,i)=>it.cat==='my'?cardHTML(it,i):'').join('')||'<div style="padding:30px;text-align:center;color:#94a3b8">मैं खुद - खाली</div>';
-  
-  // --- Daily 5 AUTO ---
-  let ticks=getTicks();
-  let done=ticks.filter(x=>x).length;
-  let daily=getDaily5();
-  document.getElementById('sec-challenge').innerHTML=
-    `<div style="padding:10px;background:#f0f7ff;text-align:center;font-weight:800;border-bottom:1px solid #dbeafe;font-size:12px">🎯 Today Challenge - ${done}/5 Done</div>`+
-    daily.map((it,i)=>`
-    <div class="card" style="${ticks[i]?'background:#f0fdf4;opacity:.7':''}">
-      <div style="flex:1;min-width:0">
-        <div style="font-weight:900;font-size:13px;white-space:pre-wrap">${esc(it.e)}</div>
-        <div style="font-size:11px;color:#64748b;white-space:pre-wrap">${esc(it.h)}</div>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:6px;align-items:center">
-        <button onclick="speakLoud('${it.e.replace(/'/g,"\\'")}')" style="border:none;background:#174a7e;color:#fff;padding:6px 10px;border-radius:20px;font-size:11px;font-weight:800">📢</button>
-        <button onclick="shareMsg('${it.e.replace(/'/g,"\\'")}')" style="border:none;background:#e0f2fe;padding:6px 10px;border-radius:20px;font-size:11px">📤</button>
-        <input type="checkbox" ${ticks[i]?'checked':''} onchange="saveTick(${i})" style="width:20px;height:20px">
-      </div>
-    </div>`).join('');
-
-  document.getElementById('myCount').innerText=db.length;
-  let inf=document.getElementById('info'); if(inf) inf.innerText=`कुल ${db.length} वाक्य | Daily ${done}/5 Done | 24h Delete`;
-}
-function speakByIdx(i){let db=getDB(); if(db[i]) speakLoud(db[i].e);}
-function shareByIdx(i){let db=getDB(); if(db[i]) shareMsg(db[i].e);} 
-
+function cardHTML(it,idx){let hrs=Math.max(0,Math.round((24*60*60*1000-(Date.now()-it.time))/3600000));return `<div class="card"><div style="flex:1;min-width:0"><div style="font-weight:900;font-size:13px;white-space:pre-wrap">${esc(it.e)}</div><div style="font-size:11px;color:#64748b;white-space:pre-wrap">${esc(it.h)}</div><div style="font-size:9px;color:#94a3b8">⏰ ${hrs}h बाद Delete</div></div><div style="display:flex;flex-direction:column;gap:6px"><button onclick="speakByIdx(${idx})" style="border:none;background:#174a7e;color:#fff;padding:8px 12px;border-radius:20px;font-weight:800;font-size:11px">📢 Loud</button><button onclick="shareByIdx(${idx})" style="border:none;background:#e0f2fe;padding:6px 10px;border-radius:20px;font-weight:700;font-size:11px">📤 Share</button></div></div>`;}
+function renderAll(){let db=getDB();document.getElementById('sec-coaching').innerHTML=db.map((it,i)=>it.cat==='coaching'?cardHTML(it,i):'').join('')||'<div style="padding:30px;text-align:center;color:#94a3b8">खाली है</div>';document.getElementById('sec-family').innerHTML=db.map((it,i)=>it.cat==='family'?cardHTML(it,i):'').join('')||'<div style="padding:30px;text-align:center;color:#94a3b8">खाली है</div>';document.getElementById('sec-friends').innerHTML=db.map((it,i)=>it.cat==='friends'?cardHTML(it,i):'').join('')||'<div style="padding:30px;text-align:center;color:#94a3b8">खाली है</div>';document.getElementById('sec-my').innerHTML=db.map((it,i)=>it.cat==='my'?cardHTML(it,i):'').join('')||'<div style="padding:30px;text-align:center;color:#94a3b8">मैं खुद - खाली</div>';let ticks=getTicks();let done=ticks.filter(x=>x).length;let daily=getDaily5();document.getElementById('sec-challenge').innerHTML=`<div style="padding:10px;background:#f0f7ff;text-align:center;font-weight:800;border-bottom:1px solid #dbeafe;font-size:12px">🎯 Today Challenge - ${done}/5 Done</div>`+daily.map((it,i)=>`<div class="card" style="${ticks[i]?'background:#f0fdf4;opacity:.7':''}"><div style="flex:1;min-width:0"><div style="font-weight:900;font-size:13px;white-space:pre-wrap">${esc(it.e)}</div><div style="font-size:11px;color:#64748b;white-space:pre-wrap">${esc(it.h)}</div></div><div style="display:flex;flex-direction:column;gap:6px;align-items:center"><button onclick="speakLoud('${it.e.replace(/'/g,"\\'")}')" style="border:none;background:#174a7e;color:#fff;padding:6px 10px;border-radius:20px;font-size:11px;font-weight:800">📢</button><button onclick="shareMsg('${it.e.replace(/'/g,"\\'")}')" style="border:none;background:#e0f2fe;padding:6px 10px;border-radius:20px;font-size:11px">📤</button><input type="checkbox" ${ticks[i]?'checked':''} onchange="saveTick(${i})" style="width:20px;height:20px"></div></div>`).join('');document.getElementById('myCount').innerText=db.length;}
+function speakByIdx(i){let db=getDB();if(db[i])speakLoud(db[i].e);}function shareByIdx(i){let db=getDB();if(db[i])shareMsg(db[i].e);}
 function selectCat(cat){selectedCat=cat;document.querySelectorAll('.pollOpt').forEach(o=>{o.classList.remove('sel');o.querySelector('span:last-child').innerText='○';});let el=document.getElementById('opt-'+cat);el.classList.add('sel');el.querySelector('span:last-child').innerText='●';}
-function openPoll(){pendingH=lastTransH; pendingE=lastTransE; document.getElementById('pollPreview').innerHTML=`<b>${esc(pendingE)}</b><div style="color:#64748b;margin-top:4px">${esc(pendingH)}</div>`; selectCat('my'); document.getElementById('catPoll').classList.add('show');}
+function openPoll(){pendingH=lastTransH;pendingE=lastTransE;document.getElementById('pollPreview').innerHTML=`<b>${esc(pendingE)}</b><div style="color:#64748b;margin-top:4px">${esc(pendingH)}</div>`;selectCat('my');document.getElementById('catPoll').classList.add('show');}
 function closePoll(){document.getElementById('catPoll').classList.remove('show');}
-function confirmSave(){let db=getDB();db.push({h:pendingH,e:pendingE,cat:selectedCat,time:Date.now()});saveDB(db);closePoll();document.getElementById('transRes').style.display='none';document.getElementById('hiInp').value='';document.getElementById('saveMsg').style.display='block';document.getElementById('saveMsg').innerText=`✅ Save -> ${selectedCat} में (Hindi+English)`;setTimeout(()=>document.getElementById('saveMsg').style.display='none',3000);openSec(selectedCat,document.getElementById('btn-'+selectedCat));}
-
+function confirmSave(){let db=getDB();db.push({h:pendingH,e:pendingE,cat:selectedCat,time:Date.now()});saveDB(db);closePoll();document.getElementById('transRes').style.display='none';document.getElementById('hiInp').value='';document.getElementById('saveMsg').style.display='block';document.getElementById('saveMsg').innerText=`✅ Save -> ${selectedCat} में`;setTimeout(()=>document.getElementById('saveMsg').style.display='none',3000);openSec(selectedCat);}
 function startHindiVoice(){let SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR){alert('Chrome');return;}let r=new SR();r.lang='hi-IN';let btn=document.getElementById('hiMicBtn');btn.classList.add('listening');btn.innerText='●';r.onresult=(e)=>{document.getElementById('hiInp').value=e.results[0][0].transcript;btn.classList.remove('listening');btn.innerText='🎤';doTrans();};r.onerror=()=>{btn.classList.remove('listening');btn.innerText='🎤';};r.onend=()=>{btn.classList.remove('listening');btn.innerText='🎤';};r.start();}
-
-async function doTrans(){
-  let hi=document.getElementById('hiInp').value.trim(); if(!hi) return;
-  document.querySelectorAll('.content').forEach(c=>c.classList.remove('show'));
-  document.getElementById('transRes').style.display='block';
-  document.getElementById('transRes').innerHTML='<div style="font-size:12px">Paragraph Translate हो रहा है...</div>';
-  let en='';
-  try{
-    if(hi.length>480){ let parts=hi.match(/.{1,480}(\s|$)/g)||[hi]; let outs=[]; for(let p of parts){ let res=await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(p)}&langpair=hi|en`); let j=await res.json(); outs.push(j.responseData.translatedText);} en=outs.join(' ');}else{ let res=await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(hi)}&langpair=hi|en`); let j=await res.json(); en=j.responseData.translatedText; }
-  }catch(e){ en=hi; }
-  lastTransH=hi; lastTransE=en;
-  document.getElementById('transRes').innerHTML=`
-    <div style="font-weight:900;font-size:14px;white-space:pre-wrap">${esc(en)}</div>
-    <div style="font-size:11px;color:#64748b;margin-top:4px;white-space:pre-wrap">${esc(hi)}</div>
-    <div style="display:flex;gap:6px;margin-top:10px">
-      <button onclick="speakLoud(lastTransE)" style="flex:1;border:none;background:#fff;padding:8px;border-radius:8px;font-weight:700;border:1px solid #bbf7d0">📢 Loud</button>
-      <button onclick="shareMsg(lastTransE)" style="flex:1;border:none;background:#e0f2fe;padding:8px;border-radius:8px;font-weight:700">📤 Share (English)</button>
-      <button onclick="openPoll()" style="flex:1;border:none;background:#174a7e;color:#fff;padding:8px;border-radius:8px;font-weight:800">💾 Save</button>
-    </div>`;
-  speakLoud(en);
-}
-
-function speakLoud(t){try{speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=0.85;u.volume=1;let v=speechSynthesis.getVoices();if(v.length)u.voice=v.find(x=>x.lang.includes('en'))||v[0];speechSynthesis.speak(u);}catch(e){}}
-function shareMsg(t){
-  let onlyEn=t;
-  if(navigator.share){navigator.share({text:onlyEn,title:'PSC English'});}else{navigator.clipboard.writeText(onlyEn);alert('English Copy: '+onlyEn);}
-}
+async function doTrans(){let hi=document.getElementById('hiInp').value.trim();if(!hi)return;document.getElementById('transRes').style.display='block';document.getElementById('transRes').innerHTML='<div style="font-size:12px">Translate हो रहा है...</div>';let en='';try{if(hi.length>480){let parts=hi.match(/.{1,480}(\s|$)/g)||[hi];let outs=[];for(let p of parts){let res=await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(p)}&langpair=hi|en`);let j=await res.json();outs.push(j.responseData.translatedText);}en=outs.join(' ');}else{let res=await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(hi)}&langpair=hi|en`);let j=await res.json();en=j.responseData.translatedText;}}catch(e){en=hi;}lastTransH=hi;lastTransE=en;document.getElementById('transRes').innerHTML=`<div style="font-weight:900;font-size:14px;white-space:pre-wrap">${esc(en)}</div><div style="font-size:11px;color:#64748b;margin-top:4px;white-space:pre-wrap">${esc(hi)}</div><div style="display:flex;gap:6px;margin-top:10px"><button onclick="speakLoud(lastTransE)" style="flex:1;border:none;background:#fff;padding:8px;border-radius:8px;font-weight:700;border:1px solid #bbf7d0">📢 Loud</button><button onclick="shareMsg(lastTransE)" style="flex:1;border:none;background:#e0f2fe;padding:8px;border-radius:8px;font-weight:700">📤 Share (English)</button><button onclick="openPoll()" style="flex:1;border:none;background:#174a7e;color:#fff;padding:8px;border-radius:8px;font-weight:800">💾 Save</button></div>`;speakLoud(en);}
+function speakLoud(t){try{speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(t);u.lang='en-US';u.rate=0.85;speechSynthesis.speak(u);}catch(e){}}
+function shareMsg(t){if(navigator.share){navigator.share({text:t});}else{navigator.clipboard.writeText(t);alert('English Copy: '+t);}}
 function clearAll(){if(!confirm('सब हटाना है?'))return;localStorage.removeItem(KEY);renderAll();goHome();}
 renderAll();
 </script>
