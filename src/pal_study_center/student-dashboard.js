@@ -309,40 +309,43 @@ async function loadFeesData() {
     feesContent.innerHTML = `
     <div class="ledger-white-card" style="border:none; border-radius:0;">
       
-      <!-- TOP में सिर्फ BALANCE -->
-      <div class="ledger-top d-flex justify-content-between" style="background:#174a7e; color:#fff; padding:10px 12px; font-size:13px; font-weight:800;">
-        <span>📒 Ledger</span>
-        <span id="balanceTop" style="background:#fff; color:#dc2626; padding:2px 10px; border-radius:20px; font-size:12px;">Balance: ₹0</span>
+      <!-- 1. TOP BLUE PART - Back Button -->
+      <div class="ledger-top" style="background:#174a7e; color:#fff; padding:10px 12px; font-size:13px; font-weight:800; display:flex; align-items:center; justify-content:space-between;">
+        <button onclick="bootstrap.Modal.getInstance(document.getElementById('feesModal')).hide(); if(typeof showDashboard==='function') showDashboard();" style="background:#fff; border:none; color:#174a7e; padding:4px 14px; border-radius:6px; font-size:12px; font-weight:800;">
+          Back
+        </button>
+        <span>📒 FEES LEDGER</span>
+        <span style="width:45px;"></span>
+      </div>
+
+      <!-- 2. BALANCE WHITE PART -->
+      <div style="background:#ffffff; border-bottom:1.5px solid #e5e7eb; padding:12px 14px; display:flex; justify-content:space-between; align-items:center;">
+        <span style="font-size:12px; font-weight:700; color:#6b7280;">BALANCE</span>
+        <span id="balanceWhite" style="font-size:14px; font-weight:800; color:#111827;">₹0</span>
       </div>
 
       <div class="ledger-scroll">
         <div class="ledger-main">
-          
-          <!-- LEFT SCROLL SIDE - ऊपर Total जमा -->
           <div class="ledger-col left">
             <div class="col-title jama d-flex justify-content-between" style="background:#f0fdf4;">
-              <span>💰 जमा फीस</span>
-              <span id="jamaFeesTop" style="color:#16a34a; font-weight:900;">₹0</span>
+              <span>💰 जमा</span>
+              <span id="jamaFeesTop" style="font-weight:900;">₹0</span>
             </div>
             <div class="header-row"><div>राशि</div><div>तारीख</div><div>माह</div></div>
             <div id="feeList"></div>
           </div>
-
-          <!-- RIGHT SCROLL SIDE - ऊपर Total Fees -->
           <div class="ledger-col">
             <div class="col-title gaya d-flex justify-content-between" style="background:#fefce8;">
-              <span>📚 My Subjects</span>
-              <span id="totalFeesTop" style="color:#174a7e; font-weight:900;">₹0</span>
+              <span>📚 Total Fees</span>
+              <span id="totalFeesTop" style="font-weight:900;">₹0</span>
             </div>
-            <div class="header-row"><div style="grid-column:1/-1">Subject - Annual Fees</div></div>
+            <div class="header-row"><div style="grid-column:1/-1">Subject</div></div>
             <div id="subjectBox"></div>
           </div>
-
         </div>
       </div>
     </div>`;
 
-    // --- LEFT: Admin द्वारा जमा ---
     let sid = user.id || user._id || user.phone;
     let allFees = [];
     try{ allFees = JSON.parse(localStorage.getItem('pal_fees_'+sid)||'[]'); }catch(e){}
@@ -357,18 +360,12 @@ async function loadFeesData() {
     allFees.forEach(f=>{ jamaTotal += parseInt(f.amount||0); });
     document.getElementById('feeList').innerHTML = allFees.length ? allFees.map(f=>`<div class="entry-grid"><div>₹${f.amount}</div><div>${f.date||''}</div><div>${f.month||''}</div></div>`).join('') : '<div style="padding:10px;text-align:center;color:#888;font-size:10px">No fees yet</div>';
 
-    // --- RIGHT: Fees Map ---
     let sClass = (user.class || user.Class || '').toString();
     let feeMap = {};
-    if(sClass.includes('12')){
-        feeMap = {physics:3500, chemistry:3500, mathematics:3500, maths:3500, biology:3500, english:1500, hindi:1000};
-    } else if(sClass.includes('11')){
-        feeMap = {physics:3000, chemistry:3000, mathematics:3000, maths:3000, biology:3000, english:1500, hindi:1000};
-    } else if(sClass.includes('10')){
-        feeMap = {all:7000};
-    } else {
-        feeMap = {physics:3500, chemistry:3500, mathematics:3500, maths:3500, biology:3500, english:1500, hindi:1000};
-    }
+    if(sClass.includes('12')) feeMap = {physics:3500, chemistry:3500, mathematics:3500, maths:3500, biology:3500, english:1500, hindi:1000};
+    else if(sClass.includes('11')) feeMap = {physics:3000, chemistry:3000, mathematics:3000, maths:3000, biology:3000, english:1500, hindi:1000};
+    else if(sClass.includes('10')) feeMap = {all:7000};
+    else feeMap = {physics:3500, chemistry:3500, mathematics:3500, maths:3500, biology:3500, english:1500, hindi:1000};
 
     let takenSubjects = [];
     try{
@@ -381,20 +378,20 @@ async function loadFeesData() {
     let subHtml = '';
     if(sClass.includes('10') && takenSubjects.length>0){
         totalFees = 7000;
-        subHtml = `<div class="vendor-card"><span><i class="bi bi-book"></i> All Subjects</span><span style="font-weight:800; color:#174a7e;">₹7000</span></div>`;
+        subHtml = `<div class="vendor-card"><span><i class="bi bi-book"></i> All Subjects</span><span style="font-weight:800;">₹7000</span></div>`;
     } else {
         takenSubjects.forEach(sub=>{
             let fee = feeMap[sub.toLowerCase().trim()] || 0;
             totalFees += fee;
-            subHtml += `<div class="vendor-card"><span><i class="bi bi-book"></i> ${sub}</span><span style="font-weight:800; color:#174a7e;">₹${fee}</span></div>`;
+            subHtml += `<div class="vendor-card"><span><i class="bi bi-book"></i> ${sub}</span><span style="font-weight:800;">₹${fee}</span></div>`;
         });
     }
-    if(!takenSubjects.length) subHtml = '<div style="padding:10px;text-align:center;color:#888;font-size:10px">कोई Subject Active नहीं</div>';
+    if(!takenSubjects.length) subHtml = '<div style="padding:10px;text-align:center;color:#888;font-size:10px">No Subject</div>';
 
     document.getElementById('subjectBox').innerHTML = subHtml;
     document.getElementById('totalFeesTop').innerText = `₹${totalFees}`;
-    document.getElementById('jamaFeesTop').innerText = `₹${jamaTotal} जमा`;
-    document.getElementById('balanceTop').innerText = `Balance: ₹${totalFees - jamaTotal}`;
+    document.getElementById('jamaFeesTop').innerText = `₹${jamaTotal}`;
+    document.getElementById('balanceWhite').innerText = `₹${totalFees - jamaTotal}`;
 }
     
         
