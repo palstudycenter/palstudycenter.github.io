@@ -308,39 +308,43 @@ async function openFeesModal(event) {
 async function loadFeesData() {
     const feesContent = document.getElementById('feesContent');
     
-    // --- TOP: Left=जमा | Right=Total Fees ---
     feesContent.innerHTML = `
     <div class="ledger-white-card" style="border:none; border-radius:0;">
-      <div class="ledger-top d-flex justify-content-between"><span>📒 Ledger</span><small>Class: ${user.class||user.Class||''}</small></div>
       
-      <div style="display:grid; grid-template-columns:1fr 1fr; background:#f8fafc; border-bottom:1.5px solid #174a7e; font-size:11px; font-weight:800; text-align:center;">
-        <div style="padding:10px; border-right:1px solid #e5e7eb;">
-          <span style="color:#666; display:block; font-size:9px; font-weight:600;">टोटल जमा (LEFT)</span>
-          <span id="jamaFeesTop" style="color:#16a34a; font-size:14px;">₹0</span>
-        </div>
-        <div style="padding:10px;">
-          <span style="color:#666; display:block; font-size:9px; font-weight:600;">टोटल फीस (RIGHT)</span>
-          <span id="totalFeesTop" style="color:#174a7e; font-size:14px;">₹0</span>
-        </div>
+      <!-- TOP में सिर्फ BALANCE -->
+      <div class="ledger-top d-flex justify-content-between" style="background:#174a7e; color:#fff; padding:10px 12px; font-size:13px; font-weight:800;">
+        <span>📒 Ledger</span>
+        <span id="balanceTop" style="background:#fff; color:#dc2626; padding:2px 10px; border-radius:20px; font-size:12px;">Balance: ₹0</span>
       </div>
 
       <div class="ledger-scroll">
         <div class="ledger-main">
+          
+          <!-- LEFT SCROLL SIDE - ऊपर Total जमा -->
           <div class="ledger-col left">
-            <div class="col-title jama">💰 जमा फीस - Admin द्वारा</div>
+            <div class="col-title jama d-flex justify-content-between" style="background:#f0fdf4;">
+              <span>💰 जमा फीस</span>
+              <span id="jamaFeesTop" style="color:#16a34a; font-weight:900;">₹0</span>
+            </div>
             <div class="header-row"><div>राशि</div><div>तारीख</div><div>माह</div></div>
             <div id="feeList"></div>
           </div>
+
+          <!-- RIGHT SCROLL SIDE - ऊपर Total Fees -->
           <div class="ledger-col">
-            <div class="col-title gaya">📚 My Subjects - Annual</div>
-            <div class="header-row"><div style="grid-column:1/-1">Subject - Fees</div></div>
+            <div class="col-title gaya d-flex justify-content-between" style="background:#fefce8;">
+              <span>📚 My Subjects</span>
+              <span id="totalFeesTop" style="color:#174a7e; font-weight:900;">₹0</span>
+            </div>
+            <div class="header-row"><div style="grid-column:1/-1">Subject - Annual Fees</div></div>
             <div id="subjectBox"></div>
           </div>
+
         </div>
       </div>
     </div>`;
 
-    // --- LEFT SIDE: Admin से जमा फीस ---
+    // --- LEFT: Admin द्वारा जमा ---
     let sid = user.id || user._id || user.phone;
     let allFees = [];
     try{ allFees = JSON.parse(localStorage.getItem('pal_fees_'+sid)||'[]'); }catch(e){}
@@ -355,7 +359,7 @@ async function loadFeesData() {
     allFees.forEach(f=>{ jamaTotal += parseInt(f.amount||0); });
     document.getElementById('feeList').innerHTML = allFees.length ? allFees.map(f=>`<div class="entry-grid"><div>₹${f.amount}</div><div>${f.date||''}</div><div>${f.month||''}</div></div>`).join('') : '<div style="padding:10px;text-align:center;color:#888;font-size:10px">No fees yet</div>';
 
-    // --- RIGHT SIDE: Fees Structure ---
+    // --- RIGHT: Fees Map ---
     let sClass = (user.class || user.Class || '').toString();
     let feeMap = {};
     if(sClass.includes('12')){
@@ -363,7 +367,7 @@ async function loadFeesData() {
     } else if(sClass.includes('11')){
         feeMap = {physics:3000, chemistry:3000, mathematics:3000, maths:3000, biology:3000, english:1500, hindi:1000};
     } else if(sClass.includes('10')){
-        feeMap = {all:7000, 'all subjects':7000};
+        feeMap = {all:7000};
     } else {
         feeMap = {physics:3500, chemistry:3500, mathematics:3500, maths:3500, biology:3500, english:1500, hindi:1000};
     }
@@ -372,37 +376,30 @@ async function loadFeesData() {
     try{
         let r = await fetch(`${CONFIG.BASE_URL}/students/${user.id}/subjects`);
         let d = await r.json();
-        if(d.res){
-            Object.entries(d.res).forEach(([sub,val])=>{
-                if(val===1) takenSubjects.push(sub);
-            });
-        }
+        if(d.res){ Object.entries(d.res).forEach(([sub,val])=>{ if(val===1) takenSubjects.push(sub); }); }
     }catch(e){}
 
     let totalFees = 0;
     let subHtml = '';
-    
     if(sClass.includes('10') && takenSubjects.length>0){
         totalFees = 7000;
         subHtml = `<div class="vendor-card"><span><i class="bi bi-book"></i> All Subjects</span><span style="font-weight:800; color:#174a7e;">₹7000</span></div>`;
     } else {
         takenSubjects.forEach(sub=>{
-            let key = sub.toLowerCase().trim();
-            let fee = feeMap[key] || 0;
+            let fee = feeMap[sub.toLowerCase().trim()] || 0;
             totalFees += fee;
             subHtml += `<div class="vendor-card"><span><i class="bi bi-book"></i> ${sub}</span><span style="font-weight:800; color:#174a7e;">₹${fee}</span></div>`;
         });
     }
-
-    if(!takenSubjects.length){
-        subHtml = '<div style="padding:10px;text-align:center;color:#888;font-size:10px">कोई Subject Active नहीं</div>';
-    }
+    if(!takenSubjects.length) subHtml = '<div style="padding:10px;text-align:center;color:#888;font-size:10px">कोई Subject Active नहीं</div>';
 
     document.getElementById('subjectBox').innerHTML = subHtml;
     document.getElementById('totalFeesTop').innerText = `₹${totalFees}`;
-    document.getElementById('jamaFeesTop').innerText = `₹${jamaTotal}`;
-}    
-
+    document.getElementById('jamaFeesTop').innerText = `₹${jamaTotal} जमा`;
+    document.getElementById('balanceTop').innerText = `Balance: ₹${totalFees - jamaTotal}`;
+}
+    
+        
 
 
     
