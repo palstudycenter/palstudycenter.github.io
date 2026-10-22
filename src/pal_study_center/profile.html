@@ -153,26 +153,33 @@ async function updateCourseStatusOnServer(subjectsHash){
 
 function addToKhataBahi(feeData, studentName){
   try{
-    let d={
-      date: feeData.date,
-      type: "income",
-      category: "कोचिंग क्लासेस",
-      amount: Number(feeData.amount),
-      mode: feeData.mode,
-      note: studentName+" - "+feeData.month+" फीस",
-      student_id: feeData.student_id
-    };
-    let a=JSON.parse(localStorage.getItem('pal_ledger_income')||'[]'); 
-    a.unshift(d); 
-    localStorage.setItem('pal_ledger_income', JSON.stringify(a));
+    let vouchers = JSON.parse(localStorage.getItem('voucher_final_v7') || '[]');
+    let khatas = JSON.parse(localStorage.getItem('khata_final_v7') || '[]');
     
-    let b=JSON.parse(localStorage.getItem('pal_khata')||'[]'); 
-    b.unshift(d); 
-    localStorage.setItem('pal_khata', JSON.stringify(b));
+    let toId = "1";
+    let mode = (feeData.mode || '').toLowerCase();
+    if(mode.includes('bank') || mode.includes('4798') || mode.includes('8338')){
+      let bankKhata = khatas.find(k=>k.type==='बैंक');
+      if(bankKhata) toId = String(bankKhata.id);
+    }
+
+    let voucher = {
+      id: Date.now(),
+      date: feeData.date,
+      amt: Number(feeData.amount),
+      from: "3",
+      to: toId,
+      nar: studentName + " - " + feeData.month + " फीस",
+      vType: "receipt"
+    };
+    
+    vouchers.push(voucher);
+    localStorage.setItem('voucher_final_v7', JSON.stringify(vouchers));
+    console.log('KhataBahi Saved:', voucher);
   }catch(e){
     console.log(e);
   }
-}
+  }
 
 async function saveStudentFee(){
   let amt=document.getElementById('feeAmount').value; 
@@ -191,28 +198,29 @@ async function saveStudentFee(){
     class: stu.class || ''
   };
 
-  // Local में तुरंत दिखाओ
+  // 1. Local में तुरंत दिखाओ + खाताबही में भेजो
   let allFees=JSON.parse(localStorage.getItem('pal_fees_'+sid)||'[]'); 
   allFees.unshift(payload); 
   localStorage.setItem('pal_fees_'+sid,JSON.stringify(allFees));
   addToKhataBahi(payload, stu.name);
- 
-  // Server पर भेजो
-  try{
-    let url = getApiUrl(CONFIG.API.FEES);
-    let r=await fetch(url,{ method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload) });
-    let j=await r.json();
-    console.log('Server Response:', j);
-    if(j.status || j.success) alert('Fees Server पर Save हो गई ✓');
-    else alert('Server Error: '+JSON.stringify(j));
-  }catch(e){
-    console.error(e);
-    alert('Server पर नहीं गई, Local में Save है - Error: '+e.message);
-  }
-
   loadFees(); 
   document.getElementById('addFeeBox').style.display='none'; 
   document.getElementById('feeAmount').value='';
+
+  // 2. Server पर भेजो - Error नहीं दिखाएगा
+  try{
+    let url = getApiUrl(CONFIG.API.FEES);
+    let r=await fetch(url,{ method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload) });
+    let txt = await r.text();
+    try{ 
+      let j = JSON.parse(txt);
+      console.log('Server Response:', j);
+    }catch(e){ 
+      console.log('Server returned HTML, Local save OK');
+    }
+  }catch(e){
+    console.log('Server Fail, Local OK:', e.message);
+  }
 }
 
 async function loadFees(){
@@ -221,17 +229,21 @@ async function loadFees(){
   try{ 
     let url = getApiUrl(CONFIG.API.FEES+'?student_id='+sid); 
     let r=await fetch(url); 
-    let j=await r.json(); 
-    let arr = j.res || j.data || [];
-    if(Array.isArray(arr) && arr.length){
-      allFees=arr; 
-      localStorage.setItem('pal_fees_'+sid, JSON.stringify(allFees));
-    }
+    let txt = await r.text();
+    try{
+      let j=JSON.parse(txt);
+      let arr = j.res || j.data || [];
+      if(Array.isArray(arr) && arr.length){
+        allFees=arr; 
+        localStorage.setItem('pal_fees_'+sid, JSON.stringify(allFees));
+      }
+    }catch(e){}
   }catch(e){ console.warn('Fees Load Fail', e); }
   let html=allFees.length? allFees.map(f=>`<div class="entry-grid"><div>₹${f.amount}</div><div>${f.date||f.created_at?.split('T')[0]||''}</div><div>${f.month||''}</div></div>`).join('') : '<div style="padding:8px;text-align:center;color:#888;font-size:10px">No Fees - Add से जोड़ें</div>';
   document.getElementById('feeList').innerHTML=html;
 }
-loadFees(); loadCourseData();
+loadFees(); 
+loadCourseData();
   
 
   
