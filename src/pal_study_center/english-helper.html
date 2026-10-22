@@ -31,17 +31,21 @@ body{margin:0;background:#f0f7ff;font-family:system-ui}
 </div>
 
 <div id="mainGrid" class="main-grid">
-  <div class="mbtn" id="btn-coaching" onclick="openSec('coaching',this)">🏫<br>Coaching<span>Daily Class</span></div>
-  <div class="mbtn" id="btn-family" onclick="openSec('family',this)">🏠<br>Family<span>At Home</span></div>
-  <div class="mbtn" id="btn-friends" onclick="openSec('friends',this)">🤝<br>Friends<span>Chat</span></div>
-  <div class="mbtn" id="btn-my" onclick="openSec('my',this)">💬<br>My Saved<span id="myCount">0</span></div>
-  <div class="mbtn" id="btn-challenge" onclick="openSec('challenge',this)">🎯<br>Daily 5<span>Auto</span></div>
+  <div class="mbtn" onclick="openSec('coaching')">🏫<br>Coaching<span>Daily Class</span></div>
+  <div class="mbtn" onclick="openSec('family')">🏠<br>Family<span>At Home</span></div>
+  <div class="mbtn" onclick="openSec('friends')">🤝<br>Friends<span>Chat</span></div>
+  <div class="mbtn" onclick="openSec('modals')" style="background:#7c3aed;border-color:#7c3aed">🔑<br>Modals<span>Practice Lab</span></div>
+  <div class="mbtn" onclick="openSec('haveto')" style="background:#ea580c;border-color:#ea580c">📌<br>Have to<span>Going to etc</span></div>
+  <div class="mbtn" onclick="openSec('my')">💬<br>My Saved<span id="myCount">0</span></div>
+  <div class="mbtn" onclick="openSec('challenge')">🎯<br>Daily 5<span>Auto</span></div>
   <div class="mbtn" onclick="clearAll()" style="background:#fff;color:#b91c1c;border-color:#fca5a5">🗑️<br>Clear<span>Remove All</span></div>
 </div>
 
 <div id="sec-coaching" class="content"></div>
 <div id="sec-family" class="content"></div>
 <div id="sec-friends" class="content"></div>
+<div id="sec-modals" class="content"></div>
+<div id="sec-haveto" class="content"></div>
 <div id="sec-my" class="content"></div>
 <div id="sec-challenge" class="content"></div>
 
@@ -83,24 +87,99 @@ const DAILY_POOL=[
 {h:"कल टेस्ट होगा।",e:"There will be a test tomorrow."},
 {h:"मुझे यह बात फिर से समझाओ।",e:"Explain this to me again."},
 {h:"घर पर प्रैक्टिस करो।",e:"Practice at home."},
-{h:"सब लोग शांत रहो।",e:"Everyone please be quiet."},
-{h:"मुझे आपसे एक बात कहनी है।",e:"I have to tell you something."},
-{h:"क्या आप मेरी मदद कर सकते हैं?",e:"Can you help me?"},
-{h:"मैं कल नहीं आ पाऊंगा।",e:"I will not be able to come tomorrow."},
-{h:"आज मौसम बहुत अच्छा है।",e:"The weather is very nice today."},
-{h:"चलो बाहर चलते हैं।",e:"Let's go outside."}
+{h:"सब लोग शांत रहो।",e:"Everyone please be quiet."}
 ];
+
+// --- COMPACT PRACTICE LAB ---
+const MODAL_RULES={
+"can":{use:"ताकत / योग्यता", f:"Sub + can + Verb", ex:"I can speak English"},
+"could":{use:"भूत की योग्यता / विनम्र निवेदन", f:"Sub + could + Verb", ex:"Could you help me?"},
+"may":{use:"अनुमति लेना", f:"May + Sub + Verb?", ex:"May I come in?"},
+"might":{use:"कम संभावना", f:"Sub + might + Verb", ex:"It might rain"},
+"must":{use:"जरूरी है", f:"Sub + must + Verb", ex:"You must come"},
+"should":{use:"सलाह", f:"Sub + should + Verb", ex:"You should study"},
+"would":{use:"इच्छा", f:"Sub + would + Verb", ex:"Would you like tea?"},
+"have to":{use:"मजबूरी - करना पड़ता है", f:"Sub + have to + Verb", ex:"I have to go"},
+"has to":{use:"उसे/राम को करना पड़ता है", f:"He + has to + Verb", ex:"He has to work"},
+"had to":{use:"करना पड़ा था", f:"Sub + had to + Verb", ex:"I had to wait"},
+"going to":{use:"पक्का इरादा / होने वाला है", f:"Sub + is going to + Verb", ex:"I am going to start"},
+"be able to":{use:"सक्षम होना", f:"Sub + be able to + Verb", ex:"I am able to do"},
+"used to":{use:"पहले करता था", f:"Sub + used to + Verb", ex:"I used to play"},
+"had better":{use:"बेहतर होगा", f:"Sub + had better + Verb", ex:"You had better go"},
+"be about to":{use:"बिल्कुल होने वाला है", f:"Sub + is about to + Verb", ex:"Class is about to start"}
+};
+
 function getDaily5(){let idx=new Date().getDate()%DAILY_POOL.length;let list=[];for(let i=0;i<5;i++)list.push(DAILY_POOL[(idx+i)%DAILY_POOL.length]);return list;}
 function getTicks(){let k='daily_tick_'+new Date().toISOString().slice(0,10);return JSON.parse(localStorage.getItem(k)||'[false,false,false,false,false]');}
 function saveTick(i){let k='daily_tick_'+new Date().toISOString().slice(0,10);let t=getTicks();t[i]=!t[i];localStorage.setItem(k,JSON.stringify(t));renderAll();}
 function getDB(){let a=JSON.parse(localStorage.getItem(KEY)||'[]');let now=Date.now();let f=a.filter(x=>now-x.time<24*60*60*1000);if(f.length!==a.length)localStorage.setItem(KEY,JSON.stringify(f));return f;}
 function saveDB(a){if(a.length>120)a=a.slice(-120);localStorage.setItem(KEY,JSON.stringify(a));renderAll();}
-let activeSec=null,lastTransH='',lastTransE='',pendingH='',pendingE='',selectedCat='my';
-function goHome(){activeSec=null;document.querySelectorAll('.content').forEach(c=>c.classList.remove('show'));document.getElementById('mainGrid').style.display='grid';document.getElementById('searchWrap').style.display='flex';document.getElementById('backBar').classList.remove('show');}
-function openSec(id){activeSec=id;document.getElementById('mainGrid').style.display='none';document.getElementById('searchWrap').style.display='none';document.getElementById('transRes').style.display='none';document.getElementById('backBar').classList.add('show');document.querySelectorAll('.content').forEach(c=>c.classList.remove('show'));document.getElementById('sec-'+id).classList.add('show');}
+let lastTransH='',lastTransE='',pendingH='',pendingE='',selectedCat='my';
+function goHome(){document.querySelectorAll('.content').forEach(c=>c.classList.remove('show'));document.getElementById('mainGrid').style.display='grid';document.getElementById('searchWrap').style.display='flex';document.getElementById('backBar').classList.remove('show');}
+function openSec(id){document.getElementById('mainGrid').style.display='none';document.getElementById('searchWrap').style.display='none';document.getElementById('transRes').style.display='none';document.getElementById('backBar').classList.add('show');document.querySelectorAll('.content').forEach(c=>c.classList.remove('show'));document.getElementById('sec-'+id).classList.add('show'); if(id==='modals'||id==='haveto') renderLab(id);}
 function esc(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 function cardHTML(it,idx){let hrs=Math.max(0,Math.round((24*60*60*1000-(Date.now()-it.time))/3600000));return `<div class="card"><div style="flex:1;min-width:0"><div style="font-weight:900;font-size:13px;white-space:pre-wrap">${esc(it.e)}</div><div style="font-size:11px;color:#64748b;white-space:pre-wrap">${esc(it.h)}</div><div style="font-size:9px;color:#94a3b8">⏰ ${hrs}h बाद Delete</div></div><div style="display:flex;flex-direction:column;gap:6px"><button onclick="speakByIdx(${idx})" style="border:none;background:#174a7e;color:#fff;padding:8px 12px;border-radius:20px;font-weight:800;font-size:11px">📢 Loud</button><button onclick="shareByIdx(${idx})" style="border:none;background:#e0f2fe;padding:6px 10px;border-radius:20px;font-weight:700;font-size:11px">📤 Share</button></div></div>`;}
-function renderAll(){let db=getDB();document.getElementById('sec-coaching').innerHTML=db.map((it,i)=>it.cat==='coaching'?cardHTML(it,i):'').join('')||'<div style="padding:30px;text-align:center;color:#94a3b8">खाली है</div>';document.getElementById('sec-family').innerHTML=db.map((it,i)=>it.cat==='family'?cardHTML(it,i):'').join('')||'<div style="padding:30px;text-align:center;color:#94a3b8">खाली है</div>';document.getElementById('sec-friends').innerHTML=db.map((it,i)=>it.cat==='friends'?cardHTML(it,i):'').join('')||'<div style="padding:30px;text-align:center;color:#94a3b8">खाली है</div>';document.getElementById('sec-my').innerHTML=db.map((it,i)=>it.cat==='my'?cardHTML(it,i):'').join('')||'<div style="padding:30px;text-align:center;color:#94a3b8">मैं खुद - खाली</div>';let ticks=getTicks();let done=ticks.filter(x=>x).length;let daily=getDaily5();document.getElementById('sec-challenge').innerHTML=`<div style="padding:10px;background:#f0f7ff;text-align:center;font-weight:800;border-bottom:1px solid #dbeafe;font-size:12px">🎯 Today Challenge - ${done}/5 Done</div>`+daily.map((it,i)=>`<div class="card" style="${ticks[i]?'background:#f0fdf4;opacity:.7':''}"><div style="flex:1;min-width:0"><div style="font-weight:900;font-size:13px;white-space:pre-wrap">${esc(it.e)}</div><div style="font-size:11px;color:#64748b;white-space:pre-wrap">${esc(it.h)}</div></div><div style="display:flex;flex-direction:column;gap:6px;align-items:center"><button onclick="speakLoud('${it.e.replace(/'/g,"\\'")}')" style="border:none;background:#174a7e;color:#fff;padding:6px 10px;border-radius:20px;font-size:11px;font-weight:800">📢</button><button onclick="shareMsg('${it.e.replace(/'/g,"\\'")}')" style="border:none;background:#e0f2fe;padding:6px 10px;border-radius:20px;font-size:11px">📤</button><input type="checkbox" ${ticks[i]?'checked':''} onchange="saveTick(${i})" style="width:20px;height:20px"></div></div>`).join('');document.getElementById('myCount').innerText=db.length;}
+
+// --- LAB RENDER (SCRIPT ONLY, CODE छोटा) ---
+function renderLab(type){
+ let keys = type==='modals' ? ["can","could","may","might","must","should","would"] : ["have to","has to","had to","going to","be able to","used to","had better","be about to"];
+ let color = type==='modals' ? '#7c3aed' : '#ea580c';
+ let el = document.getElementById('sec-'+type);
+ el.innerHTML = `<div style="padding:12px;background:${color};color:#fff;border-radius:14px 14px 0 0"><b>${type==='modals'?'🔑 Modals Practice Lab':'📌 Have to / Going to Lab'}</b><div style="font-size:11px;opacity:.9;margin-top:2px">खुद सेंटेंस बनाकर प्रैक्टिस करो - Pattern समझो</div></div>
+ <div style="padding:10px">
+ <label style="font-size:11px;font-weight:800">1. Modal / Type चुनो</label>
+ <select id="${type}Modal" onchange="updateFormula('${type}')" style="width:100%;padding:11px;border-radius:10px;border:1.5px solid #dbeafe;font-weight:800;margin-top:4px">${keys.map(k=>`<option value="${k}">${k.toUpperCase()}</option>`).join('')}</select>
+ <div id="${type}Rule" style="margin-top:8px;background:#f0f7ff;padding:10px;border-radius:10px;font-size:12px;font-weight:700;border:1px solid #dbeafe"></div>
+ <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px">
+ <div><label style="font-size:11px;font-weight:800">2. Subject</label><select id="${type}Sub" style="width:100%;padding:10px;border-radius:10px;border:1.5px solid #dbeafe;font-weight:700"><option>I</option><option>You</option><option>He</option><option>She</option><option>We</option><option>They</option><option>Ram</option></select></div>
+ <div><label style="font-size:11px;font-weight:800">3. Verb</label><input id="${type}Verb" placeholder="go, speak, study" value="go" style="width:100%;padding:10px;border-radius:10px;border:1.5px solid #dbeafe;font-weight:700"></div>
+ </div>
+ <label style="font-size:11px;font-weight:800;margin-top:8px;display:block">4. बाकी (Object)</label>
+ <input id="${type}Obj" placeholder="to school, English, daily" value="to school" style="width:100%;padding:10px;border-radius:10px;border:1.5px solid #dbeafe;font-weight:700;margin-top:4px">
+ <button onclick="makeSentence('${type}')" style="width:100%;margin-top:12px;background:${color};color:#fff;border:none;padding:12px;border-radius:10px;font-weight:900;font-size:14px">✨ मेरा सेंटेंस बनाओ</button>
+ <div id="${type}Out" style="margin-top:12px"></div>
+ </div>`;
+ updateFormula(type);
+}
+function updateFormula(type){
+ let m=document.getElementById(type+'Modal').value;
+ let r=MODAL_RULES[m];
+ document.getElementById(type+'Rule').innerHTML=`📌 <b style="color:#174a7e">${m.toUpperCase()}</b> = ${r.use}<br>🔹 <b>Formula:</b> ${r.f}<br>🔸 <b>Ex:</b> ${r.ex}`;
+}
+function makeSentence(type){
+ let modal=document.getElementById(type+'Modal').value;
+ let sub=document.getElementById(type+'Sub').value;
+ let verb=document.getElementById(type+'Verb').value.trim()||"go";
+ let obj=document.getElementById(type+'Obj').value.trim()||"";
+ let rule=MODAL_RULES[modal];
+ let eng="";
+ let is = sub==='I'?'am':(sub==='He'||sub==='She'||sub==='Ram'?'is':'are');
+ if(modal==='going to') eng=`${sub} ${is} going to ${verb} ${obj}`;
+ else if(modal==='be able to') eng=`${sub} ${is} able to ${verb} ${obj}`;
+ else if(modal==='be about to') eng=`${sub} ${is} about to ${verb} ${obj}`;
+ else eng=`${sub} ${modal} ${verb} ${obj}`;
+ let out=document.getElementById(type+'Out');
+ out.innerHTML=`<div style="background:#f0fdf4;border:1.5px solid #bbf7d0;border-radius:12px;padding:12px">
+ <div style="font-size:11px;font-weight:800;color:#15803d">✅ तुम्हारा सेंटेंस:</div>
+ <div style="font-weight:900;font-size:15px;margin-top:6px;white-space:pre-wrap">${esc(eng)}</div>
+ <div style="font-size:11px;color:#64748b;margin-top:4px">${esc(rule.use)} | ${esc(rule.f)}</div>
+ <div style="display:flex;gap:6px;margin-top:10px"><button onclick="speakLoud('${eng.replace(/'/g,"\\'")}')" style="flex:1;border:none;background:#fff;border:1.5px solid #bbf7d0;padding:9px;border-radius:8px;font-weight:700">📢 Loud</button><button onclick="quickSave('${sub} को ${modal} करना','${eng.replace(/'/g,"\\'")}')" style="flex:1;border:none;background:#15803d;color:#fff;padding:9px;border-radius:8px;font-weight:800">💾 Save</button></div>
+ <div style="margin-top:10px;background:#fff;padding:8px;border-radius:8px;font-size:11px;border:1px dashed #bbf7d0"><b>💡 कैसे बदलें?</b><br>❌ Not: ${esc(sub)} ${esc(modal)} not ${esc(verb)} ${esc(obj)}<br>❓ Q: ${esc(modal.charAt(0).toUpperCase()+modal.slice(1))} ${esc(sub)} ${esc(verb)} ${esc(obj)}?<br>💬 Hindi Trick: ${esc(rule.use)}</div>
+ </div>`;
+ speakLoud(eng);
+}
+function quickSave(h,e){lastTransH=h;lastTransE=e;openPoll();}
+
+function renderAll(){
+let db=getDB();
+document.getElementById('sec-coaching').innerHTML=db.map((it,i)=>it.cat==='coaching'?cardHTML(it,i):'').join('')||'<div style="padding:30px;text-align:center;color:#94a3b8">खाली है</div>';
+document.getElementById('sec-family').innerHTML=db.map((it,i)=>it.cat==='family'?cardHTML(it,i):'').join('')||'<div style="padding:30px;text-align:center;color:#94a3b8">खाली है</div>';
+document.getElementById('sec-friends').innerHTML=db.map((it,i)=>it.cat==='friends'?cardHTML(it,i):'').join('')||'<div style="padding:30px;text-align:center;color:#94a3b8">खाली है</div>';
+document.getElementById('sec-my').innerHTML=db.map((it,i)=>it.cat==='my'?cardHTML(it,i):'').join('')||'<div style="padding:30px;text-align:center;color:#94a3b8">मैं खुद - खाली</div>';
+let ticks=getTicks();let done=ticks.filter(x=>x).length;let daily=getDaily5();
+document.getElementById('sec-challenge').innerHTML=`<div style="padding:10px;background:#f0f7ff;text-align:center;font-weight:800;border-bottom:1px solid #dbeafe;font-size:12px">🎯 Today Challenge - ${done}/5 Done</div>`+daily.map((it,i)=>`<div class="card" style="${ticks[i]?'background:#f0fdf4;opacity:.7':''}"><div style="flex:1;min-width:0"><div style="font-weight:900;font-size:13px;white-space:pre-wrap">${esc(it.e)}</div><div style="font-size:11px;color:#64748b;white-space:pre-wrap">${esc(it.h)}</div></div><div style="display:flex;flex-direction:column;gap:6px;align-items:center"><button onclick="speakLoud('${it.e.replace(/'/g,"\\'")}')" style="border:none;background:#174a7e;color:#fff;padding:6px 10px;border-radius:20px;font-size:11px;font-weight:800">📢</button><button onclick="shareMsg('${it.e.replace(/'/g,"\\'")}')" style="border:none;background:#e0f2fe;padding:6px 10px;border-radius:20px;font-size:11px">📤</button><input type="checkbox" ${ticks[i]?'checked':''} onchange="saveTick(${i})" style="width:20px;height:20px"></div></div>`).join('');
+document.getElementById('myCount').innerText=db.length;
+}
 function speakByIdx(i){let db=getDB();if(db[i])speakLoud(db[i].e);}function shareByIdx(i){let db=getDB();if(db[i])shareMsg(db[i].e);}
 function selectCat(cat){selectedCat=cat;document.querySelectorAll('.pollOpt').forEach(o=>{o.classList.remove('sel');o.querySelector('span:last-child').innerText='○';});let el=document.getElementById('opt-'+cat);el.classList.add('sel');el.querySelector('span:last-child').innerText='●';}
 function openPoll(){pendingH=lastTransH;pendingE=lastTransE;document.getElementById('pollPreview').innerHTML=`<b>${esc(pendingE)}</b><div style="color:#64748b;margin-top:4px">${esc(pendingH)}</div>`;selectCat('my');document.getElementById('catPoll').classList.add('show');}

@@ -151,6 +151,29 @@ async function updateCourseStatusOnServer(subjectsHash){
   try{ await fetch(`${CONFIG.BASE_URL}/students/${stu.id}/subjects`,{ method:'PATCH',headers:{'Content-Type':'application/json'}, body:JSON.stringify({subjects:subjectsHash}) }); }catch(err){}
 }
 
+function addToKhataBahi(feeData, studentName){
+  try{
+    let d={
+      date: feeData.date,
+      type: "income",
+      category: "कोचिंग क्लासेस",
+      amount: Number(feeData.amount),
+      mode: feeData.mode,
+      note: studentName+" - "+feeData.month+" फीस",
+      student_id: feeData.student_id
+    };
+    let a=JSON.parse(localStorage.getItem('pal_ledger_income')||'[]'); 
+    a.unshift(d); 
+    localStorage.setItem('pal_ledger_income', JSON.stringify(a));
+    
+    let b=JSON.parse(localStorage.getItem('pal_khata')||'[]'); 
+    b.unshift(d); 
+    localStorage.setItem('pal_khata', JSON.stringify(b));
+  }catch(e){
+    console.log(e);
+  }
+}
+
 async function saveStudentFee(){
   let amt=document.getElementById('feeAmount').value; 
   if(!amt) return alert('Amount डालें');
@@ -172,7 +195,8 @@ async function saveStudentFee(){
   let allFees=JSON.parse(localStorage.getItem('pal_fees_'+sid)||'[]'); 
   allFees.unshift(payload); 
   localStorage.setItem('pal_fees_'+sid,JSON.stringify(allFees));
-
+  addToKhataBahi(payload, stu.name);
+ 
   // Server पर भेजो
   try{
     let url = getApiUrl(CONFIG.API.FEES);
@@ -190,7 +214,7 @@ async function saveStudentFee(){
   document.getElementById('addFeeBox').style.display='none'; 
   document.getElementById('feeAmount').value='';
 }
-  
+
 async function loadFees(){
   let sid = String(stu.id || stu._id || '').trim();
   let allFees=JSON.parse(localStorage.getItem('pal_fees_'+sid)||'[]');
@@ -208,6 +232,8 @@ async function loadFees(){
   document.getElementById('feeList').innerHTML=html;
 }
 loadFees(); loadCourseData();
+  
+
   
 </script>
 </body>
