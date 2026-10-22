@@ -65,8 +65,8 @@ body{margin:0;background:#f0f7ff;font-family:system-ui}
   <div id="sec-my" class="content"></div>
 <div id="sec-challenge" class="content"></div>
 
-<div id="searchWrap" class="searchWrap"><textarea id="hiInp" placeholder="हिंदी लिखो..."></textarea><button onclick="doTrans()" style="background:#174a7e;color:#fff;border:none;padding:10px 14px;border-radius:8px;font-weight:800">Translate</button></div>
-<div id="transRes" style="display:none;margin:10px;background:#f0fdf4;border:1px solid #bbf7d0;padding:10px;border-radius:10px"></div>
+<div id="searchWrap" class="searchWrap"><textarea id="hiInp" placeholder="हिंदी लिखो..."></textarea><button id="micBtn" onclick="startHiMic()" style="background:#e0f2fe;color:#174a7e;border:1.5px solid #bfdbfe;padding:10px 14px;border-radius:8px;font-weight:800;font-size:18px">🎤</button><button onclick="doTrans()" style="background:#174a7e;color:#fff;border:none;padding:10px 14px;border-radius:8px;font-weight:800">Translate</button></div>
+  <div id="transRes" style="display:none;margin:10px;background:#f0fdf4;border:1px solid #bbf7d0;padding:10px;border-radius:10px"></div>
 <div id="saveMsg" style="display:none;margin:6px 10px;background:#dbeafe;padding:8px;border-radius:8px;font-size:12px;font-weight:700;text-align:center"></div>
 
 <div id="catPoll" onclick="closePoll()"><div class="pollBox" onclick="event.stopPropagation()"><div style="display:flex;justify-content:space-between;margin-bottom:12px"><b>Save To?</b><span onclick="closePoll()">✕</span></div><div id="pollPreview" style="background:#f0fdf4;border-radius:10px;padding:10px;font-size:12px;margin-bottom:12px;white-space:pre-wrap"></div><div class="pollOpt" onclick="selectCat('coaching')" id="opt-coaching"><span>🏫 Coaching</span><span>○</span></div><div class="pollOpt" onclick="selectCat('family')" id="opt-family"><span>🏠 Family</span><span>○</span></div><div class="pollOpt" onclick="selectCat('friends')" id="opt-friends"><span>🤝 Friends</span><span>○</span></div><div class="pollOpt" onclick="selectCat('my')" id="opt-my"><span>💬 My Saved</span><span>○</span></div><div style="display:flex;gap:8px;margin-top:12px"><button onclick="closePoll()" style="flex:1;padding:12px;border-radius:10px;border:1.5px solid #e2e8f0;background:#fff;font-weight:800">Cancel</button><button onclick="confirmSave()" style="flex:1;padding:12px;border-radius:10px;border:none;background:#174a7e;color:#fff;font-weight:800">✅ Save</button></div></div></div>
@@ -666,7 +666,26 @@ if(!getCache()[eng]){
 try{let r=await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(eng)}&langpair=en|hi`);let j=await r.json();let hi=j.responseData.translatedText;setCache(eng,hi);document.getElementById('cauOut').innerHTML=document.getElementById('cauOut').innerHTML.replace(esc(hiTrans),esc(hi));window._lastHi=hi;}catch(e){}
 }
 }
-  
+ function startHiMic(){
+  // Direct File check
+  if(location.protocol === 'file:'){
+    alert('Direct File में Mic Block है। हिंदी वाले Box पर Click करो, फिर Keyboard में 🎤 दबाकर बोलो। Chrome पर डालने के बाद ये वाला Mic चलने लगेगा।');
+    document.getElementById('hiInp').focus();
+    return;
+  }
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if(!SR){ alert('Chrome में खोलो'); return; }
+  let rec = new SR();
+  rec.lang='hi-IN';
+  document.getElementById('micBtn').innerText='🔴';
+  rec.onresult = (e) => { document.getElementById('hiInp').value = e.results[0][0].transcript; doTrans(); };
+  rec.onend = () => { document.getElementById('micBtn').innerText='🎤'; };
+  rec.onerror = (e) => { 
+    document.getElementById('micBtn').innerText='🎤';
+    alert('Chrome में Lock Icon > Permissions > Microphone > Allow करो, फिर Reload करो');
+  };
+  rec.start();
+ } 
   
 function renderAll(){
 let db=getDB();
