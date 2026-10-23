@@ -45,11 +45,15 @@ body{margin:0;background:#f0f7ff;font-family:system-ui}
 <div class="mbtn" onclick="openSec('modals')" style="background:#6d28d9">🔑 MODALS LAB</div>
 <div class="mbtn" onclick="openSec('causative')" style="background:#047857">🤝 CAUSATIVE LAB</div>  
 <div class="mbtn" onclick="openSec('behave')" style="background:#7c3aed">🔗 BE / HAVE LAB</div>
+<div class="mbtn" onclick="openSec('thereit')" style="background:#0e7490">📍 THERE/IT LAB</div>
+  <div class="mbtn" onclick="openSec('ifcond')" style="background:#7c2d12">🔀 IF CONDITIONAL LAB</div>
 </div></div>
 </div>
 <div id="sec-coaching" class="content"></div><div id="sec-family" class="content"></div><div id="sec-friends" class="content"></div>
 <div id="sec-tenses" class="content"></div><div id="sec-what" class="content"></div><div id="sec-imperatives" class="content"></div>
 <div id="sec-modals" class="content"></div><div id="sec-causative" class="content"></div><div id="sec-behave" class="content"></div>
+<div id="sec-thereit" class="content"></div>
+<div id="sec-ifcond" class="content"></div>
 <div id="sec-my" class="content"></div><div id="sec-challenge" class="content"></div>
 <div id="searchWrap" class="searchWrap"><textarea id="hiInp" placeholder="हिंदी लिखो..."></textarea><button id="micBtn" onclick="startHiMic()" style="background:#e0f2fe;color:#174a7e;border:1.5px solid #bfdbfe;padding:10px 14px;border-radius:8px;font-weight:800;font-size:18px">🎤</button><button onclick="doTrans()" style="background:#174a7e;color:#fff;border:none;padding:10px 14px;border-radius:8px;font-weight:800">Translate</button></div>
 <div id="transRes" style="display:none;margin:10px;background:#f0fdf4;border:1px solid #bbf7d0;padding:10px;border-radius:10px"></div>
@@ -88,7 +92,61 @@ const IMPERATIVE_LIST=[
 {key:"Let",hi:"करने दो",use:"Let + Person + V1",form:"let_person",imp:"Let him"}
 ];
   const IMP_OBJ_MAP_FINAL={motion:["to school","to home","here","fast","inside"],learning:["english daily","hindi","this lesson","well","quickly"],eating:["food","lunch","water","well","properly","food daily"],common:["daily","well","quickly","now","at home","this work"]};
+const THERE_IT_LIST=[
+{key:"There is",hi:"वहाँ एक है",use:"There is + a + Noun",form:"there_is",be:"is"},
+{key:"There are",hi:"वहाँ बहुत हैं",use:"There are + many + Noun",form:"there_are",be:"are"},
+{key:"There was",hi:"वहाँ एक था",use:"There was + a + Noun",form:"there_was",be:"was"},
+{key:"There were",hi:"वहाँ बहुत थे",use:"There were + many + Noun",form:"there_were",be:"were"},
+{key:"There will be",hi:"वहाँ होगा",use:"There will be + a/many + Noun",form:"there_will",be:"will be"},
+{key:"It is",hi:"यह है - मौसम/समय",use:"It is + Adj/Time/Weather",form:"it_is",be:"is"},
+{key:"It was",hi:"यह था",use:"It was + Adj/Time",form:"it_was",be:"was"},
+{key:"It will be",hi:"यह होगा",use:"It will be + Adj/Time",form:"it_will",be:"will be"}
+];
+const THERE_IT_OBJ_FILTER={
+there_is:["a book on table","a boy in class","a pen in bag","a car outside"],
+there_are:["many books on table","many boys in class","many pens in bag","many cars outside"],
+there_was:["a book on table","a problem yesterday","a function in school","a party last night"],
+there_were:["many problems yesterday","many boys in ground","many people in party"],
+there_will:["a meeting tomorrow","a party tonight","many students tomorrow","a function next week"],
+it_is:["9 o'clock","very hot today","raining heavily","Monday today","easy to learn","time to go"],
+it_was:["very cold yesterday","Sunday yesterday","difficult to learn","9 o'clock last night"],
+it_will:["very hot tomorrow","easy to learn","Monday tomorrow","time to go soon"]
+};
 
+const IF_COND_LIST=[
+{key:"Zero - 100% True",hi:"अगर ऐसा होता है तो वैसा होता है",use:"If + Present , Present",form:"zero"},
+{key:"First - Future Possible",hi:"अगर करोगे तो होगा",use:"If + Present , Will + V1",form:"first"},
+{key:"Second - Imaginary",hi:"अगर होता तो करता",use:"If + Past , Would + V1",form:"second"},
+{key:"Third - Past Impossible",hi:"अगर किया होता तो हुआ होता",use:"If + Had + V3 , Would have + V3",form:"third"}
+];
+const IF_COND_CONNECTED={
+zero:[
+{if_clause:"you heat water at home",main_clause:"it boils at 100°"},
+{if_clause:"you eat healthy food daily",main_clause:"you gain weight quickly"},
+{if_clause:"you work hard in office",main_clause:"you succeed fast"},
+{if_clause:"it rains heavily in July",main_clause:"crops grow well"}
+],
+first:[
+{if_clause:"you study hard for exam",main_clause:"you will pass easily"},
+{if_clause:"you come on time today",main_clause:"I will teach you"},
+{if_clause:"you work fast tonight",main_clause:"you will finish early"},
+{if_clause:"it rains today",main_clause:"we will not go outside"}
+],
+second:[
+{if_clause:"you had a lot of money",main_clause:"you would buy a new car"},
+{if_clause:"I were at your place",main_clause:"I would not do this work"},
+{if_clause:"you worked very hard daily",main_clause:"you would succeed quickly"},
+{if_clause:"you had a new job",main_clause:"you would help me a lot"}
+],
+third:[
+{if_clause:"you had studied hard for exam",main_clause:"you would have passed easily"},
+{if_clause:"you had come on time yesterday",main_clause:"I would have taught you well"},
+{if_clause:"it had rained heavily",main_clause:"we would have not gone outside"},
+{if_clause:"you had worked very hard before",main_clause:"you would have succeeded in life"}
+]
+};
+
+  
  const CAUSATIVE_LIST=[
 {key:"Have / Get",hi:"काम किसी और से करवाना",use:"have/get + Object + V3",form:"v3"},
 {key:"Make",hi:"जबरदस्ती करवाना",use:"make + Person + V1",form:"v1"},
@@ -121,7 +179,11 @@ function getCache(){let raw=localStorage.getItem(TRANS_CACHE_KEY);let c={};try{c
 function setCache(en,hi){if(!hi) return;if(hi.includes("पत्र") && en.toLowerCase().includes("school")) return;if(hi.includes("पत्र") && en.toLowerCase().includes("come to school")) return;let c=getCache();c[en]=hi;localStorage.setItem(TRANS_CACHE_KEY,JSON.stringify(c));}
 let lastTransH='',lastTransE='',pendingH='',pendingE='',selectedCat='my';
 function goHome(){document.querySelectorAll('.content').forEach(c=>c.classList.remove('show'));document.getElementById('mainGrid').style.display='grid';document.getElementById('searchWrap').style.display='flex';document.getElementById('backBar').classList.remove('show');}
-function openSec(id){document.getElementById('mainGrid').style.display='none';document.getElementById('searchWrap').style.display='none';document.getElementById('transRes').style.display='none';document.getElementById('backBar').classList.add('show');document.querySelectorAll('.content').forEach(c=>c.classList.remove('show'));document.getElementById('sec-'+id).classList.add('show');if(id==='tenses')renderTensesLab();if(id==='what')renderWhatLab();if(id==='imperatives')renderImperativesLab();if(id==='modals')renderModalsLab();if(id==='causative')renderCausativeLab();if(id==='behave')renderBeHaveLab();if(id==='challenge')renderChallengeLab();}
+
+  
+function openSec(id){document.getElementById('mainGrid').style.display='none';document.getElementById('searchWrap').style.display='none';document.getElementById('transRes').style.display='none';document.getElementById('backBar').classList.add('show');document.querySelectorAll('.content').forEach(c=>c.classList.remove('show'));document.getElementById('sec-'+id).classList.add('show');if(id==='tenses')renderTensesLab();if(id==='what')renderWhatLab();if(id==='imperatives')renderImperativesLab();if(id==='modals')renderModalsLab();if(id==='causative')renderCausativeLab();if(id==='behave')renderBeHaveLab();if(id==='challenge')renderChallengeLab();if(id==='thereit')renderThereItLab();if(id==='ifcond')renderIfCondLab();}
+
+
 function esc(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 function cardHTML(it,idx){let hrs=Math.max(0,Math.round((86400000-(Date.now()-it.time))/3600000));return `<div class="card"><div style="flex:1"><div style="font-weight:900;font-size:13px;white-space:pre-wrap">${esc(it.e)}</div><div style="font-size:11px;color:#64748b">${esc(it.h)}</div><div style="font-size:9px;color:#94a3b8">⏰ ${hrs}h Auto Delete</div></div><div style="display:flex;flex-direction:column;gap:6px"><button onclick="speakByIdx(${idx})" style="border:none;background:#174a7e;color:#fff;padding:8px 12px;border-radius:20px;font-weight:800;font-size:11px">📢 Loud</button><button onclick="shareByIdx(${idx})" style="border:none;background:#e0f2fe;padding:6px 10px;border-radius:20px;font-weight:700;font-size:11px">📤 Share</button></div></div>`;}
 function getV2(v1){let m={go:"went",eat:"ate",speak:"spoke",write:"wrote",come:"came",do:"did",make:"made",take:"took",give:"gave",teach:"taught",buy:"bought",bring:"brought",think:"thought",get:"got",find:"found",read:"read",run:"ran",know:"knew",sleep:"slept",sell:"sold",pay:"paid",tell:"told",keep:"kept",put:"put",drink:"drank",work:"worked"};return m[v1]||v1+"ed";}
@@ -509,7 +571,110 @@ document.getElementById('behaveSaveBtn').setAttribute('onclick',`quickSaveModal(
 }catch(e){}
 }
   }  
-  function quickSaveModal(e,hi){lastTransH=hi||window._lastHi||"Lab";lastTransE=e;openPoll();}
+
+function renderThereItLab(){
+let el=document.getElementById('sec-thereit');
+if(!el) return;
+el.innerHTML=`<div style="padding:12px;background:#fff;border-radius:12px"><label style="font-size:12px;font-weight:900">1. Select There/It Type</label><select id="thereItType" onchange="updateThereItInfo()" style="width:100%;padding:11px;border-radius:10px;border:1.5px solid #06b6d4;font-weight:800;margin-top:4px">${THERE_IT_LIST.map(m=>`<option value="${m.key}">${m.key}</option>`).join('')}</select><div id="thereItRule" style="margin-top:8px;background:#ecfeff;padding:10px;border-radius:10px;border:1px solid #a5f3fc"></div><label style="font-size:12px;font-weight:900;margin-top:10px;display:block">2. Build Sentence</label><div style="display:flex;gap:6px;flex-wrap:wrap"><select id="thereItSub" disabled style="background:#cffafe;font-weight:800;min-width:110px;padding:10px;border-radius:8px"><option>There</option></select><select id="thereItBe" disabled style="background:#ecfeff;font-weight:800;min-width:90px;padding:10px;border-radius:8px"></select><select id="thereItObj" style="flex:1;min-width:160px;padding:10px;border-radius:8px;border:1.5px solid #06b6d4;font-weight:700"></select></div><button onclick="makeThereItSentence()" style="width:100%;margin-top:12px;background:#0e7490;color:#fff;border:none;padding:12px;border-radius:10px;font-weight:900;font-size:14px">✨ Make There/It Sentence</button><div id="thereItOut" style="margin-top:12px"></div></div>`;
+updateThereItInfo();
+}
+function updateThereItInfo(){
+let k=document.getElementById('thereItType').value;
+let m=THERE_IT_LIST.find(x=>x.key===k);
+document.getElementById('thereItRule').innerHTML=`<div style="font-size:18px;font-weight:900;color:#000">${esc(m.hi)}</div><div style="font-size:14px;font-weight:800;color:#0e7490;margin-top:6px">${esc(m.use)}</div>`;
+let subSel=document.getElementById('thereItSub');
+if(k.startsWith('There')) subSel.innerHTML=`<option>There</option>`;
+else subSel.innerHTML=`<option>It</option>`;
+document.getElementById('thereItBe').innerHTML=`<option>${m.be}</option>`;
+document.getElementById('thereItBe').dataset.real=m.be;
+let objSel=document.getElementById('thereItObj');
+let list=THERE_IT_OBJ_FILTER[m.form]||["a book"];
+objSel.innerHTML=list.map(o=>`<option value="${o}">${o}</option>`).join('');
+}
+async function makeThereItSentence(){
+let k=document.getElementById('thereItType').value;
+let m=THERE_IT_LIST.find(x=>x.key===k);
+let sub=document.getElementById('thereItSub').value;
+let be=document.getElementById('thereItBe').dataset.real;
+let obj=document.getElementById('thereItObj').value;
+let eng=`${sub} ${be} ${obj}`.replace(/\s+/g,' ').trim();
+eng=eng.charAt(0).toUpperCase()+eng.slice(1);
+if(!eng.endsWith('.')) eng+='.';
+let cache=getCache();
+let hiTrans=cache[eng]||"Translating...";
+document.getElementById('thereItOut').innerHTML=`<div style="background:#ecfeff;border:1.5px solid #a5f3fc;border-radius:12px;padding:12px"><div style="font-weight:900;font-size:15px">${esc(eng)}</div><div style="font-size:13px;color:#0e7490;margin-top:6px">🇮🇳 ${esc(hiTrans)}</div><div style="display:flex;gap:6px;margin-top:10px"><button onclick="speakLoud('${eng.replace(/'/g,"\\'")}')" style="flex:1;border:1.5px solid #a5f3fc;background:#fff;padding:9px;border-radius:8px;font-weight:700">📢 Loud</button><button onclick="shareMsg('${eng.replace(/'/g,"\\'")}')" style="flex:1;border:none;background:#e0f2fe;padding:9px;border-radius:8px;font-weight:700">📤 Share</button><button id="thereItSaveBtn" onclick="quickSaveModal('${eng.replace(/'/g,"\\'")}')" style="flex:1;background:#0e7490;color:#fff;border:none;padding:9px;border-radius:8px;font-weight:800">💾 Save</button></div></div>`;
+speakLoud(eng);
+if(!cache[eng]){
+try{
+let r=await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(eng)}&langpair=en|hi`);
+let j=await r.json();
+let hi=j.responseData.translatedText;
+setCache(eng,hi);
+let out=document.getElementById('thereItOut');
+if(out) out.innerHTML=out.innerHTML.replace(esc(hiTrans),esc(hi));
+window._lastHi=hi;
+document.getElementById('thereItSaveBtn').setAttribute('onclick',`quickSaveModal('${eng.replace(/'/g,"\\'")}','${hi.replace(/'/g,"\\'")}')`);
+}catch(e){}
+}
+}
+
+function renderIfCondLab(){
+let el=document.getElementById('sec-ifcond');
+if(!el) return;
+el.innerHTML=`<div style="padding:12px;background:#fff;border-radius:12px"><label style="font-size:12px;font-weight:900">1. Select If Type</label><select id="ifCondType" onchange="updateIfCondInfo()" style="width:100%;padding:11px;border-radius:10px;border:1.5px solid #fdba74;font-weight:800;margin-top:4px">${IF_COND_LIST.map(m=>`<option value="${m.key}">${m.key}</option>`).join('')}</select><div id="ifCondRule" style="margin-top:8px;background:#fff7ed;padding:10px;border-radius:10px;border:1px solid #fed7aa"></div><label style="font-size:12px;font-weight:900;margin-top:10px;display:block">2. Select Sentence Pair - Auto Connected</label><div style="background:#fff7ed;border:1px dashed #fdba74;border-radius:10px;padding:8px"><div style="font-size:10px;font-weight:900;color:#9a3412">IF वाला हिस्सा</div><select id="ifClauseSel" onchange="syncIfMain(0)" style="width:100%;padding:10px;border-radius:8px;border:1.5px solid #fdba74;font-weight:700;margin-top:4px"></select></div><div style="background:#f0fdf4;border:1px dashed #86efac;border-radius:10px;padding:8px;margin-top:8px"><div style="font-size:10px;font-weight:900;color:#166534">MAIN वाला हिस्सा - Auto बदलेगा</div><select id="ifMainClauseSel" onchange="syncIfMain(1)" style="width:100%;padding:10px;border-radius:8px;border:1.5px solid #86efac;font-weight:700;margin-top:4px"></select></div><button onclick="makeIfCondSentence()" style="width:100%;margin-top:12px;background:#7c2d12;color:#fff;border:none;padding:12px;border-radius:10px;font-weight:900;font-size:14px">✨ Make If Sentence</button><div id="ifCondOut" style="margin-top:12px"></div></div>`;
+updateIfCondInfo();
+}
+function updateIfCondInfo(){
+let k=document.getElementById('ifCondType').value;
+let m=IF_COND_LIST.find(x=>x.key===k);
+document.getElementById('ifCondRule').innerHTML=`<div style="font-size:18px;font-weight:900;color:#000">${esc(m.hi)}</div><div style="font-size:14px;font-weight:800;color:#7c2d12;margin-top:6px">${esc(m.use)}</div>`;
+let pairs=IF_COND_CONNECTED[m.form];
+let ifSel=document.getElementById('ifClauseSel');
+let mainSel=document.getElementById('ifMainClauseSel');
+ifSel.innerHTML=pairs.map(p=>`<option value="${p.if_clause}">${p.if_clause}</option>`).join('');
+mainSel.innerHTML=pairs.map(p=>`<option value="${p.main_clause}">${p.main_clause}</option>`).join('');
+ifSel.selectedIndex=0;
+mainSel.selectedIndex=0;
+}
+function syncIfMain(from){
+let ifSel=document.getElementById('ifClauseSel');
+let mainSel=document.getElementById('ifMainClauseSel');
+if(from===0){
+mainSel.selectedIndex=ifSel.selectedIndex;
+}else{
+ifSel.selectedIndex=mainSel.selectedIndex;
+}
+}
+async function makeIfCondSentence(){
+let k=document.getElementById('ifCondType').value;
+let m=IF_COND_LIST.find(x=>x.key===k);
+let ifClause=document.getElementById('ifClauseSel').value;
+let mainClause=document.getElementById('ifMainClauseSel').value;
+let eng=`If ${ifClause}, ${mainClause}.`.replace(/\s+/g,' ').replace(' ,',',').trim();
+eng=eng.charAt(0).toUpperCase()+eng.slice(1);
+let cache=getCache();
+let hiTrans=cache[eng]||"Translating...";
+document.getElementById('ifCondOut').innerHTML=`<div style="background:#fff7ed;border:1.5px solid #fed7aa;border-radius:12px;padding:12px"><div style="font-weight:900;font-size:14px">${esc(eng)}</div><div style="font-size:13px;color:#7c2d12;margin-top:6px">🇮🇳 ${esc(hiTrans)}</div><div style="font-size:11px;margin-top:8px;padding:8px;background:#fff;border-radius:8px;border:1px dashed #fed7aa;font-weight:800">✅ ${esc(m.use)} - 100% Connected Pair</div><div style="display:flex;gap:6px;margin-top:10px"><button onclick="speakLoud('${eng.replace(/'/g,"\\'")}')" style="flex:1;border:1.5px solid #fed7aa;background:#fff;padding:9px;border-radius:8px;font-weight:700">📢 Loud</button><button onclick="shareMsg('${eng.replace(/'/g,"\\'")}')" style="flex:1;border:none;background:#e0f2fe;padding:9px;border-radius:8px;font-weight:700">📤 Share</button><button id="ifCondSaveBtn" onclick="quickSaveModal('${eng.replace(/'/g,"\\'")}')" style="flex:1;background:#7c2d12;color:#fff;border:none;padding:9px;border-radius:8px;font-weight:800">💾 Save</button></div></div>`;
+speakLoud(eng);
+if(!cache[eng]){
+try{
+let r=await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(eng)}&langpair=en|hi`);
+let j=await r.json();
+let hi=j.responseData.translatedText;
+setCache(eng,hi);
+let out=document.getElementById('ifCondOut');
+if(out) out.innerHTML=out.innerHTML.replace(esc(hiTrans),esc(hi));
+window._lastHi=hi;
+document.getElementById('ifCondSaveBtn').setAttribute('onclick',`quickSaveModal('${eng.replace(/'/g,"\\'")}','${hi.replace(/'/g,"\\'")}')`);
+}catch(e){}
+}
+}
+
+
+
+  
+  
+function quickSaveModal(e,hi){lastTransH=hi||window._lastHi||"Lab";lastTransE=e;openPoll();}
 function renderAll(){let db=getDB();let filt=c=>db.filter((it)=>it.cat===c);document.getElementById('sec-coaching').innerHTML=filt('coaching').map((it)=>{let idx=db.indexOf(it);return cardHTML(it,idx);}).join('')||'<div style="padding:30px;text-align:center;color:#94a3b8">Empty</div>';document.getElementById('sec-family').innerHTML=filt('family').map((it)=>{let idx=db.indexOf(it);return cardHTML(it,idx);}).join('')||'<div style="padding:30px;text-align:center;color:#94a3b8">Empty</div>';document.getElementById('sec-friends').innerHTML=filt('friends').map((it)=>{let idx=db.indexOf(it);return cardHTML(it,idx);}).join('')||'<div style="padding:30px;text-align:center;color:#94a3b8">Empty</div>';document.getElementById('sec-my').innerHTML=filt('my').map((it)=>{let idx=db.indexOf(it);return cardHTML(it,idx);}).join('')||'<div style="padding:30px;text-align:center;color:#94a3b8">Empty</div>';document.getElementById('myCount').innerText=db.length;}
 function speakByIdx(i){let db=getDB();if(db[i])speakLoud(db[i].e);}function shareByIdx(i){let db=getDB();if(db[i])shareMsg(db[i].e);}function selectCat(cat){selectedCat=cat;document.querySelectorAll('.pollOpt').forEach(o=>{o.classList.remove('sel');o.querySelector('span:last-child').innerText='○';});let el=document.getElementById('opt-'+cat);el.classList.add('sel');el.querySelector('span:last-child').innerText='●';}
 function openPoll(){pendingH=lastTransH;pendingE=lastTransE;document.getElementById('pollPreview').innerHTML=`<b>${esc(pendingE)}</b><div style="color:#64748b;margin-top:4px">${esc(pendingH)}</div>`;selectCat('my');document.getElementById('catPoll').classList.add('show');}

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voice Lab</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',system-ui}
+body{background:#f8fafc;padding:12px}
+.main{max-width:760px;margin:auto}
+.header{background:#fff;border-radius:18px;padding:16px;box-shadow:0 4px 12px rgba(0,0,0,0.06);border:1px solid #e2e8f0;text-align:center}
+.btnRow{display:flex;gap:8px;margin-top:12px}
+.fixBtn{flex:1;background:#fff;border:1.5px solid #3b82f6;color:#1d4ed8;padding:10px;border-radius:12px;font-weight:800;font-size:12px;cursor:pointer}
+.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:1000;align-items:center;justify-content:center;padding:16px}
+.modal.show{display:flex}
+.modalBox{background:#fff;border-radius:18px;padding:18px;max-width:420px;width:100%}
+.modalBox .ruleLine{font-size:13px;font-weight:800;line-height:1.8;border-bottom:1px dashed #e0f2fe;padding:8px 0}
+.closeBtn{margin-top:12px;width:100%;background:#1d4ed8;color:#fff;border:none;padding:10px;border-radius:12px;font-weight:800}
+.card{background:#fff;border-radius:16px;padding:14px;margin-top:12px;box-shadow:0 4px 12px rgba(0,0,0,0.06);border:1px solid #e2e8f0}
+.label{font-size:11px;font-weight:900;color:#334155;margin-bottom:4px;display:block}
+select{width:100%;padding:12px;border-radius:12px;border:1.5px solid #cbd5e1;font-weight:700;font-size:13px}
+.infoBox{background:#f0f9ff;border:1px solid #bae6fd;border-radius:12px;padding:10px;margin-top:8px}
+.oneLine{display:grid;grid-template-columns:1fr 0.9fr 1fr 1.3fr;gap:7px;margin-top:8px}
+@media(max-width:640px){.oneLine{grid-template-columns:1fr 1fr}}
+.activeCard{background:linear-gradient(135deg,#fffbeb,#fef3c7);border:1.5px solid #fcd34d;border-radius:14px;padding:12px;margin-top:10px}
+.passiveCard{background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1.5px solid #86efac;border-radius:14px;padding:12px;margin-top:10px}
+.preview{margin-top:8px;background:#fff;border-radius:10px;padding:11px;font-weight:900;font-size:14px;border:1px solid #e2e8f0;white-space:pre-line}
+/* Double Object New Style - Sirf isi ke liye */
+.doubleRow{display:none;grid-template-columns:1fr 1fr 1fr 1fr;gap:7px;margin-top:8px}
+.doubleRow.show{display:grid}
+.doubleLabel{font-size:10px;font-weight:900;color:#7c3aed;margin-bottom:2px;display:block}
+</style>
+</head>
+<body>
+<div class="main">
+<div class="header">
+<h2>🎯 Voice Lab</h2>
+<div class="btnRow">
+<button class="fixBtn" onclick="openModal('ruleModal')">📘 Voice के 3 मुख्य नियम</button>
+<button class="fixBtn" onclick="openModal('proModal')">📙 Pronoun Table</button>
+</div>
+</div>
+
+<div id="ruleModal" class="modal" onclick="closeModal('ruleModal')">
+<div class="modalBox" onclick="event.stopPropagation()">
+<h3 style="font-size:14px;font-weight:900;color:#1d4ed8;margin-bottom:10px;text-align:center">📘 Voice बदलने के 3 मुख्य नियम</h3>
+<div class="ruleLine">1. Sub को Obj के स्थान पर तथा Obj को Sub के स्थान पर लिखा जाता है।</div>
+<div class="ruleLine">2. Passive voice में verb को हमेशा तीसरे रूप (V3) में लिखा जाता है।</div>
+<div class="ruleLine">3. Verb के तीसरे रूप के बाद by लगाकर Sub को लिखा जाता है।</div>
+<button class="closeBtn" onclick="closeModal('ruleModal')">बंद करें</button>
+</div>
+</div>
+
+<div id="proModal" class="modal" onclick="closeModal('proModal')">
+<div class="modalBox" onclick="event.stopPropagation()">
+<h3 style="font-size:14px;font-weight:900;color:#c2410c;margin-bottom:10px;text-align:center">📙 Pronoun Table</h3>
+<div class="ruleLine">I → me | We → us | You → you</div>
+<div class="ruleLine">He → him | She → her | They → them</div>
+<div class="ruleLine">It → it | Who → whom | This → this</div>
+<button class="closeBtn" onclick="closeModal('proModal')">बंद करें</button>
+</div>
+</div>
+
+<div class="card">
+<label class="label">GROUP SELECT</label>
+<select id="voiceGroup" onchange="updateVoiceGroup()">
+<option value="TENSE">Tense Rule</option>
+<option value="SPECIAL">Special Rule</option>
+</select>
+<label class="label" style="margin-top:12px">नियम SELECT</label>
+<select id="voiceRuleSel" onchange="updateVoiceRule()"></select>
+<div id="voiceRuleInfo" class="infoBox"></div>
+
+<div class="activeCard">
+<div style="font-size:11px;font-weight:900;color:#92400e">ACTIVE</div>
+<!-- Normal 4 Selector - Tense Rule ke liye -->
+<div id="normalRow" class="oneLine">
+<select id="voiceSub" onchange="onSubChange()"></select>
+<select id="voiceHelp" onchange="syncVoiceActive()"></select>
+<select id="voiceVerb" onchange="syncVoiceActive()"></select>
+<select id="voiceObj" onchange="syncVoiceActive()"></select>
+</div>
+<!-- Double Object ke liye New Row - Help Hataya - Tarika 1 -->
+<div id="doubleRow" class="doubleRow">
+<div><span class="doubleLabel">SUBJECT</span><select id="dSub" onchange="syncVoiceActiveDouble()"></select></div>
+<div><span class="doubleLabel">VERB (V2)</span><select id="dVerb" onchange="syncVoiceActiveDouble()"></select></div>
+<div><span class="doubleLabel">INDIRECT OBJ</span><select id="dIndirect" onchange="syncVoiceActiveDouble()"></select></div>
+<div><span class="doubleLabel">DIRECT OBJ</span><select id="dDirect" onchange="syncVoiceActiveDouble()"></select></div>
+</div>
+<div id="activePreview" class="preview"></div>
+</div>
+
+<div class="passiveCard">
+<div style="font-size:11px;font-weight:900;color:#166534">PASSIVE</div>
+<div id="passivePreview" class="preview"></div>
+<div id="checkMsg" style="font-size:10px;font-weight:800;margin-top:6px;background:#fff;padding:6px;border-radius:6px"></div>
+</div>
+</div>
+</div>
+
+<script>
+const PRONOUN_MAP={"I":"me","We":"us","You":"you","He":"him","She":"her","They":"them","It":"it","The teacher":"the teacher","The boy":"the boy","The girl":"the girl","The students":"the students","People":"people","My mother":"my mother","My father":"my father","The children":"the children","The police":"the police"};
+const VERB_DICT={"write":{"b":"write","v3":"written"},"writes":{"b":"write","v3":"written"},"written":{"b":"write","v3":"written"},"play":{"b":"play","v3":"played"},"plays":{"b":"play","v3":"played"},"played":{"b":"play","v3":"played"},"playing":{"b":"play","v3":"played"},"speak":{"b":"speak","v3":"spoken"},"eat":{"b":"eat","v3":"eaten"},"drink":{"b":"drink","v3":"drunk"},"read":{"b":"read","v3":"read"},"learn":{"b":"learn","v3":"learnt"},"teach":{"b":"teach","v3":"taught"},"make":{"b":"make","v3":"made"},"take":{"b":"take","v3":"taken"},"give":{"b":"give","v3":"given"},"gave":{"b":"give","v3":"given"},"given":{"b":"give","v3":"given"},"open":{"b":"open","v3":"opened"},"close":{"b":"close","v3":"closed"},"break":{"b":"break","v3":"broken"},"broke":{"b":"break","v3":"broken"},"broken":{"b":"break","v3":"broken"},"buy":{"b":"buy","v3":"bought"},"sell":{"b":"sell","v3":"sold"},"clean":{"b":"clean","v3":"cleaned"},"wash":{"b":"wash","v3":"washed"},"cook":{"b":"cook","v3":"cooked"},"complete":{"b":"complete","v3":"completed"},"completed":{"b":"complete","v3":"completed"},"solve":{"b":"solve","v3":"solved"},"steal":{"b":"steal","v3":"stolen"},"stolen":{"b":"steal","v3":"stolen"},"love":{"b":"love","v3":"loved"},"see":{"b":"see","v3":"seen"},"call":{"b":"call","v3":"called"},"bring":{"b":"bring","v3":"brought"},"find":{"b":"find","v3":"found"},"found":{"b":"find","v3":"found"},"praise":{"b":"praise","v3":"praised"},"abuse":{"b":"abuse","v3":"abused"},"preparing":{"b":"prepare","v3":"prepared"}};
+function getV3(v){return VERB_DICT[v.toLowerCase()]?.v3||"given";}
+function getBase(v){return VERB_DICT[v.toLowerCase()]?.b||v;}
+function getBySub(s){return PRONOUN_MAP[s]||s.toLowerCase();}
+const TENSE_SUBS=["I","We","You","He","She","They","It","The teacher","The boy","The girl","The students","People","My mother","My father","The children","The police"];
+function getAutoHelp(rule, sub, curHelp){
+  if(rule.includes("Rule 3")){if(sub==="I"||sub==="We") return "shall";return "will";}
+  if(rule.includes("Rule 4")){let isPast=curHelp==="was"||curHelp==="were";if(sub==="I") return isPast?"was":"am";if(["You","We","They","The students","People","The children","The police"].includes(sub)) return isPast?"were":"are";return isPast?"was":"is";}
+  if(rule.includes("Rule 5")){if(curHelp==="had") return "had";if(["He","She","It","The teacher","The boy","The girl","My mother","My father"].includes(sub)) return "has";return "have";}
+  return curHelp;
+}
+function getPassiveBe(activeHelp, obj){
+  let o=obj.toLowerCase();
+  let isPlural=o.includes("letters")||o.includes("books")||o.includes("students");
+  let isPast=activeHelp==="was"||activeHelp==="were";
+  if(isPast) return isPlural?"were":"was";
+  return isPlural?"are":"is";
+}
+// Double Object ke liye Passive Be - Indirect se
+function getDoubleBe(indirect){
+  let m=indirect.toLowerCase();
+  if(m==="me") return {subCap:"I", be:"was"};
+  if(m==="us") return {subCap:"We", be:"were"};
+  if(m==="him") return {subCap:"He", be:"was"};
+  if(m==="her") return {subCap:"She", be:"was"};
+  if(m==="them") return {subCap:"They", be:"were"};
+  if(m==="you") return {subCap:"You", be:"were"};
+  return {subCap:m, be:"was"};
+}
+const VOICE_MASTER=[
+{group:"TENSE", ruleKey:"Rule 1", ruleHi:"जब Subject के साथ Verb 1 Form में हो तो इसके Passive में is/am/are का प्रयोग करते हैं।", activeStr:"Subject + V1 + Object", passiveStr:"Object + is/am/are + V3 + by + Subject"},
+{group:"TENSE", ruleKey:"Rule 2", ruleHi:"जब Subject के साथ Verb 2 Form में हो तो इसके Passive में was/were का प्रयोग करते हैं।", activeStr:"Subject + V2 + Object", passiveStr:"Object + was/were + V3 + by + Subject"},
+{group:"TENSE", ruleKey:"Rule 3", ruleHi:"जब Subject के साथ Will/Shall + V1 हो तो इसके Passive में will/shall + be का प्रयोग करते हैं।", activeStr:"Subject + will/shall + V1 + Object", passiveStr:"Object + will/shall + be + V3 + by + Subject"},
+{group:"TENSE", ruleKey:"Rule 4", ruleHi:"जब Verb के साथ ing हो तो इसके Passive में is/am/are + being का प्रयोग करते हैं।", activeStr:"Subject + is/am/are + V1+ing + Object", passiveStr:"Object + is/am/are + being + V3 + by + Subject"},
+{group:"TENSE", ruleKey:"Rule 5", ruleHi:"जब Has/Have/Had हो तो इनके Passive में been का प्रयोग करते हैं।", activeStr:"Subject + has/have/had + V3 + Object", passiveStr:"Object + has/have/had + been + V3 + by + Subject"},
+{group:"SPECIAL", ruleKey:"Special 1 : Let Rule", ruleHi:"Imperative हो तो Let से Passive बनाते हैं।", activeStr:"Verb + Object", passiveStr:"Let + Object + be + V3"},
+{group:"SPECIAL", ruleKey:"Special 2 : Modal Rule", ruleHi:"जब Modal हो तो Passive में Modal + be + V3", activeStr:"Subject + Modal + V1 + Object", passiveStr:"Object + Modal + be + V3 + by + Subject"},
+{group:"SPECIAL", ruleKey:"Special 4 : Wh Rule", ruleHi:"जब What/When/Why/Where/Which/How/Whose/Whom/Who से शुरू हो तो Wh-Word वैसे ही रहता है। Who का Passive By whom से शुरू होता है।", activeStr:"Wh-Word + Helping + Subject + V + Object", passiveStr:"Wh-Word + Helping + Object + V3 + by + Subject | Who → By whom + was/were + Object + V3"},
+{group:"SPECIAL", ruleKey:"Special 5 : Someone Rule", ruleHi:"जब Someone/Everyone हो तो Passive में by Someone हट जाता है।", activeStr:"Someone + has + V3 + Object", passiveStr:"Object + has + been + V3"},
+{group:"SPECIAL", ruleKey:"Special 6 : Double Object", ruleHi:"जब दो Object हों तो दो Passive बनते हैं।", activeStr:"Subject + V2 + Indirect + Direct", passiveStr:"Passive:\n1. Indirect + was + V3 + Direct\n2. Direct + was + V3 + to + Indirect"},
+];
+function openModal(id){document.getElementById(id).classList.add('show');}
+function closeModal(id){document.getElementById(id).classList.remove('show');}
+function updateVoiceGroup(){
+ let g=document.getElementById('voiceGroup').value;
+ let rules=[...new Set(VOICE_MASTER.filter(x=>x.group===g).map(x=>x.ruleKey))];
+ document.getElementById('voiceRuleSel').innerHTML=rules.map(r=>`<option>${r}</option>`).join('');
+ updateVoiceRule();
+}
+function updateVoiceRule(){
+ let g=document.getElementById('voiceGroup').value;
+ let r=document.getElementById('voiceRuleSel').value;
+ let info=VOICE_MASTER.find(x=>x.group===g && x.ruleKey===r);
+ document.getElementById('voiceRuleInfo').innerHTML=`<div style="font-weight:800;font-size:13px;color:#0c4a6e">${info.ruleHi}</div><div style="font-size:12px;font-weight:700;color:#0369a1;margin-top:6px;white-space:pre-line">Active: ${info.activeStr}</div><div style="font-size:12px;font-weight:700;color:#15803d;margin-top:6px;white-space:pre-line">${info.passiveStr}</div>`;
+
+ // Tarika 1 - Double Object ke liye alag Row
+ if(r.includes("Double Object")){
+   document.getElementById('normalRow').style.display='none';
+   document.getElementById('doubleRow').classList.add('show');
+   // Double ke selector bhare - Help nahi
+   document.getElementById('dSub').innerHTML=TENSE_SUBS.map(s=>`<option>${s}</option>`).join('');
+   document.getElementById('dVerb').innerHTML=["gave","gives","will give","has given"].map(v=>`<option>${v}</option>`).join('');
+   document.getElementById('dIndirect').innerHTML=["me","us","him","her","them","you"].map(o=>`<option>${o}</option>`).join('');
+   document.getElementById('dDirect').innerHTML=["a book","homework","a prize","a gift","some money"].map(o=>`<option>${o}</option>`).join('');
+   syncVoiceActiveDouble();
+   return;
+ }else{
+   document.getElementById('normalRow').style.display='grid';
+   document.getElementById('doubleRow').classList.remove('show');
+ }
+
+ let subs=[], helps=[], verbs=[], objs=["a letter","cricket","the work","food","this problem","the door","my purse","the window","mango","homework"];
+ if(g==="TENSE"){
+   subs=TENSE_SUBS;
+   if(r.includes("Rule 1")){helps=[""];verbs=["writes","plays","speaks","eats","drinks","reads","learns","teaches","makes","takes","gives","opens","closes","breaks","buys","sells","cleans","washes","cooks","completes","solves","steals","loves","sees","calls"];}
+   else if(r.includes("Rule 2")){helps=[""];verbs=["praised","completed","broke","ate","wrote","bought","sold","cleaned","cooked","solved","stole","loved","saw","called","brought","found","taught","made","took","gave","opened","closed"];}
+   else if(r.includes("Rule 3")){helps=["will","shall"];verbs=["complete","write","play","solve","clean","cook","make","buy","sell","break","eat","drink","read","teach","bring","find","call","love","steal","prepare"];}
+   else if(r.includes("Rule 4")){helps=["is","am","are","was","were"];verbs=["preparing","playing","reading","writing","cleaning","cooking","completing","solving","eating","teaching"];}
+   else if(r.includes("Rule 5")){helps=["has","have","had"];verbs=["written","completed","stolen","eaten","drunk","read","learnt","taught","made","taken","given","opened","closed","broken","bought","sold","cleaned","washed","cooked","completed","solved","loved","seen","called","brought"];}
+ }else{
+   if(r.includes("Someone")){subs=["Someone","Everyone","Somebody","Nobody"];helps=["has","have"];verbs=["stolen"];}
+   else if(r.includes("Wh Rule")){subs=["What","When","Why","Where","Which","How","Whose","Whom","Who","By whom"];helps=["did","will","do","is","are","was","were"];verbs=["break","complete","abuse","find","solve","steal"];}
+   else if(r.includes("Modal")){subs=["I","We","You","He","She","They","The teacher"];helps=["can","could","may","might","shall","should","will","would","must","ought to"];verbs=["solve","complete"];}
+   else if(r.includes("Let Rule")){subs=[""];helps=[""];verbs=["Open","Close","Clean","Wash","Write","Read","Do","Complete","Bring","Call","Make","Give","Take","Buy","Sell","Cook","Prepare","Break","Solve","Help"];}
+ }
+ document.getElementById('voiceSub').innerHTML=[...new Set(subs)].map(s=>`<option value="${s}">${s||'Verb Only'}</option>`).join('');
+ document.getElementById('voiceHelp').innerHTML=helps.map(h=>`<option value="${h}">${h||'(no help)'}</option>`).join('');
+ document.getElementById('voiceVerb').innerHTML=[...new Set(verbs)].map(v=>`<option value="${v}">${v}</option>`).join('');
+ document.getElementById('voiceObj').innerHTML=objs.map(o=>`<option value="${o}">${o}</option>`).join('');
+ document.getElementById('voiceHelp').disabled=(helps.length===1&&helps[0]==="");
+ let curSub=document.getElementById('voiceSub').value;
+ let curHelp=document.getElementById('voiceHelp').value;
+ let autoH=getAutoHelp(r,curSub,curHelp);
+ if(autoH){let he=document.getElementById('voiceHelp');for(let i=0;i<he.options.length;i++){if(he.options[i].value===autoH){he.selectedIndex=i;break;}}}
+ syncVoiceActive();
+}
+function onSubChange(){
+ let r=document.getElementById('voiceRuleSel').value;
+ let sub=document.getElementById('voiceSub').value;
+ let helpEl=document.getElementById('voiceHelp');
+ let autoH=getAutoHelp(r,sub,helpEl.value);
+ if(autoH){for(let i=0;i<helpEl.options.length;i++){if(helpEl.options[i].value===autoH){helpEl.selectedIndex=i;break;}}}
+ syncVoiceActive();
+}
+// Double Object ke liye alag Function - Tarika 1 - Help nahi
+function syncVoiceActiveDouble(){
+ let sub=document.getElementById('dSub').value;
+ let verbRaw=document.getElementById('dVerb').value;
+ let indirect=document.getElementById('dIndirect').value;
+ let direct=document.getElementById('dDirect').value;
+ let v3=getV3(verbRaw);
+ let bySub=getBySub(sub);
+ let dInfo=getDoubleBe(indirect);
+ let verbDisplay=verbRaw;
+ // Active
+ let active=`${sub} ${verbDisplay} ${indirect} ${direct}`;
+ // Passive - Indirect se Be Auto
+ // 1) Indirect was V3 Direct
+ // 2) Direct was V3 to Indirect
+ let passive=`Passive:\n1) ${dInfo.subCap} ${dInfo.be} ${v3} ${direct} by ${bySub}.\n2) ${direct.charAt(0).toUpperCase()+direct.slice(1)} ${dInfo.be==="were"?"was":"was"} ${v3} to ${indirect} by ${bySub}.`;
+ // Second me direct ka be - direct singular to was
+ let passive2Be = "was";
+ if(direct.toLowerCase().includes("books")||direct.toLowerCase().includes("prizes")) passive2Be="were";
+ let passiveFinal=`Passive:\n1) ${dInfo.subCap} ${dInfo.be} ${v3} ${direct} by ${bySub}.\n2) ${direct.charAt(0).toUpperCase()+direct.slice(1)} ${passive2Be} ${v3} to ${indirect} by ${bySub}.`;
+ document.getElementById('activePreview').innerText="Active: "+active;
+ document.getElementById('passivePreview').innerText=passiveFinal;
+ document.getElementById('checkMsg').innerText=`✅ Double Object Tarika 1 | Help Hataya | Indirect ${indirect}→${dInfo.subCap} ${dInfo.be} | by ${bySub} Auto | No by me Bug`;
+}
+function syncVoiceActive(){
+ let r=document.getElementById('voiceRuleSel').value;
+ if(r.includes("Double Object")){return;}
+ let sub=document.getElementById('voiceSub').value;
+ let help=document.getElementById('voiceHelp').value;
+ let verb=document.getElementById('voiceVerb').value;
+ let obj=document.getElementById('voiceObj').value;
+ let v3=getV3(verb), base=getBase(verb), bySub=getBySub(sub), objCap=obj.charAt(0).toUpperCase()+obj.slice(1);
+ let active="",passive="",check="";
+ if(r.includes("Let Rule")){active=`${verb} ${obj}`.trim();passive=`Let ${obj} be ${v3}`;check=`✅ Let Rule`;}
+ else if(r.includes("Someone")){active=`${sub} ${help} ${v3} ${obj}`.trim();passive=sub==="Someone"?`${objCap} ${help} been ${v3}.`:`${objCap} is ${v3} by ${bySub}.`;check=`✅ Someone Rule`;}
+ else if(r.includes("Wh Rule")){if(sub==="Who"){active=`Who ${base} ${obj}?`.trim();passive=`By whom was ${obj} ${v3}?`;check=`✅ Who → By whom`;}else{active=`${sub} ${help} ${bySub} ${base} ${obj}?`.replace(/\s+/g,' ');passive=`${sub} ${help} ${obj} be ${v3} by ${bySub}?`;check=`✅ Wh ${sub}`;}}
+ else if(r.includes("Modal")){active=`${sub} ${help} ${base} ${obj}`.trim();passive=`${objCap} ${help} be ${v3} by ${bySub}.`;check=`✅ Modal ${help} be ${v3}`;}
+ else if(r.includes("Rule 1")){active=`${sub} ${verb} ${obj}`.trim();let be=(sub==="I")?"am":(["You","We","They","The students","People","The children","The police"].includes(sub)?"are":"is");passive=`${objCap} ${be} ${v3} by ${bySub}.`;check=`✅ Rule1 | ${be} ${v3}`;}
+ else if(r.includes("Rule 2")){active=`${sub} ${verb} ${obj}`.trim();let be=(["You","We","They","The students","People"].includes(sub)?"were":"was");passive=`${objCap} ${be} ${v3} by ${bySub}.`;check=`✅ Rule2 | ${be} ${v3}`;}
+ else if(r.includes("Rule 3")){active=`${sub} ${help} ${base} ${obj}`.trim();passive=`${objCap} ${help} be ${v3} by ${bySub}.`;check=`✅ Rule3 | ${help} be ${v3}`;}
+ else if(r.includes("Rule 4")){active=`${sub} ${help} ${verb} ${obj}`.trim();let passiveBe=getPassiveBe(help,obj);passive=`${objCap} ${passiveBe} being ${v3} by ${bySub}.`;check=`✅ Rule4 FIXED | Active ${sub}→${help} | Passive Object ${obj}→${passiveBe} being ${v3}`;}
+ else if(r.includes("Rule 5")){active=`${sub} ${help} ${v3} ${obj}`.trim();passive=`${objCap} ${help} been ${v3} by ${bySub}.`;check=`✅ Rule5 | ${help} been ${v3}`;}
+ document.getElementById('activePreview').innerText="Active: "+active;
+ document.getElementById('passivePreview').innerText="Passive: "+passive;
+ document.getElementById('checkMsg').innerText=check;
+}
+updateVoiceGroup();
+</script>
+</body>
+</html>
