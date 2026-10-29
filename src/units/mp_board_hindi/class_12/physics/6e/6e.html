@@ -400,7 +400,7 @@ margin-top:80px;
         व्यतिकरण की घटना में व्यतिकारी तरंगों की कुल ऊर्जा नियत रहती है। इसमें ऊर्जा का केवल पुनर्वितरण होता है। न्यूनतम तीव्रता के स्थान पर जितनी ऊर्जा विलुप्त होती है, उतनी ही अतिरिक्त ऊर्जा अधिकतम तीव्रता के स्थान पर प्रकट हो जाती है। अतः व्यतिकरण की घटना ऊर्जा-संरक्षण के नियम के अनुकूल है।
     </div>
   </div>
-  <div class="qa-box">
+ <div class="qa-box">
     <div class="question">प्रश्न - व्यतिकरण की गणितीय विवेचना कीजिए।</div>
     <div class="answer">
         <style>
@@ -423,18 +423,19 @@ margin-top:80px;
         <div class="scroll-eq">$y = a_1 \sin \omega t + a_2 \sin \omega t \cos \phi + a_2 \cos \omega t \sin \phi$</div>
         <div class="scroll-eq">$y =(a_1 + a_2 \cos \phi) \sin \omega t + (a_2 \sin \phi)\cos \omega t $</div>
 
-  <div class="scroll-eq">$y = (A \cos \theta) \sin \omega t + (A \sin \theta) \cos \omega t${ माना}</div>
+        <div class="scroll-eq">$y = (A \cos \phi) \sin \omega t + (A \sin \phi) \cos \omega t${ माना}</div>
    
-        <div class="scroll-eq">$y = A \cos \theta \sin \omega t + A \sin \theta \cos \omega t$</div>
+        <div class="scroll-eq">$y = A \cos \phi \sin \omega t + A \sin \phi \cos \omega t$</div>
 
-        <div class="scroll-eq">$y = A (\sin \omega t \cos \theta + \cos \omega t \sin \theta)$</div>
-        <div class="scroll-eq">$y = A \sin(\omega t + \theta)$</div>
-<p>यही परिणामी तरंग का विस्थापन समीकरण है।</p>
-<p>जहां-</p>
-        <div class="scroll-eq">$a_1 + a_2 \cos \phi = A \cos \theta$ ....(1)</div>
-        <div class="scroll-eq">$a_2 \sin \phi = A \sin \theta$ ....(2)</div>
+        <div class="scroll-eq">$y = A (\sin \omega t \cos \phi + \cos \omega t \sin \phi)$</div>
+        <div class="scroll-eq">$y = A \sin(\omega t + \phi)$</div>
+        <p>यही परिणामी तरंग का विस्थापन समीकरण है।</p>
+        <p>जहां-</p>
+        <div class="scroll-eq">$a_1 + a_2 \cos \phi = A \cos \phi$ ....(1)</div>
+        <div class="scroll-eq">$a_2 \sin \phi = A \sin \phi$ ....(2)</div>
+    </div>
 
-  
+
         <p><b>परिणामी आयाम -</b> </br>
 समीकरण (1) व (2) का वर्ग कर जोड़ने पर -</p>
         <div class="scroll-eq">$A^2 \cos^2 \theta + A^2 \sin^2 \theta = (a_1 + a_2 \cos \phi)^2 + (a_2 \sin \phi)^2$</div>
@@ -459,6 +460,7 @@ margin-top:80px;
 <p class="formula">$A_{min} = a_1 - a_2$</p>
 
 </div>
+
 </div>
 
 
@@ -489,146 +491,73 @@ margin-top:80px;
     </div>
 </div>
 
-
-
-
 <div class="qa-box">
     <div class="question">प्रश्न: यंग के द्विस्लिट प्रयोग में केंद्रीय दीप्त फ्रिंज से n वीं दीप्त तथा अदीप्त फ्रिंजों की दूरियों के लिए सूत्र स्थापित कीजिए।</div>
     <div class="answer">
+        <style>
+            .scroll-eq {
+                overflow-x: auto;
+                white-space: nowrap;
+                padding: 6px 0;
+                -webkit-overflow-scrolling: touch;
+            }
+            .reason {
+                margin-left: 30px;
+            }
+        </style>
+
         <div class="question-image">
             <img src="images/image3.png" alt="यंग के द्विस्लिट प्रयोग की ज्यामिति">
         </div>
 
-        माना यंग के प्रयोग में स्लिटों \(S_1\) व \(S_2\) के मध्य दूरी \(d\) है और इनसे पर्दे की दूरी \(D\) है। \(S_1S_2\) की लम्बार्द्धक रेखा पर्दे के O बिन्दु पर मिलती है। अतः O पर ही केन्द्रीय दीप्त फ्रिज बनेगी। पर्दे पर O से \(x_n\) दूरी पर स्थित बिन्दु P है।
+        <p>माना स्लिटों $S_1$ व $S_2$ के बीच दूरी $S_1S_2 = d$ तथा स्लिटों से पर्दे की दूरी $OD = D$ है। $S_1S_2$ का लम्ब समद्विभाजक O पर मिलता है, जहाँ केंद्रीय दीप्त फ्रिंज बनती है। पर्दे पर O से $x_n$ दूरी पर बिंदु P है।</p>
 
-        <br><br>
+        <p> $S_1$ व $S_2$ से P तक पहुँचने वाली तरंगों का पथान्तर $\Delta$ हो तो -</p>
+        <div class="scroll-eq">$\Delta = S_2P - S_1P$ ....(1)</div>
 
-        यदि बिन्दु P बिन्दु O से अधिक दूर नहीं है तब
+        <p>पाइथागोरस प्रमेय से $S_1P$ व $S_2P$ का मान -</p>
+        <p>समकोण $\triangle S_2PN$ में -</p>
+        <div class="scroll-eq">$S_2P^2 = S_2N^2 + NP^2$</div>
+        <div class="scroll-eq">$S_2P^2 = D^2 + \left(x_n + \dfrac{d}{2}\right)^2$ ....(2)</div>
 
-        <div class="formula">
-        $$
-        S_1P \approx S_2P \approx D
-        $$
-        </div>
+        <p>समकोण $\triangle S_1PM$ में -</p>
+        <div class="scroll-eq">$S_1P^2 = S_1M^2 + MP^2$</div>
+        <div class="scroll-eq">$S_1P^2 = D^2 + \left(x_n - \dfrac{d}{2}\right)^2$ ....(3)</div>
 
-        <div class="formula">
-        $$
-        \therefore\ S_2P + S_1P \approx D + D = 2D
-        $$
-        </div>
+        <p>समी. (2) में से (3) घटाने पर -</p>
+        <div class="scroll-eq">$S_2P^2 - S_1P^2 = \left(x_n + \dfrac{d}{2}\right)^2 - \left(x_n - \dfrac{d}{2}\right)^2$</div>
 
-        अब समकोण \(\triangle S_2PN\) में पाइथागोरस प्रमेय से-
+        <p>दोनों पक्षों को सूत्र से खोलने पर -</p>
+        <div class="scroll-eq">$(S_2P - S_1P)(S_2P + S_1P) = \left(x_n^2 + \dfrac{d^2}{4} + x_nd\right) - \left(x_n^2 + \dfrac{d^2}{4} - x_nd\right)$</div>
+        <div class="scroll-eq">$\Delta (S_2P + S_1P) = 2x_nd$ <span class="reason">[ $\because$ समी. (1) से ]</span></div>
 
-        <div class="formula">
-        $$
-        S_2P^2 = S_2N^2 + NP^2
-        $$
-        </div>
+        <div class="scroll-eq">$\Delta (D + D) = 2x_nd$ <span class="reason">[ $\because S_1P \approx S_2P \approx D$ ]</span></div>
 
-        <div class="formula">
-        $$
-        S_2P^2 = D^2 + \left(x_n + \frac{d}{2}\right)^2 \quad ....(1)
-        $$
-        </div>
+        <div class="scroll-eq">$\Delta (2D) = 2x_nd$</div>
 
-        इसी प्रकार समकोण \(\triangle S_1PM\) में पाइथागोरस प्रमेय से-
-
-        <div class="formula">
-        $$
-        S_1P^2 = S_1M^2 + MP^2
-        $$
-        </div>
-
-        <div class="formula">
-        $$
-        S_1P^2 = D^2 + \left(x_n - \frac{d}{2}\right)^2 \quad ....(2)
-        $$
-        </div>
-
-        समी. (1) से (2) घटाने पर
-
-        <div class="formula">
-        $$
-        S_2P^2 - S_1P^2 = \left(x_n + \frac{d}{2}\right)^2 - \left(x_n - \frac{d}{2}\right)^2
-        $$
-        </div>
-
-        <div class="formula">
-        $$
-        (S_2P - S_1P)(S_2P + S_1P) = 2x_nd
-        $$
-        </div>
-
-        <div class="formula">
-        $$
-        (S_2P - S_1P)(2D) = 2x_nd
-        $$
-        </div>
-
-        <div class="formula">
-        $$
-        S_2P - S_1P = \frac{x_nd}{D}
-        $$
-        </div>
-
-        माना \(\Delta\) स्त्रोत \(S_1\) और \(S_2\) से बिन्दु P तक पहुंचने वाली तरंगों के बीच का पथान्तर है तो
-
-        <div class="formula">
-        $$
-        \Delta = S_2P - S_1P
-        $$
-        </div>
-
-        <div class="formula">
-        $$
-        \Delta = \frac{x_nd}{D}
-        $$
-        </div>
+        <div class="scroll-eq">$\Delta = \dfrac{x_nd}{D}$ ....(4)</div>
 
         <ol>
-            <li><strong>सम्पोषी या रचनात्मक व्यतिकरण</strong> - इसमें P बिन्दु पर n वीं दीप्त फ्रिन्ज बनती है तो पथान्तर
-
-                <div class="formula">
-                $$
-                \Delta = n\lambda
-                $$
-                </div>
-
-                <div class="formula">
-                $$
-                \frac{x_nd}{D} = n\lambda
-                $$
-                </div>
-
-                <div class="formula">
-                $$
-                x_n = \frac{n\lambda D}{d}
-                $$
-                </div>
+            <li><strong>सम्पोषी या रचनात्मक व्यतिकरण</strong> - इसमें P बिन्दु पर n वीं दीप्त फ्रिंज बनती है तो पथान्तर
+                <div class="scroll-eq">$\Delta = n\lambda$</div>
+                <div class="scroll-eq">$\dfrac{x_nd}{D} = n\lambda$ <span class="reason">[ $\because$ समी. (4) से ]</span></div>
+                <div class="scroll-eq">$x_n = \dfrac{n\lambda D}{d}$</div>
             </li>
-            <li><strong>विनाशी व्यतिकरण</strong> - इसमें P बिन्दु पर n वीं अदीप्त फ्रिन्ज बनती है तो पथान्तर
-
-                <div class="formula">
-                $$
-                \Delta = \frac{(2n+1)\lambda}{2}
-                $$
-                </div>
-
-                <div class="formula">
-                $$
-                \frac{x_nd}{D} = \frac{(2n+1)\lambda}{2}
-                $$
-                </div>
-
-                <div class="formula">
-                $$
-                x_n = \frac{(2n+1)\lambda D}{2d}
-                $$
-                </div>
+            <li><strong>विनाशी व्यतिकरण</strong> - इसमें P बिन्दु पर n वीं अदीप्त फ्रिंज बनती है तो पथान्तर
+                <div class="scroll-eq">$\Delta = \dfrac{(2n+1)\lambda}{2}$</div>
+                <div class="scroll-eq">$\dfrac{x_nd}{D} = \dfrac{(2n+1)\lambda}{2}$ <span class="reason">[ $\because$ समी. (4) से ]</span></div>
+                <div class="scroll-eq">$x_n = \dfrac{(2n+1)\lambda D}{2d}$</div>
             </li>
         </ol>
     </div>
 </div>
+        
+
+        
+        
+
+        
+                
 
 <div class="qa-box">
     <div class="question">प्रश्न: यंग के द्विस्लिट प्रयोग में फ्रिज चौड़ाई क्या है? इसके लिए सूत्र स्थापित कीजिए।</div>

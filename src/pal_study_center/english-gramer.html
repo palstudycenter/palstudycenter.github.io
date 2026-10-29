@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>english-helper-final-v9-FINAL-LOCK</title>
+<style>
+body{margin:0;background:#f0f7ff;font-family:system-ui}
+.main-grid{display:grid;grid-template-columns:1fr;gap:10px;padding:10px;background:#f0f7ff}
+.sec-wrap{border:2px solid #dbeafe;border-radius:14px;padding:8px;background:#fff}
+.sec-wrap.lab2{border-color:#c4b5fd;background:#f5f3ff}
+.sec-label{font-weight:900;font-size:12px;margin-bottom:6px}
+.grid2{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+.mbtn{background:#174a7e;color:#fff;border-radius:12px;padding:12px 6px;text-align:center;font-weight:800;font-size:11px;cursor:pointer}
+.content{margin:10px;background:#fff;border-radius:18px;border:1px solid #dbeafe;max-height:90vh;overflow-y:auto;display:none}
+.content.show{display:block}
+#backBar{display:none;padding:10px;background:#fff;border-bottom:1px solid #dbeafe;position:sticky;top:0;z-index:30}
+#backBar.show{display:flex;gap:8px;align-items:center}
+.one-line{display:flex;gap:6px;overflow-x:auto;padding:10px 0;align-items:center}
+.one-line select{padding:11px 8px;border-radius:12px;border:1.5px solid #dbeafe;font-weight:800;min-width:95px;font-size:13px;background:#fff}
+.passHeader{background:linear-gradient(135deg,#f0fdf4,#dcfce7);border-radius:16px;padding:14px;border:1px solid #bbf7d0;text-align:center}
+.fixBtn{flex:1;background:#fff;border:1.5px solid #3b82f6;color:#1d4ed8;padding:10px;border-radius:12px;font-weight:800;font-size:11px;cursor:pointer}
+.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:100;align-items:center;justify-content:center;padding:16px}
+.modal.show{display:flex}
+.modalBox{background:#fff;border-radius:18px;padding:18px;max-width:420px;width:100%}
+.ruleLine{font-size:13px;font-weight:800;line-height:1.8;border-bottom:1px dashed #e0f2fe;padding:8px 0}
+.closeBtn{margin-top:12px;width:100%;background:#1d4ed8;color:#fff;border:none;padding:10px;border-radius:12px;font-weight:800}
+.activeCard{background:linear-gradient(135deg,#fffbeb,#fef3c7);border:1.5px solid #fcd34d;border-radius:14px;padding:12px;margin-top:10px}
+.passiveCard{background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1.5px solid #86efac;border-radius:14px;padding:12px;margin-top:10px}
+.preview{margin-top:8px;background:#fff;border-radius:12px;padding:12px;font-weight:900;font-size:14px;border:1px solid #e2e8f0;white-space:pre-line}
+.doubleRow{display:none;grid-template-columns:1fr 1fr 1fr 1fr;gap:7px;margin-top:8px}
+.doubleRow.show{display:grid}
+.doubleLabel{font-size:10px;font-weight:900;color:#7c3aed;margin-bottom:2px;display:block}
+.outBox{background:#f8fafc;border:1.5px solid #e2e8f0;border-radius:14px;padding:12px;margin-top:12px}
+.smallBtn{flex:1;border:none;padding:10px;border-radius:10px;font-weight:800;font-size:12px;cursor:pointer}
+.expBox{background:#f8fafc;border:1.5px solid #dbeafe;border-radius:12px;padding:10px;margin-top:10px;font-size:13px;font-weight:800;line-height:1.7}
+.searchWrap{margin:10px;background:#fff;border:2px solid #bfdbfe;border-radius:14px;padding:10px;display:flex;gap:8px;position:sticky;bottom:10px;z-index:20}
+.searchWrap textarea{flex:1;border:none;outline:none;font-size:13px;resize:none;min-height:42px}
+#catPoll{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.45);z-index:80;justify-content:flex-end}
+#catPoll.show{display:flex}
+.pollBox{background:#fff;width:100%;max-width:380px;border-radius:20px 20px 0 0;padding:16px}
+.pollOpt{border:1.5px solid #e2e8f0;border-radius:12px;padding:12px;display:flex;justify-content:space-between;margin-bottom:8px;font-weight:700;font-size:13px}
+.micActive{animation:pulse 1s infinite;background:#fef3c7 !important;border-color:#f59e0b !important}
+@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.05)}100%{transform:scale(1)}}
+</style>
+</head>
+<body>
+<div id="backBar"><button onclick="goHome()" style="border:none;background:#174a7e;color:#fff;padding:10px 16px;border-radius:10px;font-weight:800">← Back</button><span id="labTitle" style="font-weight:900;font-size:13px;color:#334155;margin-left:8px"></span></div>
+
+<div id="mainGrid" class="main-grid">
+<div class="sec-wrap"><div class="sec-label">📚 SECTION 1 - DAILY USE</div><div class="grid2">
+<div class="mbtn" onclick="openSec('coaching')">🏫 Coaching</div>
+<div class="mbtn" onclick="openSec('family')">🏠 Family</div>
+<div class="mbtn" onclick="openSec('friends')">🏠 Friends</div>
+<div class="mbtn" onclick="openSec('my')">💬 My Saved</div>
+<div class="mbtn" onclick="openSec('challenge')">🎯 Daily 5</div>
+<div class="mbtn" onclick="clearAll()" style="background:#fff;color:#b91c1c;border:1.5px solid #fca5a5">🗑️ Clear All</div>
+</div></div>
+<div class="sec-wrap lab2"><div class="sec-label">📘 SECTION 2 - GRAMMAR MASTER </div><div class="grid2">
+<div class="mbtn" onclick="openSec('article')" style="background:#be185d">📰 ARTICLE</div>
+<div class="mbtn" onclick="openSec('prepo')" style="background:#0e7490">📍 PREPOSITION</div>
+<div class="mbtn" onclick="openSec('determ')" style="background:#4338ca">🔢 DETERMINERS</div>
+<div class="mbtn" onclick="openSec('passive')" style="background:#065f46">🔄 PASSIVE RULES </div>
+<div class="mbtn" onclick="openSec('qtag')" style="background:#1d4ed8">🏷️ TAG</div>
+<div class="mbtn" onclick="openSec('degree')" style="background:#7c2d12">📏 DEGREE</div>
+</div></div>
+</div>
+
+<div id="sec-coaching" class="content"></div><div id="sec-family" class="content"></div><div id="sec-friends" class="content"></div><div id="sec-my" class="content"></div><div id="sec-challenge" class="content"></div>
+<div id="sec-article" class="content"></div><div id="sec-prepo" class="content"></div><div id="sec-determ" class="content"></div><div id="sec-qtag" class="content"></div><div id="sec-degree" class="content"></div>
+
+<div id="sec-passive" class="content" style="background:#f8fafc">
+<div style="padding:14px">
+<div class="passHeader">
+<h2 style="margin:0;font-size:16px;color:#065f46">🎯 Passive Lab</h2>
+<div style="display:flex;gap:8px;margin-top:12px">
+<button class="fixBtn" onclick="openModal('ruleModal')">📘 3 नियम</button>
+<button class="fixBtn" onclick="openModal('proModal')">📙 Pronoun</button>
+</div>
+</div>
+<div id="ruleModal" class="modal" onclick="closeModal('ruleModal')"><div class="modalBox" onclick="event.stopPropagation()"><h3 style="font-size:14px;font-weight:900;color:#1d4ed8;text-align:center">📘 Voice के 3 मुख्य नियम</h3><div class="ruleLine">1. Subject को Object के स्थान पर, तथा Object को Subject के स्थान पर लिखा जाता है।</div><div class="ruleLine">2. Passive में Verb को हमेशा V3 Form में लिखा जाता है।</div><div class="ruleLine">3. V3 के बाद by लगाकर Subject को लिखा जाता है। (Someone वाले Rule में by हट जाता है)</div><button class="closeBtn" onclick="closeModal('ruleModal')">बंद करें</button></div></div>
+<div id="proModal" class="modal" onclick="closeModal('proModal')"><div class="modalBox" onclick="event.stopPropagation()"><h3 style="font-size:14px;font-weight:900;color:#c2410c;text-align:center">📙 Pronoun Table</h3><div class="ruleLine">I → me | We → us | You → you</div><div class="ruleLine">He → him | She → her | They → them | It → it</div><button class="closeBtn" onclick="closeModal('proModal')">बंद करें</button></div></div>
+
+<div style="background:#fff;border-radius:16px;margin-top:12px;border:1px solid #e2e8f0;padding:14px">
+<label style="font-size:11px;font-weight:900">RULE SELECT </label>
+<select id="pRule" onchange="pUpdateRule()" style="width:100%;padding:12px;border-radius:10px;border:1.5px solid #6ee7b7;font-weight:900;margin-top:6px">
+<option value="Tense Rule1">Tense Rule1</option>
+<option value="Tense Rule2">Tense Rule2</option>
+<option value="Tense Rule3">Tense Rule3</option>
+<option value="Tense Rule4">Tense Rule4</option>
+<option value="Tense Rule5">Tense Rule5</option>
+<option value="Let Rule">Let Rule</option>
+<option value="Model Rule">Model Rule</option>
+<option value="Wh Family Rule">Wh Family Rule</option>
+<option value="Subject Free Rule">Subject Free Rule</option>
+<option value="Double Object Rule">Double Object Rule</option>
+</select>
+<div id="pInfo" style="margin-top:8px;background:#f0f9ff;border:1px solid #bae6fd;border-radius:12px;padding:12px;font-size:13px;font-weight:700;white-space:pre-line;line-height:1.8"></div>
+
+<div class="activeCard"><div style="font-size:11px;font-weight:900;color:#92400e">ACTIVE - Final Fix</div><div id="pNormal" class="one-line"><select id="pSub" onchange="pOnSub()"></select><select id="pHelp" onchange="pSync()"></select><select id="pVerb" onchange="pSync()"></select><select id="pObj" onchange="pSync()"></select></div><div id="pDouble" class="doubleRow"><div><span class="doubleLabel">SUBJECT</span><select id="pdSub" onchange="pSyncDouble()"></select></div><div><span class="doubleLabel">VERB</span><select id="pdVerb" onchange="pSyncDouble()"></select></div><div><span class="doubleLabel">INDIRECT</span><select id="pdInd" onchange="pSyncDouble()"></select></div><div><span class="doubleLabel">DIRECT</span><select id="pdDir" onchange="pSyncDouble()"></select></div></div><div id="pActive" class="preview"></div></div>
+<div class="passiveCard"><div style="font-size:11px;font-weight:900;color:#166534">PASSIVE - Final - Object Based is/are/was/were/has/have</div><div id="pPassive" class="preview"></div><div id="pCheck" style="font-size:10px;font-weight:800;margin-top:6px;background:#fff;padding:6px;border-radius:8px"></div><div style="display:flex;gap:8px;margin-top:10px"><button onclick="speakP()" class="smallBtn" style="background:#fff;border:1.5px solid #86efac">📢 Loud</button><button onclick="shareP()" class="smallBtn" style="background:#e0f2fe">📤 Share</button><button onclick="saveP()" class="smallBtn" style="background:#065f46;color:#fff">💾 Save</button></div></div>
+</div>
+</div>
+</div>
+
+<div id="searchWrap" class="searchWrap">
+<textarea id="hiInp" placeholder="हिंदी लिखो - 🎤 दबाओ - बोलो - Auto Translate..."></textarea>
+<button id="micBtn" onclick="startHiMic()" style="background:#fef3c7;color:#b45309;border:2px solid #fcd34d;padding:10px 16px;border-radius:12px;font-weight:900;font-size:20px">🎤</button>
+<button onclick="doTrans()" style="background:#174a7e;color:#fff;border:none;padding:10px 18px;border-radius:12px;font-weight:900">Translate</button>
+</div>
+<div id="transRes" style="display:none;margin:10px;background:#f0fdf4;border:1px solid #bbf7d0;padding:12px;border-radius:12px"></div>
+<div id="catPoll" onclick="closePoll()"><div class="pollBox" onclick="event.stopPropagation()"><div style="display:flex;justify-content:space-between;margin-bottom:12px"><b>Save To Section 1?</b><span onclick="closePoll()">✕</span></div><div id="pollPreview" style="background:#f0fdf4;border-radius:10px;padding:10px;font-size:13px;font-weight:700;margin-bottom:12px;white-space:pre-wrap"></div><div class="pollOpt" onclick="selectCat('coaching')" id="opt-coaching"><span>🏫 Coaching</span><span>○</span></div><div class="pollOpt" onclick="selectCat('family')" id="opt-family"><span>🏠 Family</span><span>○</span></div><div class="pollOpt" onclick="selectCat('friends')" id="opt-friends"><span>🤝 Friends</span><span>○</span></div><div class="pollOpt" onclick="selectCat('my')" id="opt-my"><span>💬 My Saved</span><span>○</span></div><div style="display:flex;gap:8px;margin-top:12px"><button onclick="closePoll()" style="flex:1;padding:12px;border-radius:10px;border:1.5px solid #e2e8f0;background:#fff;font-weight:800">Cancel</button><button onclick="confirmSave()" style="flex:1;padding:12px;border-radius:10px;border:none;background:#174a7e;color:#fff;font-weight:800">✅ Save</button></div></div></div>
+
+<script>
+const KEY='english_helper_24h_all_v9';
+function getDB(){let a=JSON.parse(localStorage.getItem(KEY)||'[]');let now=Date.now();let f=a.filter(x=>now-x.time<86400000);if(f.length!==a.length)localStorage.setItem(KEY,JSON.stringify(f));return f;}
+function saveDB(a){localStorage.setItem(KEY,JSON.stringify(a));}
+function goHome(){document.querySelectorAll('.content').forEach(c=>c.classList.remove('show'));document.getElementById('mainGrid').style.display='grid';document.getElementById('searchWrap').style.display='flex';document.getElementById('backBar').classList.remove('show');document.getElementById('transRes').style.display='none';}
+function openSec(id){document.getElementById('mainGrid').style.display='none';document.getElementById('searchWrap').style.display='none';document.getElementById('backBar').classList.add('show');document.getElementById('labTitle').innerText=id.toUpperCase()+" LAB - v9 FINAL";document.querySelectorAll('.content').forEach(c=>c.classList.remove('show'));document.getElementById('sec-'+id).classList.add('show');if(id==='passive')pUpdateRule();if(id==='article')renderArticleLab();if(id==='prepo')renderPrepoLab();if(id==='determ')renderDetermLab();if(id==='qtag')renderQTagLab();if(id==='degree')renderDegreeLab();if(id==='coaching'||id==='family'||id==='friends'||id==='my')renderSaved(id);}
+function openModal(id){document.getElementById(id).classList.add('show');}
+function closeModal(id){document.getElementById(id).classList.remove('show');}
+function speakLoud(t){let u=new SpeechSynthesisUtterance(t);u.lang='en-US';speechSynthesis.speak(u);}
+function speakP(){let t=document.getElementById('pPassive').innerText.replace("Passive: ","");speakLoud(t);}
+function shareP(){let t=document.getElementById('pPassive').innerText;if(navigator.share)navigator.share({text:t});else{let ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);alert("Copied: "+t);}}
+let pendingE='',selectedCat='my';
+function quickSaveModal(en){pendingE=en;document.getElementById('pollPreview').innerText=en;document.getElementById('catPoll').classList.add('show');selectCat('my');}
+function closePoll(){document.getElementById('catPoll').classList.remove('show');}
+function selectCat(c){selectedCat=c;document.querySelectorAll('.pollOpt').forEach(o=>o.style.borderColor='#e2e8f0');let el=document.getElementById('opt-'+c);if(el)el.style.borderColor='#174a7e';}
+function confirmSave(){let db=getDB();db.push({e:pendingE,h:"Saved",time:Date.now(),cat:selectedCat});saveDB(db);closePoll();alert("Saved to "+selectedCat);}
+function clearAll(){if(confirm("Clear All Data?")){localStorage.removeItem(KEY);localStorage.removeItem('micPermissionGranted');location.reload();}}
+function renderSaved(cat){let db=getDB().filter(x=>x.cat===cat||(cat==='my'&&!x.cat));let el=document.getElementById('sec-'+cat);if(!el)return;el.innerHTML=db.length?db.map(it=>`<div style="padding:12px;border-bottom:1px solid #eff6ff;display:flex;justify-content:space-between;gap:8px"><div style="flex:1"><div style="font-weight:900;font-size:13px">${it.e}</div></div><div style="display:flex;gap:6px"><button onclick="speakLoud(this.parentElement.parentElement.querySelector('div div').innerText)" style="border:none;background:#174a7e;color:#fff;padding:8px 12px;border-radius:20px;font-weight:800;font-size:11px">📢</button><button onclick="let t=this.parentElement.parentElement.querySelector('div div').innerText; if(navigator.share)navigator.share({text:t}); else prompt('Copy',t)" style="border:none;background:#e0f2fe;padding:8px 12px;border-radius:20px;font-weight:800;font-size:11px">📤</button></div></div>`).join(''):`<div style="padding:20px;text-align:center;color:#64748b">No saved in ${cat}</div>`;}
+function doTrans(){let h=document.getElementById('hiInp').value.trim();if(!h)return;let res=document.getElementById('transRes');res.style.display='block';res.innerHTML=`<div style="font-weight:900">🇮🇳 ${h}</div><div>🇬🇧 Translating...</div>`;fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(h)}&langpair=hi|en`).then(r=>r.json()).then(j=>{let en=j.responseData.translatedText;let safeEn=en.replace(/'/g,"’");res.innerHTML=`<div style="font-weight:900">🇮🇳 ${h}</div><div style="font-weight:800;font-size:15px;margin-top:6px">🇬🇧 ${safeEn}</div><div style="display:flex;gap:6px;margin-top:10px"><button onclick="speakLoud(this.parentElement.parentElement.querySelectorAll('div')[1].innerText.replace('🇬🇧 ','')" ) style="flex:1;background:#fff;border:1.5px solid #bbf7d0;padding:8px;border-radius:8px;font-weight:700">📢 Loud</button><button onclick="let t=this.parentElement.parentElement.querySelectorAll('div')[1].innerText; if(navigator.share)navigator.share({text:t}); else prompt('Copy',t)" style="flex:1;background:#e0f2fe;border:none;padding:8px;border-radius:8px;font-weight:700">📤 Share</button><button onclick="quickSaveModal(this.parentElement.parentElement.querySelectorAll('div')[1].innerText.replace('🇬🇧 ','').replace(/'/g,'’'))" style="flex:1;background:#174a7e;color:#fff;border:none;padding:8px;border-radius:8px;font-weight:800">💾 Save to Section 1</button></div>`;}).catch(err=>{res.innerHTML=`<div style="color:#b91c1c;font-weight:800">❌ Translate Fail - Internet Check करो - Error: ${err.message}</div><div style="margin-top:6px;font-weight:700">🇮🇳 ${h}</div>`;});}
+function saveP(){let t=document.getElementById('pPassive').innerText;quickSaveModal(t);}
+
+let micPermissionGranted = localStorage.getItem('micPermissionGranted') === 'true';
+function startHiMic(){
+  let txt=document.getElementById('hiInp');let btn=document.getElementById('micBtn');let SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  if(!SR){alert("❌ Browser Mic Support नहीं करता\nChrome में खोलो - WhatsApp में नहीं");return;}
+  function startRec(){
+    let rec=new SR();rec.lang='hi-IN';rec.interimResults=false;rec.continuous=false;
+    rec.onstart=function(){txt.placeholder="🎤 सुन रहा हूँ... बोलिए...";txt.style.background="#fffbeb";btn.classList.add('micActive');btn.innerText="🔴";};
+    rec.onend=function(){txt.placeholder="हिंदी लिखो - 🎤 दबाओ - बोलो...";txt.style.background="#fff";btn.classList.remove('micActive');btn.innerText="🎤";};
+    rec.onerror=function(e){btn.classList.remove('micActive');btn.innerText="🎤";txt.style.background="#fff";if(e.error==='not-allowed'){alert("❌ Mic Block है\nLock Icon > Site Setting > Microphone > Allow करो\nChrome में खोलो");localStorage.removeItem('micPermissionGranted');micPermissionGranted=false;}else if(e.error==='no-speech'){alert("⚠️ आवाज नहीं सुनी - फिर से जोर से बोलो Sir");}else if(e.error!=='aborted'){alert("Mic Error: "+e.error);}};
+    rec.onresult=function(e){let spoken=e.results[0][0].transcript;txt.value=spoken;txt.style.background="#f0fdf4";setTimeout(()=>txt.style.background="#fff",1000);doTrans();};
+    try{rec.start();}catch(err){alert("Mic Start Error: "+err.message);}
+  }
+  if(micPermissionGranted){startRec();}else{if(navigator.mediaDevices&&navigator.mediaDevices.getUserMedia){navigator.mediaDevices.getUserMedia({audio:true}).then(function(stream){stream.getTracks().forEach(t=>t.stop());localStorage.setItem('micPermissionGranted','true');micPermissionGranted=true;startRec();}).catch(function(err){alert("❌ Mic Permission नहीं मिला\nChrome में Allow दबाओ\nError: "+err.message);});}else{startRec();}}
+}
+
+/* ===== ARTICLE LAB - v9 FINAL - वाक्य सही जमा - जहाँ वाला Fix ===== */
+function renderArticleLab(){
+let el=document.getElementById('sec-article');
+el.innerHTML=`<div style="padding:14px">
+<div style="font-weight:900;color:#be185d;text-align:center">📰 ARTICLE LAB - Final - वाक्य सही जमा</div>
+<div id="artRuleBox" class="expBox" style="background:#fdf2f8;border-color:#fbcfe8"></div>
+<div class="one-line">
+<select id="artSub"><option>This is</option><option>That is</option><option>It is</option><option>I have</option><option>He is</option></select>
+<select id="artMid" onchange="artSync()" style="border-color:#f9a8d4;background:#fce7f3;font-weight:900"><option value="a">a</option><option value="an">an</option><option value="the">the</option><option value="no">No Article</option></select>
+<select id="artObj" style="flex:1;min-width:160px;font-weight:700;border:1.5px solid #f9a8d4;border-radius:12px;padding:11px 8px"></select>
+</div>
+<button onclick="makeArticleSentence()" style="width:100%;margin-top:12px;background:#be185d;color:#fff;border:none;padding:12px;border-radius:12px;font-weight:900">✨ Make Article Sentence</button>
+<div id="articleOut" style="margin-top:12px"></div>
+</div>`;artSync();
+}
+function artSync(){
+let mid=document.getElementById('artMid').value;
+let rules={
+a:"A का प्रयोग - जहाँ Consonant (व्यंजन) ध्वनि आती है, वहाँ 'a' का प्रयोग किया जाता है। जैसे - a book, a car, a university (yu - Consonant ध्वनि)।",
+an:"An का प्रयोग - जहाँ Vowel (स्वर) ध्वनि आती है, वहाँ 'an' का प्रयोग किया जाता है। जैसे - an apple, an hour (h silent)।",
+the:"The का प्रयोग - जहाँ किसी खास चीज़ के बारे में बात हो, वहाँ 'the' का प्रयोग किया जाता है। जैसे - the sun, the Ganga।",
+no:"No Article - जहाँ सामान्य (General) बात हो, वहाँ कोई Article नहीं लगता। जैसे - Books are useful।"
+};
+document.getElementById('artRuleBox').innerText=rules[mid];
+let map={a:["book","car","teacher","university","pen","boy"],an:["apple","hour","honest man","egg","umbrella","MBA"],the:["sun","moon","Ganga","book on the table","boy in class"],no:["books are useful","water is life","honesty is best","love is life"]};
+document.getElementById('artObj').innerHTML=map[mid].map(o=>`<option>${o}</option>`).join('');
+document.getElementById('artSub').style.display=mid==="no"?"none":"block";
+}
+function makeArticleSentence(){
+let mid=document.getElementById('artMid').value;let sub=document.getElementById('artSub').value;let obj=document.getElementById('artObj').value;let eng="";
+if(mid==="no"){eng=`${obj}.`;eng=eng.charAt(0).toUpperCase()+eng.slice(1);}else{eng=`${sub} ${mid} ${obj}.`;eng=eng.replace("a apple","an apple").replace("a hour","an hour").replace("a honest","an honest").replace("a umbrella","an umbrella").replace(/\s+/g,' ');}
+document.getElementById('articleOut').innerHTML=`<div class="outBox"><div style="font-weight:900;font-size:16px">${eng}</div><div style="display:flex;gap:8px;margin-top:10px"><button onclick="let t=this.parentElement.parentElement.querySelector('div').innerText; speakLoud(t)" class="smallBtn" style="background:#fff;border:1.5px solid #fbcfe8">📢 Loud</button><button onclick="let t=this.parentElement.parentElement.querySelector('div').innerText; if(navigator.share)navigator.share({text:t}); else prompt('Copy',t)" class="smallBtn" style="background:#e0f2fe">📤 Share</button><button onclick="let t=this.parentElement.parentElement.querySelector('div').innerText; quickSaveModal(t)" class="smallBtn" style="background:#be185d;color:#fff">💾 Save to Section 1</button></div></div>`;speakLoud(eng);
+}
+
+function renderPrepoLab(){
+let el=document.getElementById('sec-prepo');
+el.innerHTML=`<div style="padding:14px"><div style="font-weight:900;color:#0e7490;text-align:center">📍 PREPOSITION LAB - Final - वाक्य सही जमा</div><div id="preRuleBox" class="expBox" style="background:#ecfeff;border-color:#a5f3fc"></div><div class="one-line"><select id="preSub"><option>I am</option><option>He is</option><option>They are</option><option>We have been</option></select><select id="preMid" onchange="preSync()" style="border-color:#06b6d4;background:#cffafe;font-weight:900"><option value="in">in</option><option value="on">on</option><option value="at">at</option><option value="into">into</option><option value="since">since</option><option value="for">for</option><option value="by">by</option><option value="with">with</option></select><select id="preObj" style="flex:1;min-width:170px;font-weight:700;border:1.5px solid #06b6d4;border-radius:12px;padding:11px 8px"></select></div><button onclick="makePrepoSentence()" style="width:100%;margin-top:12px;background:#0e7490;color:#fff;border:none;padding:12px;border-radius:12px;font-weight:900">✨ Make Preposition Sentence</button><div id="prepoOut" style="margin-top:12px"></div></div>`;preSync();
+}
+function preSync(){
+let mid=document.getElementById('preMid').value;
+let rules={
+in:"In का प्रयोग - जहाँ अंदर, महीना, साल या समय की बात हो, वहाँ 'in' का प्रयोग किया जाता है।",
+on:"On का प्रयोग - जहाँ सतह पर या दिन के बारे में बात हो, वहाँ 'on' का प्रयोग किया जाता है।",
+at:"At का प्रयोग - जहाँ छोटे स्थान या निश्चित समय की बात हो, वहाँ 'at' का प्रयोग किया जाता है।",
+into:"Into का प्रयोग - जहाँ अंदर जाने की क्रिया हो, वहाँ 'into' का प्रयोग किया जाता है।",
+since:"Since का प्रयोग - जहाँ Point of Time (निश्चित समय / जब से) हो, वहाँ 'since' का प्रयोग किया जाता है।",
+for:"For का प्रयोग - जहाँ Period of Time (समय की अवधि / कितने समय से) हो, वहाँ 'for' का प्रयोग किया जाता है।",
+by:"By का प्रयोग - जहाँ 'द्वारा' या 'समय तक' की बात हो, वहाँ 'by' का प्रयोग किया जाता है।",
+with:"With का प्रयोग - जहाँ 'साथ में' या किसी चीज़ से काम होने की बात हो, वहाँ 'with' का प्रयोग किया जाता है।"
+};
+document.getElementById('preRuleBox').innerText=rules[mid];
+let map={in:["the room","July","2024","morning"],on:["the table","Monday","the wall"],at:["home","9 o'clock","the gate"],into:["the room","the water"],since:["Monday","2020","morning"],for:["2 hours","2 days","3 years"],by:["Ram","9 o'clock","car"],with:["pen","friend","love"]};
+document.getElementById('preObj').innerHTML=map[mid].map(o=>`<option>${o}</option>`).join('');
+}
+function makePrepoSentence(){let sub=document.getElementById('preSub').value;let mid=document.getElementById('preMid').value;let obj=document.getElementById('preObj').value;let eng=`${sub} ${mid} ${obj}.`.replace(/\s+/g,' ');document.getElementById('prepoOut').innerHTML=`<div class="outBox"><div style="font-weight:900">${eng}</div><div style="display:flex;gap:8px;margin-top:10px"><button onclick="let t=this.parentElement.parentElement.querySelector('div').innerText; speakLoud(t)" class="smallBtn">📢 Loud</button><button onclick="let t=this.parentElement.parentElement.querySelector('div').innerText; if(navigator.share)navigator.share({text:t}); else prompt('Copy',t)" class="smallBtn" style="background:#e0f2fe">📤 Share</button><button onclick="let t=this.parentElement.parentElement.querySelector('div').innerText; quickSaveModal(t)" class="smallBtn" style="background:#0e7490;color:#fff">💾 Save</button></div></div>`;speakLoud(eng);}
+
+function renderDetermLab(){
+let el=document.getElementById('sec-determ');
+el.innerHTML=`<div style="padding:14px"><div style="font-weight:900;color:#4338ca;text-align:center">🔢 DETERMINERS LAB - Final - वाक्य सही जमा</div><div id="detRuleBox" class="expBox" style="background:#eef2ff;border-color:#c7d2fe"></div><div class="one-line"><select id="detSub"><option>I have</option><option>There are</option><option>He has</option><option>Do you have</option><option>I don't have</option></select><select id="detMid" onchange="detSync()" style="border-color:#a5b4fc;background:#e0e7ff;font-weight:900"><option value="some">some</option><option value="any">any</option><option value="many">many</option><option value="much">much</option><option value="each">each</option><option value="every">every</option><option value="few">few</option><option value="a few">a few</option><option value="little">little</option><option value="a little">a little</option></select><select id="detObj" style="flex:1;min-width:170px;font-weight:700;border:1.5px solid #a5b4fc;border-radius:12px;padding:11px 8px"></select></div><button onclick="makeDetermSentence()" style="width:100%;margin-top:12px;background:#4338ca;color:#fff;border:none;padding:12px;border-radius:12px;font-weight:900">✨ Make Determiner Sentence</button><div id="determOut" style="margin-top:12px"></div></div>`;detSync();
+}
+function detSync(){
+let mid=document.getElementById('detMid').value;
+let rules={
+some:"Some का प्रयोग - जहाँ Positive वाक्य में 'कुछ' के लिए 'some' का प्रयोग किया जाता है।",
+any:"Any का प्रयोग - जहाँ Negative या Question में 'कोई' के लिए 'any' का प्रयोग किया जाता है।",
+many:"Many का प्रयोग - जहाँ Countable (गिनने योग्य) 'बहुत' के लिए 'many' का प्रयोग किया जाता है।",
+much:"Much का प्रयोग - जहाँ Uncountable (बिना गिनती) 'बहुत' के लिए 'much' का प्रयोग किया जाता है।",
+each:"Each का प्रयोग - जहाँ हर एक अलग-अलग के लिए 'each' का प्रयोग किया जाता है।",
+every:"Every का प्रयोग - जहाँ सभी के लिए 'every' का प्रयोग किया जाता है।",
+few:"Few का प्रयोग - जहाँ Countable में 'बहुत कम / न के बराबर' के लिए 'few' का प्रयोग किया जाता है।",
+"a few":"A few का प्रयोग - जहाँ Countable में 'कुछ तो हैं' (Positive) के लिए 'a few' का प्रयोग किया जाता है।",
+little:"Little का प्रयोग - जहाँ Uncountable में 'बहुत कम' के लिए 'little' का प्रयोग किया जाता है।",
+"a little":"A little का प्रयोग - जहाँ Uncountable में 'थोड़ा तो है' के लिए 'a little' का प्रयोग किया जाता है।"
+};
+document.getElementById('detRuleBox').innerText=rules[mid];
+let map={some:["books","money","water"],any:["book?","money?","water?"],many:["books","students","cars"],much:["water","money","time"],each:["boy has a pen","student is present"],every:["student","day","boy"],few:["friends in city","books left"],"a few":["friends to help","books left"],little:["water in jug","money left"],"a little":["water to drink","money to spend"]};
+document.getElementById('detObj').innerHTML=map[mid].map(o=>`<option>${o}</option>`).join('');
+}
+function makeDetermSentence(){let sub=document.getElementById('detSub').value;let mid=document.getElementById('detMid').value;let obj=document.getElementById('detObj').value;let isQ=obj.includes("?")||sub.startsWith("Do you have");let eng=isQ?`${sub} ${mid} ${obj}`.replace(/\s+/g,' ').replace("some","any"):`${sub} ${mid} ${obj}.`.replace(/\s+/g,' ');if(isQ&&!eng.endsWith("?"))eng+="?";eng=eng.replace("Do you have some","Do you have any").replace("I don't have some","I don't have any");document.getElementById('determOut').innerHTML=`<div class="outBox"><div style="font-weight:900">${eng}</div><div style="display:flex;gap:8px;margin-top:10px"><button onclick="let t=this.parentElement.parentElement.querySelector('div').innerText; speakLoud(t)" class="smallBtn">📢 Loud</button><button onclick="let t=this.parentElement.parentElement.querySelector('div').innerText; if(navigator.share)navigator.share({text:t}); else prompt('Copy',t)" class="smallBtn" style="background:#e0f2fe">📤 Share</button><button onclick="let t=this.parentElement.parentElement.querySelector('div').innerText; quickSaveModal(t)" class="smallBtn" style="background:#4338ca;color:#fff">💾 Save</button></div></div>`;speakLoud(eng);}
+
+function renderQTagLab(){
+let el=document.getElementById('sec-qtag');
+el.innerHTML=`<div style="padding:14px"><div style="font-weight:900;color:#1d4ed8;text-align:center">🏷️ QUESTION TAG - Final - They is Fix</div>
+<div style="background:#eef2ff;border:1px solid #c7d2fe;border-radius:10px;padding:10px;margin-bottom:10px;font-size:12px;font-weight:700">Rule: Positive → Negative Tag, Negative → Positive Tag<br>He is → isn't he? | They are → aren't they?</div>
+<div class="one-line"><select id="qSub" onchange="qTagSync()"><option>He</option><option>She</option><option>They</option><option>You</option><option>I</option><option>We</option></select><select id="qAux" onchange="qTagSync()"><option>is</option><option>are</option><option>was</option><option>were</option><option>has</option><option>have</option></select><select id="qAdj"><option>happy</option><option>playing</option><option>coming</option></select></div><button onclick="makeQTag()" style="width:100%;margin-top:12px;background:#1d4ed8;color:#fff;border:none;padding:12px;border-radius:12px;font-weight:900">✨ Make Tag</button><div id="qtagOut" style="margin-top:12px"></div></div>`;qTagSync();
+}
+function qTagSync(){
+let sub=document.getElementById('qSub').value;let auxSel=document.getElementById('qAux');
+// Fix: They is → They are, He is → He is, We is → We are
+let correctAux="";
+if(["I"].includes(sub)){correctAux="am";}
+else if(["He","She","It"].includes(sub)){correctAux=(auxSel.value==="are"||auxSel.value==="were"||auxSel.value==="have")?"is":auxSel.value; if(correctAux==="are") correctAux="is"; if(correctAux==="were") correctAux="was"; if(correctAux==="have") correctAux="has";}
+else if(["They","We","You"].includes(sub)){correctAux=(auxSel.value==="is"||auxSel.value==="was"||auxSel.value==="has")?"are":auxSel.value; if(correctAux==="is") correctAux="are"; if(correctAux==="was") correctAux="were"; if(correctAux==="has") correctAux="have"; if(correctAux==="am") correctAux="are";}
+else{correctAux=auxSel.value;}
+// Update dropdown to correct
+for(let i=0;i<auxSel.options.length;i++){if(auxSel.options[i].value===correctAux){auxSel.selectedIndex=i;break;}}
+}
+function makeQTag(){let sub=document.getElementById('qSub').value;let aux=document.getElementById('qAux').value;let adj=document.getElementById('qAdj').value;let neg={"is":"isn't","are":"aren't","was":"wasn't","were":"weren't","has":"hasn't","have":"haven't","am":"aren't"};let eng=`${sub} ${aux} ${adj}, ${neg[aux]||aux+"n't"} ${sub.toLowerCase()}?`;document.getElementById('qtagOut').innerHTML=`<div class="outBox"><div style="font-weight:900">${eng}</div><div style="display:flex;gap:8px;margin-top:10px"><button onclick="let t=this.parentElement.parentElement.querySelector('div').innerText; speakLoud(t)" class="smallBtn">📢 Loud</button><button onclick="let t=this.parentElement.parentElement.querySelector('div').innerText; quickSaveModal(t)" class="smallBtn" style="background:#1d4ed8;color:#fff">💾 Save</button></div></div>`;speakLoud(eng);}
+function renderDegreeLab(){let el=document.getElementById('sec-degree');el.innerHTML=`<div style="padding:14px"><div style="font-weight:900;color:#7c2d12;text-align:center">📏 DEGREE LAB - Final</div><div class="one-line"><select id="degSub1"><option>Ram</option><option>Shyam</option></select><select id="degAdj"><option>tall</option><option>good</option></select><select id="degSub2"><option>Shyam</option><option>all</option></select><select id="degType"><option>Positive</option><option>Comparative</option><option>Superlative</option></select></div><button onclick="makeDegree()" style="width:100%;margin-top:12px;background:#7c2d12;color:#fff;border:none;padding:12px;border-radius:12px;font-weight:900">✨ Make Degree</button><div id="degreeOut" style="margin-top:12px"></div></div>`;}
+function makeDegree(){let s1=document.getElementById('degSub1').value;let adj=document.getElementById('degAdj').value;let s2=document.getElementById('degSub2').value;let type=document.getElementById('degType').value;let map={tall:["tall","taller","tallest"],good:["good","better","best"]};let f=map[adj];let eng=type==="Positive"?`${s1} is as ${f[0]} as ${s2}.`:type==="Comparative"?`${s1} is ${f[1]} than ${s2}.`:`${s1} is the ${f[2]}.`;document.getElementById('degreeOut').innerHTML=`<div class="outBox"><div style="font-weight:900">${eng}</div></div>`;speakLoud(eng);}
+
+/* ===== PASSIVE LAB v9 FINAL - We writes Fix + जहाँ जमाव Fix + am/is/are Fix ===== */
+const P_TENSE_SUBS=["I","We","You","He","She","They","It","The teacher","The boy","The girl","The students","People","My mother","My father","The children","The police"];
+const P_PRON={"I":"me","We":"us","You":"you","He":"him","She":"her","They":"them","It":"it","My mother":"my mother","My father":"my father"};
+const P_VERB_DICT={
+"write":"written","writes":"written","wrote":"written","written":"written",
+"complete":"completed","completes":"completed","completed":"completed",
+"praise":"praised","praises":"praised","praised":"praised",
+"break":"broken","breaks":"broken","broke":"broken","broken":"broken",
+"eat":"eaten","eats":"eaten","ate":"eaten","eaten":"eaten",
+"buy":"bought","buys":"bought","bought":"bought",
+"sell":"sold","sells":"sold","sold":"sold",
+"clean":"cleaned","cleans":"cleaned","cleaned":"cleaned",
+"cook":"cooked","cooks":"cooked","cooked":"cooked",
+"solve":"solved","solves":"solved","solved":"solved",
+"steal":"stolen","steals":"stolen","stole":"stolen","stolen":"stolen",
+"love":"loved","loves":"loved","loved":"loved",
+"see":"seen","sees":"seen","saw":"seen","seen":"seen",
+"call":"called","calls":"called","called":"called",
+"bring":"brought","brings":"brought","brought":"brought",
+"find":"found","finds":"found","found":"found",
+"teach":"taught","teaches":"taught","taught":"taught",
+"make":"made","makes":"made","made":"made",
+"take":"taken","takes":"taken","took":"taken","taken":"taken",
+"give":"given","gives":"given","gave":"given","given":"given",
+"open":"opened","opens":"opened","opened":"opened",
+"close":"closed","closes":"closed","closed":"closed",
+"play":"played","plays":"played","played":"played",
+"read":"read","reads":"read",
+"prepare":"prepared","prepares":"prepared","preparing":"prepared",
+"writing":"written","cleaning":"cleaned","cooking":"cooked","playing":"played","reading":"read"
+};
+function pGetV3(v){let k=v.toLowerCase().trim();if(P_VERB_DICT[k]) return P_VERB_DICT[k];if(k.endsWith('ing')){let b=k.slice(0,-3);if(P_VERB_DICT[b]) return P_VERB_DICT[b];}if(k.endsWith('e')) return k+'d';return k+'ed';}
+function pGetBy(s){return P_PRON[s]||s.toLowerCase();}
+function pGetBaseVerb(v){let k=v.toLowerCase().trim();let m={writes:"write",completes:"complete",praises:"praise",breaks:"break",eats:"eat",buys:"buy",sells:"sell",cleans:"clean",cooks:"cook",solves:"solve",steals:"steal",loves:"love",sees:"see",calls:"call",brings:"bring",finds:"find",teaches:"teach",makes:"make",takes:"take",gives:"give",opens:"open",closes:"close",plays:"play",reads:"read"};if(m[k]) return m[k];return k;}
+function pGetCorrectV1(sub, base){
+  let singular=["He","She","It","The teacher","The boy","The girl","My mother","My father"];
+  if(singular.includes(sub)){
+    if(base==="write") return "writes";if(base==="play") return "plays";if(base==="speak") return "speaks";if(base==="eat") return "eats";if(base==="read") return "reads";if(base==="teach") return "teaches";if(base==="make") return "makes";if(base==="give") return "gives";if(base==="open") return "opens";if(base==="break") return "breaks";if(base==="buy") return "buys";if(base==="clean") return "cleans";if(base==="complete") return "completes";if(base==="solve") return "solves";return base+"s";
+  }else{return base;}
+}
+function pGetBeForObject(obj, type){
+  let o=obj.toLowerCase().trim();
+  let plural=["letters","books","students","pens","friends","children","people","police","boys","girls","many books","the letters"];
+  let isPlural=plural.some(m=>o.includes(m));
+  let singular=["a letter","a book","a pen","a boy","a girl","a car","a teacher","the work","food","homework","my purse","the door","this problem","a prize","a gift","some money","cricket"];
+  let isSingular=singular.some(m=>o.includes(m));
+  if(isSingular) isPlural=false;
+  if(o.startsWith("a ")||o.startsWith("an ")) isPlural=false;
+  if(type==="is_are") return isPlural?"are":"is";
+  if(type==="was_were") return isPlural?"were":"was";
+  if(type==="has_have") return isPlural?"have":"has";
+  return "is";
+}
+function pGetDoubleBe(ind){let m=ind.toLowerCase();if(m==="me") return {cap:"I",be:"was"};if(m==="us") return {cap:"We",be:"were"};if(m==="him") return {cap:"He",be:"was"};if(m==="her") return {cap:"She",be:"was"};if(m==="them") return {cap:"They",be:"were"};if(m==="you") return {cap:"You",be:"were"};return {cap:m.charAt(0).toUpperCase()+m.slice(1),be:"was"};}
+
+const P_MASTER=[
+{key:"Tense Rule1",hi:"जब Subject के साथ V1 Form हो, तो उसके Passive में is / are का प्रयोग करते हैं।\nActive: Sub + V1 + Obj\nPassive: Obj + is / are + V3 + by + Sub"},
+{key:"Tense Rule2",hi:"जब Subject के साथ V2 Form हो, तो उसके Passive में was / were का प्रयोग करते हैं।\nActive: Sub + V2 + Obj\nPassive: Obj + was / were + V3 + by + Sub"},
+{key:"Tense Rule3",hi:"जब Subject के साथ Will / Shall + V1 हो, तो उसके Passive में will / shall + be का प्रयोग करते हैं।\nActive: Sub + Will / Shall + V1 + Obj\nPassive: Obj + Will / Shall + be + V3 + by + Sub"},
+{key:"Tense Rule4",hi:"जब Subject के साथ is / am / are / was / were + V1+ing हो, तो उसके Passive में is / are / was / were + being का प्रयोग करते हैं।\nActive: Sub + is / am / are + V1+ing + Obj\nPassive: Obj + is / are / was / were + being + V3 + by + Sub"},
+{key:"Tense Rule5",hi:"जब Subject के साथ has / have / had + V3 हो, तो उसके Passive में has / have / had + been का प्रयोग करते हैं।\nActive: Sub + has / have / had + V3 + Obj\nPassive: Obj + has / have / had + been + V3 + by + Sub"},
+{key:"Let Rule",hi:"जब Imperative (आदेश) हो, तो उसके Passive में Let का प्रयोग करते हैं।\nActive: Verb + Obj\nPassive: Let + Obj + be + V3"},
+{key:"Model Rule",hi:"जब Subject के साथ Model Verb (can / may / must / should) + V1 हो, तो उसके Passive में Model + be का प्रयोग करते हैं।\nActive: Sub + Model + V1 + Obj\nPassive: Obj + Model + be + V3 + by + Sub"},
+{key:"Wh Family Rule",hi:"जब What / When / Why / Where / Who जैसे Wh-Word हों, तो Wh-Word वैसे ही रहता है। Who → By whom हो जाता है।\nActive: Wh + Help + Sub + V + Obj\nPassive: Wh + Help + Obj + V3 + by + Sub"},
+{key:"Subject Free Rule",hi:"जब Subject में Someone / Everyone / Somebody / Nobody हो, तो उसके Passive में 'by Someone' हट जाता है।\nActive: Someone + has + V3 + Obj\nPassive: Obj + has + been + V3"},
+{key:"Double Object Rule",hi:"जब दो Object हों (Indirect + Direct), तो उसके दो Passive बनते हैं।\nActive: Sub + V2 + Indirect + Direct\nPassive:\n1. Indirect + was + V3 + Direct + by + Sub\n2. Direct + was + V3 + to + Indirect + by + Sub"}
+];
+
+function pUpdateRule(){
+let r=document.getElementById('pRule').value;let info=P_MASTER.find(x=>x.key===r);
+document.getElementById('pInfo').innerText=info.hi;
+if(r==="Double Object Rule"){
+document.getElementById('pNormal').style.display='none';document.getElementById('pDouble').classList.add('show');
+document.getElementById('pdSub').innerHTML=P_TENSE_SUBS.map(s=>`<option>${s}</option>`).join('');
+document.getElementById('pdVerb').innerHTML=["gave","gives","will give","has given"].map(v=>`<option>${v}</option>`).join('');
+document.getElementById('pdInd').innerHTML=["me","us","him","her","them","you"].map(o=>`<option>${o}</option>`).join('');
+document.getElementById('pdDir').innerHTML=["a book","homework","a prize","a gift","some money"].map(o=>`<option>${o}</option>`).join('');
+pSyncDouble();return;
+}else{document.getElementById('pNormal').style.display='flex';document.getElementById('pDouble').classList.remove('show');}
+let subs=[],helps=[],verbs=[],objs=["a letter","cricket","the work","food","this problem","the door","my purse","homework","the letters","many books"];
+if(r.startsWith("Tense")){
+subs=P_TENSE_SUBS;
+if(r==="Tense Rule1"){helps=[""];verbs=["write","play","speak","eat","read","teach","make","give","open","break","buy","clean","complete","solve"];}
+else if(r==="Tense Rule2"){helps=[""];verbs=["praised","completed","broke","ate","wrote","bought","sold","cleaned","cooked","solved","stole"];}
+else if(r==="Tense Rule3"){helps=["will","shall"];verbs=["complete","write","play","solve","clean","cook","make","buy"];}
+else if(r==="Tense Rule4"){helps=["is","am","are","was","were"];verbs=["preparing","playing","reading","writing","cleaning","cooking"];}
+else if(r==="Tense Rule5"){helps=["has","have","had"];verbs=["written","completed","stolen","eaten","given","opened","broken","solved"];}
+}else{
+if(r==="Subject Free Rule"){subs=["Someone","Everyone","Somebody","Nobody"];helps=["has","have"];verbs=["stolen","completed"];}
+else if(r==="Wh Family Rule"){subs=["What","When","Why","Where","Which","How","Whose","Whom","Who","By whom"];helps=["did","will","do","is","are","was","were"];verbs=["break","complete","find","solve"];}
+else if(r==="Model Rule"){subs=["I","We","You","He","She","They","The teacher"];helps=["can","could","may","might","shall","should","will","would","must"];verbs=["solve","complete","write","buy","make"];}
+else if(r==="Let Rule"){subs=[""];helps=[""];verbs=["Open","Close","Clean","Wash","Write","Read","Do","Complete","Bring","Call","Make","Give"];}
+}
+document.getElementById('pSub').innerHTML=subs.map(s=>`<option>${s}</option>`).join('');
+document.getElementById('pHelp').innerHTML=helps.map(h=>`<option value="${h}">${h||'(no help)'}</option>`).join('');
+document.getElementById('pVerb').innerHTML=verbs.map(v=>`<option>${v}</option>`).join('');
+document.getElementById('pObj').innerHTML=objs.map(o=>`<option>${o}</option>`).join('');
+document.getElementById('pHelp').disabled=(helps.length===1&&helps[0]==="");
+let curSub=document.getElementById('pSub').value;let curHelp=document.getElementById('pHelp').value;
+let autoH=(function(rule,sub,cur){if(rule.includes("Rule3")){if(sub==="I"||sub==="We") return "shall";return "will";}if(rule.includes("Rule4")){let isPast=cur==="was"||cur==="were";if(sub==="I") return isPast?"was":"am";if(["You","We","They"].includes(sub)) return isPast?"were":"are";return isPast?"was":"is";}if(rule.includes("Rule5")){if(cur==="had") return "had";if(["He","She","It","The teacher","The boy","The girl","My mother","My father"].includes(sub)) return "has";return "have";}return cur;})(r,curSub,curHelp);
+if(autoH){let he=document.getElementById('pHelp');for(let i=0;i<he.options.length;i++){if(he.options[i].value===autoH){he.selectedIndex=i;break;}}}
+pSync();
+}
+function pOnSub(){let r=document.getElementById('pRule').value;let sub=document.getElementById('pSub').value;let he=document.getElementById('pHelp');let cur=he.value;let autoH=(function(rule,s,c){if(rule.includes("Rule3")){if(s==="I"||s==="We") return "shall";return "will";}if(rule.includes("Rule4")){let isPast=c==="was"||c==="were";if(s==="I") return isPast?"was":"am";if(["You","We","They"].includes(s)) return isPast?"were":"are";return isPast?"was":"is";}if(rule.includes("Rule5")){if(c==="had") return "had";if(["He","She","It","The teacher","The boy","The girl","My mother","My father"].includes(s)) return "has";return "have";}return c;})(r,sub,cur);if(autoH){for(let i=0;i<he.options.length;i++){if(he.options[i].value===autoH){he.selectedIndex=i;break;}}}pSync();}
+function pSyncDouble(){
+let sub=document.getElementById('pdSub').value;let verbRaw=document.getElementById('pdVerb').value;let indirect=document.getElementById('pdInd').value;let direct=document.getElementById('pdDir').value;
+let v3=pGetV3(verbRaw);let bySub=pGetBy(sub);let dInfo=pGetDoubleBe(indirect);
+let active=`${sub} ${verbRaw} ${indirect} ${direct}`;
+let passive=`Passive:\n1) ${dInfo.cap} ${dInfo.be} ${v3} ${direct} by ${bySub}.\n2) ${direct.charAt(0).toUpperCase()+direct.slice(1)} was ${v3} to ${indirect} by ${bySub}.`;
+document.getElementById('pActive').innerText="Active: "+active;
+document.getElementById('pPassive').innerText=passive;
+document.getElementById('pCheck').innerText=`✅ Tarika 1 | ${indirect}→${dInfo.cap} ${dInfo.be} | by ${bySub} | Final Fix`;
+}
+function pSync(){
+let r=document.getElementById('pRule').value;if(r==="Double Object Rule") return;
+let sub=document.getElementById('pSub').value;let help=document.getElementById('pHelp').value;let verb=document.getElementById('pVerb').value;let obj=document.getElementById('pObj').value;
+let v3=pGetV3(verb);let baseVerb=pGetBaseVerb(verb);let bySub=pGetBy(sub);let objCap=obj.charAt(0).toUpperCase()+obj.slice(1);
+let active="",passive="",check="";
+
+if(r==="Let Rule"){active=`${verb} ${obj}`.trim();passive=`Let ${obj} be ${v3}`;check=`✅ Let Rule | ${verb} → ${v3}`;}
+else if(r==="Subject Free Rule"){active=`${sub} ${help} ${v3} ${obj}`.trim();let hasHave=pGetBeForObject(obj,"has_have");passive=`${objCap} ${hasHave} been ${v3}.`;check=`✅ Subject Free Rule | by Someone हटाया | Object [${obj}] → ${hasHave} been ${v3}`;}
+else if(r==="Wh Family Rule"){if(sub==="Who"){active=`Who ${baseVerb} ${obj}?`;passive=`By whom was ${obj} ${v3}?`;check=`✅ Wh Family Rule | Who → By whom`;}else{active=`${sub} ${help} ${bySub} ${baseVerb} ${obj}?`;passive=`${sub} ${help} ${obj} be ${v3} by ${bySub}?`;check=`✅ Wh Family Rule`;}}
+else if(r==="Model Rule"){active=`${sub} ${help} ${baseVerb} ${obj}`.trim();passive=`${objCap} ${help} be ${v3} by ${bySub}.`;check=`✅ Model Rule | ${baseVerb} → ${v3}`;}
+else if(r==="Tense Rule1"){let correctV1=pGetCorrectV1(sub,baseVerb);active=`${sub} ${correctV1} ${obj}`.trim();let be=pGetBeForObject(obj,"is_are");passive=`${objCap} ${be} ${v3} by ${bySub}.`;check=`✅ Tense Rule1 Final Fix | ${sub} → ${correctV1} | Object [${obj}] → ${be} ${v3} | We writes Bug Fix`;}
+else if(r==="Tense Rule2"){active=`${sub} ${verb} ${obj}`.trim();let be=pGetBeForObject(obj,"was_were");passive=`${objCap} ${be} ${v3} by ${bySub}.`;check=`✅ Tense Rule2 | Object [${obj}] → ${be} ${v3}`;}
+else if(r==="Tense Rule3"){active=`${sub} ${help} ${baseVerb} ${obj}`.trim();passive=`${objCap} ${help} be ${v3} by ${bySub}.`;check=`✅ Tense Rule3 | ${baseVerb} → ${v3}`;}
+else if(r==="Tense Rule4"){active=`${sub} ${help} ${verb} ${obj}`.trim();let pBe=help==="was"||help==="were"?pGetBeForObject(obj,"was_were"):pGetBeForObject(obj,"is_are");passive=`${objCap} ${pBe} being ${v3} by ${bySub}.`;check=`✅ Tense Rule4 | Object [${obj}] → ${pBe} being ${v3}`;}
+else if(r==="Tense Rule5"){active=`${sub} ${help} ${v3} ${obj}`.trim();let hasHave=pGetBeForObject(obj,"has_have");passive=`${objCap} ${hasHave} been ${v3} by ${bySub}.`;check=`✅ Tense Rule5 | Object [${obj}] → ${hasHave} been ${v3}`;}
+document.getElementById('pActive').innerText="Active: "+active;
+document.getElementById('pPassive').innerText="Passive: "+passive;
+document.getElementById('pCheck').innerText=check;
+}
+</script>
+</body>
+</html>
