@@ -1,168 +1,208 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>हिमालय ग्राफिक्स - प्रिंटिंग प्रेस जयपुर | फ्लेक्स मशीन | 9425123350</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@600;800;900&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Noto Sans Devanagari',sans-serif;background:#fffdf8;color:#101010;overflow-x:hidden}
-.space{font-family:'Space Grotesk',sans-serif}
-.top{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,253,248,.94);backdrop-filter:blur(12px);border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center;padding:10px 18px}
-.brand{display:flex;gap:10px;align-items:center}
-.mark{width:36px;height:36px;border-radius:9px;background:#101010;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:16px}
-.brand h6{margin:0;font-weight:900;font-size:14px;line-height:1}
-.brand small{font-size:8px;letter-spacing:2px;color:#888;font-weight:800}
-.btn-proposal{background:#101010;color:#fff;padding:9px 16px;border-radius:100px;font-size:11px;font-weight:800;border:none}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>पाल स्टडी सेंटर</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    html{font-size:18px;}
+    *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
+    body{font-family:'Poppins',sans-serif;overflow-x:hidden;background:#f4f7fb;}
+    a{text-decoration:none;}
+    .navbar{background:rgba(23,74,126,0.95);backdrop-filter:blur(10px);box-shadow:0 4px 18px rgba(0,0,0,.18);padding:10px 0;}
+    .navbar-brand{font-size:28px;font-weight:700;color:white !important;}
+    .navbar-brand span{color:#93c5fd;}
+    .nav-link{color:white !important;font-weight:500;margin-left:16px;position:relative;font-size:15px;}
+    .nav-link:hover{color:#60a5fa !important;}
+    .btn-signup,.btn-login{display:inline-flex;align-items:center;gap:6px;padding:7px 18px;border-radius:30px;font-weight:600;margin-left:10px;transition:.3s;font-size:14px;}
+    .btn-signup{background:#2563eb;color:white;box-shadow:0 4px 12px rgba(37,99,235,.35);}
+    .btn-login{border:1px solid rgba(255,255,255,.7);color:white;background:rgba(255,255,255,.08);}
+    .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;background:linear-gradient(180deg,#f8fbff 0%,#eef5ff 100%);padding:120px 0 80px;}
+    .hero-content{position:relative;z-index:2;background:rgba(255,255,255,.85);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.8);border-radius:32px;padding:40px;box-shadow:0 20px 60px rgba(15,23,42,.08);max-width:1200px;}
+    .hero-logo{width:100%;max-width:1000px;display:block;margin:auto;}
+    .hero-tagline{font-size:22px;font-weight:600;color:#1e293b;margin-top:15px;}
+    .hero-marquee{background:rgba(255,255,255,.45);backdrop-filter:blur(15px);border:1px solid rgba(255,255,255,.6);border-radius:18px;padding:14px 20px;overflow:hidden;}
+    .hero-marquee-content{display:inline-block;white-space:nowrap;animation:marquee 22s linear infinite;font-weight:800;font-size:17px;color:#0D47A1;letter-spacing:0.5px;text-transform:uppercase;}
+    @keyframes marquee{from{transform:translateX(100%);}to{transform:translateX(-100%);}}
+    .hero-actions{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;margin-top:18px;margin-bottom:5px;}
+    .hero-apply-btn{background:#0D47A1;color:#fff;padding:10px 26px;border-radius:50px;font-weight:600;transition:.3s;box-shadow:0 8px 20px rgba(37,99,235,.25);font-size:14px;}
+    .hero-apply-btn:hover{background:#1d4ed8;color:#fff;transform:translateY(-3px);}
+    .hero-access-btn{background:#ffffff;color:#0D47A1;padding:10px 24px;border-radius:50px;font-weight:600;border:2px solid #0D47A1;transition:.3s;margin-top:25px;display:inline-flex;align-items:center;gap:8px;}
+    .hero-access-btn:hover{background:#0D47A1;color:#fff;transform:translateY(-3px);}
+    .button-section{padding:90px 0;background:#f8fafc;}
+    .section-title{text-align:center;margin-bottom:55px;}
+    .section-title h2{font-size:44px;font-weight:700;color:#0f172a;}
+    .section-title p{color:#64748b;margin-top:12px;font-size:17px;}
+    .menu-card{position:relative;overflow:hidden;border-radius:22px;min-height:130px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:white;transition:.35s;box-shadow:0 8px 22px rgba(0,0,0,.12);}
+    .menu-card:hover{transform:translateY(-8px) scale(1.03);}
+    .menu-card i{font-size:34px;margin-bottom:12px;}
+    .menu-card h5{font-size:18px;font-weight:600;margin:0;}
+    .about{padding:90px 0;background:white;}
+    .about-box{background:#f8fafc;border-radius:28px;padding:55px;box-shadow:0 8px 30px rgba(0,0,0,.06);}
+    .about-box h2{font-size:42px;font-weight:700;margin-bottom:20px;color:#0f172a;}
+    .about-box p{line-height:2;color:#475569;font-size:17px;}
+    .cta{background:#0D47A1;color:white;text-align:center;padding:80px 20px;}
+    .cta h2{font-size:42px;font-weight:700;margin-bottom:15px;}
+    footer{background:#0f172a;color:white;padding:70px 0 25px;}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:30px;padding-top:20px;text-align:center;color:#94a3b8;}
+    .whatsapp-button{position:fixed;right:18px;bottom:18px;width:58px;height:58px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;color:white;font-size:28px;z-index:999;box-shadow:0 6px 18px rgba(0,0,0,.25);}
+    .hero-login{position:absolute;top:18px;right:20px;z-index:50;}
+    .hero-login-btn{display:inline-flex;align-items:center;gap:5px;padding:7px 12px;background:#0D47A1;color:#ffffff;border-radius:8px;font-size:11px;font-weight:700;}
+    .hero-center-photo{width:100%;max-width:340px;height:400px;border-radius:24px;overflow:hidden;border:1px solid rgba(13,71,161,0.15);box-shadow:0 20px 50px rgba(13,71,161,0.12);background:#fff;margin:0 auto;display:block;padding:6px;}
+    .hero-center-photo img{width:100%;height:100%;object-fit:cover;display:block;border-radius:18px;}
 
-/* HERO - FLEX MACHINE PHOTO - UNIQUE */
-.hero{
-min-height:80vh;display:grid;grid-template-columns:1fr 1fr;
-background:#101010;position:relative;overflow:hidden;
-}
-.hero-left{padding:96px 24px 24px 28px;position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center}
-.hero-left h1{font-size:44px;line-height:.95;font-weight:900;color:#fff}
-.hero-left h1 span{color:#ffe600}
-.hero-left p{color:#bbb;font-size:12px;margin-top:10px;line-height:1.6;max-width:380px}
-.badges{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
-.badges span{border:1px solid #333;border-radius:100px;padding:5px 10px;font-size:9px;font-weight:800;color:#fff;display:flex;gap:6px;align-items:center}
-.badges span i{color:#ffe600}
-.hero-actions{display:flex;gap:10px;margin-top:18px}
-.btn-yellow{background:#ffe600;color:#101010;padding:12px 20px;border-radius:100px;font-weight:900;border:none;font-size:11px}
-.btn-white-bdr{background:transparent;color:#fff;border:1px solid #444;padding:12px 18px;border-radius:100px;font-weight:800;font-size:11px}
-.hero-right{position:relative}
-.hero-right img{width:100%;height:100%;object-fit:cover;opacity:.9}
-.hero-right::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#101010 0%,transparent 55%)}
-.machine-tag{position:absolute;bottom:16px;left:16px;right:16px;background:rgba(16,16,16,.88);backdrop-filter:blur(8px);border:1px solid #333;border-radius:14px;padding:10px 12px;display:flex;justify-content:space-between;align-items:center;z-index:2}
-.machine-tag b{color:#fff;font-size:11px}
-.machine-tag small{color:#ffe600;font-size:9px}
-@media(max-width:768px){.hero{grid-template-columns:1fr;min-height:76vh}.hero-right{height:300px}.hero-left h1{font-size:34px}.hero-left{padding:88px 18px 20px}}
-
-/* STRIP */
-.strip{background:#ffe600;padding:8px 0;overflow:hidden;white-space:nowrap}
-.strip span{animation:move 18s linear infinite;display:inline-block;font-weight:900;font-size:10px;letter-spacing:1px;color:#101010}
-@keyframes move{from{transform:translateX(100%)}to{transform:translateX(-100%)}}
-
-/* MACHINES - FLEX MACHINE PHOTO SECTION - UNIQUE */
-.machines{padding:36px 18px;background:#faf6ef}
-.m-title{display:flex;justify-content:space-between;align-items:end;margin-bottom:16px}
-.m-title h2{font-size:26px;font-weight:900;line-height:1}
-.m-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
-@media(max-width:768px){.m-grid{grid-template-columns:1fr}}
-.m-card{border-radius:18px;overflow:hidden;background:#fff;border:1px solid #eee;position:relative}
-.m-card img{width:100%;height:200px;object-fit:cover}
-.m-card .info{padding:12px}
-.m-card .info b{font-size:12px;display:block}
-.m-card .info p{font-size:10px;color:#777;margin-top:2px}
-.m-card .dot{position:absolute;top:10px;left:10px;background:#101010;color:#ffe600;border-radius:100px;padding:4px 8px;font-size:8px;font-weight:800}
-
-/* GALLERY - PRINTING PHOTO */
-.gallery{padding:36px 18px;background:#fff}
-.g-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
-@media(max-width:900px){.g-grid{grid-template-columns:1fr 1fr}}
-.g-item{border-radius:14px;overflow:hidden;height:180px;position:relative;background:#f5f5f5}
-.g-item img{width:100%;height:100%;object-fit:cover;transition:.3s}
-.g-item:hover img{transform:scale(1.05)}
-.g-item .cap{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.8));padding:30px 10px 10px;display:flex;justify-content:space-between;align-items:end}
-.g-item .cap b{color:#fff;font-size:10px}
-.g-item .cap span{color:#ffe600;font-size:9px;font-weight:800}
-
-/* PROPOSAL - 9425123350 */
-.proposal{background:#101010;border-radius:22px;padding:22px;color:#fff;display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:20px 18px;border:1px solid #222}
-@media(max-width:768px){.proposal{grid-template-columns:1fr}}
-.proposal input,.proposal select,.proposal textarea{width:100%;padding:11px;border-radius:10px;border:1px solid #2a2a2a;background:#1a1a1a;color:#fff;margin-top:8px;font-size:11px}
-.proposal button{width:100%;padding:13px;border-radius:12px;border:none;font-weight:900;margin-top:12px}
-.btn-send-yellow{background:#ffe600;color:#101010}
-.btn-calc-black{background:#222;color:#fff;border:1px solid #333!important}
-.calc-box{background:#ffe600;color:#101010;border-radius:12px;padding:12px;margin-top:10px;display:flex;justify-content:space-between;font-weight:900}
-
-footer{background:#101010;color:#888;padding:28px 18px;text-align:center;border-top:1px solid #222}
-.wa{position:fixed;right:14px;bottom:14px;width:48px;height:48px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;z-index:999}
-</style>
+    /* ===== SINGLE PROFESSIONAL ENQUIRY CSS ===== */
+    .hero-enquiry-btn{background:#ffffff;color:#0D47A1;padding:9px 18px;border-radius:50px;font-weight:600;font-size:13px;border:1.5px solid #cbd5e1;display:inline-flex;align-items:center;gap:6px;transition:.25s;}
+    .hero-enquiry-btn:hover{background:#f8fafc;border-color:#0D47A1;transform:translateY(-2px);box-shadow:0 6px 16px rgba(13,71,161,.10);}
+    .enquiry-modal .modal-content{border-radius:22px;border:none;overflow:hidden;box-shadow:0 30px 80px rgba(15,23,42,.25);font-family:'Poppins',sans-serif;background:#fff;}
+    .enquiry-modal .modal-header{background:#fff;padding:28px 24px 0 24px;border:none;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;}
+    .enquiry-modal .btn-close{position:absolute;right:16px;top:16px;background-color:#f1f5f9;border-radius:50%;width:28px;height:28px;opacity:1;background-size:10px;}
+    .enquiry-icon{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,#eff6ff,#dbeafe);color:#0D47A1;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:14px;border:1px solid #dbeafe;}
+    .enquiry-modal .modal-header h5{font-weight:700;font-size:18px;margin:0;color:#0f172a;}
+    .enquiry-modal .modal-header p{font-size:12.5px;color:#64748b;margin-top:5px;}
+    .enquiry-modal .modal-body{padding:22px 20px 20px 20px;background:#fff;}
+    .enquiry-field{position:relative;margin-bottom:14px;}
+    .enquiry-field i.bi:first-child{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:#94a3b8;font-size:15px;pointer-events:none;}
+    .enquiry-field input{width:100%;border:1.5px solid #e2e8f0;border-radius:14px;padding:13px 46px 13px 40px;font-size:13.5px;outline:none;background:#f8fafc;transition:all .25s ease;font-weight:500;color:#0f172a;}
+    .enquiry-field input::placeholder{color:#94a3b8;font-weight:400;}
+    .enquiry-field input:focus{border-color:#0D47A1;background:#fff;box-shadow:0 0 0 4px rgba(13,71,161,.08);}
+    .enquiry-send{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:36px;height:36px;border-radius:11px;border:none;background:#0D47A1;color:white;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s ease;box-shadow:0 4px 10px rgba(13,71,161,.25);}
+    .enquiry-send:hover{background:#25D366;transform:translateY(-50%) scale(1.05);}
+    .enquiry-footer{font-size:11.5px;color:#64748b;text-align:center;margin-top:8px;display:flex;align-items:center;justify-content:center;gap:6px;background:#f8fafc;padding:9px;border-radius:10px;border:1px dashed #e2e8f0;}
+    .enquiry-footer i{color:#25D366;font-size:14px;}
+    @media(max-width:768px){.hero{padding:100px 15px 50px;}.hero-logo{width:105%;max-width:none;margin-left:50%;transform:translateX(-50%);}.hero-center-photo{max-width:390px;height:200px;}.section-title h2{font-size:34px;}.about-box{padding:30px;}}
+  </style>
 </head>
 <body>
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">पाल <span>स्टडी सेंटर</span></a>
+    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="#quick-access">Quick Access</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item"><a href="src/pal_study_center/signup.html" class="btn-signup"><i class="bi bi-person-plus-fill"></i> Sign Up</a></li>
+        <li class="nav-item"><a href="src/pal_study_center/login.html" class="btn-login"><i class="bi bi-box-arrow-in-right"></i> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-<div class="top">
-<div class="brand"><div class="mark">H</div><div><h6>हिमालय ग्राफिक्स</h6><small>PRINTING PRESS JAIPUR</small></div></div>
-<button class="btn-proposal" onclick="proposalMsg()">9425123350 - प्रपोजल भेजें</button>
-</div>
-
-<div class="hero">
-<div class="hero-left">
-<h1>असली <span>प्रिंटिंग प्रेस</span><br>जयपुर में।</h1>
-<p>फ्लेक्स मशीन, इको सॉल्वेंट, DTF मशीन, लेमिनेशन - सब अपनी मशीन - बाहर से नहीं - हिमालय ग्राफिक्स में खुद प्रिंट</p>
-<div class="badges"><span><i class="bi bi-printer"></i> अपनी फ्लेक्स मशीन</span><span><i class="bi bi-lightning"></i> 24 घंटे प्रिंट</span><span><i class="bi bi-check-circle"></i> अपनी प्रेस</span></div>
-<div class="hero-actions"><button class="btn-yellow" onclick="proposalMsg()"><i class="bi bi-whatsapp"></i> 9425123350 पर प्रपोजल</button><button class="btn-white-bdr" onclick="document.getElementById('machines').scrollIntoView({behavior:'smooth'})">मशीनें देखें</button></div>
-</div>
-<div class="hero-right">
-<img src="https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?w=800" alt="Flex Printing Machine">
-<div class="machine-tag"><div><b>Flex Printing Machine</b><small>हिमालय ग्राफिक्स - अपनी मशीन</small></div><div style="width:28px;height:28px;border-radius:50%;background:#ffe600;display:flex;align-items:center;justify-content:center;color:#101010;font-weight:900">→</div></div>
-</div>
-</div>
-
-<div class="strip"><span>🖨️ हिमालय ग्राफिक्स जयपुर - अपनी फ्लेक्स मशीन • इको सॉल्वेंट मशीन • DTF प्रिंटिंग मशीन • लेमिनेशन मशीन • विजिटिंग कार्ड प्रेस • 24 घंटे प्रिंटिंग • अपनी मशीन - बाहर से नहीं • 9425123350 •</span></div>
-
-<section class="machines" id="machines">
-<div class="m-title"><h2>हमारी प्रिंटिंग<br><span style="color:#ec008c">मशीनें - अपनी</span></h2><p style="font-size:10px;color:#777;max-width:200px;text-align:right">बाहर से नहीं करवाते - सब अपनी मशीन - इसीलिए सस्ता और फास्ट</p></div>
-<div class="m-grid">
-<div class="m-card"><div class="dot">FLEX MACHINE</div><img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff4f?w=600" alt="Flex Machine"><div class="info"><b>फ्लेक्स प्रिंटिंग मशीन - इको सॉल्वेंट</b><p>HD फ्लेक्स, बैनर, विनाइल - अपनी मशीन</p></div></div>
-<div class="m-card"><div class="dot">DTF MACHINE</div><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600" alt="DTF Machine"><div class="info"><b>DTF टी-शर्ट प्रिंटिंग मशीन</b><p>टी-शर्ट, हुडी, कैप पर प्रिंट - अपनी मशीन</p></div></div>
-<div class="m-card"><div class="dot">PRESS MACHINE</div><img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=600" alt="Printing Press"><div class="info"><b>विजिटिंग कार्ड प्रेस मशीन</b><p>कार्ड, ब्रोशर, बिल बुक - ऑफसेट प्रेस</p></div></div>
-</div>
+<section class="hero">
+<div class="container hero-content">
+  <div class="hero-login"><a href="src/pal_study_center/login.html" class="hero-login-btn"><span>Login</span> ↗</a></div>
+  <div class="hero-tagline">Learn • Grow • Succeed</div>
+  <img src="./assets/img/main_logo.png" alt="Pal Study Center Logo" class="hero-logo">
+  <div class="hero-actions">
+    <button class="hero-enquiry-btn" data-bs-toggle="modal" data-bs-target="#doubtModal"><i class="bi bi-info-circle"></i> Admission Enquiry</button>
+    <a href="src/pal_study_center/signup.html" class="hero-apply-btn">Apply Now</a>
+  </div>
+  <div class="hero-marquee">
+    <div class="hero-marquee-content">🎓 <strong style="color:#0D47A1;">पाल स्टडी सेंटर</strong> — <strong>Admissions Open 2026-27</strong> • 📚 <strong>कक्षा 9वी, 10वी, 11वी, 12वी [MP Board/CBSE]</strong> • 🔬 <strong>Physics, Chemistry, Biology, Maths</strong> • 📞 <strong>+91 9425123350</strong></div>
+  </div>
+  <a href="#quick-access" class="hero-access-btn"><i class="bi bi-grid-fill"></i> Quick Access</a>
+</div> 
 </section>
 
-<section class="gallery" id="gallery">
-<div class="m-title"><h2>प्रिंटिंग<br>गैलरी - हमारे काम</h2><p style="font-size:10px;color:#777;max-width:200px;text-align:right">फ्लेक्स मशीन के फोटो - प्रिंटिंग प्रेस के फोटो - लाइव</p></div>
-<div class="g-grid">
-<div class="g-item"><img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600" alt="Visiting Card Print"><div class="cap"><b>विजिटिंग कार्ड प्रिंट</b><span>₹199</span></div></div>
-<div class="g-item"><img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600" alt="Flex Print"><div class="cap"><b>फ्लेक्स प्रिंट</b><span>₹12/sqft</span></div></div>
-<div class="g-item"><img src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=600" alt="Brochure Print"><div class="cap"><b>ब्रोशर प्रिंट</b><span>₹1.5</span></div></div>
-<div class="g-item"><img src="https://images.unsplash.com/photo-1514228742587-6b1558fcf93a?w=600" alt="Mug Print"><div class="cap"><b>मग / गिफ्ट प्रिंट</b><span>₹199</span></div></div>
-<div class="g-item"><img src="https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?w=600" alt="Flex Machine Photo"><div class="cap"><b>फ्लेक्स मशीन फोटो</b><span>अपनी मशीन</span></div></div>
-<div class="g-item"><img src="https://images.unsplash.com/photo-1598620617148-cffa0002d2bc?w=600" alt="Printing Press Photo"><div class="cap"><b>प्रिंटिंग प्रेस फोटो</b><span>अपनी प्रेस</span></div></div>
-<div class="g-item"><img src="https://images.unsplash.com/photo-1603481588273-7e6a57e6f488?w=600" alt="Lamination"><div class="cap"><b>लेमिनेशन मशीन</b><span>फिनिशिंग</span></div></div>
-<div class="g-item"><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600" alt="T-Shirt Printing"><div class="cap"><b>टी-शर्ट प्रिंटिंग</b><span>₹149</span></div></div>
+<!-- SINGLE PROFESSIONAL MODAL - YOUR LATEST DESIGN -->
+<div class="modal fade enquiry-modal" id="doubtModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered" style="max-width:380px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <div class="enquiry-icon"><i class="bi bi-headset"></i></div>
+        <h5>Admission Enquiry</h5>
+        <p>हमारी टीम से सीधा संपर्क करें</p>
+      </div>
+      <div class="modal-body">
+        <div class="enquiry-field">
+          <i class="bi bi-person"></i>
+          <input id="dqName" type="text" placeholder="आपका नाम" />
+        </div>
+        <div class="enquiry-field">
+          <i class="bi bi-chat-left-text"></i>
+          <input id="dqText" type="text" placeholder="अपना प्रश्न लिखें..." />
+          <button class="enquiry-send" onclick="sendDirectDoubt()"><i class="bi bi-send-fill"></i></button>
+        </div>
+        <div class="enquiry-footer"><i class="bi bi-whatsapp"></i> WhatsApp पर तुरंत उत्तर मिलेगा</div>
+      </div>
+    </div>
+  </div>
 </div>
+
+<section class="button-section" id="quick-access">
+  <div class="container">
+    <div class="section-title"><h2>Quick Access</h2><p>सभी महत्वपूर्ण सेवाएँ और छात्र सुविधाएँ एक ही जगह</p></div>
+    <div class="row g-4">
+      <div class="hero-center-photo"><img src="./assets/img/gallery/5.jpg" alt="Pal Study Center"></div>
+      <div class="col-12 mt-4"><h5 class="mb-3 fw-bold text-secondary">🏆 Success & Feedback</h5></div>
+      <div class="col-lg-4 col-md-6"><a href="src/board-toppers.html" class="menu-card" style="background:linear-gradient(135deg,#0d6efd,#00c6ff);"><i class="bi bi-mortarboard-fill"></i><h5>🌟 Board Toppers</h5></a></div>
+      <div class="col-lg-4 col-md-6"><a href="src/achievers.html" class="menu-card" style="background:linear-gradient(to right,#8a9a5b,#c7d95c);"><i class="bi bi-trophy-fill"></i><h5>🏆 Our Alumni</h5></a></div>
+      <div class="col-lg-4 col-md-6"><a href="src/reviews.html" class="menu-card" style="background:linear-gradient(to right,#1f7a6b,#00c9b7);"><i class="bi bi-chat-left-text-fill"></i><h5>⭐ Student Reviews</h5></a></div>
+    </div>
+  </div>
 </section>
 
-<section>
-<div class="proposal">
-<div>
-<h5 class="space">प्रिंटिंग कीमत निकालें</h5>
-<p style="font-size:11px;color:#888;margin-top:4px">जयपुर - तुरंत</p>
-<select id="ptype"><option value="199">विजिटिंग कार्ड 100pcs - ₹199</option><option value="12">फ्लेक्स ₹12/sqft</option><option value="18">बैनर ₹18/sqft</option><option value="1.5">पम्पलेट ₹1.5</option><option value="149">टी-शर्ट ₹149</option><option value="350">बिल बुक ₹350</option></select>
-<input id="pqty" type="number" placeholder="क्वांटिटी / sqft">
-<div class="calc-box"><span>कुल</span><b id="total">₹0</b></div>
-<button class="btn-calc-black" onclick="calc()">कीमत निकालें</button>
-</div>
-<div>
-<h6>प्रपोजल भेजें - 9425123350</h6>
-<p style="font-size:10px;color:#888;margin-top:4px">हिमालय ग्राफिक्स - जयपुर - 24 घंटे में प्रपोजल</p>
-<input id="cName" placeholder="आपका नाम / कंपनी"><input id="cPhone" placeholder="मोबाइल नंबर">
-<select id="cWork"><option>विजिटिंग कार्ड प्रपोजल</option><option>फ्लेक्स प्रिंट प्रपोजल</option><option>ब्रोशर / पम्पलेट</option><option>बिल बुक / लेटर हेड</option><option>टी-शर्ट / मग प्रिंट</option><option>पूरा प्रिंटिंग पैकेज</option></select>
-<textarea id="cSize" rows="3" placeholder="क्या प्रिंट करवाना है? क्वांटिटी लिखें..."></textarea>
-<button class="btn-send-yellow" onclick="proposalMsg()"><i class="bi bi-whatsapp"></i> 9425123350 पर प्रपोजल भेजें</button>
-<p style="font-size:9px;color:#666;text-align:center;margin-top:8px">हिमालय ग्राफिक्स - अपनी फ्लेक्स मशीन - जयपुर</p>
-</div>
-</div>
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-box">
+      <h2>हमारे बारे में</h2>
+      <p>पाल स्टडी सेंटर विद्यार्थियों को गुणवत्तापूर्ण शिक्षा, अनुभवी मार्गदर्शन एवं उत्कृष्ट शैक्षणिक वातावरण प्रदान करने के लिए समर्पित है।</p>
+      <a href="src/about.html" class="btn btn-primary mt-3">Know More</a>
+    </div>
+  </div>
 </section>
 
-<footer><h6 style="color:#fff">हिमालय ग्राफिक्स - प्रिंटिंग प्रेस जयपुर - 9425123350</h6><p style="font-size:10px;margin-top:6px">अपनी फ्लेक्स मशीन • अपनी प्रिंटिंग प्रेस • DTF मशीन • लेमिनेशन<br>जयपुर में 24 घंटे प्रिंटिंग - अपनी मशीन - बाहर से नहीं</p></footer>
-<a class="wa" href="https://wa.me/919425123350" target="_blank"><i class="bi bi-whatsapp"></i></a>
+<section class="cta"><h2>Admission Open 2026-27</h2><p>सीमित सीटें उपलब्ध हैं। आज ही प्रवेश के लिए आवेदन करें।</p><a href="src/pal_study_center/signup.html" class="cta-btn" style="display:inline-block;background:white;color:#2563eb;padding:14px 32px;border-radius:50px;font-weight:600;">Apply Now</a></section>
 
+<footer id="contact">
+<div class="container"><div class="row"><div class="col-lg-4"><h3>पाल स्टडी सेंटर</h3></div><div class="col-lg-4"><p>📍 RLB Marg, Manasa</p><p>📞 +91 9425123350</p></div></div></div>
+<div class="footer-bottom">© 2026 Pal Study Center</div>
+</footer>
+
+<a href="https://wa.me/919425123350" target="_blank" class="whatsapp-button"><i class="bi bi-whatsapp"></i></a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-const WA="919425123350";
-function calc(){let r=parseFloat(document.getElementById('ptype').value)||0;let q=parseFloat(document.getElementById('pqty').value)||0;if(!q){alert('क्वांटिटी भरें');return;}document.getElementById('total').innerText='₹'+(r*q).toLocaleString('en-IN');}
-function proposalMsg(){
-let n=document.getElementById('cName')?document.getElementById('cName').value.trim():'';
-let p=document.getElementById('cPhone')?document.getElementById('cPhone').value.trim():'';
-let w=document.getElementById('cWork')?document.getElementById('cWork').value:'प्रिंटिंग प्रपोजल';
-let s=document.getElementById('cSize')?document.getElementById('cSize').value.trim():'';
-let msg=`नमस्ते हिमालय ग्राफिक्स 🙏%0A%0A*प्रपोजल रिक्वेस्ट - जयपुर*%0A%0Aनाम: ${n||'ग्राहक'}%0Aमोबाइल: ${p||'-'}%0Aकाम: ${w}%0Aडिटेल: ${s||'प्रिंटिंग प्रपोजल भेजें'}%0A%0A*हमारी मशीनें:*%0A- फ्लेक्स मशीन (अपनी)%0A- DTF मशीन (अपनी)%0A- प्रिंटिंग प्रेस (अपनी)%0A%0Aकृपया रेट + सैंपल फोटो भेजें - 9425123350`;
-window.open(`https://wa.me/${WA}?text=${msg}`,'_blank');
+// SINGLE SCRIPT ONLY
+function sendDirectDoubt(){
+  let name = document.getElementById('dqName').value.trim();
+  let q = document.getElementById('dqText').value.trim();
+  if(q === ""){
+    document.getElementById('dqText').focus();
+    document.getElementById('dqText').style.borderColor = "#ef4444";
+    document.getElementById('dqText').style.background = "#fff1f2";
+    setTimeout(()=>{ 
+      document.getElementById('dqText').style.borderColor = "#e2e8f0";
+      document.getElementById('dqText').style.background = "#f8fafc";
+    },1500);
+    return;
+  }
+  if(name === ""){ name = "एक छात्र"; }
+  let finalMsg = `Admission Enquiry\nनमस्ते सर, मैं ${name}।\nमेरा प्रश्न: ${q}`;
+  window.open(`https://wa.me/919425123350?text=${encodeURIComponent(finalMsg)}`,'_blank');
 }
+document.addEventListener('DOMContentLoaded', function(){
+  document.getElementById('dqText')?.addEventListener('keypress', function(e){
+    if(e.key === 'Enter'){ sendDirectDoubt(); }
+  });
+  document.getElementById('dqName')?.addEventListener('keypress', function(e){
+    if(e.key === 'Enter'){ document.getElementById('dqText').focus(); }
+  });
+});
+window.addEventListener("scroll", function () {
+  let hero = document.querySelector(".hero-content");
+  let scrollY = window.scrollY;
+  if (hero) {
+    hero.style.opacity = 1 - scrollY / 400;
+    hero.style.transform = `translateY(-${scrollY * 0.3}px)`;
+  }
+});
 </script>
 </body>
 </html>
