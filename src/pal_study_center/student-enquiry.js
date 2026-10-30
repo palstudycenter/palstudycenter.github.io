@@ -1,4 +1,4 @@
-// ===== STUDENT ENQUIRY SYSTEM - FIXED =====
+// ===== STUDENT ENQUIRY SYSTEM - CLEAN FINAL =====
 (function(){
   const style = document.createElement('style');
   style.innerHTML = `
@@ -44,30 +44,20 @@
     let msg = document.getElementById('studentEnquiryInput').value.trim();
     if(!msg){ document.getElementById('studentEnquiryInput').focus(); return; }
 
-    // ===== NAME CLEAN - Welcome हटा दिया =====
+    // Name Clean
     let rawName = document.getElementById('studentName')?.innerText || window.currentStudent?.name || localStorage.getItem('studentName') || "छात्र";
     let name = rawName.replace(/Welcome/gi, "").replace(/स्वागत/gi, "").trim();
     
-    let sClass = document.getElementById('studentInfo')?.innerText.trim() || window.currentStudent?.class || localStorage.getItem('studentClass') || "N/A";
+    let sClass = document.getElementById('studentInfo')?.innerText.trim() || window.currentStudent?.class || localStorage.getItem('studentClass') || "";
     if(sClass.length > 80) sClass = sClass.substring(0,80);
 
-    // ===== PHONE AUTO READ - 10 जगह से खोज =====
-    let phone = "";
-    try{
-      let lsData = JSON.parse(localStorage.getItem('studentData') || '{}');
-      phone = window.currentStudent?.phone || window.currentStudent?.mobile || window.studentData?.phone || lsData.phone || lsData.mobile || localStorage.getItem('studentPhone') || localStorage.getItem('phone') || localStorage.getItem('mobile') || document.getElementById('studentPhone')?.innerText || "";
-    }catch(e){ phone = localStorage.getItem('studentPhone') || ""; }
-
-    phone = phone.toString().replace(/\D/g,'').slice(-10);
-
-    // ===== FINAL CLEAN MESSAGE - जैसा आपने बोला =====
-    let finalMsg = `👤 नाम: ${name}\n🎓 ${sClass}\n\n💬 संदेश: ${msg}`;
-    
-    // अगर नंबर मिला तो ही Reply लिंक जोड़ो, वरना नहीं
-    if(phone && phone.length == 10){
-      finalMsg += `\n\n_Reply: https://wa.me/91${phone}_`;
-    }
+    // Final Format जैसा आपने बोला
+    let finalMsg = `👤 ${name}\n🎓 ${sClass}\n\n💬 ${msg}`;
 
     window.open(`https://wa.me/919425123350?text=${encodeURIComponent(finalMsg)}`,'_blank');
   }
+
+  document.addEventListener('keypress', function(e){
+    if(e.target.id === 'studentEnquiryInput' && e.key === 'Enter'){ sendStudentEnquiry(); }
+  });
 })();

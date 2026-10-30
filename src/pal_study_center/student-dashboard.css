@@ -1361,3 +1361,64 @@ img{
 }
 .btn-toggle-switch.on{ background:#16a34a; }
 .btn-toggle-switch.off{ background:#9ca3af; }
+
+
+/* ===== HERO ICON BUTTONS - PROFESSIONAL ===== */
+.hero-btn-group{
+  display:flex;
+  gap:10px;
+  margin-top:14px;
+  align-items:center;
+}
+
+.hero-btn{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:18px;
+  border:none;
+  background:#ffffff;
+  color:#174a7e;
+  box-shadow:0 4px 12px rgba(15,23,42,.12);
+  border:1.5px solid #e2e8f0;
+  position:relative;
+  transition:all .2s ease;
+  text-decoration:none;
+}
+
+.hero-btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 20px rgba(15,23,42,.18);
+  color:#fff;
+}
+
+.hero-btn.fees:hover{ background:#174a7e; border-color:#174a7e; }
+.hero-btn.test:hover{ background:#0f766e; border-color:#0f766e; }
+.hero-btn.enquiry:hover{ background:#25D366; border-color:#25D366; }
+
+/* Tooltip on Hover - नाम दिखेगा */
+.hero-btn::after{
+  content:attr(data-tip);
+  position:absolute;
+  bottom:-32px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#0f172a;
+  color:#fff;
+  font-size:11px;
+  padding:4px 8px;
+  border-radius:6px;
+  white-space:nowrap;
+  opacity:0;
+  pointer-events:none;
+  transition:.2s;
+  font-weight:500;
+}
+
+.hero-btn:hover::after{
+  opacity:1;
+  bottom:-36px;
+}
