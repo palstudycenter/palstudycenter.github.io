@@ -1,6 +1,5 @@
-// ===== STUDENT ENQUIRY SYSTEM - SEPARATE MODULE =====
+// ===== STUDENT ENQUIRY SYSTEM - FIXED =====
 (function(){
-  // CSS Inject
   const style = document.createElement('style');
   style.innerHTML = `
   .hero-btn.enquiry{background:#ffffff;color:#174a7e;border:1.5px solid #cbd5e1;}
@@ -14,11 +13,9 @@
   .enquiry-field input{width:100%;border:1.5px solid #e2e8f0;border-radius:14px;padding:14px 46px 14px 40px;font-size:13.5px;outline:none;background:#f8fafc;font-weight:500;}
   .enquiry-field input:focus{border-color:#174a7e;background:#fff;box-shadow:0 0 0 4px rgba(23,74,126,.08);}
   .enquiry-send{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:36px;height:36px;border-radius:11px;border:none;background:#174a7e;color:white;display:flex;align-items:center;justify-content:center;}
-  .enquiry-send:hover{background:#25D366;}
   `;
   document.head.appendChild(style);
 
-  // Modal HTML Inject
   const modalHTML = `
   <div class="modal fade enquiry-modal" id="studentEnquiryModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered" style="max-width:380px;">
@@ -37,7 +34,6 @@
   </div>`;
   document.body.insertAdjacentHTML('beforeend', modalHTML);
 
-  // Auto Read Function
   window.openEnquiryModal = function(e){
     if(e) e.preventDefault();
     new bootstrap.Modal(document.getElementById('studentEnquiryModal')).show();
@@ -48,27 +44,30 @@
     let msg = document.getElementById('studentEnquiryInput').value.trim();
     if(!msg){ document.getElementById('studentEnquiryInput').focus(); return; }
 
-    // ===== AUTO READ NAME / CLASS / PHONE =====
-    let name = document.getElementById('studentName')?.innerText.trim() 
-            || window.currentStudent?.name || window.studentData?.name 
-            || localStorage.getItem('studentName') || "छात्र";
+    // ===== NAME CLEAN - Welcome हटा दिया =====
+    let rawName = document.getElementById('studentName')?.innerText || window.currentStudent?.name || localStorage.getItem('studentName') || "छात्र";
+    let name = rawName.replace(/Welcome/gi, "").replace(/स्वागत/gi, "").trim();
+    
+    let sClass = document.getElementById('studentInfo')?.innerText.trim() || window.currentStudent?.class || localStorage.getItem('studentClass') || "N/A";
+    if(sClass.length > 80) sClass = sClass.substring(0,80);
 
-    let sClass = document.getElementById('studentInfo')?.innerText.trim()
-            || window.currentStudent?.class || window.currentStudent?.course
-            || localStorage.getItem('studentClass') || "N/A";
-    if(sClass.length > 50) sClass = sClass.substring(0,50);
+    // ===== PHONE AUTO READ - 10 जगह से खोज =====
+    let phone = "";
+    try{
+      let lsData = JSON.parse(localStorage.getItem('studentData') || '{}');
+      phone = window.currentStudent?.phone || window.currentStudent?.mobile || window.studentData?.phone || lsData.phone || lsData.mobile || localStorage.getItem('studentPhone') || localStorage.getItem('phone') || localStorage.getItem('mobile') || document.getElementById('studentPhone')?.innerText || "";
+    }catch(e){ phone = localStorage.getItem('studentPhone') || ""; }
 
-    let phone = window.currentStudent?.phone || window.currentStudent?.mobile 
-            || window.studentData?.phone || localStorage.getItem('studentPhone') 
-            || localStorage.getItem('phone') || "नंबर उपलब्ध नहीं";
+    phone = phone.toString().replace(/\D/g,'').slice(-10);
 
-    // ===== WHATSAPP TO YOU (ADMIN) =====
-    let finalMsg = `*Student Message*\n\n👤 नाम: ${name}\n🎓 ${sClass}\n📱 छात्र का नंबर: ${phone}\n\n💬 संदेश: ${msg}\n\n_Reply करने के लिए इस नंबर पर क्लिक करें: https://wa.me/91${phone.replace(/\D/g,'').slice(-10)}_`;
+    // ===== FINAL CLEAN MESSAGE - जैसा आपने बोला =====
+    let finalMsg = `👤 नाम: ${name}\n🎓 ${sClass}\n\n💬 संदेश: ${msg}`;
+    
+    // अगर नंबर मिला तो ही Reply लिंक जोड़ो, वरना नहीं
+    if(phone && phone.length == 10){
+      finalMsg += `\n\n_Reply: https://wa.me/91${phone}_`;
+    }
 
     window.open(`https://wa.me/919425123350?text=${encodeURIComponent(finalMsg)}`,'_blank');
   }
-
-  document.addEventListener('keypress', function(e){
-    if(e.target.id === 'studentEnquiryInput' && e.key === 'Enter'){ sendStudentEnquiry(); }
-  });
 })();
