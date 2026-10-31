@@ -35,12 +35,12 @@ body{background:#f1f5f9;font-family:Inter,system-ui;padding-top:70px;}
 </div>
 
 <div class="box mb-3">
-<div class="box-head"><h6 class="m-0 fw-bold"><span id="studentNameTop"></span> - <span id="className" class="text-muted"></span></h6></div>
+<div class="box-head"><h6 class="m-0 fw-bold">All Test</h6><small class="text-muted"><span id="myLatName2"></span> • <span id="myAttemptPer2"></span></small></div>
 <div class="table-responsive"><table class="table tbl text-center m-0"><thead><tr id="h2"></tr></thead><tbody id="b2"></tbody></table></div>
 </div>
 
 <div class="graph-box">
-<h6 class="fw-bold mb-3"><i class="bi bi-graph-up-arrow me-2" style="color:#174a7e;"></i>Performance Graph </h6>
+<h6 class="fw-bold mb-3"><i class="bi bi-graph-up-arrow me-2" style="color:#174a7e;"></i>Performance Graph</h6>
 <canvas id="testChart" height="120"></canvas>
 </div>
 </div>
@@ -79,8 +79,6 @@ async function renderAll(){
   let records = await loadStudentTestRecords();
   let TM = normalizeTestRecords(records);
   let TC = Math.max(1, ...Object.keys(TM).map(Number), 1);
-  document.getElementById('className').innerText=user.class||'';
-  document.getElementById('studentNameTop').innerText=user.name||'Student';
   let perTotal=0,count=0,lat='-',latName='No Test';
   let labels=[], scores=[];
   Object.entries(TM).forEach(([k,v])=>{ if(v!=='' && v!=null && !isNaN(v)){ perTotal+=Number(v); count++; lat=v; latName='T'+k; }});
@@ -88,10 +86,11 @@ async function renderAll(){
   document.getElementById('myPer').innerText=avg.toFixed(1)+'%';
   document.getElementById('myLat').innerText=lat!='-'?lat+'/20':'-/20';
   document.getElementById('myLatName').innerText=latName;
+  document.getElementById('myLatName2').innerText=latName;
   document.getElementById('myAttempt').innerText=count+'/'+TC;
   document.getElementById('myAttemptPer').innerText=(TC? (count/TC*100).toFixed(0):0)+'% Done';
+  document.getElementById('myAttemptPer2').innerText=(TC? (count/TC*100).toFixed(0):0)+'% Done';
 
-  // एक ही कार्ड पर Highest + Lowest
   let validScores = Object.entries(TM).filter(([k,v])=> v!=null && !isNaN(v)).map(([k,v])=> Number(v));
   if(validScores.length > 0){
     document.getElementById('myHigh').innerText = `High: ${Math.max(...validScores)}/20`;
