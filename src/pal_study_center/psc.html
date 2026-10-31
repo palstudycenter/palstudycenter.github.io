@@ -84,6 +84,30 @@
   <div id="box-calc" style="display:none" class="card p-3 mt-3"><div class="row g-2"><div class="col-6"><input id="intFrom" type="date" class="form-control form-control-sm"></div><div class="col-6"><input id="intTo" type="date" class="form-control form-control-sm"></div><div class="col-6"><input id="intP" type="number" class="form-control form-control-sm" value="10000"></div><div class="col-6"><input id="intR" type="number" class="form-control form-control-sm" value="12"></div><div class="col-12"><button onclick="calcInt()" class="btn w-100 text-white" style="background:#174a7e">गणना</button><div id="intRes" class="mt-2 p-2 rounded" style="background:#f0f7ff;font-weight:700"></div></div></div></div>
 
   <div id="box-cal" style="display:none;overflow:hidden" class="card p-3 mt-3 position-relative"><div class="d-flex justify-content-between align-items-center"><h6>📅 कैलेंडर (दशहरा 2026 से दशहरा 2027)</h6><select id="calMonth" onchange="renderCalendar()" class="form-select form-select-sm" style="width:150px"></select></div><div class="cal-grid mt-2 fw-bold small text-center"><div>रवि</div><div>सोम</div><div>मंगल</div><div>बुध</div><div>गुरु</div><div>शुक्र</div><div>शनि</div></div><div id="calBody" class="cal-grid mt-1"></div><div id="calSelectedInfo" style="display:none;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:92%;background:#fff;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.25);border:2px solid #174a7e;z-index:10;padding:14px"></div></div>
+  
+ <!-- ===== CLEAN: Message + WhatsApp Search Only ===== -->
+<div class="card p-3 mt-3" style="border:1.5px solid #174a7e; border-radius:16px;">
+  <h6 style="color:#174a7e; font-weight:900; margin-bottom:12px;">⚡ Quick Auto Reply</h6>
+  
+  <select id="anyMsg" class="form-select form-select-sm" style="height:46px; border-radius:12px; font-weight:600; border:1.5px solid #dbeafe;">
+<option value="🌅 सुप्रभात!
+🙏 जय श्री कृष्णा
+🪷 आपका दिन शुभ हो
+palstudycenter.github.io">🌅 सुप्रभात! जय श्री कृष्णा - आपका दिन शुभ हो</option>
+  <option value="📚 पाल स्टडी सेंटर
+🎯 सफलता की सीढ़ी
+🌐︎ अधिक जानकारी हेतु वेबसाइट विजिट करें palstudycenter.github.io">पाल स्टडी सेंटर सफलता की सीढ़ी अधिक जानकारी के लिए वेब विजिट करे</option>
+    
+    <option>✅ आपका Message मिल गया है, जल्द ही Reply करूँगा - पाल स्टडी सेंटर</option>
+  <option>🙏 नमस्ते! अभी Busy हूँ - थोड़ी देर में Reply करता हूँ</option>
+  </select>  
+  
+  <button onclick="sendAnyReply()" class="btn w-100 mt-3 text-white" style="background:linear-gradient(135deg,#174a7e 0%,#1e6fa5 100%); border-radius:12px; font-weight:800; padding:12px; border:none;">
+    📱 WhatsApp ➤
+  </button>
+</div> 
+
+  
 </div>
 
 <div id="tab-khata" style="display:none">
@@ -536,6 +560,12 @@ function showDayDetail(iso){
   info.style.display='block';
   info.innerHTML=`<div style="display:flex;justify-content:space-between;align-items:center"><b style="color:#174a7e;font-size:14px">📅 ${dateObj.toLocaleDateString('hi-IN',{weekday:'long', day:'numeric', month:'long'})}</b><span onclick="document.getElementById('calSelectedInfo').style.display='none'" style="cursor:pointer;background:#174a7e;color:#fff;border-radius:50%;width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-size:12px">✕</span></div><div class="mt-2 p-2 rounded" style="background:#f0f7ff;font-size:13px"><b>तिथि:</b> ${h.tithi}<br><b>वार:</b> ${dateObj.toLocaleDateString('hi-IN',{weekday:'long'})}</div>${h.festival?`<div class="mt-2 p-2 rounded text-center" style="background:#fff1f2;border:1.5px dashed #e11d48;color:#e11d48;font-weight:800;font-size:13px">🎉 ${h.festival}<br><small style="font-size:11px">${h.holiday?'PSC छुट्टी':''}</small></div>`:`<div class="mt-2 small text-center text-muted">कोई विशेष त्यौहार नहीं</div>`}`;
 }
+
+function sendAnyReply(){
+  let m = document.getElementById('anyMsg').value;
+  window.open(`https://wa.me/?text=${encodeURIComponent(m)}`,'_blank');
+  }
+  
 initCal();renderAll();onCTypeChange();
 
 window.addEventListener('message', function(event){

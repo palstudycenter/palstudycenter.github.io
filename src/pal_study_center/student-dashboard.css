@@ -414,7 +414,7 @@ img{max-width:100%;height:auto;}
   flex-shrink:0 !important;
   box-shadow:0 5px 15px rgba(0,0,0,0.3) !important;
   position:relative !important;
-  top:6px !important;
+  top:-12px !important;
   align-self:flex-start !important;
 }
 .hero-photo-wrapper img{
