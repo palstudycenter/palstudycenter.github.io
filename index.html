@@ -119,9 +119,10 @@ footer{ background:#0f172a; color:white; padding:70px 0 25px; }
 
 <section class="hero">
 <div class="container hero-content">
+  <img src="./assets/img/main_logo.png" alt="Pal Study Center Logo" class="hero-logo">
   <div class="hero-tagline"> Learn • Grow • Succeed </div>
-    <img src="./assets/img/main_logo.png" alt="Pal Study Center Logo" class="hero-logo">
-    <div class="hero-actions">
+     
+  <div class="hero-actions">
         <button class="hero-btn hero-btn-outline" data-bs-toggle="modal" data-bs-target="#doubtModal">
             <i class="bi bi-chat-dots"></i> Admission Enquiry
         </button>
@@ -132,7 +133,21 @@ footer{ background:#0f172a; color:white; padding:70px 0 25px; }
             <i class="bi bi-grid"></i> Quick Access
         </a>
     </div>
-    <div class="hero-login-hint">Already Registered? <a href="src/pal_study_center/login.html">Login to Your Dashboard <i class="bi bi-box-arrow-in-right"></i></a></div>
+   <div class="hero-login-hint">
+  <div class="hint-text">Already Registered?</div>
+  <a href="src/pal_study_center/login.html">Login to Your Dashboard <i class="bi bi-box-arrow-in-right"></i></a>
+</div>
+
+<style>
+.hero-login-hint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+}
+</style> 
+  
   <div class="hero-marquee">
         <div class="hero-marquee-content">
     🎓 <strong style="color:#0D47A1;">पाल स्टडी सेंटर</strong> — <strong>Admissions Open 2026-27</strong>
