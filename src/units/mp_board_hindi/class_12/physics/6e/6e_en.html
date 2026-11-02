@@ -465,6 +465,9 @@ Pal <span>Study Center</span>
 <div class="qa-box">
     <div class="question">Q: Explain Young's double-slit experiment for the interference of light.</div>
     <div class="answer">
+     <div class="question-image">
+            <img src="images/1.png" alt="यंग का द्वि-स्लिट प्रयोग">
+     </div> 
         <strong>Experimental arrangement -</strong>
         <ol>
             <li>A monochromatic light source is placed in front of a narrow aperture S so that the light becomes uniform (coherent).</li>
@@ -489,144 +492,69 @@ Pal <span>Study Center</span>
     </div>
 </div>
 
-<div class="qa-box">
-    <div class="question">Q: Derive the formula for the distances of the n-th bright and dark fringes from the central bright fringe in Young's double-slit experiment.</div>
+  <div class="qa-box">
+    <div class="question">Question: In Young's double slit experiment, derive the formulae for the distances of the nth bright and dark fringes from the central bright fringe.</div>
     <div class="answer">
+        <style>
+            .scroll-eq {
+                overflow-x: auto;
+                white-space: nowrap;
+                padding: 6px 0;
+                -webkit-overflow-scrolling: touch;
+            }
+            .reason {
+                margin-left: 30px;
+            }
+        </style>
+
         <div class="question-image">
-            <img src="images/1.png" alt="Geometry of Young's double-slit experiment">
+            <img src="images/image3.png" alt="Geometry of Young's double slit experiment">
         </div>
 
-        Let, in Young's experiment, the distance between the slits \(S_1\) and \(S_2\) be \(d\), and the distance of the screen from them be \(D\). The perpendicular bisector of \(S_1S_2\) meets the screen at point O. Hence, the central bright fringe will be formed exactly at O. Let P be a point on the screen at a distance \(x_n\) from O.
+        <p>Let the distance between the slits $S_1$ and $S_2$ be $S_1S_2 = d$ and the distance of the screen from the slits be $OD = D$. The perpendicular bisector of $S_1S_2$ meets at O, where the central bright fringe is formed. Point P is at a distance $x_n$ from O on the screen.</p>
 
-        <br><br>
+        <p>If the path difference of the waves reaching P from $S_1$ and $S_2$ is $\Delta$, then -</p>
+        <div class="scroll-eq">$\Delta = S_2P - S_1P$ ....(1)</div>
 
-        If point P is not very far from point O, then
+        <p>Value of $S_1P$ and $S_2P$ from Pythagoras theorem -</p>
+        <p>In right angled $\triangle S_2PN$ -</p>
+        <div class="scroll-eq">$S_2P^2 = S_2N^2 + NP^2$</div>
+        <div class="scroll-eq">$S_2P^2 = D^2 + \left(x_n + \dfrac{d}{2}\right)^2$ ....(2)</div>
 
-        <div class="formula">
-        $$
-        S_1P \approx S_2P \approx D
-        $$
-        </div>
+        <p>In right angled $\triangle S_1PM$ -</p>
+        <div class="scroll-eq">$S_1P^2 = S_1M^2 + MP^2$</div>
+        <div class="scroll-eq">$S_1P^2 = D^2 + \left(x_n - \dfrac{d}{2}\right)^2$ ....(3)</div>
 
-        <div class="formula">
-        $$
-        \therefore\ S_2P + S_1P \approx D + D = 2D
-        $$
-        </div>
+        <p>Subtracting equation (3) from (2) -</p>
+        <div class="scroll-eq">$S_2P^2 - S_1P^2 = \left(x_n + \dfrac{d}{2}\right)^2 - \left(x_n - \dfrac{d}{2}\right)^2$</div>
 
-        Now, in the right triangle \(\triangle S_2PN\), by the Pythagoras theorem-
+        <p>Expanding both sides by formula -</p>
+        <div class="scroll-eq">$(S_2P - S_1P)(S_2P + S_1P) = \left(x_n^2 + \dfrac{d^2}{4} + x_nd\right) - \left(x_n^2 + \dfrac{d^2}{4} - x_nd\right)$</div>
+        <div class="scroll-eq">$\Delta (S_2P + S_1P) = 2x_nd$ <span class="reason">[ $\because$ from eqn. (1) ]</span></div>
 
-        <div class="formula">
-        $$
-        S_2P^2 = S_2N^2 + NP^2
-        $$
-        </div>
+        <div class="scroll-eq">$\Delta (D + D) = 2x_nd$ <span class="reason">[ $\because S_1P \approx S_2P \approx D$ ]</span></div>
 
-        <div class="formula">
-        $$
-        S_2P^2 = D^2 + \left(x_n + \frac{d}{2}\right)^2 \quad ....(1)
-        $$
-        </div>
+        <div class="scroll-eq">$\Delta (2D) = 2x_nd$</div>
 
-        Similarly, in the right triangle \(\triangle S_1PM\), by the Pythagoras theorem-
-
-        <div class="formula">
-        $$
-        S_1P^2 = S_1M^2 + MP^2
-        $$
-        </div>
-
-        <div class="formula">
-        $$
-        S_1P^2 = D^2 + \left(x_n - \frac{d}{2}\right)^2 \quad ....(2)
-        $$
-        </div>
-
-        Subtracting equation (2) from (1)
-
-        <div class="formula">
-        $$
-        S_2P^2 - S_1P^2 = \left(x_n + \frac{d}{2}\right)^2 - \left(x_n - \frac{d}{2}\right)^2
-        $$
-        </div>
-
-        <div class="formula">
-        $$
-        (S_2P - S_1P)(S_2P + S_1P) = 2x_nd
-        $$
-        </div>
-
-        <div class="formula">
-        $$
-        (S_2P - S_1P)(2D) = 2x_nd
-        $$
-        </div>
-
-        <div class="formula">
-        $$
-        S_2P - S_1P = \frac{x_nd}{D}
-        $$
-        </div>
-
-        Let \(\Delta\) be the path difference between the waves reaching point P from sources \(S_1\) and \(S_2\), then
-
-        <div class="formula">
-        $$
-        \Delta = S_2P - S_1P
-        $$
-        </div>
-
-        <div class="formula">
-        $$
-        \Delta = \frac{x_nd}{D}
-        $$
-        </div>
+        <div class="scroll-eq">$\Delta = \dfrac{x_nd}{D}$ ....(4)</div>
 
         <ol>
-            <li><strong>Constructive interference</strong> - In this, the n-th bright fringe is formed at point P, so the path difference
-
-                <div class="formula">
-                $$
-                \Delta = n\lambda
-                $$
-                </div>
-
-                <div class="formula">
-                $$
-                \frac{x_nd}{D} = n\lambda
-                $$
-                </div>
-
-                <div class="formula">
-                $$
-                x_n = \frac{n\lambda D}{d}
-                $$
-                </div>
+            <li><strong>Constructive or Sustained Interference</strong> - In this, if nth bright fringe is formed at point P then path difference
+                <div class="scroll-eq">$\Delta = n\lambda$</div>
+                <div class="scroll-eq">$\dfrac{x_nd}{D} = n\lambda$ <span class="reason">[ $\because$ from eqn. (4) ]</span></div>
+                <div class="scroll-eq">$x_n = \dfrac{n\lambda D}{d}$</div>
+                This is the distance of nth bright fringe from the central bright fringe.
             </li>
-            <li><strong>Destructive interference</strong> - In this, the n-th dark fringe is formed at point P, so the path difference
-
-                <div class="formula">
-                $$
-                \Delta = \frac{(2n+1)\lambda}{2}
-                $$
-                </div>
-
-                <div class="formula">
-                $$
-                \frac{x_nd}{D} = \frac{(2n+1)\lambda}{2}
-                $$
-                </div>
-
-                <div class="formula">
-                $$
-                x_n = \frac{(2n+1)\lambda D}{2d}
-                $$
-                </div>
+            <li><strong>Destructive Interference</strong> - In this, if nth dark fringe is formed at point P then path difference
+                <div class="scroll-eq">$\Delta = \dfrac{(2n+1)\lambda}{2}$</div>
+                <div class="scroll-eq">$\dfrac{x_nd}{D} = \dfrac{(2n+1)\lambda}{2}$ <span class="reason">[ $\because$ from eqn. (4) ]</span></div>
+                <div class="scroll-eq">$x_n = \dfrac{(2n+1)\lambda D}{2d}$</div>
+                This is the distance of nth dark fringe from the central bright fringe.
             </li>
         </ol>
     </div>
-</div>
-
+  </div>
+                
 <div class="qa-box">
     <div class="question">Q: What is fringe width in Young's double-slit experiment? Derive the formula for it.</div>
     <div class="answer">
