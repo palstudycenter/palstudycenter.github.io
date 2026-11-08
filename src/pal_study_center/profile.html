@@ -58,6 +58,7 @@ body{background:#fdf6ee;font-family:Poppins,sans-serif}
         <button onclick="sendLeaveNotice()" class="filter-btn">🏖️ अवकाश</button>
         <button onclick="openAddFee()" class="filter-btn">➕ Add Fees</button>
       </div>
+      
       <div id="addFeeBox" style="display:none" class="mt-2">
         <div class="card p-2" style="background:#f8fafc;border:1px solid #dbeafe">
           <div class="row g-1">
@@ -97,7 +98,8 @@ document.getElementById('pPhone').innerText='📞 '+(stu.phone||stu.mobile||'');
 document.getElementById('pBoard').innerText=stu.board||'';
 document.getElementById('pClass').innerText=stu.class||'';
 function openAddFee(){ let b=document.getElementById('addFeeBox'); b.style.display=b.style.display=='none'?'block':'none'; }
-function sendFeeReminder(){
+
+  function sendFeeReminder(){
   let ph=(stu.pPhone||stu.parentPhone||stu.phone||stu.mobile||'').toString().replace(/\D/g,'');
   if(ph.length==10) ph='91'+ph;
   let allFees=JSON.parse(localStorage.getItem('pal_fees_'+stu.id)||'[]');
@@ -107,6 +109,7 @@ function sendFeeReminder(){
   let msg = `नमस्ते अभिभावक जी 🙏\n\nआपसे निवेदन है कि ${stu.name} की ${month} माह की फीस ₹${amt} जमा करना शेष है।\nकृपया शीघ्र जमा कराने की कृपा करें।\n\nधन्यवाद 🙏\n- पाल स्टडी सेंटर, मनासा`;
   window.open(`https://wa.me/${ph}?text=${encodeURIComponent(msg)}`,'_blank');
 }
+  
 function sendLeaveNotice(){
   let ph=(stu.phone||stu.mobile||'').toString().replace(/\D/g,'');
   if(ph.length==10) ph='91'+ph;
@@ -248,5 +251,9 @@ loadCourseData();
 
   
 </script>
+
+
+
+  
 </body>
-</html>
+
